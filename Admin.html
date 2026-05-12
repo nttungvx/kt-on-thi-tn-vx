@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script>MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <style>
+    body { background-color: #0f0f0f; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; }
+    .admin-header { background: #90caf9; color: #000; display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; font-weight: bold; }
+    .horizontal-tabs { display: flex; background: #1a1a1a; padding: 10px 25px 0; border-bottom: 1px solid #333; gap: 5px; }
+    .tab-btn { background: #222; color: #aaa; border: 1px solid #333; border-bottom: none; padding: 12px 20px; border-radius: 8px 8px 0 0; cursor: pointer; font-weight: bold; transition: 0.2s;}
+    .tab-btn:hover { background: #333; color: #fff; }
+    .tab-btn.active { background: #1976d2; color: #fff; border-color: #1976d2; }
+    .admin-content { padding: 25px; }
+    .tab-pane { display: none; opacity: 0; transition: opacity 0.3s ease; }
+    .tab-pane.active { display: grid; grid-template-columns: 400px 1fr; gap: 20px; height: calc(100vh - 180px); opacity: 1; }
+    .matrix-column { background: transparent; overflow-y: auto; padding-right: 10px; }
+    .upload-pdf-box { border: 2px dashed #1976d2; border-radius: 10px; padding: 30px 20px; text-align: center; margin-bottom: 20px; background: #121212;}
+    .btn-upload-label { display: inline-block; border: 1px solid #1976d2; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-bottom: 15px; width: 100%; box-sizing: border-box; transition: 0.3s; }
+    .form-card { background: #121212; border: 1px solid #333; padding: 20px; border-radius: 10px; }
+    .group label { display: block; font-size: 12px; font-weight: bold; margin-bottom: 8px; color: #aaa; }
+    .group select, .group input { width: 100%; padding: 10px; background: #000; border: 1px solid #333; color: #fff; border-radius: 6px; box-sizing: border-box; }
+    .row { display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-end; }
+    .matrix-info { background: #0a1929; padding: 15px; border-radius: 8px; border-left: 4px solid #1976d2; margin-bottom: 20px; font-size: 13px; color: #90caf9; line-height: 1.8; }
+    .matrix-info span { color: #fff; font-weight: bold; }
+    .btn-ai { width: 100%; padding: 15px; background: #ff4081; color: white; border: none; border-radius: 8px; font-weight: 800; cursor: pointer; transition: 0.3s; }
+    .btn-ai:hover { background: #f50057; }
+    .json-area { margin-top: 20px; padding-top: 20px; border-top: 1px solid #333; }
+    #input-made { background: #000; border: 1px solid #333; color: #fff; padding: 12px; border-radius: 6px; width: 100%; margin-top: 10px; box-sizing: border-box; font-size: 14px; font-weight: bold; text-transform: uppercase;}
+    .btn-publish { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 8px; font-weight: bold; margin-top: 15px; cursor: pointer; transition: 0.3s;}
+    .btn-publish:hover { opacity: 0.9; }
+    .preview-column { height: 100%; overflow: hidden; }
+    .preview-box { height: 100%; background-color: #121212; border-radius: 10px; padding: 20px; overflow-y: auto; border: 1px solid #333; position: relative; }
+    .empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 14px; text-align: center;}
+    .exam-paper { background: #000; padding: 40px; border-radius: 5px; color: #e0e0e0; position: relative; border: 1px solid #333; }
+    .exam-header { display: flex; justify-content: space-between; font-weight: bold; border-bottom: 1.5px solid #555; padding-bottom: 15px; margin-bottom: 20px; font-size: 16px;}
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); }
+    .modal-content { background-color: #121212; color: #fff; border: 1px solid #333; width: 90%; max-width: 450px; margin: 8% auto; padding: 30px; border-radius: 12px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.5);}
+    .close-modal { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #aaa; }
+    .close-modal:hover { color: #ff5252; }
+    .m-title-dark { text-align: center; color: #1976d2; margin-top: 0; margin-bottom: 20px; font-weight: 900; font-size: 20px;}
+    .exam-body img { max-width: 100%; height: auto; display: block; margin: 15px auto; border: 1px solid #333; border-radius: 8px; }
+
+    /* Scrollbar tùy chỉnh cho bảng quản lý học sinh */
+    .table-container::-webkit-scrollbar { width: 8px; height: 8px; }
+    .table-container::-webkit-scrollbar-track { background: #121212; border-radius: 4px; }
+    .table-container::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    .table-container::-webkit-scrollbar-thumb:hover { background: #555; }
+  </style>
+</head>
+<body>
+
+  <div id="admin-login-overlay" style="position:fixed; top:0; left:0; width:100%; height:100%; background:linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); z-index:999999; display:none; align-items:center; justify-content:center;">
+    <div style="background:white; padding:40px; border-radius:12px; box-shadow:0 15px 35px rgba(0,0,0,0.3); width:360px; text-align:center;">
+      <div style="background:#f0f2f5; width:80px; height:80px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; color:#1976d2; font-size:35px;"><i class="fa-solid fa-user-shield"></i></div>
+      <h2 style="color:#333; margin-top:0; margin-bottom: 25px;">QUẢN TRỊ VIÊN</h2>
+      <input type="text" id="admin-user" placeholder="Tên đăng nhập..." style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; outline:none;">
+      <input type="password" id="admin-pass" placeholder="Mật khẩu..." style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:6px; box-sizing:border-box; outline:none;">
+      <button onclick="xacThucAdmin()" id="btn-login-admin" style="width:100%; padding:14px; background:#1976d2; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; margin-top:10px;">ĐĂNG NHẬP</button>
+      <div id="admin-login-msg" style="color:#d32f2f; margin-top:15px; font-size:14px; font-weight:bold; height: 20px;"></div>
+    </div>
+  </div>
+
+  <div id="home-screen" class="screen">
+    <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: #0f0f0f; color: white;">
+      <div style="text-align: center;">
+        <h1 style="color: #1976d2; font-size: 36px; text-transform: uppercase;">HỆ THỐNG KIỂM TRA & THI TRỰC TUYẾN</h1>
+        <p style="color: #fff; margin-bottom: 50px; font-size: 32px; font-weight: bold;">Trường THPT Vinh Xuân, thành phố Huế</p>
+        <div style="display: flex; gap: 30px; justify-content: center;">
+          <div style="background: #121212; border: 1px solid #333; padding: 40px; border-radius: 15px; width: 250px; cursor: pointer; transition: 0.3s;" onclick="document.getElementById('admin-login-overlay').style.display='flex';" onmouseover="this.style.borderColor='#1976d2'" onmouseout="this.style.borderColor='#333'">
+            <i class="fa-solid fa-chalkboard-user" style="font-size: 50px; color: #1976d2; margin-bottom: 20px;"></i><h3>GIÁO VIÊN</h3><p style="color: #888; font-size: 14px;">Quản lý & Tạo đề thi</p>
+          </div>
+          <div style="background: #121212; border: 1px solid #333; padding: 40px; border-radius: 15px; width: 250px; cursor: pointer; transition: 0.3s;" onclick="window.top.location.href = '<?= appUrl ?>?mode=login';" onmouseover="this.style.borderColor='#e65100'" onmouseout="this.style.borderColor='#333'">
+            <i class="fa-solid fa-user-graduate" style="font-size: 50px; color: #e65100; margin-bottom: 20px;"></i><h3>HỌC SINH</h3><p style="color: #888; font-size: 14px;">Vào phòng thi</p>
+          </div>
+        </div>
+        <div style="margin-top: 60px; padding-top: 25px; border-top: 1px solid #333; display: inline-block; min-width: 550px;">
+            <p style="color: #aaa; font-size: 16px; margin: 0 0 10px 0;">Tác giả: <b style="color: #fff;">NGUYỄN THANH TÙNG</b>, Giáo viên Toán Trường THPT Vinh Xuân, thành phố Huế</p>
+            <p style="color: #aaa; font-size: 16px; margin: 0;">SĐT: <b style="color: #e65100; font-size: 18px;">0972.624.052</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="admin-screen" class="screen" style="display:none">
+    <header class="admin-header">
+      <div class="header-left" onclick="document.getElementById('admin-screen').style.display='none'; document.getElementById('home-screen').style.display='block';" style="cursor:pointer;"><i class="fa-solid fa-house"></i> <span>Hệ thống</span></div>
+      <div class="header-center">BẢNG ĐIỀU KHIỂN GIÁO VIÊN</div>
+      <div class="header-right">Admin Vinh Xuân <i class="fa-solid fa-circle-user"></i></div>
+    </header>
+
+    <nav class="horizontal-tabs">
+      <button type="button" class="tab-btn active" onclick="switchTab(event, 'tab-nhap')"><i class="fa-solid fa-wand-magic-sparkles"></i> Nhập câu hỏi AI</button>
+      <button type="button" class="tab-btn" onclick="switchTab(event, 'tab-hs')"><i class="fa-solid fa-share-from-square"></i> Quản lý Giao Đề</button>
+      <button type="button" class="tab-btn" onclick="switchTab(event, 'tab-qlhs')"><i class="fa-solid fa-users-viewfinder"></i> Quản lý Học sinh</button>
+    </nav>
+
+    <div class="admin-content">
+      <div id="tab-nhap" class="tab-pane active">
+        <div class="matrix-column">
+          <div class="upload-pdf-box">
+             <label for="file" class="btn-upload-label" style="background:#15202b; color:#64b5f6; border-color:#1976d2;"><i class="fa-solid fa-file-pdf" style="color:#ff4081;"></i> 1. TẢI LÊN FILE ĐỀ GỐC (.PDF)</label>
+             <input type="file" id="file" accept=".pdf" style="display:none;">
+             <div id="file-name-pdf" style="margin-bottom: 20px; font-size: 12px; color: #777;">Chưa chọn file PDF</div>
+
+             <label for="excel-upload" class="btn-upload-label" style="background:#0d2211; color:#a5d6a7; border-color:#2e7d32;"><i class="fa-solid fa-file-excel" style="color:#4caf50;"></i> 2. TẢI ĐÁP ÁN CHUẨN (.XLSX)</label>
+             <input type="file" id="excel-upload" accept=".xlsx" style="display:none;">
+             <div id="file-name-excel" style="font-size: 12px; color: #777;">Chưa chọn file Excel</div>
+             
+             <label for="json-upload" class="btn-upload-label" style="background:#1a1a1a; color:#ffb74d; border-color:#ffb74d; margin-top:20px;"><i class="fa-solid fa-code" style="color:#ffb74d;"></i> 3. NẠP ĐỀ TỪ FILE (.JSON)</label>
+             <input type="file" id="json-upload" accept=".json" style="display:none;" onchange="importJSON(event)">
+             <div id="file-name-json" style="font-size: 12px; color: #777;">Chưa chọn file JSON</div>
+
+             <input type="hidden" id="du-lieu-dap-an" value="{}">
+          </div>
+          
+          <div class="form-card">
+            <div class="row">
+              <div class="group" style="flex:2;">
+                <label>Môn thi (Chuẩn cấu trúc Bộ GD 2025)</label>
+                <select id="sel-mon" onchange="updateExamTypeUI()">
+                  <option value="TOAN">Toán học</option><option value="LY">Vật lí</option><option value="HOA">Hóa học</option><option value="SINH">Sinh học</option><option value="DIA">Địa lí</option><option value="SU">Lịch sử</option><option value="GDKT-PL">Giáo dục KT-PL</option><option value="TIN">Tin học</option><option value="CNCN">Công nghệ Công nghiệp</option><option value="CNNN">Công nghệ Nông nghiệp</option><option value="NN">Ngoại ngữ</option>
+                </select>
+              </div>
+              <div class="group" style="flex:1;">
+                <label>Chọn Khối</label>
+                <select id="sel-khoi"><option value="12">Khối 12</option><option value="11">Khối 11</option><option value="10">Khối 10</option></select>
+              </div>
+            </div>
+            
+            <div class="row"><div class="group"><label>Thời gian thi (Phút)</label><input type="number" id="sel-time" readonly style="background:#222; cursor:not-allowed; color:#888;"></div></div>
+            <div class="matrix-info" id="matrix-structure-info"></div>
+            <button type="button" class="btn-ai" onclick="generateAI()"><i class="fa-solid fa-wand-magic-sparkles"></i> TẠO ĐỀ BẰNG TRÍ TUỆ AI</button>
+            
+            <div class="json-area">
+              <label style="color: #ffb74d;">QUẢN LÝ ĐỀ TRÊN SERVER & MÁY TÍNH:</label>
+              <input type="text" id="input-made" placeholder="Nhập mã đề (VD: 12TOAN01)...">
+              
+              <button type="button" class="btn-publish" style="background: #f59e0b; margin-bottom: 5px; margin-top: 10px;" onclick="downloadJSON()"><i class="fa-solid fa-file-arrow-down"></i> TẢI ĐỀ XUỐNG MÁY (.JSON)</button>
+              
+              <button type="button" class="btn-publish" style="background: #0284c7; margin-bottom: 5px; margin-top: 5px;" onclick="loadExamFromServer()"><i class="fa-solid fa-cloud-arrow-down"></i> TẢI LẠI ĐỀ TỪ SERVER ĐỂ SỬA</button>
+              
+              <button type="button" class="btn-publish" style="margin-top: 5px;" onclick="publishExam()"><i class="fa-solid fa-cloud-arrow-up"></i> LƯU VÀ XUẤT ĐỀ LÊN SERVER</button>
+            </div>
+
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+              <label style="color: #10b981; font-size: 12px; font-weight: bold;"><i class="fa-solid fa-gears"></i> CẤU HÌNH HỆ THỐNG</label>
+              <input type="password" id="api-key-input" placeholder="Dán mã API Key tại đây..." style="width: 100%; padding: 10px; background: #000; border: 1px solid #333; color: #fff; border-radius: 6px; box-sizing: border-box; margin-top: 10px;">
+              <button type="button" class="btn-publish" style="background: #10b981; margin-top: 10px;" onclick="saveKeyAI(this)"><i class="fa-solid fa-floppy-disk"></i> LƯU MÃ BẢO MẬT</button>
+              
+              <label for="bg-upload" class="btn-upload-label" style="background:#1a1a1a; color:#fff; border-color:#555; margin-top:15px; width: 100%; text-align:center;"><i class="fa-solid fa-image"></i> TẢI LÊN HÌNH NỀN CHO HỌC SINH</label>
+              <input type="file" id="bg-upload" accept="image/*" style="display:none;" onchange="uploadHinhNen(this)">
+              <div id="bg-msg" style="margin-top: 8px; font-size: 11px; text-align: center; display: none;"></div>
+            </div>
+
+          </div>
+        </div>
+        
+        <div class="preview-column">
+          <div class="preview-box" id="exam-preview-container">
+             <div class="empty-state"><i class="fa-solid fa-file-lines" style="font-size: 50px; margin-bottom: 15px; color: #444;"></i><p>Nội dung xem trước đề thi với Công thức Toán học sắc nét sẽ hiển thị ở đây.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-hs" class="tab-pane" style="display: block; opacity: 0; pointer-events: none; height: 0; overflow: hidden;">
+         <div style="background: #121212; padding: 40px; border-radius: 12px; width: 100%; border: 1px solid #333; text-align: center;">
+            <h3 style="color: #e65100; margin-top: 0; font-size: 22px;"><i class="fa-solid fa-paper-plane"></i> PHÁT ĐỀ CHO LỚP</h3>
+            <p style="color: #888; font-size: 15px; margin-bottom: 25px;">Đồng bộ mã đề từ kho lưu trữ xuống danh sách học sinh từng lớp.</p>
+            <button type="button" onclick="moBangGiaoDe()" style="padding: 15px 35px; background: #e65100; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; transition: 0.3s;"><i class="fa-solid fa-share-from-square"></i> MỞ BẢNG GIAO ĐỀ</button>
+         </div>
+      </div>
+
+      <div id="tab-qlhs" class="tab-pane" style="display: block; opacity: 0; pointer-events: none; height: 0; overflow: hidden;">
+         <div style="background: #121212; padding: 25px; border-radius: 12px; width: 100%; border: 1px solid #333; display: flex; flex-direction: column;">
+            <h3 style="color: #4caf50; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 15px;"><i class="fa-solid fa-chart-line"></i> KIỂM TRA TIẾN ĐỘ HỌC SINH</h3>
+            
+            <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+               <div style="flex: 1;">
+                  <label style="color:#aaa; font-size: 12px; font-weight: bold; display: block; margin-bottom: 5px;">Chọn Khối</label>
+                  <select id="ql-khoi" style="width:100%; padding:10px; background:#000; border:1px solid #333; color:#fff; border-radius:6px;">
+                      <option value="KHOI_12">Khối 12</option><option value="KHOI_11">Khối 11</option><option value="KHOI_10">Khối 10</option>
+                  </select>
+               </div>
+               <div style="flex: 1;">
+                  <label style="color:#aaa; font-size: 12px; font-weight: bold; display: block; margin-bottom: 5px;">Chọn Môn</label>
+                  <select id="ql-mon" style="width:100%; padding:10px; background:#000; border:1px solid #333; color:#fff; border-radius:6px;">
+                      <option value="TOAN">Toán học</option><option value="LY">Vật lí</option><option value="HOA">Hóa học</option><option value="SINH">Sinh học</option><option value="DIA">Địa lí</option><option value="SU">Lịch sử</option><option value="GDKT-PL">Giáo dục KT-PL</option><option value="TIN">Tin học</option><option value="CNCN">Công nghệ Công nghiệp</option><option value="CNNN">Công nghệ Nông nghiệp</option><option value="NN">Ngoại ngữ</option>
+                  </select>
+               </div>
+               <div style="flex: 1;">
+                  <label style="color:#aaa; font-size: 12px; font-weight: bold; display: block; margin-bottom: 5px;">Lớp (VD: 12A1)</label>
+                  <input type="text" id="ql-lop" style="width:100%; padding:10px; background:#000; border:1px solid #333; color:#fff; border-radius:6px; box-sizing: border-box;" placeholder="Nhập tên lớp...">
+               </div>
+               <div style="flex: 1;">
+                  <label style="color:#aaa; font-size: 12px; font-weight: bold; display: block; margin-bottom: 5px;">Mã Đề Cần Tra</label>
+                  <input type="text" id="ql-made" style="width:100%; padding:10px; background:#000; border:1px solid #333; color:#fff; border-radius:6px; box-sizing: border-box; text-transform: uppercase;" placeholder="Nhập mã đề...">
+               </div>
+               <div style="display: flex; align-items: flex-end;">
+                  <button onclick="taiDanhSachHS()" id="btn-tai-ql" style="padding: 10px 20px; background: #1976d2; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; height: 38px;"><i class="fa-solid fa-magnifying-glass"></i> XEM KẾT QUẢ</button>
+               </div>
+            </div>
+
+            <div class="table-container" style="overflow-y: auto; max-height: calc(100vh - 280px); background: #0a0a0a; border: 1px solid #333; border-radius: 8px;">
+                <table style="width: 100%; border-collapse: collapse; color: #fff; font-size: 14px;" id="table-qlhs">
+                    <thead style="position: sticky; top: 0; z-index: 10;">
+                        <tr style="background: #1e293b; text-transform: uppercase; font-size: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            <th style="padding: 12px; text-align: center; width: 60px;">STT</th>
+                            <th style="padding: 12px; text-align: left;">Họ và Tên</th>
+                            <th style="padding: 12px; text-align: center; width: 100px;">Lớp</th>
+                            <th style="padding: 12px; text-align: left;">Trạng Thái</th>
+                            <th style="padding: 12px; text-align: center; width: 120px;">Điểm Thi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-qlhs">
+                        <tr><td colspan="5" style="padding: 30px; text-align: center; color: #666;">Vui lòng chọn thông tin và bấm Xem Kết Quả để tải dữ liệu.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modalGiaoDe" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="dongBangGiaoDe()">&times;</span>
+      <h2 class="m-title-dark"><i class="fa-solid fa-list-check"></i> BẢNG GIAO ĐỀ</h2>
+      
+      <label style="color:#aaa; font-weight:bold; display:block; margin-top:15px; font-size:13px;">1. Chọn Môn thi</label>
+      <select id="mdl-mon" style="width:100%; padding:14px; margin-top:8px; background:#000; border:1px solid #333; color:#fff; border-radius:6px; font-size: 15px; outline: none;">
+        <option value="TOAN">Toán học</option><option value="LY">Vật lí</option><option value="HOA">Hóa học</option><option value="SINH">Sinh học</option><option value="DIA">Địa lí</option><option value="SU">Lịch sử</option><option value="GDKT-PL">Giáo dục KT-PL</option><option value="TIN">Tin học</option><option value="CNCN">Công nghệ Công nghiệp</option><option value="CNNN">Công nghệ Nông nghiệp</option><option value="NN">Ngoại ngữ</option>
+      </select>
+
+      <label style="color:#aaa; font-weight:bold; display:block; margin-top:15px; font-size:13px;">2. Chọn Khối</label>
+      <select id="mdl-khoi" style="width:100%; padding:14px; margin-top:8px; background:#000; border:1px solid #333; color:#fff; border-radius:6px; font-size: 15px; outline: none;"><option value="KHOI_12">Khối 12</option><option value="KHOI_11">Khối 11</option><option value="KHOI_10">Khối 10</option></select>
+      
+      <label style="color:#aaa; font-weight:bold; display:block; margin-top:15px; font-size:13px;">3. Lớp nhận đề (VD: 12A1, 12A2, 12A3)</label>
+      <input type="text" id="mdl-lop" placeholder="Nhập các lớp, cách nhau bởi dấu phẩy..." style="width:100%; padding:14px; margin-top:8px; background:#000; border:1px solid #333; color:#fff; border-radius:6px; box-sizing:border-box; font-size: 15px; outline: none;">
+      
+      <label style="color:#aaa; font-weight:bold; display:block; margin-top:15px; font-size:13px;">4. Nhập Mã Đề</label>
+      <input type="text" id="mdl-made" placeholder="Nhập mã đề từ hệ thống..." style="width:100%; padding:14px; margin-top:8px; background:#000; border:1px solid #333; color:#fff; border-radius:6px; box-sizing:border-box; font-size: 15px; outline: none; text-transform: uppercase;">
+      
+      <div id="mdl-msg" style="margin-top: 15px; font-weight: bold; text-align: center; font-size: 14px; min-height: 20px;"></div>
+      <button id="mdl-btn-luu" type="button" onclick="luuCaiDatGiaoDe()" style="width:100%; padding:16px; background:#e65100; color:white; border:none; border-radius:8px; font-weight:bold; margin-top:20px; cursor:pointer; font-size: 16px; transition: 0.3s;"><i class="fa-solid fa-floppy-disk"></i> GHI NHẬN & PHÁT ĐỀ</button>
+    </div>
+  </div>
+
+  <script>
+    const examStruct = {
+      "TOAN": { name: "Toán", time: 90, p1: 12, p2: 4, p3: 6 }, "LY": { name: "Vật lí", time: 50, p1: 18, p2: 4, p3: 6 }, "HOA": { name: "Hóa học", time: 50, p1: 18, p2: 4, p3: 6 },
+      "SINH": { name: "Sinh học", time: 50, p1: 18, p2: 4, p3: 6 }, "DIA": { name: "Địa lí", time: 50, p1: 18, p2: 4, p3: 6 }, "SU": { name: "Lịch sử", time: 50, p1: 24, p2: 4, p3: 0 },
+      "GDKT-PL": { name: "Giáo dục KT-PL", time: 50, p1: 24, p2: 4, p3: 0 }, "TIN": { name: "Tin học", time: 50, p1: 24, p2: 6, p3: 0 }, "CNCN": { name: "Công nghệ Công nghiệp", time: 50, p1: 24, p2: 4, p3: 0 },
+      "CNNN": { name: "Công nghệ Nông nghiệp", time: 50, p1: 24, p2: 4, p3: 0 }, "NN": { name: "Ngoại ngữ", time: 50, p1: 40, p2: 0, p3: 0 }
+    };
+
+    function updateExamTypeUI() {
+      const monKey = document.getElementById('sel-mon').value;
+      const data = examStruct[monKey];
+      document.getElementById('sel-time').value = data.time;
+      let htmlInfo = `<div style="color: #3b82f6; font-weight:bold; margin-bottom: 5px;"><i class="fa-solid fa-layer-group"></i> CẤU TRÚC ĐỀ (${data.name.toUpperCase()})</div>`;
+      if (data.p1 > 0) htmlInfo += `<div><span>Phần I:</span> Trắc nghiệm (<b>${data.p1} câu</b>)</div>`;
+      if (data.p2 > 0) htmlInfo += `<div><span>Phần II:</span> Đúng/Sai (<b>${data.p2} câu</b>)</div>`;
+      if (data.p3 > 0) htmlInfo += `<div><span>Phần III:</span> Trả lời ngắn (<b>${data.p3} câu</b>)</div>`;
+      document.getElementById('matrix-structure-info').innerHTML = htmlInfo;
+    }
+    
+    document.addEventListener("DOMContentLoaded", updateExamTypeUI);
+
+    function xacThucAdmin() {
+      var u = document.getElementById('admin-user').value.trim(), p = document.getElementById('admin-pass').value.trim(), btn = document.getElementById('btn-login-admin'), msg = document.getElementById('admin-login-msg');
+      if(!u || !p) { msg.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Vui lòng nhập đủ thông tin!'; return; }
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ĐANG KIỂM TRA...'; btn.disabled = true; msg.innerText = "";
+      google.script.run.withSuccessHandler(function(isValid) {
+        if(isValid) { document.getElementById('home-screen').style.display = 'none'; document.getElementById('admin-screen').style.display = 'block'; document.getElementById('admin-login-overlay').style.display = 'none'; } 
+        else { msg.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Sai tài khoản hoặc mật khẩu!'; btn.innerHTML = 'ĐĂNG NHẬP'; btn.disabled = false; }
+      }).withFailureHandler(function() { msg.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Lỗi kết nối hệ thống!'; btn.innerHTML = 'ĐĂNG NHẬP'; btn.disabled = false; }).checkAdminLogin(u, p);
+    }
+
+    function switchTab(e, id) {
+      document.querySelectorAll('.tab-pane').forEach(p => { p.classList.remove('active'); p.style.opacity = '0'; p.style.height = '0'; p.style.pointerEvents = 'none'; });
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const activeTab = document.getElementById(id); activeTab.classList.add('active'); activeTab.style.opacity = '1'; activeTab.style.height = 'calc(100vh - 180px)'; activeTab.style.pointerEvents = 'auto'; e.currentTarget.classList.add('active');
+    }
+
+    (function() {
+      let pdfInput = document.getElementById('file'); 
+      if(pdfInput) { pdfInput.addEventListener('change', function() { let target = document.getElementById('file-name-pdf'); if (this.files && this.files.length > 0) target.innerHTML = `<span style="color: #ff4081; font-weight: bold;"><i class="fa-solid fa-check"></i> ${this.files[0].name}</span>`; else target.innerHTML = "Chưa chọn file PDF"; }); }
+      let excelInput = document.getElementById('excel-upload');
+      if(excelInput) {
+        excelInput.addEventListener('change', function() {
+          let target = document.getElementById('file-name-excel');
+          if (!this.files || this.files.length === 0) return; target.innerHTML = `<span style="color: #4caf50; font-weight: bold;"><i class="fa-solid fa-check"></i> ${this.files[0].name}</span>`;
+          let reader = new FileReader();
+          reader.onload = function(e) {
+            try {
+              let data = new Uint8Array(e.target.result), workbook = XLSX.read(data, {type: 'array'}), jsonMoi = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], {header: 1});
+              let dapAnObj = {}; for(let i = 1; i < jsonMoi.length; i++) { if(jsonMoi[i][0] && jsonMoi[i][1]) dapAnObj[jsonMoi[i][0].toString().trim()] = jsonMoi[i][1].toString().trim(); }
+              document.getElementById('du-lieu-dap-an').value = JSON.stringify(dapAnObj); alert("✅ Đã load thành công " + Object.keys(dapAnObj).length + " đáp án!");
+            } catch (err) { alert("❌ Lỗi file Excel!"); }
+          };
+          reader.readAsArrayBuffer(this.files[0]);
+        });
+      }
+    })();
+
+    function downloadJSON() {
+      const made = document.getElementById('input-made').value.trim().toUpperCase() || "DE_THI_BACKUP";
+      const previewContainer = document.getElementById('exam-preview-container');
+      
+      if (previewContainer.innerHTML.includes('empty-state')) return alert("Thầy vui lòng tạo đề bằng AI hoặc tải đề từ Server trước khi xuất file JSON!");
+
+      let contentDiv = document.getElementById('exam-body-content');
+      if (contentDiv && contentDiv.getAttribute('contenteditable') === 'true') {
+          return alert("Thầy vui lòng bấm 'Xong & Cập nhật' màu xanh lá cây trước khi tải JSON!");
+      }
+
+      let htmlContent = "";
+      if (contentDiv) {
+          let raw = contentDiv.getAttribute('data-raw-html');
+          if (raw) {
+              htmlContent = decodeURIComponent(raw);
+          } else {
+              htmlContent = contentDiv.innerHTML;
+          }
+      } else {
+          htmlContent = previewContainer.innerHTML;
+      }
+      
+      let dapAnAn = document.getElementById('du-lieu-dap-an').value;
+      
+      let dataToSave = {
+         maDe: made,
+         htmlContent: htmlContent,
+         dapAn: JSON.parse(dapAnAn || '{}')
+      };
+      
+      let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dataToSave));
+      let downloadAnchorNode = document.createElement('a');
+      downloadAnchorNode.setAttribute("href", dataStr);
+      downloadAnchorNode.setAttribute("download", made + ".json");
+      document.body.appendChild(downloadAnchorNode); 
+      downloadAnchorNode.click();
+      downloadAnchorNode.remove();
+    }
+
+    function importJSON(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      document.getElementById('file-name-json').innerHTML = `<span style="color: #ffb74d; font-weight: bold;"><i class="fa-solid fa-check"></i> ${file.name}</span>`;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const data = JSON.parse(e.target.result);
+          
+          let previewContainer = document.getElementById('exam-preview-container');
+          let htmlRaw = data.htmlContent || data.html || ""; 
+          
+          let tempDiv = document.createElement('div');
+          tempDiv.innerHTML = htmlRaw;
+          
+          let scriptTag = tempDiv.querySelector('#dap-an-chuan');
+          if(scriptTag) {
+              document.getElementById('du-lieu-dap-an').value = scriptTag.innerText;
+              scriptTag.remove(); 
+          } else if(data.dapAn) {
+              document.getElementById('du-lieu-dap-an').value = (typeof data.dapAn === 'string') ? data.dapAn : JSON.stringify(data.dapAn);
+          }
+          
+          let t = "90";
+          let timeCfg = tempDiv.querySelector('#exam-config-time');
+          if(timeCfg) { t = timeCfg.dataset.time || "90"; timeCfg.remove(); }
+          
+          let m = document.getElementById('sel-mon').value; 
+          let monCfg = tempDiv.querySelector('#exam-config-mon');
+          if(monCfg) { m = monCfg.dataset.mon || m; monCfg.remove(); }
+          
+          document.getElementById('sel-time').value = t;
+          document.getElementById('sel-mon').value = m;
+          updateExamTypeUI(); 
+          
+          let questionsHTML = tempDiv.innerHTML;
+          const khoi = document.getElementById('sel-khoi').value;
+          const struct = examStruct[m] || {name: m, time: t};
+          let title = `ĐỀ THI MÔN ${struct.name.toUpperCase()}`;
+          
+          let finalHTML = `
+            <div id="exam-config-time" data-time="${struct.time}" style="display:none;"></div>
+            <div id="exam-config-mon" data-mon="${m}" style="display:none;"></div>
+            <button id="btn-edit-exam" onclick="toggleEditExam()" style="position: sticky; top: 10px; float: right; background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; margin-bottom: 10px;"><i class="fa-solid fa-pen"></i> Chỉnh sửa đề</button>
+            <div class="exam-paper" style="clear: both;">
+              <div class="exam-header" style="text-transform: uppercase;">
+                <div style="text-align: left;">SỞ GD&ĐT THỪA THIÊN HUẾ<br><b>TRƯỜNG THPT VINH XUÂN</b></div>
+                <div style="text-align: right;"><b>${title} (LỚP ${khoi})</b><br>Thời gian làm bài: ${struct.time} phút</div>
+              </div>
+              <div id="exam-body-content" contenteditable="false" style="outline: none;" data-raw-html="${encodeURIComponent(questionsHTML)}">${questionsHTML}</div>
+            </div>`;
+
+          previewContainer.innerHTML = finalHTML;
+          if (window.MathJax) { MathJax.typesetPromise([document.getElementById('exam-body-content')]); }
+          
+          if(data.made || data.maDe) {
+             document.getElementById('input-made').value = data.made || data.maDe;
+          }
+          
+          alert("✅ Đã nạp và hiển thị đề từ file JSON thành công! Thầy có thể nhấn 'Chỉnh sửa đề' để xem chi tiết.");
+        } catch(err) { 
+          alert("❌ Lỗi: File JSON không đúng định dạng!"); 
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function saveKeyAI(btn) {
+      const key = document.getElementById('api-key-input').value.trim();
+      if(!key) { alert("Vui lòng nhập mã API Key!"); return; }
+      
+      const oldText = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ĐANG LƯU...';
+      btn.disabled = true;
+      
+      google.script.run.withSuccessHandler(res => {
+        btn.innerHTML = oldText;
+        btn.disabled = false;
+        document.getElementById('api-key-input').value = ""; 
+        let msg = document.getElementById('api-msg');
+        msg.innerText = res;
+        msg.style.display = "block";
+        msg.style.color = "#4caf50";
+        setTimeout(() => msg.style.display = "none", 3000);
+      }).luuApiKey(key);
+    }
+
+    function uploadHinhNen(input) {
+      if(!input.files || input.files.length === 0) return;
+      let file = input.files[0];
+      let msg = document.getElementById('bg-msg');
+      msg.style.display = "block"; 
+      msg.style.color = "#ffb74d"; 
+      msg.innerText = "Đang xử lý hình ảnh...";
+      
+      let reader = new FileReader();
+      reader.onload = function(e) {
+        google.script.run.withSuccessHandler(res => {
+          msg.style.color = "#4caf50"; 
+          msg.innerText = res;
+          setTimeout(() => msg.style.display = "none", 4000);
+        }).luuHinhNenHeThong(e.target.result, file.name);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function loadExamFromServer() {
+      const made = document.getElementById('input-made').value.trim().toUpperCase();
+      if (!made) return alert("Thầy vui lòng nhập Mã đề cần tải!");
+      
+      const previewContainer = document.getElementById('exam-preview-container');
+      previewContainer.innerHTML = `<div class="empty-state"><i class="fa-solid fa-cloud-arrow-down fa-bounce" style="font-size: 50px; color:#0284c7; margin-bottom: 15px;"></i><p>Đang tải dữ liệu đề thi mã ${made} từ Server...</p></div>`;
+      
+      google.script.run.withSuccessHandler(function(res) {
+        if(res.success) {
+            let htmlRaw = res.data;
+            let tempDiv = document.createElement('div');
+            tempDiv.innerHTML = htmlRaw;
+            
+            let scriptTag = tempDiv.querySelector('#dap-an-chuan');
+            if(scriptTag) {
+                document.getElementById('du-lieu-dap-an').value = scriptTag.innerText;
+                scriptTag.remove(); 
+            }
+            
+            let t = "90";
+            let timeCfg = tempDiv.querySelector('#exam-config-time');
+            if(timeCfg) { t = timeCfg.dataset.time || "90"; timeCfg.remove(); }
+            
+            let m = "TOAN";
+            let monCfg = tempDiv.querySelector('#exam-config-mon');
+            if(monCfg) { m = monCfg.dataset.mon || "TOAN"; monCfg.remove(); }
+            
+            document.getElementById('sel-time').value = t;
+            document.getElementById('sel-mon').value = m;
+            updateExamTypeUI(); 
+            
+            let questionsHTML = tempDiv.innerHTML;
+            const khoi = document.getElementById('sel-khoi').value;
+            const struct = examStruct[m] || {name: m, time: t};
+            let title = `ĐỀ THI MÔN ${struct.name.toUpperCase()}`;
+            
+            let finalHTML = `
+              <div id="exam-config-time" data-time="${struct.time}" style="display:none;"></div>
+              <div id="exam-config-mon" data-mon="${m}" style="display:none;"></div>
+              <button id="btn-edit-exam" onclick="toggleEditExam()" style="position: sticky; top: 10px; float: right; background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; margin-bottom: 10px;"><i class="fa-solid fa-pen"></i> Chỉnh sửa đề</button>
+              <div class="exam-paper" style="clear: both;">
+                <div class="exam-header" style="text-transform: uppercase;">
+                  <div style="text-align: left;">SỞ GD&ĐT THỪA THIÊN HUẾ<br><b>TRƯỜNG THPT VINH XUÂN</b></div>
+                  <div style="text-align: right;"><b>${title} (LỚP ${khoi})</b><br>Thời gian làm bài: ${struct.time} phút</div>
+                </div>
+                <div id="exam-body-content" contenteditable="false" style="outline: none;" data-raw-html="${encodeURIComponent(questionsHTML)}">${questionsHTML}</div>
+              </div>`;
+
+             previewContainer.innerHTML = finalHTML;
+             if (window.MathJax) { MathJax.typesetPromise([document.getElementById('exam-body-content')]); }
+             alert("✅ Đã tải đề từ Server! Thầy có thể nhấn 'Chỉnh sửa đề' để sửa đổi nội dung và thêm/bớt hình ảnh.");
+        } else {
+             previewContainer.innerHTML = `<div class="empty-state"><i class="fa-solid fa-triangle-exclamation" style="font-size: 50px; color:#ef4444; margin-bottom: 15px;"></i><p>${res.message}</p></div>`;
+        }
+      }).withFailureHandler(function(err) {
+          previewContainer.innerHTML = `<div class="empty-state"><i class="fa-solid fa-server" style="font-size: 50px; color:#ef4444; margin-bottom: 15px;"></i><p>Lỗi kết nối: ${err.message}</p></div>`;
+      }).layDeTuDrive(made);
+    }
+
+    function generateAI() {
+      const fileInput = document.getElementById('file');
+      const monKey = document.getElementById('sel-mon').value;
+      const khoi = document.getElementById('sel-khoi').value;
+      const struct = examStruct[monKey];
+      const previewContainer = document.getElementById('exam-preview-container');
+
+      if (!fileInput.files || fileInput.files.length === 0) return alert("Vui lòng tải file đề gốc (.pdf) trước!");
+
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+
+      previewContainer.innerHTML = `<div class="empty-state"><i class="fa-solid fa-microchip fa-spin" style="font-size: 50px; color:#ff4081; margin-bottom: 15px;"></i><p>Đang nạp file và phân tích bằng AI...</p></div>`;
+
+      reader.onload = function(e) {
+        google.script.run.withSuccessHandler(function(aiHTML) {
+             let title = `ĐỀ THI MÔN ${struct.name.toUpperCase()}`;
+             let finalHTML = `
+              <div id="exam-config-time" data-time="${struct.time}" style="display:none;"></div>
+              <div id="exam-config-mon" data-mon="${monKey}" style="display:none;"></div>
+              <button id="btn-edit-exam" onclick="toggleEditExam()" style="position: sticky; top: 10px; float: right; background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; margin-bottom: 10px;"><i class="fa-solid fa-pen"></i> Chỉnh sửa đề</button>
+              <div class="exam-paper" style="clear: both;">
+                <div class="exam-header" style="text-transform: uppercase;">
+                  <div style="text-align: left;">SỞ GD&ĐT THỪA THIÊN HUẾ<br><b>TRƯỜNG THPT VINH XUÂN</b></div>
+                  <div style="text-align: right;"><b>${title} (LỚP ${khoi})</b><br>Thời gian làm bài: ${struct.time} phút</div>
+                </div>
+                <div id="exam-body-content" contenteditable="false" style="outline: none;" data-raw-html="${encodeURIComponent(aiHTML)}">${aiHTML}</div>
+              </div>`;
+
+             previewContainer.innerHTML = finalHTML;
+             if (window.MathJax) { MathJax.typesetPromise([document.getElementById('exam-body-content')]); }
+          }).withFailureHandler(function(error) { previewContainer.innerHTML = `<div style="color: red; padding: 20px;">❌ Lỗi kết nối: ${error.message}</div>`; }).generateExamFromAI(e.target.result, file.name, struct);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function toggleEditExam() {
+      const examBody = document.getElementById('exam-body-content');
+      const btnEdit = document.getElementById('btn-edit-exam');
+      const isEditing = examBody.getAttribute('contenteditable') === 'true';
+      
+      if (isEditing) {
+        examBody.setAttribute('contenteditable', 'false'); 
+        examBody.style.border = 'none'; 
+        examBody.style.padding = '0';
+        btnEdit.innerHTML = '<i class="fa-solid fa-pen"></i> Chỉnh sửa đề'; 
+        btnEdit.style.background = '#3b82f6'; 
+        
+        let lgNodes = examBody.querySelectorAll('.loi-giai-chi-tiet');
+        lgNodes.forEach(n => {
+            n.style.display = 'none';
+            n.style.background = 'transparent';
+            n.style.border = 'none';
+            n.style.padding = '0';
+        });
+
+        examBody.setAttribute('data-raw-html', encodeURIComponent(examBody.innerHTML));
+
+        alert('Đã TẠM LƯU CHỈNH SỬA. Thầy nhớ bấm LƯU VÀ XUẤT ĐỀ LÊN SERVER để áp dụng vĩnh viễn nhé!');
+        if (window.MathJax) { MathJax.typesetPromise([examBody]); }
+      } else {
+        let raw = examBody.getAttribute('data-raw-html');
+        if (raw) {
+            examBody.innerHTML = decodeURIComponent(raw);
+        }
+
+        examBody.setAttribute('contenteditable', 'true'); 
+        examBody.style.border = '2px dashed #22c55e'; 
+        examBody.style.padding = '20px';
+        btnEdit.innerHTML = '<i class="fa-solid fa-floppy-disk"></i> Xong & Cập nhật'; 
+        btnEdit.style.background = '#22c55e'; 
+        examBody.focus();
+
+        let lgNodes = examBody.querySelectorAll('.loi-giai-chi-tiet');
+        lgNodes.forEach(n => {
+            n.style.display = 'block';
+            n.style.background = 'rgba(245, 158, 11, 0.1)';
+            n.style.border = '1px dashed #f59e0b';
+            n.style.padding = '15px';
+            n.style.marginTop = '15px';
+            n.style.borderRadius = '5px';
+        });
+      }
+    }
+
+    function publishExam() {
+      const made = document.getElementById('input-made').value.trim().toUpperCase();
+      const previewContainer = document.getElementById('exam-preview-container');
+      const monKey = document.getElementById('sel-mon').value;
+
+      if (previewContainer.innerHTML.includes('empty-state')) return alert("Vui lòng tạo hoặc tải đề trước khi lưu!");
+      if (!made) return alert("Vui lòng nhập Mã đề!");
+      
+      let contentDiv = document.getElementById('exam-body-content');
+      if (contentDiv && contentDiv.getAttribute('contenteditable') === 'true') {
+          return alert("Thầy vui lòng bấm 'Xong & Cập nhật' màu xanh lá cây để hoàn tất chỉnh sửa trước khi xuất đề nhé!");
+      }
+      
+      const btn = document.querySelector('.btn-publish:last-child');
+      let oldHtml = btn.innerHTML;
+      btn.innerHTML = "<i class='fa-solid fa-spinner fa-spin'></i> ĐANG XUẤT ĐỀ LÊN SERVER..."; btn.disabled = true;
+
+      let examContent = "";
+      if (contentDiv) {
+          let raw = contentDiv.getAttribute('data-raw-html');
+          if (raw) {
+              examContent = decodeURIComponent(raw);
+          } else {
+              examContent = contentDiv.innerHTML;
+          }
+      } else {
+          examContent = previewContainer.innerHTML;
+      }
+      
+      let dapAnAn = document.getElementById('du-lieu-dap-an').value;
+      let thoiGian = document.getElementById('sel-time').value;
+      examContent += `<div id="exam-config-time" data-time="${thoiGian}" style="display:none;"></div>`;
+      examContent += `<div id="exam-config-mon" data-mon="${monKey}" style="display:none;"></div>`;
+      examContent += `<script id="dap-an-chuan" type="application/json">${dapAnAn}<\/script>`;
+
+      google.script.run.withSuccessHandler(function(res) {
+           btn.innerHTML = oldHtml; btn.disabled = false; alert(res); 
+           switchTab({currentTarget: document.querySelectorAll('.tab-btn')[1]}, 'tab-hs');
+           document.getElementById('mdl-made').value = made; document.getElementById('mdl-khoi').value = "KHOI_" + document.getElementById('sel-khoi').value;
+           moBangGiaoDe();
+        }).withFailureHandler(function(err) { btn.innerHTML = oldHtml; btn.disabled = false; alert("Lỗi: " + err.message); }).luuDeLenDrive(made, examContent, monKey);
+    }
+
+    function moBangGiaoDe() { 
+      document.getElementById('modalGiaoDe').style.display = 'block'; 
+      document.getElementById('mdl-msg').innerText = ''; 
+      document.getElementById('mdl-mon').value = document.getElementById('sel-mon').value;
+    }
+    
+    function dongBangGiaoDe() { document.getElementById('modalGiaoDe').style.display = 'none'; }
+
+    function luuCaiDatGiaoDe() {
+       let mon = document.getElementById("mdl-mon").value;
+       let khoi = document.getElementById("mdl-khoi").value;
+       let lop = document.getElementById("mdl-lop").value.trim().toUpperCase();
+       let maDe = document.getElementById("mdl-made").value.trim().toUpperCase();
+       let btn = document.getElementById("mdl-btn-luu");
+       let msg = document.getElementById("mdl-msg");
+       
+       if(!lop || !maDe) { msg.style.color = "#ff5252"; msg.innerText = "❌ Vui lòng nhập đủ tên Lớp và Mã đề!"; return; }
+       btn.innerHTML = "<i class='fa-solid fa-spinner fa-spin'></i> ĐANG ĐỒNG BỘ..."; btn.disabled = true;
+
+       google.script.run.withSuccessHandler(res => {
+             btn.innerHTML = "<i class='fa-solid fa-floppy-disk'></i> GHI NHẬN & PHÁT ĐỀ"; btn.disabled = false;
+             if(res.includes("Thành công")) { msg.style.color = "#4caf50"; msg.innerText = "✅ " + res; setTimeout(dongBangGiaoDe, 3000); } 
+             else { msg.style.color = "#ff5252"; msg.innerText = "❌ " + res; }
+          }).withFailureHandler(err => { msg.style.color = "#ff5252"; msg.innerText = "❌ Lỗi đường truyền!"; btn.innerHTML = "<i class='fa-solid fa-floppy-disk'></i> GHI NHẬN & PHÁT ĐỀ"; btn.disabled = false; 
+          }).thucHienGiaoDe(khoi, lop, maDe, mon);
+    }
+
+    function taiDanhSachHS() {
+        let mon = document.getElementById('ql-mon').value;
+        let khoi = document.getElementById('ql-khoi').value;
+        let lop = document.getElementById('ql-lop').value.trim();
+        let made = document.getElementById('ql-made').value.trim().toUpperCase();
+        
+        if(!lop || !made) return alert("Thầy vui lòng nhập đủ thông tin Lớp và Mã Đề!");
+        
+        let btn = document.getElementById('btn-tai-ql');
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ĐANG TẢI...';
+        btn.disabled = true;
+        
+        google.script.run.withSuccessHandler(function(res) {
+            btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i> XEM KẾT QUẢ';
+            btn.disabled = false;
+            
+            let tbody = document.getElementById('tbody-qlhs');
+            if(!res.success) {
+                tbody.innerHTML = `<tr><td colspan="5" style="padding: 20px; text-align: center; color: #ef4444;">❌ ${res.message}</td></tr>`;
+                return;
+            }
+            
+            let html = '';
+            res.data.forEach(hs => {
+                let colorStatus = hs.trangThai === 'Đã nộp bài' ? '#22c55e' : (hs.trangThai.includes('Chưa nộp bài') ? '#f59e0b' : '#ef4444');
+                let iconStatus = hs.trangThai === 'Đã nộp bài' ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-circle-notch"></i>';
+                html += `<tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 12px; text-align: center;">${hs.stt}</td>
+                    <td style="padding: 12px; text-align: left; font-weight: bold;">${hs.ten}</td>
+                    <td style="padding: 12px; text-align: center;">${hs.lop}</td>
+                    <td style="padding: 12px; text-align: left; color: ${colorStatus};">${iconStatus} ${hs.trangThai}</td>
+                    <td style="padding: 12px; text-align: center; font-weight: 900; color: #3b82f6; font-size: 16px;">${hs.diem ? hs.diem.toString().replace('.',',') : '-'}</td>
+                </tr>`;
+            });
+            tbody.innerHTML = html;
+        }).withFailureHandler(function(err) {
+            btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i> XEM KẾT QUẢ';
+            btn.disabled = false;
+            alert("Lỗi kết nối máy chủ: " + err.message);
+        }).layDanhSachHocSinhThi(khoi, lop, mon, made);
+    }
+  </script>
+</body>
+</html>

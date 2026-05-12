@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body { background-color: #0f0f0f; font-family: 'Segoe UI', Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; position: relative; }
+    .btn-back { position: absolute; top: 25px; left: 25px; background: #0a0a0a; color: #f59e0b; border: 1px solid #f59e0b; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 14px; transition: 0.3s; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+    .btn-back:hover { background: #f59e0b; color: #000; }
+    .login-container { background: #121212; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 360px; text-align: center; border: 1px solid #333; }
+    .icon { background: #f59e0b; color: #000; width: 55px; height: 55px; border-radius: 12px; display: inline-flex; justify-content: center; align-items: center; font-size: 26px; margin-bottom: 15px; }
+    h2 { margin: 0 0 8px; font-size: 20px; font-weight: 800; color: #fff; text-transform: uppercase;}
+    p { color: #888; margin: 0 0 25px; font-size: 14px; }
+    .input-field { width: 100%; padding: 12px 15px; margin-bottom: 15px; border: 1px solid #333; background: #000; color:#fff; border-radius: 6px; box-sizing: border-box; font-size: 14px; transition: 0.3s; outline: none; }
+    .input-field:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.2); }
+    .btn-login { background: #3b82f6; color: white; width: 100%; padding: 13px; border: none; border-radius: 6px; font-size: 15px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .btn-login:hover { background: #2563eb; }
+    .btn-login:disabled { opacity: 0.7; cursor: not-allowed; }
+    .msg { margin-top: 15px; font-size: 14px; display: none; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold;}
+    .msg-error { background: rgba(239,68,68,0.1); color: #ef4444; border: 1px solid #ef4444; }
+    .msg-success { background: rgba(34,197,94,0.1); color: #22c55e; border: 1px solid #22c55e; }
+    
+    .exam-btn { display:block; padding:12px; margin-bottom:10px; background:#ef4444; color:white; text-decoration:none; border-radius:6px; font-weight:bold; font-size:15px; box-shadow: 0 4px 6px rgba(0,0,0,0.5); transition: 0.2s;}
+    .exam-btn:hover { background: #dc2626; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+<button class="btn-back" onclick="window.top.location.href = '<?= appUrl ?>';"><i class="fa-solid fa-arrow-left"></i> Quay lại trang chính</button>
+
+<div class="login-container">
+  <div class="icon"><i class="fa-solid fa-user-graduate"></i></div>
+  <h2>ĐĂNG NHẬP PHÒNG THI</h2>
+  <p>Trường THPT Vinh Xuân</p>
+
+  <input type="text" id="maHS" class="input-field" placeholder="Nhập Mã học sinh (Vd: HS101.01)" autocomplete="off">
+  <input type="password" id="matKhau" class="input-field" placeholder="Nhập Mật khẩu bảo mật">
+  <button id="btn-login" class="btn-login" onclick="xuLyDangNhap()">KIỂM TRA BÀI THI</button>
+  <div id="thongBao" class="msg"></div>
+</div>
+
+<script>
+  function xuLyDangNhap() {
+    let maHS = document.getElementById("maHS").value.trim(), matKhau = document.getElementById("matKhau").value.trim(), btn = document.getElementById("btn-login");
+    if (!maHS || !matKhau) { hienThiThongBao("Vui lòng nhập đầy đủ Mã HS và Mật khẩu!", "msg-error"); return; }
+
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ĐANG KẾT NỐI...'; btn.style.opacity = '0.7'; btn.disabled = true; 
+
+    google.script.run.withSuccessHandler(function(res) {
+        btn.innerHTML = "KIỂM TRA BÀI THI"; btn.style.opacity = '1'; btn.disabled = false;
+        if (res.success) {
+          sessionStorage.setItem('DATA_HS', JSON.stringify({maHS: maHS, tenHS: res.studentInfo.tenHS, lop: res.studentInfo.lop}));
+          
+          let buttonsHTML = res.studentInfo.danhSachDe.map(de => `
+            <a href="<?= appUrl ?>?mode=exam&made=${de.maDe}" class="exam-btn" target="_top">
+              <i class="fa-solid fa-file-signature"></i> THI MÔN ${de.tenMon.toUpperCase()}
+            </a>
+          `).join('');
+
+          let thongBaoHTML = `
+            <div style="text-align:center;">
+              <b style="font-size:16px; color:#22c55e;">✅ ĐĂNG NHẬP THÀNH CÔNG!</b><br>
+              <span style="color:#aaa;">Chào: <b style="color:#fff;">${res.studentInfo.tenHS}</b> - Lớp: <b style="color:#fff;">${res.studentInfo.lop}</b></span><br><br>
+              <div style="text-align:left; color:#888; font-size:12px; margin-bottom:8px; font-weight:bold;">CÁC BÀI THI ĐANG MỞ:</div>
+              ${buttonsHTML}
+            </div>`;
+            
+          hienThiThongBao(thongBaoHTML, "msg-success");
+          btn.style.display = "none"; document.getElementById("maHS").style.display = "none"; document.getElementById("matKhau").style.display = "none";
+        } else { hienThiThongBao("❌ " + res.message, "msg-error"); }
+      }).withFailureHandler(function(err) { btn.innerHTML = "KIỂM TRA BÀI THI"; btn.style.opacity = '1'; btn.disabled = false; hienThiThongBao("❌ Lỗi kết nối hệ thống!", "msg-error"); }).kiemTraDangNhapHS(maHS, matKhau);
+  }
+  function hienThiThongBao(noiDung, classCss) { let tb = document.getElementById("thongBao"); tb.innerHTML = noiDung; tb.className = "msg " + classCss; tb.style.display = "block"; }
+</script>
+
+</body>
+</html>
