@@ -92,16 +92,24 @@ function generateExamFromAI(base64Data, fileName, struct) {
     prompt += "1. KHÔNG dùng thẻ <html>, <head>, <body> hay bọc markdown.\n";
     prompt += "2. Mọi công thức BẮT BUỘC chuyển sang LaTeX ($...$ hoặc $$...$$).\n";
     prompt += "3. ĐỊNH DẠNG ĐÁP ÁN (Chuẩn Bộ GD&ĐT):\n";
-    prompt += "   - PHẦN I: Trình bày 4 đáp án trên cùng 1 hoặc 2 hàng ngang (tùy độ dài). Các chữ cái đáp án BẮT BUỘC in đậm và có dấu chấm theo sau: <b>A.</b> , <b>B.</b> , <b>C.</b> , <b>D.</b>\n";
+    prompt += "   - PHẦN I: Trình bày 4 đáp án trên cùng 1 hoặc 2 hàng ngang. Chữ cái đáp án BẮT BUỘC in đậm và có dấu chấm: <b>A.</b> , <b>B.</b> , <b>C.</b> , <b>D.</b>\n";
     prompt += "   - PHẦN II: 4 ý của câu Đúng/Sai BẮT BUỘC in đậm và có dấu ngoặc đơn: <b>a)</b> , <b>b)</b> , <b>c)</b> , <b>d)</b>\n";
-    prompt += "   - KHÔNG bọc đáp án trong class 'circle-opt' nữa.\n";
     prompt += "4. Tổ chức lại cấu trúc đề thành:\n";
     if (struct.p1 > 0) prompt += "<h5 style='color:#ff6d00; font-size:18px;'>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn</h5>\n";
     if (struct.p2 > 0) prompt += "<h5 style='color:#ff6d00; font-size:18px; margin-top:30px;'>PHẦN II. Câu trắc nghiệm đúng sai</h5>\n";
     if (struct.p3 > 0) prompt += "<h5 style='color:#ff6d00; font-size:18px; margin-top:30px;'>PHẦN III. Câu trắc nghiệm trả lời ngắn</h5>\n";
     prompt += "5. Mỗi câu hỏi bọc trong <div style='margin-bottom: 20px;'>. In đậm 'Câu X:'.\n";
-    prompt += "6. LỜI GIẢI CHI TIẾT: Tìm phần Hướng dẫn giải ở cuối file PDF. Khớp Lời giải của câu nào vào đúng bên trong khối <div> của câu hỏi đó. BẮT BUỘC bọc toàn bộ nội dung lời giải trong thẻ <div class='loi-giai-chi-tiet' style='display:none;'>...</div>.";
+    prompt += "6. LỜI GIẢI CHI TIẾT: Khớp Lời giải của câu nào vào đúng bên trong khối <div> của câu hỏi đó. BẮT BUỘC bọc toàn bộ nội dung lời giải trong thẻ <div class='loi-giai-chi-tiet' style='display:none;'>...</div>.\n";
     
+    // SỬ DỤNG CHỐT CHẶN VĂN BẢN ĐỂ KHÔNG BỊ TRÌNH DUYỆT XÓA HOẶC VỠ SVG
+    prompt += "7. KÝ HIỆU KẾT THÚC CÂU: Ngay sau khi trình bày xong TRỌN VẸN một câu hỏi (gồm đề, đáp án và lời giải ẩn), BẮT BUỘC gõ thêm cụm từ [HET_CAU] để hệ thống nhận diện.\n";
+    prompt += "8. ĐỐI VỚI CÂU HỎI CHÙM (Đọc hiểu, Điền từ...): BẮT BUỘC sử dụng cú pháp bằng văn bản sau:\n";
+    prompt += "   - Mở đầu chùm gõ: [MO_CHUM]\n";
+    prompt += "   - BẮT BUỘC bọc Đoạn văn đọc hiểu/Thông tin chung trong thẻ <div class=\"doan-van-chung\">...</div>.\n";
+    prompt += "   - Tiếp theo là lần lượt các Câu hỏi thuộc chùm đó (Lưu ý: cuối mỗi câu hỏi vẫn phải gõ [HET_CAU]).\n";
+    prompt += "   - Kết thúc toàn bộ chùm gõ: [DONG_CHUM]\n";
+    prompt += "9. TUYỆT ĐỐI KHÔNG tạo phần 'LỜI GIẢI CHI TIẾT' hay 'HƯỚNG DẪN GIẢI' nằm riêng lẻ ở cuối đề.\n";
+
     var payload = { "contents": [{ "parts": [ {"text": prompt}, { "inlineData": { "mimeType": "application/pdf", "data": base64String } } ] }], "generationConfig": { "temperature": 0.1 } };
     var options = { "method": "post", "contentType": "application/json", "payload": JSON.stringify(payload), "muteHttpExceptions": true };
     
@@ -303,7 +311,6 @@ function luuHinhNenHeThong(base64Data, fileName) {
   } catch(e) { return "❌ Lỗi: " + e.toString(); }
 }
 
-// BỔ SUNG: HÀM QUẢN LÝ TIẾN ĐỘ HỌC SINH
 function layDanhSachHocSinhThi(khoi, lop, monKey, maDe) {
   try {
     let dbId = PropertiesService.getScriptProperties().getProperty('DB_HS_3KHOI');
@@ -334,7 +341,6 @@ function layDanhSachHocSinhThi(khoi, lop, monKey, maDe) {
 
     if(danhSachHocSinhLop.length === 0) return { success: false, message: "Không có học sinh nào ở lớp " + cleanLop };
 
-    // Tìm điểm trong file Diem
     let tenThuMucGoc = "DU_AN_NTTPRO_2026";
     let tenThuMucDiem = "Data_Diem";
     let tenFileDiem = "Diem_" + cleanLop;
@@ -363,7 +369,6 @@ function layDanhSachHocSinhThi(khoi, lop, monKey, maDe) {
        }
     }
 
-    // Kết hợp dữ liệu
     let ketQua = [];
     for(let i=0; i<danhSachHocSinhLop.length; i++) {
        let hs = danhSachHocSinhLop[i];

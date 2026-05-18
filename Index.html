@@ -10,7 +10,6 @@
     <style>
         body { margin: 0; padding: 0; background-color: #000000; font-family: 'Segoe UI', Arial, sans-serif; display: flex; flex-direction: column; height: 100vh; overflow: hidden; color: #d1d5db; transition: background-color 0.3s; }
         
-        /* ĐỊNH DẠNG CHO HÌNH NỀN */
         body.has-bg { background-size: cover; background-position: center; background-attachment: fixed; }
         body.has-bg:not(.light-mode) { background-color: rgba(0,0,0,0.85); background-blend-mode: overlay; }
         body.has-bg.light-mode { background-color: rgba(255,255,255,0.85); background-blend-mode: overlay; }
@@ -97,6 +96,8 @@
         .nav-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;}
         .nav-btn { aspect-ratio: 1; border: 1px solid #333; border-radius: 4px; background: #000; font-weight: 500; color: #aaa; cursor: pointer; transition: 0.3s; font-size: 14px;}
         .nav-btn:hover { border-color: #3b82f6; color: #3b82f6;}
+        
+        /* CHẾ ĐỘ TỐI - NÚT ĐÃ TRẢ LỜI MÀU XANH */
         .nav-btn.answered { background: #3b82f6; color: #fff; border-color: #3b82f6;} 
         .nav-btn.active { border: 2px solid #ef4444; color: #fff;}
         .nav-btn.marked-nav::after { content: ''; position: absolute; top: -4px; right: -4px; width: 10px; height: 10px; background: #f59e0b; border-radius: 50%;}
@@ -108,7 +109,6 @@
         .btn-start-exam { background: #3b82f6; color: white; border: none; padding: 20px 50px; font-size: 24px; font-weight: 900; border-radius: 8px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; gap: 15px;}
         .btn-start-exam:hover { background: #2563eb; }
 
-        /* BỘ LỌC MÀU SẮC DÀNH RIÊNG CHO CHẾ ĐỘ SÁNG (LIGHT MODE) */
         body.light-mode { background-color: #f3f4f6; color: #111; }
         body.light-mode .top-header { background: #ffffff; border-bottom: 1px solid #e5e7eb; }
         body.light-mode .top-header h2 { color: #1f2937; }
@@ -139,6 +139,10 @@
         body.light-mode .btn-move:hover { background: #e5e7eb; color: #111; }
         body.light-mode .btn-move.primary { background: #3b82f6; color: white; border-color: #3b82f6; }
         body.light-mode .btn-move.primary:hover { background: #2563eb; }
+
+        /* BỔ SUNG: CHẾ ĐỘ SÁNG - NÚT ĐÃ TRẢ LỜI MÀU ĐỎ RỰC RỠ NHƯ Ý THẦY */
+        body.light-mode .nav-btn.answered { background: #ef4444 !important; color: #fff !important; border-color: #ef4444 !important; }
+        body.light-mode .nav-btn.active { border: 2px solid #3b82f6 !important; color: #111; font-weight: bold; }
 
         @media (max-width: 768px) {
             .main-workspace { flex-direction: column; padding: 10px; overflow-y: auto;}
@@ -220,9 +224,6 @@
         let currentTotalScore = 0;
         let thoiGianConLai = 90 * 60; 
 
-        // ==========================================================
-        // KHỞI TẠO CÀI ĐẶT HÌNH NỀN VÀ GIAO DIỆN
-        // ==========================================================
         let bgUrl = "<?= hinhNen ?>"; 
         let bgActive = true;
         if (bgUrl && bgUrl !== "") {
@@ -258,9 +259,6 @@
             }
         }
 
-        // ==========================================================
-        // LỚP BẢO VỆ CHỐNG GIAN LẬN
-        // ==========================================================
         let soLanCanhBao = 0;
         const MAX_CANH_BAO = 3; 
         let isExamActive = false; 
@@ -302,7 +300,6 @@
         let monThiHienTai = 'TOAN'; 
         let diemMoiCauP3 = 0.5;
 
-        // BỘ LỌC AN TOÀN TUYỆT ĐỐI (KHÔNG LẶP VÔ TẬN, KHÔNG A.A.)
         function extractOptionsSafe(htmlStr, expectedLetters, regexStr) {
             let qText = htmlStr, opts = {};
             let regex = new RegExp(regexStr, 'gi');
@@ -355,8 +352,25 @@
             );
         }
 
+        // =================================================================
+        // THUẬT TOÁN ĐÓNG GÓI CHÙM CÂU HỎI BẢN HOÀN HẢO (CHỐNG VỠ GIAO DIỆN)
+        // =================================================================
         function bocTachDeThi(htmlRaw) {
-            let tempDiv = document.createElement('div'); tempDiv.innerHTML = htmlRaw;
+            // Bước 1: Bảo vệ các mốc ranh giới bằng cách đổi chúng thành chữ thuần túy
+            htmlRaw = htmlRaw.replace(/<g([1-9][0-9]*)>/gi, ' [MO_CHUM] ');
+            
+            // Xử lý mọi thể loại thẻ đóng do AI lỡ tay viết sai cú pháp
+            htmlRaw = htmlRaw.replace(/<\/\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
+            htmlRaw = htmlRaw.replace(/<\s*#\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
+            htmlRaw = htmlRaw.replace(/<\/\s*#\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
+            
+            // Xử lý chốt đóng câu
+            htmlRaw = htmlRaw.replace(/<g>\s*<\/g>/gi, ' [HET_CAU] ');
+            htmlRaw = htmlRaw.replace(/<g\s*\/>/gi, ' [HET_CAU] ');
+            htmlRaw = htmlRaw.replace(/\[HET_CAU\]/gi, ' [HET_CAU] ');
+
+            let tempDiv = document.createElement('div'); 
+            tempDiv.innerHTML = htmlRaw;
             
             let timeCfg = tempDiv.querySelector('#exam-config-time');
             if(timeCfg && timeCfg.dataset.time) {
@@ -375,22 +389,87 @@
             if(scriptTag) { try { dapAnChuan = JSON.parse(scriptTag.innerText); } catch(e) {} scriptTag.remove(); }
             
             let ketQua = [], phan = 1, objCau = null, idDem = {1: 0, 2: 0, 3: 0, 4: 0}; 
-            let regPhan = /^PHẦN\s*([I1234IV]+)/i, regCau = /^(Câu\s*\d+[\.\;\:]?|\d+[\.\;\:])\s*/i;
+            let regPhan = /^PHẦN\s*([I1234IV]+)/i;
+            let regCau = /^Câu\s*\d+[\.\;\:\s]/i; 
+            let stopParsing = false; 
+            let sharedContext = ""; 
 
             Array.from(tempDiv.children).forEach(el => {
-                let txt = el.innerText.trim();
-                if(!txt && !el.querySelector('img')) return; 
-                if(regPhan.test(txt)) {
-                    let match = txt.match(regPhan)[1].toUpperCase();
-                    if(match === 'I' || match === '1') phan = 1; else if(match === 'II' || match === '2') phan = 2; else if(match === 'III' || match === '3') phan = 3; else if(match === 'IV' || match === '4') phan = 4;
+                if(stopParsing) return;
+                
+                let txt = el.innerText || "";
+                let rawTxt = el.innerHTML || "";
+
+                // Bẫy ngắt đếm nếu có lời giải rác ở cuối đề
+                if (/^(LỜI GIẢI CHI TIẾT|HƯỚNG DẪN GIẢI|ĐÁP ÁN CHI TIẾT)/i.test(txt.trim()) && !(el.classList && el.classList.contains('loi-giai-chi-tiet'))) {
+                    stopParsing = true; 
                     return;
                 }
-                if(regCau.test(txt) || (phan === 4 && objCau === null)) {
+
+                // Xóa mốc chữ ẩn để người dùng không nhìn thấy
+                if (rawTxt.includes('[DONG_CHUM]')) {
+                    sharedContext = ""; 
+                    el.innerHTML = el.innerHTML.replace(/\[DONG_CHUM\]/g, '');
+                }
+
+                if (rawTxt.includes('[MO_CHUM]')) {
+                    sharedContext = ""; 
+                    el.innerHTML = el.innerHTML.replace(/\[MO_CHUM\]/g, '');
+                }
+
+                let isDongCau = false;
+                if (rawTxt.includes('[HET_CAU]')) {
+                    isDongCau = true;
+                    el.innerHTML = el.innerHTML.replace(/\[HET_CAU\]/g, '');
+                }
+
+                txt = el.innerText || ""; 
+
+                if(!txt.trim() && !el.querySelector('img')) {
+                    if (isDongCau && objCau) { ketQua.push(objCau); objCau = null; }
+                    return; 
+                }
+
+                if(regPhan.test(txt.trim())) {
+                    let match = txt.match(regPhan)[1].toUpperCase();
+                    if(match === 'I' || match === '1') phan = 1; else if(match === 'II' || match === '2') phan = 2; else if(match === 'III' || match === '3') phan = 3; else if(match === 'IV' || match === '4') phan = 4;
+                    sharedContext = ""; // Sang phần mới tự động xóa sạch đoạn văn cũ
+                    return;
+                }
+                
+                let isLoiGiai = el.classList && el.classList.contains('loi-giai-chi-tiet');
+
+                // Nếu có class chuẩn do AI tự tạo
+                if (el.classList && el.classList.contains('doan-van-chung')) {
+                    sharedContext = el.outerHTML; 
+                    return;
+                }
+
+                if(regCau.test(txt.trim()) && !isLoiGiai) {
                     if(objCau) ketQua.push(objCau); 
                     idDem[phan]++;
-                    objCau = { phan: phan, soThuTu: idDem[phan], id: `P${phan}_${idDem[phan]}`, html: el.outerHTML };
-                } else { if(objCau) objCau.html += el.outerHTML; }
+                    
+                    let cauHtml = sharedContext + el.outerHTML;
+                    objCau = { phan: phan, soThuTu: idDem[phan], id: `P${phan}_${idDem[phan]}`, html: cauHtml };
+                } else { 
+                    if(objCau) {
+                        objCau.html += el.outerHTML; 
+                    } else {
+                        // Nhận diện thủ công cực kỳ chặt chẽ: Chỉ khi gặp những từ khóa này mới đè đoạn văn mới
+                        if (/^(Read the following|Read the passage|Read the leaflet|Đọc đoạn văn|Read the text)/i.test(txt.trim())) {
+                            sharedContext = el.outerHTML; 
+                        } else {
+                            sharedContext += el.outerHTML;
+                        }
+                    }
+                }
+
+                if (isDongCau && objCau) {
+                    ketQua.push(objCau);
+                    objCau = null;
+                }
             });
+            
             if(objCau) ketQua.push(objCau); 
             return ketQua;
         }
