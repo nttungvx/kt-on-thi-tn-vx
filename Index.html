@@ -172,9 +172,11 @@
         <div style="display: flex; align-items: center; gap: 20px;">
             <h2><i class="fa-solid fa-book-open-reader" style="color:#3b82f6;"></i> ÔN THI TỐT NGHIỆP THPT</h2>
             <div style="display:flex; align-items:center; gap: 10px;">
-                <button onclick="toggleLightMode()" id="btn-theme" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s;"><i class="fa-solid fa-sun"></i> SÁNG</button>
-                <button onclick="toggleBackground()" id="btn-bg" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s; display:none;"><i class="fa-solid fa-image-slash"></i> TẮT NỀN</button>
-            </div>
+    <button onclick="window.location.href='https://nttungvx.github.io/kt-on-thi-tn-vx/hocsinh.html'" style="background:transparent; border:1px solid #3b82f6; color:#3b82f6; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s;"><i class="fa-solid fa-graduation-cap"></i> HỌC SINH</button>
+
+    <button onclick="toggleLightMode()" id="btn-theme" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s;"><i class="fa-solid fa-sun"></i> SÁNG</button>
+    <button onclick="toggleBackground()" id="btn-bg" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s; display:none;"><i class="fa-solid fa-image-slash"></i> TẮT NỀN</button>
+</div>
         </div>
         <div class="timer-box" id="timer-box"><i class="fa-regular fa-clock"></i> <span id="time-display">--:--</span></div>
     </header>
@@ -826,7 +828,7 @@
                         <div style="margin-bottom: 5px;"><b>Phần III:</b> Đúng ${soCauP3} câu (+${(soCauP3 * diemMoiCauP3).toFixed(2).replace('.', ',')}đ)</div>
                      </div>
                   </div>
-                  <button class="btn-start-exam" style="margin-top: 30px; font-size: 16px; padding: 15px 30px; background:#ef4444;" onclick="window.top.location.href='<?= appUrl ?>'"> THOÁT VỀ TRANG CHỦ </button>
+                  <button class="btn-start-exam" style="margin-top: 30px; font-size: 16px; padding: 15px 30px; background:#ef4444;" onclick="window.top.location.href='https://nttungvx.github.io/kt-on-thi-tn-vx/hocsinh.html'"> QUAY LẠI TRANG HỌC SINH </button>
                `;
             };
             google.script.run.withSuccessHandler(function(res) { setTimeout(hienThiKetQua, 500); }).luuDiemTuDong(duLieuDiem);
