@@ -100,8 +100,6 @@ function generateExamFromAI(base64Data, fileName, struct) {
     if (struct.p3 > 0) prompt += "<h5 style='color:#ff6d00; font-size:18px; margin-top:30px;'>PHẦN III. Câu trắc nghiệm trả lời ngắn</h5>\n";
     prompt += "5. Mỗi câu hỏi bọc trong <div style='margin-bottom: 20px;'>. In đậm 'Câu X:'.\n";
     prompt += "6. LỜI GIẢI CHI TIẾT: Khớp Lời giải của câu nào vào đúng bên trong khối <div> của câu hỏi đó. BẮT BUỘC bọc toàn bộ nội dung lời giải trong thẻ <div class='loi-giai-chi-tiet' style='display:none;'>...</div>.\n";
-    
-    // SỬ DỤNG CHỐT CHẶN VĂN BẢN ĐỂ KHÔNG BỊ TRÌNH DUYỆT XÓA HOẶC VỠ SVG
     prompt += "7. KÝ HIỆU KẾT THÚC CÂU: Ngay sau khi trình bày xong TRỌN VẸN một câu hỏi (gồm đề, đáp án và lời giải ẩn), BẮT BUỘC gõ thêm cụm từ [HET_CAU] để hệ thống nhận diện.\n";
     prompt += "8. ĐỐI VỚI CÂU HỎI CHÙM (Đọc hiểu, Điền từ...): BẮT BUỘC sử dụng cú pháp bằng văn bản sau:\n";
     prompt += "   - Mở đầu chùm gõ: [MO_CHUM]\n";
@@ -109,6 +107,9 @@ function generateExamFromAI(base64Data, fileName, struct) {
     prompt += "   - Tiếp theo là lần lượt các Câu hỏi thuộc chùm đó (Lưu ý: cuối mỗi câu hỏi vẫn phải gõ [HET_CAU]).\n";
     prompt += "   - Kết thúc toàn bộ chùm gõ: [DONG_CHUM]\n";
     prompt += "9. TUYỆT ĐỐI KHÔNG tạo phần 'LỜI GIẢI CHI TIẾT' hay 'HƯỚNG DẪN GIẢI' nằm riêng lẻ ở cuối đề.\n";
+    
+    // BỔ SUNG YÊU CẦU ĐÁNH DẤU PHẦN I, II, III THEO ĐỀ XUẤT CỦA THẦY TÙNG
+    prompt += "10. PHÂN TÁCH CÁC PHẦN: Đề thi có 3 phần. BẮT BUỘC chèn thẻ <p1> vào ngay trước tiêu đề PHẦN I và </p1> vào cuối Phần I. Làm tương tự <p2>...</p2> cho Phần II và <p3>...</p3> cho Phần III.\n";
 
     var payload = { "contents": [{ "parts": [ {"text": prompt}, { "inlineData": { "mimeType": "application/pdf", "data": base64String } } ] }], "generationConfig": { "temperature": 0.1 } };
     var options = { "method": "post", "contentType": "application/json", "payload": JSON.stringify(payload), "muteHttpExceptions": true };

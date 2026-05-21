@@ -96,7 +96,6 @@
         .nav-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;}
         .nav-btn { aspect-ratio: 1; border: 1px solid #333; border-radius: 4px; background: #000; font-weight: 500; color: #aaa; cursor: pointer; transition: 0.3s; font-size: 14px;}
         .nav-btn:hover { border-color: #3b82f6; color: #3b82f6;}
-        
         .nav-btn.answered { background: #3b82f6; color: #fff; border-color: #3b82f6;} 
         .nav-btn.active { border: 2px solid #ef4444; color: #fff;}
         .nav-btn.marked-nav::after { content: ''; position: absolute; top: -4px; right: -4px; width: 10px; height: 10px; background: #f59e0b; border-radius: 50%;}
@@ -138,9 +137,6 @@
         body.light-mode .btn-move:hover { background: #e5e7eb; color: #111; }
         body.light-mode .btn-move.primary { background: #3b82f6; color: white; border-color: #3b82f6; }
         body.light-mode .btn-move.primary:hover { background: #2563eb; }
-        
-        body.light-mode .nav-btn.answered { background: #ef4444 !important; color: #fff !important; border-color: #ef4444 !important; }
-        body.light-mode .nav-btn.active { border: 2px solid #3b82f6 !important; color: #111; font-weight: bold; }
 
         @media (max-width: 768px) {
             .main-workspace { flex-direction: column; padding: 10px; overflow-y: auto;}
@@ -351,115 +347,112 @@
         }
 
         // =================================================================
-        // THUẬT TOÁN "GIẢI PHẪU DOM" CHỐNG NUỐT CÂU TRONG MỌI TRƯỜNG HỢP
+        // THUẬT TOÁN ĐÓNG GÓI CHÙM CÂU HỎI BẢN HOÀN HẢO (CHỐNG VỠ SVG)
         // =================================================================
         function bocTachDeThi(htmlRaw) {
-            // Chuyển đổi các mốc ẩn của AI thành Text tàng hình
-            htmlRaw = htmlRaw.replace(/<g([1-9][0-9]*)>/gi, ' [MO_CHUM] ');
+            // Biến hình các thẻ dễ vỡ thành Ký hiệu Văn bản thuần (Trình duyệt chịu chết không xóa được)
+            // Lọc các thẻ <g1>, </g1>, <#g1> dự phòng nếu AI lỡ tạo ra theo lệnh cũ
             htmlRaw = htmlRaw.replace(/<\/?\s*#?\s*g\s*[1-9][0-9]*\s*\/?>/gi, ' [DONG_CHUM] ');
+            
+            // Xử lý cẩn thận thẻ <g> dự phòng (Không được đụng vào các thẻ SVG MathJax)
             htmlRaw = htmlRaw.replace(/<g>\s*<\/g>/gi, ' [HET_CAU] ');
             htmlRaw = htmlRaw.replace(/<g\s*\/>/gi, ' [HET_CAU] ');
-            htmlRaw = htmlRaw.replace(/\[HET_CAU\]/gi, ' [HET_CAU] ');
 
-            let initDiv = document.createElement('div'); 
-            initDiv.innerHTML = htmlRaw;
+            let tempDiv = document.createElement('div'); 
+            tempDiv.innerHTML = htmlRaw;
             
-            let timeCfg = initDiv.querySelector('#exam-config-time');
+            let timeCfg = tempDiv.querySelector('#exam-config-time');
             if(timeCfg && timeCfg.dataset.time) {
                 thoiGianConLai = parseInt(timeCfg.dataset.time) * 60;
                 let phut = Math.floor(thoiGianConLai / 60); let giay = thoiGianConLai % 60;
                 document.getElementById('time-display').innerText = (phut<10?"0":"") + phut + ":" + (giay<10?"0":"") + giay;
             }
 
-            let monCfg = initDiv.querySelector('#exam-config-mon');
+            let monCfg = tempDiv.querySelector('#exam-config-mon');
             if(monCfg && monCfg.dataset.mon) {
                 monThiHienTai = monCfg.dataset.mon;
                 diemMoiCauP3 = (monThiHienTai === 'TOAN') ? 0.5 : 0.25;
             }
 
-            let scriptTag = initDiv.querySelector('#dap-an-chuan');
+            let scriptTag = tempDiv.querySelector('#dap-an-chuan');
             if(scriptTag) { try { dapAnChuan = JSON.parse(scriptTag.innerText); } catch(e) {} scriptTag.remove(); }
             
-            // BƯỚC 1: GIẢI PHẪU DOM TÌM CÁC CÂU HỎI BỊ AI NHÉT CHUNG
-            let boldTags = initDiv.querySelectorAll('b, strong');
-            boldTags.forEach(b => {
-                let txt = b.innerText.trim();
-                // Nhận diện thẻ bọc tên Câu hoặc Phần
-                if (/^(Câu\s*\d+|PHẦN\s*[I1234IV]+)[\.\:\;\s]/i.test(txt) || /^(Câu\s*\d+|PHẦN\s*[I1234IV]+)$/i.test(txt)) {
-                    // Nếu nó đang nằm trong phần giải thích thì bỏ qua
-                    if (b.closest('.loi-giai-chi-tiet')) return;
-                    
-                    // Cắm một mốc cách ly tuyệt đối ngay trước thẻ này
-                    let marker = document.createElement('span');
-                    marker.className = 'moc-cach-ly';
-                    b.parentNode.insertBefore(marker, b);
-                }
-            });
-
-            // BƯỚC 2: CHẶT HTML RA THÀNH TỪNG KHÚC CHUẨN XÁC DỰA TRÊN MỐC CÁCH LY
-            let parts = initDiv.innerHTML.split(/<span class="moc-cach-ly"><\/span>/i);
-
             let ketQua = [], phan = 1, objCau = null, idDem = {1: 0, 2: 0, 3: 0, 4: 0}; 
             let regPhan = /^PHẦN\s*([I1234IV]+)/i;
             let regCau = /^Câu\s*\d+[\.\;\:\s]/i; 
             let stopParsing = false; 
             let sharedContext = ""; 
 
-            parts.forEach(partHTML => {
+            Array.from(tempDiv.children).forEach(el => {
                 if(stopParsing) return;
-                
-                let el = document.createElement('div');
-                el.innerHTML = partHTML;
                 
                 let txt = el.innerText || "";
                 let rawTxt = el.innerHTML || "";
 
-                if (/^(LỜI GIẢI CHI TIẾT|HƯỚNG DẪN GIẢI|ĐÁP ÁN CHI TIẾT)/i.test(txt.trim()) && !el.querySelector('.loi-giai-chi-tiet')) {
+                // Bẫy ngắt đếm nếu có lời giải rác ở cuối đề
+                if (/^(LỜI GIẢI CHI TIẾT|HƯỚNG DẪN GIẢI|ĐÁP ÁN CHI TIẾT)/i.test(txt.trim()) && !(el.classList && el.classList.contains('loi-giai-chi-tiet'))) {
                     stopParsing = true; 
                     return;
                 }
 
-                if (rawTxt.includes('[DONG_CHUM]')) { sharedContext = ""; el.innerHTML = el.innerHTML.replace(/\[DONG_CHUM\]/g, ''); }
-                if (rawTxt.includes('[MO_CHUM]')) { sharedContext = ""; el.innerHTML = el.innerHTML.replace(/\[MO_CHUM\]/g, ''); }
-                
-                let isDongCau = false;
-                if (rawTxt.includes('[HET_CAU]')) { isDongCau = true; el.innerHTML = el.innerHTML.replace(/\[HET_CAU\]/g, ''); }
+                // Xử lý mở/đóng chùm
+                if (rawTxt.includes('[DONG_CHUM]') || rawTxt.includes('[MO_CHUM]')) {
+                    sharedContext = ""; 
+                    el.innerHTML = el.innerHTML.replace(/\[DONG_CHUM\]/g, '').replace(/\[MO_CHUM\]/g, '');
+                    txt = el.innerText || "";
+                }
 
-                txt = el.innerText || ""; 
-                if(!txt.trim() && !el.querySelector('img')) return; 
+                // Xử lý chốt đóng câu hỏi
+                let isDongCau = false;
+                if (rawTxt.includes('[HET_CAU]')) {
+                    isDongCau = true;
+                    el.innerHTML = el.innerHTML.replace(/\[HET_CAU\]/g, '');
+                    txt = el.innerText || "";
+                }
+
+                // Bỏ qua nếu dòng trống rỗng sau khi đã làm sạch
+                if(!txt.trim() && !el.querySelector('img')) {
+                    if (isDongCau && objCau) { ketQua.push(objCau); objCau = null; }
+                    return; 
+                }
 
                 if(regPhan.test(txt.trim())) {
                     let match = txt.match(regPhan)[1].toUpperCase();
                     if(match === 'I' || match === '1') phan = 1; else if(match === 'II' || match === '2') phan = 2; else if(match === 'III' || match === '3') phan = 3; else if(match === 'IV' || match === '4') phan = 4;
-                    sharedContext = ""; 
+                    sharedContext = ""; // Qua phần mới thì xóa sạch đoạn văn cũ
                     return;
                 }
                 
                 let isLoiGiai = el.classList && el.classList.contains('loi-giai-chi-tiet');
-                if (el.querySelector('.doan-van-chung')) {
-                    sharedContext = el.innerHTML; 
+
+                // Nếu là khối văn bản dùng chung
+                if (el.classList && el.classList.contains('doan-van-chung')) {
+                    sharedContext = el.outerHTML; // Ghi đè đoạn văn mới
                     return;
                 }
 
-                // Nhận diện đây là một câu hỏi mới nhờ mốc đã cắm
-                if((regCau.test(txt.trim()) || /^Câu\s*\d+$/i.test(txt.trim())) && !isLoiGiai) {
+                if(regCau.test(txt.trim()) && !isLoiGiai) {
+                    // Nếu AI quên đánh dấu hết câu trước đó, ép đóng câu luôn
                     if(objCau) ketQua.push(objCau); 
                     idDem[phan]++;
                     
-                    let cauHtml = sharedContext + el.innerHTML;
+                    // NẾU CÓ ĐOẠN ĐỌC HIỂU DÙNG CHUNG -> TỰ ĐỘNG DÁN LÊN ĐẦU CÂU HỎI MỚI
+                    let cauHtml = sharedContext + el.outerHTML;
                     objCau = { phan: phan, soThuTu: idDem[phan], id: `P${phan}_${idDem[phan]}`, html: cauHtml };
                 } else { 
                     if(objCau) {
-                        objCau.html += el.innerHTML; 
+                        objCau.html += el.outerHTML; 
                     } else {
-                        if (/^(Read the following|Read the passage|Read the leaflet|Đọc đoạn văn|Read the text)/i.test(txt.trim())) {
-                            sharedContext = el.innerHTML; 
+                        // Dự phòng AI quên bọc đoạn văn: Nhận diện thủ công và tự chốt
+                        if (/^(Read the following|Read the passage|Đọc đoạn văn|Read the text)/i.test(txt.trim())) {
+                            sharedContext = el.outerHTML; // Khởi tạo đoạn văn mới
                         } else {
-                            sharedContext += el.innerHTML;
+                            sharedContext += el.outerHTML;
                         }
                     }
                 }
 
+                // Chốt lưu câu hỏi lại an toàn để không bị nuốt chữ
                 if (isDongCau && objCau) {
                     ketQua.push(objCau);
                     objCau = null;
