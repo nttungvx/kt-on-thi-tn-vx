@@ -97,7 +97,6 @@
         .nav-btn { aspect-ratio: 1; border: 1px solid #333; border-radius: 4px; background: #000; font-weight: 500; color: #aaa; cursor: pointer; transition: 0.3s; font-size: 14px;}
         .nav-btn:hover { border-color: #3b82f6; color: #3b82f6;}
         
-        /* CHẾ ĐỘ TỐI - NÚT ĐÃ TRẢ LỜI MÀU XANH */
         .nav-btn.answered { background: #3b82f6; color: #fff; border-color: #3b82f6;} 
         .nav-btn.active { border: 2px solid #ef4444; color: #fff;}
         .nav-btn.marked-nav::after { content: ''; position: absolute; top: -4px; right: -4px; width: 10px; height: 10px; background: #f59e0b; border-radius: 50%;}
@@ -139,8 +138,7 @@
         body.light-mode .btn-move:hover { background: #e5e7eb; color: #111; }
         body.light-mode .btn-move.primary { background: #3b82f6; color: white; border-color: #3b82f6; }
         body.light-mode .btn-move.primary:hover { background: #2563eb; }
-
-        /* BỔ SUNG: CHẾ ĐỘ SÁNG - NÚT ĐÃ TRẢ LỜI MÀU ĐỎ RỰC RỠ NHƯ Ý THẦY */
+        
         body.light-mode .nav-btn.answered { background: #ef4444 !important; color: #fff !important; border-color: #ef4444 !important; }
         body.light-mode .nav-btn.active { border: 2px solid #3b82f6 !important; color: #111; font-weight: bold; }
 
@@ -172,11 +170,9 @@
         <div style="display: flex; align-items: center; gap: 20px;">
             <h2><i class="fa-solid fa-book-open-reader" style="color:#3b82f6;"></i> ÔN THI TỐT NGHIỆP THPT</h2>
             <div style="display:flex; align-items:center; gap: 10px;">
-    <button onclick="window.location.href='https://nttungvx.github.io/kt-on-thi-tn-vx/hocsinh.html'" style="background:transparent; border:1px solid #3b82f6; color:#3b82f6; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s;"><i class="fa-solid fa-graduation-cap"></i> HỌC SINH</button>
-
-    <button onclick="toggleLightMode()" id="btn-theme" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s;"><i class="fa-solid fa-sun"></i> SÁNG</button>
-    <button onclick="toggleBackground()" id="btn-bg" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s; display:none;"><i class="fa-solid fa-image-slash"></i> TẮT NỀN</button>
-</div>
+                <button onclick="toggleLightMode()" id="btn-theme" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s;"><i class="fa-solid fa-sun"></i> SÁNG</button>
+                <button onclick="toggleBackground()" id="btn-bg" style="background:transparent; border:1px solid #555; color:#aaa; padding:6px 12px; border-radius:6px; cursor:pointer; font-weight:bold; font-size:12px; transition:0.2s; display:none;"><i class="fa-solid fa-image-slash"></i> TẮT NỀN</button>
+            </div>
         </div>
         <div class="timer-box" id="timer-box"><i class="fa-regular fa-clock"></i> <span id="time-display">--:--</span></div>
     </header>
@@ -355,113 +351,111 @@
         }
 
         // =================================================================
-        // THUẬT TOÁN ĐÓNG GÓI CHÙM CÂU HỎI BẢN HOÀN HẢO (CHỐNG VỠ GIAO DIỆN)
+        // THUẬT TOÁN "GIẢI PHẪU DOM" CHỐNG NUỐT CÂU TRONG MỌI TRƯỜNG HỢP
         // =================================================================
         function bocTachDeThi(htmlRaw) {
-            // Bước 1: Bảo vệ các mốc ranh giới bằng cách đổi chúng thành chữ thuần túy
+            // Chuyển đổi các mốc ẩn của AI thành Text tàng hình
             htmlRaw = htmlRaw.replace(/<g([1-9][0-9]*)>/gi, ' [MO_CHUM] ');
-            
-            // Xử lý mọi thể loại thẻ đóng do AI lỡ tay viết sai cú pháp
-            htmlRaw = htmlRaw.replace(/<\/\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
-            htmlRaw = htmlRaw.replace(/<\s*#\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
-            htmlRaw = htmlRaw.replace(/<\/\s*#\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
-            
-            // Xử lý chốt đóng câu
+            htmlRaw = htmlRaw.replace(/<\/?\s*#?\s*g\s*[1-9][0-9]*\s*\/?>/gi, ' [DONG_CHUM] ');
             htmlRaw = htmlRaw.replace(/<g>\s*<\/g>/gi, ' [HET_CAU] ');
             htmlRaw = htmlRaw.replace(/<g\s*\/>/gi, ' [HET_CAU] ');
             htmlRaw = htmlRaw.replace(/\[HET_CAU\]/gi, ' [HET_CAU] ');
 
-            let tempDiv = document.createElement('div'); 
-            tempDiv.innerHTML = htmlRaw;
+            let initDiv = document.createElement('div'); 
+            initDiv.innerHTML = htmlRaw;
             
-            let timeCfg = tempDiv.querySelector('#exam-config-time');
+            let timeCfg = initDiv.querySelector('#exam-config-time');
             if(timeCfg && timeCfg.dataset.time) {
                 thoiGianConLai = parseInt(timeCfg.dataset.time) * 60;
                 let phut = Math.floor(thoiGianConLai / 60); let giay = thoiGianConLai % 60;
                 document.getElementById('time-display').innerText = (phut<10?"0":"") + phut + ":" + (giay<10?"0":"") + giay;
             }
 
-            let monCfg = tempDiv.querySelector('#exam-config-mon');
+            let monCfg = initDiv.querySelector('#exam-config-mon');
             if(monCfg && monCfg.dataset.mon) {
                 monThiHienTai = monCfg.dataset.mon;
                 diemMoiCauP3 = (monThiHienTai === 'TOAN') ? 0.5 : 0.25;
             }
 
-            let scriptTag = tempDiv.querySelector('#dap-an-chuan');
+            let scriptTag = initDiv.querySelector('#dap-an-chuan');
             if(scriptTag) { try { dapAnChuan = JSON.parse(scriptTag.innerText); } catch(e) {} scriptTag.remove(); }
             
+            // BƯỚC 1: GIẢI PHẪU DOM TÌM CÁC CÂU HỎI BỊ AI NHÉT CHUNG
+            let boldTags = initDiv.querySelectorAll('b, strong');
+            boldTags.forEach(b => {
+                let txt = b.innerText.trim();
+                // Nhận diện thẻ bọc tên Câu hoặc Phần
+                if (/^(Câu\s*\d+|PHẦN\s*[I1234IV]+)[\.\:\;\s]/i.test(txt) || /^(Câu\s*\d+|PHẦN\s*[I1234IV]+)$/i.test(txt)) {
+                    // Nếu nó đang nằm trong phần giải thích thì bỏ qua
+                    if (b.closest('.loi-giai-chi-tiet')) return;
+                    
+                    // Cắm một mốc cách ly tuyệt đối ngay trước thẻ này
+                    let marker = document.createElement('span');
+                    marker.className = 'moc-cach-ly';
+                    b.parentNode.insertBefore(marker, b);
+                }
+            });
+
+            // BƯỚC 2: CHẶT HTML RA THÀNH TỪNG KHÚC CHUẨN XÁC DỰA TRÊN MỐC CÁCH LY
+            let parts = initDiv.innerHTML.split(/<span class="moc-cach-ly"><\/span>/i);
+
             let ketQua = [], phan = 1, objCau = null, idDem = {1: 0, 2: 0, 3: 0, 4: 0}; 
             let regPhan = /^PHẦN\s*([I1234IV]+)/i;
             let regCau = /^Câu\s*\d+[\.\;\:\s]/i; 
             let stopParsing = false; 
             let sharedContext = ""; 
 
-            Array.from(tempDiv.children).forEach(el => {
+            parts.forEach(partHTML => {
                 if(stopParsing) return;
+                
+                let el = document.createElement('div');
+                el.innerHTML = partHTML;
                 
                 let txt = el.innerText || "";
                 let rawTxt = el.innerHTML || "";
 
-                // Bẫy ngắt đếm nếu có lời giải rác ở cuối đề
-                if (/^(LỜI GIẢI CHI TIẾT|HƯỚNG DẪN GIẢI|ĐÁP ÁN CHI TIẾT)/i.test(txt.trim()) && !(el.classList && el.classList.contains('loi-giai-chi-tiet'))) {
+                if (/^(LỜI GIẢI CHI TIẾT|HƯỚNG DẪN GIẢI|ĐÁP ÁN CHI TIẾT)/i.test(txt.trim()) && !el.querySelector('.loi-giai-chi-tiet')) {
                     stopParsing = true; 
                     return;
                 }
 
-                // Xóa mốc chữ ẩn để người dùng không nhìn thấy
-                if (rawTxt.includes('[DONG_CHUM]')) {
-                    sharedContext = ""; 
-                    el.innerHTML = el.innerHTML.replace(/\[DONG_CHUM\]/g, '');
-                }
-
-                if (rawTxt.includes('[MO_CHUM]')) {
-                    sharedContext = ""; 
-                    el.innerHTML = el.innerHTML.replace(/\[MO_CHUM\]/g, '');
-                }
-
+                if (rawTxt.includes('[DONG_CHUM]')) { sharedContext = ""; el.innerHTML = el.innerHTML.replace(/\[DONG_CHUM\]/g, ''); }
+                if (rawTxt.includes('[MO_CHUM]')) { sharedContext = ""; el.innerHTML = el.innerHTML.replace(/\[MO_CHUM\]/g, ''); }
+                
                 let isDongCau = false;
-                if (rawTxt.includes('[HET_CAU]')) {
-                    isDongCau = true;
-                    el.innerHTML = el.innerHTML.replace(/\[HET_CAU\]/g, '');
-                }
+                if (rawTxt.includes('[HET_CAU]')) { isDongCau = true; el.innerHTML = el.innerHTML.replace(/\[HET_CAU\]/g, ''); }
 
                 txt = el.innerText || ""; 
-
-                if(!txt.trim() && !el.querySelector('img')) {
-                    if (isDongCau && objCau) { ketQua.push(objCau); objCau = null; }
-                    return; 
-                }
+                if(!txt.trim() && !el.querySelector('img')) return; 
 
                 if(regPhan.test(txt.trim())) {
                     let match = txt.match(regPhan)[1].toUpperCase();
                     if(match === 'I' || match === '1') phan = 1; else if(match === 'II' || match === '2') phan = 2; else if(match === 'III' || match === '3') phan = 3; else if(match === 'IV' || match === '4') phan = 4;
-                    sharedContext = ""; // Sang phần mới tự động xóa sạch đoạn văn cũ
+                    sharedContext = ""; 
                     return;
                 }
                 
                 let isLoiGiai = el.classList && el.classList.contains('loi-giai-chi-tiet');
-
-                // Nếu có class chuẩn do AI tự tạo
-                if (el.classList && el.classList.contains('doan-van-chung')) {
-                    sharedContext = el.outerHTML; 
+                if (el.querySelector('.doan-van-chung')) {
+                    sharedContext = el.innerHTML; 
                     return;
                 }
 
-                if(regCau.test(txt.trim()) && !isLoiGiai) {
+                // Nhận diện đây là một câu hỏi mới nhờ mốc đã cắm
+                if((regCau.test(txt.trim()) || /^Câu\s*\d+$/i.test(txt.trim())) && !isLoiGiai) {
                     if(objCau) ketQua.push(objCau); 
                     idDem[phan]++;
                     
-                    let cauHtml = sharedContext + el.outerHTML;
+                    let cauHtml = sharedContext + el.innerHTML;
                     objCau = { phan: phan, soThuTu: idDem[phan], id: `P${phan}_${idDem[phan]}`, html: cauHtml };
                 } else { 
                     if(objCau) {
-                        objCau.html += el.outerHTML; 
+                        objCau.html += el.innerHTML; 
                     } else {
-                        // Nhận diện thủ công cực kỳ chặt chẽ: Chỉ khi gặp những từ khóa này mới đè đoạn văn mới
                         if (/^(Read the following|Read the passage|Read the leaflet|Đọc đoạn văn|Read the text)/i.test(txt.trim())) {
-                            sharedContext = el.outerHTML; 
+                            sharedContext = el.innerHTML; 
                         } else {
-                            sharedContext += el.outerHTML;
+                            sharedContext += el.innerHTML;
                         }
                     }
                 }
@@ -828,7 +822,7 @@
                         <div style="margin-bottom: 5px;"><b>Phần III:</b> Đúng ${soCauP3} câu (+${(soCauP3 * diemMoiCauP3).toFixed(2).replace('.', ',')}đ)</div>
                      </div>
                   </div>
-                  <button class="btn-start-exam" style="margin-top: 30px; font-size: 16px; padding: 15px 30px; background:#ef4444;" onclick="window.top.location.href='https://nttungvx.github.io/kt-on-thi-tn-vx/hocsinh.html'"> QUAY LẠI TRANG HỌC SINH </button>
+                  <button class="btn-start-exam" style="margin-top: 30px; font-size: 16px; padding: 15px 30px; background:#ef4444;" onclick="window.top.location.href='<?= appUrl ?>'"> THOÁT VỀ TRANG CHỦ </button>
                `;
             };
             google.script.run.withSuccessHandler(function(res) { setTimeout(hienThiKetQua, 500); }).luuDiemTuDong(duLieuDiem);
