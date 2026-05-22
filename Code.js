@@ -88,28 +88,19 @@ function generateExamFromAI(base64Data, fileName, struct) {
     if (modelName === "") return "<div style='color:#ef4444; padding:20px; background:rgba(239, 68, 68, 0.1); border-radius:8px;'>❌ <b>Lỗi API Key:</b> Không tìm thấy AI model.</div>";
     
     var url = "https://generativelanguage.googleapis.com/v1beta/models/" + modelName + ":generateContent?key=" + GEMINI_API_KEY;
-    var prompt = "Bạn là một chuyên gia số hóa đề thi môn " + struct.name + ". Hãy đọc file PDF đính kèm (bao gồm Đề thi và Hướng dẫn giải) và trích xuất ra HTML thuần túy. Tuân thủ:\n";
+    var prompt = "Bạn là chuyên gia số hóa đề thi môn " + struct.name + ". Đọc file đính kèm và trích xuất HTML thuần túy. Tuân thủ CÁC LỆNH CHUẨN XÁC sau:\n";
     prompt += "1. KHÔNG dùng thẻ <html>, <head>, <body> hay bọc markdown.\n";
-    prompt += "2. Mọi công thức BẮT BUỘC chuyển sang LaTeX ($...$ hoặc $$...$$).\n";
-    prompt += "3. ĐỊNH DẠNG ĐÁP ÁN (Chuẩn Bộ GD&ĐT):\n";
-    prompt += "   - PHẦN I: Trình bày 4 đáp án trên cùng 1 hoặc 2 hàng ngang. Chữ cái đáp án BẮT BUỘC in đậm và có dấu chấm: <b>A.</b> , <b>B.</b> , <b>C.</b> , <b>D.</b>\n";
-    prompt += "   - PHẦN II: 4 ý của câu Đúng/Sai BẮT BUỘC in đậm và có dấu ngoặc đơn: <b>a)</b> , <b>b)</b> , <b>c)</b> , <b>d)</b>\n";
-    prompt += "4. Tổ chức lại cấu trúc đề thành:\n";
-    if (struct.p1 > 0) prompt += "<h5 style='color:#ff6d00; font-size:18px;'>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn</h5>\n";
-    if (struct.p2 > 0) prompt += "<h5 style='color:#ff6d00; font-size:18px; margin-top:30px;'>PHẦN II. Câu trắc nghiệm đúng sai</h5>\n";
-    if (struct.p3 > 0) prompt += "<h5 style='color:#ff6d00; font-size:18px; margin-top:30px;'>PHẦN III. Câu trắc nghiệm trả lời ngắn</h5>\n";
-    prompt += "5. Mỗi câu hỏi bọc trong <div style='margin-bottom: 20px;'>. In đậm 'Câu X:'.\n";
-    prompt += "6. LỜI GIẢI CHI TIẾT: Khớp Lời giải của câu nào vào đúng bên trong khối <div> của câu hỏi đó. BẮT BUỘC bọc toàn bộ nội dung lời giải trong thẻ <div class='loi-giai-chi-tiet' style='display:none;'>...</div>.\n";
-    prompt += "7. KÝ HIỆU KẾT THÚC CÂU: Ngay sau khi trình bày xong TRỌN VẸN một câu hỏi (gồm đề, đáp án và lời giải ẩn), BẮT BUỘC gõ thêm cụm từ [HET_CAU] để hệ thống nhận diện.\n";
-    prompt += "8. ĐỐI VỚI CÂU HỎI CHÙM (Đọc hiểu, Điền từ...): BẮT BUỘC sử dụng cú pháp bằng văn bản sau:\n";
-    prompt += "   - Mở đầu chùm gõ: [MO_CHUM]\n";
-    prompt += "   - BẮT BUỘC bọc Đoạn văn đọc hiểu/Thông tin chung trong thẻ <div class=\"doan-van-chung\">...</div>.\n";
-    prompt += "   - Tiếp theo là lần lượt các Câu hỏi thuộc chùm đó (Lưu ý: cuối mỗi câu hỏi vẫn phải gõ [HET_CAU]).\n";
-    prompt += "   - Kết thúc toàn bộ chùm gõ: [DONG_CHUM]\n";
-    prompt += "9. TUYỆT ĐỐI KHÔNG tạo phần 'LỜI GIẢI CHI TIẾT' hay 'HƯỚNG DẪN GIẢI' nằm riêng lẻ ở cuối đề.\n";
-    
-    // BỔ SUNG YÊU CẦU ĐÁNH DẤU PHẦN I, II, III THEO ĐỀ XUẤT CỦA THẦY TÙNG
-    prompt += "10. PHÂN TÁCH CÁC PHẦN: Đề thi có 3 phần. BẮT BUỘC chèn thẻ <p1> vào ngay trước tiêu đề PHẦN I và </p1> vào cuối Phần I. Làm tương tự <p2>...</p2> cho Phần II và <p3>...</p3> cho Phần III.\n";
+    prompt += "2. Công thức Toán BẮT BUỘC chuyển sang LaTeX ($...$ hoặc $$...$$).\n";
+    prompt += "3. ĐỊNH DẠNG ĐÁP ÁN: 4 đáp án xếp hàng ngang, in đậm chữ cái và dấu chấm: <b>A.</b> , <b>B.</b> , <b>C.</b> , <b>D.</b>\n";
+    prompt += "4. LỜI GIẢI CHI TIẾT: Nằm ngay trong thẻ <div class='loi-giai-chi-tiet' style='display:none;'>...</div> ở BÊN TRONG thẻ của mỗi câu hỏi.\n";
+    prompt += "5. KÝ HIỆU KẾT THÚC CÂU: Ngay sau khi xong MỘT câu hỏi (gồm đề, đáp án và lời giải), gõ cụm từ [HET_CAU].\n";
+    prompt += "6. ĐỐI VỚI CÂU HỎI CHÙM (Đọc hiểu): BẮT BUỘC dùng cú pháp:\n";
+    prompt += "   - Bắt đầu chùm gõ: [MO_CHUM]\n";
+    prompt += "   - Bọc Đoạn văn dùng chung trong: <div class=\"doan-van-chung\">...</div>\n";
+    prompt += "   - Tiếp theo là các Câu hỏi thuộc chùm (nhớ chốt cuối mỗi câu bằng [HET_CAU]).\n";
+    prompt += "   - Kết thúc chùm gõ: [DONG_CHUM]\n";
+    prompt += "7. PHÂN TÁCH PHẦN: Để ngăn lỗi nhảy câu, hãy gõ [PHAN_1] ngay trước tiêu đề PHẦN I. Tương tự [PHAN_2] cho Phần II và [PHAN_3] cho Phần III.\n";
+    prompt += "8. Tuyệt đối KHÔNG tạo phần Hướng dẫn giải nằm riêng ở cuối đề.";
 
     var payload = { "contents": [{ "parts": [ {"text": prompt}, { "inlineData": { "mimeType": "application/pdf", "data": base64String } } ] }], "generationConfig": { "temperature": 0.1 } };
     var options = { "method": "post", "contentType": "application/json", "payload": JSON.stringify(payload), "muteHttpExceptions": true };

@@ -96,6 +96,8 @@
         .nav-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;}
         .nav-btn { aspect-ratio: 1; border: 1px solid #333; border-radius: 4px; background: #000; font-weight: 500; color: #aaa; cursor: pointer; transition: 0.3s; font-size: 14px;}
         .nav-btn:hover { border-color: #3b82f6; color: #3b82f6;}
+        
+        /* CHẾ ĐỘ TỐI - NÚT ĐÃ TRẢ LỜI MÀU XANH */
         .nav-btn.answered { background: #3b82f6; color: #fff; border-color: #3b82f6;} 
         .nav-btn.active { border: 2px solid #ef4444; color: #fff;}
         .nav-btn.marked-nav::after { content: ''; position: absolute; top: -4px; right: -4px; width: 10px; height: 10px; background: #f59e0b; border-radius: 50%;}
@@ -137,6 +139,10 @@
         body.light-mode .btn-move:hover { background: #e5e7eb; color: #111; }
         body.light-mode .btn-move.primary { background: #3b82f6; color: white; border-color: #3b82f6; }
         body.light-mode .btn-move.primary:hover { background: #2563eb; }
+
+        /* BỔ SUNG: CHẾ ĐỘ SÁNG - NÚT ĐÃ TRẢ LỜI MÀU ĐỎ RỰC RỠ NHƯ Ý THẦY */
+        body.light-mode .nav-btn.answered { background: #ef4444 !important; color: #fff !important; border-color: #ef4444 !important; }
+        body.light-mode .nav-btn.active { border: 2px solid #3b82f6 !important; color: #111; font-weight: bold; }
 
         @media (max-width: 768px) {
             .main-workspace { flex-direction: column; padding: 10px; overflow-y: auto;}
@@ -347,16 +353,21 @@
         }
 
         // =================================================================
-        // THUẬT TOÁN ĐÓNG GÓI CHÙM CÂU HỎI BẢN HOÀN HẢO (CHỐNG VỠ SVG)
+        // THUẬT TOÁN ĐÓNG GÓI CHÙM CÂU HỎI BẢN HOÀN HẢO (CHỐNG VỠ GIAO DIỆN)
         // =================================================================
         function bocTachDeThi(htmlRaw) {
-            // Biến hình các thẻ dễ vỡ thành Ký hiệu Văn bản thuần (Trình duyệt chịu chết không xóa được)
-            // Lọc các thẻ <g1>, </g1>, <#g1> dự phòng nếu AI lỡ tạo ra theo lệnh cũ
-            htmlRaw = htmlRaw.replace(/<\/?\s*#?\s*g\s*[1-9][0-9]*\s*\/?>/gi, ' [DONG_CHUM] ');
+            // Bước 1: Bảo vệ các mốc ranh giới bằng cách đổi chúng thành chữ thuần túy
+            htmlRaw = htmlRaw.replace(/<g([1-9][0-9]*)>/gi, ' [MO_CHUM] ');
             
-            // Xử lý cẩn thận thẻ <g> dự phòng (Không được đụng vào các thẻ SVG MathJax)
+            // Xử lý mọi thể loại thẻ đóng do AI lỡ tay viết sai cú pháp
+            htmlRaw = htmlRaw.replace(/<\/\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
+            htmlRaw = htmlRaw.replace(/<\s*#\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
+            htmlRaw = htmlRaw.replace(/<\/\s*#\s*g([1-9][0-9]*)>/gi, ' [DONG_CHUM] ');
+            
+            // Xử lý chốt đóng câu
             htmlRaw = htmlRaw.replace(/<g>\s*<\/g>/gi, ' [HET_CAU] ');
             htmlRaw = htmlRaw.replace(/<g\s*\/>/gi, ' [HET_CAU] ');
+            htmlRaw = htmlRaw.replace(/\[HET_CAU\]/gi, ' [HET_CAU] ');
 
             let tempDiv = document.createElement('div'); 
             tempDiv.innerHTML = htmlRaw;
@@ -395,22 +406,25 @@
                     return;
                 }
 
-                // Xử lý mở/đóng chùm
-                if (rawTxt.includes('[DONG_CHUM]') || rawTxt.includes('[MO_CHUM]')) {
+                // Xóa mốc chữ ẩn để người dùng không nhìn thấy
+                if (rawTxt.includes('[DONG_CHUM]')) {
                     sharedContext = ""; 
-                    el.innerHTML = el.innerHTML.replace(/\[DONG_CHUM\]/g, '').replace(/\[MO_CHUM\]/g, '');
-                    txt = el.innerText || "";
+                    el.innerHTML = el.innerHTML.replace(/\[DONG_CHUM\]/g, '');
                 }
 
-                // Xử lý chốt đóng câu hỏi
+                if (rawTxt.includes('[MO_CHUM]')) {
+                    sharedContext = ""; 
+                    el.innerHTML = el.innerHTML.replace(/\[MO_CHUM\]/g, '');
+                }
+
                 let isDongCau = false;
                 if (rawTxt.includes('[HET_CAU]')) {
                     isDongCau = true;
                     el.innerHTML = el.innerHTML.replace(/\[HET_CAU\]/g, '');
-                    txt = el.innerText || "";
                 }
 
-                // Bỏ qua nếu dòng trống rỗng sau khi đã làm sạch
+                txt = el.innerText || ""; 
+
                 if(!txt.trim() && !el.querySelector('img')) {
                     if (isDongCau && objCau) { ketQua.push(objCau); objCau = null; }
                     return; 
@@ -419,40 +433,37 @@
                 if(regPhan.test(txt.trim())) {
                     let match = txt.match(regPhan)[1].toUpperCase();
                     if(match === 'I' || match === '1') phan = 1; else if(match === 'II' || match === '2') phan = 2; else if(match === 'III' || match === '3') phan = 3; else if(match === 'IV' || match === '4') phan = 4;
-                    sharedContext = ""; // Qua phần mới thì xóa sạch đoạn văn cũ
+                    sharedContext = ""; // Sang phần mới tự động xóa sạch đoạn văn cũ
                     return;
                 }
                 
                 let isLoiGiai = el.classList && el.classList.contains('loi-giai-chi-tiet');
 
-                // Nếu là khối văn bản dùng chung
+                // Nếu có class chuẩn do AI tự tạo
                 if (el.classList && el.classList.contains('doan-van-chung')) {
-                    sharedContext = el.outerHTML; // Ghi đè đoạn văn mới
+                    sharedContext = el.outerHTML; 
                     return;
                 }
 
                 if(regCau.test(txt.trim()) && !isLoiGiai) {
-                    // Nếu AI quên đánh dấu hết câu trước đó, ép đóng câu luôn
                     if(objCau) ketQua.push(objCau); 
                     idDem[phan]++;
                     
-                    // NẾU CÓ ĐOẠN ĐỌC HIỂU DÙNG CHUNG -> TỰ ĐỘNG DÁN LÊN ĐẦU CÂU HỎI MỚI
                     let cauHtml = sharedContext + el.outerHTML;
                     objCau = { phan: phan, soThuTu: idDem[phan], id: `P${phan}_${idDem[phan]}`, html: cauHtml };
                 } else { 
                     if(objCau) {
                         objCau.html += el.outerHTML; 
                     } else {
-                        // Dự phòng AI quên bọc đoạn văn: Nhận diện thủ công và tự chốt
-                        if (/^(Read the following|Read the passage|Đọc đoạn văn|Read the text)/i.test(txt.trim())) {
-                            sharedContext = el.outerHTML; // Khởi tạo đoạn văn mới
+                        // Nhận diện thủ công cực kỳ chặt chẽ: Chỉ khi gặp những từ khóa này mới đè đoạn văn mới
+                        if (/^(Read the following|Read the passage|Read the leaflet|Đọc đoạn văn|Read the text)/i.test(txt.trim())) {
+                            sharedContext = el.outerHTML; 
                         } else {
                             sharedContext += el.outerHTML;
                         }
                     }
                 }
 
-                // Chốt lưu câu hỏi lại an toàn để không bị nuốt chữ
                 if (isDongCau && objCau) {
                     ketQua.push(objCau);
                     objCau = null;
