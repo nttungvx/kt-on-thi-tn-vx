@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 10",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05010",
+    "part1": [
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng tình hình các nước Đông Âu từ năm 1950 đến đầu những năm 70 của thế kỉ XX?",
+            "options": [
+                "Công cuộc xây dựng chủ nghĩa xã hội ở Đông Âu đạt được nhiều thành tựu.",
+                "Chế độ quân chủ chuyên chế bị lật đổ, thành lập chính quyền dân chủ nhân dân.",
+                "Đông Âu lâm vào tình trạng suy thoái, khủng hoảng kinh tế - xã hội trầm trọng.",
+                "Các nước Đông Âu cải tổ để đưa đất nước thoát khỏi khủng hoảng kinh tế - xã hội."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Vào thế kỉ XI, Lý Thường Kiệt lãnh đạo nhân dân Đại Việt tiến hành cuộc kháng chiến chống quân xâm lược nào sau đây?",
+            "options": [
+                "Tống.",
+                "Nam Hán.",
+                "Minh.",
+                "Mông Cổ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1945, bản Hiến chương Liên hợp quốc được thông qua tại hội nghị",
+            "options": [
+                "Yalta.",
+                "San Francisco.",
+                "Paris.",
+                "Potsdam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây là triển vọng của Cộng đồng ASEAN sau năm 2015?",
+            "options": [
+                "Sự chênh lệch về thu nhập, trình độ phát triển giữa các nước thành viên.",
+                "Giải quyết triệt để tình trạng biến đổi khí hậu, ô nhiễm môi trường.",
+                "Uy tín, vị thế ngày càng được nâng cao trong khu vực và trên thế giới.",
+                "Trở thành trung tâm kinh tế - tài chính duy nhất của thế giới hiện đại."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Tháng 12-1989, nguyên thủ hai cường quốc Mỹ và Liên Xô chính thức cùng tuyên bố",
+            "options": [
+                "trở thành đối tác chiến lược toàn diện.",
+                "chấm dứt Chiến tranh lạnh.",
+                "hạn chế vũ khí tiến công chiến lược.",
+                "tiếp tục Chiến tranh lạnh."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hội nghị Yalta (2-1945) không đưa ra quyết định nào sau đây?",
+            "options": [
+                "Tiêu diệt tận gốc chủ nghĩa phát xít Đức và quân phiệt Nhật Bản.",
+                "Thành lập một tổ chức quốc tế để bảo vệ hòa bình và an ninh thế giới.",
+                "Phân chia phạm vi ảnh hưởng ở châu Âu và châu Á sau chiến tranh.",
+                "Khôi phục và phát triển kinh tế thế giới sau chiến tranh."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sau Chiến tranh lạnh, để tăng cường sức mạnh và tiềm lực của đất nước, các quốc gia trên thế giới đều",
+            "options": [
+                "lấy phát triển kinh tế làm trọng tâm.",
+                "đẩy mạnh chiến tranh xâm lược thuộc địa.",
+                "chú trọng xây dựng các liên minh quân sự.",
+                "tập trung phát triển vũ khí hạt nhân."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thắng lợi nào sau đây đánh dấu bước phát triển của cuộc kháng chiến chống thực dân Pháp (1945-1954) ở Việt Nam từ thế phòng ngự sang thế tiến công?",
+            "options": [
+                "Chiến dịch Việt Bắc thu – đông 1947.",
+                "Chiến dịch Biên giới thu – đông 1950.",
+                "Cuộc Tiến công chiến lược Đông – Xuân 1953-1954.",
+                "Chiến dịch Điện Biên Phủ 1954."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thắng lợi nào sau đây của nhân dân ta buộc Mỹ phải chấp nhận đàm phán, thương lượng để bàn về vấn đề chấm dứt chiến tranh, lập lại hoà bình ở Việt Nam?",
+            "options": [
+                "Thắng lợi trong phong trào Đồng khởi (1959-1960).",
+                "Chiến thắng Vạn Tường (1965).",
+                "Cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân (1968).",
+                "Cuộc Tiến công chiến lược (1972)."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đường lối đổi mới đất nước của Đảng Cộng sản Việt Nam trong giai đoạn 1996-2006 tập trung vào nội dung nào sau đây?",
+            "options": [
+                "Chủ động, tích cực hội nhập quốc tế toàn diện và sâu rộng.",
+                "Xây dựng và tổ chức thực hiện ba chương trình kinh tế lớn.",
+                "Phấn đấu bắt đầu có tích lũy nội bộ từ nền kinh tế.",
+                "Đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1912, Phan Bội Châu đã thành lập tổ chức nào sau đây?",
+            "options": [
+                "Đảng Lập hiến.",
+                "Hội Việt Nam Cách mạng Thanh niên.",
+                "Việt Nam Quang phục hội.",
+                "Việt Nam Quốc dân đảng."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1950, nước Việt Nam Dân chủ Cộng hòa đạt được thành tựu ngoại giao nào sau đây?",
+            "options": [
+                "Thiết lập quan hệ ngoại giao với Cộng hòa Nhân dân Trung Hoa và Liên Xô.",
+                "Bình thường hóa quan hệ ngoại giao với Trung Hoa Dân Quốc và Anh.",
+                "Thành lập Liên minh nhân dân Việt – Miên – Lào.",
+                "Tham dự Hội nghị quốc tế về Đông Dương tại Geneve (Thụy Sĩ)."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh không đúng ý nghĩa những thành tựu của công cuộc cải cách, mở cửa ở Trung Quốc?",
+            "options": [
+                "Đánh dấu chủ nghĩa xã hội đã phát triển trở thành hệ thống thế giới.",
+                "Chứng tỏ sức sống của chủ nghĩa xã hội trong một thế giới có nhiều biến động.",
+                "Khẳng định sự đúng đắn của đường lối cải cách, mở cửa ở Trung Quốc.",
+                "Để lại nhiều bài học kinh nghiệm cho các nước xã hội chủ nghĩa, trong đó có Việt Nam."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng nguyên nhân chủ quan dẫn đến thắng lợi của các cuộc chiến tranh bảo vệ Tổ quốc trong lịch sử Việt Nam (trước Cách mạng tháng Tám năm 1945)?",
+            "options": [
+                "Tinh thần yêu nước và ý chí đấu tranh kiên cường, bất khuất của người Việt.",
+                "Các thế lực ngoại xâm phải đối diện với nhiều khó khăn trong quá trình xâm lược.",
+                "Các cuộc chiến tranh xâm lược của ngoại bang đều mang tính phi nghĩa.",
+                "Tương quan lực lượng chênh lệch không có lợi cho cuộc kháng chiến."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thỏa thuận nào sau đây của Hội nghị Yalta (2-1945) đã tạo điều kiện cho thực dân Pháp trở lại xâm lược Việt Nam?",
+            "options": [
+                "Nhanh chóng đánh bại hoàn toàn chủ nghĩa phát xít để kết thúc chiến tranh.",
+                "Quân Anh và Trung Hoa Dân Quốc vào Việt Nam để giải giáp quân phát xít.",
+                "Thỏa thuận về việc Liên Xô sẽ tham chiến chống phát xít Nhật Bản ở châu Á.",
+                "Đông Nam Á thuộc phạm vi ảnh hưởng của các nước phương Tây."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Mục tiêu xây dựng một cộng đồng hòa bình và thịnh vượng ở Đông Nam Á lần đầu tiên được đề ra trong văn kiện nào sau đây?",
+            "options": [
+                "Tuyên bố Kuala Lumpur (2015).",
+                "Hiến chương ASEAN (2007).",
+                "Tuyên bố Băngkok (1967).",
+                "Hiệp ước Bali I (1976)."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sự kiện Việt Nam gia nhập Hiệp hội các quốc gia Đông Nam Á (ASEAN) vào năm 1995 đã tác động như thế nào đến sự phát triển của tổ chức này?",
+            "options": [
+                "Phá thế bao vây, cấm vận của Mỹ đối với các nước Đông Nam Á.",
+                "Là điều kiện quan trọng nhất đưa đến sự thành lập Cộng đồng ASEAN.",
+                "Mở ra triển vọng cho sự liên kết trên toàn khu vực Đông Nam Á.",
+                "Đánh dấu quá trình mở rộng thành viên của tổ chức ASEAN đã hoàn thành."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phát biểu nào sau đây phản ánh đúng về cuộc chiến tranh giải phóng dân tộc và bảo vệ Tổ quốc ở Việt Nam (1945-1975)?",
+            "options": [
+                "Kết hợp giữa Tổng tiến công của quần chúng nhân dân và sự nổi dậy của lực lượng vũ trang.",
+                "Thực hiện thắng lợi nhiệm vụ giải phóng miền Nam, thống nhất đất nước trên tất cả các lĩnh vực.",
+                "Giành thắng lợi từng bước là một vấn đề có tính quy luật của cách mạng Việt Nam (1945-1975).",
+                "Tiến hành đồng thời hai nhiệm vụ chiến lược giành độc lập dân tộc và xây dựng chủ nghĩa xã hội."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cách mạng tháng Tám (1945) và cuộc kháng chiến chống thực dân Pháp (1945-1954) của nhân dân Việt Nam có điểm tương đồng nào sau đây?",
+            "options": [
+                "Kết thúc bằng một giải pháp ngoại giao với việc ký hiệp định có lợi cho Việt Nam.",
+                "Góp phần vào thắng lợi trong cuộc đấu tranh chống chủ nghĩa phát xít.",
+                "Lực lượng vũ trang cách mạng gồm ba thứ quân đóng vai trò quyết định thắng lợi.",
+                "Có sự kết hợp giữa đấu tranh chính trị và đấu tranh vũ trang để giành thắng lợi."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Những hoạt động đối ngoại của Phan Châu Trinh (1911-1925) nhằm mục đích nào sau đây?",
+            "options": [
+                "Chuẩn bị các điều kiện cho khởi nghĩa vũ trang.",
+                "Tổ chức phong trào Đông du cho học sinh Việt Nam.",
+                "Tìm kiếm sự giúp đỡ của Nhật Bản, Trung Quốc.",
+                "Thức tỉnh dư luận Pháp về tình hình Việt Nam."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sau Chiến tranh lạnh, xu thế toàn cầu hóa trong quan hệ quốc tế đem lại cơ hội nào sau đây cho Việt Nam trong công cuộc đổi mới đất nước?",
+            "options": [
+                "Tranh thủ được nguồn vốn đầu tư và khoa học công nghệ.",
+                "Tạo sức cạnh tranh về kinh tế với tất cả các nước trên thế giới.",
+                "Được miễn thuế khi xuất khẩu hàng hóa sang nước khác.",
+                "Có điều kiện thực hiện liên minh quân sự với các nước lớn."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Theo sáng kiến của Hồ Chủ tịch, Đảng lập Mặt trận Việt Minh để tập hợp rộng rãi các lực lượng dân tộc dân chủ, đồng thời Đảng chủ trương xây dựng các căn cứ địa cách mạng và những đơn vị lực lượng vũ trang đầu tiên, phát động phong trào đánh Pháp, đuổi Nhật, mở rộng chiến tranh du kích và khởi nghĩa từng phần. Như Đảng đã dự đoán, khi Nhật hất cẳng Pháp, Đảng tranh thủ thời cơ, chuyển hướng mau lẹ, phát động cao trào kháng Nhật, cứu nước. Đây là thời kỳ động viên quần chúng sôi nổi, mạnh mẽ, phát triển lực lượng chính trị sâu rộng ở nông thôn và thành thị, đồng bằng và rừng núi, kết hợp với phát triển lực lượng vũ trang, chuẩn bị mọi mặt tiến tới tổng khởi nghĩa”.<br>(Lê Duẩn, Dưới lá cờ vẻ vang của Đảng vì độc lập, tự do, vì chủ nghĩa xã hội tiến lên giành những thắng lợi mới, NXB Sự thật, Hà Nội, 1976, tr.40-41)<br>Theo đoạn tư liệu, ai là người chủ trương thành lập Mặt trận Việt Minh (1941)?",
+            "options": [
+                "Trần Phú.",
+                "Trường Chinh",
+                "Hồ Chí Minh.",
+                "Võ Nguyên Giáp."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Theo sáng kiến của Hồ Chủ tịch, Đảng lập Mặt trận Việt Minh để tập hợp rộng rãi các lực lượng dân tộc dân chủ, đồng thời Đảng chủ trương xây dựng các căn cứ địa cách mạng và những đơn vị lực lượng vũ trang đầu tiên, phát động phong trào đánh Pháp, đuổi Nhật, mở rộng chiến tranh du kích và khởi nghĩa từng phần. Như Đảng đã dự đoán, khi Nhật hất cẳng Pháp, Đảng tranh thủ thời cơ, chuyển hướng mau lẹ, phát động cao trào kháng Nhật, cứu nước. Đây là thời kỳ động viên quần chúng sôi nổi, mạnh mẽ, phát triển lực lượng chính trị sâu rộng ở nông thôn và thành thị, đồng bằng và rừng núi, kết hợp với phát triển lực lượng vũ trang, chuẩn bị mọi mặt tiến tới tổng khởi nghĩa”.<br>(Lê Duẩn, Dưới lá cờ vẻ vang của Đảng vì độc lập, tự do, vì chủ nghĩa xã hội tiến lên giành những thắng lợi mới, NXB Sự thật, Hà Nội, 1976, tr.40-41)<br>Nhận xét nào sau đây phản ánh đúng vai trò của Mặt trận Việt Minh đối với thắng lợi của Cách mạng tháng Tám (1945) ở Việt Nam?",
+            "options": [
+                "Cùng với Lào và Campuchia thành lập liên minh chống kẻ thù chung.",
+                "Cùng với quân đồng minh tiêu diệt phát xít Nhật ở Đông Dương.",
+                "Tập hợp lực lượng yêu nước, phân hóa và cô lập kẻ thù.",
+                "Chớp thời cơ, phát động cao trào kháng Nhật, cứu nước."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Theo sáng kiến của Hồ Chủ tịch, Đảng lập Mặt trận Việt Minh để tập hợp rộng rãi các lực lượng dân tộc dân chủ, đồng thời Đảng chủ trương xây dựng các căn cứ địa cách mạng và những đơn vị lực lượng vũ trang đầu tiên, phát động phong trào đánh Pháp, đuổi Nhật, mở rộng chiến tranh du kích và khởi nghĩa từng phần. Như Đảng đã dự đoán, khi Nhật hất cẳng Pháp, Đảng tranh thủ thời cơ, chuyển hướng mau lẹ, phát động cao trào kháng Nhật, cứu nước. Đây là thời kỳ động viên quần chúng sôi nổi, mạnh mẽ, phát triển lực lượng chính trị sâu rộng ở nông thôn và thành thị, đồng bằng và rừng núi, kết hợp với phát triển lực lượng vũ trang, chuẩn bị mọi mặt tiến tới tổng khởi nghĩa”.<br>(Lê Duẩn, Dưới lá cờ vẻ vang của Đảng vì độc lập, tự do, vì chủ nghĩa xã hội tiến lên giành những thắng lợi mới, NXB Sự thật, Hà Nội, 1976, tr.40-41)<br>Từ thắng lợi của Cách mạng tháng Tám (1945), một trong những bài học kinh nghiệm nào sau đây được rút ra cho công cuộc xây dựng và bảo vệ Tổ quốc Việt Nam hiện nay?",
+            "options": [
+                "Phát huy tinh thần đoàn kết chiến đấu của nhân dân ba nước Đông Dương.",
+                "Biết tận dụng triệt để sự giúp đỡ của các cường quốc trên thế giới.",
+                "Kết hợp linh hoạt các hình thức đấu tranh công khai, hợp pháp.",
+                "Phát huy sức mạnh của các tầng lớp nhân dân và khối đoàn kết toàn dân."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho bảng thông tin sau đây:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Thời gian</td><td>Nội dung</td></tr><tr><td>1967</td><td>Hiệp hội các quốc gia Đông Nam Á (ASEAN) ra đời.</td></tr><tr><td>1976</td><td>Hiệp ước Thân thiện và Hợp tác ở Đông Nam Á (Hiệp ước Bali) được kí kết. </td></tr><tr><td>1995</td><td>Việt Nam trở thành thành viên của tổ chức ASEAN. </td></tr><tr><td>2007</td><td>Hiến chương ASEAN được thông qua. </td></tr><tr><td>2015</td><td>Cộng đồng ASEAN được thành lập.</td></tr></table>",
+            "items": [
+                "Bảng thông tin thể hiện một số sự kiện tiêu biểu về sự thành lập và quá trình phát triển của Hiệp hội các quốc gia Đông Nam Á (ASEAN).",
+                "Hiệp ước Bali (1976) là văn kiện quan trọng đánh dấu sự khởi sắc trong quá trình phát triển của Hiệp hội các quốc gia Đông Nam Á (ASEAN).",
+                "Cộng đồng ASEAN ra đời với cơ chế hợp tác sâu rộng hơn, chặt chẽ hơn đã từng bước thay thế Hiệp hội các quốc gia Đông Nam Á (ASEAN).",
+                "Từ sáu nước sáng lập, đến nay, ASEAN đã mở rộng thành viên với sự tham gia của tất cả các quốc gia trong khu vực Đông Nam Á."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Đó là một cuộc chiến tranh thực sự của dân, do dân, động viên toàn dân, vũ trang toàn dân, bày thế trận cả nước đánh giặc dưới sự lãnh đạo của Đảng tiên phong, tiến hành đấu tranh toàn diện trên mọi mặt trận quân sự, chính trị, ngoại giao, kinh tế, văn hoá... mà cái lõi xuyên suốt là tư tưởng chiến lược tiến công. Trong chống Mỹ, cứu nước, chiến tranh nhân dân đã phát triển đến đỉnh cao. Đây là một cuộc chiến tranh vừa quân sự vừa chính trị, phù hợp với hoàn cảnh lịch sử, địa lý của Việt Nam, với đặc điểm, bản lĩnh con người Việt Nam”.<br> (Ban Chỉ đạo tổng kết chiến tranh trực thuộc Bộ Chính trị, Tổng kết cuộc kháng chiến chống Mỹ, cứu nước thắng lợi và bài học, NXB Chính trị Quốc gia, Hà Nội, 1996, tr. 290)",
+            "items": [
+                "Đoạn tư liệu khẳng định chiến tranh nhân dân được hình thành trong cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam.",
+                "Chiến tranh nhân dân là một trong những cách đánh giặc độc đáo, được hình thành và phát triển trong quá trình đấu tranh giữ nước của dân tộc Việt Nam.",
+                "Từ năm 1954, để tiến hành đấu tranh chống đế quốc Mỹ và chính quyền tay sai trên tất cả các lĩnh vực, Đảng Cộng sản Đông Dương đã tích cực thực hiện hình thái chiến tranh nhân dân.",
+                "Bài học về tiến hành chiến tranh nhân dân trong kháng chiến chống Mỹ, cứu nước vẫn còn nguyên giá trị trong sự nghiệp bảo vệ Tổ quốc Việt Nam hiện nay."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Công cuộc đổi mới do Đảng ta khởi xướng và lãnh đạo là sự lựa chọn mang tính bước ngoặt, là sự nghiệp sáng tạo vĩ đại với ý nghĩa lịch sử sâu sắc, phù hợp với thực tiễn Việt Nam và xu thế phát triển của thời đại. Qua bốn thập niên đổi mới, Đảng ngày càng nhận thức rõ hơn yêu cầu bảo đảm cao nhất lợi ích quốc gia - dân tộc, trong đó mục tiêu phát triển được đặt ở vị trí trung tâm; vai trò của hội nhập quốc tế đối với xây dựng và bảo vệ Tổ quốc được đề cao; nhiệm vụ nâng cao vị thế và uy tín quốc gia trong cộng đồng quốc tế được nhấn mạnh như một động lực quan trọng của tiến trình phát triển đất nước”.<br>(Vũ Văn Phúc, Thế và lực của đất nước trong tiến trình hội nhập quốc tế qua 40 năm tiến hành công cuộc đổi mới đất nước, Tạp chí Cộng sản, ngày 02-03-2026)",
+            "items": [
+                "Đoạn tư liệu cho biết công cuộc đổi mới đất nước do Đảng Cộng sản Việt Nam lãnh đạo được tiến hành ngay sau khi cả nước hoàn thành cuộc cách mạng dân tộc dân chủ nhân dân.",
+                "Đảm bảo lợi ích quốc gia – dân tộc là mục tiêu số một trong quá trình thực hiện công cuộc đổi mới đất nước của Việt Nam từ năm 1986 đến nay.",
+                "Việc nâng cao vị thế của quốc gia trên trường quốc tế được Đảng Cộng sản Việt Nam xác định là nhiệm vụ trọng tâm, xuyên suốt trong gần 40 năm tiến hành đổi mới đất nước.",
+                "Đổi mới đất nước là sự lựa chọn mang tính tất yếu trong lịch sử dân tộc, hoàn toàn phù hợp với thực tiễn Việt Nam và xu thế phát triển của thời đại."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Việc ký kết Hiệp định Paris là thắng lợi tổng hợp của cuộc đấu tranh trên các mặt trận quân sự, chính trị và ngoại giao. Với hiệp định, đế quốc Mỹ buộc phải chấm dứt chiến tranh, rút khỏi Việt Nam và Đông Dương, chấm dứt dính líu quân sự. Ngụy mất chỗ dựa, bị suy yếu và lún sâu vào khủng hoảng. Mỹ phải lùi về chiến lược, rút lui về quân sự khỏi Đông Dương và tránh một Việt Nam thứ hai”.<br>(Nguyễn Đình Bin (Chủ biên), Ngoại giao Việt Nam 1945-2000, NXB Chính trị quốc gia Sự thật, Hà Nội, 2015, tr.266)",
+            "items": [
+                "Đoạn tư liệu khẳng định Hiệp định Paris (1973) được ký kết là thắng lợi của sự kết hợp giữa đấu tranh quân sự, chính trị và ngoại giao của nhân dân Việt Nam trong kháng chiến chống Mỹ, cứu nước.",
+                "Hiệp định Paris (1973) là văn bản pháp lí quốc tế đầu tiên ghi nhận các quyền dân tộc cơ bản của Việt Nam, được các nước tham dự hội nghị cam kết tôn trọng.",
+                "Việc ký kết Hiệp định Paris (1973) đã đánh dấu sự thắng lợi của cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam.",
+                "Thắng lợi của đấu tranh ngoại giao phải dựa trên thực lực của toàn dân tộc là một trong những bài học kinh nghiệm được rút ra từ việc ký kết Hiệp định Paris (1973)."
+            ],
+            "ans": [
+                true,
+                false,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 3",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05003",
+    "part1": [
+        {
+            "q": "Phong trào “Đồng khởi” (1959 – 1960) ở miền Nam Việt Nam đã dẫn tới sự ra đời của mặt trận nào sau đây?",
+            "options": [
+                "Mặt trận Việt Nam độc lập đồng minh.",
+                "Mặt trận Dân tộc giải phóng miền Nam Việt Nam.",
+                "Mặt trận Dân chủ Đông Dương.",
+                "Mặt trận Tổ quốc Việt Nam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phản ánh đúng đặc điểm của trật tự thế giới đa cực trong quan hệ quốc tế sau Chiến tranh lạnh?",
+            "options": [
+                "Cách mạng công nghiệp lần thứ hai ngày càng đạt được nhiều thành tựu, đặc biệt là về kinh tế.",
+                "Phản ánh tương quan so sánh lực lượng mới trong quan hệ quốc tế sau Chiến tranh lạnh.",
+                "Là trật tự thế giới mới được hình thành sau khi trật tự hai cực I-an-ta sụp đổ.",
+                "Là trật tư thế giới có sự tham gia của các quốc gia, các trung tâm khác nhau."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Điểm tương đồng trong cuộc kháng chiến chống Tống thời Lý (thế kỉ XI) với cuộc khởi nghĩa Lam Sơn chống quân Minh xâm lược (thế kỉ XV) là",
+            "options": [
+                "Chủ động tấn công kẻ thù.",
+                "Mục tiêu của các cuộc kháng chiến.",
+                "Nghệ thuật kết thúc chiến tranh.",
+                "Bối cảnh lịch sử đất nước."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Theo thoả thuận của các cường quốc tại Hội nghị I-an-ta (2-1945), địa bàn nào sau đây ở châu Âu sẽ thuộc phạm vi ảnh hưởng của Mỹ?",
+            "options": [
+                "Đông Đức.",
+                "Đông Âu.",
+                "Tây Âu.",
+                "Đông Béc-lin."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Điều kiện cơ bản phát huy sức mạnh toàn diện của đất nước để thực hiện nhiệm vụ bảo vệ Tổ quốc Việt Nam từ sau tháng 4-1975 là",
+            "options": [
+                "độc lập và thống nhất.",
+                "xóa bỏ được cấm vận.",
+                "nhận giúp đỡ bên ngoài.",
+                "chính trị được ổn định."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đường lối đổi mới toàn diện đất nước được Đảng Cộng sản Việt Nam đề ra tại Đại hội VI (tháng 12-1986) xác định trọng tâm là đổi mới về",
+            "options": [
+                "văn hóa.",
+                "xã hội.",
+                "kinh tế.",
+                "chính trị."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sự kiện nào sau đây là căn cứ mang tính pháp lí quốc tế để Việt Nam đấu tranh bảo vệ chủ quyền quốc gia ở Biển Đông?",
+            "options": [
+                "Thành lập đảo Song Tử Tây và Sinh Tồn (thuộc quần đảo Trường Sa) năm 2007.",
+                "Thành lập huyện Trường Sa (thuộc tỉnh Quảng Nam – Đà Nẵng) năm 1982.",
+                "Năm 1977, Việt Nam ra Tuyên bố về lãnh hải, vùng tiếp giáp, vùng đặc quyền kinh tế.",
+                "Năm 1994, Việt Nam phê chuẩn Công ước của Liên hợp quốc về Luật Biển (1982)."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây tạo nên sự thay đổi căn bản trong so sánh lực lượng có lợi cho cách mạng miền Nam Việt Nam kể từ đầu năm 1973?",
+            "options": [
+                "Mĩ kí Hiệp định Viêng Chăn lập lại hòa bình, hòa hợp dân tộc ở Lào.",
+                "Vùng giải phóng của ta được mở rộng và lớn mạnh.",
+                "Mĩ kí Hiệp định Pari và rút quân đội về nước.",
+                "Mĩ tuyên bố ngừng ném bom đánh phá hoàn toàn miền Bắc."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Người đi tiên phong trong các hoạt động đối ngoại của các nhà yêu nước Việt Nam đầu thế kỉ XX là",
+            "options": [
+                "Huỳnh Thúc Kháng.",
+                "Phan Bội Châu.",
+                "Trần Quý Cáp.",
+                "Hoàng Hoa Thám."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sự ra đời của tổ chức Hiệp ước Bắc Đại Tây Dương (1949) và tổ chức Hiệp ước Vácsava (1955) đã tác động như thế nào đến quan hệ quốc tế?",
+            "options": [
+                "Đánh dấu sự xác lập cục diện hai cực, hai phe, Chiến tranh lạnh bao trùm thế giới.",
+                "Đánh dấu cuộc Chiến tranh lạnh chính thức bắt đầu.",
+                "Tạo nên sự phân chia đối lập giữa Đông Âu và Tây Âu.",
+                "Đặt nhân loại đứng trước cuộc chiến tranh thế giới mới."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Lực lượng nào sau đây đóng vai trò nòng cốt, quyết định cho thắng lợi của cách mạng tháng Tám năm 1945?",
+            "options": [
+                "Lực lượng chính trị.",
+                "Lực lượng quân sự, chính trị.",
+                "Lực lượng vũ trang.",
+                "Lực lượng vũ trang ba thứ quân."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thắng lợi của Cách mạng tháng Tám năm 1945 đã",
+            "options": [
+                "xoá bỏ sự thống trị và bóc lột của giai cấp địa chủ phong kiến.",
+                "chấm dứt vĩnh viễn chế độ quân chủ và sự bóc lột của giai cấp địa chủ.",
+                "kết thúc ách cai trị của Pháp đối với các thuộc địa trên thế giới.",
+                "đưa Đảng Cộng sản Đông Dương từ một đảng hoạt động bí mật trở thành đảng cầm quyền."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những ý nghĩa của việc hình thành và phát triển của hệ thống chủ nghĩa xã hội trên thế giới là",
+            "options": [
+                "làm cho chủ nghĩa xã hội trở thành hiện thực trên thế giới.",
+                "làm cho chủ nghĩa tư bản hoàn toàn suy yếu.",
+                "làm xuất hiện khuynh hướng cách mạng vô sản trên thế giới.",
+                "trở thành chỗ dựa của phong trào cách mạng thế giới."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định nào dưới đây phản ánh đúng vai trò của tổ chức Liên hợp quốc?",
+            "options": [
+                "Là một tổ chức quốc tế phát triển năng động vì sự ổn định hợp tác của toàn thế giới.",
+                "Là một tổ chức quốc tế tạo dựng quan hệ thân thiện với tất cả các nước trên thế giới",
+                "Là một liên kết chính trị - kinh tế lớn nhất hành tinh vì sự ổn định của toàn nhân loại.",
+                "Là diễn đàn quốc tế lớn nhất, vừa hợp tác vừa đấu tranh vì hòa bình, an ninh thế giới."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cách kết thúc của cuộc kháng chiến chống Mĩ cứu nước (1954 - 1975) khác với cuộc kháng chiến chống Pháp (1945 - 1954) ở điểm nào?",
+            "options": [
+                "Kết thúc bằng một giải pháp hiệp định.",
+                "Kết thúc bằng một thắng lợi quân sự quyết định.",
+                "Kết hợp đấu tranh quân sự và ngoại giao.",
+                "Kết thúc bằng một thắng lợi chính trị quyết định."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Xu thế hoà hoãn Đông-Tây xuất hiện có tác động như thế nào đến trật tự hai cực I-an-ta?",
+            "options": [
+                "Các mâu thuẫn càng sâu sắc.",
+                "Đã xuất hiện xu thế đa cực.",
+                "Làm suy yếu trật tự hai cực.",
+                "Đã củng cố trật tự hai cực."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh không đúng ý nghĩa lịch sử của các cuộc đấu tranh bảo vệ Tổ quốc Việt Nam từ sau tháng 4 năm 1975?",
+            "options": [
+                "Làm thất bại ý đồ và hành động xâm lược, chống phá của các thế lực thù địch.",
+                "Bảo vệ vững chắc độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ của Tổ quốc.",
+                "Tạo điều kiện thuận lợi cho sự nghiệp xây dựng chủ nghĩa xã hội trên phạm vi cả nước.",
+                "Giúp Việt Nam có thể đặt quan hệ ngoại giao, hợp tác với tất cả các nước trên thế giới."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Điều kiện khách quan thuận lợi cho cuộc Tổng khởi nghĩa đã đến” là nhận định nói về sự kiện nào sau đây?",
+            "options": [
+                "Quân đội Liên Xô tấn công đạo quân Quan Đông của Nhật.",
+                "Nhật Bản tuyên bố đầu hàng Đồng minh không điều kiện.",
+                "Mĩ ném hai quả bom nguyên tử xuống Nhật Bản.",
+                "Nhật đảo chính Pháp, độc chiếm toàn Đông Dương."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1949, quốc gia nào sau đây ở Đông Bắc Á lựa chọn con đường đi lên chủ nghĩa xã hội?",
+            "options": [
+                "Việt Nam.",
+                "Trung Quốc.",
+                "Thái Lan.",
+                "Hàn Quốc."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Lấy phát triển kinh tế làm trọng điểm” được xem là nội dung chiến lược chủ yếu của các nước trong thời kỳ",
+            "options": [
+                "chiến tranh thế giới thứ hai kết thúc.",
+                "sau khi cuộc Chiến tranh lạnh kết thúc.",
+                "chủ nghĩa xã hội thành hệ thống thế giới.",
+                "ngay sau khi Chiến tranh lạnh bắt đầu."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những điểm tương đồng về mục tiêu mở các chiến dịch trong kháng chiến chống Pháp (1945 - 1954) của quân và dân Việt Nam là",
+            "options": [
+                "củng cố căn cứ địa Việt Bắc.",
+                "tiêu diệt bộ phận sinh lực địch.",
+                "giải phóng Tây Bắc, Trung Lào.",
+                "để đánh bại kế hoạch bình định."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ở nước ngoài, đó là những hoạt động xuất sắc và công lao to lớn của Nguyễn Ái Quốc tại Pháp, tại Liên Xô cũng như tại các nước láng giềng: Trung Quốc, Lào, Miên, Xiêm... để rồi trước hết tiếp cận chủ nghĩa Mác-Lênin - Lý luận cách mạng tiên tiến nhất thời đại, truyền bá về Việt Nam và chuẩn bị về tư tưởng, tổ chức cho việc thành lập một đảng cộng sản chân chính ở Việt Nam cũng như đưa phong trào cách mạng Việt Nam hội nhập và trở thành một bộ phận không thể tách rời của phong trào cộng sản thế giới”.<br> (Tạ Thị Thuý (cb), Lịch sử Việt Nam - Tập 8 , NXB Khoa học Xã hội, HN 2017, tr. 580)<br>Những hoạt động và vai trò của Nguyễn Ái Quốc được nhắc đến trong đoạn tư liệu trên có ý nghĩa nào sau đây đối với cách mạng Việt Nam?",
+            "options": [
+                "Chấm dứt sự khủng hoảng, bế tắc về đường lối cứu nước và giai cấp lãnh đạo, đó là giai cấp tư sản.",
+                "Thúc đẩy phong trào công nhân chuyển biến mạnh mẽ theo lập trường vô sản.",
+                "Xây dựng, hoàn chỉnh đường lối cứu nước và tiến lên chủ nghĩa cộng sản.",
+                "Loại trừ được những tư tưởng phi vô sản trong phong trào dân tộc dân chủ."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ở nước ngoài, đó là những hoạt động xuất sắc và công lao to lớn của Nguyễn Ái Quốc tại Pháp, tại Liên Xô cũng như tại các nước láng giềng: Trung Quốc, Lào, Miên, Xiêm... để rồi trước hết tiếp cận chủ nghĩa Mác-Lênin - Lý luận cách mạng tiên tiến nhất thời đại, truyền bá về Việt Nam và chuẩn bị về tư tưởng, tổ chức cho việc thành lập một đảng cộng sản chân chính ở Việt Nam cũng như đưa phong trào cách mạng Việt Nam hội nhập và trở thành một bộ phận không thể tách rời của phong trào cộng sản thế giới”.<br> (Tạ Thị Thuý (cb), Lịch sử Việt Nam - Tập 8 , NXB Khoa học Xã hội, HN 2017, tr. 580)<br>Trong khoảng thời gian ở nước ngoài, Nguyễn Ái Quốc đã tích cực hoạt động nhằm",
+            "options": [
+                "chuẩn bị những điều kiện cho sự ra đời của một chính đảng vô sản ở Việt Nam.",
+                "tìm kiếm sự ủng hộ của các nước xã hội chủ nghĩa đối với cách mạng Việt Nam.",
+                "hoàn chỉnh đường lối cho cuộc kháng chiến chống thực dân Pháp xâm lược.",
+                "chuẩn bị về lực lượng chính trị và lực lượng vũ trang cho cuộc tổng khởi nghĩa."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ở nước ngoài, đó là những hoạt động xuất sắc và công lao to lớn của Nguyễn Ái Quốc tại Pháp, tại Liên Xô cũng như tại các nước láng giềng: Trung Quốc, Lào, Miên, Xiêm... để rồi trước hết tiếp cận chủ nghĩa Mác-Lênin - Lý luận cách mạng tiên tiến nhất thời đại, truyền bá về Việt Nam và chuẩn bị về tư tưởng, tổ chức cho việc thành lập một đảng cộng sản chân chính ở Việt Nam cũng như đưa phong trào cách mạng Việt Nam hội nhập và trở thành một bộ phận không thể tách rời của phong trào cộng sản thế giới”.<br> (Tạ Thị Thuý (cb), Lịch sử Việt Nam - Tập 8 , NXB Khoa học Xã hội, HN 2017, tr. 580)<br>Đoạn tư liệu trên đề cập đến hoạt động và vai trò của Nguyễn Ái Quốc trong giai đoạn nào sau đây?",
+            "options": [
+                "Từ năm 1911 đến năm 1917.",
+                "Từ năm 1941 đến năm 1945.",
+                "Từ năm 1945 đến năm 1969.",
+                "Từ năm 1920 đến năm 1930."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho đoạn tư liệu sau:<br>“Năm 1954, phải đoàn Việt Nam tham dự Hội nghị Geneva trong tư cách là một bên tham chiến được mời. Chủ trì hội nghị và dẫn dắt tiến trình hội nghị là thuộc về các nước lớn trên tinh thần hòa hoãn nên không tránh khỏi những hạn chế đối với yêu cầu của chúng ta. Nhưng ngay khi bước vào cuộc hòa đàm Paris, Đảng đã xác định đây là cuộc nói chuyện trực tiếp giữa Việt Nam và Hoa Kỳ dù là đàm phán diễn ra dưới hình thức hai bên hay bốn bên, công khai hay hay bí mật. Cho nên, trong khi tranh thủ sự đồng tình ủng hộ của thế giới, [...] ngoại giao Việt Nam vẫn dựa trên cơ sở phân tích tương quan lực lượng địch - ta, về xu hướng thế giới để tìm ra quyết sách của mình”.<br>(Vũ Dương Ninh, Cách mạng Việt Nam trên bàn cờ quốc tế - Lịch sử và vấn đề, NXB Chính trị quốc gia Sự thật, Hà Nội, 2017, tr.299-300)",
+            "items": [
+                "Việt Nam đóng vai trò là chủ trì và dẫn dắt tiến trình Hội nghị Geneva (Giơ-ne-vơ) năm 1954.",
+                "Cuộc hòa đàm Paris (Pa-ri) là cuộc tiếp xúc giữa Chính phủ Việt Nam Dân chủ Cộng hòa với Chính phủ Hoa Kỳ, mở ra cục diện “vừa đánh vừa đàm” trong cuộc kháng chiến chống Mĩ, cứu nước.",
+                "Hội nghị Geneva (Giơ-ne-vơ) năm 1954 và cuộc hòa đàm Paris (Pa-ri) năm 1973 đều đi đến kết quả là tìm ra giải pháp chính trị cho vấn đề Việt Nam.",
+                "Hội nghị Geneva (Giơ-ne-vơ) năm 1954 chỉ có sự tham gia giữa Chính phủ Việt Nam Dân chủ Cộng hòa với chính phủ Pháp để bàn về vấn đề kết thúc chiến tranh ở Đông Dương."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Theo nhận thức của chúng ta, kinh tế thị trường định hướng xã hội chủ nghĩa là nền kinh tế thị trường hiện đại, hội nhập quốc tế, vận hành đầy đủ, đồng bộ theo các quy luật của kinh tế thị trường, có sự quản lý của nhà nước pháp quyền xã hội chủ nghĩa, do Đảng Cộng sản Việt Nam lãnh đạo; bảo đảm định hướng xã hội chủ nghĩa, nhằm mục tiêu “dân giàu, nước mạnh, dân chủ, công bằng, văn minh”.<br>(Nguyễn Phú Trọng, Một số vấn đề lí luận và thực tiễn về chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội ở Việt Nam, NXB Chính trị quốc gia – Sự thật, Hà Nội, 2022, tr.25 – 26).",
+            "items": [
+                "Nền kinh tế thị trường định hướng xã hội chủ nghĩa được Việt Nam xây dựng và phát triển ngay sau thắng lợi của Cách mạng tháng Tám năm 1945.",
+                "Đường lối đổi mới đất nước chuyển từ cơ chế kinh tế thị trường sang cơ chế kinh tế tập trung, bao cấp định hướng xã hội chủ nghĩa có sự quản lí của Đảng và Nhà nước.",
+                "Xây dựng mô hình kinh tế thị trường xã hội chủ nghĩa là điểm tương đồng trong công cuộc cải cách, mở cửa ở Trung Quốc và Đổi mới ở Việt Nam.",
+                "Độc lập dân tộc gắn liền với chủ nghĩa xã hội là bài học kinh nghiệm của công cuộc Đổi mới và cũng là điểm cốt yếu trong di sản tư tưởng của Chủ tịch Hồ Chí Minh."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng thông tin sau đây:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Thời gian</td><td>Hoạt động của ASEAN</td></tr><tr><td>Năm 1967</td><td>Thông qua Tuyên bố Băng Cốc.</td></tr><tr><td>Năm 1971</td><td>Ra tuyên bố về Khu vực Hòa bình, Tự do và Trung lập (ZOPFAN).</td></tr><tr><td>Năm 1976</td><td>Ký Hiệp ước Thân thiện và Hợp tác (TAC).</td></tr><tr><td>Năm 1994</td><td>Thành lập Diễn đàn khu vực ASEAN (ARF).</td></tr><tr><td>Năm 1995</td><td>Ký kết Hiệp ước về khu vực Đông Nam Á không vũ khí hạt nhân( SEANWFZ).</td></tr><tr><td>Năm 2007</td><td>Thông qua Hiến chương ASEAN.</td></tr><tr><td>Năm 2015</td><td>Thông qua Tuyên bố Cua-la Lăm-pơ.</td></tr></table>",
+            "items": [
+                "Hiệp ước TAC (1976) là văn kiện pháp lý mang tính nền tảng đã chuyển ASEAN từ một diễn đàn hợp tác chính trị-an ninh thành một khối phòng thủ nhằm đối phó với tác động từ cuộc Chiến tranh lạnh.",
+                "Bảng thông tin trên phản ánh quá trình hoạt động của Hiệp hội các quốc gia Đông Nam Á.",
+                "Hiệp ước Ba-li (1976) và Hiến chương ASEAN (2007) là những văn kiện đánh dấu bước ngoặt trong quá trình phát triển của Hiệp hội các quốc gia Đông Nam Á.",
+                "Cộng đồng ASEAN là một hình thức liên kết cao của ASEAN, sẽ từng bước thay thế cho tổ chức để hội nhập sâu rộng với thế giới."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Thắng lợi của Cách mạng tháng Tám là thắng lợi của đường lối gương cao ngọn cờ dân tộc, dân chủ của Đảng, kết hợp đúng đắn hai nhiệm vụ chống đế quốc và chống phong kiến, coi trọng nhiệm vụ chống đế quốc. […]. Đó là thắng lợi của đường lối đấu tranh kiên quyết và khôn khéo sử dụng các loại hình bạo lực cách mạng, kết hợp chính trị và vũ trang, lấy lực lượng chính trị của quần chúng giữ vai trò quyết định; kết hợp nông thôn và thành thị, kết hợp các loại hình thức đấu tranh hợp pháp và không hợp pháp, từ thấp lên cao, từ khởi nghĩa từng phần tiến lên tổng khởi nghĩa”.<br>(Ban chỉ đạo Tổng kết chiến tranh thuộc Bộ Chính trị, Chiến tranh cách mạng Việt Nam 1945 – 1975 thắng lợi và bài học, NXB Chính trị quốc gia, Hà Nội, 2000, tr.62, 63).",
+            "items": [
+                "Thắng lợi của Tổng khởi nghĩa tháng Tám có sự kết hợp hài hoà giữa địa bàn nông thôn và thành thị, giữa lực lượng chính trị và lực lượng vũ trang ba thứ quân.",
+                "Cách mạng tháng Tám có tính chất dân tộc điển hình vì đã xây dựng được một hình thức chính quyền nhà nước rộng rãi hơn chính quyền công - nông.",
+                "Thắng lợi của Cách mạng tháng Tám đã hoàn thành cuộc cách mạng dân tộc dân chủ nhân dân trên cả nước.",
+                "Cách mạng tháng Tám sử dụng bạo lực cách mạng, coi trọng nhiệm vụ chống đế quốc, giành độc lập dân tộc."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

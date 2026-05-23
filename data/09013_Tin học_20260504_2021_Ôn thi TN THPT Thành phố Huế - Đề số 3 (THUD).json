@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "09",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 3 (THUD)",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "09013",
+    "part1": [
+        {
+            "q": "Phát biểu nào đúng nhất về AI?",
+            "options": [
+                "AI luôn chính xác hơn con người",
+                "AI chỉ là phần mềm",
+                "AI phụ thuộc mạnh vào dữ liệu huấn luyện",
+                "AI không cần dữ liệu"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Mô hình có accuracy cao nhưng dự đoán kém trên dữ liệu mới là:",
+            "options": [
+                "Underfitting",
+                "Overfitting",
+                "Optimization",
+                "Sampling"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Dữ liệu huấn luyện bị lệch (bias), hệ quả đúng là:",
+            "options": [
+                "Mô hình chạy nhanh hơn",
+                "Mô hình chính xác hơn",
+                "Kết quả thiên lệch",
+                "Không ảnh hưởng"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Khi truy cập website, bước nào xảy ra trước?",
+            "options": [
+                "Gửi HTTP request",
+                "DNS phân giải",
+                "Render HTML",
+                "Tải CSS"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Giao thức nào không đảm bảo truyền tin tin cậy?",
+            "options": [
+                "TCP",
+                "UDP",
+                "HTTP",
+                "HTTPS"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hành vi nào nguy hiểm nhất?",
+            "options": [
+                "Dùng WiFi công cộng",
+                "Dùng mật khẩu yếu",
+                "Dùng cùng mật khẩu nhiều nơi",
+                "Không cập nhật phần mềm"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong an toàn thông tin, thuật ngữ phishing dùng để chỉ hành vi nào sau đây?",
+            "options": [
+                "Tấn công mạng",
+                "Giả mạo để lấy thông tin",
+                "Lỗi phần mềm",
+                "Virus"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Xét đoạn mã HTML dưới đây:<br>$<$div$>$<br>$<$p$>$Hello$<$/p$>$<br>$<$/div$>$<br>Trong cấu trúc cây của tài liệu HTML, mỗi phần tử đều có thể có phần tử cha (parent) và phần tử con (child). Hãy xác định thẻ là phần tử cha trực tiếp (parent trực tiếp) của thẻ $<$p$>$ trong đoạn mã trên.",
+            "options": [
+                "body",
+                "html",
+                "div",
+                "head"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Xét đoạn mã HTML và CSS dưới đây:<br>$<$/HTML$>$<br>$<$p style=\"color:red;\" class=\"a\"$>$Text$<$/p$>$<br>$<$style$>$<br>.a {color: blue;}<br>$<$/style$>$<br>Trong lập trình web, khi nhiều quy tắc CSS cùng áp dụng cho một phần tử, trình duyệt sẽ ưu tiên theo mức độ cụ thể (độ ưu tiên của CSS). Dựa vào nguyên tắc này, hãy xác định màu sắc thực tế được hiển thị của đoạn văn bản “Text”.",
+            "options": [
+                "đỏ",
+                "xanh",
+                "mặc định",
+                "lỗi"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong HTML, mỗi phần tử cần được lồng ghép (nesting) đúng quy tắc để đảm bảo cấu trúc tài liệu hợp lệ. Một số thẻ chỉ được phép chứa những loại phần tử nhất định, và việc lồng ghép sai có thể làm trang web hiển thị không đúng hoặc gây lỗi.<br>Hãy xác định đoạn mã HTML nào dưới đây không hợp lệ về mặt cấu trúc.",
+            "options": [
+                "$<$ul$>$$<$li$>$A$<$/li$>$$<$/ul$>$",
+                "$<$table$>$$<$tr$>$$<$td$>$$<$/td$>$$<$/tr$>$$<$/table$>$",
+                "$<$p$>$$<$div$>$$<$/div$>$$<$/p$>$",
+                "$<$a href=\"#\"$>$Link$<$/a$>$"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Xét thẻ hình ảnh HTML dưới đây:<br>$<$img src=\"x.jpg\" alt=\"ABC\"$>$<br>Trong HTML, thuộc tính alt được sử dụng để cung cấp văn bản thay thế khi hình ảnh không thể tải được (do lỗi đường dẫn, mất kết nối, hoặc file không tồn tại).<br>Nếu hình ảnh \"x.jpg\" không hiển thị, nội dung nào sẽ được trình duyệt hiển thị thay thế?",
+            "options": [
+                "Không gì",
+                "ABC",
+                "x.jpg",
+                "Lỗi"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thuộc tính nào KHÔNG thuộc HTML?",
+            "options": [
+                "href",
+                "src",
+                "color",
+                "alt"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong HTML, mỗi phần tử có một kiểu hiển thị mặc định (display). Thẻ $<$span$>$ thuộc loại phần tử nào dưới đây?",
+            "options": [
+                "block",
+                "inline",
+                "flex",
+                "none"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Để khi nhấp vào liên kết và mở trang web ở tab mới trong trình duyệt, cần sử dụng thuộc tính nào trong thẻ $<$a$>$?",
+            "options": [
+                "target=\"_new\"",
+                "target=\"_blank\"",
+                "newtab=\"true\"",
+                "open=\"new\""
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong ngôn ngữ truy vấn cơ sở dữ liệu SQL, câu lệnh nào dưới đây có cú pháp đúng để lấy tất cả các bản ghi của bảng HS với điều kiện age $>$ 18?",
+            "options": [
+                "SELECT * WHERE age $>$ 18",
+                "SELECT * FROM HS WHERE age $>$ 18",
+                "GET * FROM",
+                "SELECT age"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cơ sở dữ liệu quan hệ, nếu một bảng không có khóa chính (primary key) thì điều gì có thể xảy ra?",
+            "options": [
+                "Không ảnh hưởng đến dữ liệu",
+                "Dữ liệu có thể bị trùng lặp",
+                "Không thể lưu trữ dữ liệu",
+                "Làm tăng tốc độ truy vấn"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong ngôn ngữ truy vấn SQL, điều kiện nào dưới đây không hợp lệ về mặt kiểu dữ liệu?",
+            "options": [
+                "age $>$ 18",
+                "name = \"An\"",
+                "score BETWEEN 5 AND 10",
+                "age $>$ \"abc\""
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong môi trường số, hành vi nào dưới đây vi phạm pháp luật?",
+            "options": [
+                "Chia sẻ thông tin đã được kiểm chứng",
+                "Tải phần mềm có bản quyền hợp pháp",
+                "Phát tán phần mềm lậu trên mạng",
+                "Trích dẫn nguồn khi sử dụng tài liệu"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong môi trường số, hành vi nào dưới đây thể hiện đúng quy định về tôn trọng quyền riêng tư của người khác?",
+            "options": [
+                "Đăng ảnh người khác lên mạng khi chưa được phép",
+                "Chia sẻ thông tin cá nhân của bạn bè cho nhiều người",
+                "Xin phép trước khi sử dụng hình ảnh hoặc thông tin của người khác",
+                "Tự ý sử dụng tài khoản của người khác"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Theo quy định pháp luật và đạo đức trong môi trường số, hành vi nào sau đây là vi phạm bản quyền?",
+            "options": [
+                "Sử dụng phần mềm có giấy phép hợp lệ",
+                "Tải và chia sẻ phần mềm lậu trên Internet",
+                "Trích dẫn nguồn khi sử dụng tài liệu",
+                "Tự tạo nội dung và chia sẻ"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong lĩnh vực nghề dịch vụ và quản trị, yếu tố nào dưới đây quan trọng nhất để nâng cao chất lượng phục vụ khách hàng?",
+            "options": [
+                "Giảm chi phí tối đa",
+                "Tăng số lượng sản phẩm",
+                "Đáp ứng nhu cầu và sự hài lòng của khách hàng",
+                "Tăng thời gian phục vụ"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Khi thiết kế trang web, yếu tố nào dưới đây có thể làm thời gian tải trang (load) chậm nhất?",
+            "options": [
+                "HTML",
+                "CSS",
+                "Ảnh có dung lượng lớn",
+                "Thẻ $<$div$>$"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong lập trình, lỗi logic (logical error) là loại lỗi nào dưới đây?",
+            "options": [
+                "Sai cú pháp chương trình",
+                "Chương trình chạy nhưng cho kết quả sai",
+                "Chương trình không chạy được",
+                "Lỗi do kết nối mạng"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong quá trình sử dụng Internet, nguyên nhân chủ yếu nào dưới đây có thể làm tốc độ truy cập mạng chậm hoặc không ổn định?",
+            "options": [
+                "CPU của máy tính yếu",
+                "RAM của máy tính thấp",
+                "Đường truyền mạng kém chất lượng",
+                "Màn hình có độ phân giải thấp"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Mạng có quy mô vài chục đến vài trăm máy trạm, hoạt động trong phạm vi hẹp như một gia đình, cơ quan hoặc một tòa nhà thường được gọi là mạng LAN (mạng cục bộ hay mạng nội bộ). Trong khi đó, mạng MAN có phạm vi hoạt động và số lượng máy trạm lớn hơn so với mạng LAN. Trước đây, mạng LAN chủ yếu sử dụng kết nối bằng cáp, nhưng hiện nay công nghệ không dây Wi-Fi đã giúp việc trao đổi dữ liệu giữa các máy trở nên linh hoạt và thuận tiện hơn.<br>Sau khi đọc nhận định trên, hãy cho biết các ý kiến sau đúng hay sai:",
+            "items": [
+                "Mạng MAN có số lượng máy trạm ít hơn so với mạng LAN.",
+                "Mạng LAN còn được gọi là mạng cục bộ hoặc mạng nội bộ.",
+                "Trước khi có Wi-Fi, các máy trạm phải kết nối với nhau bằng cáp mạng.",
+                "Một trường THPT có khoảng 50 máy tính kết nối với nhau để phục vụ dạy và học thì mạng nội bộ của trường đó thuộc loại mạng MAN.Top of Form<br>Bottom of Form"
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Một cửa hàng xây dựng phần mềm quản lí bán hàng dựa trên cơ sở dữ liệu quan hệ gồm 4 bảng với cấu trúc như sau:<br>KHACHHANG (MaKH, Ten, DT)<br>VATTU (MaVT, TenVT, DVT, GiaMua, SLTon)<br>HOADON (MaHD, Ngay, MaKH, TongTG)<br>CHITIETHOADON (STT, MaHD, MaVT, SL, GiaBan)<br>Trong đó: bảng KHACHHANG lưu thông tin khách hàng; bảng VATTU lưu thông tin các mặt hàng; bảng HOADON lưu thông tin mỗi lần bán hàng; bảng CHITIETHOADON lưu thông tin chi tiết của từng hóa đơn.<br>Dựa vào cấu trúc cơ sở dữ liệu trên, hãy xác định các phát biểu sau là đúng hay sai:",
+            "items": [
+                "Bảng CHITIETHOADON có thể có nhiều khóa chính.",
+                "Giữa bảng KHACHHANG và bảng HOADON tồn tại mối quan hệ dữ liệu.",
+                "Khi nhập thiếu số lượng và tổng trị giá của một hóa đơn, cần thực hiện thao tác thêm mới bản ghi vào bảng HOADON và CHITIETHOADON.",
+                "Để thống kê các hóa đơn bán trong ngày “20/05/2024”, cần sử dụng đồng thời bảng HOADON và CHITIETHOADON."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Một học sinh sử dụng phần mềm thiết kế trang web để xây dựng website giới thiệu các địa điểm du lịch nổi tiếng của địa phương, gồm 3 trang: Trang chủ, Danh lam thắng cảnh và Liên hệ. Học sinh muốn tạo phần đầu trang (header) bao gồm biểu ngữ, logo và thanh điều hướng để liên kết giữa các trang trong website.<br>Sau khi tìm hiểu, một số học sinh đưa ra các nhận xét sau:",
+            "items": [
+                "Có thể tự thiết kế phần đầu trang hoặc sử dụng các mẫu (theme) có sẵn.",
+                "Các trang trong cùng một website thường sử dụng chung thanh điều hướng để đảm bảo tính thống nhất.",
+                "Logo hoặc biểu ngữ có thể được chèn vào trang web dưới dạng hình ảnh từ máy tính hoặc từ Internet thông qua đường dẫn (URL).",
+                "Không thể tạo các mục con (submenu) trong thanh điều hướng của websiteBottom of Form"
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Một công ty xây dựng cơ sở dữ liệu quản lí nhân sự gồm hai bảng sau:<br>nhanvien (idNhanvien, hoten, ngaysinh, diachi, soDT, idPhong): lưu thông tin nhân viên và mã phòng mà nhân viên trực thuộc.<br>phong (idPhong, tenphong, diachiPhong): lưu thông tin các phòng ban trong công ty.<br>Trong đó, các trường idNhanvien và idPhong có kiểu số nguyên và được tự động tăng khi thêm bản ghi mới.<br>Sau khi tìm hiểu cơ sở dữ liệu trên, một số học sinh đưa ra các nhận xét sau:",
+            "items": [
+                "Khi thêm một nhân viên mới vào phòng “Phòng Kinh doanh” có idPhong = 3, dữ liệu nhập vào bảng nhanvien có thể là: (“Nguyễn Văn Bình”, “19/9/1998”, “108 Cầu Giấy - Hà Nội”, “0123456789”, “Phòng Kinh doanh”).",
+                "Khi đổi tên “Phòng Kế hoạch Tài chính” thành “Phòng Kế hoạch”, chỉ cần cập nhật dữ liệu trong bảng phong mà không cần sửa bảng nhanvien.",
+                "Khi xoá một nhân viên trong bảng nhanvien, cần xoá phòng tương ứng của nhân viên đó trong bảng phong.",
+                "Nếu một nhân viên có thể thuộc nhiều phòng thì cơ sở dữ liệu chỉ gồm hai bảng trên là chưa phù hợp."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

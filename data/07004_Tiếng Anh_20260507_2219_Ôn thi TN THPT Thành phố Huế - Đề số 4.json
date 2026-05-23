@@ -1,0 +1,458 @@
+{
+    "timeLimit": 3000,
+    "subject": "07",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 4",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "07004",
+    "part1": [
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>The word <i>arrange</i> in paragraph 1 mostly means ______.",
+            "options": [
+                "cancel",
+                "organise",
+                "delay",
+                "forget"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>Which of the following is NOT mentioned in paragraph 1 as part of the shared system?",
+            "options": [
+                "schedules",
+                "movement",
+                "health activity",
+                "artificial intelligence"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>The word <i><u><b>their</b></u></i> in paragraph 2 refers to ______.",
+            "options": [
+                "users",
+                "devices",
+                "apps",
+                "features"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>Which of the following best paraphrases the underlined sentence in paragraph 2?<br><i><b>(Because features adapt to behaviour, users save time and improve productivity.)</b></i>",
+            "options": [
+                "As smartphone features respond to user habits, efficiency increases and less time is wasted.",
+                "When smartphone features remain unchanged, users become less productive over time.",
+                "Although features change frequently, users find it harder to manage their time effectively.",
+                "Smartphone features require more effort from users, leading to reduced productivity."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>The word <i><u><b>extend</b></u></i> in paragraph 3 is OPPOSITE in meaning to ______.",
+            "options": [
+                "lengthen",
+                "increase",
+                "shorten",
+                "improve"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>Which of the following is TRUE according to paragraph 4?",
+            "options": [
+                "Smartphones limit communication between users in different locations.",
+                "Cloud storage prevents users from accessing data on other devices.",
+                "Security systems help protect personal information on smartphones.",
+                "Data analysis tools make smartphones less useful for users."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>Which paragraph mentions managing energy usage?",
+            "options": [
+                "Paragraph 1",
+                "Paragraph 2",
+                "Paragraph 3",
+                "Paragraph 4"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 1 to 8.</b><br>When people rely on smartphones for daily tasks, they use connected apps to make their routines far more efficient. Location services, cloud syncing, and built-in sensors create a live, shared system of personal data such as schedules, movement, and health activity. Because everything updates instantly, users can <u><b>arrange</b></u> meetings, manage reminders, and monitor their habits in real time. What once depended on memory is now supported by accurate digital records.<br>With advanced software, users can customise <u><b>their</b></u> devices to suit personal needs. Smartphones adjust brightness automatically, suggest replies to messages, and organise photos using artificial intelligence. Navigation apps calculate the fastest routes while health apps track steps and calories burned. <u><b>Because features adapt to behaviour, users save time and improve productivity</b></u>. Studies show that these tools reduce effort in daily planning and communication.<br>Battery and performance management are equally important. Smart systems analyse usage patterns and limit background activity to <u><b>extend</b></u> battery life. Fast-charging technology provides quick power boosts, while cooling systems prevent overheating during heavy use. These improvements ensure stable performance throughout the day, reducing interruptions and enhancing user experience.<br>The role of smartphones in communication is also significant. Messaging platforms, video calls, and social media allow instant interaction across distances. Cloud storage keeps conversations, photos, and files updated across multiple devices, while security systems protect personal information. Data analysis tools also help companies understand user behaviour and improve future features. This makes smartphones not only convenient but also essential in modern life.<br>(Adapted from Teach News)<br>Which paragraph mentions real-time updates of personal activities?",
+            "options": [
+                "Paragraph 2",
+                "Paragraph 1",
+                "Paragraph 3",
+                "Paragraph 4"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following piece of news and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 9 to 14.</b><br><b>HUE FESTIVAL 2026</b><br>With more than twenty art troupes from around the world, Hue Festival 2026 features the largest (9) ______ of participating groups in its history, and is expected to be the most impressive (10) ______ so far.<br>Hue Arts Company, a cultural organization (11) ______ by the local government, is one of the main contributors this year. With years of experience in organizing festivals, it is expected to deliver remarkable performances. It is among the (12) ______ candidates to receive the highest recognition.<br>From April to June, Hue Festival 2026 promises a wide range of cultural activities and performances, (13) ______ is believed to offer visitors an unforgettable experience.<br>Over the past years, Hue Festival has helped the city (14) ______ its reputation as a cultural hub and become an attractive destination for tourists.<br>(Adapted from Tuoitre News)",
+            "options": [
+                "volume",
+                "amount",
+                "number",
+                "level"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following piece of news and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 9 to 14.</b><br><b>HUE FESTIVAL 2026</b><br>With more than twenty art troupes from around the world, Hue Festival 2026 features the largest (9) ______ of participating groups in its history, and is expected to be the most impressive (10) ______ so far.<br>Hue Arts Company, a cultural organization (11) ______ by the local government, is one of the main contributors this year. With years of experience in organizing festivals, it is expected to deliver remarkable performances. It is among the (12) ______ candidates to receive the highest recognition.<br>From April to June, Hue Festival 2026 promises a wide range of cultural activities and performances, (13) ______ is believed to offer visitors an unforgettable experience.<br>Over the past years, Hue Festival has helped the city (14) ______ its reputation as a cultural hub and become an attractive destination for tourists.<br>(Adapted from Tuoitre News)",
+            "options": [
+                "festival",
+                "festive",
+                "festivity",
+                "festively"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following piece of news and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 9 to 14.</b><br><b>HUE FESTIVAL 2026</b><br>With more than twenty art troupes from around the world, Hue Festival 2026 features the largest (9) ______ of participating groups in its history, and is expected to be the most impressive (10) ______ so far.<br>Hue Arts Company, a cultural organization (11) ______ by the local government, is one of the main contributors this year. With years of experience in organizing festivals, it is expected to deliver remarkable performances. It is among the (12) ______ candidates to receive the highest recognition.<br>From April to June, Hue Festival 2026 promises a wide range of cultural activities and performances, (13) ______ is believed to offer visitors an unforgettable experience.<br>Over the past years, Hue Festival has helped the city (14) ______ its reputation as a cultural hub and become an attractive destination for tourists.<br>(Adapted from Tuoitre News)",
+            "options": [
+                "managed",
+                "managing",
+                "has managed",
+                "is managing"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following piece of news and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 9 to 14.</b><br><b>HUE FESTIVAL 2026</b><br>With more than twenty art troupes from around the world, Hue Festival 2026 features the largest (9) ______ of participating groups in its history, and is expected to be the most impressive (10) ______ so far.<br>Hue Arts Company, a cultural organization (11) ______ by the local government, is one of the main contributors this year. With years of experience in organizing festivals, it is expected to deliver remarkable performances. It is among the (12) ______ candidates to receive the highest recognition.<br>From April to June, Hue Festival 2026 promises a wide range of cultural activities and performances, (13) ______ is believed to offer visitors an unforgettable experience.<br>Over the past years, Hue Festival has helped the city (14) ______ its reputation as a cultural hub and become an attractive destination for tourists.<br>(Adapted from Tuoitre News)",
+            "options": [
+                "top",
+                "quick",
+                "high",
+                "smart"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following piece of news and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 9 to 14.</b><br><b>HUE FESTIVAL 2026</b><br>With more than twenty art troupes from around the world, Hue Festival 2026 features the largest (9) ______ of participating groups in its history, and is expected to be the most impressive (10) ______ so far.<br>Hue Arts Company, a cultural organization (11) ______ by the local government, is one of the main contributors this year. With years of experience in organizing festivals, it is expected to deliver remarkable performances. It is among the (12) ______ candidates to receive the highest recognition.<br>From April to June, Hue Festival 2026 promises a wide range of cultural activities and performances, (13) ______ is believed to offer visitors an unforgettable experience.<br>Over the past years, Hue Festival has helped the city (14) ______ its reputation as a cultural hub and become an attractive destination for tourists.<br>(Adapted from Tuoitre News)",
+            "options": [
+                "who",
+                "which",
+                "when",
+                "why"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following piece of news and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 9 to 14.</b><br><b>HUE FESTIVAL 2026</b><br>With more than twenty art troupes from around the world, Hue Festival 2026 features the largest (9) ______ of participating groups in its history, and is expected to be the most impressive (10) ______ so far.<br>Hue Arts Company, a cultural organization (11) ______ by the local government, is one of the main contributors this year. With years of experience in organizing festivals, it is expected to deliver remarkable performances. It is among the (12) ______ candidates to receive the highest recognition.<br>From April to June, Hue Festival 2026 promises a wide range of cultural activities and performances, (13) ______ is believed to offer visitors an unforgettable experience.<br>Over the past years, Hue Festival has helped the city (14) ______ its reputation as a cultural hub and become an attractive destination for tourists.<br>(Adapted from Tuoitre News)",
+            "options": [
+                "build up",
+                "go up",
+                "come up",
+                "look up"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a cohesive and coherent exchange or text in each of the following questions from 15 to 19.</b><br>a. I spent hours preparing slides and activities, hoping my presentation would impress both my teacher and classmates.<br>b. However, things did not go as planned when I forgot some key points and felt extremely nervous during the talk.<br>c. This experience, though challenging, helped me improve my public speaking skills significantly.<br>d. Taking part in a school presentation competition was an important milestone in my learning journey.<br>e. Instead of feeling discouraged, I practised more and asked for feedback to do better next time.",
+            "options": [
+                "c – b – e – a – d",
+                "c – a – e – d – b",
+                "d – a – b – e – c",
+                "d – b – e – c – a"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a cohesive and coherent exchange or text in each of the following questions from 15 to 19.</b><br>a. Nam: I used to, but now I prefer using learning apps on my phone.<br>b. Lan: Me too! They are more interactive, but traditional books are still useful.<br>c. Lan: Do you often study with printed books?<br>d. Lan: I think combining both methods is the best way to learn effectively.<br>e. Nam: I agree. Each method has its own advantages.",
+            "options": [
+                "d – a – c – e – b",
+                "c – a – b – e – d",
+                "d – e – b – a – c",
+                "c – e – d – a – b"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a cohesive and coherent exchange or text in each of the following questions from 15 to 19.</b><br>a. Minh: Text me when you arrive home safely.<br>b. Minh: It’s quite late now. Do you want me to walk you home?<br>c. Hoa: Thanks, but I’ll take a taxi instead.",
+            "options": [
+                "a – b – c",
+                "b – a – c",
+                "b – c – a",
+                "a – c – b"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a cohesive and coherent exchange or text in each of the following questions from 15 to 19.</b><br>Dear Mr Brown,<br>a. This has already been approved, but you are required to bring this letter along with your ID to the nearest office to complete the process.<br>b. The offer is limited and valid until November 30th.<br>c. Your request will be processed quickly, and the service will be activated within 24 hours.<br>d. We are pleased to inform you that you are eligible for a special membership package with various benefits.<br>e. For further information, please contact us via our hotline or visit our website. Yours sincerely,<br>XYZ Company",
+            "options": [
+                "b – d – a – c – e",
+                "a – c – d – b – e",
+                "d – a – c – b – e",
+                "c – a – d – b – e"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a cohesive and coherent exchange or text in each of the following questions from 15 to 19.</b><br>a. These changes highlight the rapid urban development of the Riverside area, turning it into a more dynamic and economically active region.<br>b. This transformation was further supported by the construction of new factories and business centres on former farmland.<br>c. Residential zones also experienced significant changes, with old houses being replaced by modern apartments and green spaces being redesigned.<br>d. At the same time, commercial facilities expanded considerably, especially with the building of shopping malls and parking areas.<br>e. Between 2005 and 2020, the Riverside district underwent major changes, reflecting a shift towards urbanisation and economic growth.",
+            "options": [
+                "e – d – b – a – c",
+                "e – b – a – c – d",
+                "e – c – a – d – b",
+                "e – c – d – b – a"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>According to paragraph 1, promoting AI-powered features instead of fully integrating AI will ______.</b>",
+            "options": [
+                "require companies to redesign all existing systems",
+                "allow companies to appear advanced without major changes",
+                "involve significant financial and training investments",
+                "completely replace traditional business operations"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>The word </b><i><b>amplify</b></i><b> in paragraph 2 mostly means ______.</b>",
+            "options": [
+                "reduce",
+                "spread widely",
+                "ignore",
+                "simplify"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>Which of the following best summarises paragraph 2?</b>",
+            "options": [
+                "AI technology has completely transformed all industries and services.",
+                "Consumers rely heavily on influencers to understand AI products.",
+                "AI-related claims are widely promoted and often exaggerated across platforms.",
+                "Traditional advertising is more effective than modern digital marketing."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>What causes companies to adopt AI-washing?</b>",
+            "options": [
+                "Declining public interest in technology",
+                "Pressure to appear innovative in a competitive market",
+                "Strict regulations on AI development",
+                "Lack of access to marketing tools"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>What challenge do regulators face in controlling AI-washing?</b>",
+            "options": [
+                "Limited interest from investors",
+                "Slow technological development",
+                "Oversight that cannot keep up with rapid marketing",
+                "A shortage of AI experts"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>The phrase </b><i><b>this phenomenon</b></i><b> in paragraph 3 refers to ______.</b>",
+            "options": [
+                "technological innovation",
+                "public interest in AI",
+                "AI-washing",
+                "regulatory action"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>Which of the following best paraphrases the underlined sentence in paragraph 4?</b><br><b>(</b><i><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></i><b>)</b>",
+            "options": [
+                "Clear evidence and accountability are necessary for real innovation to replace misleading claims.",
+                "Companies should reduce transparency to protect their technological strategies.",
+                "Innovation can succeed without meeting public expectations if marketing is strong.",
+                "Measuring results is less important than promoting new technologies."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>Which of the following can be inferred from the passage?</b>",
+            "options": [
+                "Most companies have successfully implemented advanced AI systems.",
+                "AI-washing helps companies gain benefits without significant technological change.",
+                "Regulators fully control misleading AI-related claims.",
+                "Investors prefer long-term innovation over short-term profit."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>Where in the passage does the following sentence best fit?</b><br><i><b>However, this trend may have long-term negative consequences.</b></i>",
+            "options": [
+                "[IV]",
+                "[III<b>]</b>",
+                "[II]",
+                "[I]"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 20 to 29.</b><br>The rapid rise of artificial intelligence (AI) has sparked both excitement and concern across industries. [I] Imagine managing a large company: fully integrating AI into operations would require costly investments, extensive staff training, and significant changes to existing systems. Promoting AI-powered features in marketing campaigns, however, is far simpler, allowing companies to appear innovative while making only minor adjustments behind the scenes.<br>Consumers encounter this trend in many forms. Smartphones advertise \"AI cameras\", apps promise \"smart recommendations\", and online services highlight \"intelligent automation\". While technology has undeniably advanced, these claims are often exaggerated. Social media influencers and polished product launches further <i><b>amplify</b></i> such messages, extending their reach far beyond traditional advertising platforms.<br>The term “AI-washing” has recently been used to describe <u><b>this phenomenon</b></u>. [II] As public interest in AI continues to grow, companies face increasing pressure to adopt the technology. Instead of investing in meaningful innovation, some organisations prioritise branding strategies that emphasise AI capabilities without substantial improvements. Regulators are beginning to examine misleading claims, yet oversight remains limited compared to the speed of technological marketing. Investors, focused on short-term gains, frequently support these surface-level developments. [III] The tech industry provides clear examples, as firms highlight experimental AI features while core services remain largely unchanged.<br>Why does this matter? AI-washing, much like other forms of misleading promotion, creates a false perception of progress. [IV] While genuine innovation requires time and effort, exaggerated claims may reduce public demand for real technological improvements and delay necessary investment. In the long run, this weakens trust in both companies and emerging technologies. <u><b>Addressing the issue by demanding transparency and measurable results is essential to ensure that innovation matches expectation.</b></u><br>(Adapted from Technology Commentary Sources)<br><b>Which of the following best summarises the passage?</b>",
+            "options": [
+                "AI-washing is increasing as companies exaggerate technological progress, potentially misleading the public and slowing real innovation.",
+                "Artificial intelligence is rapidly replacing traditional systems across all industries.",
+                "Companies are investing heavily in AI despite limited public interest.",
+                "Regulators have successfully controlled misleading technological claims."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 35.</b><br><b>HOW TO PROTECT THE ENVIRONMENT?</b><br>Protecting the environment is essential for ensuring a sustainable future. (30) ______, many people still ignore eco-friendly habits and continue harmful practices, eventually leading (31) ______ environmental degradation and pollution. Here are some simple tips to help you protect the environment:<br>• Reduce the use of plastic whenever possible.<br>• Save electricity and water (32) ______ day by developing responsible habits.<br>• Choose (33) ______ that are environmentally friendly.<br>• Avoid (34) ______ consumption of natural resources.<br>• Take part in activities that protect nature to get the most (35) ______ your efforts.<br>(Adapted from Environmental Guides)",
+            "options": [
+                "However",
+                "Otherwise",
+                "Though",
+                "While"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 35.</b><br><b>HOW TO PROTECT THE ENVIRONMENT?</b><br>Protecting the environment is essential for ensuring a sustainable future. (30) ______, many people still ignore eco-friendly habits and continue harmful practices, eventually leading (31) ______ environmental degradation and pollution. Here are some simple tips to help you protect the environment:<br>• Reduce the use of plastic whenever possible.<br>• Save electricity and water (32) ______ day by developing responsible habits.<br>• Choose (33) ______ that are environmentally friendly.<br>• Avoid (34) ______ consumption of natural resources.<br>• Take part in activities that protect nature to get the most (35) ______ your efforts.<br>(Adapted from Environmental Guides)",
+            "options": [
+                "on",
+                "at",
+                "in",
+                "to"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 35.</b><br><b>HOW TO PROTECT THE ENVIRONMENT?</b><br>Protecting the environment is essential for ensuring a sustainable future. (30) ______, many people still ignore eco-friendly habits and continue harmful practices, eventually leading (31) ______ environmental degradation and pollution. Here are some simple tips to help you protect the environment:<br>• Reduce the use of plastic whenever possible.<br>• Save electricity and water (32) ______ day by developing responsible habits.<br>• Choose (33) ______ that are environmentally friendly.<br>• Avoid (34) ______ consumption of natural resources.<br>• Take part in activities that protect nature to get the most (35) ______ your efforts.<br>(Adapted from Environmental Guides)",
+            "options": [
+                "many",
+                "some",
+                "<b>C.</b> much",
+                "each"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 35.</b><br><b>HOW TO PROTECT THE ENVIRONMENT?</b><br>Protecting the environment is essential for ensuring a sustainable future. (30) ______, many people still ignore eco-friendly habits and continue harmful practices, eventually leading (31) ______ environmental degradation and pollution. Here are some simple tips to help you protect the environment:<br>• Reduce the use of plastic whenever possible.<br>• Save electricity and water (32) ______ day by developing responsible habits.<br>• Choose (33) ______ that are environmentally friendly.<br>• Avoid (34) ______ consumption of natural resources.<br>• Take part in activities that protect nature to get the most (35) ______ your efforts.<br>(Adapted from Environmental Guides)",
+            "options": [
+                "products friendly environmentally",
+                "environmentally friendly products",
+                "friendly environmentally products",
+                "products environmentally friendly"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 35.</b><br><b>HOW TO PROTECT THE ENVIRONMENT?</b><br>Protecting the environment is essential for ensuring a sustainable future. (30) ______, many people still ignore eco-friendly habits and continue harmful practices, eventually leading (31) ______ environmental degradation and pollution. Here are some simple tips to help you protect the environment:<br>• Reduce the use of plastic whenever possible.<br>• Save electricity and water (32) ______ day by developing responsible habits.<br>• Choose (33) ______ that are environmentally friendly.<br>• Avoid (34) ______ consumption of natural resources.<br>• Take part in activities that protect nature to get the most (35) ______ your efforts.<br>(Adapted from Environmental Guides)",
+            "options": [
+                "possessive<b> </b><b> </b>",
+                "restrictive<b> </b><b>        </b><b> </b>",
+                "objective<b> </b><b>      </b><b> </b><b>  </b>",
+                "excessive"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 35.</b><br><b>HOW TO PROTECT THE ENVIRONMENT?</b><br>Protecting the environment is essential for ensuring a sustainable future. (30) ______, many people still ignore eco-friendly habits and continue harmful practices, eventually leading (31) ______ environmental degradation and pollution. Here are some simple tips to help you protect the environment:<br>• Reduce the use of plastic whenever possible.<br>• Save electricity and water (32) ______ day by developing responsible habits.<br>• Choose (33) ______ that are environmentally friendly.<br>• Avoid (34) ______ consumption of natural resources.<br>• Take part in activities that protect nature to get the most (35) ______ your efforts.<br>(Adapted from Environmental Guides)",
+            "options": [
+                "worth<b> </b><b> </b>",
+                "price<b> </b><b> </b>",
+                "rate<b> </b><b> </b>",
+                "cost"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 36 to 40.</b><br>The process of making decisions is a central topic in psychology, and individual personality traits strongly influence how people choose. Some individuals engage in careful analysis, collecting information about different options, (36) ______. Others, however, prefer quicker decisions and may avoid comparing too many alternatives, (37) ______, mainly for the sake of convenience rather than ensuring the best possible outcome. This approach is often described as limited decision-making.<br>Many people rely on habitual patterns, in which their choices remain relatively stable over time. (38) ______. For example, individuals who have had positive experiences with a particular option may continue to choose it without reconsidering other possibilities.<br>Finally, some individuals make decisions impulsively. (39) ______. This behaviour is becoming increasingly common, creating challenges for organisations attempting to predict consumer actions, as it reduces their ability to plan effectively. (40) ______, especially in situations where immediate decisions are encouraged.<br>(Adapted from Psychology Sources)",
+            "options": [
+                "each of which is evaluated and compared with other available options",
+                "every one of them is evaluating and comparing with other options",
+                "when it is evaluated and compared with similar options",
+                "those with similarities to options will evaluate and compare carefully"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 36 to 40.</b><br>The process of making decisions is a central topic in psychology, and individual personality traits strongly influence how people choose. Some individuals engage in careful analysis, collecting information about different options, (36) ______. Others, however, prefer quicker decisions and may avoid comparing too many alternatives, (37) ______, mainly for the sake of convenience rather than ensuring the best possible outcome. This approach is often described as limited decision-making.<br>Many people rely on habitual patterns, in which their choices remain relatively stable over time. (38) ______. For example, individuals who have had positive experiences with a particular option may continue to choose it without reconsidering other possibilities.<br>Finally, some individuals make decisions impulsively. (39) ______. This behaviour is becoming increasingly common, creating challenges for organisations attempting to predict consumer actions, as it reduces their ability to plan effectively. (40) ______, especially in situations where immediate decisions are encouraged.<br>(Adapted from Psychology Sources)",
+            "options": [
+                "be deliberate to limit themselves to a few choices",
+                "being deliberately limiting themselves to fewer choices",
+                "will deliberately limit themselves to a small number of choices",
+                "fewer choices are deliberately limited to themselves"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 36 to 40.</b><br>The process of making decisions is a central topic in psychology, and individual personality traits strongly influence how people choose. Some individuals engage in careful analysis, collecting information about different options, (36) ______. Others, however, prefer quicker decisions and may avoid comparing too many alternatives, (37) ______, mainly for the sake of convenience rather than ensuring the best possible outcome. This approach is often described as limited decision-making.<br>Many people rely on habitual patterns, in which their choices remain relatively stable over time. (38) ______. For example, individuals who have had positive experiences with a particular option may continue to choose it without reconsidering other possibilities.<br>Finally, some individuals make decisions impulsively. (39) ______. This behaviour is becoming increasingly common, creating challenges for organisations attempting to predict consumer actions, as it reduces their ability to plan effectively. (40) ______, especially in situations where immediate decisions are encouraged.<br>(Adapted from Psychology Sources)",
+            "options": [
+                "Common habits, by contrast, are a pattern among individuals",
+                "This is a common pattern among habit-driven individuals, for example",
+                "By contrast, a habit-driven pattern is seen among common individuals",
+                "This is a common example of habits with individuals following patterns"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 36 to 40.</b><br>The process of making decisions is a central topic in psychology, and individual personality traits strongly influence how people choose. Some individuals engage in careful analysis, collecting information about different options, (36) ______. Others, however, prefer quicker decisions and may avoid comparing too many alternatives, (37) ______, mainly for the sake of convenience rather than ensuring the best possible outcome. This approach is often described as limited decision-making.<br>Many people rely on habitual patterns, in which their choices remain relatively stable over time. (38) ______. For example, individuals who have had positive experiences with a particular option may continue to choose it without reconsidering other possibilities.<br>Finally, some individuals make decisions impulsively. (39) ______. This behaviour is becoming increasingly common, creating challenges for organisations attempting to predict consumer actions, as it reduces their ability to plan effectively. (40) ______, especially in situations where immediate decisions are encouraged.<br>(Adapted from Psychology Sources)",
+            "options": [
+                "The decisions require little effort, which makes them more common among typical individuals",
+                "While this is more typical of low-risk choices, it is by no means uncommon in decision-making",
+                "It does not matter whether decisions are risky, they are typical of individuals",
+                "In the meantime, low-risk decisions are known to be choices typically preferred by individuals"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 36 to 40.</b><br>The process of making decisions is a central topic in psychology, and individual personality traits strongly influence how people choose. Some individuals engage in careful analysis, collecting information about different options, (36) ______. Others, however, prefer quicker decisions and may avoid comparing too many alternatives, (37) ______, mainly for the sake of convenience rather than ensuring the best possible outcome. This approach is often described as limited decision-making.<br>Many people rely on habitual patterns, in which their choices remain relatively stable over time. (38) ______. For example, individuals who have had positive experiences with a particular option may continue to choose it without reconsidering other possibilities.<br>Finally, some individuals make decisions impulsively. (39) ______. This behaviour is becoming increasingly common, creating challenges for organisations attempting to predict consumer actions, as it reduces their ability to plan effectively. (40) ______, especially in situations where immediate decisions are encouraged.<br>(Adapted from Psychology Sources)",
+            "options": [
+                "Though such a tendency towards impulsive behaviour proves to be beneficial",
+                "So beneficial is such a tendency that it proves to be impulsive",
+                "Such a tendency is so impulsive that it proves to be beneficial to individuals",
+                "Such impulsive behaviour proves to be beneficial, though"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [],
+    "part3": []
+}

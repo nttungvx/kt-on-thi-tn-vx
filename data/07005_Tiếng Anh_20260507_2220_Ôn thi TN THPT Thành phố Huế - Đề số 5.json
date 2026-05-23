@@ -1,0 +1,458 @@
+{
+    "timeLimit": 3000,
+    "subject": "07",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 5",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "07005",
+    "part1": [
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 1 to 6.</b></i><br><i><b>🌱</b></i><i><b> ORGANIC PUMPKIN SEEDS – A SMART CHOICE FOR YOUR HEALTH! </b></i><i><b>🌱</b></i><br>Looking for a healthy snack? Try our <b>(1) ______</b> organic pumpkin seeds and boost your daily nutrition! Pumpkin seeds are rich in antioxidants, vitamins, and amino acids — perfect for improving <b>(2) ______</b> and reducing inflammation.<br>They are packed <b>(3) ______</b> nutrients that help improve sleep, support hair growth, and relieve joint pain. You can eat them directly or use oil on the skin or scalp. These tiny seeds bring big benefits!<br><b>(4) ______</b> from carefully selected pumpkins, our seeds are processed using methods in Europe for clean and safe nutrition. Many customers choose pumpkin seeds because they <b>(5) ______</b> an active lifestyle and care about natural foods.<br>So, don’t wait! Visit our website today <b>(6) ______</b> your first bag of organic pumpkin seeds at a special price!<br>(Adapted from https://organicaspirations.com/organic-pumpkin-seeds/)",
+            "options": [
+                "choosing",
+                "choose",
+                "chosen",
+                "choice"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 1 to 6.</b></i><br><i><b>🌱</b></i><i><b> ORGANIC PUMPKIN SEEDS – A SMART CHOICE FOR YOUR HEALTH! </b></i><i><b>🌱</b></i><br>Looking for a healthy snack? Try our <b>(1) ______</b> organic pumpkin seeds and boost your daily nutrition! Pumpkin seeds are rich in antioxidants, vitamins, and amino acids — perfect for improving <b>(2) ______</b> and reducing inflammation.<br>They are packed <b>(3) ______</b> nutrients that help improve sleep, support hair growth, and relieve joint pain. You can eat them directly or use oil on the skin or scalp. These tiny seeds bring big benefits!<br><b>(4) ______</b> from carefully selected pumpkins, our seeds are processed using methods in Europe for clean and safe nutrition. Many customers choose pumpkin seeds because they <b>(5) ______</b> an active lifestyle and care about natural foods.<br>So, don’t wait! Visit our website today <b>(6) ______</b> your first bag of organic pumpkin seeds at a special price!<br>(Adapted from https://organicaspirations.com/organic-pumpkin-seeds/)",
+            "options": [
+                "immune healthy system",
+                "healthy system immune",
+                "system immune healthy",
+                "healthy immune system"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 1 to 6.</b></i><br><i><b>🌱</b></i><i><b> ORGANIC PUMPKIN SEEDS – A SMART CHOICE FOR YOUR HEALTH! </b></i><i><b>🌱</b></i><br>Looking for a healthy snack? Try our <b>(1) ______</b> organic pumpkin seeds and boost your daily nutrition! Pumpkin seeds are rich in antioxidants, vitamins, and amino acids — perfect for improving <b>(2) ______</b> and reducing inflammation.<br>They are packed <b>(3) ______</b> nutrients that help improve sleep, support hair growth, and relieve joint pain. You can eat them directly or use oil on the skin or scalp. These tiny seeds bring big benefits!<br><b>(4) ______</b> from carefully selected pumpkins, our seeds are processed using methods in Europe for clean and safe nutrition. Many customers choose pumpkin seeds because they <b>(5) ______</b> an active lifestyle and care about natural foods.<br>So, don’t wait! Visit our website today <b>(6) ______</b> your first bag of organic pumpkin seeds at a special price!<br>(Adapted from https://organicaspirations.com/organic-pumpkin-seeds/)",
+            "options": [
+                "for",
+                "with",
+                "by",
+                "of"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 1 to 6.</b></i><br><i><b>🌱</b></i><i><b> ORGANIC PUMPKIN SEEDS – A SMART CHOICE FOR YOUR HEALTH! </b></i><i><b>🌱</b></i><br>Looking for a healthy snack? Try our <b>(1) ______</b> organic pumpkin seeds and boost your daily nutrition! Pumpkin seeds are rich in antioxidants, vitamins, and amino acids — perfect for improving <b>(2) ______</b> and reducing inflammation.<br>They are packed <b>(3) ______</b> nutrients that help improve sleep, support hair growth, and relieve joint pain. You can eat them directly or use oil on the skin or scalp. These tiny seeds bring big benefits!<br><b>(4) ______</b> from carefully selected pumpkins, our seeds are processed using methods in Europe for clean and safe nutrition. Many customers choose pumpkin seeds because they <b>(5) ______</b> an active lifestyle and care about natural foods.<br>So, don’t wait! Visit our website today <b>(6) ______</b> your first bag of organic pumpkin seeds at a special price!<br>(Adapted from https://organicaspirations.com/organic-pumpkin-seeds/)",
+            "options": [
+                "Make",
+                "Making",
+                "Made",
+                "To make"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 1 to 6.</b></i><br><i><b>🌱</b></i><i><b> ORGANIC PUMPKIN SEEDS – A SMART CHOICE FOR YOUR HEALTH! </b></i><i><b>🌱</b></i><br>Looking for a healthy snack? Try our <b>(1) ______</b> organic pumpkin seeds and boost your daily nutrition! Pumpkin seeds are rich in antioxidants, vitamins, and amino acids — perfect for improving <b>(2) ______</b> and reducing inflammation.<br>They are packed <b>(3) ______</b> nutrients that help improve sleep, support hair growth, and relieve joint pain. You can eat them directly or use oil on the skin or scalp. These tiny seeds bring big benefits!<br><b>(4) ______</b> from carefully selected pumpkins, our seeds are processed using methods in Europe for clean and safe nutrition. Many customers choose pumpkin seeds because they <b>(5) ______</b> an active lifestyle and care about natural foods.<br>So, don’t wait! Visit our website today <b>(6) ______</b> your first bag of organic pumpkin seeds at a special price!<br>(Adapted from https://organicaspirations.com/organic-pumpkin-seeds/)",
+            "options": [
+                "follow",
+                "lead",
+                "keep",
+                "make"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 1 to 6.</b></i><br><i><b>🌱</b></i><i><b> ORGANIC PUMPKIN SEEDS – A SMART CHOICE FOR YOUR HEALTH! </b></i><i><b>🌱</b></i><br>Looking for a healthy snack? Try our <b>(1) ______</b> organic pumpkin seeds and boost your daily nutrition! Pumpkin seeds are rich in antioxidants, vitamins, and amino acids — perfect for improving <b>(2) ______</b> and reducing inflammation.<br>They are packed <b>(3) ______</b> nutrients that help improve sleep, support hair growth, and relieve joint pain. You can eat them directly or use oil on the skin or scalp. These tiny seeds bring big benefits!<br><b>(4) ______</b> from carefully selected pumpkins, our seeds are processed using methods in Europe for clean and safe nutrition. Many customers choose pumpkin seeds because they <b>(5) ______</b> an active lifestyle and care about natural foods.<br>So, don’t wait! Visit our website today <b>(6) ______</b> your first bag of organic pumpkin seeds at a special price!<br>(Adapted from https://organicaspirations.com/organic-pumpkin-seeds/)",
+            "options": [
+                "to order",
+                "for ordering",
+                "ordering",
+                "to ordering"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 7 to 12.</b></i><br><b>🌍</b><b> How to Cope with Climate Change </b><b>🌿</b><br>Climate change is one of the most serious problems facing the world today. It leads to rising temperatures, extreme weather, and the loss of natural habitats. Everyone must take action to protect the planet.<br>First, we should reduce energy use at home. Turn off lights and use energy-saving devices. Planting trees is <b>(7) ______</b> easy way to help the environment.<br>We must also recycle more and avoid using plastic bags. Encourage people to do the same. Small actions from many people can make a big difference.<br>Try to <b>(8) ______</b> driving. Use public transport or walk when possible. This helps reduce air pollution and save fuel. <b>(9) ______</b> throwing waste on the ground, recycle it and keep our surroundings clean.<br>Finally, we must care about the Earth and take responsibility <b>(10) ______ </b>our actions<b>.</b> Every effort matters — even saving <b>(11) ______</b> liters of water a day can help.<br>We can also support <b>(12) ______</b> initiatives such as green energy or climate education programs.",
+            "options": [
+                "other",
+                "others",
+                "another",
+                "the others"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 7 to 12.</b></i><br><b>🌍</b><b> How to Cope with Climate Change </b><b>🌿</b><br>Climate change is one of the most serious problems facing the world today. It leads to rising temperatures, extreme weather, and the loss of natural habitats. Everyone must take action to protect the planet.<br>First, we should reduce energy use at home. Turn off lights and use energy-saving devices. Planting trees is <b>(7) ______</b> easy way to help the environment.<br>We must also recycle more and avoid using plastic bags. Encourage people to do the same. Small actions from many people can make a big difference.<br>Try to <b>(8) ______</b> driving. Use public transport or walk when possible. This helps reduce air pollution and save fuel. <b>(9) ______</b> throwing waste on the ground, recycle it and keep our surroundings clean.<br>Finally, we must care about the Earth and take responsibility <b>(10) ______ </b>our actions<b>.</b> Every effort matters — even saving <b>(11) ______</b> liters of water a day can help.<br>We can also support <b>(12) ______</b> initiatives such as green energy or climate education programs.",
+            "options": [
+                "cut down",
+                "cut down on",
+                "look down on",
+                "look up to"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 7 to 12.</b></i><br><b>🌍</b><b> How to Cope with Climate Change </b><b>🌿</b><br>Climate change is one of the most serious problems facing the world today. It leads to rising temperatures, extreme weather, and the loss of natural habitats. Everyone must take action to protect the planet.<br>First, we should reduce energy use at home. Turn off lights and use energy-saving devices. Planting trees is <b>(7) ______</b> easy way to help the environment.<br>We must also recycle more and avoid using plastic bags. Encourage people to do the same. Small actions from many people can make a big difference.<br>Try to <b>(8) ______</b> driving. Use public transport or walk when possible. This helps reduce air pollution and save fuel. <b>(9) ______</b> throwing waste on the ground, recycle it and keep our surroundings clean.<br>Finally, we must care about the Earth and take responsibility <b>(10) ______ </b>our actions<b>.</b> Every effort matters — even saving <b>(11) ______</b> liters of water a day can help.<br>We can also support <b>(12) ______</b> initiatives such as green energy or climate education programs.",
+            "options": [
+                "In case of",
+                "Instead of",
+                "In addition to",
+                "In spite of"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 7 to 12.</b></i><br><b>🌍</b><b> How to Cope with Climate Change </b><b>🌿</b><br>Climate change is one of the most serious problems facing the world today. It leads to rising temperatures, extreme weather, and the loss of natural habitats. Everyone must take action to protect the planet.<br>First, we should reduce energy use at home. Turn off lights and use energy-saving devices. Planting trees is <b>(7) ______</b> easy way to help the environment.<br>We must also recycle more and avoid using plastic bags. Encourage people to do the same. Small actions from many people can make a big difference.<br>Try to <b>(8) ______</b> driving. Use public transport or walk when possible. This helps reduce air pollution and save fuel. <b>(9) ______</b> throwing waste on the ground, recycle it and keep our surroundings clean.<br>Finally, we must care about the Earth and take responsibility <b>(10) ______ </b>our actions<b>.</b> Every effort matters — even saving <b>(11) ______</b> liters of water a day can help.<br>We can also support <b>(12) ______</b> initiatives such as green energy or climate education programs.",
+            "options": [
+                "to",
+                "about",
+                "for",
+                "in"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 7 to 12.</b></i><br><b>🌍</b><b> How to Cope with Climate Change </b><b>🌿</b><br>Climate change is one of the most serious problems facing the world today. It leads to rising temperatures, extreme weather, and the loss of natural habitats. Everyone must take action to protect the planet.<br>First, we should reduce energy use at home. Turn off lights and use energy-saving devices. Planting trees is <b>(7) ______</b> easy way to help the environment.<br>We must also recycle more and avoid using plastic bags. Encourage people to do the same. Small actions from many people can make a big difference.<br>Try to <b>(8) ______</b> driving. Use public transport or walk when possible. This helps reduce air pollution and save fuel. <b>(9) ______</b> throwing waste on the ground, recycle it and keep our surroundings clean.<br>Finally, we must care about the Earth and take responsibility <b>(10) ______ </b>our actions<b>.</b> Every effort matters — even saving <b>(11) ______</b> liters of water a day can help.<br>We can also support <b>(12) ______</b> initiatives such as green energy or climate education programs.",
+            "options": [
+                "little",
+                "few",
+                "a few",
+                "many"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following leaflet and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 7 to 12.</b></i><br><b>🌍</b><b> How to Cope with Climate Change </b><b>🌿</b><br>Climate change is one of the most serious problems facing the world today. It leads to rising temperatures, extreme weather, and the loss of natural habitats. Everyone must take action to protect the planet.<br>First, we should reduce energy use at home. Turn off lights and use energy-saving devices. Planting trees is <b>(7) ______</b> easy way to help the environment.<br>We must also recycle more and avoid using plastic bags. Encourage people to do the same. Small actions from many people can make a big difference.<br>Try to <b>(8) ______</b> driving. Use public transport or walk when possible. This helps reduce air pollution and save fuel. <b>(9) ______</b> throwing waste on the ground, recycle it and keep our surroundings clean.<br>Finally, we must care about the Earth and take responsibility <b>(10) ______ </b>our actions<b>.</b> Every effort matters — even saving <b>(11) ______</b> liters of water a day can help.<br>We can also support <b>(12) ______</b> initiatives such as green energy or climate education programs.",
+            "options": [
+                "exciting",
+                "successful",
+                "technical",
+                "sustainable"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a meaningful exchange or text in each of the following questions from 13 to 17.</b></i><br><b>a. Anna:</b> That sounds great! As for me, I’ve always wanted to become a doctor because I love science and I really want to do something that helps people live healthier lives.<br><b>b. Minh:</b> Yes, actually I’ve been thinking about it a lot lately. I’m quite interested in becoming a software engineer because I enjoy solving problems and working with technology. What about you?<br><b>c. Anna:</b> Hey Minh, have you started thinking seriously about what kind of job you’d like to have in the future? I feel like it’s such an important decision.",
+            "options": [
+                "c – b – a",
+                "a – b – c",
+                "c – a – b",
+                "a – c – b"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a meaningful exchange or text in each of the following questions from 13 to 17.</b></i><br><b>a. Mai:</b> Hi Tom, have you heard about the new recycling project our school is starting next week?<br><b>b. Tom:</b> Yeah, I read about it on the notice board. Each class will collect plastic bottles in special bins.<br><b>c. Tom:</b> It's a great idea. Recycling helps reduce waste and protect the environment.<br><b>d. Mai:</b> Exactly! Let's encourage our classmates to join and make a difference.<br><b>e. Mai:</b> That's right. We can also bring plastic from home to recycle.",
+            "options": [
+                "a – c – e – b – d",
+                "a – b – e – c – d",
+                "b – a – c – d – e",
+                "d – c – a – b – e"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a meaningful exchange or text in each of the following questions from 13 to 17.</b></i><br>Dear Anna,<br>a. I hope you're doing well. Today, I want to introduce you to a beautiful historical site in Hue - Thien Mu Pagoda.<br>b. The pagoda has a seven-story tower and the surrounding gardens create a calm and serene atmosphere.<br>c. It is one of the oldest and most famous pagodas in Vietnam, located on a hill overlooking the peaceful Perfume River.<br>d. I would love for you to come and explore this wonderful place with me. Let me know when you're free!<br>e. Visiting Thien Mu Pagoda, you can learn about its rich history, admire its stunning architecture, and enjoy the breathtaking river view.<br>Best wishes,<br>Lan",
+            "options": [
+                "a – b – c – e – d",
+                "a – c – b – e – d",
+                "d – e – a – b – c",
+                "e – c – b – d – a"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a meaningful exchange or text in each of the following questions from 13 to 17.</b></i><br><b>a.</b> The process of invention often involves identifying a problem or need in society.<br><b>b.</b> This is followed by brainstorming ideas and conducting research to find possible solutions.<br><b>c.</b> Once a viable solution is conceptualized, inventors move on to prototyping and testing their invention.<br><b>d.</b> Invention is a crucial driver of progress and innovation in society.<br><b>e.</b> Finally, after refining the invention based on feedback and testing results, it can be brought to market or implemented for practical use.",
+            "options": [
+                "d - a - b - c – e",
+                "a - b - c - d – e",
+                "b - c - a - d – e",
+                "d - b - a - c - e"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Mark the letter A, B, C or D on your answer sheet to indicate the best arrangement of utterances or sentences to make a meaningful exchange or text in each of the following questions from 13 to 17.</b></i><br>a. The chart shows the number of users for three apps from 2010 to 2020. These apps are ChatApp, LearnIt, and FitTrack.<br>b. The number of users for ChatApp went up a lot during this time. It started with 200 thousand users in 2010 and reached 1 million by 2020.<br>c. Overall, each app had more users over the 10-year period.<br>d. In contrast, LearnIt had a small change in users between 2010 and 2020. The users grew slowly from 100 thousand to 200 thousand.<br>e. FitTrack’s users also increased steadily from 2010 to 2020, starting at 50 thousand and going up to 500 thousand.<br>(Adapted from<i> IELTS Advantage)</i>",
+            "options": [
+                "a – b – c – e – d",
+                "d – c – a – b – e",
+                "a – d – e – b – c",
+                "a – c – b – e – d"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 18 to 22.</b></i><br>Raising awareness and promoting ocean education are indispensable components of modern conservation efforts. Education not only informs the public but also motivates behavioral change, particularly when it <b>(18) ______</b> and the immediate and long-term consequences of environmental degradation in a compelling and accessible manner.<br>Non-governmental organizations (NGOs), <b>(19) ______</b> and core missions consistently revolve around ecological preservation and community empowerment, are indispensable actors in shaping public discourse and influencing sustainable policy decisions. These NGOs frequently partner with educational institutions and society groups to develop outreach initiatives <b>(20) ______</b> of scientific research findings on community engagement strategies that respect local culture.<br>Nevertheless, these grassroots efforts must be accompanied by legislative commitment. <b>(21) ______.</b><br>Beyond organizational and governmental actions, individual participation is gaining unprecedented attention. Citizen science, which involves the voluntary contribution of data and observations by non-professional scientists, is increasingly recognized as a powerful approach that bridges academic research with public engagement<b>. (22) ______</b> .<br>\t(Adapted from<i> </i>https://www.graygroupintl.com/blog/protect-the-ocean)",
+            "options": [
+                "explains clearly the effects of harming the environment",
+                "provides description without real-world application",
+                "talks about theory without explaining its scientific significance",
+                "showing the effects of human actions on marine biodiversity"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 18 to 22.</b></i><br>Raising awareness and promoting ocean education are indispensable components of modern conservation efforts. Education not only informs the public but also motivates behavioral change, particularly when it <b>(18) ______</b> and the immediate and long-term consequences of environmental degradation in a compelling and accessible manner.<br>Non-governmental organizations (NGOs), <b>(19) ______</b> and core missions consistently revolve around ecological preservation and community empowerment, are indispensable actors in shaping public discourse and influencing sustainable policy decisions. These NGOs frequently partner with educational institutions and society groups to develop outreach initiatives <b>(20) ______</b> of scientific research findings on community engagement strategies that respect local culture.<br>Nevertheless, these grassroots efforts must be accompanied by legislative commitment. <b>(21) ______.</b><br>Beyond organizational and governmental actions, individual participation is gaining unprecedented attention. Citizen science, which involves the voluntary contribution of data and observations by non-professional scientists, is increasingly recognized as a powerful approach that bridges academic research with public engagement<b>. (22) ______</b> .<br>\t(Adapted from<i> </i>https://www.graygroupintl.com/blog/protect-the-ocean)",
+            "options": [
+                "whose main goals often match the aims of global conservation agreements",
+                "which their primary goals include various initiatives unrelated to marine protection",
+                "of which the main objectives are inconsistently articulated to the general public",
+                "that their mission statements rarely emphasize environmental awareness"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 18 to 22.</b></i><br>Raising awareness and promoting ocean education are indispensable components of modern conservation efforts. Education not only informs the public but also motivates behavioral change, particularly when it <b>(18) ______</b> and the immediate and long-term consequences of environmental degradation in a compelling and accessible manner.<br>Non-governmental organizations (NGOs), <b>(19) ______</b> and core missions consistently revolve around ecological preservation and community empowerment, are indispensable actors in shaping public discourse and influencing sustainable policy decisions. These NGOs frequently partner with educational institutions and society groups to develop outreach initiatives <b>(20) ______</b> of scientific research findings on community engagement strategies that respect local culture.<br>Nevertheless, these grassroots efforts must be accompanied by legislative commitment. <b>(21) ______.</b><br>Beyond organizational and governmental actions, individual participation is gaining unprecedented attention. Citizen science, which involves the voluntary contribution of data and observations by non-professional scientists, is increasingly recognized as a powerful approach that bridges academic research with public engagement<b>. (22) ______</b> .<br>\t(Adapted from<i> </i>https://www.graygroupintl.com/blog/protect-the-ocean)",
+            "options": [
+                "combining expert knowledge with local engagement to maximize impact",
+                "combined scientific facts with what people say from their own experience",
+                "prioritizes theoretical approaches over practical community involvement",
+                "made it difficult to tell the difference between real data and local experiences"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 18 to 22.</b></i><br>Raising awareness and promoting ocean education are indispensable components of modern conservation efforts. Education not only informs the public but also motivates behavioral change, particularly when it <b>(18) ______</b> and the immediate and long-term consequences of environmental degradation in a compelling and accessible manner.<br>Non-governmental organizations (NGOs), <b>(19) ______</b> and core missions consistently revolve around ecological preservation and community empowerment, are indispensable actors in shaping public discourse and influencing sustainable policy decisions. These NGOs frequently partner with educational institutions and society groups to develop outreach initiatives <b>(20) ______</b> of scientific research findings on community engagement strategies that respect local culture.<br>Nevertheless, these grassroots efforts must be accompanied by legislative commitment. <b>(21) ______.</b><br>Beyond organizational and governmental actions, individual participation is gaining unprecedented attention. Citizen science, which involves the voluntary contribution of data and observations by non-professional scientists, is increasingly recognized as a powerful approach that bridges academic research with public engagement<b>. (22) ______</b> .<br>\t(Adapted from<i> </i>https://www.graygroupintl.com/blog/protect-the-ocean)",
+            "options": [
+                "People oppose that marine laws should be based on science and applied through fair legal systems.",
+                "Experts say it’s not necessary to use science when making and enforcing ocean protection laws.",
+                "Advocates call for clear, science-based laws to protect the ocean and ensure they are followed.",
+                "It’s not important to use scientific evidence in creating and applying marine conservation rules."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 18 to 22.</b></i><br>Raising awareness and promoting ocean education are indispensable components of modern conservation efforts. Education not only informs the public but also motivates behavioral change, particularly when it <b>(18) ______</b> and the immediate and long-term consequences of environmental degradation in a compelling and accessible manner.<br>Non-governmental organizations (NGOs), <b>(19) ______</b> and core missions consistently revolve around ecological preservation and community empowerment, are indispensable actors in shaping public discourse and influencing sustainable policy decisions. These NGOs frequently partner with educational institutions and society groups to develop outreach initiatives <b>(20) ______</b> of scientific research findings on community engagement strategies that respect local culture.<br>Nevertheless, these grassroots efforts must be accompanied by legislative commitment. <b>(21) ______.</b><br>Beyond organizational and governmental actions, individual participation is gaining unprecedented attention. Citizen science, which involves the voluntary contribution of data and observations by non-professional scientists, is increasingly recognized as a powerful approach that bridges academic research with public engagement<b>. (22) ______</b> .<br>\t(Adapted from<i> </i>https://www.graygroupintl.com/blog/protect-the-ocean)",
+            "options": [
+                "It helps people learn more and feel less responsible for protecting the ocean.",
+                "It improves knowledge and encourages shared action in managing the ocean.",
+                "It decreases awareness and builds a sense of responsibility to care for the ocean.",
+                "It diminishes both understanding and collective responsibility for ocean management."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>Which of the following is NOT mentioned as a method used to investigate the tunnels?",
+            "options": [
+                "Ground-penetrating radar",
+                "3D laser scanning",
+                "Manual excavation",
+                "Leonardo’s sketches"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>The word “<b>examine</b>” in paragraph 2 could best be replaced by:",
+            "options": [
+                "enter",
+                "study",
+                "decorate",
+                "rebuild"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>The word “<b>her</b>” in paragraph 3 refers to:",
+            "options": [
+                "A local guide",
+                "The duke’s wife",
+                "Francesca Biolo",
+                "A tourist"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>The word “<b>destroyed</b>” in paragraph 4 is OPPOSITE in meaning to:",
+            "options": [
+                "Preserved",
+                "Hidden",
+                "Covered",
+                "Designed"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>Which of the following best paraphrases the underlined sentence in paragraph 4?",
+            "options": [
+                "Leonardo's designs are almost identical to the real tunnels, but it’s unclear if they were followed.",
+                "Experts believe Leonardo drew the tunnels exactly as they were built.",
+                "It is not sure the tunnels are almost identical to Leonardo’s original designs.",
+                "Experts believe Leonardo was the architect of the tunnels because his designs are almost identical to the real tunnels"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>Which of the following is TRUE according to the passage?",
+            "options": [
+                "Leonardo’s tunnels were built only for decoration.",
+                "The Ghirlanda wall was removed during recent studies.",
+                "Researchers discovered a second tunnel that matches Leonardo’s sketches.",
+                "All underground parts of the castle have now been fully explored."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "I<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>n which paragraph does the writer mention a tunnel that might connect to a church?",
+            "options": [
+                "Paragraph 1",
+                "Paragraph 2",
+                "Paragraph 3",
+                "Paragraph 4"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 23 to 30.</b></i><br><b>Leonardo’s Lost Tunnels Under a Castle</b><br>Leonardo da Vinci is well known for his artistic genius and scientific ideas. However, he was also interested in military architecture. In the late 15th century, he sketched underground tunnels beneath the Sforza Castle in Milan. For many years, people believed these tunnels were just ideas, but recent discoveries suggest they might have existed after all.<br>From 2021 to 2023, researchers used modern techniques like ground-penetrating radar and 3D laser scanning to <b>examine</b> the castle. These non-invasive tools allowed them to study the underground areas without damaging the structure. Surprisingly, they identified a second hidden tunnel below the castle’s protective outer wall, called the Ghirlanda. This tunnel had only appeared in Leonardo’s old drawings and had never been physically located before.<br>The study was led by Francesca Biolo, an architect and researcher. According to <b>her</b>, the tunnels might have been used by soldiers to defend the castle in case of attack. One of the tunnels may even lead to a church where the duke’s wife was buried, though more studies are needed to confirm that.<br>Although many parts of the castle were <b>destroyed</b> during wars and restorations, this finding reveals that some historical elements still survive underground. <u><b>Experts are unsure whether Leonardo’s drawings were ever used as construction plans, but the resemblance is remarkable.</b></u> This discovery not only adds to our knowledge of Renaissance history, but also highlights the value of using modern technology to uncover secrets from the past.<br>\t(Adapted from<i> </i>https://edition.cnn.com/<i>)</i><br>In which paragraph does the writer explain the use of modern tools in the research?",
+            "options": [
+                "Paragraph 1",
+                "Paragraph 2",
+                "Paragraph 3",
+                "Paragraph 4"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>Where in paragraph 1 does the following sentence best fit?<br><b>Yet, this metaphorical cloud casts a very tangible shadow on our ecosystem.</b>",
+            "options": [
+                "[I]",
+                "[IV]",
+                "[III]",
+                "[II]"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>According to paragraph 2, why does the digital sector escape the same level of environmental scrutiny as the aviation industry?",
+            "options": [
+                "Because it consumes significantly less electricity than aviation.",
+                "Due to the successful marketing of digital services as immaterial and efficient.",
+                "Because the public is unaware that data centers exist physically.",
+                "As the government has exempted technology companies from carbon taxes."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>Which of the following best summarizes paragraph 3?",
+            "options": [
+                "Digital sobriety implies that we should stop using the internet to save physical resources.",
+                "The accumulation of dark data is the primary cause of global warming, requiring immediate deletion of all old emails.",
+                "We need to re-evaluate our digital habits, treating data as a finite resource rather than an endless commodity.",
+                "Turning off lights is a metaphor for shutting down data centers to prevent them from overheating."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>The word <u><b>It</b></u> in paragraph 2 refers to ______.",
+            "options": [
+                "electricity",
+                "dark data",
+                "paperless efficiency",
+                "the digital sector"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>The word <u><b>comparable</b></u> in paragraph 1 is OPPOSITE in meaning to ______.",
+            "options": [
+                "numerous",
+                "disproportionate",
+                "equitable",
+                "dominant"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>Which of the following best paraphrases the underlined sentence in paragraph 4?<br><i><b>The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity.</b></i>",
+            "options": [
+                "The solution is to completely abandon digital technology because it cannot be separated from rising levels of carbon emissions in modern society.",
+                "The goal is to separate the progress of digital technology from the increase in carbon emissions, rather than discarding technology itself.",
+                "Rejecting digitalization altogether is presented as the only effective way to reduce the growing intensity of global carbon emissions.",
+                "Rather than viewing digitalization itself as the problem, attention should focus on the carbon-intensive systems that currently support it."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>The word <u><b>veneer</b></u> in paragraph 2 most likely means ______.",
+            "options": [
+                "a deceptive outer appearance",
+                "a solid foundation",
+                "a profound understanding",
+                "a structural weakness"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>Which of the following is TRUE according to the passage?",
+            "options": [
+                "\"Dark data\" consists of malicious software that steals electricity from servers.",
+                "The digital industry's electricity consumption is negligible compared to traditional industries.",
+                "Artificial Intelligence plays a dual role, consuming energy while potentially optimizing its usage.",
+                "Digital sobriety advocates for the complete elimination of 4K streaming services."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>Which of the following can be inferred from the passage?",
+            "options": [
+                "The term \"Cloud\" was intentionally coined to mislead the public about environmental damage.",
+                "Reducing one's personal digital footprint is futile unless corporations stop using AI.",
+                "Physical waste is currently a more pressing issue than digital waste due to its visibility.",
+                "The mindset of having unlimited storage has led to a lack of discipline in data management."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<i><b>Read the following passage about The Digital Carbon Footprint and mark the letter A, B, C, or D to indicate the correct answer to each of the questions from 31 to 40.</b></i><br><b>[I]</b> In the popular imagination, the digital world is often perceived as a weightless, ethereal realm—the \"Cloud\"—distinct from the physical reality of smokestacks and landfills. <b>[II] </b>Its comforting illusion masks a far heavier reality: the internet has become one of the largest coal-powered systems on the planet. <b>[III]</b> Every scroll, click, and streamed video triggers a chain of energy consumption that begins in vast data centers and ends in the cooling towers required to prevent them from overheating. <b>[IV]</b><br>The \"Cloud\" is, in reality, a sprawling infrastructure of steel, concrete, and silicon, consuming nearly 2% of the world's electricity—a figure <u><b>comparable</b></u> to the aviation industry. However, unlike aviation, which faces public scrutiny for its environmental impact, the digital sector enjoys a <u><b>veneer</b></u> of eco-friendliness. Corporate narratives emphasize \"paperless\" efficiency, conveniently omitting the fact that storing thousands of dormant emails requires continuous energy. This phenomenon, known as \"dark data,\" refers to information that is processed and stored but never utilized again. <u><b>It</b></u> sits on servers, silently sipping electricity, a ghost in the machine contributing to real-world warming.<br>Addressing this requires a fundamental shift in how we perceive digital consumption. The concept of \"digital sobriety\" suggests that we must approach data with the same scarcity mindset we apply to physical resources. It challenges the assumption that digital storage is infinite and cost-free. Just as we have learned to turn off lights when leaving a room, we must learn to curate our digital lives—deleting duplicates, compressing files, and questioning the necessity of 4K streaming on mobile devices.<br>Paradoxically, the very technology exacerbating the climate crisis offers tools for its mitigation. Artificial Intelligence, while energy-intensive to train, can optimize power grids to integrate renewable energy more efficiently than human operators. Smart city algorithms can reduce traffic congestion, thereby lowering emissions.<u><b> The challenge, therefore, is not to reject digitalization but to decouple it from carbon intensity</b></u>. We stand at a crossroads where we must decide whether technology will be the accelerator of our demise or the architect of our salvation.<br>Which of the following best summarizes the reading passage?",
+            "options": [
+                "The digital world may seem clean and immaterial, but relies on energy-intensive infrastructure that increases carbon emissions, requiring more responsible digital habits and smarter use of technology.",
+                "Although often overlooked, data centers use nearly as much electricity as the aviation sector, which suggests they deserve comparable public scrutiny and stronger environmental oversight.",
+                "Technologies such as artificial intelligence and smart urban systems offer practical ways to address climate change and should be further developed to enhance global energy efficiency so that more people can be responsible technology users.",
+                "What appears to be harmless data storage, particularly the accumulation of “dark data,” in fact consumes continuous electricity and indirectly contributes to rising carbon emissions and long-term environmental pressure, requiring further actions from the authorities."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [],
+    "part3": []
+}

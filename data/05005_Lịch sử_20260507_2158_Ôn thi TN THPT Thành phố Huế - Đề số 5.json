@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 5",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05005",
+    "part1": [
+        {
+            "q": "Nội dung nào sau đây là nghệ thuật quân sự truyền thống nổi bật của Việt Nam trong các cuộc kháng chiến chống ngoại xâm?",
+            "options": [
+                "Chiến tranh bao vây.",
+                "Chiến tranh tổng lực.",
+                "Chiến tranh nhân dân.",
+                "Chiến tranh thần tốc."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Tờ báo do Nguyễn Ái Quốc làm chủ nhiệm kiêm chủ bút trong thời gian hoạt động tại Pháp là",
+            "options": [
+                "Báo Người cùng khổ (Le Paria).",
+                "Báo Thanh niên.",
+                "Báo Đời sống công nhân.",
+                "Báo Nhân đạo (L'Humanité)."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định nào sau đây là đúng khi nói về đặc điểm nổi bật của quan hệ quốc tế trong thời kỳ Chiến tranh lạnh (1947 - 1989)?",
+            "options": [
+                "Thế giới luôn trong tình trạng đối đầu căng thẳng giữa hai phe do Liên Xô (XHCN) và Mỹ (TBCN) đứng đầu.",
+                "Các cường quốc hoàn toàn chung sống hòa bình và không xảy ra bất kỳ xung đột quân sự nào.",
+                "Các quốc gia tập trung toàn bộ nguồn lực vào phát triển kinh tế thay vì chạy đua vũ trang.",
+                "Trật tự thế giới đa cực được thiết lập nhằm thay thế cho sự thống trị của các nước đế quốc."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đại hội lần thứ VI của Đảng Cộng sản Việt Nam (12-1986) đã xác định trọng tâm của công cuộc Đổi mới là",
+            "options": [
+                "giáo dục.",
+                "văn hóa.",
+                "chính trị.",
+                "kinh tế."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nguyên tắc giải quyết các tranh chấp trên Biển Đông của Chính phủ Việt Nam là",
+            "options": [
+                "xây dựng đặc khu tại Trường Sa.",
+                "sẵn sàng sử dụng vũ lực để tự vệ.",
+                "giải quyết bằng biện pháp hòa bình.",
+                "liên minh quân sự với Mỹ, Anh."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cách mạng tháng Tám năm 1945 ở Việt Nam thành công đã",
+            "options": [
+                "làm thất bại học thuyết Kennơđi.",
+                "làm thất bại học thuyết Níchxơn.",
+                "làm thất bại học thuyết Aixenhao.",
+                "xóa bỏ ách thống trị của phát xít Nhật."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những thắng lợi tiêu biểu của phong trào Tây Sơn trong công cuộc bảo vệ Tổ quốc ở thế kỷ XVIII là",
+            "options": [
+                "đánh tan quân xâm lược Xiêm tại Rạch Gầm - Xoài Mút.",
+                "đánh bại quân Nam Hán trên sông Bạch Đằng lịch sử.",
+                "lật đổ hoàn toàn chính quyền chúa Nguyễn ở Đàng Trong.",
+                "chấm dứt tình trạng phân chia Đàng Trong - Đàng Ngoài."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Tư bản bản xứ đã thuộc tư bản Pháp, vì tư bản Pháp hết sức ngăn trở sức sinh sản làm cho công nghệ bản xứ không thể mở mang được. Còn về nông nghiệp một ngày một tập trung đã phát sinh ra lắm khủng hoảng. Nông dân thất nghiệp nhiều. Vậy tư bản bản xứ không có thế lực gì ta không nên nói cho họ đi về phe đế quốc được, chỉ bọn đại địa chủ mới có thế lực và đứng hẳn về phe đế quốc chủ nghĩa, nên chủ trương làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản.”<br>(Trích Hồ Chí Minh toàn tập, Tập III, Trang 1, Chánh cương vắn tắt của Đảng- NXB Chính trị Quốc gia, 2011).<br>Theo Nguyễn Ái Quốc - Hồ Chí Minh trong đoạn tư liệu, lực lượng nào “đứng hẳn về phe đế quốc chủ nghĩa”?",
+            "options": [
+                "Tư bản bản xứ.",
+                "Nông dân thất nghiệp.",
+                "Đại địa chủ.",
+                "Giai cấp công nhân."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Tư bản bản xứ đã thuộc tư bản Pháp, vì tư bản Pháp hết sức ngăn trở sức sinh sản làm cho công nghệ bản xứ không thể mở mang được. Còn về nông nghiệp một ngày một tập trung đã phát sinh ra lắm khủng hoảng. Nông dân thất nghiệp nhiều. Vậy tư bản bản xứ không có thế lực gì ta không nên nói cho họ đi về phe đế quốc được, chỉ bọn đại địa chủ mới có thế lực và đứng hẳn về phe đế quốc chủ nghĩa, nên chủ trương làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản.”<br>(Trích Hồ Chí Minh toàn tập, Tập III, Trang 1, Chánh cương vắn tắt của Đảng- NXB Chính trị Quốc gia, 2011).<br>Theo đoạn tư liệu, nguyên nhân chủ yếu khiến tư bản bản xứ không thể phát triển mạnh là gì?",
+            "options": [
+                "Do tư bản Pháp ngăn trở sự phát triển của công nghệ bản xứ.",
+                "Do nông dân không tham gia sản xuất công nghiệp.",
+                "Do thiếu nguồn lao động và thị trường tiêu thụ.",
+                "Do chính quyền phong kiến cấm phát triển công nghiệp."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Tư bản bản xứ đã thuộc tư bản Pháp, vì tư bản Pháp hết sức ngăn trở sức sinh sản làm cho công nghệ bản xứ không thể mở mang được. Còn về nông nghiệp một ngày một tập trung đã phát sinh ra lắm khủng hoảng. Nông dân thất nghiệp nhiều. Vậy tư bản bản xứ không có thế lực gì ta không nên nói cho họ đi về phe đế quốc được, chỉ bọn đại địa chủ mới có thế lực và đứng hẳn về phe đế quốc chủ nghĩa, nên chủ trương làm tư sản dân quyền cách mạng và thổ địa cách mạng để đi tới xã hội cộng sản.”<br>(Trích Hồ Chí Minh toàn tập, Tập III, Trang 1, Chánh cương vắn tắt của Đảng- NXB Chính trị Quốc gia, 2011).<br>Đoạn tư liệu cho thấy mục tiêu trước mắt của cách mạng Việt Nam được xác định là gì?",
+            "options": [
+                "Đấu tranh cải cách kinh tế trong khuôn khổ thuộc địa.",
+                "Tiến hành cách mạng vô sản ngay lập tức.",
+                "Làm tư sản dân quyền cách mạng và thổ địa cách mạng để tiến tới xã hội cộng sản.",
+                "Xây dựng chủ nghĩa xã hội ở nông thôn."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Từ năm 1911, Phan Châu Trinh chuyển sang hoạt động đối ngoại chủ yếu tại quốc gia nào?",
+            "options": [
+                "Anh.",
+                "Trung Quốc.",
+                "Nhật Bản.",
+                "Pháp."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Quốc gia nào sau đây trở thành thành viên thứ 6 của tổ chức ASEAN?",
+            "options": [
+                "Lào.",
+                "Bru-nây.",
+                "Mi-an-ma.",
+                "Việt Nam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hội nghị cấp cao lần thứ nhất của Hiệp hội các quốc gia Đông Nam Á (ASEAN) họp tại Ba-li (In-đô-nê-xi-a) tháng 2/1976, đã ký kết văn kiện nào sau đây?",
+            "options": [
+                "Tuyên bố về Khu vực Hòa bình (ZOPFAN).",
+                "Tầm nhìn ASEAN 2020.",
+                "Hiến chương ASEAN.",
+                "Hiệp ước Thân thiện và Hợp tác (TAC)."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Được sự thỏa thuận của Mỹ, tháng 7 năm 1953, thực dân Pháp đề ra kế hoạch Nava với hy vọng",
+            "options": [
+                "cô lập căn cứ địa Việt Bắc.",
+                "kết thúc chiến tranh trong danh dự.",
+                "quốc tế hóa chiến tranh Đông Dương.",
+                "khóa chặt biên giới Việt - Trung."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc kháng chiến chống Mỹ (1954 - 1975), chiến thắng nào của quân dân miền Nam Việt Nam đã buộc Mỹ phải tuyên bố “phi Mỹ hóa” chiến tranh xâm lược?",
+            "options": [
+                "Phong trào “Đồng khởi” năm 1959 – 1960.",
+                "Cuộc Tiến công chiến lược năm 1972.",
+                "Cuộc Tổng tiến công và nổi dậy xuân Mậu Thân năm 1968.",
+                "Trận “Điện Biên Phủ trên không” năm 1972."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sau cách mạng tháng Tám năm 1945, thực dân đế quốc nào sau đây đã quay trở lại xâm lược Việt Nam?",
+            "options": [
+                "Pháp.",
+                "Anh.",
+                "Nhật.",
+                "Mỹ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những mục tiêu được quy định trong Hiến chương Liên hợp quốc là",
+            "options": [
+                "duy trì hòa bình và an ninh quốc tế.",
+                "giải quyết các vấn đề kinh tế, xã hội, văn hóa.",
+                "đảm bảo quyền con người và quyền tự do cơ bản.",
+                "thúc đẩy quan hệ hữu nghị giữa các dân tộc."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những điểm giống nhau giữa Cách mạng tháng Tám (1945) ở Việt Nam và Cách mạng tháng Mười Nga (1917) là?",
+            "options": [
+                "Đã mở ra thời kỳ hiện đại trong lịch sử.",
+                "Làm xoay chuyển lớn cục diện thế giới.",
+                "Đã góp phần đánh bại chủ nghĩa phát xít.",
+                "Đưa nhân dân lao động làm chủ đất nước."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nguyên nhân chủ quan nào dẫn đến sự sụp đổ của chủ nghĩa xã hội ở Liên Xô và Đông Âu?",
+            "options": [
+                "Những sai lầm trong đường lối cải tổ, làm chệch hướng mục tiêu xã hội chủ nghĩa.",
+                "Áp lực từ cuộc chạy đua vũ trang với Mỹ trong thời kỳ Chiến tranh lạnh.",
+                "Tình trạng thiếu hụt lương thực và hàng hóa tiêu dùng thiết yếu kéo dài.",
+                "Sự chống phá của các thế lực thù địch thông qua chiến lược “Diễn biến hòa bình”."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những quyết định của Hội nghị I-an-ta (2-1945) là",
+            "options": [
+                "thành lập khối quân sự NATO ở châu Âu.",
+                "ký Định ước Henxinki.",
+                "xóa bỏ hoàn toàn chủ nghĩa thực dân cũ.",
+                "tiêu diệt tận gốc chủ nghĩa phát xít Đức, quân phiệt Nhật Bản."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những bài học kinh nghiệm xuyên suốt của công cuộc Đổi mới ở Việt Nam từ năm 1986 đến nay là",
+            "options": [
+                "duy trì cơ chế quản lý tập trung, bao cấp để đảm bảo công bằng xã hội.",
+                "chỉ mở rộng quan hệ hợp tác với các nước trong khối xã hội chủ nghĩa.",
+                "tập trung phát triển công nghiệp nặng làm nền tảng cho nền kinh tế.",
+                "giữ vững vai trò lãnh đạo duy nhất của Đảng Cộng sản Việt Nam."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cuộc chiến đấu bảo vệ biên giới phía Bắc (từ tháng 2/1979) của quân dân Việt Nam có ý nghĩa nào sau đây?",
+            "options": [
+                "Trực tiếp làm phá sản hoàn toàn chủ nghĩa thực dân kiểu mới.",
+                "Bảo vệ vững chắc độc lập, chủ quyền và toàn vẹn lãnh thổ.",
+                "Hoàn thành nhiệm vụ thống nhất đất nước về mặt lãnh thổ.",
+                "Chấm dứt tình trạng chia cắt đất nước giữa hai miền Nam - Bắc."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sự kiện nào sau đây đánh dấu Nguyễn Ái Quốc đã tìm thấy con đường cứu nước đúng đắn cho dân tộc Việt Nam?",
+            "options": [
+                "Rời bến cảng Nhà Rồng ra đi tìm đường cứu nước (1911).",
+                "Gửi bản Yêu sách của nhân dân An Nam đến Hội nghị Véc-xai (1919).",
+                "Đọc Bản luận cương của Lê-nin về vấn đề dân tộc và thuộc địa (1920).",
+                "Bỏ phiếu tán thành Quốc tế cộng sản và tham gia thành lập Đảng Cộng sản Pháp (1920)."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nghị quyết 15 của Ban Chấp hành Trung ương Đảng Lao động Việt Nam (1959) đã quyết định",
+            "options": [
+                "phái lực lượng ra miền Bắc chở vũ khí vào Nam đánh Mỹ.",
+                "tiến hành chiến tranh du kích, xây dựng các căn cứ địa.",
+                "phát lệnh tổng khởi nghĩa giành chính quyền trên toàn miền Nam.",
+                "để nhân dân miền Nam sử dụng bạo lực cách mạng."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Năm tháng sẽ trôi qua nhưng thắng lợi của nhân dân ta trong sự nghiệp kháng chiến chống Mỹ cứu nước, mãi mãi được ghi vào lịch sử dân tộc ta như một trong những trang chói lọi nhất, một biểu tượng sáng ngời về sự toàn thắng của chủ nghĩa anh hùng cách mạng và trí tuệ con người, và đi vào lịch sử thế giới như một chiến công vĩ đại của thế kỉ XX, một sự kiện có tầm quan trọng quốc tế to lớn và có tính thời đại sâu sắc”.<br>(Theo Báo cáo Chính trị của Ban Chấp hành Trung ương Đảng tại Đại hội đại biểu toàn quốc lần thứ IV, NXB Sự thật, 1977, tr. 27 - 28)",
+            "items": [
+                ". Thắng lợi của cuộc kháng chiến chống Mỹ, cứu nước là một trong những trang sử chói lọi nhất của dân tộc Việt Nam trong thế kỷ XX.",
+                ". Thắng lợi năm 1975 đã hoàn thành nhiệm vụ giải phóng dân tộc và đưa cả nước đi lên chủ nghĩa xã hội.",
+                ". Một trong những nguyên nhân khách quan quyết định tầm quan trọng quốc tế của thắng lợi này là sự lãnh đạo sáng suốt của Đảng Lao động Việt Nam.",
+                ". Tính thời đại sâu sắc của cuộc kháng chiến thể hiện ở việc nó là điển hình của cuộc đấu tranh giữa phe xã hội chủ nghĩa và phe tư bản chủ nghĩa."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Hòa bình, hữu nghị, hợp tác, liên kết và phát triển kinh tế, vẫn là xu thế lớn nhưng cạnh tranh chiến lược giữa các nước lớn rất phức tạp, gay gắt, cục diện đa cực ngày càng rõ nét. Toàn cầu hóa và hội nhập quốc tế tiếp tục tiến triển nhưng gặp nhiều trở ngại, thách thức; chủ nghĩa dân tộc, bảo hộ có xu hướng tăng lên; sự điều chỉnh chính sách, quan hệ đối ngoại của các nước lớn trong khu vực và trên thế giới có những diễn biến khó lường.”<br>(Đảng Cộng Sản Việt Nam văn kiện đại hội XIII, trang 206-207, NXB Chính trị quốc gia)",
+            "items": [
+                ". Xu thế Toàn cầu hóa và hội nhập quốc tế tiếp tục phát triển không gặp trở ngại và thách thức nào.",
+                ". Cục diện đơn cực, nhiều trung tâm ngày càng được định hình rõ nét trên thế giới.",
+                ". Quan hệ đối ngoại của các nước trong xu thế đa cực diễn biến khó lường.",
+                ". Ngày nay hòa bình, hợp tác, liên kết và phát triển vẫn là xu thế lớn trong khu vực và trên thế giới."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Đại hội đại biểu toàn quốc lần thứ VI của Đảng đánh dấu mốc quan trọng trong lịch sử cách mạng Việt Nam với việc quyết định tiến hành công cuộc đổi mới toàn diện, đưa đất nước thoát khỏi tình trạng khủng hoảng kinh tế - xã hội. Đường lối đổi mới được đưa ra tại Đại hội VI của Đảng trước hết là đổi mới về tư duy nhận thức và tư tưởng, lý luận. Đảng ta nhấn mạnh: Muốn đổi mới tư duy, Đảng ta phải nắm vững bản chất cách mạng và khoa học của chủ nghĩa Mác - Lê-nin, kế thừa di sản quý báu về tư tưởng và lý luận cách mạng của Chủ tịch Hồ Chí Minh”<br>(Văn kiện Đảng toàn tập, NXB. Chính trị quốc gia Sự thật, Hà Nội, 2006, t. 47, tr. 807)",
+            "items": [
+                ". Đảng xác định tư tưởng Hồ Chí Minh với bản chất cách mạng, khoa học có vai trò và ý nghĩa quan trọng trong công cuộc đổi mới đất nước.",
+                ". Đại hội đại biểu toàn quốc lần thứ VI của Đảng Cộng Đông Dương là Đại hội đổi mới.",
+                ". Chủ nghĩa Mác - Lê-nin, tư tưởng Hồ Chí Minh là hành trang cho cách mạng Việt Nam vững bước trên con đường giải phóng dân tộc tiến lên chủ nghĩa xã hội.",
+                ". Tại Đại hội V, Đảng đã quán triệt và khẳng định giá trị, sức sống mãnh liệt của chủ nghĩa Mác - Lê-nin, tư tưởng Hồ Chí Minh đối với công cuộc đổi mới đất nước."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Gắn kết chặt chẽ đối ngoại với quốc phòng, an ninh và phục vụ phát triển kinh tế - xã hội; kiên trì, kiên định đường lối độc lập, tự chủ, đa phương hóa, đa dạng hóa; đẩy mạnh đưa quan hệ với các đối tác, đặc biệt là đối tác quan trọng, đi vào chiều sâu, hiệu quả, bền vững, tăng cường đan xen lợi ích; xử lý linh hoạt, sáng tạo, hiệu quả mối quan hệ với các nước lớn.”<br>(Đảng Cộng sản Việt Nam, Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII, tập 2,<br>NXB Chính trị Quốc gia Sự thật, tr.153).",
+            "items": [
+                ". Đảng Lao Động Việt Nam chủ trương thực hiện đa dạng hóa, đa phương hóa quan hệ đối ngoại.",
+                ". Đảng Cộng sản Việt Nam chủ trương thực hiện chính sách đối ngoại linh hoạt, sáng tạo và hiệu quả.",
+                ". Đảng Cộng sản Việt Nam chủ trương mở rộng quan hệ với các đối tác và triệt để loại trừ đối tượng.",
+                ". Chính sách đối ngoại gắn chặt với chính sách về quốc phòng, an ninh và phát triển kinh tế."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

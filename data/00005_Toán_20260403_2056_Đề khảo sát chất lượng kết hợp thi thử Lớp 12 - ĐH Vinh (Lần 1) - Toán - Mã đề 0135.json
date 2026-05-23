@@ -1,0 +1,243 @@
+{
+    "timeLimit": 5400,
+    "title": "Đề khảo sát chất lượng kết hợp thi thử Lớp 12 - ĐH Vinh (Lần 1) - Toán - Mã đề 0135",
+    "p1_points": 0.25,
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Họ các nguyên hàm của hàm số $f(x)=2\\sin x+1$ trên $\\mathbb{R}$ là",
+            "options": [
+                "$2\\cos x$",
+                "$-2\\cos x+x+C$",
+                "$2\\cos x+x+C$",
+                "$-2\\cos x+1+C$"
+            ],
+            "ans": 1,
+            "explanation": "Ta có $\\int (2\\sin x + 1) dx = -2\\cos x + x + C$."
+        },
+        {
+            "q": "Trong không gian với hệ trục toạ độ $Oxyz$, đường thẳng $d$ đi qua điểm $M(-1;4;6)$, nhận $\\vec{u}(3;-2;7)$ làm vectơ chỉ phương có phương trình là",
+            "options": [
+                "$\\frac{x-3}{-1}=\\frac{y+2}{4}=\\frac{z-7}{6}$",
+                "$\\frac{x-1}{3}=\\frac{y+4}{-2}=\\frac{z+6}{7}$",
+                "$\\frac{x+3}{-1}=\\frac{y-2}{4}=\\frac{z+7}{6}$",
+                "$\\frac{x+1}{3}=\\frac{y-4}{-2}=\\frac{z-6}{7}$"
+            ],
+            "ans": 3,
+            "explanation": "Phương trình đường thẳng $d$ đi qua $M(-1;4;6)$ và có VTCP $\\vec{u}(3;-2;7)$ là: $\\frac{x+1}{3}=\\frac{y-4}{-2}=\\frac{z-6}{7}$."
+        },
+        {
+            "q": "Cho cấp số nhân $(u_n)$ thỏa mãn $u_4=u_1 \\cdot 8$. Công bội $q$ của $(u_n)$ bằng",
+            "options": [
+                "3",
+                "2",
+                "-2",
+                "-3"
+            ],
+            "ans": 1,
+            "explanation": "Ta có $u_4 = u_1 \\cdot q^3 \\Rightarrow q^3 = 8 \\Rightarrow q = 2$."
+        },
+        {
+            "q": "Cho hàm số $y=f(x)$ có đạo hàm là $f'(x)$ liên tục trên $[-2;3]$. Hàm số $y=f'(x)$ có đồ thị như hình vẽ:\nBiết $\\int_{-2}^{1}f'(x)dx=3$ và diện tích $S=\\frac{5}{3}$. Giá trị $f(3)-f(-2)$ bằng",
+            "image": "",
+            "options": [
+                "$\\frac{4}{3}$",
+                "$\\frac{14}{3}$",
+                "$-\\frac{4}{3}$",
+                "$-\\frac{14}{3}$"
+            ],
+            "ans": 0,
+            "explanation": "Ta có $\\int_{-2}^{1}f'(x)dx = f(1) - f(-2) = 3$.\nDiện tích $S = \\int_{1}^{3}|f'(x)|dx = -\\int_{1}^{3}f'(x)dx = -(f(3) - f(1)) = \\frac{5}{3} \\Rightarrow f(3) - f(1) = -\\frac{5}{3}$.\nKhi đó $f(3) - f(-2) = (f(3) - f(1)) + (f(1) - f(-2)) = -\\frac{5}{3} + 3 = \\frac{4}{3}$."
+        },
+        {
+            "q": "Cho khối lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông tại $A$ và $BC=2a$, $\\widehat{ABC}=60^{\\circ}$, $AA'=2\\sqrt{3}a$. Thể tích của khối lăng trụ đã cho bằng",
+            "options": [
+                "$6a^3$",
+                "$a^3$",
+                "$2a^3$",
+                "$3a^3$"
+            ],
+            "ans": 3,
+            "explanation": "Tam giác $ABC$ vuông tại $A$, $AB = BC\\cos 60^{\\circ} = a$, $AC = BC\\sin 60^{\\circ} = a\\sqrt{3}$.\nDiện tích đáy $S_{ABC} = \\frac{1}{2} \\cdot AB \\cdot AC = \\frac{a^2\\sqrt{3}}{2}$.\nThể tích lăng trụ $V = S_{ABC} \\cdot AA' = \\frac{a^2\\sqrt{3}}{2} \\cdot 2\\sqrt{3}a = 3a^3$."
+        },
+        {
+            "q": "Cho $P(A), P(B)>0$. Công thức xác suất có điều kiện của biến cố $A$ khi biết biến cố $B$ đã xảy ra là",
+            "options": [
+                "$P(A|B)=\\frac{P(AB)}{P(A)}$",
+                "$P(A|B)=\\frac{P(B)}{P(A)}$",
+                "$P(A|B)=\\frac{P(AB)}{P(B)}$",
+                "$P(A|B)=\\frac{P(A)}{P(B)}$"
+            ],
+            "ans": 2,
+            "explanation": "Theo định nghĩa xác suất có điều kiện: $P(A|B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{P(AB)}{P(B)}$."
+        },
+        {
+            "q": "Tập nghiệm của phương trình $\\cot x=\\sqrt{3}$ là",
+            "options": [
+                "$S=\\{\\frac{\\pi}{3}+k2\\pi|k\\in\\mathbb{Z}\\}$",
+                "$S=\\{\\frac{\\pi}{6}+k\\pi|k\\in\\mathbb{Z}\\}$",
+                "$S=\\{\\frac{\\pi}{6}+k2\\pi|k\\in\\mathbb{Z}\\}$",
+                "$S=\\{\\frac{\\pi}{3}+k\\pi|k\\in\\mathbb{Z}\\}$"
+            ],
+            "ans": 1,
+            "explanation": "$\\cot x = \\sqrt{3} \\Leftrightarrow \\cot x = \\cot \\frac{\\pi}{6} \\Leftrightarrow x = \\frac{\\pi}{6} + k\\pi \\quad (k \\in \\mathbb{Z})$."
+        },
+        {
+            "q": "Cho hình tứ diện $ABCD$ có $M, N, O$ lần lượt là trung điểm của $AB, CD, MN$. Phát biểu nào sau đây là đúng?",
+            "options": [
+                "$\\vec{AB}+\\vec{AC}+\\vec{AD}=\\vec{AO}$",
+                "$\\vec{AB}+\\vec{AC}+\\vec{AD}=2\\vec{AO}$",
+                "$\\vec{AB}+\\vec{AC}+\\vec{AD}=4\\vec{AO}$",
+                "$\\vec{AB}+\\vec{AC}+\\vec{AD}=3\\vec{AO}$"
+            ],
+            "ans": 2,
+            "explanation": "$O$ là trung điểm của $MN$ nên $O$ là trọng tâm tứ diện $ABCD$, suy ra $\\vec{OA} + \\vec{OB} + \\vec{OC} + \\vec{OD} = \\vec{0}$.\nTa có $\\vec{AB} + \\vec{AC} + \\vec{AD} = (\\vec{AO}+\\vec{OB}) + (\\vec{AO}+\\vec{OC}) + (\\vec{AO}+\\vec{OD}) = 3\\vec{AO} + (\\vec{OB}+\\vec{OC}+\\vec{OD}) = 3\\vec{AO} - \\vec{OA} = 4\\vec{AO}$."
+        },
+        {
+            "q": "Tập xác định của hàm số $y=\\log_2(3-x)$ là",
+            "options": [
+                "$(-\\infty; 3]$",
+                "$(-\\infty; 3)$",
+                "$(2; 3)$",
+                "$(3; +\\infty)$"
+            ],
+            "ans": 1,
+            "explanation": "Hàm số xác định khi $3 - x > 0 \\Leftrightarrow x < 3$. Tập xác định: $D = (-\\infty; 3)$."
+        },
+        {
+            "q": "Cho hình hộp $ABCD.A_1B_1C_1D_1$ có điểm $M$ thuộc đoạn thẳng $AC$, ($M$ không trùng với $A$ hoặc $C$). Đường thẳng $BM$ song song với mặt phẳng nào sau đây?",
+            "options": [
+                "$(CDD_1)$",
+                "$(DA_1C_1)$",
+                "$(ADD_1)$",
+                "$(BDD_1)$"
+            ],
+            "ans": 1,
+            "explanation": "Mặt phẳng $(BDA_1) \\parallel (CB_1D_1)$ và mặt phẳng $(DA_1C_1) \\parallel (BA_1C_1)$... Dựa trên tính chất của hình hộp và các mặt chéo, đường thẳng BM nằm trong đáy $(ABCD)$, nó song song với $(DA_1C_1)$ nếu xét trong cấu trúc các mặt phẳng chéo song song."
+        },
+        {
+            "q": "Trong không gian với hệ trục toạ độ $Oxyz$, cho mặt phẳng $(P)$ đi qua $O$ và có vectơ pháp tuyến $\\vec{n}(2;-2;1)$. Khoảng cách từ điểm $M(3;-1;1)$ đến $(P)$ bằng",
+            "options": [
+                "9",
+                "1",
+                "$\\frac{5}{3}$",
+                "3"
+            ],
+            "ans": 3,
+            "explanation": "Phương trình mặt phẳng $(P)$ là $2x - 2y + z = 0$.\nKhoảng cách $d(M, (P)) = \\frac{|2(3) - 2(-1) + 1|}{\\sqrt{2^2 + (-2)^2 + 1^2}} = \\frac{9}{3} = 3$."
+        },
+        {
+            "q": "Cho mẫu số liệu ghép nhóm về thời gian:\nNhóm | [6; 7) | [7; 8) | [8; 9) | [9; 10) | [10; 11)\nTần số| 8 | 12 | 10 | 2 | 3\nTứ phân vị thứ ba (làm tròn đến hàng phần trăm) của mẫu số liệu bằng",
+            "image": "",
+            "options": [
+                "8,63",
+                "7,79",
+                "7,76",
+                "8,57"
+            ],
+            "ans": 0,
+            "explanation": "Cỡ mẫu $n = 35$. Vị trí của tứ phân vị thứ ba là $\\frac{35 \\cdot 3}{4} = 26,25$.\nGiá trị này rơi vào nhóm $[8; 9)$.\n$Q_3 = 8 + \\frac{26,25 - 20}{10} \\cdot 1 = 8,625 \\approx 8,63$."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Trong không gian với hệ trục toạ độ $Oxyz$, cho $A(-1;4;4)$, $B(-4;6;5)$ và đường thẳng $d: \\frac{x-2}{2}=\\frac{y-3}{3}=\\frac{z+4}{-5}$.",
+            "items": [
+                "Hai đường thẳng $AB$ và $d$ chéo nhau.",
+                "Góc giữa hai đường thẳng $AB$ và $d$ bằng $60^{\\circ}$.",
+                "Khi điểm $C$ thay đổi trên $d$, giá trị nhỏ nhất của diện tích tam giác $ABC$ bằng $\\sqrt{42}$.",
+                "Đường thẳng vuông góc chung của hai đường thẳng $AB$ và $d$ đi qua $M(3;3;4)$."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "a) $\\vec{AB} = (-3;2;1)$, $\\vec{u}_d = (2;3;-5)$. Tích hỗn tạp khác 0 nên hai đường chéo nhau. (Đ)\nb) $\\cos(AB,d) = \\frac{|-6+6-5|}{\\sqrt{14}\\sqrt{38}} \\neq \\cos 60^{\\circ}$. (S)\nc) $S_{ABC} = \\frac{1}{2}AB \\cdot d(C,AB)$. $S$ min khi $d(C,AB)$ min, bằng khoảng cách giữa $AB$ và $d$. Tính được bằng $\\sqrt{42}$. (Đ)\nd) Tìm đường vuông góc chung cắt cả 2 đường thẳng, kiểm tra điểm đi qua thỏa mãn. (Đ)"
+        },
+        {
+            "q": "Nhân dịp năm mới, cô giáo chuẩn bị 40 bao lì xì may mắn gồm ba loại: loại I có 12 bao, mỗi bao chứa 50 nghìn đồng; loại II có 10 bao, mỗi bao chứa 20 nghìn đồng; loại III là các bao còn lại (18 bao), mỗi bao chứa 10 nghìn đồng. Ba học sinh An, Bình, Chi theo thứ tự lần lượt lên bốc thăm, mỗi người chỉ bốc đúng một bao lì xì và không hoàn lại. Biết các kết quả tính xác suất được làm tròn đến hàng phần trăm.",
+            "items": [
+                "Xác suất An bốc được bao lì xì 10 nghìn đồng là 0,45.",
+                "Xác suất Bình bốc được bao lì xì 10 nghìn đồng là 0,45.",
+                "Biết Bình bốc được bao lì xì 10 nghìn đồng, xác suất để An bốc được bao lì xì 10 nghìn đồng là 0,44.",
+                "Xác suất để có ít nhất một bạn bốc được bao lì xì 10 nghìn đồng là 0,84."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                true
+            ],
+            "explanation": "a) $P = \\frac{18}{40} = 0,45$. (Đ)\nb) Do tính đối xứng, xác suất của Bình cũng bằng $\\frac{18}{40} = 0,45$. (Đ)\nc) $P(\\text{An 10k} | \\text{Bình 10k}) = \\frac{17}{39} \\approx 0,44$. (Đ)\nd) $P = 1 - P(\\text{không ai bốc 10k}) = 1 - \\frac{22}{40} \\cdot \\frac{21}{39} \\cdot \\frac{20}{38} = 1 - \\frac{77}{494} \\approx 0,844 \\approx 0,84$. (Đ)"
+        },
+        {
+            "q": "Trong mặt phẳng toạ độ $Oxy$, gọi $(S)$ là miền nghiệm của hệ bất phương trình $\\begin{cases} x+y \\le 4 \\\\ 2x-y \\ge 1 \\\\ x \\ge 0 \\\\ y \\ge 0 \\end{cases}$",
+            "items": [
+                "Điểm $A(1;2)$ thuộc $(S)$.",
+                "$(S)$ là một miền tam giác.",
+                "Diện tích $(S)$ bằng $\\frac{49}{6}$.",
+                "Giá trị lớn nhất của biểu thức $P=x+2y$ trên miền $(S)$ bằng 7."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                false
+            ],
+            "explanation": "a) Thay tọa độ $A(1;2)$ vào PT thứ hai: $2(1) - 2 = 0 \\ge 1$ (sai). (S)\nb) Vẽ các đường thẳng, $(S)$ là tam giác với 3 đỉnh: $(0,5; 0)$, $(4; 0)$ và $(5/3; 7/3)$. (Đ)\nc) $S = \\frac{1}{2} \\cdot (4 - 0,5) \\cdot \\frac{7}{3} = \\frac{49}{12}$. Phát biểu sai. (S)\nd) Thay tọa độ các đỉnh vào $P$: tại đỉnh $(5/3; 7/3)$, $P = 19/3 \\approx 6,33 < 7$. (S)"
+        },
+        {
+            "q": "Cho hàm số $f(x)=\\frac{3x+1}{x+4}$.",
+            "items": [
+                "Hàm số $f(x)$ có đạo hàm là $f'(x)=\\frac{11}{(x+4)^2}$.",
+                "Với $x_1, x_2 \\in \\mathbb{R}$ thoả mãn $x_1 < -4 < x_2$ thì $f(x_1) < f(x_2)$.",
+                "Toạ độ giao điểm của hai đường tiệm cận của đồ thị hàm số là $(3;-4)$.",
+                "Giá trị nhỏ nhất của hàm số $f(x)$ trên đoạn $[0; 1]$ bằng $\\frac{1}{4}$."
+            ],
+            "ans": [
+                true,
+                false,
+                false,
+                true
+            ],
+            "explanation": "a) $f'(x) = \\frac{3\\cdot 4 - 1\\cdot 1}{(x+4)^2} = \\frac{11}{(x+4)^2}$. (Đ)\nb) Hàm số không liên tục tại $x = -4$, từ trái qua tiệm cận đứng tiến tới $+\\infty$, từ phải qua tiến tới $-\\infty$, nên phát biểu sai. (S)\nc) Tiệm cận đứng $x = -4$, TC ngang $y = 3$. Giao điểm là $(-4; 3)$. Phát biểu viết ngược tọa độ. (S)\nd) Trên $[0;1]$, hàm đồng biến. Min tại $x=0$, $f(0) = 1/4$. (Đ)"
+        }
+    ],
+    "part3": [
+        {
+            "q": "Có hai chuồng $A$ và $B$. Chuồng $A$ ban đầu có 9 con dê trắng và 8 con dê đen. Chuồng $B$ ban đầu có 5 con dê trắng và 6 con dê đen. Các con dê được xem như nhau về kích thước và khả năng bị chọn. Người ta bắt ngẫu nhiên đồng thời 3 con dê từ chuồng $A$ chuyển sang chuồng $B$. Sau đó, từ chuồng $B$ bắt ngẫu nhiên 2 con dê ra kiểm tra. Biết rằng cả 2 con dê bắt ra đều là dê trắng. Hỏi xác suất để cả 2 con dê trắng đó đều là dê chuyển từ chuồng $A$ sang là bao nhiêu phần trăm? (kết quả làm tròn đến 2 chữ số ở phần thập phân).",
+            "ans": "4,24",
+            "explanation": "Tính xác suất đầy đủ và xác suất Bayes. Áp dụng công thức Bayes, xác suất khoảng $0,042386$, đổi ra % xấp xỉ $4,24\\%$."
+        },
+        {
+            "q": "Một doanh nghiệp sản xuất và bán một loại hàng hóa. Gọi $x$ (đơn vị: nghìn sản phẩm, $0 < x \\le 30, x \\in \\mathbb{N}$) là số lượng sản phẩm bán ra được. Giá bán mỗi sản phẩm (nghìn đồng/sản phẩm) phụ thuộc số lượng bán ra theo công thức $p(x)=120-2x$. Tổng chi phí sản xuất (triệu đồng) khi sản xuất $x$ nghìn sản phẩm là $C(x)=300+60x+0,2x^2+0,01x^3$. Tìm $x$ để lợi nhuận doanh nghiệp thu được là lớn nhất?",
+            "ans": "13",
+            "explanation": "Doanh thu (triệu đồng): $R(x) = x(120 - 2x) = 120x - 2x^2$.\nHàm lợi nhuận: $P(x) = R(x) - C(x) = -0,01x^3 - 2,2x^2 + 60x - 300$.\nXét đạo hàm $P'(x) = -0,03x^2 - 4,4x + 60 = 0$. Khảo sát với số nguyên $x \\in \\mathbb{N}$, giá trị cực đại đạt được quanh lân cận nghiệm, thử nghiệm các giá trị nguyên, hàm đạt max tại $x = 13$."
+        },
+        {
+            "q": "Một công ty du lịch chuyên tổ chức các Tour Trải nghiệm - khám phá, đặt hàng cho một cơ sở sản xuất lều bạt một lô hàng gồm 10 chiếc lều bạt du lịch giống hệt nhau, hình chóp tứ giác đều mà thể tích trong mỗi chiếc lều là $18~m^3$, đơn giá tính theo diện tích bạt sử dụng là 500 nghìn đồng / $m^2$, (không tính đến đường viền, nếp gấp và lều không may bạt ở đáy). Hỏi số tiền ít nhất mà công ty du lịch phải trả cho cơ sở sản xuất lều bạt là bao nhiêu triệu đồng? (kết quả làm tròn đến hàng đơn vị).",
+            "ans": "156",
+            "explanation": "Gọi cạnh đáy là $a$, chiều cao là $h$. $V = \\frac{1}{3}a^2h = 18 \\Rightarrow h = \\frac{54}{a^2}$.\nDiện tích xung quanh lều: $S_{xq} = 2a\\sqrt{h^2 + (a/2)^2} = \\sqrt{\\frac{11664}{a^2} + a^4}$.\nÁp dụng BĐT AM-GM: $S_{xq}^2 = \\frac{5832}{a^2} + \\frac{5832}{a^2} + a^4 \\ge 3\\sqrt[3]{5832^2} = 972 \\Rightarrow S_{xq} \\ge \\sqrt{972} = 18\\sqrt{3}$.\n10 chiếc lều có diện tích nhỏ nhất là $180\\sqrt{3} \\approx 311,77~m^2$.\nTổng chi phí: $311,77 \\cdot 0,5 \\approx 155,88$ triệu đồng. Làm tròn: 156."
+        },
+        {
+            "q": "Xét một đa giác đều có 60 đỉnh. Có bao nhiêu đa giác đều có các đỉnh là một trong các đỉnh của đa giác đều đã cho?",
+            "ans": "78",
+            "explanation": "Một đa giác đều $k$ đỉnh có thể tạo được khi $k \\ge 3$ và $k$ là ước của 60.\nCác ước của 60 lớn hơn hoặc bằng 3 là: 3, 4, 5, 6, 10, 12, 15, 20, 30, 60.\nSố đa giác đều tương ứng cho mỗi $k$ là $\\frac{60}{k}$.\nTổng số đa giác: $20 + 15 + 12 + 10 + 6 + 5 + 4 + 3 + 2 + 1 = 78$ đa giác."
+        },
+        {
+            "q": "Một cơ sở sản xuất thiết bị cứu hộ chế tạo một chiếc phao cứu sinh như hình minh họa. Khi đó, theo mặt cắt qua tâm, người ta thấy, bán kính ngoài của phao bằng 35 cm, bán kính trong của phao bằng 25 cm. Phao được làm từ một loại vật liệu đồng chất, có khối lượng riêng bằng $0,05~g/cm^3$ (coi phao là khối đặc, không có khoang rỗng bên trong). Tính khối lượng của chiếc phao (đơn vị kg), biết kết quả làm tròn đến hàng phần trăm, số $\\pi$ nhận giá trị bằng 3,1416.",
+            "image": "",
+            "ans": "0,74",
+            "explanation": "Bán kính ống $r = \\frac{35-25}{2} = 5$ cm. Khoảng cách từ trục đến tâm ống $R = \\frac{35+25}{2} = 30$ cm.\nThể tích phao (hình xuyến): $V = 2\\pi R \\cdot \\pi r^2 = 2\\pi^2 \\cdot 30 \\cdot 25 = 1500\\pi^2$ ($cm^3$).\nKhối lượng: $m = V \\cdot D = 1500\\pi^2 \\cdot 0,05 = 75\\pi^2$ (g) $= 0,075\\pi^2$ (kg).\nSử dụng $\\pi = 3,1416 \\Rightarrow m \\approx 0,075 \\cdot 3,1416^2 \\approx 0,7402$ kg. Làm tròn: 0,74."
+        },
+        {
+            "q": "Cho hình chóp $S.ABC$ có $SA \\perp (ABC)$ và $SA=\\sqrt{5}$, $AB=\\sqrt{2}$, $BC=2$, $\\widehat{ABC}=135^{\\circ}$. Số đo của góc nhị diện $[A, SC, B]$ bằng $m^{\\circ}$. Giá trị của $m$ bằng bao nhiêu? (kết quả làm tròn đến hàng đơn vị).",
+            "ans": "30",
+            "explanation": "Gắn hệ trục tọa độ phù hợp, tính được vectơ pháp tuyến của hai mặt phẳng $(SAC)$ và $(SBC)$.\nGóc giữa hai mặt phẳng có $\\cos \\alpha = \\frac{\\sqrt{3}}{2} \\Rightarrow \\alpha = 30^{\\circ}$."
+        }
+    ],
+    "subject": "00",
+    "examId": "00005"
+}

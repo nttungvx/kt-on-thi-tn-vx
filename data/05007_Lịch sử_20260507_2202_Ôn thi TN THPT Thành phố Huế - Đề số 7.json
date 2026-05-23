@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 7",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05007",
+    "part1": [
+        {
+            "q": "Người cộng sản Việt Nam đầu tiên tiếp thu lí luận Cách mạng tháng Mười Nga là",
+            "options": [
+                "Nguyễn Ái Quốc.",
+                "Trần Phú.",
+                "Lê Hồng Phong.",
+                "Nguyễn Văn Cừ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cơ quan nào của Liên hợp quốc chịu trách nhiệm chính trong việc duy trì hoà bình và an ninh thế giới?",
+            "options": [
+                "Đại hội đồng.",
+                "Ban thư ký.",
+                "Hội đồng bảo an.",
+                "Tòa án quốc tế."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hoạt động đối ngoại của Phan Bội Châu trong những năm 1905 – 1909 diễn ra ở quốc gia nào sau đây?",
+            "options": [
+                "Nhật Bản.",
+                "Đức.",
+                "Nga.",
+                "Ấn Độ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Chiến thắng nào của quân dân ta đã phá tan âm mưu \"đánh nhanh, thắng nhanh\" của Pháp, buộc chúng phải chuyển sang \"đánh lâu dài\"?",
+            "options": [
+                "Chiến dịch Việt Bắc thu - đông 1947.",
+                "Chiến dịch Biên Giới thu - đông 1950.",
+                "Chiến dịch Tây Bắc 1952.",
+                "Chiến dịch Điện Biên Phủ 1954."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hội nghị quốc tế nào đã ký kết văn kiện chấm dứt chiến tranh, lập lại hòa bình ở Đông Dương vào năm 1954?",
+            "options": [
+                "Hội nghị Ianta.",
+                "Hội nghị Giơ-nevơ.",
+                "Hội nghị Pari.",
+                "Hội nghị Pốtxđam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những mục tiêu quan trọng của đường lối Đổi mới do Đại hội đại biểu toàn quốc lần thứ VI của Đảng Cộng sản Việt Nam đề ra là",
+            "options": [
+                "bước đầu khắc phục hậu quả chiến tranh.",
+                "hoàn thiện cơ chế quản lý đất nước.",
+                "đưa đất nước ra khỏi tình trạng khủng hoảng.",
+                "hoàn thành công cuộc cải cách ruộng đất"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Biển Đông ảnh hưởng trực tiếp đến một số quốc gia thuộc khu vực nào sau đây?",
+            "options": [
+                "Châu Phi.",
+                "Châu Mỹ.",
+                "Châu Âu.",
+                "Châu Á."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đầy đủ nhất đường lối kháng chiến chống thực dân Pháp của Đảng ta (1946)?",
+            "options": [
+                "Toàn dân, toàn diện, trường kỳ và tự lực cánh sinh, tranh thủ sự ủng hộ của quốc tế.",
+                "Toàn dân, toàn diện, trường kỳ và dựa vào sự giúp đỡ quốc tế.",
+                "Đánh nhanh thắng nhanh, toàn dân và toàn diện.",
+                "Đấu tranh chính trị kết hợp với đấu tranh vũ trang."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ai là người đã phất cờ khởi nghĩa, tự xưng là Bình Định Vương, lãnh đạo cuộc khởi nghĩa Lam Sơn?",
+            "options": [
+                "Nguyễn Trãi.",
+                "Lê Lợi.",
+                "Lê Lai.",
+                "Trần Nguyên Hãn."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Lực lượng đóng vai trò nòng cốt trong chiến lược “Chiến tranh đặc biệt” của Mỹ ở miền Nam Việt Nam (1961-1965) là",
+            "options": [
+                "quân đội Sài Gòn.",
+                "quân viễn chinh Mỹ.",
+                "quân đồng minh Mỹ.",
+                "quân đội Anh."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Văn kiện nào là cơ sở pháp lý cao nhất để xây dựng Cộng đồng ASEAN vào năm 2015?",
+            "options": [
+                "Hiệp ước Bali (1976).",
+                "Tuyên bố Bangkok (1967).",
+                "Hiến chương ASEAN (2007).",
+                "Tuyên bố Kuala Lumpur (2015)."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những địa phương giành được chính quyền sớm nhất trong Tổng khởi nghĩa tháng Tám năm 1945 là",
+            "options": [
+                "Thanh Hóa.",
+                "Nghệ An.",
+                "Hà Tĩnh.",
+                "Huế."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đặc điểm nổi bật của nền kinh tế Việt Nam trước khi tiến hành Đổi mới (12/1986) là",
+            "options": [
+                "sản xuất tự cung tự cấp.",
+                "quản lý theo cơ chế tập trung quan liêu, bao cấp.",
+                "phát triển theo hướng sản xuất hàng hóa.",
+                "vận hành theo cơ chế thị trường."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nguyên nhân quan trọng nhất quyết định thắng lợi của Cách mạng tháng Tám năm 1945 ở Việt Nam?",
+            "options": [
+                "Sự lãnh đạo đúng đắn, sáng tạo của Đảng đứng đầu là Chủ tịch Hồ Chí Minh.",
+                "Truyền thống yêu nước nồng nàn, tinh thần đoàn kết của nhân dân Việt Nam.",
+                "Sự ủng hộ của các nước dân chủ nhân dân và phong trào giải phóng thế giới.",
+                "Điều kiện quốc tế thuận lợi khi phát xít Nhật đầu hàng Đồng minh không điều kiện"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những điểm khác nhau cơ bản nhất giữa chiến dịch Biên giới thu-đông năm 1950 với chiến dịch Việt Bắc thu - đông năm 1947 của quân dân Việt Nam là",
+            "options": [
+                "tinh thần quyết tâm của dân tộc.",
+                "địa bàn tác chiến.",
+                "bối cảnh quốc tế mở chiến dịch.",
+                "lực lượng chỉ đạo chiến dịch."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Công cuộc Đổi mới ở Việt Nam từ năm 1986 đến nay không nhằm thực hiện nhiệm vụ nào sau đây?",
+            "options": [
+                "Nhằm đưa Việt Nam trở thành nước công nghiệp.",
+                "Khắc phục tình trạng khủng hoảng của đất nước.",
+                "Thúc đẩy phát triển kinh tế, văn hóa.",
+                "Xây dựng nền hòa bình và thống nhất."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nguyên nhân sâu xa và cơ bản nhất dẫn đến sự sụp đổ của chế độ xã hội chủ nghĩa ở Liên Xô và Đông Âu là gì?",
+            "options": [
+                "Sự chống phá của các thế lực thù địch trong và ngoài nước.",
+                "Cuộc khủng hoảng kinh tế - xã hội kéo dài khiến đời sống nhân dân cực khổ",
+                "Đường lối lãnh đạo chủ quan, duy ý chí, chậm sửa đổi và mắc sai lầm khi cải tổ.",
+                "Cuộc chạy đua vũ trang với Mỹ làm kiệt quệ nền kinh tế."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phương châm tác chiến của ta trong chiến dịch Điện Biên Phủ đã thay đổi như thế nào?",
+            "options": [
+                "Từ \"Đánh chắc tiến chắc\" sang \"Đánh nhanh thắng nhanh\".",
+                "Từ \"Đánh nhanh thắng nhanh\" sang \"Đánh chắc tiến chắc\".",
+                "Giữ nguyên phương châm \"Đánh nhanh thắng nhanh\" từ đầu đến cuối.",
+                "Chỉ sử dụng đấu tranh chính trị kết hợp vũ trang."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nguyên nhân chủ yếu dẫn đến sự hình thành cục diện \"hai cực, hai phe\" sau Chiến tranh thế giới thứ hai là",
+            "options": [
+                "Sự đối lập về mục tiêu và chiến lược giữa hai cường quốc Mỹ và Liên Xô.",
+                "Sự khác biệt về trình độ phát triển kinh tế giữa các nước tư bản và xã hội chủ nghĩa.",
+                "Cuộc tranh giành thuộc địa quyết liệt giữa các nước thắng trận sau chiến tranh.",
+                "Sự xuất hiện và ngày càng lớn mạnh của các phong trào giải phóng dân tộc."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thời cơ \"ngàn năm có một\" để nhân dân Việt Nam thực hiện Tổng khởi nghĩa giành chính quyền năm 1945, xuất hiện trong khoảng thời gian nào?",
+            "options": [
+                "Từ khi Nhật đảo chính Pháp (9/3/1945) đến khi Nhật đầu hàng Đồng minh.",
+                "Từ sau khi Nhật đầu hàng Đồng minh đến trước khi quân Đồng minh vào Đông Dương.",
+                "Từ khi quân Đồng minh đổ bộ vào Đông Dương.",
+                "Từ khi Pháp quay trở lại xâm lược Việt Nam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những điểm giống nhau của chiến dịch Điện Biên Phủ (1954) và chiến dịch Hồ Chí Minh (1975) là",
+            "options": [
+                "huy động tối đa lực lượng.",
+                "phương châm chiến dịch.",
+                "phương thức để chiến đấu.",
+                "sự phối hợp của không quân."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Luận cương của Vladimir Ilyich Lenin về vấn đề dân tộc và thuộc địa đã làm cho tôi rất cảm động, phấn khởi, sáng tỏ, tin tưởng biết bao! [...] Từ trước đến giờ, tôi chỉ thấy chủ nghĩa yêu nước mà chưa thấy chủ nghĩa quốc tế vô sản. Nay thì tôi đã hiểu rằng muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường cách mạng vô sản.”<br>Trích: Hồ Chí Minh toàn tập, Tập 12, Nhà xuất bản Chính trị Quốc gia Sự thật, Hà Nội, 2011.<br>Đoạn tư liệu trên cho thấy bước chuyển biến quan trọng nào trong nhận thức của Nguyễn Ái Quốc?",
+            "options": [
+                "Từ chủ nghĩa yêu nước sang chủ nghĩa dân tộc hẹp hòi.",
+                "Từ chủ nghĩa yêu nước đến với chủ nghĩa quốc tế vô sản.",
+                "Từ lập trường phong kiến sang lập trường tư sản.",
+                "Từ cách mạng tư sản sang cách mạng dân chủ."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Luận cương của Vladimir Ilyich Lenin về vấn đề dân tộc và thuộc địa đã làm cho tôi rất cảm động, phấn khởi, sáng tỏ, tin tưởng biết bao! [...] Từ trước đến giờ, tôi chỉ thấy chủ nghĩa yêu nước mà chưa thấy chủ nghĩa quốc tế vô sản. Nay thì tôi đã hiểu rằng muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường cách mạng vô sản.”<br>Trích: Hồ Chí Minh toàn tập, Tập 12, Nhà xuất bản Chính trị Quốc gia Sự thật, Hà Nội, 2011.<br>Con đường tìm chân lý cứu nước của Nguyễn Ái Quốc có gì mới và khác so với Phan Bội Châu và Phan Chu Trinh?",
+            "options": [
+                "Gửi yêu sách đòi Pháp thừa nhận các quyền dân tộc của Việt Nam.",
+                "Tiếp thu nền văn minh phương Tây để giúp đất nước đến phú cường.",
+                "Hướng về phương Tây, khảo sát thực tiễn, tìm hiểu cách mạng thế giới.",
+                "Nhờ các nước phương Tây đào tạo lực lượng để chuẩn bị chống Pháp."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Luận cương của Vladimir Ilyich Lenin về vấn đề dân tộc và thuộc địa đã làm cho tôi rất cảm động, phấn khởi, sáng tỏ, tin tưởng biết bao! [...] Từ trước đến giờ, tôi chỉ thấy chủ nghĩa yêu nước mà chưa thấy chủ nghĩa quốc tế vô sản. Nay thì tôi đã hiểu rằng muốn cứu nước và giải phóng dân tộc không có con đường nào khác con đường cách mạng vô sản.”<br>Trích: Hồ Chí Minh toàn tập, Tập 12, Nhà xuất bản Chính trị Quốc gia Sự thật, Hà Nội, 2011.<br>Theo đoạn tư liệu, con đường cứu nước mà Nguyễn Ái Quốc lựa chọn là gì?",
+            "options": [
+                "Con đường cải cách ôn hòa.",
+                "Con đường đấu tranh nghị trường.",
+                "Con đường cách mạng vô sản.",
+                "Con đường dựa vào các nước tư bản."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Đọc đoạn tư liệu sau:<br>“Sau khi Chiến tranh lạnh chấm dứt, trật tự hai cực Ianta sụp đổ, một trật tự thế giới mới đang dần hình thành. Mỹ dựa vào lợi thế về kinh tế, quân sự và khoa học – kỹ thuật để vươn lên thiết lập trật tự thế giới ‘đơn cực’ nhằm chi phối và lãnh đạo thế giới. Tuy nhiên, xu thế khách quan của thế giới lại chuyển động theo hướng ‘đa cực’, với sự vươn lên của các trung tâm quyền lực như Liên minh châu Âu (EU), Nhật Bản, Trung Quốc, Nga... Bên cạnh đó, các quốc gia đều điều chỉnh chiến lược phát triển, tập trung vào tăng trưởng kinh tế để xây dựng sức mạnh thực lực của mình trong cuộc chạy đua toàn cầu.”<br>(Nguồn: Trích dẫn nội dung trọng tâm trong Sách giáo khoa Lịch sử 12 – Bộ Cánh Diều, NXB Đại học Sư phạm)",
+            "items": [
+                "Trật tự thế giới \"đơn cực\" do Mỹ dẫn đầu đã được xác lập hoàn chỉnh ngay sau năm 1991.",
+                "Xu thế \"đa cực\" là một tiến trình khách quan, phản ánh sự thay đổi sâu sắc trong so sánh lực lượng giữa các quốc gia.",
+                "Một trong những đặc điểm quan trọng của quan hệ quốc tế sau Chiến tranh lạnh là các nước coi kinh tế là trọng điểm trong chiến lược phát triển.",
+                "Sự sụp đổ của trật tự Ianta đồng nghĩa với việc các tổ chức quốc tế như Liên minh châu Âu (EU) mất đi vai trò trong quan hệ quốc tế."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Đọc đoạn tư liệu sau:<br>\"Thắng lợi của Cách mạng tháng Tám không chỉ là kết quả của sự chớp thời cơ khách quan thuận lợi khi phát xít Nhật đầu hàng Đồng minh, mà quan trọng hơn, đó là kết cục tất yếu của một quá trình chuẩn bị lâu dài, chu đáo về lực lượng chính trị, lực lượng vũ trang và căn cứ địa cách mạng của Đảng Cộng sản Đông Dương. Cuộc cách mạng này đã chứng minh rằng: trong những điều kiện quốc tế thuận lợi, một dân tộc nhược tiểu nhưng dưới sự lãnh đạo của một Đảng tiền phong với đường lối đúng đắn, biết kết hợp hài hòa giữa đấu tranh chính trị và đấu tranh vũ trang, giữa nông thôn và thành thị, thì hoàn toàn có thể tự giải phóng mình.\"<br>(Nguồn: Trích dẫn tổng hợp từ Giáo trình Lịch sử Đảng Cộng sản Việt Nam và Nghị quyết Đại hội đại biểu toàn quốc lần thứ VI)",
+            "items": [
+                "Thời cơ khách quan (Nhật đầu hàng) là yếu tố tiên quyết và có ý nghĩa quyết định nhất đến thắng lợi của cách mạng.",
+                "Cách mạng tháng Tám là sự kết hợp khéo léo giữa hình thức đấu tranh vũ trang và đấu tranh chính trị, trong đó bạo lực cách mạng đóng vai trò quan trọng.",
+                "Thắng lợi của cách mạng cho thấy nghệ thuật chọn địa bàn khởi nghĩa của Đảng là tập trung toàn lực vào đô thị ngay từ đầu.",
+                "Một trong những bài học kinh nghiệm sâu sắc của Cách mạng tháng Tám là sự chủ động về lực lượng để \"tự giải phóng\" thay vì trông chờ vào sự giúp đỡ bên ngoài."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Đọc đoạn tư liệu sau:<br>\"Từ sau năm 1975, ngoại giao Việt Nam trải qua những giai đoạn thử thách gay gắt, đặc biệt là tình trạng bị bao vây, cấm vận trong thập niên 80. Tuy nhiên, với đường lối Đổi mới (1986), Việt Nam đã thực hiện bước chuyển chiến lược từ “đối đầu” sang “đối thoại”. Nghị quyết 13 của Bộ Chính trị (khóa VI) năm 1988 đã đặt nền móng cho chính sách ngoại giao đa phương hóa, đa dạng hóa, với phương châm 'muốn làm bạn với tất cả các nước'. Việc bình thường hóa quan hệ với Trung Quốc (1991), với Mỹ (1995) và gia nhập ASEAN (1995) là những minh chứng cho sự linh hoạt và tư duy mới về lợi ích quốc gia - dân tộc, giúp Việt Nam phá thế bao vây và hội nhập sâu rộng vào nền kinh tế toàn cầu.\"<br>(Nguồn: Trích lược từ \"Lịch sử ngoại giao Việt Nam 1945-2015\", Bộ Ngoại giao)",
+            "items": [
+                "Nguyên nhân chủ chốt giúp Việt Nam phá bỏ thế bao vây, cấm vận là do sự sụp đổ của trật tự hai cực Ianta.",
+                "Việc gia nhập ASEAN năm 1995 đánh dấu bước ngoặt Việt Nam hội nhập khu vực và xóa bỏ định kiến về sự khác biệt thể chế chính trị.",
+                "\"Đa phương hóa, đa dạng hóa\" là sự thay đổi về mục tiêu cao nhất của ngoại giao Việt Nam trong thời kỳ Đổi mới.",
+                "Từ sau 1975 đến nay, tư duy về \"đối tượng\" và \"đối tác\" trong ngoại giao Việt Nam đã chuyển đổi linh hoạt. Một quốc gia có thể vừa là đối tác hợp tác, vừa là đối tượng đấu tranh trong những vấn đề cụ thể, không còn phân chia cứng nhắc."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Đọc đoạn tư liệu sau:<br>“Nghệ thuật lãnh đạo của Đảng trong kháng chiến chống Mỹ, cứu nước trước hết thể hiện ở tư duy chiến lược độc lập, tự chủ và sáng tạo. Đảng đã giải quyết thành công mối quan hệ giữa hai chiến lược cách mạng: cách mạng xã hội chủ nghĩa ở miền Bắc và cách mạng dân tộc dân chủ nhân dân ở miền Nam, tạo ra sức mạnh tổng hợp để đánh thắng quân xâm lược. Trong giai đoạn cuối, nghệ thuật đó còn thể hiện ở việc chọn đúng thời cơ, hạ quyết tâm chiến lược giải phóng hoàn toàn miền Nam với phương châm 'thần tốc, táo bạo, bất ngờ, chắc thắng'. Đó là sự kết hợp nhuần nhuyễn giữa tiến công quân sự và nổi dậy của quần chúng, giữa chiến tranh chính quy và chiến tranh nhân dân, đưa cuộc kháng chiến đến thắng lợi hoàn toàn.”<br>(Nguồn: Trích dẫn tổng hợp từ \"Lịch sử kháng chiến chống Mỹ, cứu nước 1954-1975\", Viện Lịch sử Quân sự Việt Nam)",
+            "items": [
+                "Một trong những sáng tạo độc đáo của Đảng là đề ra đường lối tiến hành đồng thời hai chiến lược cách mạng tại hai miền nhưng cùng hướng về một mục tiêu chung.",
+                "Nghệ thuật chớp thời cơ trong mùa Xuân 1975 thể hiện ở việc Đảng quyết định giải phóng miền Nam trước khi quân Đồng minh kịp can thiệp quân sự.",
+                "\"Thần tốc, táo bạo, bất ngờ, chắc thắng\" là phương châm tác chiến xuyên suốt của quân đội ta từ khi bắt đầu cuộc kháng chiến chống Mỹ năm 1954.",
+                "Thắng lợi của kháng chiến chống Mỹ cho thấy nghệ thuật kết hợp giữa sức mạnh dân tộc và sức mạnh thời đại đã được Đảng vận dụng một cách linh hoạt."
+            ],
+            "ans": [
+                true,
+                false,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

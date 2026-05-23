@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 6",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05006",
+    "part1": [
+        {
+            "q": "Sự kiện nào sau đây đánh dấu quá trình thành lập Nhà nước Liên bang Cộng hòa xã hội chủ nghĩa Xô viết hoàn thành?",
+            "options": [
+                "Bản Hiến pháp đầu tiên của Liên Xô được thông qua (1-1924).",
+                "Nước Nga Xô viết thực hiện chính sách Kinh tế mới (3-1921).",
+                "Bản Hiệp ước Liên bang Xô viết được thông qua (12-1922).",
+                "Tuyên ngôn thành lập Liên bang Xô viết được thông qua (12-1922)."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1949, quốc gia nào sau đây ở châu Á đi theo con đường xã hội chủ nghĩa?",
+            "options": [
+                "Trung Quốc.",
+                "Hàn Quốc.",
+                "Cu Ba.",
+                "Nhật Bản."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thắng lợi của quân dân Đại Việt trong ba lần kháng chiến quân Mông - Nguyên (thế kỉ XIII) gắn liền với sự lãnh đạo của vương triều nào sau đây?",
+            "options": [
+                "Trần.",
+                "Tiền Lê.",
+                "Lý.",
+                "Nguyễn."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phản ánh đúng ý nghĩa của phong trào Tây Sơn (1771 - 1789)?",
+            "options": [
+                "Đập tan âm mưu thủ tiêu nền văn hoá Đại Việt, mở ra thời kì phát triển mới của đất nước.",
+                "Từ một cuộc khởi nghĩa địa phương đã phát triển thành phong trào dân tộc rộng lớn.",
+                "Lật đổ chính quyền phong kiến Nguyễn - Trịnh, xoá bỏ tình trạng chia cắt đất nước.",
+                "Đập tan các thế lực ngoại xâm hùng mạnh, bảo vệ vững chắc nền độc lập dân tộc."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Theo quyết định của Hội nghị I-an-ta (2-1945), khu vực nào sau đây thuộc phạm vi ảnh hưởng của Mỹ?",
+            "options": [
+                "Tây Âu.",
+                "Bắc Triều Tiên.",
+                "Đông Âu.",
+                "Đông Đức."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định nào sau đây phản ánh đầy đủ quan hệ quốc tế trong nửa sau thế kỉ XX?",
+            "options": [
+                "Quan hệ quốc tế mở rộng và đa dạng, phần lớn các quốc gia cùng tồn tại hòa bình, vừa đấu tranh, vừa hợp tác.",
+                "Các quốc gia đều bước lên vũ đài chính trị và khẳng định vị thế của mình trong trật tự thế giới mới.",
+                "Các hoạt động về kinh tế, tài chính, chính trị, quân sự của các quốc gia, các tổ chức quốc tế diễn ra mạnh mẽ.",
+                "Các nước lớn cạnh tranh gay gắt trong bối cảnh cách mạng khoa học - công nghệ và xu thế toàn cầu hóa diễn ra mạnh mẽ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sau Chiến tranh lạnh, các nước trên thế giới có sự điều chỉnh quan hệ theo hướng đối thoại, thỏa hiệp và tránh xung đột trực tiếp, chủ yếu vì lí do nào sau đây?",
+            "options": [
+                "Muốn có điều kiện thuận lợi để vươn lên xác lập vị thế quốc tế.",
+                "Hợp tác địa - chính trị trở thành nội dung căn bản giữa các nước.",
+                "Từng bước giảm bớt số lượng vũ khí hạt nhân của các cường quốc.",
+                "Cần tập trung vào cuộc đấu tranh chống lại chủ nghĩa khủng bố."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1997, hai quốc gia nào sau đây trở thành thành viên thứ 8,9 của ASEAN?",
+            "options": [
+                "Lào và Mi-an-ma.",
+                "Bru-nây và Việt Nam.",
+                "Cam-pu-chia và Lào.",
+                "Thái Lan và Mi-an-ma."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Văn kiện nào sau đây đã tạo cơ sở pháp lí để xây dựng Cộng đồng ASEAN?",
+            "options": [
+                "Hiến chương ASEAN (2007).",
+                "Tuyên bố Ba-li II (2003).",
+                "Tuyên bố Băng Cốc (1967).",
+                "Tầm nhìn ASEAN 2020."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây là một trong những triển vọng của Cộng đồng ASEAN?",
+            "options": [
+                "Mức độ liên kết ngày càng chặt chẽ và sâu rộng trên cả ba trụ cột.",
+                "Có quan hệ đối tác chiến lược toàn diện với tất cả các nước châu Á.",
+                "Có tốc độ tăng trưởng kinh tế và phúc lợi xã hội cao nhất thế giới.",
+                "Có vai trò định hướng và quyết định tại tất cả các diễn đàn quốc tế."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sự kiện nào sau đây đánh dấu chế độ phong kiến Việt Nam hoàn toàn sụp đổ?",
+            "options": [
+                "Vua Bảo Đại tuyên bố thoái vị (30-8-1945).",
+                "Hiệp định Sơ bộ được kí kết (6-3-1946).",
+                "Sài Gòn giành được chính quyền (25-8-1945).",
+                "Hà Nội giành được chính quyền (19-8-1945)."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phải là ý nghĩa của Cách mạng tháng Tám năm 1945?",
+            "options": [
+                "Buộc Pháp phải công nhận các quyền dân tộc cơ bản của Việt Nam.",
+                "Đưa Đảng Cộng sản Đông Dương trở thành Đảng cầm quyền.",
+                "Mở ra một bước ngoặt lịch sử lớn cho dân tộc Việt Nam.",
+                "Mở ra kỉ nguyên mới của dân tộc: kỉ nguyên độc lập, tự do."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc kháng chiến chống thực dân Pháp (1945 - 1954), thắng lợi nào sau đây của quân dân Việt Nam đã làm phá sản hoàn toàn kế hoạch Na-va, giáng đòn quyết định vào ý chí xâm lược của thực dân Pháp?",
+            "options": [
+                "Chiến dịch Điện Biên Phủ năm 1954.",
+                "Chiến dịch Biên giới thu - đông năm 1950.",
+                "Cuộc Tiến công Đông - Xuân 1953 - 1954.",
+                "Chiến dịch Việt Bắc thu - đông năm 1947."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Từ năm 1961 đến năm 1968 là khoảng thời gian đế quốc Mỹ lần lượt triển khai hai chiến lược chiến tranh hòng tiếp tục âm mưu xâm lược và thống trị miền Nam bằng chủ nghĩa thực dân kiểu mới. Cuộc chiến leo thang với quy mô ngày càng mở rộng và cường độ ngày càng khốc liệt trên cả hai miền Nam, Bắc trở thành cuộc đụng đầu lịch sử giữa nhân dân Việt Nam với đế quốc Mỹ xâm lược. Trong cuộc đụng đầu lịch sử đó, dưới sự lãnh đạo của Đảng Lao động Việt Nam, đứng đầu là Chủ tịch Hồ Chí Minh, toàn dân, toàn quân ta đã triển khai và thực hiện có hiệu quả đường lối chiến tranh nhân dân của Đảng, đẩy mạnh chiến lược tiến công, đương đầu và đánh thắng các bước leo thang chiến tranh”.<br>(Viện lịch sử quân sự Việt Nam, Lịch sử quân sự Việt Nam, Tập 11: Cuộc kháng chiến chống Mỹ, cứu nước (1954 - 1975), NXB Chính trị Quốc gia Sự thật, Hà Nội, 2019, tr.281)<br>Theo đoạn tư liệu, từ năm 1961 đến năm 1968 đế quốc Mỹ lần lượt triển khai hai chiến lược chiến tranh nhằm tiếp tục thực hiện âm mưu nào?",
+            "options": [
+                "Xâm lược và thống trị miền Nam Việt Nam bằng chủ nghĩa thực dân kiểu mới.",
+                "Xâm lược và thống trị miền Nam Việt Nam bằng chủ nghĩa thực dân kiểu cũ.",
+                "Can thiệp sâu vào cuộc chiến tranh xâm lược Đông Dương của thực dân Pháp.",
+                "Giành thắng lợi quân sự quyết định, buộc Việt Nam kí hiệp định có lợi cho Mỹ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Từ năm 1961 đến năm 1968 là khoảng thời gian đế quốc Mỹ lần lượt triển khai hai chiến lược chiến tranh hòng tiếp tục âm mưu xâm lược và thống trị miền Nam bằng chủ nghĩa thực dân kiểu mới. Cuộc chiến leo thang với quy mô ngày càng mở rộng và cường độ ngày càng khốc liệt trên cả hai miền Nam, Bắc trở thành cuộc đụng đầu lịch sử giữa nhân dân Việt Nam với đế quốc Mỹ xâm lược. Trong cuộc đụng đầu lịch sử đó, dưới sự lãnh đạo của Đảng Lao động Việt Nam, đứng đầu là Chủ tịch Hồ Chí Minh, toàn dân, toàn quân ta đã triển khai và thực hiện có hiệu quả đường lối chiến tranh nhân dân của Đảng, đẩy mạnh chiến lược tiến công, đương đầu và đánh thắng các bước leo thang chiến tranh”.<br>(Viện lịch sử quân sự Việt Nam, Lịch sử quân sự Việt Nam, Tập 11: Cuộc kháng chiến chống Mỹ, cứu nước (1954 - 1975), NXB Chính trị Quốc gia Sự thật, Hà Nội, 2019, tr.281)<br>Trong giai đoạn 1961 - 1968, thắng lợi quân sự nào sau đây của quân dân Việt Nam đã làm lung lay ý chí xâm lược của Mỹ, buộc Mỹ phải tuyên bố “phi Mỹ hoá” chiến tranh xâm lược và chấm dứt không điều kiện chiến tranh phá hoại miền Bắc?",
+            "options": [
+                "Tổng tiến công và nổi dậy Xuân Mậu Thân (1968).",
+                "Chiến thắng 2 mùa khô: 1965 - 1966 và 1966 - 1967.",
+                "Chiến thắng Ấp Bắc (1-1963) và Bình Giã (12-1964).",
+                "Chiến thắng Núi Thành (5-1965) và Vạn Tường (8-1965)."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Từ năm 1961 đến năm 1968 là khoảng thời gian đế quốc Mỹ lần lượt triển khai hai chiến lược chiến tranh hòng tiếp tục âm mưu xâm lược và thống trị miền Nam bằng chủ nghĩa thực dân kiểu mới. Cuộc chiến leo thang với quy mô ngày càng mở rộng và cường độ ngày càng khốc liệt trên cả hai miền Nam, Bắc trở thành cuộc đụng đầu lịch sử giữa nhân dân Việt Nam với đế quốc Mỹ xâm lược. Trong cuộc đụng đầu lịch sử đó, dưới sự lãnh đạo của Đảng Lao động Việt Nam, đứng đầu là Chủ tịch Hồ Chí Minh, toàn dân, toàn quân ta đã triển khai và thực hiện có hiệu quả đường lối chiến tranh nhân dân của Đảng, đẩy mạnh chiến lược tiến công, đương đầu và đánh thắng các bước leo thang chiến tranh”.<br>(Viện lịch sử quân sự Việt Nam, Lịch sử quân sự Việt Nam, Tập 11: Cuộc kháng chiến chống Mỹ, cứu nước (1954 - 1975), NXB Chính trị Quốc gia Sự thật, Hà Nội, 2019, tr.281)<br>Nhận định nào sau đây là đúng về nghệ thuật chỉ đạo chiến tranh của Đảng Lao động Việt Nam trong giai đoạn 1961 - 1968?",
+            "options": [
+                "Phát huy sức mạnh tổng hợp để đối phó hiệu quả với các bước leo thang quân sự của Mỹ.",
+                "Lấy đấu tranh chính trị làm nền tảng để từng bước làm phá sản chiến lược toàn cầu của Mỹ.",
+                "Xây dựng lực lượng vũ trang hiện đại làm nhân tố quyết định thắng lợi trên chiến trường.",
+                "Kết hợp giữa tiến công quân sự với đàm phán ngoại giao để kết thúc nhanh chóng chiến tranh."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Các cuộc kháng chiến chống ngoại xâm ở Việt Nam trong giai đoạn 1945 - 1975 có điểm tương đồng nào sau đây?",
+            "options": [
+                "Tập hợp lực lượng yêu nước trong các hình thức mặt trận dân tộc thống nhất.",
+                "Diễn ra khi Việt Nam chưa có chính quyền và bị các nước đế quốc bao vây, cô lập.",
+                "Phát triển lực lượng vũ trang ba thứ quân, trong đó bộ đội địa phương đóng vai trò chủ lực.",
+                "Sáng tạo trong sử dụng lực lượng, trong đó lực lượng chính trị đóng vai trò quyết định thắng lợi."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng chủ trương đổi mới về kinh tế trong đường lối đổi mới ở Việt Nam giai đoạn 1986 - 1995?",
+            "options": [
+                "Hình thành cơ chế kinh tế thị trường có sự quản lí của Nhà nước.",
+                "Tiếp tục hoàn thiện kinh tế thị trường định hướng xã hội chủ nghĩa.",
+                "Coi trọng công nghiệp hóa, hiện đại hóa nông nghiệp, nông thôn.",
+                "Đẩy mạnh công nghiệp hóa, hiện đại hóa gắn với phát triển kinh tế tri thức."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh quan điểm xuyên suốt trong đường lối đổi mới của Việt Nam từ năm 1986 đến nay?",
+            "options": [
+                "Luôn kiên định mục tiêu xã hội chủ nghĩa.",
+                "Kiên trì thực hiện Ba chương trình kinh tế.",
+                "Tập trung mọi nguồn lực phát triển công nghiệp.",
+                "Hợp tác chiến lược toàn diện với tất cả các nước."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong giai đoạn 1941 - 1945, hoạt động đối ngoại của Đảng Cộng sản Đông Dương thông qua tổ chức nào sau đây?",
+            "options": [
+                "Mặt trận Việt Minh.",
+                "Mặt trận Liên Việt.",
+                "Mặt trận Đông Dương.",
+                "Mặt trận Tổ quốc Việt Nam."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1991, Việt Nam bình thường hoá quan hệ với quốc gia nào sau đây?",
+            "options": [
+                "Trung Quốc.",
+                "Mỹ.",
+                "Nhật Bản.",
+                "Thái Lan."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nguyễn Ái Quốc tìm thấy con đường cứu nước cho dân tộc Việt Nam khi đang hoạt động ở quốc gia nào sau đây?",
+            "options": [
+                "Pháp.",
+                "Trung Quốc.",
+                "Anh.",
+                "Liên Xô."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ngày 6-3-1946, Chủ tịch Hồ Chí Minh thay mặt Chính phủ Việt Nam Dân chủ Cộng hòa chủ động kí với Pháp văn bản nào sau đây?",
+            "options": [
+                "Hiệp định Sơ bộ.",
+                "Hiệp định Pa-ri.",
+                "Tạm ước Việt - Pháp.",
+                "Hiệp định Giơ-ne-vơ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong vai trò lãnh đạo cuộc kháng chiến chống Mỹ, cứu nước (từ năm 1954 đến năm 1969), Chủ tịch Hồ Chí Minh có hoạt động nổi bật nào sau đây?",
+            "options": [
+                "Chủ trì và chỉ đạo xây dựng Nghị quyết Đại hội đại biểu toàn quốc lần thứ III của Đảng.",
+                "Xây dựng lực lượng ba thứ quân và trực tiếp lãnh đạo phong trào Đồng khởi.",
+                "Lãnh đạo quân dân miền Nam tiến hành cuộc cải cách ruộng đất ở vùng giải phóng.",
+                "Xác định nhiệm vụ chiến lược của cách mạng miền Nam là xây dựng chủ nghĩa xã hội."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho bảng thông tin sau đây:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Quốc gia/Tổ chức</td><td>Nội dung</td></tr><tr><td>Mỹ</td><td>Mặc dù Mỹ vẫn giữ vị trí số một thế giới về kinh tế và các lĩnh vực như: vốn, khoa học - công nghệ,... nhưng vị thế của nước này đang ngày càng bị giảm dần trước sự nổi lên của các trung tâm khác.</td></tr><tr><td>Trung Quốc</td><td>Vươn lên mạnh mẽ, vượt Nhật Bản (năm 2010) để trở thành nền kinh tế lớn thứ hai thế giới (sau Mỹ), sức mạnh quân sự không ngừng được gia tăng.</td></tr><tr><td>G20</td><td>Nhóm 20 nền kinh tế lớn nhất thế giới (G20) chiếm 2/3 dân số thế giới, 90% GDP toàn cầu và 80% thương mại quốc tế. Được thành lập năm 1999, G20 trở thành trung tâm điều phối các nỗ lực quốc tế nhằm thúc đẩy sự phát triển kinh tế thế giới.</td></tr><tr><td>APEC</td><td>Diễn đàn hợp tác kinh tế châu Á - Thái Bình Dương (APEC) được thành lập tháng 11-1989, hiện có 21 thành viên, chiếm khoảng 38% số dân, 62% GDP và gần 50% thương mại thế giới.</td></tr><tr><td>Liên Bang Nga</td><td>Phục hồi mạnh mẽ, là một trong những cường quốc hàng đầu về quân sự, khoa học, kĩ thuật.</td></tr><tr><td>Ấn Độ</td><td>Trở thành cường quốc kinh tế, quân sự, khoa học, kĩ thuật..., có ảnh hưởng lớn trong quan hệ quốc tế.</td></tr></table>",
+            "items": [
+                "Bảng thông tin phản ánh sự vươn lên mạnh mẽ, vị thế quốc tế của Trung Quốc, Liên Bang Nga, Ấn Độ, G20, APEC và vị thế của Mỹ.",
+                "Từ sau Chiến tranh lạnh, sự suy giảm vị thế của Mỹ là nhân tố quyết định hình thành xu thế đa cực trong quan hệ quốc tế.",
+                "Sự gia tăng sức mạnh trong nhiều lĩnh vực đã đưa Trung Quốc, Liên Bang Nga, Ấn Độ,... trở thành những trung tâm quyền lực mới trong quan hệ quốc tế.",
+                "Sự hình thành những trung tâm quyền lực mới trong quan hệ quốc tế tạo thời cơ và thách thức đối với sự phát triển của Việt Nam hiện nay."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Cách mạng tháng Tám…kết hợp tài tình đấu tranh chính trị và đấu tranh quân sự, một cuộc nổi dậy ở cả nông thôn và thành thị khắp Bắc, Trung, Nam mà đòn quyết định là các cuộc khởi nghĩa ở Hà Nội, Huế, Sài Gòn và ở các thành phố quan trọng khác. Hành động mau lẹ của Đảng ta chuyển nhanh từ chiến tranh du kích cục bộ ở nông thôn sang phát động tuyệt đại đa số quần chúng nhất tề đứng lên cùng với lực lượng võ trang mới tổ chức và ít ỏi lúc ban đầu, tiến hành tổng khởi nghĩa ở thành thị là một chủ trương vô cùng sáng suốt của Trung ương Đảng lúc bấy giờ trong việc nắm thời cơ”.<br>(Lê Duẩn, Tuyển tập, Tập 2, NXB Chính trị quốc gia, Hà Nội, 2008, tr.786)",
+            "items": [
+                "Theo đoạn tư liệu trên việc kết hợp tài tình giữa đấu tranh chính trị, đấu tranh quân sự và đấu tranh ngoại giao là điểm độc đáo trong Cách mạng tháng Tám năm 1945.",
+                "Trong Cách mạng tháng Tám, khởi nghĩa nổ ra đồng loạt ở các địa phương trên cả nước, thắng lợi ở mỗi địa phương có vị trí, vai trò như nhau.",
+                "Tiến trình của Cách mạng tháng Tám năm 1945 ở Việt Nam phát triển từ chiến tranh du kích cục bộ địa phương lên chiến tranh chính quy trên phạm vi cả nước.",
+                "Kết hợp tận dụng thời cơ và đẩy lùi nguy cơ là bài học từ thực tiễn Cách mạng tháng Tám năm 1945 cho công cuộc xây dựng đất nước Việt Nam hiện nay."
+            ],
+            "ans": [
+                false,
+                false,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Đánh Việt Bắc, chúng [thực dân Pháp] vấp phải năm nhược điểm dưới đây:<br>1) Nhảy dù hay đổ bộ lên vùng rừng núi, địa hình hiểm trở, vận động khó, dễ bị bao vây.<br>2) Phân tán quân đội chiếm nhiều nơi, thì lực lượng mỏng đến nỗi muốn đánh chỗ này phải rút chỗ khác.<br>3) Chuyển vận liên lạc xa, dễ bị đánh ngang đường.<br>4) Tiếp tế khó, vì những chỗ mới chiếm xa căn cứ chính nhiều quá và ta làm vườn không nhà trống triệt để.<br>5) Không hợp thủy thổ, binh lính đóng lâu ở Việt Bắc sẽ bị bệnh sốt rét rừng tàn phá.<br> Nhờ những chỗ yếu trên đây của địch mà đánh. Nhất định ta sẽ tiêu hao và tiêu diệt địch làm cho địch thua thiệt nặng đến nỗi không thể gượng lại được sau chiến dịch mùa đông này như Chỉ thị 15 tháng 10 đã nói”.<br>\t (Chỉ thị Trung ương ngày 15-10-1947, Văn kiện Đảng toàn tập, Tập 8, NXB Chính trị Quốc gia, Hà Nội, 2000, tr. 330)",
+            "items": [
+                "Đoạn tư liệu đề cập đến những điểm yếu của thực dân Pháp khi mở cuộc tấn công lên căn cứ địa Việt Bắc trong thu - đông năm 1947.",
+                "Chiến dịch Việt Bắc thu - đông năm 1947 phản ánh rõ tư tưởng chủ động của Đảng Cộng sản Đông Dương trên mặt trận quân sự nhằm tiêu diệt một bộ phận sinh lực quân Pháp.",
+                "Thất bại của thực dân Pháp trong thu - đông năm 1947 đã buộc Chính phủ Pháp phải từ bỏ hoàn toàn âm mưu tấn công lên căn cứ địa Việt Bắc.",
+                "Chiến dịch Việt Bắc thu - đông năm 1947 thắng lợi đã làm phá sản hoàn toàn kế hoạch \"đánh nhanh, thắng nhanh\" của thực dân Pháp, đồng thời đánh dấu bước chuyển của cuộc kháng chiến chống Pháp sang giai đoạn tiến công chiến lược."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>\t“Nhìn lại 35 năm thực hiện công cuộc Đổi mới, 30 năm thực hiện Cương lĩnh xây dựng đất nước trong thời kì quá độ lên chủ nghĩa xã hội, lí luận về đường lối đổi mới, về chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội của Việt Nam ngày càng hoàn thiện và từng bước được hiện thực hóa. Đất nước đã đạt được những thành tựu to lớn, có ý nghĩa lịch sử, phát triển mạnh mẽ, toàn diện so với những năm trước đổi mới. Quy mô, trình độ nền kinh tế được nâng lên. Đời sống nhân dân cả về vật chất và tinh thần được cải thiện rõ rệt. Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay”.<br> (Đảng Cộng sản Việt Nam, Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII, Tập 1, NXB Chính trị quốc gia Sự thật, Hà Nội, 20121, tr.103-104)",
+            "items": [
+                "Đoạn tư liệu ghi nhận: “Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay” là nội dung trong văn kiện Đại hội đại biểu toàn quốc lần thứ XIII của Đảng Cộng sản Việt Nam.",
+                "Lí luận về đường lối đổi mới, về chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội của Việt Nam ngày càng hoàn thiện và từng bước được hiện thực hóa là thành tựu của công cuộc đổi mới ở Việt Nam.",
+                "Trong quá trình thực hiện công cuộc Đổi mới đất nước, Đảng Cộng sản Việt Nam đã học tập kinh nghiệm từ thành công trong công cuộc cải tổ ở Liên Xô và cải cách, mở cửa ở Trung Quốc.",
+                "Những thành tựu của công cuộc Đổi mới ở Việt Nam là tiền đề để đất nước ta bước vào “Kỉ nguyên phát triển mới - Kỉ nguyên vươn mình của dân tộc Việt Nam”."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

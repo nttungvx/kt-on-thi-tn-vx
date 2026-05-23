@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "08",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 3",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "08003",
+    "part1": [
+        {
+            "q": "Hoạt động nào là cầu nối giữa sản xuất và tiêu dùng?",
+            "options": [
+                "Sản xuất.",
+                "Phân phối và trao đổi.",
+                "Tiêu dùng.",
+                "Quản lý nhà nước."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Mô hình kinh tế dựa trên sở hữu tập thể, tự nguyện và cùng có lợi là:",
+            "options": [
+                "Doanh nghiệp tư nhân.",
+                "Công ty cổ phần.",
+                "Hợp tác xã.",
+                "Doanh nghiệp nhà nước."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Công dân chủ động làm những gì pháp luật quy định phải làm là thực hiện pháp luật với hình thức nào dưới đây?",
+            "options": [
+                "Tuân thủ pháp luật.",
+                "Áp dụng pháp luật.",
+                "Sử dụng pháp luật.",
+                "Thi hành pháp luật."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Theo Hiến pháp 2013, cơ quan nào dưới đây thực hiện quyền tư pháp?",
+            "options": [
+                "Viện kiểm sát nhân dân.",
+                "Tòa án nhân dân.",
+                "Chính phủ.",
+                "Quốc hội."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hành vi nào dưới đây là biểu hiện của cạnh tranh không lành mạnh?",
+            "options": [
+                "Cải tiến kỹ thuật.",
+                "Nâng cao dịch vụ.",
+                "Quảng cáo trung thực.",
+                "Gièm pha đối thủ."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Mức giá chung hàng hóa tăng liên tục trong một thời gian nhất định gọi là:",
+            "options": [
+                "thất nghiệp.",
+                "lạm phát.",
+                "tăng trưởng.",
+                "hội nhập."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Mối quan hệ giữa thị trường lao động và thị trường việc làm thể hiện ở việc",
+            "options": [
+                "hai thị trường độc lập.",
+                "việc làm tăng dẫn đến cầu lao động tăng.",
+                "lao động tăng dẫn đến việc làm giảm.",
+                "chỉ xuất hiện khi kinh tế suy thoái."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Bình đẳng giới trong lĩnh vực kinh tế thể hiện ở việc nam và nữ",
+            "options": [
+                "bình đẳng tiếp cận nguồn lực.",
+                "chỉ nam giới được kinh doanh.",
+                "nữ giới tập trung nội trợ.",
+                "ưu tiên tuyệt đối lao động nam."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Khi thực hiện quyền khiếu nại, tố cáo, công dân có nghĩa vụ nào dưới đây?",
+            "options": [
+                "Bịa đặt thông tin.",
+                "Cung cấp thông tin trung thực.",
+                "Rút đơn không cần lý do.",
+                "Lôi kéo người gây rối."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hành vi nào dưới đây thực hiện đúng quyền bầu cử của công dân?",
+            "options": [
+                "Bầu thay người thân.",
+                "Tự mình bỏ phiếu.",
+                "Công khai nội dung phiếu.",
+                "Bầu để nhận lợi ích."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cơ quan có thẩm quyền tiến hành khám xét chỗ ở của công dân khi có căn cứ cho rằng nơi đó có:",
+            "options": [
+                "đồ vật liên quan vụ án.",
+                "chủ nhà vắng mặt.",
+                "người lạ cư trú.",
+                "kiểm tra vệ sinh định kỳ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Chỉ số đánh giá trực tiếp đến sự tăng trưởng kinh tế của một quốc gia là:",
+            "options": [
+                "chỉ số hạnh phúc (HPI).",
+                "tổng sản phẩm quốc nội (GDP).",
+                "chỉ số giá tiêu dùng (CPI).",
+                "tỉ lệ thất nghiệp."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong bối cảnh Việt Nam thực hiện các FTA thế hệ mới, việc một doanh nghiệp nội địa chủ động thay đổi quy trình sản xuất để đạt chứng chỉ \"Carbon thấp\" nhằm vượt qua \"Cơ chế điều chỉnh biên giới carbon\" (CBAM) của EU là thể hiện nội dung nào dưới đây?",
+            "options": [
+                "Doanh nghiệp đang sử dụng quyền tự do kinh doanh để đối phó với cơ quan quản lý trong nước.",
+                "Doanh nghiệp thực hiện trách nhiệm xã hội gắn liền với nâng cao năng lực cạnh tranh quốc tế.",
+                "Doanh nghiệp đang lãng phí nguồn lực vào các rào cản kỹ thuật không bắt buộc của WTO.",
+                "Doanh nghiệp đang thực hiện mục tiêu tăng trưởng kinh tế bằng mọi giá để chiếm lĩnh thị trường."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào dưới đây là mục tiêu trọng tâm của chính sách an sinh xã hội?",
+            "options": [
+                "Tối đa hóa lợi nhuận.",
+                "Phòng ngừa và khắc phục rủi ro.",
+                "Miễn thuế cho mọi hộ dân.",
+                "Thay thế hoàn toàn thu nhập."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Văn bản phác thảo mục tiêu và chiến lược hoạt động kinh doanh là:",
+            "options": [
+                "hợp đồng lao động.",
+                "kế hoạch kinh doanh.",
+                "báo cáo tài chính.",
+                "giấy phép kinh doanh."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Doanh nghiệp X sản xuất thực phẩm dù đạt các tiêu chuẩn về chất lượng nhưng lại chậm đóng bảo hiểm xã hội cho nhân viên và thường xuyên yêu cầu công nhân tăng ca quá giờ quy định mà không có phụ cấp thỏa đáng. Xét về mặt đạo đức kinh doanh và trách nhiệm xã hội, hành vi của doanh nghiệp X là:",
+            "options": [
+                "phù hợp, vì doanh nghiệp đã đảm bảo chất lượng sản phẩm cho người tiêu dùng.",
+                "vi phạm trách nhiệm pháp lý nhưng vẫn đảm bảo trách nhiệm đạo đức với xã hội.",
+                "thiếu trách nhiệm xã hội đối với chủ thể là người lao động trong nội bộ doanh nghiệp.",
+                "hoàn toàn đúng đắn vì mục tiêu tối thượng của doanh nghiệp là tối đa hóa lợi nhuận."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Gia đình ông K có nguồn thu nhập từ lương hưu, lãi tiết kiệm và tiền thuê nhà. Khi lạm phát có xu hướng tăng cao, ông K quyết định rút một phần tiền tiết kiệm để đầu tư vào vàng và chứng khoán thay vì chỉ giữ tiền mặt. Quyết định của ông K phản ánh kỹ năng nào trong quản lý tài chính gia đình?",
+            "options": [
+                "Ưu tiên các khoản chi thiết yếu để đối phó với tình trạng giá cả leo thang.",
+                "Đa dạng hóa danh mục đầu tư để bảo toàn và tăng trưởng giá trị tài sản rủi ro.",
+                "Tuân thủ nguyên tắc tổng chi tiêu không vượt quá tổng thu nhập thực tế.",
+                "Sử dụng tín dụng tiêu dùng để duy trì mức sống trong giai đoạn kinh tế biến động."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Quyền của chủ sở hữu tài sản bao gồm:",
+            "options": [
+                "chiếm hữu, sử dụng, định đoạt.",
+                "mua bán, tặng cho, thế chấp.",
+                "thừa kế, quản lý, bảo vệ.",
+                "khai thác, tiêu dùng, lưu giữ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nghĩa vụ của các thành viên trong gia đình theo pháp luật là:",
+            "options": [
+                "che giấu vi phạm của nhau.",
+                "yêu thương, chăm sóc lẫn nhau.",
+                "chỉ chăm sóc người có thu nhập.",
+                "tuyệt đối nghe theo người đứng đầu."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Khi một quốc gia thành viên của WTO ban hành quy định hành chính mới gây bất lợi cho hàng hóa nhập khẩu từ Việt Nam trái với cam kết trong hiệp định, Việt Nam cần vận dụng nguyên tắc nào của pháp luật quốc tế để bảo vệ quyền lợi?",
+            "options": [
+                "Nguyên tắc không can thiệp vào công việc nội bộ của các quốc gia khác.",
+                "Nguyên tắc các quốc gia có nghĩa vụ hợp tác với nhau về kinh tế.",
+                "Nguyên tắc tận tâm, thiện chí thực hiện cam kết quốc tế (Pacta sunt servanda).",
+                "Nguyên tắc bình đẳng về chủ quyền giữa các quốc gia trong quan hệ quốc tế."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trách nhiệm công dân trong hội nhập kinh tế quốc tế là:",
+            "options": [
+                "ngừng sản xuất hàng nội.",
+                "nâng cao tay nghề, kiến thức.",
+                "chờ tổ chức quốc tế hỗ trợ.",
+                "ưu tiên dùng hàng ngoại."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Quốc gia có GDP cao nhưng ô nhiễm và bất bình đẳng tăng thì:",
+            "options": [
+                "thiếu phát triển bền vững.",
+                "đã phát triển toàn diện.",
+                "thực hiện tốt nội luật hóa.",
+                "tăng trưởng dựa vào tài nguyên."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hành động quản lý thu chi gia đình khoa học là:",
+            "options": [
+                "ghi chép thu chi chi tiết.",
+                "mua sắm theo sở thích.",
+                "vay tiền mua đồ công nghệ.",
+                "tiêu xài hết thu nhập."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Anh V là chủ một cơ sở sản xuất kinh doanh bị cơ quan chức năng xử phạt vi phạm hành chính về môi trường. Cho rằng quyết định xử phạt là quá nặng và không đúng trình tự, anh V đã gửi đơn đề nghị cơ quan cấp trên xem xét lại là đang thực hiện",
+            "options": [
+                "quyền tham gia quản lý nhà nước và xã hội.",
+                "hình thức dân chủ trực tiếp.",
+                "hình thức dân chủ gián tiếp.",
+                "quyền tự do cơ bản về đối ngoại."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Năm 2025, Việt Nam đạt mức tăng trưởng kinh tế (GDP) đạt khoảng 8,02%, đồng thời chỉ số phát triển con người (HDI) và chất lượng môi trường sống được cải thiện rõ rệt thông qua các dự án kinh tế xanh. Chính phủ nhấn mạnh tăng trưởng kinh tế phải đi đôi với công bằng xã hội.",
+            "items": [
+                "Tăng trưởng kinh tế là điều kiện cần nhưng chưa đủ để đạt được phát triển kinh tế.",
+                "Chỉ số GDP tăng cao đồng nghĩa với việc quốc gia đó đã đạt được sự phát triển bền vững về mọi mặt.",
+                "Việc chú trọng vào kinh tế xanh giúp Việt Nam giải quyết mối quan hệ giữa tăng trưởng và bảo vệ môi trường.",
+                "Phát triển kinh tế chỉ đơn thuần là sự gia tăng về quy mô sản lượng hàng hóa của quốc gia đó."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Anh A tham gia bảo hiểm xã hội bắt buộc tại công ty. Khi anh gặp tai nạn lao động phải điều trị tại bệnh viện, cơ quan bảo hiểm đã chi trả chi phí khám chữa bệnh và trợ cấp tiền lương trong thời gian anh nghỉ việc.",
+            "items": [
+                "Bảo hiểm xã hội bắt buộc giúp người lao động giảm bớt khó khăn tài chính khi gặp rủi ro sức khỏe.",
+                "Cơ quan bảo hiểm chỉ chi trả cho anh A nếu anh A tự mình đóng 100% mức phí bảo hiểm hàng tháng.",
+                "Chính sách an sinh xã hội góp phần đảm bảo mức sống tối thiểu cho người lao động.",
+                "Bảo hiểm y tế và bảo hiểm xã hội là hai loại hình thuộc hệ thống an sinh xã hội ở nước ta."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Doanh nghiệp Y kinh doanh trong lĩnh vực sản xuất thực phẩm sạch. Doanh nghiệp này luôn nộp thuế đúng hạn, đảm bảo quyền lợi cho người lao động và thường xuyên tham gia các hoạt động từ thiện tại địa phương.",
+            "items": [
+                "Nộp thuế đầy đủ là trách nhiệm pháp lý bắt buộc của doanh nghiệp đối với nhà nước.",
+                "Các hoạt động từ thiện xã hội là nghĩa vụ nhân văn mà pháp luật bắt buộc mọi doanh nghiệp phải thực hiện.",
+                "Việc đảm bảo quyền lợi cho người lao động giúp doanh nghiệp nâng cao uy tín và phát triển bền vững.",
+                "Công dân có quyền giám sát việc thực hiện nghĩa vụ bảo vệ môi trường của các doanh nghiệp."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Việt Nam là thành viên của Liên hợp quốc và tham gia tích cực vào các Công ước quốc tế về quyền con người, biến đổi khí hậu. Việt Nam luôn khẳng định tinh thần thượng tôn pháp luật quốc tế trong việc giải quyết các tranh chấp.",
+            "items": [
+                "Pháp luật quốc tế là hệ thống các nguyên tắc và quy tắc được các quốc gia cùng thỏa thuận xây dựng.",
+                "Khi tham gia vào các điều ước quốc tế, Việt Nam có nghĩa vụ nội luật hóa các cam kết vào hệ thống pháp luật quốc gia.",
+                "Các quốc gia lớn có quyền áp đặt luật pháp của mình lên các quốc gia nhỏ hơn theo luật quốc tế.",
+                "Giải quyết tranh chấp bằng biện pháp hòa bình là một nguyên tắc cơ bản của luật pháp quốc tế hiện nay."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

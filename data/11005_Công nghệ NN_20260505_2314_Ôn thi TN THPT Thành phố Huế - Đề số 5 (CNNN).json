@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "11",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 5 (CNNN)",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "11005",
+    "part1": [
+        {
+            "q": "Loại phân bón nào sau đây không phải là phân bón hóa học?",
+            "options": [
+                "Phân lân",
+                "Phân vi lượng",
+                "Phân bón vi sinh chuyển hóa lân",
+                "Phân hỗ hợp NPK"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ý nào sau đây không đúng khi nói về lai giống?",
+            "options": [
+                "Lai giống là cho giao phối giữa con đực và con cái thuộc các giống khác nhau.",
+                "Lai giống là cho giao phối giữa con đực và con cái thuộc cùng một giống.",
+                "Lai giống giúp bổ sung các tính trạng tốt ở các giống khác nhau và khai thác ưu thế lai ở đời con.",
+                "Lai giống gồm lai kinh tế, lai cải tiến, lai cải tạo."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Loại thức ăn tinh nào được sử dụng chế biến thức ăn chăn nuôi ?",
+            "options": [
+                "Vỏ quả dừa",
+                "Vỏ đậu",
+                "Bột sắn",
+                "Xơ dừa"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong chăn nuôi, nguy cơ phát sinh bệnh cũng như hiệu quả trong kiểm soát bệnh không có liên quan đến yếu tố nào sau đây?",
+            "options": [
+                "Chi phí đầu tư nguyên vật liệu",
+                "Con giống",
+                "Kĩ thuật nuôi dưỡng, chăm sóc",
+                "Yếu tố môi trường"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong chăn nuôi, nguy cơ phát sinh bệnh cũng như hiệu quả trong kiểm soát bệnh không có liên quan đến yếu tố nào sau đây?",
+            "options": [
+                "Cung cấp không gian sống cho gia súc.",
+                "Cung cấp gỗ cho một số ngành công nghiệp chế biến, xây dựng cơ bản, tiêu dùng xã hội.",
+                "Tăng sản lượng lương thực.",
+                "Giảm lượng mưa trung bình hằng năm cho vùng miền núi."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ý nào dưới đây không đúng khi nói về yêu cầu cơ bản đối với người lao động của một số ngành nghề phổ biến trong lâm nghiệp?",
+            "options": [
+                "Có sức khoẻ tốt, chăm chỉ, chịu khó và có trách nhiệm cao trong công việc.",
+                "Có kiến thức cơ bản về quy luật phát sinh, phát triển của cây rừng.",
+                "Có khả năng sử dụng, vận hành các thiết bị, máy móc trong trồng rừng, chăm sóc rừng, khai thác và bảo vệ rừng.",
+                "Yêu thích các môn học như Ngữ văn, Toán học, tiếng Anh, Công nghệ."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Có các bước trong quy trình kĩ thuật trồng rừng bằng cây con có bầu như sau:<br>(1) Tạo hố trồng cây<br>(2) Đặt cây vào hố<br>(3) Rạch và xé bỏ vỏ bầu<br>(4) Lấp đất lần 1<br>(5) Vun gốc<br>(6) Lấp đất lần 2<br>Thứ tự các bước trồng rừng bằng cây con có bầu nào dưới đây là đúng?",
+            "options": [
+                "(1) →(3)→ (2)→ (4)→ (6)→ (5)",
+                "(1) →(2)→ (3)→ (5)→ (4)→ (6)",
+                "(1) →(3)→ (2)→ (4)→ (5)→ (6)",
+                "(1) →(4)→ (3)→ (2)→ (6)→ (5)"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phương pháp hoặc dụng cụ nào không sử dụng để xác định hàm lượng ammonia trong nước?",
+            "options": [
+                "Máy đo điện tử.",
+                "KIT so màu.",
+                "Phân tích, chuẩn độ trong phòng thí nghiệm.",
+                "Đĩa secchi."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Có các bước trong quy trình làm tôm chua như sau:<br>(1) Chuẩn bị gia vị<br>(2) Ngâm tôm cùng gia vị<br>(3) chuẩn bị và sơ chế nguyên liệu<br>Thứ tự các bước làm tôm chua nào dưới đây là đúng?",
+            "options": [
+                "(3) →(1)→ (2)",
+                "(1) →(2)→ (3)",
+                "(1) →(3)→ (2)",
+                "(3) →(2)→ (1)"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Có các nhận định về vai trò của phòng, trị bệnh thủy sản như sau:<br>(1) Bảo vệ các loài thủy sản<br>(2) Loại trừ mầm bệnh, tạo sản phẩm sạch, an toàn cho người tiêu dùng<br>(3) Giảm thiểu thiệt hại kinh tế cho người nuôi<br>(4) Ngăn chặn sự xâm nhập và lây lan mầm bệnh vào môi trường tự nhiên<br>(5) Ổn định các thông số môi trường nuôi<br>Các nhận định đúng là:",
+            "options": [
+                "(5), (2), (3), (4)",
+                "(1), (2), (3), (4)",
+                "(1), (5), (3), (4)",
+                "(1), (2), (3), (5)"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Yêu cầu về độ ẩm của thức ăn công nghiệp là",
+            "options": [
+                "dưới 20%.",
+                "dưới 12%.",
+                "trên 12%.",
+                "từ 20 đến 25%."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Bảo vệ nguồn lợi thuỷ sản có ý nghĩa nào sau đây?",
+            "options": [
+                "Giúp nâng cao hiệu quả của nuôi trồng thuỷ sản.",
+                "Nâng cao sản lượng thuỷ sản khai thác trong tự nhiên.",
+                "Giúp bảo vệ đa dạng sinh học và cân bằng sinh thái.",
+                "Bảo vệ nguồn thuỷ sản đã được khai thác trong tự nhiên."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định nào sau đây không đúng về nhiệm vụ của việc bảo vệ nguồn lợi thủy sản?",
+            "options": [
+                "Dành hành lang cho loài thủy sản di chuyển khi khai thác thủy sản bằng nghề cố định ở các sông, hồ, đầm, phá.",
+                "Xây đập thủy điện chắn đường di cư của cá để cá khỏi gặp bất lợi khi di chuyển",
+                "Thực hiện bảo vệ và khai thác thủy sản theo quy định của pháp luật",
+                "Quy định tiêu chí và ban hành danh mục nghề, ngư cụ cấm sử dụng khai thác thủy sản mang tính tuyệt diệt."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Vì sao việc ứng dụng hệ thống thu gom trứng tự động trong mô hình chăn nuôi gà đẻ trứng với quy mô công nghiệp là cần thiết?<br>Chọn các ý em cho là đúng<br>1. Vì giúp quá trình thu gom trứng đạt hiệu quả cao.<br>2. Vì giúp giải phóng sức lao động cho người chăn nuôi.<br>3. Vì giúp lưu trữ, cung cấp thông tin về số lượng trứng, chất lượng trứng của từng cá thể vật nuôi.<br>4. Vì người chăn nuôi dễ dàng vận hành và đầu tư trong chăn nuôi.",
+            "options": [
+                "1, 2, 3",
+                "1, 2, 4",
+                "2, 3, 4",
+                "1, 3, 4"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Vì sao phương thức khai thác trắng không áp dụng ở nơi có độ dốc cao, lượng mưa nhiều?",
+            "options": [
+                "Chặt toàn bộ cây rừng làm đất trống đất dễ bị sạt lở.",
+                "Mật độ cây không nhiều, khai thác trắng không đạt năng suất.",
+                "Mưa nhiều làm trôi gỗ sau khi khai thác.",
+                "Gây khó khăn cho việc sử dụng máy mọc hiện đại để khai thác."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định nào dưới đây là đúng về quy luật sinh trưởng, phát triển của cây rừng?",
+            "options": [
+                "Cây rừng có khả năng ra hoa, kết quả ngay trong giai đoạn non.",
+                "Sinh trưởng đường kính và chiều cao của cây rừng đạt kích thước cực đại ở giai đoạn thành thục.",
+                "Cây rừng ra hoa, kết quả đạt số lượng nhiều và chất lượng cao nhất ở giai đoạn gần thành thục.",
+                "Khả năng sinh trưởng về đường kính, chiều cao ở các giai đoạn của cây rừng là như nhau."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong các hình thức nuôi sau đây, hình thức nào thường tích tụ nhiều chất hữu cơ trong nước hơn?",
+            "options": [
+                "Nuôi tôm trong rừng ngập mặn.",
+                "Nuôi xen canh cá – lúa.",
+                "Nuôi xen canh tôm – rong biển.",
+                "Nuôi thâm canh đơn loài."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đâu không phải ý nghĩa của việc ứng dụng chỉ thị phân tử trong chọn giống thủy sản?",
+            "options": [
+                "Nhằm chọn các cá thể mang gene mong muốn như mang gene kháng bệnh, gene chịu lạnh.",
+                "Nhằm xác định chính xác những cá thể mang gene mong muốn ngay ở giai đoạn phát triển sớm.",
+                "Cần yêu cầu cao về kĩ thuật và trang thiết bị.",
+                "Rút ngắn thời gian chọn giống, giảm chi phí và công lao động."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định vào sau đây không đúng khi nói về tác dụng của việc xử lí nước trước khi thả giống?",
+            "options": [
+                "Ngăn chặn sinh vật tạp xâm nhập vào ao.",
+                "Giảm độ pH xuống dưới 6,5 tạo môi trường thích hợp cho động vật thủy sản.",
+                "Tạo hệ vi sinh vật có lợi cho môi trường nuôi thủy sản.",
+                "Tiêu diệt vi sinh vật gây hại trong môi trường nuôi thủy sản."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Giống thuỷ sản theo tiêu chuẩn VietGAP cần đảm bảo những yêu cầu sau đây?<br>(1) Con giống phải nằm trong danh mục các loài thuỷ sản được phép kinh doanh.<br>(2) Con giống phải đảm bảo chất lượng và được kiểm dịch theo quy định.<br>(3) Quá trình vận chuyển con giống phải đảm bảo không ảnh hưởng đến sức sống, chất lượng con giống.<br>(4) Khi thả giống, lưu ý cân bằng giữa môi trường ao (bể) nuôi và môi trường nước vận chuyển, tránh gây sốc cho con giống.<br>(5) Mật độ và mùa vụ thả phải tuân theo quy trình nuôi.<br>Số phương án đúng là:",
+            "options": [
+                "5.",
+                "2.",
+                "4.",
+                "3."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cho các tiêu chí sau:<br>1. Các toà nhà cao tầng không có nhiều không gian cho việc trồng cây trên đất<br>2. Nhu cầu được sử dụng rau sạch không nhiễm sâu bệnh<br>3. Ở nông thôn với diện tích đất trồng rộng lớn, nông dân có kinh nghiệm trồng cây đơn giản.<br>4. Áp dụng công nghệ tiên tiến với kĩ thuật trồng cây hiện đại<br>Theo em, tiêu chí nào dùng để đánh giá lí do nên lựa chọn phương pháp trồng cây thủy canh?",
+            "options": [
+                "1, 2, 3.",
+                "2, 3, 4.",
+                "1, 3, 4.",
+                "1, 2, 4"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ứng dụng công nghệ Biofloc trong nuôi trồng thủy sản được coi là một hướng đi mới của công nghệ sinh học, Việt Nam đã áp dụng thành công công nghệ Biofloc trong nuôi đối tượng thủy sản nào?",
+            "options": [
+                "Cá rô phi và lươn",
+                "Cá chép và tôm sú",
+                "Cá rô phi và tôm thẻ chân trắng",
+                "Cá chép và tôm thẻ chân trắng"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Giả sử, gia đình em có 20 lồng nuôi cá với kích thước mỗi lồng nuôi là 3mx3mx3m, phần lồng nuôi nỗi trên mặt nước là 0,5m. Nếu thả cá rô phi đơn tính với mật độ 40con/m3 thì cần bao nhiêu con giống?",
+            "options": [
+                "1800 con.",
+                "8000 con.",
+                "18000 con.",
+                "180000 con."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ao nuôi tôm sú thâm canh có diện tích 600m 2 độ sâu 1,2m. Ao nuôi xuất hiện bệnh đốm trắng, tôm chết hàng loạt. Kĩ thuật viên cần xử lí khử trùng bằng chlorine dạng bột cho ao trước khi thải ra ngoài, liều lượng xử lí là 50mg/L. Vậy kĩ thuật viên cần sử dụng bao nhiêu chlorine cho ao?",
+            "options": [
+                "36g.",
+                "50kg.",
+                "36kg.",
+                "50g."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Hiện trạng một khu rừng tự nhiên tại một xã thuộc vùng trung du và miền núi phía Bắc như sau: tán rừng thưa, các cây gỗ lâu năm không còn, thành phần cây bụi và cây gỗ đường kính nhỏ chiếm chủ yếu. Một phần diện tích có rừng che phủ trước đây hiện đang trồng ngô và sắn. Người ta đưa ra một số nhận định về thực trạng khu rừng tự nhiên này như sau:",
+            "items": [
+                "Tài nguyên rừng đang bị suy thoái nghiêm trọng khi diện tích rừng ngày càng thu hẹp do việc lấy đất trồng cây nông nghiệp.",
+                "Đây là hướng chuyển đổi mục đích đất rừng hợp lí, chuyển đổi đất trồng rừng sang trồng cây nông nghiệp để kịp thời cung cấp lương thực, thực phẩm cho người dân.",
+                "Cán bộ quản lí lâm nghiệp tại địa phương cần gấp rút tổ chức các buổi tuyên truyền kiến thức về khai thác và bảo vệ rừng đúng cách cho người dân biết.",
+                "Không nên chuyển đổi đất trồng rừng sang trồng cây nông nghiệp mà nên chuyển đổi đất trồng rừng sang quy hoạch xây dựng các khu du lịch sinh thái để phục vụ nhu cầu du lịch sinh thái về nguồn ngày càng tăng cao."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Trong buổi đi thực tế tham quan mô hình nuôi cá rô phi trong lồng trên sông tại khu vực sông Bồ thuộc xã Quảng Phú, huyện Quảng Điền. Nhiều học sinh nhìn thấy một số cá chết nỗi lên mặt nước. Nhiều ý kiến được đưa ra để xử lí trường hợp trên. Đối với trường hợp dịch bệnh xảy ra tại lồng nuôi cá rô phi, người nuôi có thể xử lí bằng các cách như sau:",
+            "items": [
+                "Vớt loại bỏ cá chết, cá bệnh nặng ra khỏi lồng nuôi, gửi mẫu cá có biểu hiện bệnh đến các phòng thí nghiệm, xin tư vấn của nhà chuyên môn.",
+                "Thu hoạch sớm tất cả cá trong lồng nuôi để tránh bệnh lây nhiễm toàn bộ lồng nuôi.",
+                "Điều trị cho cá bằng các loại thuốc theo đúng liều lượng, cách dùng theo quy định sau đó thu hoạch ngay để tránh cá tái phát bệnh.",
+                "Có thể sử dụng viên treo TCCA cho cá ăn mỗi ngày để tăng cường sức đề kháng cho cá."
+            ],
+            "ans": [
+                true,
+                false,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng tỉ lệ thành phần dinh dưỡng trong thức ăn của một số loài thủy sản nuôi như sau:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Loại thủy sản</td><td>Tỉ lệ các thành phần dinh dưỡng trong thức ăn (%)</td><td>Tỉ lệ các thành phần dinh dưỡng trong thức ăn (%)</td><td>Tỉ lệ các thành phần dinh dưỡng trong thức ăn (%)</td><td>Tỉ lệ các thành phần dinh dưỡng trong thức ăn (%)</td></tr><tr><td>Loại thủy sản</td><td>Protein</td><td>Lipid</td><td>Chất xơ thô</td><td>Chất vô cơ</td></tr><tr><td>Cá quả</td><td>40</td><td>5</td><td>6</td><td>12-14</td></tr><tr><td>Cá rô phi giống</td><td>35</td><td>5</td><td>6</td><td>12-14</td></tr><tr><td>Cá rô phi thương phẩm</td><td>30</td><td>6</td><td>7</td><td>12-14</td></tr><tr><td>Tôm thẻ chân trắng</td><td>40</td><td>5</td><td>4</td><td>-</td></tr></table><br>Nguồn: Nhà xuất bản giáo dục Viẹt Nam/SGK Công nghệ 12 lâm nghiệp, thủy sản?<br>Dựa vào bảng số lên trên, có một số nhận định được đưa ra như sau:",
+            "items": [
+                "Mỗi loài thủy sản khác nhau có tỉ lệ thành phần dinh dưỡng trong thức ăn khác nhau.",
+                "Trong nuôi cá rô phi, trọng lượng cá rô phi tỉ lệ thuận với tỉ lệ protein có trong thức ăn.",
+                "Cho động vật thủy sản ăn các loại thức ăn như giun quế, cá tạp để cung cấp protein cho sự sinh trưởng và phát triển.",
+                "Khi lựa chọn thức ăn cho động vật thủy sản, chúng ta cần lưu ý đến hàm lượng lipid, nên lựa chọn các nguồn thức ăn chứa tỉ lệ lipid cao như cám gạo để tốt cho sức khỏe của động vật thủy sản."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Theo tổng kết của Cục thủy sản Việt Nam về nhu cầu thức ăn chăn nuôi tại Việt Nam từ năm 2015 – 2018 như sau:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td></td><td>Nhu cầu thức ăn chăn nuôi tại Việt Nam từ năm 2015-2018 (Đơn vị: tấn)</td><td>Nhu cầu thức ăn chăn nuôi tại Việt Nam từ năm 2015-2018 (Đơn vị: tấn)</td><td>Nhu cầu thức ăn chăn nuôi tại Việt Nam từ năm 2015-2018 (Đơn vị: tấn)</td><td>Nhu cầu thức ăn chăn nuôi tại Việt Nam từ năm 2015-2018 (Đơn vị: tấn)</td><td>Nhu cầu thức ăn chăn nuôi tại Việt Nam từ năm 2015-2018 (Đơn vị: tấn)</td></tr><tr><td>Loại thức ăn</td><td></td><td>2015</td><td>2016</td><td>2017</td><td>2018</td></tr><tr><td>Loại thức ăn</td><td>Thức ăn chăn nuôi</td><td>20.872.000</td><td>28.694.075</td><td>21.787.720</td><td>22.700.000</td></tr><tr><td>Loại thức ăn</td><td>Thức ăn thủy sản</td><td>5.226.000</td><td>5.475.000</td><td>5.700.000</td><td>5.800.000</td></tr><tr><td>Sản xuất công nghiệp</td><td>Thức ăn chăn nuôi</td><td>15.947.000</td><td>16.623.000</td><td>17.223.000</td><td>18.000.000</td></tr><tr><td>Sản xuất công nghiệp</td><td>Thức ăn thủy sản</td><td>2.700.000</td><td>3.000.000</td><td>3.300.000</td><td>3.500.000</td></tr></table><br>Nguồn:https://nhachannuoi.vn/tong-nhu-cau-thuc-chan-nuoi-cua-viet-nam-giai-doan-2016-2018/",
+            "items": [
+                "Nhu cầu về thức ăn thủy sản ở giai đoạn 2015-2018 có xu hướng giảm qua từng năm.",
+                "Thức ăn thủy sản được sản xuất theo quy mô công nghiệp trung bình từ 2015 đến 2018 là 3.125.000 tấn.",
+                "Tỉ lệ nhu cầu thức ăn thủy sản so với thức ăn chăn nuôi của năm 2015 cao hơn tỉ lệ của năm 2018.",
+                "Tỉ lệ thức ăn thủy sản được sản xuất theo quy mô công nghiệp so với thức ăn chăn nuôi năm 2016 là 0.18."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

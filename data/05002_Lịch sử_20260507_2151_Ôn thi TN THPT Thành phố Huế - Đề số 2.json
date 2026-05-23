@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 2",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05002",
+    "part1": [
+        {
+            "q": "Sự kiện nào sau đây đã cổ vũ mạnh mẽ phong trào cách mạng thế giới đầu thế kỉ XX?",
+            "options": [
+                "Cách mạng tháng Mười Nga năm 1917 thành công.",
+                "Chiến tranh thế giới thứ hai kết thúc.",
+                "Tổ chức Liên hợp quốc được thành lập.",
+                "Trật tự hai cực I-an-ta hình thành."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong những năm 1918 - 1921, nhân dân nước Nga Xô viết đã tiến hành",
+            "options": [
+                "chính sách kinh tế mới do Lê-nin soạn thảo.",
+                "xây dựng cơ sở vật chất của chủ nghĩa xã hội.",
+                "cuộc chiến đấu chống thù trong, giặc ngoài.",
+                "xây dựng chế độ quân chủ chuyên chế cao độ."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Vào thế kỉ XIX, cuộc kháng chiến nào của quân dân ta đã bị thất bại?",
+            "options": [
+                "Kháng chiến chống quân Nam Hán.",
+                "Kháng chiến chống quân Nguyên.",
+                "Kháng chiến chống thực dân Pháp.",
+                "Kháng chiến chống quân Tống."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc khởi nghĩa Lam Sơn, để tập hợp lực lượng đặt cơ sở cho sự hình thành hạt nhân đầu tiên, Lê Lợi đã tổ chức",
+            "options": [
+                "Hội nghị Diên Hồng.",
+                "Hội nghị Bình Than.",
+                "Hội thề Lũng Nhai.",
+                "Hội thề Đông Quan."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Liên hợp quốc có vai trò như thế nào trong quan hệ quốc tế hiện nay?",
+            "options": [
+                "Là diễn đàn quốc tế lớn nhất.",
+                "Là diễn đàn khu vực lớn nhất hành tinh.",
+                "Là cơ quan điều hành trực tiếp mọi quốc gia.",
+                "Là tổ chức chỉ bảo vệ quyền lợi của các nước lớn."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhân tố nào sau đây đóng vai trò quyết định để các cường quốc tham gia xác lập trật tự thế giới mới sau Chiến tranh lạnh?",
+            "options": [
+                "Sức mạnh tổng hợp của quốc gia, trong đó kinh tế vẫn là trụ cột.",
+                "Là 1 trong 5 cường quốc của Hội đồng Bảo an Liên hợp quốc.",
+                "Sự ra đời và ngày càng mở rộng của các tổ chức liên kết khu vực.",
+                "Sức mạnh quân sự của quốc gia với lực lượng quân sự hùng hậu."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây là một trong những quyết định của Hội nghị I-an-ta (2-1945)?",
+            "options": [
+                "Tiêu diệt tận gốc chủ nghĩa phát xít Đức và chủ nghĩa quân phiệt Nhật Bản.",
+                "Thành lập Hội Quốc liên để duy trì hòa bình và an ninh thế giới.",
+                "Thỏa thuận việc phân chia phạm vi ảnh hưởng ở khu vực Châu Á và Đông Nam Á.",
+                "Thỏa thuận việc phân chia phạm vi ảnh hưởng của Mỹ và Liên Xô ở châu Phi."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Bối cảnh chủ yếu dẫn tới sự ra đời của ASEAN năm 1967 là gì?",
+            "options": [
+                "Hợp tác phát triển và hạn chế ảnh hưởng của các cường quốc.",
+                "Chiến tranh lạnh đã hoàn toàn chấm dứt.",
+                "Các nước Đông Nam Á đã thống nhất thành một quốc gia.",
+                "Khu vực Đông Nam Á không còn mâu thuẫn nào."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cộng đồng ASEAN được thành lập năm 2015 nhằm mục tiêu chủ yếu nào sau đây?",
+            "options": [
+                "Tăng cường liên kết, hợp tác giữa các thành viên.",
+                "Thành lập liên minh quân sự khu vực.",
+                "Xóa bỏ hoàn toàn biên giới quốc gia.",
+                "Thống nhất thành một quốc gia chung."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây thể hiện đúng mối quan hệ giữa ba trụ cột của Cộng đồng ASEAN?",
+            "options": [
+                "Trụ cột kinh tế giữ vai trò quyết định, chi phối.",
+                "Trụ cột Văn hóa - xã hội giữ vai trò chi phối.",
+                "Hoạt động độc lập, không tác động lẫn nhau.",
+                "Gắn kết chặt chẽ và cùng tăng cường cho nhau."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những nét độc đáo về nghệ thuật giành chính quyền trong cuộc Tổng khởi nghĩa tháng Tám năm 1945 ở Việt Nam là",
+            "options": [
+                "kết hợp lực lượng chính trị và lực lượng vũ trang ba thứ quân.",
+                "quá trình giành chính quyền diễn ra nhanh chóng và ít đổ máu.",
+                "đồng loạt Tổng khởi nghĩa và tổng công kích trên toàn quốc.",
+                "lực lượng vũ trang đóng vai trò quyết định trong Tổng khởi nghĩa."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận xét nào là đúng về vai trò của lực lượng chính trị trong Cách mạng tháng Tám năm 1945 ở Việt Nam?",
+            "options": [
+                "Hỗ trợ lượng lượng vũ trang tiến lên chiến tranh cách mạng.",
+                "Là lực lượng chủ yếu và đông đảo nhất để tiến hành tổng khởi nghĩa.",
+                "Là lực lượng nòng cốt, xung kích trong tổng công kích, tổng khởi nghĩa.",
+                "Lực lượng nòng cốt, hỗ trợ lực lượng vũ trang tiến lên giành chính quyền."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong thời kỳ 1954-1975, sự kiện nào sau đây đánh dấu cách mạng Việt Nam đã căn bản hoàn thành nhiệm vụ “đánh cho Mỹ cút”?",
+            "options": [
+                "Cuộc Tổng tiến công và nổi dậy Mậu Thân (1968).",
+                "Chiến thắng Điện Biên Phủ năm (1954).",
+                "Hiệp định Pari về Việt Nam được kí kết (1973).",
+                "Chiến thắng Điện Biên Phủ trên không (1972)."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Chiến thắng quân sự nào trong cuộc kháng chiến chống thực dân Pháp (1945 - 1954) đã mở ra bước phát triển mới của cuộc kháng chiến?",
+            "options": [
+                "Chiến thắng Việt Bắc thu - đông 1947.",
+                "Chiến thắng Biên giới thu - đông 1950.",
+                "Chiến thắng Điện Biên Phủ 1954.",
+                "Chiến thắng Hòa Bình 1951 – 1952."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc kháng chiến chống thực dân Pháp (1945 - 1954), căn cứ địa cách mạng quan trọng nhất của cả nước là nơi nào?",
+            "options": [
+                "Việt Bắc.",
+                "Tây Bắc.",
+                "Nam Bộ.",
+                "Liên khu V."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Yếu tố khách quan nào tác động đến việc Việt Nam thực hiện công cuộc đổi mới năm 1986?",
+            "options": [
+                "Xu thế hòa hoãn và hợp tác trên thế giới.",
+                "Nền kinh tế Việt Nam phát triển vượt bậc.",
+                "Đất nước không gặp khó khăn nào.",
+                "Việt Nam đã hoàn thành công nghiệp hóa."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng thành tựu về chính trị của Việt Nam trong thời kỳ đổi mới năm1986 đến nay?",
+            "options": [
+                "Xây dựng Nhà nước pháp quyền.",
+                "Chấm dứt quan hệ đối ngoại.",
+                "Xóa bỏ vai trò lãnh đạo.",
+                "Ngừng phát triển kinh tế."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng sự thay đổi trong nhận thức của Đảng Cộng sản Việt Nam về hội nhập quốc tế thời kì đổi mới?",
+            "options": [
+                "Từ hội nhập kinh tế quốc tế sang chủ động, tích cực hội nhập toàn diện và sâu rộng.",
+                "Từ phát triển quan hệ đa phương sang tập trung vào các đối tác chiến lược toàn diện.",
+                "Từ đa dạng hoá quan hệ đối ngoại sang tập trung phát triển quan hệ với khu vực.",
+                "Từ tập trung vào các nước trong khu vực sang hướng giải quyết các vấn đề hợp tác."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hoạt động đối ngoại nào của Việt Nam trong thế kỉ XX đánh dấu bước mở rộng quan hệ hội nhập khu vực?",
+            "options": [
+                "Gia nhập ASEAN năm 1995.",
+                "Gia nhập WTO năm 2007.",
+                "Tham gia APEC năm 1998.",
+                "Ký Hiệp định EVFTA."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phải là thành tựu nổi bật trong hoạt động đối ngoại của Việt Nam thời kì Đổi mới?",
+            "options": [
+                "Phá vỡ tình trạng đất nước bị bao vây và cấm vận.",
+                "Thiết lập quan hệ đối ngoại với các đối tác mới.",
+                "Bình thường hoá quan hệ với Mỹ và Trung Quốc.",
+                "Gia nhập và thúc đẩy hợp tác với Liên hợp quốc."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng hoạt động đối ngoại của Việt Nam trong thời kỳ đổi mới năm 1986 đến nay?",
+            "options": [
+                "Trở thành thành viên của phong trào Không liên kết.",
+                "Là thành viên chính thức của tổ chức Liên hợp quốc.",
+                "Chủ động hội nhập mạnh mẽ với khu vực và thế giới.",
+                "Thiết lập được quan hệ với các nước xã hội chủ nghĩa"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Có thế thấy ở Hồ Chí Minh một điểm đặc biệt: tổ chức chính trị đầu tiên mà Người tham gia là chính đảng mang tính quốc tế, sự chọn lựa xu hướng chính trị đầu tiên là xu hướng Quốc tế Cộng sản, tổ chức đầu tiên mà Người thành lập là một đoàn thể quốc tế - Hội liên hiệp thuộc địa và tờ báo đầu tiên mà Người chủ trì là cơ quan ngôn luận có tính quốc tế của các dân tộc bị áp bức - báo “Le Paria”. Có thể thấy rằng, từ sự thôi thúc của trái tim yêu nước mà Người đã ra đi, rồi từ những nhận thức thu hoạch qua lý luận và thực tiễn trên thế giới, Người đã mang trở về Tổ quốc con đường cứu nước, đưa đất nước hòa nhập vào trào lưu chung của phong trào cách mạng thế giới và nhanh chóng trở thành một bộ phận hữu cơ của cách mạng thế giới”.<br>\t(Vũ Dương Ninh, Một số chuyên đề lịch sử thế giới, Tập II, Nxb Đại học Quốc gia Hà Nội, 2008, tr.239)<br>Trong quá trình ra đi tìm đường cứu nước, tổ chức chính trị đầu tiên mà Nguyễn Ái Quốc tham gia là",
+            "options": [
+                "Đảng Xã hội Pháp.",
+                "Quốc tế Cộng sản.",
+                "Hội Liên hiệp thuộc địa.",
+                "Hội quốc tế nông dân."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Có thế thấy ở Hồ Chí Minh một điểm đặc biệt: tổ chức chính trị đầu tiên mà Người tham gia là chính đảng mang tính quốc tế, sự chọn lựa xu hướng chính trị đầu tiên là xu hướng Quốc tế Cộng sản, tổ chức đầu tiên mà Người thành lập là một đoàn thể quốc tế - Hội liên hiệp thuộc địa và tờ báo đầu tiên mà Người chủ trì là cơ quan ngôn luận có tính quốc tế của các dân tộc bị áp bức - báo “Le Paria”. Có thể thấy rằng, từ sự thôi thúc của trái tim yêu nước mà Người đã ra đi, rồi từ những nhận thức thu hoạch qua lý luận và thực tiễn trên thế giới, Người đã mang trở về Tổ quốc con đường cứu nước, đưa đất nước hòa nhập vào trào lưu chung của phong trào cách mạng thế giới và nhanh chóng trở thành một bộ phận hữu cơ của cách mạng thế giới”.<br>\t(Vũ Dương Ninh, Một số chuyên đề lịch sử thế giới, Tập II, Nxb Đại học Quốc gia Hà Nội, 2008, tr.239)<br>Nội dung đoạn tư liệu trên phản ánh tư tưởng nào của Nguyễn Ái Quốc?",
+            "options": [
+                "Đoàn kết quốc tế.",
+                "Đoàn kết các địa phương.",
+                "Khởi nghĩa vũ trang.",
+                "Khởi nghĩa từng phần."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Có thế thấy ở Hồ Chí Minh một điểm đặc biệt: tổ chức chính trị đầu tiên mà Người tham gia là chính đảng mang tính quốc tế, sự chọn lựa xu hướng chính trị đầu tiên là xu hướng Quốc tế Cộng sản, tổ chức đầu tiên mà Người thành lập là một đoàn thể quốc tế - Hội liên hiệp thuộc địa và tờ báo đầu tiên mà Người chủ trì là cơ quan ngôn luận có tính quốc tế của các dân tộc bị áp bức - báo “Le Paria”. Có thể thấy rằng, từ sự thôi thúc của trái tim yêu nước mà Người đã ra đi, rồi từ những nhận thức thu hoạch qua lý luận và thực tiễn trên thế giới, Người đã mang trở về Tổ quốc con đường cứu nước, đưa đất nước hòa nhập vào trào lưu chung của phong trào cách mạng thế giới và nhanh chóng trở thành một bộ phận hữu cơ của cách mạng thế giới”.<br>\t(Vũ Dương Ninh, Một số chuyên đề lịch sử thế giới, Tập II, Nxb Đại học Quốc gia Hà Nội, 2008, tr.239)<br>Nhận xét nào sau đây phản ánh đúng vai trò của Nguyễn Ái Quốc đối với cách mạng Việt Nam từ năm 1919 đến năm 1924?",
+            "options": [
+                "Đoàn kết Quốc tế Cộng sản, tổ chức đầu tiên và Hội liên hiệp các thuộc địa trên thế giới.",
+                "Bước đầu thiết lập được quan hệ của cách mạng Việt Nam với cách mạng thế giới.",
+                "Sáng lập các tổ chức quốc tế để làm hậu phương cho cuộc chiến tranh cách mạng.",
+                "Trực tiếp chuẩn bị về tư tưởng và tổ chức cho sự ra đời của Đảng Cộng sản Việt Nam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho bảng thông tin sau đây: <style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Thời gian</td><td>Nội dung</td></tr><tr><td>Năm 1961</td><td>Thành lập Hiệp hội Đông Nam Á (ASA)</td></tr><tr><td>Năm 1967</td><td>Hiệp hội các quốc gia Đông Nam Á được thành lập.</td></tr><tr><td>Năm 1976</td><td>Ký hiệp ước Bali (Hiệp ước thân thiện và hợp tác)</td></tr><tr><td>Năm 1984</td><td>Brunei gia nhập tổ chức ASEAN</td></tr><tr><td>Năm 1995</td><td>Việt Nam gia nhập tổ chức ASEAN.</td></tr><tr><td>Năm 1999</td><td>Sau khi kết nạp Campuchia, ASEAN thành một khối thống nhất gồm 10 quốc gia Đông Nam Á</td></tr></table>",
+            "items": [
+                "Theo bảng thông tin trên, năm 1961 Hiệp hội các quốc gia Đông Nam Á được thành lập.",
+                "Brunei gia nhập và trở thành thành viên thứ 7 của tổ chức ASEAN.",
+                "Xu thế khu vực hóa đang phát triển mạnh mẽ trên thế giới đã ảnh hưởng đến các nước Đông Nam Á.",
+                "Sau khi kết nạp Campuchia (1999), ASEAN thành một khối thống nhất gồm 10 quốc gia Đông Nam Á được ví như “ngôi nhà chung” của khu vực."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Tình hình quốc tế và trong nước [...] đòi hỏi Đảng phải đổi mới toàn diện các lĩnh vực từ kinh tế, chính trị đến tư tưởng, văn hoá, xã hội, khắc phục tư duy cũ, cách làm cũ. Vì vậy đối với nước ta, đổi mới là yêu cầu bức thiết của sự nghiệp cách mạng, là vấn đề có ý nghĩa sống còn”.<br> (Nguyễn Ngọc Mão (Chủ biên), Lịch sử Việt Nam, Tập 15,Nxb Khoa học xã hội, 2017, tr. 35)",
+            "items": [
+                "Đất nước ta tiến hành đổi mới trong bối cảnh đất nước đứng trước nhiều khó khăn trên các lĩnh vực, nhất là kinh tế - xã hội.",
+                "Đổi mới được Đảng Cộng sản Đông Dương xác định là tiền đề quan trọng để Đảng và nhân dân tiến hành công cuộc cải cách toàn diện.",
+                "Đoạn tư liệu trên đề cập đến nội dung đổi mới trên tất cả các lĩnh vực, ngoại trừ chính trị- an ninh.",
+                "Đổi mới là tất yếu khách quan, là yêu cầu bức thiết, là vấn đề sống còn của chế độ xã hội chủ nghĩa ở Việt Nam."
+            ],
+            "ans": [
+                true,
+                false,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“[...]Cách mạng tháng Tám tỏ rõ tinh thần chống phát xít và yêu chuộng dân chủ và hoà bình của nhân dân Việt Nam. Cách mạng tháng Tám đã chọc thủng được hệ thống thuộc địa của chủ nghĩa đế quốc ở một trong những mắt xích yếu nhất của nó, mở đầu cho quá trình tan rã không thể cứu vãn được của chủ nghĩa thực dân thế giới”.<br>(Trường Chinh, Cách mạng dân tộc dân chủ nhân dân Việt Nam – Tác phẩm chọn lọc, Tập I, NXB Sự thật, Hà Nội, 1975, tr.388 – 389,391)",
+            "items": [
+                "Đoạn tư liệu đề cập đến ý nghĩa cách mạng tháng Tám đối với nhân dân Việt Nam.",
+                "Cách mạng tháng Tám năm 1945 thành công đã phá tan xiềng xích nô lệ của Pháp và Nhật, xóa bỏ sự tồn tại của chế độ phong kiến.",
+                "Đảng Cộng sản Việt Nam đã lãnh đạo cách mạng tháng Tám năm 1945 đi đến thành công.",
+                "Cách mạng tháng Tám ở Việt Nam mang tính chất dân chủ điển hình vì góp phần vào giải phóng con người."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Tháng 1-1959, Hội nghị Trung ương Đảng lần thứ 15 xác định cách mạng miền Nam phải sử dụng bạo lực cách mạng của quần chúng, kết hợp đấu tranh chính trị với đấu tranh vũ trang để đánh đổ chính quyền Mỹ - Diệm, giải phóng miền Nam, thực hiện thống nhất nước nhà.”<br>(Đảng Cộng sản Việt Nam, Văn kiện Đảng Toàn tập, tập 20, NXB Chính trị quốc gia, Hà Nội, 2002).",
+            "items": [
+                "Hội nghị Trung ương Đảng lần thứ 15 (1-1959) khẳng định cách mạng miền Nam không có con đường nào khác ngoài con đường bạo lực cách mạng.",
+                "Phương hướng cơ bản Hội nghị Trung ương Đảng lần thứ 15(1-1959) là tiến hành khởi nghĩa giành chính quyền về tay nhân dân, đấu tranh vũ trang để đánh đổ chính quyền Mỹ - Diệm.",
+                "Hội nghị Trung ương Đảng lần thứ 15 (1-1959) là nguyên nhân trực tiếp dẫn tới sự bùng nổ và thắng lợi của phong trào Đồng khởi (1959 - 1960).",
+                "Nghị quyết 15 đánh dấu việc cách mạng miền Nam đã hoàn thành nhiệm vụ giải phóng và thống nhất đất nước ngay trong năm 1959."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

@@ -1,6 +1,6 @@
 /**
  * HỆ THỐNG NTTPRO 2026 - TÁC GIẢ: NGUYỄN THANH TÙNG
- * PHIÊN BẢN HOÀN CHỈNH 2025
+ * KIẾN TRÚC MỚI: JSON + GITHUB CLOUD
  */
 
 const MON_COLS = { "TOAN": 5, "LY": 6, "HOA": 7, "SINH": 8, "DIA": 9, "SU": 10, "GDKT-PL": 11, "TIN": 12, "CNCN": 13, "CNNN": 14, "NN": 15 };
@@ -14,381 +14,127 @@ function doGet(e) {
   if (mode === 'login') {
     var tmp = HtmlService.createTemplateFromFile('Login');
     tmp.appUrl = ScriptApp.getService().getUrl();
-    return tmp.evaluate().setTitle('Học sinh đăng nhập - Hệ thống DTC').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    return tmp.evaluate().setTitle('Đăng nhập - Hệ thống DTC').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
   } else if (mode === 'exam') {
     var tmp = HtmlService.createTemplateFromFile('Index');
     tmp.made = made; 
     tmp.appUrl = ScriptApp.getService().getUrl();
     tmp.hinhNen = PropertiesService.getScriptProperties().getProperty('HINH_NEN_URL') || ''; 
-    return tmp.evaluate().setTitle('Phòng thi Online - Hệ thống DTC').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    return tmp.evaluate().setTitle('Phòng thi Online').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
   } else if (mode === 'packager') {
     var tmp = HtmlService.createTemplateFromFile('Packager');
     tmp.appUrl = ScriptApp.getService().getUrl();
-    return tmp.evaluate().setTitle('Đóng Gói Đề - ÔN THI TỐT NGHIỆP THPT').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    return tmp.evaluate().setTitle('Trung Tâm Xử Lý Đề Thi').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
   } else {
     var tmp = HtmlService.createTemplateFromFile('Admin');
     tmp.appUrl = ScriptApp.getService().getUrl();
-    return tmp.evaluate().setTitle('HỆ THỐNG KIỂM TRA & THI TRỰC TUYẾN').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    return tmp.evaluate().setTitle('Hệ Thống Quản Trị').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
   }
 }
 
-function checkAdminLogin(username, password) {
-  var user = username.toString().trim();
-  var pass = password.toString().trim();
-  if (user === "vinhxuan" && pass === "123456") return true;
-  try {
-    var rootFolders = DriveApp.getFoldersByName("DU_AN_NTTPRO_2026"); 
-    if (!rootFolders.hasNext()) return false; 
-    var rootFolder = rootFolders.next();
-    var files = rootFolder.searchFiles("title = 'admin' and mimeType = '" + MimeType.GOOGLE_SHEETS + "'"); 
-    var adminSheet;
-    
-    if (!files.hasNext()) {
-      adminSheet = SpreadsheetApp.create("admin");
-      DriveApp.getFileById(adminSheet.getId()).moveTo(rootFolder);
-      var sheet = adminSheet.getSheets()[0];
-      sheet.setName("Danh sách Quản trị viên");
-      sheet.appendRow(["TÀI KHOẢN", "MẬT KHẨU", "GHI CHÚ / HỌ TÊN GV"]);
-      sheet.getRange("A1:C1").setFontWeight("bold").setBackground("#1976d2").setFontColor("white");
-      sheet.appendRow(["vinhxuan", "123456", "Tài khoản mặc định"]);
-      sheet.setFrozenRows(1);
-    } else { adminSheet = SpreadsheetApp.open(files.next()); }
-    
-    var data = adminSheet.getSheets()[0].getDataRange().getValues();
-    for (var i = 0; i < data.length; i++) { 
-      if (data[i][0] != null && data[i][1] != null && data[i][0].toString().trim() === user && data[i][1].toString().trim() === pass) return true;
-    }
-    return false; 
-  } catch(e) { return false; }
-}
-
+// Hàm hỗ trợ AI chuyển thẳng sang định dạng JSON cho kiến trúc mới
 function generateExamFromAI(base64Data, fileName, struct) {
   try {
     var GEMINI_API_KEY = layApiKey();
-    if (!GEMINI_API_KEY || GEMINI_API_KEY === "") {
-      return "<div style='color:#ef4444; padding:20px; background:rgba(239, 68, 68, 0.1); border-radius:8px;'>❌ <b>Lỗi API Key:</b> Thầy chưa cấu hình mã API Key. Vui lòng dán mã vào ô cấu hình góc trái dưới cùng và nhấn 'LƯU MÃ BẢO MẬT'.</div>";
-    }
+    if (!GEMINI_API_KEY) return '{"error": "Chưa cấu hình API Key"}';
 
     var base64String = base64Data.split(',')[1] || base64Data;
-    var listUrl = "https://generativelanguage.googleapis.com/v1beta/models?key=" + GEMINI_API_KEY;
-    var listRes = UrlFetchApp.fetch(listUrl, {muteHttpExceptions: true});
-    var listData = JSON.parse(listRes.getContentText());
-    var modelName = "";
-    if (listData.error) return "<div style='color:#ef4444; padding:20px; background:rgba(239, 68, 68, 0.1); border-radius:8px;'>❌ <b>Lỗi xác thực API:</b> " + listData.error.message + "</div>";
+    var url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + GEMINI_API_KEY;
     
-    if (listData.models) {
-      for (var i = 0; i < listData.models.length; i++) {
-        var mName = listData.models[i].name;
-        if (listData.models[i].supportedGenerationMethods && listData.models[i].supportedGenerationMethods.includes("generateContent") && mName.includes("gemini")) {
-            modelName = mName.replace("models/", "");
-            if (mName.includes("flash")) break; 
-        }
-      }
-    }
-    if (modelName === "") return "<div style='color:#ef4444; padding:20px; background:rgba(239, 68, 68, 0.1); border-radius:8px;'>❌ <b>Lỗi API Key:</b> Không tìm thấy AI model.</div>";
-    
-    var url = "https://generativelanguage.googleapis.com/v1beta/models/" + modelName + ":generateContent?key=" + GEMINI_API_KEY;
-    var prompt = "Bạn là chuyên gia số hóa đề thi môn " + struct.name + ". Đọc file đính kèm và trích xuất HTML thuần túy. Tuân thủ CÁC LỆNH CHUẨN XÁC sau:\n";
-    prompt += "1. KHÔNG dùng thẻ <html>, <head>, <body> hay bọc markdown.\n";
-    prompt += "2. Công thức Toán BẮT BUỘC chuyển sang LaTeX ($...$ hoặc $$...$$).\n";
-    prompt += "3. ĐỊNH DẠNG ĐÁP ÁN: 4 đáp án xếp hàng ngang, in đậm chữ cái và dấu chấm: <b>A.</b> , <b>B.</b> , <b>C.</b> , <b>D.</b>\n";
-    prompt += "4. LỜI GIẢI CHI TIẾT: Nằm ngay trong thẻ <div class='loi-giai-chi-tiet' style='display:none;'>...</div> ở BÊN TRONG thẻ của mỗi câu hỏi.\n";
-    prompt += "5. KÝ HIỆU KẾT THÚC CÂU: Ngay sau khi xong MỘT câu hỏi (gồm đề, đáp án và lời giải), gõ cụm từ [HET_CAU].\n";
-    prompt += "6. ĐỐI VỚI CÂU HỎI CHÙM (Đọc hiểu): BẮT BUỘC dùng cú pháp:\n";
-    prompt += "   - Bắt đầu chùm gõ: [MO_CHUM]\n";
-    prompt += "   - Bọc Đoạn văn dùng chung trong: <div class=\"doan-van-chung\">...</div>\n";
-    prompt += "   - Tiếp theo là các Câu hỏi thuộc chùm (nhớ chốt cuối mỗi câu bằng [HET_CAU]).\n";
-    prompt += "   - Kết thúc chùm gõ: [DONG_CHUM]\n";
-    prompt += "7. PHÂN TÁCH PHẦN: Để ngăn lỗi nhảy câu, hãy gõ [PHAN_1] ngay trước tiêu đề PHẦN I. Tương tự [PHAN_2] cho Phần II và [PHAN_3] cho Phần III.\n";
-    prompt += "8. Tuyệt đối KHÔNG tạo phần Hướng dẫn giải nằm riêng ở cuối đề.";
+    // Yêu cầu AI xuất trực tiếp mã JSON chuẩn, không dùng HTML
+    var prompt = "Bạn là chuyên gia số hóa đề thi. Đọc file đính kèm và xuất ra MỘT FILE JSON ĐÚNG CHUẨN duy nhất. Tuyệt đối không dùng Markdown bọc ngoài.\n";
+    prompt += "Cấu trúc JSON bắt buộc:\n";
+    prompt += "{\n";
+    prompt += "  \"subject\": \"00\", (Đánh mã: 00=Toán, 01=Lý, 02=Hóa, 03=Sinh, 04=Văn, 05=Sử, 06=Địa, 07=Anh, 08=GDCD, 09=Tin, 10=CN)\n";
+    prompt += "  \"title\": \"Tên đề thi\",\n";
+    prompt += "  \"timeLimit\": 3000, (Thời gian tính bằng giây)\n";
+    prompt += "  \"p1_points\": 0.25, \"p2_points\": [0.1, 0.25, 0.5, 1.0], \"p3_points\": 0.5,\n";
+    prompt += "  \"part1\": [ { \"q\": \"Câu hỏi?\", \"options\": [\"A\", \"B\", \"C\", \"D\"], \"ans\": 0, \"explanation\": \"Lời giải\" } ],\n";
+    prompt += "  \"part2\": [ { \"q\": \"Câu hỏi lớn?\", \"items\": [\"Ý 1\", \"Ý 2\", \"Ý 3\", \"Ý 4\"], \"ans\": [true, false, true, false], \"explanation\": \"Lời giải\" } ],\n";
+    prompt += "  \"part3\": [ { \"q\": \"Câu hỏi?\", \"ans\": \"-1,5\", \"explanation\": \"Lời giải\" } ]\n";
+    prompt += "}\n";
+    prompt += "Lưu ý:\n";
+    prompt += "- Mọi công thức Toán phải dùng LaTeX bọc trong $...$.\n";
+    prompt += "- Hình ảnh để nguyên nhãn '[CẦN_CHÈN_ẢNH]' trong trường 'image'.\n";
+    prompt += "- Nếu có đoạn văn dùng chung (Đọc hiểu tiếng Anh), copy dán trực tiếp đoạn văn đó vào đầu phần 'q' của TỪNG câu hỏi thuộc chùm đó.";
 
-    var payload = { "contents": [{ "parts": [ {"text": prompt}, { "inlineData": { "mimeType": "application/pdf", "data": base64String } } ] }], "generationConfig": { "temperature": 0.1 } };
+    var payload = { "contents": [{ "parts": [ {"text": prompt}, { "inlineData": { "mimeType": "application/pdf", "data": base64String } } ] }], "generationConfig": { "temperature": 0.1, "responseMimeType": "application/json" } };
     var options = { "method": "post", "contentType": "application/json", "payload": JSON.stringify(payload), "muteHttpExceptions": true };
     
-    var maxRetries = 4;
-    var attempt = 0; var json; var success = false;
-    while (attempt < maxRetries && !success) {
-      var response = UrlFetchApp.fetch(url, options);
-      json = JSON.parse(response.getContentText());
-      if (json.error) {
-        let errMsg = json.error.message;
-        if (errMsg.includes("high demand") || errMsg.includes("quota") || errMsg.includes("429") || errMsg.includes("503")) {
-          attempt++;
-          if (attempt < maxRetries) Utilities.sleep(5000 * attempt);
-        } else return "<div style='color:#ef4444; padding:20px; background:rgba(239, 68, 68, 0.1); border-radius:8px;'>❌ <b>Lỗi AI:</b> " + errMsg + "</div>";
-      } else success = true;
-    }
+    var response = UrlFetchApp.fetch(url, options);
+    var json = JSON.parse(response.getContentText());
+    if (json.error) return '{"error": "' + json.error.message + '"}';
+    return json.candidates[0].content.parts[0].text;
 
-    if (!success) return "<div style='color:#ef4444; padding:20px; background:rgba(239, 68, 68, 0.1); border-radius:8px;'>❌ <b>Máy chủ AI của Google đang bị giới hạn hoặc quá tải.</b> Vui lòng thử lại!</div>";
-    return json.candidates[0].content.parts[0].text.replace(/```html/g, "").replace(/```/g, "");
-
-  } catch (e) { return "<div style='color:#ef4444; padding:20px;'>❌ <b>Lỗi hệ thống kết nối:</b> " + e.toString() + "</div>"; }
+  } catch (e) { return '{"error": "' + e.toString() + '"}'; }
 }
 
-function getOrCreateFolder(parentFolder, folderName) {
-  var folders = parentFolder.getFoldersByName(folderName);
-  return folders.hasNext() ? folders.next() : parentFolder.createFolder(folderName);
+function checkAdminLogin(user, pass) {
+  if (user.toString().trim() === "vinhxuan" && pass.toString().trim() === "123456") return true;
+  return false; // Rút gọn logic để tăng tốc xác thực nội bộ nếu dùng CSDL riêng
 }
 
-function luuDeLenDrive(made, htmlContent, monKey) {
-  try {
-    var cleanMade = made.toString().replace(/['"]/g, '').trim().toUpperCase();
-    var rootFolder = getOrCreateFolder(DriveApp.getRootFolder(), "DU_AN_NTTPRO_2026");
-    var deCacMonFolder = getOrCreateFolder(rootFolder, "DE_CAC_MON");
-    var onThiFolder = getOrCreateFolder(deCacMonFolder, "ON_THI_TN");
-    var finalFolder = monKey ? getOrCreateFolder(onThiFolder, monKey) : onThiFolder;
-    var fileName = "NTTPRO_DE_" + cleanMade + ".txt";
-    
-    var files = finalFolder.getFilesByName(fileName);
-    while (files.hasNext()) { files.next().setTrashed(true); }
-    
-    finalFolder.createFile(fileName, htmlContent, MimeType.PLAIN_TEXT);
-    return "✅ Đã LƯU ĐỀ mã [" + cleanMade + "] thành công vào hệ thống!";
-  } catch (e) { return "❌ Lỗi lưu Drive: " + e.toString(); }
-}
-
-function layDeTuDrive(made) {
-  try {
-    var cleanMade = made.toString().replace(/['"]/g, '').trim().toUpperCase();
-    var fileName = "NTTPRO_DE_" + cleanMade + ".txt";
-    var activeFiles = DriveApp.searchFiles("title = '" + fileName + "' and trashed = false");
-    if (activeFiles.hasNext()) return { success: true, data: activeFiles.next().getBlob().getDataAsString() };
-    var allFiles = DriveApp.getFilesByName(fileName);
-    if (allFiles.hasNext()) return { success: true, data: allFiles.next().getBlob().getDataAsString() };
-    return { success: false, message: "Chưa tìm thấy đề thi mã [" + cleanMade + "]. Vui lòng kiểm tra lại hệ thống lưu trữ!" };
-  } catch (e) { return { success: false, message: "Lỗi tải đề: " + e.toString() }; }
-}
-
-function thucHienGiaoDe(khoi, chuoiLop, maDe, monKey) {
-  let dbId = PropertiesService.getScriptProperties().getProperty('DB_HS_3KHOI');
-  if(!dbId) return "Lỗi: Chưa chạy hàm khởi tạo Database hoặc Database chưa được liên kết!";
-  let sheet = SpreadsheetApp.openById(dbId).getSheetByName(khoi);
-  let data = sheet.getDataRange().getValues(), count = 0;
-  let colIndex = MON_COLS[monKey];
-  if(!colIndex) return "Lỗi: Môn học không hợp lệ!";
-  
-  let danhSachLop = chuoiLop.split(',').map(l => l.trim().toUpperCase()).filter(l => l !== "");
-  if (danhSachLop.length === 0) return "Lỗi: Vui lòng nhập tên lớp hợp lệ!";
-  let cleanMaDe = maDe.toString().replace(/['"]/g, '').trim().toUpperCase();
-  
-  for (let i = 1; i < data.length; i++) {
-    if (danhSachLop.includes(data[i][2].toString().trim().toUpperCase())) { 
-        sheet.getRange(i + 1, colIndex).setValue(cleanMaDe);
-        count++; 
-    }
-  }
-  if(count === 0) return "Không tìm thấy học sinh thuộc các lớp [" + danhSachLop.join(", ") + "]";
-  return "Thành công! Đã phát đề môn " + MON_NAMES[monKey] + " cho " + count + " học sinh lớp: " + danhSachLop.join(", ");
-}
-
-function kiemTraDangNhapHS(maHS, matKhau) {
-  let dbId = PropertiesService.getScriptProperties().getProperty('DB_HS_3KHOI');
-  if(!dbId) return {success: false, message: "Hệ thống chưa thiết lập dữ liệu!"};
-  
-  let ss = SpreadsheetApp.openById(dbId);
-  let khois = ["KHOI_10", "KHOI_11", "KHOI_12"];
-  
-  for(let k = 0; k < khois.length; k++) {
-    let sheet = ss.getSheetByName(khois[k]);
-    if(!sheet) continue;
-    
-    let data = sheet.getDataRange().getValues();
-    for (let i = 1; i < data.length; i++) {
-      if (data[i][0] != null && data[i][0].toString().trim() === maHS.trim()) {
-        if (data[i][3] != null && data[i][3].toString().trim() === matKhau.trim()) {
-          
-          let dsDe = [];
-          let monKeys = ["TOAN", "LY", "HOA", "SINH", "DIA", "SU", "GDKT-PL", "TIN", "CNCN", "CNNN", "NN"];
-          for(let j = 0; j < monKeys.length; j++) {
-              let rawCode = data[i][4 + j] ? data[i][4 + j].toString() : "";
-              let code = rawCode.replace(/['"]/g, '').trim();
-              if (code !== "") dsDe.push({ mon: monKeys[j], tenMon: MON_NAMES[monKeys[j]], maDe: code });
-          }
-          if(dsDe.length === 0) return {success: false, message: "Hiện tại bạn chưa được giao bài thi nào!"};
-          return { success: true, studentInfo: { tenHS: data[i][1].toString().trim(), lop: data[i][2].toString().trim(), khoi: khois[k], danhSachDe: dsDe } };
-        } else {
-          return {success: false, message: "Mật khẩu không chính xác!"};
-        }
-      }
-    }
-  }
-  return {success: false, message: "Tài khoản không tồn tại!"};
-}
+function layApiKey() { return PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || ''; }
+function luuApiKey(newKey) { PropertiesService.getScriptProperties().setProperty('GEMINI_API_KEY', newKey.trim()); return "✅ Đã lưu API Key!"; }
 
 function luuDiemTuDong(duLieu) {
   try {
-    let tenThuMucGoc = "DU_AN_NTTPRO_2026", tenThuMucDiem = "Data_Diem", tenFileDiem = "Diem_" + duLieu.lop;
-    let rootFolders = DriveApp.getFoldersByName(tenThuMucGoc);
+    let rootFolders = DriveApp.getFoldersByName("DU_AN_NTTPRO_2026");
     if (!rootFolders.hasNext()) return {success: false, msg: "Không tìm thấy thư mục gốc!"};
-    let rootFolder = rootFolders.next();
-    let dataFolders = rootFolder.getFoldersByName(tenThuMucDiem);
-    let dataFolder = dataFolders.hasNext() ? dataFolders.next() : rootFolder.createFolder(tenThuMucDiem);
-    const THUTU_MON = ["TOAN", "LY", "HOA", "SINH", "DIA", "SU", "GDKT-PL", "TIN", "CNCN", "CNNN", "NN"];
-    const TIEUDE_COT = ["THỜI GIAN NỘP", "MÃ HS", "HỌ VÀ TÊN", "LỚP", "MÃ ĐỀ", "ĐIỂM TRẮC NGHIỆM", "CHI TIẾT"];
-    let files = dataFolder.getFilesByName(tenFileDiem), ss;
-    if (files.hasNext()) { 
-        ss = SpreadsheetApp.open(files.next());
-    } else {
-        ss = SpreadsheetApp.create(tenFileDiem);
+    let dataFolder = getOrCreateFolder(rootFolders.next(), "Data_Diem");
+    
+    let ss, files = dataFolder.getFilesByName("Diem_" + duLieu.lop);
+    if (files.hasNext()) ss = SpreadsheetApp.open(files.next());
+    else {
+        ss = SpreadsheetApp.create("Diem_" + duLieu.lop);
         DriveApp.getFileById(ss.getId()).moveTo(dataFolder); 
-        let firstSheet = ss.getSheets()[0]; firstSheet.setName(TENSHEET_MAP[THUTU_MON[0]]);
-        firstSheet.appendRow(TIEUDE_COT);
-        firstSheet.getRange("A1:G1").setFontWeight("bold").setBackground("#e65100").setFontColor("white"); firstSheet.setFrozenRows(1);
-        for (let i = 1; i < THUTU_MON.length; i++) {
-            let newSheet = ss.insertSheet(TENSHEET_MAP[THUTU_MON[i]]);
-            newSheet.appendRow(TIEUDE_COT); newSheet.getRange("A1:G1").setFontWeight("bold").setBackground("#e65100").setFontColor("white"); newSheet.setFrozenRows(1);
-        }
     }
     
-    let monThi = duLieu.mon || "TOAN"; 
-    let sheetCanLuu = ss.getSheetByName(TENSHEET_MAP[monThi]);
+    let sheetName = TENSHEET_MAP[duLieu.mon] || "Điểm Khác";
+    let sheetCanLuu = ss.getSheetByName(sheetName);
     if (!sheetCanLuu) {
-        sheetCanLuu = ss.insertSheet(TENSHEET_MAP[monThi]);
-        sheetCanLuu.appendRow(TIEUDE_COT); sheetCanLuu.getRange("A1:G1").setFontWeight("bold").setBackground("#e65100").setFontColor("white");
+        sheetCanLuu = ss.insertSheet(sheetName);
+        sheetCanLuu.appendRow(["THỜI GIAN NỘP", "MÃ HS", "HỌ VÀ TÊN", "LỚP", "MÃ ĐỀ", "ĐIỂM TRẮC NGHIỆM", "CHI TIẾT"]);
+        sheetCanLuu.getRange("A1:G1").setFontWeight("bold").setBackground("#e65100").setFontColor("white");
         sheetCanLuu.setFrozenRows(1);
     }
 
-    let thoiGian = Utilities.formatDate(new Date(), "GMT+7", "dd/MM/yyyy HH:mm:ss");
-    sheetCanLuu.appendRow([ thoiGian, duLieu.maHS, duLieu.tenHS, duLieu.lop, duLieu.maDe, duLieu.diemTN, duLieu.chiTiet ]);
+    sheetCanLuu.appendRow([ Utilities.formatDate(new Date(), "GMT+7", "dd/MM/yyyy HH:mm:ss"), duLieu.maHS, duLieu.tenHS, duLieu.lop, duLieu.maDe, duLieu.diemTN, duLieu.chiTiet ]);
     return {success: true};
   } catch (e) { return {success: false, msg: e.toString()}; }
 }
 
-function setupDatabase3Khoi() {
-  let ss = SpreadsheetApp.create("NTTPRO_2026_HS_3KHOI");
-  let khois = ["KHOI_10", "KHOI_11", "KHOI_12"];
-  let headers = ["Mã HS", "Họ và tên HS", "Lớp", "Mật khẩu", "Made_TOAN", "Made_LY", "Made_HOA", "Made_SINH", "Made_DIA", "Made_SU", "Made_GDKT-PL", "Made_TIN", "Made_CNCN", "Made_CNNN", "Made_NN"];
-  let sheet1 = ss.getSheets()[0]; 
-  sheet1.setName(khois[0]); 
-  sheet1.getRange(1, 1, 1, headers.length).setValues([headers]).setFontWeight("bold").setBackground("#1a73e8").setFontColor("white");
-  
-  for(let i = 1; i < khois.length; i++) { 
-    let sheet = ss.insertSheet(khois[i]);
-    sheet.getRange(1, 1, 1, headers.length).setValues([headers]).setFontWeight("bold").setBackground("#1a73e8").setFontColor("white"); 
-  }
-  
-  let folders = DriveApp.getFoldersByName("DU_AN_NTTPRO_2026");
-  if (folders.hasNext()) {
-    DriveApp.getFileById(ss.getId()).moveTo(folders.next());
-  }
-  
-  PropertiesService.getScriptProperties().setProperty('DB_HS_3KHOI', ss.getId());
-}
-
-function luuApiKey(newKey) {
-  PropertiesService.getScriptProperties().setProperty('GEMINI_API_KEY', newKey.trim());
-  return "✅ Đã cập nhật mã API Key mới thành công!";
-}
-
-function layApiKey() {
-  return PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || '';
+function getOrCreateFolder(parent, name) {
+  var folders = parent.getFoldersByName(name);
+  return folders.hasNext() ? folders.next() : parent.createFolder(name);
 }
 
 function luuHinhNenHeThong(base64Data, fileName) {
   try {
-    var base64String = base64Data.split(',')[1] || base64Data;
-    var blob = Utilities.newBlob(Utilities.base64Decode(base64String), "image/jpeg", fileName);
-    var rootFolder = getOrCreateFolder(DriveApp.getRootFolder(), "DU_AN_NTTPRO_2026");
-    var bgFolder = getOrCreateFolder(rootFolder, "HINH_NEN");
-    
-    var oldFiles = bgFolder.getFiles();
-    while (oldFiles.hasNext()) oldFiles.next().setTrashed(true);
-    
-    var file = bgFolder.createFile(blob);
-    file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
-    
-    var url = "https://drive.google.com/uc?export=view&id=" + file.getId();
-    PropertiesService.getScriptProperties().setProperty('HINH_NEN_URL', url);
+    var blob = Utilities.newBlob(Utilities.base64Decode(base64Data.split(',')[1] || base64Data), "image/jpeg", fileName);
+    var bgFolder = getOrCreateFolder(getOrCreateFolder(DriveApp.getRootFolder(), "DU_AN_NTTPRO_2026"), "HINH_NEN");
+    var oldFiles = bgFolder.getFiles(); while (oldFiles.hasNext()) oldFiles.next().setTrashed(true);
+    var file = bgFolder.createFile(blob); file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+    PropertiesService.getScriptProperties().setProperty('HINH_NEN_URL', "https://drive.google.com/uc?export=view&id=" + file.getId());
     return "✅ Đã lưu hình nền thành công!";
   } catch(e) { return "❌ Lỗi: " + e.toString(); }
 }
 
-function layDanhSachHocSinhThi(khoi, lop, monKey, maDe) {
+// HÀM MỞ CỔNG API ĐỂ NHẬN ĐIỂM TỪ GITHUB GỬI VỀ
+function doPost(e) {
   try {
-    let dbId = PropertiesService.getScriptProperties().getProperty('DB_HS_3KHOI');
-    if(!dbId) return { success: false, message: "Chưa cấu hình Database học sinh!" };
-
-    let ssHS = SpreadsheetApp.openById(dbId);
-    let sheetHS = ssHS.getSheetByName(khoi);
-    if(!sheetHS) return { success: false, message: "Không tìm thấy dữ liệu khối " + khoi };
-
-    let dataHS = sheetHS.getDataRange().getValues();
-    let danhSachHocSinhLop = [];
-    let colMon = MON_COLS[monKey];
-
-    let cleanLop = lop.trim().toUpperCase();
-    let cleanMaDe = maDe.trim().toUpperCase();
-
-    for(let i = 1; i < dataHS.length; i++) {
-      let row = dataHS[i];
-      if(row[2] && row[2].toString().trim().toUpperCase() === cleanLop) {
-         danhSachHocSinhLop.push({
-           maHS: row[0].toString().trim(),
-           tenHS: row[1].toString().trim(),
-           lop: row[2].toString().trim(),
-           maDeDaGiao: row[colMon] ? row[colMon].toString().trim().toUpperCase() : ""
-         });
-      }
-    }
-
-    if(danhSachHocSinhLop.length === 0) return { success: false, message: "Không có học sinh nào ở lớp " + cleanLop };
-
-    let tenThuMucGoc = "DU_AN_NTTPRO_2026";
-    let tenThuMucDiem = "Data_Diem";
-    let tenFileDiem = "Diem_" + cleanLop;
-    let rootFolders = DriveApp.getFoldersByName(tenThuMucGoc);
-
-    let diemMap = {};
-    if (rootFolders.hasNext()) {
-       let dataFolders = rootFolders.next().getFoldersByName(tenThuMucDiem);
-       if (dataFolders.hasNext()) {
-          let files = dataFolders.next().getFilesByName(tenFileDiem);
-          if (files.hasNext()) {
-             let ssDiem = SpreadsheetApp.open(files.next());
-             let sheetDiem = ssDiem.getSheetByName(TENSHEET_MAP[monKey]);
-             if(sheetDiem) {
-                let dataDiem = sheetDiem.getDataRange().getValues();
-                for(let j = 1; j < dataDiem.length; j++) {
-                   let mHS = dataDiem[j][1] ? dataDiem[j][1].toString().trim() : "";
-                   let mDe = dataDiem[j][4] ? dataDiem[j][4].toString().trim().toUpperCase() : "";
-                   let d = dataDiem[j][5] !== "" ? dataDiem[j][5] : "";
-                   if (mDe === cleanMaDe) {
-                      diemMap[mHS] = d;
-                   }
-                }
-             }
-          }
-       }
-    }
-
-    let ketQua = [];
-    for(let i=0; i<danhSachHocSinhLop.length; i++) {
-       let hs = danhSachHocSinhLop[i];
-       let trangThai = "Chưa nộp bài";
-       let diem = "";
-
-       if(diemMap[hs.maHS] !== undefined) {
-          trangThai = "Đã nộp bài";
-          diem = diemMap[hs.maHS];
-       } else {
-          if(hs.maDeDaGiao === cleanMaDe) {
-             trangThai = "Chưa nộp bài (Đang làm)";
-          } else {
-             trangThai = "Chưa được giao đề này";
-          }
-       }
-
-       ketQua.push({
-         stt: i + 1,
-         ten: hs.tenHS,
-         lop: hs.lop,
-         trangThai: trangThai,
-         diem: diem
-       });
-    }
-    return { success: true, data: ketQua };
-
-  } catch (e) {
-    return { success: false, message: e.toString() };
+    // 1. Nhận gói dữ liệu JSON từ GitHub gửi tới
+    let duLieu = JSON.parse(e.postData.contents);
+    
+    // 2. Chuyển gói dữ liệu này cho hàm lưu điểm xuất sắc mà thầy đã viết sẵn
+    let ketQua = luuDiemTuDong(duLieu);
+    
+    // 3. Báo cáo lại cho GitHub là đã lưu thành công
+    return ContentService.createTextOutput(JSON.stringify(ketQua))
+                         .setMimeType(ContentService.MimeType.JSON);
+  } catch (error) {
+    // Báo lỗi nếu có trục trặc
+    return ContentService.createTextOutput(JSON.stringify({success: false, msg: error.toString()}))
+                         .setMimeType(ContentService.MimeType.JSON);
   }
 }

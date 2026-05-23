@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 4",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05004",
+    "part1": [
+        {
+            "q": "Cơ quan nào của Liên hợp quốc chịu trách nhiệm chính trong việc duy trì hoà bình và an ninh thế giới?",
+            "options": [
+                "Đại hội đồng.",
+                "Ban thư ký.",
+                "Hội đồng bảo an.",
+                "Tòa án quốc tế."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Quốc gia nào sau đây là một trong các thành viên sáng lập tổ chức Hiệp hội các quốc gia Đông Nam Á (ASEAN) năm 1967?",
+            "options": [
+                "Thái Lan.",
+                "Hàn Quốc.",
+                "Ba Lan.",
+                "Mê-hi-cô."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ý tưởng về việc xây dựng Cộng đồng ASEAN được khởi nguồn từ khi",
+            "options": [
+                "thành lập tổ chức ASEAN (1967) tại Thái Lan.",
+                "các nước ASEAN kí kết Hiệp ước Ba-li (1976).",
+                "tổ chức ASEAN có đủ 10 nước thành viên (1999).",
+                "“vấn đề Cam-pu-chia” được giải quyết (1991)."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây là ý nghĩa sự ra đời của Liên bang Cộng hoà xã hội chủ nghĩa Xô viết đối với thế giới?",
+            "options": [
+                "Mở đầu sự mở rộng của hệ thống xã hội chủ nghĩa.",
+                "Mở đầu quá trình sụp đổ của chủ nghĩa thực dân.",
+                "Mở ra quan hệ hợp tác với Mỹ và phương Tây.",
+                "Tác động đến địa - chính trị và quan hệ quốc tế."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phản ánh đúng tác động của sự sụp đổ Trật tự hai cực Ianta đối với tình hình thế giới?",
+            "options": [
+                "Vai trò của các cường quốc khác ngày càng gia tăng.",
+                "Trật tự thế giới mới dần hình thành theo xu thế đa cực.",
+                "Mỹ thiết lập thành công trật tự thế giới “đơn cực”.",
+                "Mở ra chiều hướng giải quyết hòa bình các cuộc xung đột."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cộng đồng Kinh tế ASEAN không hướng tới mục tiêu nào sau đây?",
+            "options": [
+                "Xây dựng khu vực kinh tế có sức cạnh tranh cao.",
+                "Xây dựng ASEAN thành khu vực thịnh vượng.",
+                "Tạo ra một khối phòng thủ chung về quân sự.",
+                "Tăng cường sự hợp tác về kinh tế, thương mại."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhân tố nào sau đây đóng vai trò quan trọng để các cường quốc tham gia xác lập trật tự thế giới mới sau Chiến tranh lạnh?",
+            "options": [
+                "Sức mạnh tổng hợp của quốc gia, trong đó kinh tế vẫn là trụ cột.",
+                "Là một trong năm cường quốc của Hội đồng Bảo an Liên hợp quốc.",
+                "Sự ra đời và ngày càng mở rộng của các tổ chức liên kết khu vực.",
+                "Sức mạnh quân sự của quốc gia với lực lượng quân sự hùng hậu."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đầu năm 981, người trực tiếp tổ chức và lãnh đạo nhân dân Đại Cồ Việt kháng chiến chống quân xâm lược Tống là",
+            "options": [
+                "Trần Quốc Tuấn.",
+                "Lê Hoàn.",
+                "Ngô Quyền.",
+                "Lý Thường Kiệt."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc đấu tranh bảo vệ chủ quyền quốc gia trên Biển Đông từ năm 1975 đến nay, Việt Nam luôn",
+            "options": [
+                "kết hợp chặt chẽ khởi nghĩa từng phần với đấu tranh ngoại giao.",
+                "tuân thủ những nguyên tắc cơ bản của luật pháp quốc tế.",
+                "chú trọng liên minh quân sự với Mỹ và các nước phương Tây.",
+                "sử dụng bạo lực giải quyết tranh chấp trong mọi hoàn cảnh."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cách mạng tháng Tám năm 1945 ở Việt Nam mang tính chất dân chủ vì",
+            "options": [
+                "đã đưa nhân dân lên địa vị người làm chủ đất nước.",
+                "giải quyết được mâu thuẫn cơ bản trong xã hội Việt Nam.",
+                "nông dân đã thực sự làm chủ về kinh tế, chính trị ở nông thôn.",
+                "đã xoá bỏ được hoàn toàn chế độ sở hữu ruộng đất phong kiến."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Việc Nguyễn Ái Quốc tìm ra con đường cứu nước cho dân tộc Việt Nam đã",
+            "options": [
+                "mở ra kỉ nguyên độc lập, tự do, đưa cả nước đi lên chủ nghĩa xã hội.",
+                "chấm dứt thời kì khủng hoảng về đường lối cứu nước ở Việt Nam.",
+                "mở ra thời kì giải quyết khủng hoảng về đường lối cứu nước ở Việt Nam.",
+                "tạo nên một bước ngoặt vĩ đại trong lịch sử cách mạng nước Việt Nam."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nghị quyết Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 15 (1959) và lần thứ 21 (1973) đều xác định hình thức của cách mạng miền Nam là",
+            "options": [
+                "khởi nghĩa từng phần.",
+                "chiến tranh chính nghĩa.",
+                "đấu tranh chính trị.",
+                "bạo lực cách mạng."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "So với cuộc kháng chiến chống Pháp (1945-1954), cuộc kháng chiến chống Mỹ của nhân dân Việt Nam (1954-1975) có điểm mới nào sau đây?",
+            "options": [
+                "Chịu sự tác động của trật tự hai cực I-an-ta và cuộc Chiến tranh lạnh.",
+                "Xây dựng miền Bắc thành hậu phương chiến lược của cuộc kháng chiến.",
+                "Phản ánh sự tồn tại mâu thuẫn sâu sắc giữa hai hệ thống xã hội đối lập.",
+                "Kết hợp nguồn lực bên trong và sự giúp đỡ từ bên ngoài để kháng chiến."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cách mạng tháng Tám năm 1945 và cuộc kháng chiến chống Mỹ, cứu nước (1954-1975) của nhân dân Việt Nam có điểm giống nhau nào sau đây?",
+            "options": [
+                "Có sự kết hợp chặt chẽ giữa hậu phương lớn và tiền tuyến lớn.",
+                "Là các cuộc chiến tranh giải phóng dân tộc, xây dựng chế độ mới.",
+                "Có hình thức khởi nghĩa giành chính quyền của quần chúng.",
+                "Từ khởi nghĩa từng phần phát triển lên chiến tranh cách mạng."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ở Việt Nam, các cuộc đấu tranh bảo vệ Tổ quốc từ sau năm 1975 diễn ra trong bối cảnh nào sau đây?",
+            "options": [
+                "Trật tự thế giới mới đa cực đã xác lập ổn định.",
+                "Đất nước thống nhất, đi lên chủ nghĩa xã hội.",
+                "Quan hệ quốc tế có nhiều biến động phức tạp.",
+                "Nhật hoàng tuyên bố đầu hàng Đồng minh."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định nào sau đây là đúng về công cuộc Đổi mới ở Việt Nam từ năm 1986 đến nay?",
+            "options": [
+                "Là quá trình cải biến sâu sắc, toàn diện, đưa đất nước phát triển trên nhiều lĩnh vực.",
+                "Đổi mới là quá trình thử nghiệm nhằm thay đổi mục tiêu chiến lược để phát triển đất nước.",
+                "Quá trình tận dụng và kiến tạo thời cơ, giải phóng sức sản xuất, xóa bỏ tình trạng thất nghiệp.",
+                "Đổi mới tư duy phát triển đã hoàn thiện lí luận về kinh tế thị trường xã hội chủ nghĩa."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Việc bình thường hóa quan hệ với Trung Quốc và Mỹ trong những năm 90 của thế kỉ XX chứng tỏ Việt Nam",
+            "options": [
+                "tích cực, chủ động hội nhập khu vực và thế giới.",
+                "xây dựng được các đối tác chiến lược toàn diện.",
+                "đã thành công trong việc phá thế bao vây, cấm vận.",
+                "tích cực tham gia giải quyết các vấn đề toàn cầu."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc kháng chiến chống thực dân Pháp (1945-1954), Chủ tịch Hồ Chí Minh có vai trò nào sau đây đối với cách mạng Việt Nam?",
+            "options": [
+                "Lãnh đạo Mặt trận Dân tộc Giải phóng miền Nam Việt Nam đi đến thắng lợi.",
+                "Điều chỉnh và bổ sung đường lối cách mạng Việt Nam trong tình hình mới.",
+                "Thống nhất các lực lượng vũ trang cách mạng thành Trung đội Cứu quốc quân I.",
+                "Đề ra và lãnh đạo thành công đường lối độc lập dân tộc và chủ nghĩa xã hội."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh không đúng hoạt động đối ngoại của Chính phủ Việt Nam Dân chủ Cộng hòa trong cuộc kháng chiến chống Mỹ (1954-1975)?",
+            "options": [
+                "Ủng hộ chống chủ nghĩa thực dân ở nước Á, Phi, Mỹ la-tinh…",
+                "Tham gia sáng lập Hiệp hội các nước Đông Nam Á (ASEAN).",
+                "Thiết lập quan hệ ngoại giao thân thiết, hữu nghị với Lào.",
+                "Xây dựng quan hệ láng giềng hữu nghị với Cam-pu-chia."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận xét nào sau đây là đúng về vai trò của đấu tranh ngoại giao trong kháng chiến chống Pháp (1945-1954) và kháng chiến chống Mỹ (1954-1975) của Việt Nam?",
+            "options": [
+                "Phát huy yếu tố chính nghĩa của Việt Nam trong kháng chiến.",
+                "Phụ thuộc vào chính sách đối ngoại của các thế lực ngoại xâm.",
+                "Đi trước thắng lợi quân sự để giảm đi sự tổn thất về lực lượng.",
+                "Phát huy lợi thế trên bàn hội nghị để tiến công trên chiến trường."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ngày 27/01/1973, phòng Hội nghị Kléber rực sáng ánh đèn. Trước nhà hội nghị, hàng ngàn người – kiều bào ta, bạn bè Pháp và các nước – vẫy chào chúng tôi giữa một rừng cờ. Tôi bước vào phòng họp, rất hồi hộp […]<br>Đặt bút kí vào bản Hiệp định Paris lịch sử, tôi vô cùng xúc động… Tôi như thay mặt nhân dân và chiến sĩ cách mạng miền Nam Việt Nam làm nhiệm vụ đấu tranh trên tiền tuyến và trong lao tù cắm ngọn cờ chiến thắng chói lọi […] Tôi muốn nói lời cảm ơn sâu sắc bà con Việt kiều tại Pháp và các nước xung quanh, cảm ơn bạn bè quốc tế đã hết lòng vì cuộc chiến đấu của chúng ta, cảm ơn sự đoàn kết cộng tác của tất cả anh chị em trong hai đoàn đàm phán và các cơ quan, đoàn thể của ta ở Paris.<br>(Nguyễn Thị Bình, Gia đình, Bạn bè và Đất nước (Hồi kí), NXB Chính trị Quốc gia - Sự thật, 2025, tr.116,117)<br>Hiệp định Pa-ri (1973) có ý nghĩa lịch sử nào sau đây đối với Việt Nam?",
+            "options": [
+                "Đưa cách mạng miền Nam chuyển từ tiến công chiến lược lên tổng tiến công chiến lược.",
+                "Tạo ra thay đổi so sánh tương quan lực lượng không có lợi cho cách mạng miền Nam.",
+                "Cuộc kháng chiến chống Mỹ của Việt Nam bắt đầu chịu tác động của Chiến tranh lạnh.",
+                "Thể hiện sự trưởng thành vượt bậc, toàn diện của nền ngoại giao Việt Nam hiện đại."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ngày 27/01/1973, phòng Hội nghị Kléber rực sáng ánh đèn. Trước nhà hội nghị, hàng ngàn người – kiều bào ta, bạn bè Pháp và các nước – vẫy chào chúng tôi giữa một rừng cờ. Tôi bước vào phòng họp, rất hồi hộp […]<br>Đặt bút kí vào bản Hiệp định Paris lịch sử, tôi vô cùng xúc động… Tôi như thay mặt nhân dân và chiến sĩ cách mạng miền Nam Việt Nam làm nhiệm vụ đấu tranh trên tiền tuyến và trong lao tù cắm ngọn cờ chiến thắng chói lọi […] Tôi muốn nói lời cảm ơn sâu sắc bà con Việt kiều tại Pháp và các nước xung quanh, cảm ơn bạn bè quốc tế đã hết lòng vì cuộc chiến đấu của chúng ta, cảm ơn sự đoàn kết cộng tác của tất cả anh chị em trong hai đoàn đàm phán và các cơ quan, đoàn thể của ta ở Paris.<br>(Nguyễn Thị Bình, Gia đình, Bạn bè và Đất nước (Hồi kí), NXB Chính trị Quốc gia - Sự thật, 2025, tr.116,117)<br>Từ thực tiễn đàm phán và kí kết Hiệp định Pa-ri (1973) để lại bài học nào sau đây cho hoạt động ngoại giao của Việt Nam hiện nay?",
+            "options": [
+                "Luôn tận dụng triệt để các cơ hội để chấm dứt đối đầu, tìm ra tiếng nói chung cho việc đàm phán.",
+                "Kiên quyết, kiên trì không nhượng bộ đối phương trong suốt quá trình đấu tranh trên bàn hội nghị.",
+                "Khuếch trương thắng lợi trên chiến trường, tạo áp lực buộc đối phương chấp nhận mọi điều khoản.",
+                "Lợi dụng sự bất đồng của đối phương, tranh thủ lôi kéo các đồng minh cùng đi đến bàn<br>đàm phán."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ngày 27/01/1973, phòng Hội nghị Kléber rực sáng ánh đèn. Trước nhà hội nghị, hàng ngàn người – kiều bào ta, bạn bè Pháp và các nước – vẫy chào chúng tôi giữa một rừng cờ. Tôi bước vào phòng họp, rất hồi hộp […]<br>Đặt bút kí vào bản Hiệp định Paris lịch sử, tôi vô cùng xúc động… Tôi như thay mặt nhân dân và chiến sĩ cách mạng miền Nam Việt Nam làm nhiệm vụ đấu tranh trên tiền tuyến và trong lao tù cắm ngọn cờ chiến thắng chói lọi […] Tôi muốn nói lời cảm ơn sâu sắc bà con Việt kiều tại Pháp và các nước xung quanh, cảm ơn bạn bè quốc tế đã hết lòng vì cuộc chiến đấu của chúng ta, cảm ơn sự đoàn kết cộng tác của tất cả anh chị em trong hai đoàn đàm phán và các cơ quan, đoàn thể của ta ở Paris.<br>(Nguyễn Thị Bình, Gia đình, Bạn bè và Đất nước (Hồi kí), NXB Chính trị Quốc gia - Sự thật, 2025, tr.116,117)<br>Một trong những người tham gia kí Hiệp định Pa-ri (1973) về chấm dứt chiến tranh và lập lại hoà bình ở Việt Nam là",
+            "options": [
+                "Tổng thống Mỹ Ních-xơn.",
+                "Bộ trưởng Nguyễn Thị Bình.",
+                "Thủ tướng Phạm Văn Đồng.",
+                "Chủ tịch nước Tôn Đức Thắng."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cuộc khởi nghĩa nào đã mở đầu quá trình đấu tranh giành độc lập, tự chủ lâu dài của người Việt trong thời kì Bắc thuộc?",
+            "options": [
+                "Khởi nghĩa Lý Bí.",
+                "Khởi nghĩa Bà Triệu.",
+                "Khởi nghĩa Phùng Hưng.",
+                "Khởi nghĩa Hai Bà Trưng."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>\"Sau chiến tranh của đế quốc Mỹ xâm lược Việt Nam, tình hình quốc tế diễn biến phức tạp. Cuối những năm 1970 và trong những năm 1980, trong tình thế Việt Nam bị bao vây và cấm vận, ngoại giao đã tăng cường đoàn kết, hợp tác giữa các nước Đông Dương, tranh thủ đoàn kết với các nước xã hội chủ nghĩa anh em và các lực lượng tiến bộ trên thế giới, nỗ lực cải thiện quan hệ với một số nước ASEAN, phá âm mưu và hoạt động tập hợp lực lượng chống Việt Nam của đối phương. Những hoạt động ngoại giao tích cực của Việt Nam đã góp phần đưa đến việc giải quyết vấn đề Cam-pu-chia bằng giải pháp chính trị, mở các đột phá tháo gỡ những trở ngại trong các quan hệ song phương và đa phương, từ đó bình thường hóa quan hệ với tất cả các nước lớn, các nước láng giềng và khu vực, góp phần mở ra cục diện mới về đối ngoại\".<br>(Nguyễn Đình Bin (Chủ biên), Ngoại giao Việt Nam 1945 - 2000, Nxb Chính trị quốc gia - Sự thật, Hà Nội. 2015, tr. 446 - 447)",
+            "items": [
+                "Một trong những nhiệm vụ quan trọng của ngoại giao Việt Nam từ sau chiến thắng mùa Xuân năm 1975 là tìm hướng phá thế bị bao vây và cấm vận.",
+                "Việc giải quyết vấn đề Cam-pu-chia bằng giải pháp quân sự đã tháo gỡ những trở ngại trong các quan hệ song phương và đa phương của Việt Nam.",
+                "Các hoạt động đối ngoại tích cực của Việt Nam sau năm 1975 đã đưa Việt Nam thoát khỏi khó khăn, nâng cao vị thế trên trường quốc tế.",
+                "Thành tựu của ngoại giao Việt Nam thời kì Đổi mới cho thấy việc cân bằng mối quan hệ với các nước lớn là vô cùng quan trọng để duy trì ổn định."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau:<br>“Trong những năm sắp tới, trên thế giới, hoà bình, hợp tác và phát triển vẫn là xu thế lớn. Kinh tế thế giới và khu vực tiếp tục phục hồi và phát triển nhưng vẫn tiềm ẩn những yếu tố bất trắc khó lường. Toàn cầu hoá tạo ra cơ hội nhưng cũng chứa đựng nhiều yếu tố bất bình đẳng, gây khó khăn, thách thức cho các quốc gia, nhất là các nước đang phát triển. Khoa học và công nghệ sẽ có những bước đột phá mới. Mặt khác, những cuộc chiến tranh cục bộ, xung đột vũ trang, xung đột sắc tộc, tôn giáo, chạy đua vũ trang, hoạt động can thiệp, lật đổ, tranh chấp về lãnh thổ và tài nguyên thiên nhiên tiếp tục diễn ra ở nhiều nơi với tính chất ngày càng phức tạp”.<br>(Đảng Cộng sản Việt Nam, Văn kiện Đảng toàn tập, Tập 65 (2006), NXB Chính trị Quốc gia - Sự thật, 2016,tr.141-142)",
+            "items": [
+                "Hiện nay, xu thế toàn cầu hoá tiếp tục gia tăng mạnh mẽ, điều đó luôn tạo ra thời cơ và điều kiện thuận lợi để các nước đang phát triển vươn lên trong một thế giới nhiều biến động.",
+                "Từ đầu thế kỉ XXI, xung đột sắc tộc và tôn giáo trên thế giới đã được thay thế bằng các hoạt động tranh chấp lãnh thổ và tài nguyên.",
+                "Từ trong và sau khi Chiến tranh lạnh kết thúc đến nay, hoà bình, hợp tác và phát triển là xu thế phát triển chính của thế giới.",
+                "Những cuộc chiến tranh cục bộ, xung đột vũ trang trên thế giới hiện nay có căn nguyên lịch sử sâu<br>xa, trong đó có những cuộc xung đột vẫn là những di chứng của Chiến tranh lạnh."
+            ],
+            "ans": [
+                false,
+                false,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Quá trình Đổi mới ở Việt Nam là quá trình vận dụng và phát triển sáng tạo chủ nghĩa Mác-Lênin, tư tưởng Hồ Chí Minh trên những vấn đề căn bản có tầm chiến lược của cách mạng, trong đó vấn đề hàng đầu là kiên định và nhận thức đúng đắn về độc lập dân tộc và chủ nghĩa xã hội trong điều kiện mới của thời đại và hoàn cảnh mới của đất nước. Nắm vững ngọn cờ độc lập dân tộc và chủ nghĩa xã hội là bài học xuyên suốt tiến trình cách mạng Việt Nam và cũng là kinh nghiệm thành công của công cuộc đổi mới... Cương lĩnh, đường lối đổi mới của Đảng đã được thể chế hóa trong Hiến pháp và hệ thống pháp luật phù hợp với quá trình xây dựng, hoàn thiện Nhà nước pháp quyền xã hội chủ nghĩa của nhân dân, do nhân dân, vì nhân dân và hoàn thiện nền dân chủ xã hội chủ nghĩa”.<br>(Những vấn đề cơ bản về Đảng Cộng sản và lịch sử Đảng Cộng sản Việt Nam, NXB lý luận chính trị, 2016, tr 371)",
+            "items": [
+                "Việt Nam tiến hành đổi mới toàn diện đất nước từ năm 1986.",
+                "Nắm vững ngọn cờ độc lập dân tộc và chủ nghĩa tư bản là bài học xuyên suốt tiến trình cách mạng Việt Nam và cũng là kinh nghiệm thành công của công cuộc đổi mới.",
+                "Quá trình đổi mới ở Việt Nam cho thấy có thể hoàn thành các mục tiêu đặt ra ngay cả trong điều kiện nguồn lực hạn chế nếu có nhận thức đúng đắn, có cam kết mạnh mẽ và quyết tâm chính trị cao.",
+                "Thành công của quá trình thực hiện đường lối đổi mới đã đưa Việt Nam trở thành mắt xích quan trọng trong nhiều liên kết kinh tế khu vực và toàn cầu."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng thông tin sau đây:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Thời gian</td><td>Nội dung</td></tr><tr><td>Năm 1950</td><td>Quân dân Việt Nam mở chiến dịch Biên giới, làm phá sản hoàn toàn kế hoạch Rơ-ve.</td></tr><tr><td>Năm 1954</td><td>Quân dân Việt Nam giành thắng lợi trong trận Điện Biên Phủ, buộc thực dân Pháp kí Hiệp định Giơ-ne-vơ.</td></tr><tr><td>Năm 1968</td><td>Cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân ở miền Nam Việt Nam buộc Mỹ phải đến bàn đàm phán ở Pa-ri.</td></tr><tr><td>Năm 1972</td><td>Quân dân miền Bắc đã đập tan cuộc tập kích B52 của Mỹ, làm nên trận “Điện Biên Phủ trên không”.</td></tr><tr><td>Năm 1975</td><td>Cuộc Tổng tiến công và nổi dậy Xuân 1975 thắng lợi, chấm cuộc chiến tranh xâm lược của đế quốc Mỹ.</td></tr></table>",
+            "items": [
+                "Hai cuộc chiến tranh giải phóng dân tộc và giữ nước của Việt Nam ở thế kỉ XX đều có sự kết hợp giữa đấu tranh chính trị, quân sự và ngoại giao.",
+                "Chiến dịch Điện Biên Phủ và Chiến dịch Hồ Chí Minh là những bản hùng ca bi tráng, đã mở ra kỉ nguyên mới cho dân tộc Việt Nam.",
+                "Bảng thông tin trên phản ánh về những thắng lợi tiêu biểu của Việt Nam trong cuộc chiến tranh giải phóng dân tộc và bảo vệ Tổ quốc ở thế kỉ XX.",
+                "Thực tiễn các cuộc kháng chiến chống thực dân trong thế kỉ XX của Việt Nam cho thấy yếu tố vật chất tạo ra sức mạnh tuyệt đối về tinh thần."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

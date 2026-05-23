@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 1",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05001",
+    "part1": [
+        {
+            "q": "Theo quyết định của Hội nghị Ianta (2-1945), Đông Âu thuộc phạm vi ảnh hưởng của nước nào?",
+            "options": [
+                "Liên Xô.",
+                "Pháp.",
+                "Mỹ.",
+                "Anh."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong giai đoạn từ năm 1945 đến đầu những năm 70 của thế kỉ XX, Trật tự thế giới hai cực I-an-ta có biểu hiện nào sau đây?",
+            "options": [
+                "Xác lập và phát triển nhanh với sự đối đầu diễn ra trên nhiều lĩnh vực.",
+                "Từ đối kháng chuyển sang đối đầu giữa hai hệ thống xã hội đối lập.",
+                "Phát triển mạnh và dẫn tới các cuộc chiến tranh cục bộ giữa Liên Xô - Mỹ.",
+                "Từ đối đầu căng thẳng chuyển sang hoà dịu và hoà hoãn Đông - Tây."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Từ sau khi Chiến tranh lạnh kết thúc (1991), thế giới phát triển theo xu thế nào?",
+            "options": [
+                "Đa cực, nhiều trung tâm.",
+                "Lấy chính trị làm nền tảng.",
+                "Thoả hiệp để ổn định toàn cầu.",
+                "Hạn chế phổ biến vũ khí hạt nhân."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cơ quan nào sau đây của Liên hợp quốc chịu trách nhiệm chính trong việc duy trì hòa bình và an ninh quốc tế?",
+            "options": [
+                "Hội đồng Bảo an.",
+                "Ban thư ký.",
+                "Tòa án quốc tế.",
+                "Hội đồng quản thác."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng sự ra đời của Liên bang Cộng hòa xã hội chủ nghĩa Xô viết năm 1922?",
+            "options": [
+                "Phù hợp với lợi ích chung của các dân tộc trên đất nước Xô viết.",
+                "Phù hợp với xu thế phát triển chung của thế giới lúc bấy giờ.",
+                "Đáp ứng được nhiệm vụ cấp bách trong đấu tranh chống ngoại xâm.",
+                "Chưa phù hợp với nguyện vọng các dân tộc trên đất nước Xô viết."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Liên hợp quốc có vai trò thúc đẩy hợp tác quốc tế về",
+            "options": [
+                "kinh tế, tài chính, thương mại, khoa học-kĩ thuật.",
+                "thành lập các liên minh chính trị - quân sự toàn cầu.",
+                "xây dựng bản sắc văn hóa chung cho các quốc gia.",
+                "thương mại, dịch vụ, du lịch và hoạt động tình báo."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cuộc khởi nghĩa Lam Sơn (1418-1427) kết thúc thắng lợi được đánh dấu bằng sự kiện nào?",
+            "options": [
+                "Hội thề ở Lũng Nhai (Thanh Hóa).",
+                "Hội thề Đông Quan (Hà Nội).",
+                "Chiến thắng Tốt Động-Chúc Động.",
+                "Chiến thắng Ngọc Hồi-Đống Đa."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những đóng góp to lớn của phong trào Tây Sơn (1771-1802) đối với lịch sử dân tộc Việt Nam là",
+            "options": [
+                "lật đổ ách đô hộ tàn bạo của nhà Minh ở Việt Nam.",
+                "thống nhất hoàn toàn đất nước về mặt nhà nước.",
+                "đánh tan quân xâm lược, bảo vệ nền độc lập dân tộc.",
+                "ngăn chặn được nguy cơ Pháp xâm lược Việt Nam."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cuộc kháng chiến chống quân Nam Hán (938) của Ngô Quyền có điểm khác biệt nào so với các cuộc đấu tranh khác của nhân dân Việt Nam thời Bắc thuộc?",
+            "options": [
+                "Lần đầu tiên khôi phục được độc lập dân tộc.",
+                "Lần đầu tiên thành lập chính quyền mới, tự trị.",
+                "Buộc chính quyền phương Bắc công nhận độc lập.",
+                "Mở ra thời kỳ độc lập, tự chủ lâu dài cho dân tộc."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ngày 13/8/1945, Trung ương Đảng và Tổng bộ Việt Minh đã thông qua quyết định nào dưới đây?",
+            "options": [
+                "Quyết định khởi nghĩa ở Hà Nội.",
+                "Đã phát động cao trào kháng Nhật.",
+                "Thống nhất lực lượng vũ trang Việt Nam.",
+                "Phát lệnh Tổng khởi nghĩa trên cả nước."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thắng lợi của Cách mạng tháng Tám năm 1945 ở Việt Nam có ý nghĩa lịch sử nào sau đây?",
+            "options": [
+                "Đánh dấu sự sụp đổ hoàn toàn của chủ nghĩa thực dân ở Việt Nam.",
+                "Mở ra kỉ nguyên độc lập, tự do và phát triển dưới chế độ cộng hoà.",
+                "Xoá bỏ hoàn toàn mọi tàn tích của chế độ phong kiến ở Việt Nam.",
+                "Chấm dứt ách thống trị của chủ nghĩa thực dân mới ở Việt Nam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận xét nào sau đây là đúng về vai trò của lực lượng chính trị trong Cách tháng Tám 1945 ở Việt Nam?",
+            "options": [
+                "Lực lượng hỗ trợ cho tổng khởi nghĩa tiến lên chiến tranh cách mạng.",
+                "Là lực lượng chủ yếu và đông đảo nhất để tiến hành tổng khởi nghĩa.",
+                "Là lực lượng nòng cốt, xung kích trong tổng công kích, tổng khởi nghĩa.",
+                "Lực lượng nòng cốt, hỗ trợ lực lượng vũ trang tiến lên giành chính quyền."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cách mạng tháng Tám năm 1945 ở Việt Nam được đánh giá là cuộc cách giải phóng dân tộc điển hình vì lí do nào sau đây?",
+            "options": [
+                "Quyền lợi của nông dân đã được giải quyết triệt để.",
+                "Đã xoá bỏ mọi cơ sở kinh tế – xã hội của chế độ thực dân.",
+                "Đã xoá bỏ hoàn toàn các tàn dư của chủ nghĩa đế quốc.",
+                "Lập ra nhà nước vì nhân dân, do nhân dân làm chủ."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Chiến dịch tiến công lớn đầu tiên của quân dân Việt Nam trong cuộc kháng chiến chống thực dân Pháp (1945 – 1954) là",
+            "options": [
+                "Việt Bắc.",
+                "Điện Biên Phủ.",
+                "Biên giới.",
+                "Hồ Chí Minh."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Tổ chức nào sau đây được thành lập trong cuộc kháng chiến chống Pháp của nhân dân Việt Nam (1945-1954)?",
+            "options": [
+                "Mặt trận Việt Minh.",
+                "Mặt trận Liên Việt.",
+                "Đảng Cộng sản Đông Dương.",
+                "Đảng Cộng sản Việt Nam."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Tháng 2-1951, Đại hội đại biểu lần thứ II của Đảng Cộng sản Đông Dương có quyết định nào sau đây?",
+            "options": [
+                "Phát động toàn quốc kháng chiến.",
+                "Đưa Đảng ra hoạt động công khai.",
+                "Mở chiến dịch Việt Bắc.",
+                "Mở chiến dịch Biên giới."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cuộc kháng chiến chống Pháp của nhân dân Việt Nam (1945 – 1954) có ý nghĩa quốc tế nào sau đây?",
+            "options": [
+                "Góp phần vào chiến thắng chủ nghĩa phát xít của các lực lượng dân chủ.",
+                "Góp phần làm tan rã hệ thống thuộc địa của chủ nghĩa đế quốc.",
+                "Đã đánh dấu sự sụp đổ căn bản của chủ nghĩa thực dân mới.",
+                "Mở đâu sự mở rộng không gian của chủ nghĩa xã hội ở châu Á."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ý nghĩa quan trọng nhất của chiến thắng Việt Bắc thu - đông năm 1947 là",
+            "options": [
+                "chứng tỏ sự trưởng thành vượt bậc của quân đội ta.",
+                "cuộc phản công lớn đầu tiên của quân dân ta đã giành thắng lợi.",
+                "chứng tỏ khả năng quân dân ta có thể đẩy lùi những cuộc tấn công của Pháp",
+                "làm thất bại hoàn toàn chiến lược “đánh nhanh thắng nhanh của Pháp."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc chiến đấu bảo vệ Tổ quốc ở vùng biên giới phía Bắc (1979 – 1989), quân dân Việt Nam phải đối phó chống lại âm mưu nào sau đây của đối phương?",
+            "options": [
+                "Hoa quân nhập Việt.",
+                "Chinh phục từng gói nhỏ.",
+                "Giành đất, giành dân.",
+                "Đánh nhanh, thắng nhanh."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung cơ bản của đường lối đổi mới về kinh tế của Đảng Cộng sản Việt Nam giai đoạn 1996-2006 là",
+            "options": [
+                "công nghiệp hoá, ưu tiên phát triển công nghiệp nặng.",
+                "đẩy mạnh công nghiệp hoá và hiện đại hoá đất nước.",
+                "bước đầu xoá bỏ cơ chế quản lí quan liêu và bao cấp.",
+                "xây dựng nền kinh tế kế hoạch hoá, tập trung, bao cấp."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh không đúng chủ trương đối ngoại của Việt Nam trong giai đoạn 1975-1985?",
+            "options": [
+                "Liên minh quân sự với các quốc gia phương Tây.",
+                "Hợp tác toàn diện với các nước xã hội chủ nghĩa.",
+                "Thúc đẩy quan hệ với các quốc gia Đông Nam Á.",
+                "Thiết lập quan hệ ngoại giao với các tổ chức quốc tế."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ngày 8-8-1967, ASEAN chính thức được thành lập, ra bản Tuyên bố Băng cốc về mục tiêu hoạt động của tổ chức. Nội dung chính của Tuyên bố Băng cốc tập trung vào việc thúc đẩy sự tăng trưởng kinh tế, tiến bộ xã hội và phát triển văn hoá; thúc đẩy hoà bình và ổn định trong khu vực; thúc đẩy sự hợp tác giữa các nước trên các lĩnh vực nhằm tạo cơ sở cho Đông Nam Á thành một cộng đồng hoà bình và thịnh vượng. Nhưng thực ra việc thành lập ASEAN chủ yếu là do nguyên nhân về an ninh chính trị: “Cho dù trong văn kiện thành lập ASEAN, Tuyên bố Băng cốc năm 1967, đã nói về thúc đẩy hợp tác kinh tế, xã hội và văn hoá song nền móng của Hiệp hội trong thời kì này là những vấn đề an ninh chính trị””.<br>(GS Vũ Dương Ninh (CB), Một số chuyên đề Lịch sử thế giới, Tập 2, NXB ĐHQG Hà Nội, 2008, tr.313)<br>Yếu tố nào sau đây tác động đến việc ASEAN coi trọng những vấn đề an ninh chính trị khi mới thành lập?",
+            "options": [
+                "Các nước thành viên ASEAN chưa giành được độc lập dân tộc.",
+                "Đông Nam Á đang đứng trước nguy cơ bị thực dân phương Tây xâm lược.",
+                "“Vấn đề Cam-pu-chia” dẫn đến sự bất ổn về an ninh chính trị ở khu vực.",
+                "Sự tồn tại của Trật tự thế giới hai cực I-an-ta và cuộc Chiến tranh lạnh."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ngày 8-8-1967, ASEAN chính thức được thành lập, ra bản Tuyên bố Băng cốc về mục tiêu hoạt động của tổ chức. Nội dung chính của Tuyên bố Băng cốc tập trung vào việc thúc đẩy sự tăng trưởng kinh tế, tiến bộ xã hội và phát triển văn hoá; thúc đẩy hoà bình và ổn định trong khu vực; thúc đẩy sự hợp tác giữa các nước trên các lĩnh vực nhằm tạo cơ sở cho Đông Nam Á thành một cộng đồng hoà bình và thịnh vượng. Nhưng thực ra việc thành lập ASEAN chủ yếu là do nguyên nhân về an ninh chính trị: “Cho dù trong văn kiện thành lập ASEAN, Tuyên bố Băng cốc năm 1967, đã nói về thúc đẩy hợp tác kinh tế, xã hội và văn hoá song nền móng của Hiệp hội trong thời kì này là những vấn đề an ninh chính trị””.<br>(GS Vũ Dương Ninh (CB), Một số chuyên đề Lịch sử thế giới, Tập 2, NXB ĐHQG Hà Nội, 2008, tr.313)<br>Theo Tuyên bố Băng Cốc (1967), mục đích chính trong việc thành lập Hiệp hội các quốc gia Đông Nam Á là",
+            "options": [
+                "thúc đẩy hợp tác kinh tế, văn hoá, xã hội giữa các nước trong khu vực.",
+                "phối hợp với quân Đồng minh tiêu diệt tận gốc chủ nghĩa phát xít.",
+                "đoàn kết các nước trong khu vực đấu tranh giành độc lập dân tộc.",
+                "xoá bỏ tất cả những bất đồng giữa các nước về chủ quyền biển đảo."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Ngày 8-8-1967, ASEAN chính thức được thành lập, ra bản Tuyên bố Băng cốc về mục tiêu hoạt động của tổ chức. Nội dung chính của Tuyên bố Băng cốc tập trung vào việc thúc đẩy sự tăng trưởng kinh tế, tiến bộ xã hội và phát triển văn hoá; thúc đẩy hoà bình và ổn định trong khu vực; thúc đẩy sự hợp tác giữa các nước trên các lĩnh vực nhằm tạo cơ sở cho Đông Nam Á thành một cộng đồng hoà bình và thịnh vượng. Nhưng thực ra việc thành lập ASEAN chủ yếu là do nguyên nhân về an ninh chính trị: “Cho dù trong văn kiện thành lập ASEAN, Tuyên bố Băng cốc năm 1967, đã nói về thúc đẩy hợp tác kinh tế, xã hội và văn hoá song nền móng của Hiệp hội trong thời kì này là những vấn đề an ninh chính trị””.<br>(GS Vũ Dương Ninh (CB), Một số chuyên đề Lịch sử thế giới, Tập 2, NXB ĐHQG Hà Nội, 2008, tr.313)<br>Nội dung nào sau đây phản ánh đúng về hành trình phát triển của ASEAN (từ năm 1967 đến nay)?",
+            "options": [
+                "Trong giai đoạn đầu, ASEAN tập trung “xây dựng lòng tin và học cách hoà giải”.",
+                "Quá trình mở rộng thành viên diễn ra đúng với lộ trình đề ra từ khi thành lập.",
+                "Từ khi thành lập đến nay, trọng tâm hợp tác của ASEAN không có gì thay đổi.",
+                "Đi từ coi trọng hợp tác về kinh tế sang hợp tác về an ninh chính trị và kinh tế."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Trong bối cảnh đó, Hội nghị tam cường Liên Xô, Mỹ, Anh (tức ba cường quốc hình thành hệ thống tam cường được coi như nòng cốt của Mặt trận Đồng minh trong cuộc chiến tranh chống phát xít) đã họp ở Ianta (Liên Xô) từ ngày 4 đến 12-2-1945. Tham dự hội nghị có Chủ tịch Hội đồng bộ trưởng Liên Xô-Xtalin, Tổng thống Mỹ-F.Rudơven và Thủ tướng Anh-Sơcsin. Hội nghị đã diễn ra gay go, quyết liệt, vì thực chất nội dung hội nghị là cuộc tranh giành và phân chia thành quả thắng lợi chiến tranh giữa các lực lượng tham chiến, có liên quan mật thiết tới hòa bình, an ninh và trật tự thế giới sau này, mà trước hết là lợi ích riêng của mỗi một nước tham chiến”.<br>(Nguyễn Anh Thái (chủ biên), Lịch sử thế giới hiện đại, NXB Giáo dục, Hà Nội, 2006, tr.223)",
+            "items": [
+                "Hội nghị I-an-ta phản ánh cuộc đấu tranh quyết liệt giữa các cường quốc trong phe Đồng minh và là mốc đánh dấu sự kết thúc của quan hệ đồng minh giữa Mỹ và Liên Xô.",
+                "Đoạn tư liệu đề cập đến Hội nghị I-an-ta (tháng 2-1945) với sự tham gia của nguyên thủ ba cường quốc Liên Xô, Mỹ, Anh.",
+                "Những thỏa thuận của các cường quốc tại Hội nghị I-an-ta (tháng 2-1945), sau đó là Hội nghị Pốt-xđam (tháng 7-1945) đều có ảnh hưởng đến cách mạng Việt Nam.",
+                "Hội nghị I-an-ta (tháng 2-1945) diễn ra trong bối cảnh cuộc Chiến tranh thế giới thứ hai vừa mới bùng nổ ở châu Âu với ưu thế nghiêng về phe phát xít."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Cuộc kháng chiến chống Mỹ cứu nước của nhân dân ta đã kết thúc bằng Chiến dịch Hồ Chí Minh lịch sử mùa Xuân 1975.<br>Đó là cuộc chiến tranh yêu nước vĩ đại, cuộc chiến tranh giải phóng dân tộc và bảo vệ Tổ quốc tiêu biểu của nhân dân ta. Cuộc chiến tranh đã kéo dài hơn hai thập niên (từ 7-1954 đến 5-1975), dài hơn bất cứ cuộc chiến tranh nào trong lịch sử và phải chống lại một đế quốc lớn mạnh nhất là đế quốc Mỹ”.<br>(GS. Trương Hữu Quýnh, GS. Đinh Xuân Lâm, PGS. Lê Mậu Hãn (chủ biên), Đại cương lịch sử Việt Nam, toàn tập, NXB Giáo dục, Hà Nội, 2005, tr.1094)",
+            "items": [
+                "Thắng lợi của cuộc kháng chiến chống Mỹ, cứu nước (1954-1975) của nhân dân Việt Nam là mốc đánh dấu sự sụp đổ hoàn toàn của chủ nghĩa thực dân mới trên thế giới.",
+                "Đoạn tư liệu đề cập đến ý nghĩa lịch sử của cuộc kháng chiến chống Mỹ, cứu nước (1954-1975) của nhân dân Việt Nam.",
+                "Chiến tranh giải phóng dân tộc và bảo vệ Tổ quốc (1954-1975) là cuộc chiến tranh dài ngày nhất trong lịch sử chống ngoại xâm của Việt Nam.",
+                "Trong cuộc kháng chiến chống Mỹ, cứu nước (1954-1975), nhân dân Việt Nam thực hiện đồng thời hai nhiệm vụ giải phóng miền Nam và bảo vệ miền Bắc."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Trong nền kinh tế Việt Nam đã hình thành nhiều hình thức sở hữu, nhiều thành phần kinh tế và loại hình doanh nghiệp, tổ chức sản xuất kinh doanh. Các chủ thể kinh tế tự do kinh doanh, đóng góp vào sự phát triển và khẳng định vai trò của mình trong nền kinh tế quốc dân. Kinh tế nhà nước từng bước phát huy được vai trò chủ đạo. Kinh tế tập thể phát triển và chuyển đổi sang mô hình kiểu mới phù hợp hơn với kinh tế thị trường hiện đại. Kinh tế tư nhân ngày càng khẳng định là một động lực quan trọng nhất của nền kinh tế. Kinh tế có vốn đầu tư nước ngoài là bộ phận quan trọng của nền kinh tế nước ta”.<br>(Trích: Báo cáo tổng kết một số vấn đề lý luận và thực tiễn về công cuộc Đổi mới theo định hướng xã hội chủ nghĩa trong 40 năm qua ở Việt Nam, Văn kiện Đại hội đại biểu toàn quốc lần thứ XIV của Đảng)",
+            "items": [
+                "Một trong những thành tựu về kinh tế của Việt Nam trong công cuộc Đổi mới là đã chuyển đổi thành công sang nền kinh tế hàng hóa nhiều thành phần có sự quản lí của Nhà nước.",
+                "Trong đường lối đổi mới về kinh tế (năm 1986), thành phần kinh tế tư nhân được đánh giá là động lực quan trọng nhất, đóng vai trò chủ đạo của nền kinh tế.",
+                "Những thành tựu của công cuộc Đổi mới (từ 1986 đến nay) đã tiếp tục thể hiện sự đúng đắn của Đảng trong việc vận dụng sáng tạo chủ nghĩa Mác-Lê-nin vào điều kiện lịch sử của Việt Nam.",
+                "Đoạn tư liệu đề cập đến thành tựu về kinh tế của Việt Nam sau 40 năm thực hiện công cuộc Đổi mới."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Trước năm 1945, nước Việt Nam hầu như không có tên trên bản đồ thế giới. Đến năm 1950, qua năm năm kháng chiến anh dũng, nước ta đã được các nước xã hội chủ nghĩa công nhận, có quan hệ với nhiều phong trào nhân dân tiến bộ trên thế giới và có đại diện ở một số nước. Nhờ thắng lợi của cuộc kháng chiến chính nghĩa của mình và đường lối đổi mới của Đảng, ngày nay Việt Nam đã lập quan hệ ngoại giao bình đẳng với hầu hết các nước châu Á, châu Âu, châu Phi, châu Mỹ và châu Đại Dương, trong đó có tất cả các nước lớn. Việt Nam đã trở thành thành viên chính thức của Liên hợp quốc và là thành viên của nhiều tổ chức kinh tế, xã hội khu vực và quốc tế khác”.<br>(Ban Chỉ đạo tổng kết chiến tranh trực thuộc Bộ Chính trị, Chiến tranh cách mạng Việt Nam (1945-1975) Thắng lợi và bài học, NXB Chính trị quốc gia, Hà Nội, 2000, tr.423)",
+            "items": [
+                "Trong những năm 50-70 của thế kỉ XX, những thắng lợi ngoại giao của Việt Nam không chịu tác động của bối cảnh quan hệ quốc tế phức tạp nhờ đường lối đối ngoại độc lập, tự chủ.",
+                "Đoạn tư liệu đề cập đến những bước tiến của nền ngoại giao Việt Nam từ trước năm 1945 đến nay.",
+                "Việc Việt Nam trở thành thành viên của Liên hợp quốc (1977) là một dấu mốc quan trọng, mở ra bước ngoặt trong quá trình hội nhập quốc tế của đất nước.",
+                "Trong những năm 1945-1949, nước Việt Nam Dân chủ Cộng hoà chưa được nước nào công nhận và đặt quan hệ ngoại giao."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

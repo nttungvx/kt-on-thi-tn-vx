@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "05",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 9",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "05009",
+    "part1": [
+        {
+            "q": "Đại hội Xô viết toàn Nga lần Thứ hai, khai mạc đêm 25/10/1917 đã",
+            "options": [
+                "ra tuyên bố thành lập Chính quyền Xô viết do Lê-nin đứng đầu.",
+                "ban hành “Chính sách Cộng sản thời chiến”.",
+                "phát động cuộc chiến đấu chống “thù trong giặc ngoài”.",
+                "thông qua “Chính sách kinh tế mới” do Lê-nin soạn thảo."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Tổ chức Liên hợp quốc được thành lập năm 1945 không nhằm mục tiêu nào sau đây?",
+            "options": [
+                "Duy trì Trật tự thế giới hai cực I-an-ta.",
+                "Duy trì nền hòa bình và an ninh trên thế giới.",
+                "Phát triển quan hệ hữu nghị giữa các dân tộc.",
+                "Trung tâm điều hòa hoạt động của các quốc gia."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Vai trò quan trọng hàng đầu của tổ chức Liên hợp quốc đã thực hiện từ khi thành lập đến nay là gì?",
+            "options": [
+                "Là trung tâm giải quyết các mâu thuẫn về vấn đề dân tộc trên thế giới.",
+                "Ngăn chặn được nguy cơ bùng nổ cuộc chiến tranh thế giới mới.",
+                "Là trung gian hòa giải mọi tranh chấp quốc tế giữa các dân tộc.",
+                "Thúc đẩy quan hệ hợp tác kinh tế, quân sự giữa các nước thành viên."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây là một trong những nguyên nhân dẫn đến sự sụp đổ của Trật tự thế giới hai cực I an-ta?",
+            "options": [
+                "Sự tan rã của hệ thống tư bản chủ nghĩa.",
+                "Hoàn thành cuộc đấu tranh chống phát xít.",
+                "Phát triển quan hệ hữu nghị giữa các dân tộc.",
+                "Thắng lợi của phong trào giải phóng dân tộc."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây là một trong những xu thế phát triển chính của thế giới sau Chiến tranh lạnh?",
+            "options": [
+                "Xu thế lấy phát triển chính trị làm trung tâm.",
+                "Xu thế lấy phát triển quân sự làm trung tâm.",
+                "Xu thế đối thoại, hợp tác trong quan hệ quốc tế.",
+                "Xây dựng trật tự thế giới mới có lợi cho Mỹ."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Năm 1997, quốc gia nào sau đây gia nhập vào Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+            "options": [
+                "Thái Lan.",
+                "Mi-an-ma.",
+                "Việt Nam.",
+                "Cam-pu-chia."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cộng đồng ASEAN thành lập vào năm 2015 có ý nghĩa nào sau đây?",
+            "options": [
+                "Góp phần vào quá trình kiến tạo hoà bình, phát triển thịnh vượng của khu vực và thế giới.",
+                "Hoàn thành sự phát triển từ hợp tác nội khối sang hợp tác ngoại khối của ASEAN.",
+                "Mở đầu thời kì phát triển hoà bình, thịnh vượng, trung lập của khu vực và thế giới.",
+                "Khởi đầu quá trình chuyển từ chạy đua vũ trang sang đối thoại, hợp tác ở khu vực."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Từ thế kỉ X đến thế giữa thế kỉ XIX, cuộc kháng chiến nào sau đây của quân dân Đại Việt giành thắng lợi?",
+            "options": [
+                "Kháng chiến chống thực dân Pháp.",
+                "Kháng chiến chống đế quốc Mỹ.",
+                "Kháng chiến chống quân Tống.",
+                "Kháng chiến chống quân Minh."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc khởi nghĩa chống quân Minh, nghĩa quân Lam Sơn không giành chiến thắng lớn ở",
+            "options": [
+                "Xương Giang.",
+                "Chi Lăng.",
+                "Chúc Động.",
+                "Ngọc Hồi."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận xét nào sau đây không đúng về phong trào Tây Sơn (cuối thế kỉ XVIII) ở Việt Nam?",
+            "options": [
+                "Thể hiện khả năng to lớn của người nông dân nếu được tổ chức, lãnh đạo.",
+                "Đã chấm dứt hoàn toàn chế độ quân chủ, mở ra thời đại mới trong lịch sử.",
+                "Tạo điều kiện cho sự thống nhất mọi mặt của đất nước ở giai đoạn sau đó.",
+                "Đảm nhận vai trò thống nhất đất nước và bảo vệ tổ quốc, chống xâm lược."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sự kiện nào sau đây tạo ra thời cơ khách quan thuận lợi cho Cách mạng tháng Tám năm 1945 ở Việt Nam diễn ra thắng lợi?",
+            "options": [
+                "Nhật Bản tiến hành đảo chính Pháp.",
+                "Nhật Bản xâm lược Đông Dương.",
+                "Nhật Bản đầu hàng Đồng minh không điều kiện.",
+                "Chiến tranh Thái Bình Dương bùng nổ."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Lực lượng vũ trang có vai trò nào sau đây trong cuộc Tổng khởi nghĩa tháng Tám năm 1945 ở Việt Nam?",
+            "options": [
+                "Nòng cốt, quyết định thắng lợi.",
+                "Đông đảo, quyết định thắng lợi.",
+                "Góp phần quan trọng đưa đến thắng lợi.",
+                "Xung kích, hỗ trợ lực lượng chính trị."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận xét nào dưới đây không đúng về Cách mạng tháng Tám (1945) ở Việt Nam?",
+            "options": [
+                "Đây là thắng lợi của một cuộc cách mạng vô sản điển hình trên thế giới.",
+                "Đây là một cuộc cách mạng mang tính chất giải phóng dân tộc điển hình.",
+                "Cách mạng có sự chuẩn bị chu đáo, kết hợp với nghệ thuật chớp thời cơ.",
+                "Cách mạng có sự tham gia của lực lượng chính trị và lực lượng vũ trang."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong cuộc kháng chiến chống thực dân Pháp (1945-1954), thắng lợi nào sau đây của quân dân Việt Nam đã khai thông con đường liên lạc với các nước xã hội chủ nghĩa?",
+            "options": [
+                "Chiến thắng Vạn Tường.",
+                "Chiến thắng Ấp Bắc.",
+                "Chiến dịch Việt Bắc thu - đông.",
+                "Chiến dịch Biên giới thu - đông."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh đúng điểm tương đồng giữa chiến dịch Việt Bắc thu - đông năm 1947 và chiến dịch Điện Biên Phủ năm 1954 của quân dân Việt Nam?",
+            "options": [
+                "Có sự ủng hộ về vật chất và tinh thần của các nước xã hội chủ nghĩa.",
+                "Kết hợp hoạt động tác chiến của bộ đội với nổi dậy của quần chúng.",
+                "Làm phá sản chiến lược “đánh nhanh, thắng nhanh” của thực dân Pháp.",
+                "Làm thất bại các kế hoạch chiến tranh xâm lược của thực dân Pháp."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây phản ánh điểm mới về bối cảnh quốc tế của cuộc kháng chiến chống thực dân Pháp (từ năm 1950) của nhân dân Việt Nam?",
+            "options": [
+                "Đang ở trong vòng vây của thực dân Pháp có Mỹ giúp sức.",
+                "Hệ thống chủ nghĩa xã hội ra đời không ngừng lớn mạnh.",
+                "Cuộc kháng chiến chịu sự tác động trực tiếp của cục diện hai cực, hai phe.",
+                "Pháp không còn khả năng tiến hành chiến tranh xâm lược."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Chiến thắng Phước Long (1-1975) của quân dân Việt Nam cho thấy",
+            "options": [
+                "sự lớn mạnh và khả năng thắng lớn của quân ta.",
+                "khả năng can thiệp bằng quân sự trở lại của Mỹ là rất cao.",
+                "nhiệm vụ đánh cho “Mỹ cút” đã hoàn thành.",
+                "quân đội Sài Gòn đã tan rã hoàn toàn."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nét nổi bật về nghệ thuật quân sự trong cuộc Tổng tiến công và nổi dậy mùa xuân 1975 của quân dân Việt Nam là gì?",
+            "options": [
+                "Kết hợp đánh tập trung với đánh phân tán, tạo thế bao vây, cô lập, tiêu diệt địch từng bước.",
+                "Tận dụng ưu thế về số lượng quân, trang bị kỹ thuật, áp dụng chiến thuật “đánh thọc sâu, đánh điểm, chia cắt, bao vây”.",
+                "Sử dụng đồng bộ các binh chủng, quân, địa phương, kết hợp với tiến công quân sự và nổi dậy của nhân dân.",
+                "Đánh nhanh, đánh mạnh, đánh hiểm, huy động tối đa sức mạnh quân sự, mở rộng phạm vi tiến công."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây là chủ trương của Đảng Cộng sản Việt Nam trong giai đoạn từ năm 2006 đến nay?",
+            "options": [
+                "Xây dựng nền kinh tế bao cấp.",
+                "Tiến hành cách mạng ruộng đất.",
+                "Thực hiện ngoại giao biệt lập, cứng rắn.",
+                "Tiến hành hội nhập quốc tế sâu rộng."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một trong những hoạt động đối ngoại của nước Việt Nam Dân Chủ Cộng hòa vào năm 1972 là",
+            "options": [
+                "đàm phán quyết liệt với Pháp.",
+                "yêu cầu Anh chấm dứt chiến tranh.",
+                "gia nhập tổ chức Liên hợp quốc.",
+                "đấu tranh với Mỹ ở Hội nghị Pari."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Yếu tố nào sau đây là một trong những nguyên tắc quan trọng trong chính sách đối ngoại của Việt Nam từ 1975 đến nay?",
+            "options": [
+                "Hợp tác toàn diện với tất cả các nước.",
+                "Tôn trọng độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ.",
+                "Nhân nhượng để chung sống hòa bình với tất cả các quốc gia.",
+                "Giải quyết các xung đột bằng biện pháp hòa hoãn."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Năm 1921, nhờ sự giúp đỡ của Đảng Cộng sản Pháp, Nguyễn Ái Quốc cùng một số chiến sĩ cách mạng ở nhiều nước thuộc địa của Pháp lập ra Hội liên hiệp thuộc địa nhằm tập hợp tất cả những người ở thuộc địa sống trên đất Pháp đấu tranh chống chủ nghĩa thực dân. Hội quyết định xuất bản tờ báo Người cùng khổ (Le Paria), do Nguyễn Ái Quốc làm chủ nhiệm kiêm chủ bút”.<br>\t(Bộ Giáo dục và Đào tạo, Giáo trình lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia, Hà Nội, 2004, tr.39)<br>Đoạn tư liệu đề cập đến hoạt động của Nguyễn Ái Quốc khi đang ở quốc gia nào sau đây?",
+            "options": [
+                "Trung Quốc.",
+                "Anh.",
+                "Liên Xô.",
+                "Pháp."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Năm 1921, nhờ sự giúp đỡ của Đảng Cộng sản Pháp, Nguyễn Ái Quốc cùng một số chiến sĩ cách mạng ở nhiều nước thuộc địa của Pháp lập ra Hội liên hiệp thuộc địa nhằm tập hợp tất cả những người ở thuộc địa sống trên đất Pháp đấu tranh chống chủ nghĩa thực dân. Hội quyết định xuất bản tờ báo Người cùng khổ (Le Paria), do Nguyễn Ái Quốc làm chủ nhiệm kiêm chủ bút”.<br>\t(Bộ Giáo dục và Đào tạo, Giáo trình lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia, Hà Nội, 2004, tr.39)<br>Nguyễn Ái Quốc cùng một số chiến sĩ cách mạng ở nhiều nước thuộc địa của Pháp lập ra Hội liên hiệp thuộc địa chứng tỏ",
+            "options": [
+                "Người góp phần thiết lập quan hệ giữa cách mạng Việt Nam với cách mạng thế giới.",
+                "Người đã tổ chức, thực hiện thành công cuộc cách mạng xã hội chủ nghĩa ở Việt Nam.",
+                "Người đã trực tiếp đẩy nhanh công cuộc cách mạng dân tộc và dân chủ ở Việt Nam.",
+                "Người là nhà báo, nhà kinh tế học góp phần xây dựng nền kinh tế thị trường thế giới."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Năm 1921, nhờ sự giúp đỡ của Đảng Cộng sản Pháp, Nguyễn Ái Quốc cùng một số chiến sĩ cách mạng ở nhiều nước thuộc địa của Pháp lập ra Hội liên hiệp thuộc địa nhằm tập hợp tất cả những người ở thuộc địa sống trên đất Pháp đấu tranh chống chủ nghĩa thực dân. Hội quyết định xuất bản tờ báo Người cùng khổ (Le Paria), do Nguyễn Ái Quốc làm chủ nhiệm kiêm chủ bút”.<br>\t(Bộ Giáo dục và Đào tạo, Giáo trình lịch sử Đảng Cộng sản Việt Nam, NXB Chính trị quốc gia, Hà Nội, 2004, tr.39)<br>Việc thành lập Hội liên hiệp thuộc địa và xuất bản báo Người cùng khổ cho thấy đóng góp nào sau đây của Nguyễn Ái Quốc?",
+            "options": [
+                "Đưa ngay Đảng Cộng sản Việt Nam trở thành một phân bộ độc lập trực thuộc Quốc tế Cộng sản.",
+                "Hoàn chỉnh hệ thống lí luận giải phóng dân tộc gắn với giải phóng giai cấp truyền bá về Việt Nam.",
+                "Góp phần vào cuộc đấu tranh chung của các dân tộc vì hoà bình, độc lập dân tộc và tiến bộ xã hội.",
+                "Hoàn thành quá trình vận động thành lập chính Đảng vô sản, tìm ra con đường cứu nước đúng đắn."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Cách mạng nước ta đang phát triển với nhịp độ “một ngày bằng hai mươi năm”. Do vậy, Bộ Chính trị quyết định: Chúng ta phải nắm vững thời cơ chiến lược, quyết tâm thực hiện tổng tiến công và nổi dậy, kết thúc thắng lợi chiến tranh giải phóng trong thời gian ngắn nhất. Tốt hơn cả là bắt đầu và kết thúc trong tháng 4 năm nay, không để chậm. Phải hành động “thần tốc, táo bạo, bất ngờ”. Phải tiến công ngay lúc địch hoang mang, suy sụp. Tập trung lực lượng lớn hơn nữa vào những mục tiêu chủ yếu trên từng hướng, trong từng lúc”.<br>(Văn kiện Đảng toàn tập (Tập 36), Điện của Bộ Chính trị, 14 giờ ngày 01-04-1975, NXB Chính trị Quốc gia, Hà Nội, 2001, tr.95)",
+            "items": [
+                "Đoạn tư liệu cung cấp thông tin về phương châm tác chiến của chiến dịch Hồ Chí Minh năm 1975 là thần tốc, táo bạo, bất ngờ.",
+                "Thời cơ chiến lược của cuộc Tổng tiến công và nổi dậy Xuân năm 1975 chính thức xuất hiện ngay sau phong trào Đồng khởi năm 1960.",
+                "Quá trình đề ra và hoàn thiện chủ trương giải phóng miền Nam Việt Nam cho thấy sự kịp thời, đúng đắn, sáng tạo và nhân văn của Đảng trong việc giải quyết vấn đề thời cơ.",
+                "Một trong những điểm tương đồng của Cách mạng tháng Tám năm 1945 và cuộc Tổng tiến công và nổi dậy Xuân 1975 là đều có quá trình vận động, phát triển thời cơ cách mạng."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Sự đầu hàng của Chính phủ Nhật đã đẩy quân Nhật đang chiếm đóng ở Đông Dương vào tình thế tuyệt vọng như rắn mất đầu, hoang mang dao động đến cực độ. Chính phủ Trần Trọng Kim rệu rã... Trước tình hình như vậy, Hồ Chí Minh mặc dù đang ốm nặng đã sáng suốt nhận thức rằng: 'Lúc này thời cơ thuận lợi đã tới, dù hy sinh tới đâu, dù phải đốt cháy cả dãy Trường Sơn cũng phải kiên quyết giành cho được độc lập.' Như đã nói, đây không chỉ là sự nhận thức khách quan khoa học mà còn biểu hiện quyết tâm đấu tranh giành chính quyền khi thời cơ đã có. Sự kết hợp giữa tình hình khách quan và nhận thức chủ quan một cách chính xác là một trong những điều kiện đưa cách mạng đến thắng lợi”.<br>(Phan Ngọc Liên (Chủ biên), Cách mạng tháng Tám năm 1945 - Toàn cảnh, NXB Từ điển Bách khoa, Hà Nội, 2015, tr.48)",
+            "items": [
+                "Sự thống nhất trong hành động và quyết tâm giành chính quyền của nhân dân Việt Nam là một trong những yếu tố làm nên thắng lợi của Cách mạng tháng Tám năm 1945.",
+                "Sự kiện Nhật đầu hàng Đồng minh không điều kiện là cơ hội để Chính phủ Trần Trọng Kim củng cố lực lượng và tăng cường khả năng kiểm soát tình hình ở Đông Dương.",
+                "Nhận thức rõ yếu tố thời cơ đan xen yếu tố nguy cơ, Đảng và Hồ Chí Minh đã hành động kịp thời, kiên quyết phát động nhân dân đứng lên đấu tranh giành chính quyền.",
+                "Sự kết hợp giữa điều kiện khách quan và chủ quan thuận lợi đã đưa Cách mạng tháng Tám năm 1945 ở Việt Nam đến thành công."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Chúng ta cần một xã hội mà trong đó sự phát triển là thực sự vì con người, chứ không phải vì lợi nhuận mà bóc lột và chà đạp lên phẩm giá con người. Chúng ta cần sự phát triển về kinh tế đi đôi với tiến bộ và công bằng xã hội, chứ không phải gia tăng khoảng cách giàu nghèo và bất bình đẳng xã hội. Chúng ta cần một xã hội nhân ái, đoàn kết, tương trợ lẫn nhau, hướng tới các giá trị tiến bộ, nhân văn, chứ không phải cạnh tranh bất công, “cá lớn nuốt cá bé”, vì lợi ích vị kỷ của một số ít cá nhân và các phe nhóm”.<br>(Nguyễn Phú Trọng, Một số vấn đề lý luận và thực tiễn về Chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội ở Việt Nam, Nxb Chính trị Quốc gia Sự thật, 2024, tr.19).",
+            "items": [
+                "Đường lối xuyên suốt đi lên Chủ nghĩa xã hội của Việt Nam qua các thời kì khác nhau đều hướng tới sự phát triển vì con người.",
+                "Đường lối của công cuộc Đổi mới ở Việt Nam thực hiện xoá bỏ mọi thành phần kinh tế tư bản chủ nghĩa nhằm phát triển kinh tế đi đôi với tiến bộ và công bằng xã hội.",
+                "Mô hình nhà nước xã hội chủ nghĩa lí tưởng theo nguyên lý của Chủ nghĩa Mác – Lê nin đã được Việt Nam xây dựng thành công ngay khi tiến hành công cuộc Đổi mới.",
+                "Hiện tượng “cá lớn nuốt cá bé” không còn trên phạm vi toàn thế giới khi Việt Nam quyết định đi lên xây dựng chủ nghĩa xã hội."
+            ],
+            "ans": [
+                true,
+                false,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn tư liệu sau đây:<br>“Trải qua hơn 40 năm,“Trật tự hai cực Ianta” đã từng bước bị xói mòn: thắng lợi của cách mạng Trung Quốc năm 1949 đã tạo ra một “đột phá” đối với trật tự này là đập tan âm mưu của Mỹ khống chế Trung Quốc và Liên Xô buộc phải từ bỏ những đặc quyền ở vùng Đông Bắc Trung Quốc; sự lớn mạnh về kinh tế của các nước tư bản Tây Âu, đặc biệt là sự ra đời của Khối thị trường chung châu Âu (EEC) từ giai đoạn trước làm suy giảm nghiêm trọng phạm vi ảnh hưởng của Mỹ ở Tây Âu;”.<br>(Nguyễn Anh Thái (Chủ biên), Lịch sử thế giới hiện đại, NXB Giáo dục Việt Nam, Hà Nội, 2021, tr.417).",
+            "items": [
+                "Đoạn tư liệu đề cập đến biểu hiện xói mòn của Trật tự hai cực Ianta và sự xác lập của Trật tự thế giới đa cực.",
+                "Sự phát triển về kinh tế của Nhật Bản, Tây Âu phản ánh xu thế hoà bình, hợp tác cùng phát triển trong quá trình xói mòn của trật tự hai cực Ian-ta.",
+                "Thắng lợi của cách mạng Trung Quốc năm 1949 là một bước ngoặt trong quan hệ quốc tế thời kì Chiến tranh lạnh.",
+                "Thực tiễn quan hệ quốc tế trong thời kì Chiến tranh lạnh cho thấy quá trình phát triển đi đôi với xói mòn của trật tự hai cực Ian-ta."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

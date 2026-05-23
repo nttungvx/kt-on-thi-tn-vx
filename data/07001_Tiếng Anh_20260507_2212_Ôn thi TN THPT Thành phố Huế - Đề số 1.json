@@ -1,0 +1,458 @@
+{
+    "timeLimit": 3000,
+    "subject": "07",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 1",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "07001",
+    "part1": [
+        {
+            "q": "<b> 1. </b><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 1 to 6.</b><br><b>Tips to Maintain Lasting And Meaningful Friendships</b><br>Making friends is often easy during childhood, but friendship maintenance in adulthood can be challenging. Balancing personal, professional, and social life, along with distance and (1) ________ can make it difficult to stay connected. Friendship offers many benefits - studies show that both the quantity and quality of these bonds can impact mental health, so here are (2) ________ mindful tips to help you nurture them.<br>• <b>Lift Each Other Up:</b> Supporting a friend emotionally, (3) ________ their feelings, and reminding them of their strengths can strengthen your bond. Mutual support helps improve mental and physical well-being and shows that friendship isn’t one-sided.<br>• <b>Fuel the Connection:</b> Checking in (4) ________ special occasions or remembering small details can keep the bond strong. Being present not only in tough times (5) ________ also in everyday moments reinforces closeness. Quality matters more than quantity.<br>• <b>Express Gratitude:</b> Appreciating a friend’s thoughtfulness and showing them they’re valued can strengthen your connection. Small gestures like a kind message or thoughtful check-in can go a long (6) ________.",
+            "options": [
+                "lifestyle significant changes",
+                "changes lifestyle significant",
+                "significant changes lifestyle",
+                "significant lifestyle changes"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 2. </b><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 1 to 6.</b><br><b>Tips to Maintain Lasting And Meaningful Friendships</b><br>Making friends is often easy during childhood, but friendship maintenance in adulthood can be challenging. Balancing personal, professional, and social life, along with distance and (1) ________ can make it difficult to stay connected. Friendship offers many benefits - studies show that both the quantity and quality of these bonds can impact mental health, so here are (2) ________ mindful tips to help you nurture them.<br>• <b>Lift Each Other Up:</b> Supporting a friend emotionally, (3) ________ their feelings, and reminding them of their strengths can strengthen your bond. Mutual support helps improve mental and physical well-being and shows that friendship isn’t one-sided.<br>• <b>Fuel the Connection:</b> Checking in (4) ________ special occasions or remembering small details can keep the bond strong. Being present not only in tough times (5) ________ also in everyday moments reinforces closeness. Quality matters more than quantity.<br>• <b>Express Gratitude:</b> Appreciating a friend’s thoughtfulness and showing them they’re valued can strengthen your connection. Small gestures like a kind message or thoughtful check-in can go a long (6) ________.",
+            "options": [
+                "a few",
+                "a little",
+                "much",
+                "others"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 3. </b><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 1 to 6.</b><br><b>Tips to Maintain Lasting And Meaningful Friendships</b><br>Making friends is often easy during childhood, but friendship maintenance in adulthood can be challenging. Balancing personal, professional, and social life, along with distance and (1) ________ can make it difficult to stay connected. Friendship offers many benefits - studies show that both the quantity and quality of these bonds can impact mental health, so here are (2) ________ mindful tips to help you nurture them.<br>• <b>Lift Each Other Up:</b> Supporting a friend emotionally, (3) ________ their feelings, and reminding them of their strengths can strengthen your bond. Mutual support helps improve mental and physical well-being and shows that friendship isn’t one-sided.<br>• <b>Fuel the Connection:</b> Checking in (4) ________ special occasions or remembering small details can keep the bond strong. Being present not only in tough times (5) ________ also in everyday moments reinforces closeness. Quality matters more than quantity.<br>• <b>Express Gratitude:</b> Appreciating a friend’s thoughtfulness and showing them they’re valued can strengthen your connection. Small gestures like a kind message or thoughtful check-in can go a long (6) ________.",
+            "options": [
+                "entrusting",
+                "betraying",
+                "authenticating",
+                "validating"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 4. </b><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 1 to 6.</b><br><b>Tips to Maintain Lasting And Meaningful Friendships</b><br>Making friends is often easy during childhood, but friendship maintenance in adulthood can be challenging. Balancing personal, professional, and social life, along with distance and (1) ________ can make it difficult to stay connected. Friendship offers many benefits - studies show that both the quantity and quality of these bonds can impact mental health, so here are (2) ________ mindful tips to help you nurture them.<br>• <b>Lift Each Other Up:</b> Supporting a friend emotionally, (3) ________ their feelings, and reminding them of their strengths can strengthen your bond. Mutual support helps improve mental and physical well-being and shows that friendship isn’t one-sided.<br>• <b>Fuel the Connection:</b> Checking in (4) ________ special occasions or remembering small details can keep the bond strong. Being present not only in tough times (5) ________ also in everyday moments reinforces closeness. Quality matters more than quantity.<br>• <b>Express Gratitude:</b> Appreciating a friend’s thoughtfulness and showing them they’re valued can strengthen your connection. Small gestures like a kind message or thoughtful check-in can go a long (6) ________.",
+            "options": [
+                "of",
+                "up",
+                "on",
+                "from"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 5. </b><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 1 to 6.</b><br><b>Tips to Maintain Lasting And Meaningful Friendships</b><br>Making friends is often easy during childhood, but friendship maintenance in adulthood can be challenging. Balancing personal, professional, and social life, along with distance and (1) ________ can make it difficult to stay connected. Friendship offers many benefits - studies show that both the quantity and quality of these bonds can impact mental health, so here are (2) ________ mindful tips to help you nurture them.<br>• <b>Lift Each Other Up:</b> Supporting a friend emotionally, (3) ________ their feelings, and reminding them of their strengths can strengthen your bond. Mutual support helps improve mental and physical well-being and shows that friendship isn’t one-sided.<br>• <b>Fuel the Connection:</b> Checking in (4) ________ special occasions or remembering small details can keep the bond strong. Being present not only in tough times (5) ________ also in everyday moments reinforces closeness. Quality matters more than quantity.<br>• <b>Express Gratitude:</b> Appreciating a friend’s thoughtfulness and showing them they’re valued can strengthen your connection. Small gestures like a kind message or thoughtful check-in can go a long (6) ________.",
+            "options": [
+                "than",
+                "but",
+                "or",
+                "and"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 6. </b><b>Read the following leaflet and mark the letter A, B, C, or D on your answer sheet to indicate the correct option that best fits each of the numbered blanks from 1 to 6.</b><br><b>Tips to Maintain Lasting And Meaningful Friendships</b><br>Making friends is often easy during childhood, but friendship maintenance in adulthood can be challenging. Balancing personal, professional, and social life, along with distance and (1) ________ can make it difficult to stay connected. Friendship offers many benefits - studies show that both the quantity and quality of these bonds can impact mental health, so here are (2) ________ mindful tips to help you nurture them.<br>• <b>Lift Each Other Up:</b> Supporting a friend emotionally, (3) ________ their feelings, and reminding them of their strengths can strengthen your bond. Mutual support helps improve mental and physical well-being and shows that friendship isn’t one-sided.<br>• <b>Fuel the Connection:</b> Checking in (4) ________ special occasions or remembering small details can keep the bond strong. Being present not only in tough times (5) ________ also in everyday moments reinforces closeness. Quality matters more than quantity.<br>• <b>Express Gratitude:</b> Appreciating a friend’s thoughtfulness and showing them they’re valued can strengthen your connection. Small gestures like a kind message or thoughtful check-in can go a long (6) ________.",
+            "options": [
+                "crack",
+                "gulf",
+                "way",
+                "chase"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 7. </b><b>Mark the letter A, B, C, or D </b><b>on your answer sheet </b><b>to indicate the best arrangement of utterances or sentences to make a </b><b>cohesive and coherent exchange or text</b><b> in each of the following questions from </b><b>7 to 11.</b><br><b>a)</b> Sam: Here’s a little something for you. I hope you like it.<br>b) Dave: No worries. I’m so glad you could make it, Sam. Come on in.<br>c) Sam: Thank you for inviting me to your dinner party. I'm sorry to have kept you waiting.",
+            "options": [
+                "b-a-c",
+                "c-b-a",
+                "a-b-c",
+                "b-c-a"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 8.</b><br><b>Mark the letter A, B, C, or D </b><b>on your answer sheet </b><b>to indicate the best arrangement of utterances or sentences to make a </b><b>cohesive and coherent exchange or text</b><b> in each of the following questions from </b><b>7 to 11.</b><br><b>a)</b> Mai: Exactly! Plus, it can help them learn valuable life skills.<br>b) Peter: I do! It teaches them responsibility and teamwork.<br>c) Peter: Right! What age do you think is best for them to start?<br>d) Mai: I think around five or six is a good start, with simple tasks like picking up toys.<br>e) Mai: Hey! Do you think children should do household chores?",
+            "options": [
+                "e – b – a – c – d",
+                "e – b – d – a – c",
+                "c – d – e – a – b",
+                "a – c – e – d – b"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 9.</b><br><b>Mark the letter A, B, C, or D </b><b>on your answer sheet </b><b>to indicate the best arrangement of utterances or sentences to make a </b><b>cohesive and coherent exchange or text</b><b> in each of the following questions from </b><b>7 to 11.</b><br>Hi Alex,<br>a) I appreciate the recommendation for the language app - it’s been so helpful for my French practice.<br>b) Thanks for the podcast you suggested last week; it was really inspiring to listen to successful language learners sharing their tips.<br>c) By the way, have you ever considered joining an online language exchange group? I think it could be fun to try together.<br>d) I’ve been trying to set aside more time for speaking practice, but it’s a bit challenging with my busy schedule.<br>e) Still, I’m motivated to improve my French, and I’ll let you know if I find other useful resources.<br>Write back soon,<br>Jordan",
+            "options": [
+                "b – a – d – e – c",
+                "d – a – c – e – b",
+                "b – a – e – d – c",
+                "a – e – c – d – b"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 10.</b><br><b>Mark the letter A, B, C, or D </b><b>on your answer sheet </b><b>to indicate the best arrangement of utterances or sentences to make a </b><b>cohesive and coherent exchange or text</b><b> in each of the following questions from </b><b>7 to 11.</b><br><b>a)</b> That's why it's vital that consumers thoughtfully examine the media they access.<br>b) It includes various forms such as television, radio, newspapers, and social media platforms.<br>c) Mass media play a significant role in shaping public opinion and culture.<br>d) However, while mass media can inform, it can mislead or manipulate if not used responsibly.<br>e) With the rise of the internet, online news and digital content have become essential sources of information.",
+            "options": [
+                "a-b-c-d-e",
+                "c-e-d-a-b",
+                "c-b-e-d-a",
+                "a-c-b-e-d"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 11.</b><br><b>Mark the letter A, B, C, or D </b><b>on your answer sheet </b><b>to indicate the best arrangement of utterances or sentences to make a </b><b>cohesive and coherent exchange or text</b><b> in each of the following questions from </b><b>7 to 11.</b><br><b>a)</b> While managing large teams and coordinating multiple tasks can be challenging, the sense of accomplishment when a project is completed successfully is truly rewarding.<br>b) I started my career in project management five years ago, where I quickly developed a passion for overseeing complex projects.<br>c) My ability to communicate clearly with clients and colleagues is one of my greatest strengths in this role.<br>d) I have honed my skills through various leadership training programs and by handling diverse projects across industries.<br>e) In conclusion, my experience in leading teams and delivering results under tight deadlines has shaped me into a well-rounded project manager.",
+            "options": [
+                "b-c-a-d-e",
+                "c-a-d-b-e",
+                "d-b-a-c-e",
+                "b-d-c-a-e"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 12. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>Where in paragraph 3 does the following sentence best fit?<br><b>“Industries where AI can replicate tasks with little customization are more vulnerable to disruption, especially in areas like coding or translation.”</b>",
+            "options": [
+                "[I]",
+                "[II]",
+                "[III]",
+                "[IV]"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 13. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>According to paragraph 4, which of the following is NOT mentioned as a company adapting to AI disruption?",
+            "options": [
+                "Chegg is collaborating with Scale AI to offer machine-generated answers for students.",
+                "Duolingo is integrating creative, interactive AI features, such as an AI-generated character.",
+                "RWS is developing its AI-powered translation tools.",
+                "Stack Overflow has successfully adapted its business model by incorporating AI-driven coding solutions."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 14. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>The word “<u><b>trepidation</b></u>” in paragraph 2 is OPPOSITE in meaning to ________.",
+            "options": [
+                "nervousness",
+                "anxiety",
+                "assurance",
+                "insecurity"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 15. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>Which of the following best summarizes paragraph 2?",
+            "options": [
+                "Stack Overflow has benefited from AI tools like GitHub Copilot, while RWS has struggled due to competition from AI-powered translation services.",
+                "Generative AI has caused a decline in the use of Stack Overflow and RWS, as AI tools offer more efficient alternatives, leading to financial struggles and investor trepidation.",
+                "Generative AI has improved both Stack Overflow and RWS by enabling them to adopt AI technologies effectively in their business models.",
+                "Coders and translators now rely less on Stack Overflow and RWS because AI tools like ChatGPT and GitHub Copilot have eliminated the need for human assistance."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 16. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>The phrase “<u><b>take a toll on</b></u>” in paragraph 1 could best be replaced by ________.",
+            "options": [
+                "pay attention to",
+                "run out of",
+                "cause damage to",
+                "fall short of"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 17. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>Which of the following best paraphrases the underlined sentence in paragraph 3?",
+            "options": [
+                "Only in cases where errors abound, particularly AI hallucinations, do businesses in these sectors fully adopt generative AI.",
+                "Businesses in these sectors grow wary of implementing generative AI widely due to the risk of errors, especially AI hallucinations.",
+                "Generative AI is cautiously accepted by businesses in these sectors, where frequent errors such as AI hallucinations occur.",
+                "Rarely do businesses in these areas embrace the widespread use of generative AI, despite the high likelihood of errors and AI hallucinations."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 18. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>The word “<u><b>them</b></u>” in paragraph 2 refers to ________.",
+            "options": [
+                "business models",
+                "AI assistants",
+                "companies",
+                "coders"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 19. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>Which of the following is TRUE according to the passage?",
+            "options": [
+                "Legal and medical fields are heavily impacted by AI technologies.",
+                "Chegg has experienced significant success in combating AI disruption in recent years.",
+                "GitHub Copilot has increased Stack Overflow's web traffic significantly.",
+                "RWS has struggled to maintain investor confidence due to the impact of AI."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 20. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>Which of the following can be inferred from the passage?",
+            "options": [
+                "The legal and medical sectors are early adopters of generative AI because of their high demand for precision.",
+                "Duolingo's success shows that all industries impacted by AI can thrive through innovative and creative applications of technology.",
+                "Companies that fail to innovate creatively with AI are at greater risk of losing relevance in competitive markets.",
+                "Chegg's partnership with Scale AI has notably revitalized its business model, enhancing its offerings and services."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 21. </b><b>Read the passage and mark the letter A, B, C or D on your answer sheet to indicate the best answer to each of the following questions from 12 to 21.</b><br>In recent years, the rise of artificial intelligence (AI) has begun to <u><b>take a toll on</b></u> several industries, especially those relying on digital services. Chegg, for instance, has seen its share price plummet by 99% in less than four years, mainly due to a drop in demand for online learning. While the post-pandemic slump in digital education contributed to this decline, the advent of AI tools like ChatGPT has exacerbated the issue. These AI technologies now provide students with free and efficient alternatives to the services Chegg offers, such as homework assistance and tutoring.<br>Similarly, other companies have also felt the impact of generative AI on their business models. Stack Exchange, which runs the popular Stack Overflow, has experienced a dramatic decline in web traffic, as many coders turn to AI-powered tools like GitHub Copilot. These AI assistants allow <u><b>them</b></u> to solve coding issues more efficiently, leaving Stack Overflow struggling to maintain its relevance. Likewise, RWS, a translation service provider, has seen a significant drop in its revenue and share price since the introduction of ChatGPT, fueling investor trepidation about the future of the company.<br>[I] However, the effects of AI are not universal, and some sectors remain largely unaffected by the technology's encroachment. [II] On the other hand, fields requiring a higher degree of precision, such as legal or medical work, are less likely to be immediately impacted. [III] <u><b>The propensity for errors, particularly AI hallucinations, renders businesses in these sectors more cautious about embracing the widespread adoption of generative AI.</b></u> [IV]<br>In order to survive in the face of AI disruption, companies must adapt and innovate adroitly, using AI to enhance their products and services. Chegg, for example, is collaborating with Scale AI to offer machine-generated answers for students, while RWS is developing its AI-powered translation tools. However, the innovation seen so far has been somewhat uninspired, with companies still struggling to find meaningful ways to integrate AI into their business models. In contrast, companies like Duolingo are finding success by integrating creative, interactive AI features, like their AI-generated character, Lily, which has helped boost shareholder confidence.<br>Which of the following best summarizes the passage?",
+            "options": [
+                "The introduction of AI technologies like ChatGPT has led to the downfall of businesses relying on digital services, but sectors that demand high precision, such as medicine, are thriving despite the AI revolution, leaving no room for creative adaptation.",
+                "AI's impact on industries has been minimal, with businesses like Stack Overflow adapting by creating successful AI-powered products, while competitors such as Chegg and RWS struggle to innovate and keep up with the changing technological landscape.",
+                "AI tools like ChatGPT have primarily disrupted the education sector, pushing companies like Chegg to adopt uninspired AI solutions, while industries requiring higher precision, such as legal and medical fields, have experienced minimal impact from this technology.",
+                "The rise of AI has caused significant declines in companies like Chegg, Stack Overflow, and RWS, but some industries, such as the legal and medical fields, remain largely unaffected, and businesses like Duolingo are thriving by creatively integrating AI."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 22. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>Which of the following is NOT mentioned as a change in the job market?",
+            "options": [
+                "Decline in technology jobs",
+                "Increased remote work",
+                "Higher wages",
+                "Demand for skilled workers"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 23. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>The word “<b>immense</b>” in paragraph 1 is OPPOSITE in meaning to_______.",
+            "options": [
+                "tiny",
+                "considerable",
+                "huge",
+                "significant"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 24. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>The word \"<b>equitable</b>\" in paragraph 3 could be best replaced by_______.",
+            "options": [
+                "unjust",
+                "fair",
+                "biased",
+                "unequal"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 25. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>The word “<b>they</b>” in paragraph 4 refers to_______.",
+            "options": [
+                "employers",
+                "companies",
+                "job seekers",
+                "environmentalists"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 26. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>Which of the following best paraphrases the underlined sentence in paragraph 3?",
+            "options": [
+                "Workers are expressing their concerns more openly.",
+                "Laborers are indifferent to their rights.",
+                "Employees are silent about their issues.",
+                "Employees are discouraged from speaking up."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 27. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>Which of the following is TRUE according to the passage?",
+            "options": [
+                "Workers are less concerned about company culture.",
+                "The job market is static and unchanging.",
+                "Remote work is decreasing in popularity.",
+                "Companies are adjusting to meet staffing needs."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 28. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>In which paragraph does the writer mention how workers are improving their skills?",
+            "options": [
+                "Paragraph 2",
+                "Paragraph 3",
+                "Paragraph 1",
+                "Paragraph 5"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 29. </b><b>Read the passage and mark the letter A, B, C, D on your answer sheet to indicate the best answer to each of the following questions from </b><b>22 to 29.</b><br>\tIn recent years, the job market has undergone significant changes, driven by advancements in technology and shifts in worker preferences. Remote work has gained <u><b>immense</b></u> popularity, allowing employees to work from home or anywhere with an internet connection. This flexibility has become a top priority for many job seekers, leading companies to adopt hybrid work models to attract and retain talent.<br>\tThe demand for skilled workers in fields such as technology, healthcare, and renewable energy is on the rise. Employers are increasingly looking for candidates with specialized skills, prompting many individuals to pursue further education and training to enhance their employability. Online courses and certification programs have made it easier for people to acquire new skills while balancing other commitments.<br>\tHowever, the job market is not without its challenges. Many industries are facing labor shortages, leading to increased competition for qualified candidates. This has resulted in higher wages and better benefits for workers, but it also means that companies must adapt quickly to meet their staffing needs. Additionally, <u><b>workers are becoming more vocal about their rights</b></u> and working conditions, pushing for more <u><b>equitable</b></u> practices in the workplace.<br>\tJob seekers today are also placing greater emphasis on company culture and values. <u><b>They</b></u> prefer employers who prioritize diversity, equity, and inclusion, as well as those who demonstrate a commitment to social and environmental responsibility. As a result, companies are reevaluating their corporate practices to align with these expectations, aiming to create a more positive work environment.<br>\tOverall, the current job market is dynamic and evolving. As technology continues to reshape industries and worker preferences shift, both employers and employees must remain adaptable to succeed in this changing landscape.<br>In which paragraph does the writer discuss the importance of company culture?",
+            "options": [
+                "Paragraph 1",
+                "Paragraph 4",
+                "Paragraph 2",
+                "Paragraph 3"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 30. </b><b>Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 34.</b><br><b>Exams coming up? Use the science of memory to improve how you revise</b><br>To make your revision more effective, it’s important to engage with the material actively (30) ______. Simply highlighting text may seem like a good idea, but it doesn’t require much thought. Instead, read through the material first and then highlight only the three most important points. This forces you to think critically about what you’re reading, (31) ______.<br>(32) ______. Writing down the key points helps deepen your understanding and enhances memory recall. Rephrasing forces your brain to process the information more actively, which makes it easier to retain.<br>Finally, make revision more interesting by incorporating creative techniques. (33) ______. Adding personal touches like doodling or turning notes into a song can help reinforce learning, making the revision process more enjoyable and memorable.<br>(34) ______, and making the process enjoyable, you’ll significantly improve your chances of success.",
+            "options": [
+                "compared to reliably passive approaches",
+                "except for reliability of passive approaches",
+                "rather than relying on passive methods",
+                "other than passive methods to rely on"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 31. </b><b>Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 34.</b><br><b>Exams coming up? Use the science of memory to improve how you revise</b><br>To make your revision more effective, it’s important to engage with the material actively (30) ______. Simply highlighting text may seem like a good idea, but it doesn’t require much thought. Instead, read through the material first and then highlight only the three most important points. This forces you to think critically about what you’re reading, (31) ______.<br>(32) ______. Writing down the key points helps deepen your understanding and enhances memory recall. Rephrasing forces your brain to process the information more actively, which makes it easier to retain.<br>Finally, make revision more interesting by incorporating creative techniques. (33) ______. Adding personal touches like doodling or turning notes into a song can help reinforce learning, making the revision process more enjoyable and memorable.<br>(34) ______, and making the process enjoyable, you’ll significantly improve your chances of success.",
+            "options": [
+                "to enhance the likelihood of retaining the information.",
+                "improving your chances of remembering the information.",
+                "which boost your memory of the information.",
+                "increases your ability to remember the information."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 32. </b><b>Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 34.</b><br><b>Exams coming up? Use the science of memory to improve how you revise</b><br>To make your revision more effective, it’s important to engage with the material actively (30) ______. Simply highlighting text may seem like a good idea, but it doesn’t require much thought. Instead, read through the material first and then highlight only the three most important points. This forces you to think critically about what you’re reading, (31) ______.<br>(32) ______. Writing down the key points helps deepen your understanding and enhances memory recall. Rephrasing forces your brain to process the information more actively, which makes it easier to retain.<br>Finally, make revision more interesting by incorporating creative techniques. (33) ______. Adding personal touches like doodling or turning notes into a song can help reinforce learning, making the revision process more enjoyable and memorable.<br>(34) ______, and making the process enjoyable, you’ll significantly improve your chances of success.",
+            "options": [
+                "Next, rephrase the words that you’ve learned in your own.",
+                "Next, rephrase what you’ve learned in your own words.",
+                "Next, it is what you’ve learned that rephrased in your own way.",
+                "Next, learn in your own way is what to be rephrased."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 33. </b><b>Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 34.</b><br><b>Exams coming up? Use the science of memory to improve how you revise</b><br>To make your revision more effective, it’s important to engage with the material actively (30) ______. Simply highlighting text may seem like a good idea, but it doesn’t require much thought. Instead, read through the material first and then highlight only the three most important points. This forces you to think critically about what you’re reading, (31) ______.<br>(32) ______. Writing down the key points helps deepen your understanding and enhances memory recall. Rephrasing forces your brain to process the information more actively, which makes it easier to retain.<br>Finally, make revision more interesting by incorporating creative techniques. (33) ______. Adding personal touches like doodling or turning notes into a song can help reinforce learning, making the revision process more enjoyable and memorable.<br>(34) ______, and making the process enjoyable, you’ll significantly improve your chances of success.",
+            "options": [
+                "Unless the material interests you, you can make more engaging methods by using contents like stories, rhymes, or even acronyms.",
+                "When you are not interested in the material, make up stories, rhymes, and even acronyms to be engaged in the content of methods.",
+                "Once you are tired of using the material, using methods like stories, rhymes, and even acronyms makes more engaging content.",
+                "If the material doesn’t capture your interest naturally, use methods like stories, rhymes, or even acronyms to make the content more engaging."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 34. </b><b>Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the option that best fits each of the numbered blanks from 30 to 34.</b><br><b>Exams coming up? Use the science of memory to improve how you revise</b><br>To make your revision more effective, it’s important to engage with the material actively (30) ______. Simply highlighting text may seem like a good idea, but it doesn’t require much thought. Instead, read through the material first and then highlight only the three most important points. This forces you to think critically about what you’re reading, (31) ______.<br>(32) ______. Writing down the key points helps deepen your understanding and enhances memory recall. Rephrasing forces your brain to process the information more actively, which makes it easier to retain.<br>Finally, make revision more interesting by incorporating creative techniques. (33) ______. Adding personal touches like doodling or turning notes into a song can help reinforce learning, making the revision process more enjoyable and memorable.<br>(34) ______, and making the process enjoyable, you’ll significantly improve your chances of success.",
+            "options": [
+                "Participating in more activities, learning what you rephrase",
+                "By being more active, rephrasing what you learn",
+                "To be more active, rephrase what you have learnt",
+                "If you take part in more activities, learn to rephrase"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 35. </b><b>Read the following announcement and mark the letter A, B, C or D on </b><b>your</b><b> answer sheet to indicate the option that best fits each of the numbered blanks from 35 to 40.</b><br><b>Visit Vietnam Year 2026 </b><b>-</b><b> Hue: Cultural Heritage And Integration</b><br>Taking place throughout 2026 in the ancient capital of Hue, Visit Vietnam Year 2026 will showcase over 100 cultural and tourism events (35) ______ highlight the unique values of Vietnam's national identity. The festival will feature participation from international partners alongside Vietnam’s (36) ______ hospitality and travel brands.<br>Visitors will explore a wide (37) ______ of activities, from traditional craft festivals to modern art performances along the Huong River. The event will also feature international seminars (38) ______ by cultural experts and historians, providing a deeper understanding of heritage conservation in the digital age.<br>This year-long celebration is a perfect opportunity for (39) ______, history buffs, and students to discover the hidden charms of the Citadel and (40) ______ some unique traditional handicrafts.<br>Don’t miss this golden chance to experience the soul of Vietnam in 2026!",
+            "options": [
+                "which",
+                "who",
+                "whom",
+                "whose"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 36. </b><b>Read the following announcement and mark the letter A, B, C or D on </b><b>your</b><b> answer sheet to indicate the option that best fits each of the numbered blanks from 35 to 40.</b><br><b>Visit Vietnam Year 2026 </b><b>-</b><b> Hue: Cultural Heritage And Integration</b><br>Taking place throughout 2026 in the ancient capital of Hue, Visit Vietnam Year 2026 will showcase over 100 cultural and tourism events (35) ______ highlight the unique values of Vietnam's national identity. The festival will feature participation from international partners alongside Vietnam’s (36) ______ hospitality and travel brands.<br>Visitors will explore a wide (37) ______ of activities, from traditional craft festivals to modern art performances along the Huong River. The event will also feature international seminars (38) ______ by cultural experts and historians, providing a deeper understanding of heritage conservation in the digital age.<br>This year-long celebration is a perfect opportunity for (39) ______, history buffs, and students to discover the hidden charms of the Citadel and (40) ______ some unique traditional handicrafts.<br>Don’t miss this golden chance to experience the soul of Vietnam in 2026!",
+            "options": [
+                "populous",
+                "emerging",
+                "dominant",
+                "leading"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 37. </b><b>Read the following announcement and mark the letter A, B, C or D on </b><b>your</b><b> answer sheet to indicate the option that best fits each of the numbered blanks from 35 to 40.</b><br><b>Visit Vietnam Year 2026 </b><b>-</b><b> Hue: Cultural Heritage And Integration</b><br>Taking place throughout 2026 in the ancient capital of Hue, Visit Vietnam Year 2026 will showcase over 100 cultural and tourism events (35) ______ highlight the unique values of Vietnam's national identity. The festival will feature participation from international partners alongside Vietnam’s (36) ______ hospitality and travel brands.<br>Visitors will explore a wide (37) ______ of activities, from traditional craft festivals to modern art performances along the Huong River. The event will also feature international seminars (38) ______ by cultural experts and historians, providing a deeper understanding of heritage conservation in the digital age.<br>This year-long celebration is a perfect opportunity for (39) ______, history buffs, and students to discover the hidden charms of the Citadel and (40) ______ some unique traditional handicrafts.<br>Don’t miss this golden chance to experience the soul of Vietnam in 2026!",
+            "options": [
+                "scope",
+                "range",
+                "extent",
+                "scale"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 38. </b><b>Read the following announcement and mark the letter A, B, C or D on </b><b>your</b><b> answer sheet to indicate the option that best fits each of the numbered blanks from 35 to 40.</b><br><b>Visit Vietnam Year 2026 </b><b>-</b><b> Hue: Cultural Heritage And Integration</b><br>Taking place throughout 2026 in the ancient capital of Hue, Visit Vietnam Year 2026 will showcase over 100 cultural and tourism events (35) ______ highlight the unique values of Vietnam's national identity. The festival will feature participation from international partners alongside Vietnam’s (36) ______ hospitality and travel brands.<br>Visitors will explore a wide (37) ______ of activities, from traditional craft festivals to modern art performances along the Huong River. The event will also feature international seminars (38) ______ by cultural experts and historians, providing a deeper understanding of heritage conservation in the digital age.<br>This year-long celebration is a perfect opportunity for (39) ______, history buffs, and students to discover the hidden charms of the Citadel and (40) ______ some unique traditional handicrafts.<br>Don’t miss this golden chance to experience the soul of Vietnam in 2026!",
+            "options": [
+                "hosting",
+                "having hosted",
+                "hosted",
+                "being hosted"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 39. </b><b>Read the following announcement and mark the letter A, B, C or D on </b><b>your</b><b> answer sheet to indicate the option that best fits each of the numbered blanks from 35 to 40.</b><br><b>Visit Vietnam Year 2026 </b><b>-</b><b> Hue: Cultural Heritage And Integration</b><br>Taking place throughout 2026 in the ancient capital of Hue, Visit Vietnam Year 2026 will showcase over 100 cultural and tourism events (35) ______ highlight the unique values of Vietnam's national identity. The festival will feature participation from international partners alongside Vietnam’s (36) ______ hospitality and travel brands.<br>Visitors will explore a wide (37) ______ of activities, from traditional craft festivals to modern art performances along the Huong River. The event will also feature international seminars (38) ______ by cultural experts and historians, providing a deeper understanding of heritage conservation in the digital age.<br>This year-long celebration is a perfect opportunity for (39) ______, history buffs, and students to discover the hidden charms of the Citadel and (40) ______ some unique traditional handicrafts.<br>Don’t miss this golden chance to experience the soul of Vietnam in 2026!",
+            "options": [
+                "sightseers",
+                "industrialists",
+                "entrepreneurs",
+                "commuters"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "<b> 40. </b><b>Read the following announcement and mark the letter A, B, C or D on </b><b>your</b><b> answer sheet to indicate the option that best fits each of the numbered blanks from 35 to 40.</b><br><b>Visit Vietnam Year 2026 </b><b>-</b><b> Hue: Cultural Heritage And Integration</b><br>Taking place throughout 2026 in the ancient capital of Hue, Visit Vietnam Year 2026 will showcase over 100 cultural and tourism events (35) ______ highlight the unique values of Vietnam's national identity. The festival will feature participation from international partners alongside Vietnam’s (36) ______ hospitality and travel brands.<br>Visitors will explore a wide (37) ______ of activities, from traditional craft festivals to modern art performances along the Huong River. The event will also feature international seminars (38) ______ by cultural experts and historians, providing a deeper understanding of heritage conservation in the digital age.<br>This year-long celebration is a perfect opportunity for (39) ______, history buffs, and students to discover the hidden charms of the Citadel and (40) ______ some unique traditional handicrafts.<br>Don’t miss this golden chance to experience the soul of Vietnam in 2026!",
+            "options": [
+                "pick up",
+                "run into",
+                "turn down",
+                "bring about"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [],
+    "part3": []
+}

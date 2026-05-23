@@ -1,0 +1,312 @@
+{
+    "timeLimit": 3000,
+    "subject": "06",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 4",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "06004",
+    "part1": [
+        {
+            "q": "Vùng biển nước ta giáp với vùng biển của quốc gia nào sau đây?",
+            "options": [
+                "Bru-nây.",
+                "Lào.",
+                "Nhật Bản.",
+                "Mi-an-ma."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Vị trí địa lí và hình thể của nước ta đã tạo nên",
+            "options": [
+                "sự phân hoá đa dạng của tự nhiên.",
+                "tài nguyên khoáng sản phong phú.",
+                "khí hậu cận nhiệt với mùa đông lạnh.",
+                "một mạng lưới sông ngòi dày đặc."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Những năm gần đây tỉ lệ dân thành thị nước ta",
+            "options": [
+                "liên tục tăng lên.",
+                "có sự biến động.",
+                "ở mức rất cao.",
+                "có xu hướng giảm."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Lao động nước ta hiện nay",
+            "options": [
+                "tăng nhanh và phân bố không đều.",
+                "số lượng đông đảo, thất nghiệp ít.",
+                "chủ yếu là lao động có trình độ cao.",
+                "tập trung toàn bộ ở ngành dịch vụ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cây công nghiệp hàng năm được phát triển ở nước ta hiện nay là cây",
+            "options": [
+                "lạc.",
+                "ngô.",
+                "dừa.",
+                "lúa."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hoạt động ngoại thương của nước ta hiện nay",
+            "options": [
+                "trị giá xuất nhập khẩu tăng liên tục.",
+                "gắn với ngành vận tải đường ô tô.",
+                "sản phẩm xuất khẩu chưa đa dạng.",
+                "chủ yếu xuất khẩu hàng nhiên liệu."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Khu công nghệ cao ở nước ta hiện nay",
+            "options": [
+                "thu hút được nhiều vốn đầu tư.",
+                "phân bố đồng đều ở các vùng.",
+                "do các doanh nghiệp thành lập.",
+                "chỉ sử dụng lao động phổ thông."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ở nước ta, bão thường có đặc điểm là",
+            "options": [
+                "hoạt động mạnh nhất ở miền Trung.",
+                "chỉ diễn ra ở phía bắc vĩ tuyến 160B.",
+                "diễn ra trong suốt năm trên cả nước.",
+                "tất cả đều xuất phát từ biển Đông."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đông Nam Bộ phát triển mạnh công nghiệp sản xuất, chế biến thực phẩm chủ yếu do có lợi thế về",
+            "options": [
+                "nguyên liệu, lao động, thị trường.",
+                "công nghệ, vốn đầu tư, lao động.",
+                "nhiên liệu, khoáng sản, hạ tầng.",
+                "vị trí địa lí, nguyên liệu, khoa học."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ngành công nghiệp của Đồng bằng sông Hồng hiện nay",
+            "options": [
+                "giá trị sản xuất ngày càng tăng mạnh.",
+                "cơ cấu sản phẩm còn kém đa dạng.",
+                "có ít khu công nghiệp nhất cả nước.",
+                "chưa có khu công nghiệp tập trung."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhân tố quan trọng nhất để Đồng bằng sông Cửu Long trở thành vùng chuyên canh lương thực số một của cả nước là",
+            "options": [
+                "có diện tích đất phù sa ngọt lớn.",
+                "khí hậu mang tính chất cận xích đạo.",
+                "thời tiết luôn ổn định, ít có thiên tai.",
+                "mạng lưới sông ngòi, kênh rạch dày đặc."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Giải pháp chủ yếu để phát triển cây dược liệu theo hướng sản xuất hàng hoá ở vùng Trung du và miền núi phía Bắc là",
+            "options": [
+                "sản xuất tập trung, đẩy mạnh việc chế biến, phát triển thị trường.",
+                "đa dạng sản phẩm, gắn trồng trọt với chế biến, nâng cao sản lượng.",
+                "sử dụng kĩ thuật mới, tăng diện tích, đẩy mạnh tiếp thị sản phẩm.",
+                "lập vùng chuyên canh, tăng năng suất, tạo thương hiệu sản phẩm."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thuận lợi để phát triển cây trồng có nguồn gốc nhiệt đới ở Nam Trung Bộ là",
+            "options": [
+                "khí hậu mang tính chất cận Xích đạo, phân hoá theo mùa rõ rệt.",
+                "các cao nguyên khá bằng phẳng, rộng với đất ba dan màu mỡ.",
+                "các khối núi với sự phân hoá của cảnh quan tự nhiên, khí hậu.",
+                "có nhiều sông, thượng nguồn sông có trữ lượng thuỷ năng lớn."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cho biểu đồ sau:<br><img src=\"data:image/png;base64,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\"><br>SỐ LƯỢNG TRÂU, BÒ CỦA VÙNG TRUNG DU VÀ MIỀN NÚI PHÍA BẮC<br> NĂM 2010 VÀ NĂM 2024<br>Nhận xét nào sau đây đúng với biểu đồ trên?",
+            "options": [
+                "Năm  2024 so với năm 2010, số lượng bò tăng 170 nghìn con.",
+                "Năm  2024 so với năm 2010, số lượng trâu tăng 471,3 nghìn con.",
+                "Số lượng trâu luôn nhiều hơn số lượng bò và ngày càng tăng.",
+                "Số lượng bò luôn nhiều hơn số lượng trâu và ngày càng tăng."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nước ta luôn đặt nhiệm vụ bảo vệ chủ quyền, toàn vẹn lãnh thổ cùng với quá trình phát triển kinh tế – xã hội chủ yếu do",
+            "options": [
+                "đường biên giới dài, vùng biển rộng và giàu tiềm năng, tiếp giáp với nhiều nước.",
+                "giáp với nhiều nước, đường biên giới dài, nằm trên các tuyến đường quốc tế.",
+                "biên giới trên bộ dài, biển giàu tiềm năng, là lối thông ra biển của nhiều nước.",
+                "biển rộng và nhiều nguồn lợi, án ngữ tuyến hàng hải quốc tế, tiếp giáp với nhiều nước."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sản lượng ngành trồng trọt ở nước ta thường biến động chủ yếu do nguyên nhân nào sau đây?",
+            "options": [
+                "Có nhiều thiên tai, sâu bệnh diễn ra trên diện rộng.",
+                "Diện tích đất thu hẹp, đất thoái hóa ngày càng tăng.",
+                "Thiếu giống cây trồng, chủ yếu có năng suất thấp.",
+                "Nguồn cung cấp nước giảm, thiếu nước vào mùa khô."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ý nghĩa chủ yếu của việc hình thành vùng tập trung chăn nuôi gia súc lớn ở Bắc Trung Bộ là",
+            "options": [
+                "nâng cao hiệu quả kinh tế, sử dụng hiệu quả các nguồn lực.",
+                "giải quyết việc làm, tạo nguồn hàng xuất khẩu thu ngoại tệ.",
+                "khai thác tốt hơn thế mạnh, thu hút mạnh nguồn vốn đầu tư.",
+                "tạo nhiều nông sản hàng hoá, sử dụng hợp lí tài nguyên đất."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Chuyển đổi cơ cấu kinh tế là định hướng quan trọng ở đồng bằng sông Cửu Long chủ yếu nhằm",
+            "options": [
+                "tăng trưởng kinh tế, thích ứng với biến đổi khí hậu.",
+                "khai thác hiệu quả tài nguyên sinh vật và khí hậu.",
+                "thúc đẩy phát triển lâm nghiệp và cơ sở hạ tầng.",
+                "giải quyết việc làm, nâng cao chất lượng nhân lực."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Cho thông tin sau:<br>Vùng đồi núi chiếm phần lớn diện tích nước ta, phân bố ở phía tây và tây bắc, chủ yếu là đồi núi thấp và bị chia cắt mạnh. Thiên nhiên đồi núi nước ta có sự phân hoá. Giữa Đông Trường Sơn và Tây Trường Sơn (Tây Nguyên) chế độ mưa có sự đối lập: Khi Đông Trường Sơn có mưa vào thu- đông thì Tây Trường Sơn khô hạn; đầu mùa hạ Tây Trường Sơn có mưa lớn thì nhiều nơi ở Đông Trường Sơn có thời tiết khô nóng, ít mưa.<br>(Nguồn: SGK Địa lí 12, bộ Cánh Diều)",
+            "items": [
+                "Mùa mưa của khu vực Đông Trường Sơn và Tây Trường Sơn đều diễn ra vào thời kỳ mùa hạ.",
+                "Nguyên nhân chủ yếu dẫn đến sự đối lập về thời gian mưa- khô của hai sườn dãy Trường Sơn là do kết hợp giữa hướng địa hình và ảnh hưởng của dòng biển nóng- lạnh ven bờ.",
+                "Mùa mưa sườn Tây của dãy Trường Sơn đến sớm hơn so với sườn Đông Trường Sơn chủ yếu do hoạt động của dải hội tụ nhiệt đới và gió mùa Tây Nam thổi từ áp cao chí tuyến Nam Bán cầu.",
+                "Khu vực Đông Trường Sơn có mưa lớn vào thời kỳ thu đông chủ yếu do tác động kết hợp của gió hướng Đông Bắc, gió mùa Tây Nam, bão, dải hội tụ nhiệt đới, front lạnh."
+            ],
+            "ans": [
+                false,
+                false,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho đoạn thông tin sau:<br>Ứng dụng khoa học đã tạo ra tài nguyên mới cho dịch vụ: kho số viễn thông, tài nguyên internet, tài nguyên thông tin...Các giải pháp công nghệ mở rộng nhiều loại hình dịch vụ mới: giao thông thông minh, thương mại điện tử, du lịch ảo,...",
+            "items": [
+                "Khoa học công nghệ không chỉ tạo ra tài nguyên mới mà còn làm thay đổi cách thức khai thác và sử dụng tài nguyên trong ngành dịch vụ.",
+                "Sự xuất hiện của các dịch vụ như du lịch ảo chứng tỏ công nghệ đã hoàn toàn thay thế các hình thức dịch vụ truyền thống.",
+                "Việc phát triển các nền tảng số giúp ngành dịch vụ giảm sự phụ thuộc vào yếu tố không gian và thời gian.",
+                "Các tài nguyên dịch vụ mới như internet và kho số viễn thông chỉ có ý nghĩa trong lĩnh vực thông tin, không liên quan đến các ngành dịch vụ khác."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho thông tin sau:<br>\tXây dựng nhà máy thủy điện cũng như hình thành các bậc thang thủy điện ở Nam Trung Bộ góp phần thúc đẩy phát triển kinh tế - xã hội, tiết kiệm nguồn nước và chi phí xây dựng, bảo vệ tài nguyên môi trường, góp phần đảm bảo nguồn nước phục vụ sản xuất và đời sống người dân, ngoài ra còn phát triển du lịch và nuôi thủy sản tại các hồ thủy lợi.<br>(Nguồn: SGK Địa lí 12, bộ Cánh Diều)",
+            "items": [
+                "Bậc thang thủy điện ở Nam Trung Bộ được xây dựng trên cơ sở cấu trúc địa hình phân bậc.",
+                "Việc xây dựng công trình thủy điện ở Nam Trung Bộ có ý nghĩa trong việc phát triển công nghiệp và dự trữ nước cho mùa khô.",
+                "Khó khăn chủ yếu của việc xây dựng các nhà máy thủy điện ở Nam Trung Bộ là chế độ nước thất thường, lưu lượng nước sông lớn.",
+                "Biện pháp chủ yếu để phát triển thủy điện bền vững ở Nam Trung Bộ là hiện đại cơ sở hạ tầng kĩ thuật, khai thác giá trị các hồ thủy điện, bảo vệ rừng."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng số liệu:<br>TỔNG SỐ DÂN, TỶ SỐ GIỚI TÍNH CỦA THÁI LAN VÀ IN-ĐÔ-NÊ-XI-A NĂM 2024<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Năm</td><td>Thái Lan</td><td>Thái Lan</td><td>In-đô-nê-xi-a</td><td>In-đô-nê-xi-a</td></tr><tr><td>2024</td><td>Tổng số dân (Triệu người)</td><td>Tỷ số giới tính (Nam/100 Nữ)</td><td>Tổng số dân (Triệu người)</td><td>Tỷ số giới tính (Nam/100 Nữ)</td></tr><tr><td>2024</td><td>71,7</td><td>94,9</td><td>283,5 </td><td>100,9</td></tr></table>(Nguồn: https://danso.info/dan-so-dong-nam-a/)",
+            "items": [
+                "Tỉ số giới tính của Thái Lan thấp hơn so với tỉ số giới tính của In-đô-nê-xi-a.",
+                "Năm 2024, tổng dân số của In-đô-nê-xi-a cao gấp 1,91 lần dân số Thái Lan.",
+                "Năm 2024, In-đô-nê-xi-a có dân số nam nhiều hơn dân số nữ.",
+                "Năm 2024, số nam của In-đô-nê-xi-a cao hơn 14,7 triệu người so với số nam của Thái Lan."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": [
+        {
+            "q": "Cho bảng số liệu:<br>NHIỆT ĐỘ KHÔNG KHÍ TRUNG BÌNH CÁC THÁNG TẠI TRẠM QUAN TRẮC<br>ĐÀ NẴNG, NĂM 2024<br>(Đơn vị: ℃)<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Tháng</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr><tr><td>Nhiệt độ</td><td>23,0</td><td>24,4</td><td>25,9</td><td>28,8</td><td>29,6</td><td>30,8</td><td>29,7</td><td>30,3</td><td>29,2</td><td>26,5</td><td>25,6</td><td>22,4</td></tr></table>Căn cứ vào bảng số liệu trên, hãy cho biết biên độ nhiệt độ không khí trung bình của năm 2024 tại trạm quan trắc Đà Nẵng là bao nhiêu ℃ (làm tròn kết quả đến một chữ số thập phân).<br>(Nguồn: Niên giám thống kê Việt Nam 2024, NXB Thống kê, 2025)",
+            "ans": "8,4",
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng số liệu:<br>MỰC NƯỚC SÔNG LÔ TẠI TRẠM TUYÊN QUANG GIAI ĐOẠN 2021 – 2024<br>                                                                                                                          (Đơn vị: cm)<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td></td><td>Cao nhất</td><td>Cao nhất</td><td>Cao nhất</td><td>Cao nhất</td><td>Thấp nhất</td><td>Thấp nhất</td><td>Thấp nhất</td><td>Thấp nhất</td></tr><tr><td>Năm</td><td>2021</td><td>2022</td><td>2023</td><td>2024</td><td>2021</td><td>2022</td><td>2023</td><td>2024</td></tr><tr><td>Mực nước</td><td>1758</td><td>2203</td><td>1915</td><td>2773</td><td>1212</td><td>1175</td><td>1141</td><td>1130</td></tr></table>                                                           (Nguồn: Cục thống kê, http://gso.gov.vn/,2026)<br>Căn cứ vào bảng số liệu trên, hãy cho biết năm có biên độ dao động lưu lượng nước sông Lô cao nhất tại trạm Tuyên Quang là năm nào?",
+            "ans": "2024",
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Năm 2024, tổng số lao động nước ta là 52,9 triệu người, số lao động từ 15 đến 24 tuổi là 5,1 triệu người. Hãy cho biết năm 2024, số lao động từ 15 đến 24 tuổi chiếm bao nhiêu phần trăm trong tổng số lao động của nước ta (làm tròn kết quả đến một chữ số thập phân).<br>(Nguồn: Niên giám thống kê Việt Nam 2024, NXB Thống kê, 2025)",
+            "ans": "9,6",
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng số liệu:<br>TÌNH HÌNH VẬN TẢI HÀNG HÓA BẰNG ĐƯỜNG BIỂN VÀ ĐƯỜNG SẮT<br>CỦA NƯỚC TA NĂM 2024<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Tiêu chí</td><td>Đường biển</td><td>Đường sắt</td></tr><tr><td>Khối lượng vận chuyển (triệu tấn)</td><td>129,548</td><td>5,095</td></tr><tr><td>Khối lượng luân chuyển (triệu tấn.km)</td><td>127 791,0</td><td>3 877,3</td></tr></table>(Nguồn: Niên giám Thống kê Việt Nam 2024, Nxb Thống kê 2025)<br>Căn cứ vào bảng số liệu trên, hãy cho biết cự li vận chuyển trung bình năm 2024 của vận tải đường biển cao hơn đường sắt là bao nhiêu km? (làm tròn kết quả đến hàng đơn vị)",
+            "ans": "225",
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng số liệu:<br>DOANH THU DU LỊCH CỦA ĐỒNG BẰNG SÔNG CỬU LONG, NĂM 2021 VÀ 2024<br> (Đơn vị: Tỷ đồng)<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Vùng</td><td>2021</td><td>2024</td></tr><tr><td>Đồng bằng Sông Cửu Long</td><td>314,1</td><td>2599,0</td></tr></table>(Nguồn: Tổng cục Thống kê, năm 2024)<br>Căn cứ vào bảng số liệu trên, hãy tính tốc độ tăng trưởng doanh thu du lịch của Đồng bằng Sông Cửu Long năm 2024 so với năm 2021 (coi năm 2021 = 100%)? (làm tròn kết quả đến hàng đơn vị của %)",
+            "ans": "827",
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Cho bảng số liệu:<br>SẢN LƯỢNG XE MÔ TÔ, XE MÁY LẮP RÁP CỦA NƯỚC TA GIAI ĐOẠN 2018- 2024<br>(Đơn vị: nghìn cái)<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Năm</td><td>2018</td><td>2021</td><td>2024</td></tr><tr><td>Xe mô tô, xe máy lắp ráp</td><td>3945,7</td><td>3858,5</td><td>3373,3</td></tr></table>(Nguồn: Niên giám thống kê Việt Nam 2024, NXB Thống kê, 2025)<br>Căn cứ vào bảng số liệu trên, hãy cho biết trong giai đoạn 2018- 2024, trung bình mỗi năm sản lượng xe mô tô, xe máy lắp ráp của nước ta giảm bao nhiêu nghìn cái (làm tròn kết quả đến một chữ số thập phân).",
+            "ans": "95,4",
+            "explanation": "Chi tiết lời giải"
+        }
+    ]
+}

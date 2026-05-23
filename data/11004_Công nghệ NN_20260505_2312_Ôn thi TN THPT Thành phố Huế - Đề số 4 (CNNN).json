@@ -1,0 +1,347 @@
+{
+    "timeLimit": 3000,
+    "subject": "11",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 4 (CNNN)",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "11004",
+    "part1": [
+        {
+            "q": "Hoạt động nào dưới đây không phải là công việc trong quá trình chăm sóc cây trồng?",
+            "options": [
+                "Tưới nước.",
+                "Cắt tỉa.",
+                "Bón thúc.",
+                "Bón lót."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhược điểm của hệ thống khí canh là",
+            "options": [
+                "dễ xảy ra tình trạng cây bị héo do thiếu oxygen.",
+                "tốn nhiều nước và các chất dinh dưỡng.",
+                "bệnh hại lây lan nhanh chóng nếu xâm nhiễm vào nguồn nước.",
+                "không tận dụng được không gian để trồng cây theo phương thẳng đứng."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhóm cây trồng nào sau đây được phân loại theo mục đích sử dụng?",
+            "options": [
+                "Cây lâu năm.",
+                "Cây lương thực.",
+                "Cây một lá mầm.",
+                "Cây thân gỗ."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Loại máy nào sau đây được sử dụng khi ứng dụng cơ giới hoá trong khâu chăm sóc cây trồng?",
+            "options": [
+                "Máy lên luống.",
+                "Máy gieo hạt cầm tay.",
+                "Máy bón phân thúc.",
+                "Máy gặt lúa."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thực phẩm nào sau đây là sản phẩm của ứng ụng công nghệ cao trong chế biến sản phẩm chăn nuôi?",
+            "options": [
+                "Thịt hộp.",
+                "Sữa tươi nguyên liệu.",
+                "Thịt tươi.",
+                "Thịt cấp đông."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sử dụng công nghệ biogas trong xử lý chất thải chăn nuôi là",
+            "options": [
+                "lợi dụng các chế phẩm sinh học xử lý chất thải chăn nuôi làm phân hữu cơ vi sinh, cung cấp dinh dưỡng cho cây và cải tạo đất.",
+                "lợi dụng vi khuẩn kị khí trong bể biogas để biến đổi các chất hữu cơ thành các chất vô cơ.",
+                "tận dụng vi khuẩn kị khí trong bể biogas để loại bỏ toàn bộ vi khuẩn gây bệnh và kí sinh trùng.",
+                "lợi dụng vi khuẩn kị khí trong bể biogas để phân huỷ chất hữu cơ thành hỗn hợp khí sinh học."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phải là đặc điểm của vật nuôi địa phương?",
+            "options": [
+                "Chất lượng sản phẩm chăn nuôi tốt nhưng năng suất thường thấp.",
+                "Khả năng đề kháng cao, tận dụng tốt nguồn thức ăn địa phương.",
+                "Năng suất thấp, khả năng đề kháng không cao, tận dụng tốt nguồn thức ăn tự nhiên.",
+                "Thích nghi cao với điều kiện sinh thái và tập quán chăn nuôi của địạ phương."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ý nào dưới đây không đúng khi nói về yêu cầu quản lí dịch bệnh đối với một trang trại chăn nuôi theo tiêu chuẩn VietGAP?",
+            "options": [
+                "Có đầy đủ trang thiết bị và quy trình vệ sinh, tiêu độc, khử trùng.",
+                "Phải có quy trình phòng bệnh phù hợp với từng đối tượng nuôi.",
+                "Có bác sĩ thú y theo dõi sức khoẻ vật nuôi.",
+                "Có nguồn cung cấp tài chính từ các công ty sản xuất thức ăn chăn nuôi."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phải là là vai trò của lâm nghiệp đối với đời sống con người?",
+            "options": [
+                "Cung cấp lâm sản phục vụ cho tiêu dùng.",
+                "Cung cấp nguyên liệu cho công nghiệp, nông nghiệp.",
+                "Cung cấp dược liệu quý phục vụ cho nhu cầu chữa bệnh.",
+                "Cung cấp lương thực cho tiêu dùng trong nước và xuất khẩu."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sinh trưởng mạnh mẽ, lượng hoa, quả tăng dần, tán cây dần hình thành, sức đề kháng cao nhưng năng suất và chất lượng lâm sản vẫn chưa ổn định. Đây là đặc điểm của giai đoạn sinh trưởng, phát triển nào của cây rừng?",
+            "options": [
+                "Giai đoạn non.",
+                "Giai đoạn gần thành thục.",
+                "Giai đoạn thành thục.",
+                "Giai đoạn già cỗi."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đâu không phải là triển vọng của thuỷ sản nước ta trong bối cảnh cách mạng 4.0?",
+            "options": [
+                "Phát triển mạnh mẽ ngành kinh tế quan trọng của quốc gia có quy mô sản xuất hàng hoá lớn có trình độ quản lí khoa học, công nghệ tiên tiến, phát triển bền vững và chủ động thích ứng với biến đổi khí hậu.",
+                "Phát triển mạnh để đưa nước ta thành trung tâm chế biến hải sản sâu, thuộc nhóm ba nước sản xuất và xuất khẩu thuỷ sản dẫn đầu thế giới.",
+                "Giữ vị trí quan trọng trong cơ cấu các ngành kinh tế nông nghiệp và kinh tế biển, góp phần đảm bảo an ninh dinh dưỡng, thực phẩm.",
+                "Đảm bảo lao động thuỷ sản có mức thu nhập dưới mức bình quân chung cả nước, góp phần nâng<br>cao chất lượng cuộc sống của người lao động trong ngành thủy sản."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Động vật thủy sản nào sau đây là thuỷ sản nhập nội?",
+            "options": [
+                "Cá diếc.",
+                "Ốc nhồi.",
+                "Cá tầm.",
+                "Ếch đồng."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Bước thứ hai trong kĩ thuật ương nuôi tôm giống trong bể là:",
+            "options": [
+                "Chuẩn bị bể nuôi.",
+                "Lựa chọn và thả giống.",
+                "Chăm sóc và quản lí.",
+                "Thu hoạch."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phương pháp nào sau đây không phải là phương pháp bảo quản thuỷ sản?",
+            "options": [
+                "Làm lạnh.",
+                "Làm khô.",
+                "Ướp muối.",
+                "Phi lê cá."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đâu không phải là biện pháp bảo vệ nguồn lợi thuỷ sản?",
+            "options": [
+                "Thiết lập các khu bảo tồn biển.",
+                "Bảo vệ môi trường sống của các loài thuỷ sản.",
+                "Không mua bán các loại thuỷ sản.",
+                "Khai thác thuỷ sản đúng quy định của pháp luật."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nước sau quá trình nuôi thuỷ sản có nhiều chất độc hại đối với môi trường, người ta thường áp dụng biện pháp nào để xử lí ô nhiễm môi trường?",
+            "options": [
+                "Quạt nước liên tục trong 10 ngày.",
+                "Bón phân gây màu.",
+                "Lọc nước từ ao này sang ao khác qua túi lọc.",
+                "Sử dụng hệ vi sinh vật, thực vật và động vật."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào sau đây không phải là biện pháp bảo vệ tài nguyên rừng?",
+            "options": [
+                "Tăng cường tuyên truyền, phổ biến, giáo được pháp luật về bảo vệ rừng.",
+                "Mở rộng trồng cây ăn quả trên đất rừng.",
+                "Tăng cường lực lượng tuần tra, bảo vệ rừng.",
+                "Duy trì hệ thống các khu bảo tồn thiên nhiên."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong khai thác tài nguyên rừng, khai thác dần được hiểu là",
+            "options": [
+                "chọn chặt những cây rừng bị sâu bệnh, giữ lại cây khỏe.",
+                "chọn chặt những cây rừng đã thành thục, giữ lại cây còn non.",
+                "chặt toàn bộ cây rừng ở một khu vực trong một mùa khai thác.",
+                "chặt toàn bộ cây rừng ở một khu vực trong nhiều mùa khai thác."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Khi nuôi tôm thẻ chân trắng, sàng cho tôm ăn được sử dụng để làm gì?",
+            "options": [
+                "Quản lí khung phân thải.",
+                "Kiểm tra lượng thức ăn thừa.",
+                "Kiểm tra tỉ lệ sống của tôm.",
+                "Quản lí độ pH của nước."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thức ăn do người nuôi tự sản xuất ở quy mô nhỏ, được cắt theo cỡ miệng của đối tượng nuôi, có thành phần dinh dưỡng không cân đối”. Mô tả trên về loại thức ăn nào sau đây?",
+            "options": [
+                "Thức ăn công nghiệp.",
+                "Thức ăn chế biến thủ công.",
+                "Thức ăn bổ sung.",
+                "Thức ăn hỗn hợp dạng viên to."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nhận định nào sau đây không đúng về tác dụng của các nhóm vi sinh vật có lợi trong xử lí môi trường nuôi thủy sản?",
+            "options": [
+                "Phân giải chất hữu cơ làm sạch môi trường.",
+                "Giúp điều chỉnh độ pH của nước.",
+                "Ức chế hoạt động các vi sinh vật gây bệnh.",
+                "Cạnh tranh với nhóm vi khuẩn gây bệnh."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Để giảm chi phí chăn nuôi thủy sản, một gia đình đã tham khảo, tìm hiểu thực tế nguồn thức ăn tại địa phương và đưa ra một số loại sau đây có thể sử dụng cho cá ăn trực tiếp hoặc chế biến thành thức ăn thủ công:<br>(1) Cám gạo, bột ngô, bột sắn. \t(2) Lá chuối, lá ngô, lá sắn, lá bắp cải, cỏ tươi.<br>(3) Lá mít, lá tre, lá bạch đàn. \t(4) Giun và một số loài cá tạp nhỏ.<br>(5) Cơm thừa thiu mốc.<br>Theo em loại nào không thể sử dụng làm thức ăn cho cá?",
+            "options": [
+                "(1), (2).",
+                "(4), (5).",
+                "(2), (4).",
+                "(3), (5)."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Những nguyên nhân chủ yếu nào dưới đây làm suy thoái tài nguyên rừng là?<br> (1) Cháy rừng. \t(2) Mở rộng diện tích rừng. \t(3) Sử dụng rừng.<br> (4) Khai thác không hợp lí gỗ. \t(5) Chăn thả gia súc. \t(6) Phá rừng trồng cây công nghiệp.",
+            "options": [
+                "(1), (2), (3), (4).",
+                "(1), (2), (3), (5).",
+                "(1), (2), (4), (6).",
+                "(1), (4), (5), (6)."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "“Năm tháng đầu năm 2022, diện tích nuôi trồng thủy sản bị dịch bệnh khoảng 1.200 ha. Diện tích tôm nuôi bị dịch bệnh khoảng 978 ha, chủ yếu là bệnh đốm trắng và hoại tử gan, tụy cấp tính.” (Nguồn: Tổng cục thủy sản, năm 2022). Theo đó, để hạn chế tổn hại cho ngành nuôi trồng thủy sản, người nuôi trồng thủy sản nên áp dụng phòng, trị bệnh theo các nguyên tắc nào?",
+            "options": [
+                "Đúng bệnh, đúng lúc, đúng kĩ thuật, đúng thuốc.",
+                "Đúng thuốc, đúng lúc, đúng loài, đúng kĩ thuật.",
+                "Đúng bệnh, đúng thuốc, đúng liều, đúng lúc.",
+                "Đúng loại, đúng bệnh, đúng lúc, đúng thuốc."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Diện tích rừng mới trồng tập trung phân theo loại rừng giai đoạn 2019 – 2022 được thể hiện qua bảng sổ liệu sau đây:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Năm</td><td>Tổng số (ha)</td><td>Loại rừng</td><td>Loại rừng</td><td>Loại rừng</td></tr><tr><td>Năm</td><td>Tổng số (ha)</td><td>Rừng sản xuất (ha)</td><td>Rừng phòng hộ (ha)</td><td>Rừng đặc dụng (ha)</td></tr><tr><td>2019</td><td>268,4</td><td>255,9</td><td>11,1</td><td>1,4</td></tr><tr><td>2020</td><td>269,9</td><td>260,3</td><td>7,8</td><td>1,8</td></tr><tr><td>2021</td><td>290,0</td><td>281,0</td><td>8,0</td><td>1,0</td></tr><tr><td>2022</td><td>306,5</td><td>294,5</td><td>10,1</td><td>1,9</td></tr></table><br> (Nguồn: Niên gián thống kê 2023)<br>Dựa vào thông tin được cung cấp, em hãy cho biết mỗi nhận định sau đúng hay sai.",
+            "items": [
+                "Giai đoạn 2019-2022, tổng diện tích rừng mới trồng tập trung tăng liên tục.",
+                "Năm 2022, diện tích rừng phòng hộ và rừng đặc dụng chiếm khoảng 3,9% tổng diện tích rừng mới trồng tập trung.",
+                "Việc mất cân đối trong trồng mới các loại rừng có thể do người dân tập trung vào lợi ích về kinh tế hơn là vai trò phòng hộ và bảo tồn của rừng.",
+                "Trong giai đoạn 2019–2022, tốc độ tăng diện tích rừng sản xuất năm 2022 so với năm 2019 cao gấp khoảng 1,20 lần tốc độ tăng tổng diện tích rừng mới trồng tập trung trong cùng giai đoạn."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Khi nghiên cứu về ảnh hưởng của độ kiềm lên tăng trưởng của tôm sú giai đoạn ương giống bằng công nghệ biofloc, các nhà khoa học thu được kết quả như sau:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Chỉ tiêu theo dõi</td><td>Chỉ tiêu theo dõi</td><td>Độ kiềm (mgCaCO₃/L)</td><td>Độ kiềm (mgCaCO₃/L)</td><td>Độ kiềm (mgCaCO₃/L)</td><td>Độ kiềm (mgCaCO₃/L)</td></tr><tr><td>Chỉ tiêu theo dõi</td><td>Chỉ tiêu theo dõi</td><td>80</td><td>120</td><td>160</td><td>200</td></tr><tr><td>Chiều dài</td><td>Chiều dài đầu (cm/con)</td><td>1,25</td><td>1,25</td><td>1,25</td><td>1,25</td></tr><tr><td>Chiều dài</td><td>Chiều dài tôm sau 28 ngày ương (cm/con)</td><td>3,78</td><td>4,03</td><td>3,73</td><td>3,66</td></tr><tr><td>Khối lượng</td><td>Khối lượng đầu (g/con)</td><td>0,01</td><td>0,01</td><td>0,01</td><td>0,01</td></tr><tr><td>Khối lượng</td><td>Khối lượng tôm sau 28 ngày ương (g/con)</td><td>0,37</td><td>0,44</td><td>0,35</td><td>0,33</td></tr></table><br>(Nguồn: Huỳnh Hoàng Sơn và Châu Tài Tảo, 2024)",
+            "items": [
+                "Độ kiềm không ảnh hưởng đến tăng trưởng của tôm sú trong giai đoạn ương giống.",
+                "So với mức độ kiềm 80 mg CaCO₃/L, khi tăng lên 120 mg CaCO₃/L, tốc độ tăng trưởng chiều dài của tôm sau 28 ngày tăng khoảng 6,61%, trong khi tốc độ tăng trưởng khối lượng tăng khoảng 18,92%.",
+                "Khi kiểm tra nước nuôi tôm sú giai đoạn ương giống có độ kiềm 100 mg CaCO₃/L, người nuôi cần nhanh chóng tiến hành tháo bớt nước và bổ sung nước nuôi mới.",
+                "Có sự tương quan về ảnh hưởng của độ kiềm đến tăng trưởng về chiều dài và khối lượng tôm giai đoạn ương giống."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Khi nghiên cứu về ảnh hưởng của thức ăn đến tỷ lệ sống cá song da báo giai đoạn cá giống, các nhà khoa học thu được kết quả như sau:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Chỉ tiêu theo dõi</td><td>Loại thức ăn</td><td>Loại thức ăn</td><td>Loại thức ăn</td><td>Loại thức ăn</td><td>Loại thức ăn</td></tr><tr><td>Chỉ tiêu theo dõi</td><td>100% ấu trùng Artemia</td><td>100% copepod</td><td>100% thức ăn tổng hợp</td><td>50% ấu trùng Artemia + 50% thức ăn tổng hợp</td><td>50% copepod + 50% thức ăn tổng hợp</td></tr><tr><td>Tỷ lệ sống (%)</td><td>63,53</td><td>68,47</td><td>22,27</td><td>57,47</td><td>68,60</td></tr></table><br>(Nguồn: Nguyễn Anh Hiếu và cộng sự, 2024)",
+            "items": [
+                "Khi thay thế hoàn toàn thức ăn tự nhiên (Copepod) bằng thức ăn tổng hợp, tỷ lệ tử vong của cá song da báo tăng thêm khoảng 46,2%.",
+                "Tỷ lệ sống của cá ở lô phối hợp (50% Artemia + 50% TATH) thấp hơn khoảng 9,54% so với khi chỉ sử dụng 100% Artemia làm thức ăn.",
+                "Nếu chuyển từ chế độ ăn 100% TATH sang chế độ phối hợp (50% Copepod + 50% TATH), tỷ lệ sống của cá được cải thiện và tăng gấp khoảng 3,08 lần.",
+                "Hiệu quả cải thiện tỷ lệ sống khi phối hợp Copepod với TATH (so với 100% TATH) cao gấp khoảng 1,31 lần so với việc phối hợp Artemia với TATH (so với 100% TATH)."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Khi nghiên cứu về ảnh hưởng của thức ăn bổ sung đến khối lượng, chiều cao và chiều rộng của ốc bươu đồng lúc bắt đầu và sau 4 tháng nuôi vỗ (biết rằng các chỉ tiêu sinh trưởng của ốc bươu là như nhau vào ngày đầu thả nuôi), các nhà khoa học thu được kết quả như sau:<style>.my-table{border-collapse:collapse; margin:5px auto; font-family:sans-serif;}.my-table td{border:1px solid #333; padding:8px; text-align:center;}.bg-green{background-color:#d9ead3;}</style><table class='my-table'><tr><td>Chỉ tiêu theo dõi</td><td>Các mức bổ sung khoáng khác nhau</td><td>Các mức bổ sung khoáng khác nhau</td><td>Các mức bổ sung khoáng khác nhau</td><td>Các mức bổ sung khoáng khác nhau</td><td>Các mức bổ sung khoáng khác nhau</td></tr><tr><td>Chỉ tiêu theo dõi</td><td>Không bổ sung khoáng(đối chứng)</td><td>Bổ sung 3% khoáng</td><td>Bổ sung 5% khoáng</td><td>Bổ sung 7% khoáng</td><td>Bổ sung 9% khoáng</td></tr><tr><td>Khối lượng (g)</td><td>32,2</td><td>34,5</td><td>35,2</td><td>34,5</td><td>33,3</td></tr><tr><td>Chiều cao (mm)</td><td>56,8</td><td>58,0</td><td>58,9</td><td>58,2</td><td>57,5</td></tr><tr><td>Chiều rộng (mm)</td><td>41,1</td><td>41,7</td><td>42,3</td><td>41,4</td><td>41,1</td></tr></table><br> (Nguồn: Lê Văn Bình và cộng sự, 2025)",
+            "items": [
+                "Hiệu quả bổ sung khoáng đạt giá trị cao nhất ở mức 5%, tại mức này khối lượng ốc tăng thêm 3,0g so với lô đối chứng.",
+                "Tỉ lệ tăng trưởng về chiều cao của vỏ ốc ở mức bổ sung 3% khoáng đạt khoảng 2,11% so với lô không bổ sung khoáng.",
+                "Ở mức bổ sung 9% khoáng, mặc dù khối lượng vẫn cao hơn đối chứng nhưng kích thước chiều rộng của ốc đã giảm 0,3% so với lô đối chứng.",
+                "Nếu chỉ xét riêng chỉ tiêu chiều rộng vỏ, tốc độ tăng trưởng của ốc khi bổ sung 5% khoáng cao gấp khoảng 2 lần so với khi bổ sung 3% khoáng (so với mốc đối chứng)."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

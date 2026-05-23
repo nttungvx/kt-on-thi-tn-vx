@@ -1,0 +1,348 @@
+{
+    "timeLimit": 3000,
+    "subject": "09",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 2 (THUD)",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "09012",
+    "part1": [
+        {
+            "q": "Lĩnh vực nghiên cứu nào dưới đây KHÔNG thuộc trí tuệ nhân tạo?",
+            "options": [
+                "Xử lý ngôn ngữ tự nhiên.",
+                "Thị giác máy tính.",
+                "Hệ thống nhúng.",
+                "Học máy."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phát biểu nào sau đây là ĐÚNG khi nói về ứng dụng của AI trong chăm sóc sức khỏe?",
+            "options": [
+                "Tạo ra thuốc mới.",
+                "Phân tích dữ liệu bệnh nhân để dự đoán bệnh.",
+                "Thay thế bác sĩ.",
+                "Lập phác đồ điều trị."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phát biểu nào sau đây là ĐÚNG khi nói về mạng Wi-Fi?",
+            "options": [
+                "Mạng diện rộng.",
+                "Mạng cục bộ.",
+                "Mạng cục bộ không dây.",
+                "Mạng LAN."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thành phần nào sau đây đóng vai trò là \"ngôn ngữ chung\" để các máy tính trong mạng có thể giao tiếp với nhau?",
+            "options": [
+                "Trình duyệt Web.",
+                "Giao thức (Protocol).",
+                "Cáp mạng và Switch.",
+                "Card mạng (NIC)."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phát biểu nào sau đây giải thích ĐÚNG về các loại mạng máy tính?",
+            "options": [
+                "LAN là loại mạng kết nối các thiết bị khác nhau có phạm vi địa lý rộng lớn, như một thành phố, một quốc gia.",
+                "WLAN là mạng cục bộ sử dụng công nghệ không dây, cho phép kết nối các thiết bị mà không cần sử dụng dây cáp.",
+                "WAN là mạng kết nối những máy tính và các thiết bị số trong một phạm vi nhỏ như phòng thực hành.",
+                "Internet là mạng máy tính chỉ cho phép các máy tính và thiết bị khác kết nối trong phạm vi một quốc gia."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Một công ty muốn triển khai một hệ thống mạng nội bộ để nhân viên có thể chia sẻ tài liệu và giao tiếp hiệu quả. Vai trò và chức năng của giao thức mạng nào sau đây KHÔNG được sử dụng để thực hiện nhiệm vụ này?",
+            "options": [
+                "Định tuyến và chuyển tiếp dữ liệu.",
+                "Mã hóa và bảo mật dữ liệu.",
+                "Quản lý và phân bổ địa chỉ IP.",
+                "Cung cấp các dịch vụ ứng dụng."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Sau khi tìm hiểu các nội dung về ứng xử nhân văn trên không gian mạng, em rút ra kết luận nào sau đây cho bản thân?",
+            "options": [
+                "Nên chia sẻ tất cả thông tin cá nhân trên mạng.",
+                "Không nên giao tiếp với ai bất kì ai trên mạng.",
+                "Không cần phải chú ý đến các quy tắc giao tiếp.",
+                "Cần phải cảnh giác và ứng xử nhân văn hơn."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Khi chia sẻ thông tin trên mạng xã hội, em nên làm gì sau đây để không lộ thông tin cá nhân?",
+            "options": [
+                "Chỉ chia sẻ tất cả thông tin của cá nhân cho nguời quen.",
+                "Chỉ chia sẻ những thông tin an toàn và chính xác, không cung cấp nhiều thông tin cá nhân.",
+                "Không cần bảo vệ thông tin cá nhân trên mạng vì không ai quan tâm đến thông tin của mình.",
+                "Chỉ cung thông tin trên các đường links trong mail hoặc trên tin nhắn riêng."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cho đoạn chương trình bằng ngôn ngữ lập trình python như sau:<br>s=”abcde”<br>print(s[len(s)])<br>Trên màn hình sẽ cho kết quả nào sau đây?",
+            "options": [
+                "e.",
+                "abcde.",
+                "Chương trình báo lỗi.",
+                "5."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cho đoạn chương trình bằng ngôn ngữ lập trình python như sau:<br>a=[2,15,6,8,18,21,60]<br>for i in a:<br>&nbsp;&nbsp;&nbsp;&nbsp;if i%2==0 and i%3==0:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   print(i, end=“ ”)<br>Trên màn hình sẽ cho kết quả nào sau đây?",
+            "options": [
+                "2 6 8 60.",
+                "6 18 60.",
+                "2 15 6 8 18 21 60.",
+                "0."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Đâu là kĩ năng quan trọng nhất đối với kĩ sư an toàn thông tin?",
+            "options": [
+                "Cài đặt và nâng cấp phần mềm trên máy tính.",
+                "Điều chỉnh hiệu năng mạng.",
+                "Giải quyết vấn đề và xây dựng các quy trình ngăn ngừa, ứng phó với các cuộc xâm nhập, tấn công mạng.",
+                "Lắp đặt thiết bị phần cứng và thiết lập kết nối mạng."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Các chuyên viên thiết kế đồ họa cần có những kỹ năng và kiến thức nào sau đây?",
+            "options": [
+                "Kiến thức về các phần mềm thiết kế đồ họa như Photoshop, Illustrator và khả năng hội họa, chụp ảnh.",
+                "Kiến thức về các phần mềm thiết kế đồ họa như Autocad, SolidWorks và khả năng hội họa.",
+                "Kiến thức về các phần mềm thiết kế đồ họa như MATLAB, Simulink và khả năng chụp ảnh.",
+                "Kiến thức về các phần mềm thiết kế đồ họa như Microsoft Excel, Word và khả năng hội họa, chụp ảnh."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phần nào sau đây của văn bản HTML chứa nội dung sẽ hiển thị trên màn hình của trình duyệt web?",
+            "options": [
+                "Phần đầu.",
+                "Phần meta.",
+                "Phần thân.",
+                "Phần chân."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong HTML hỗ trợ một số cấp tiêu đề mục từ lớn đến nhỏ, đó là số lượng nào sau đây?",
+            "options": [
+                "4.",
+                "5.",
+                "6.",
+                "7."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong HTML, thẻ nào sau đây được sử dụng để chèn âm thanh vào trang web?",
+            "options": [
+                "$<$img$>$.",
+                "$<$audio$>$.",
+                "$<$video$>$.",
+                "$<$iframe$>$."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phát biểu nào sau đây nêu ĐÚNG mục đích sử dụng CSS?",
+            "options": [
+                "Đinh dạng và trang trí giao diện của trang web.",
+                "Thêm hiệu ứng động và tương tác vào trang web.",
+                "Xác định cấu trúc và nội dung của trang web,",
+                "Kiểm soát dữ liệu đầu vào trên trang web."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phát biểu nào sau đây là SAI về bảng định dạng CSS?",
+            "options": [
+                "Là ngôn ngữ được sử dụng để khai báo kiểu trình bày các phần tử HTML trong trang web.",
+                "external CSS (CSS ngoài) thường được sử dụng khi cần áp dụng chung bảng định dạng cho nhiều văn bản HTML.",
+                "Có 2 cách khai báo để áp dụng CSS trong văn bản HTML được sử dụng phổ biến là external CSS và internal CSS.",
+                "internal CSS (CSS trong) được viết trong cặp thẻ $<$style$>$ $<$/style$>$ và thường được đặt trong cặp thẻ $<$body$>$ $<$/body$>$."
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong định nghĩa phần tử form để tạo biểu mẫu của HTML, phương án nào xác định thuộc tính của action?",
+            "options": [
+                "Xác định phương thức gửi dữ liệu đến máy chủ để xử lí.",
+                "Xác định tài nguyên web sẽ tiếp nhận và xử lí dữ liệu mà người dùng vừa gửi đến máy chủ.",
+                "Xác định khai báo điều khiển nhập dữ liệu kí tự trên nhiều dòng trong biểu mẫu.",
+                "Xác định khai báo các mục lựa chọn cho phép người dùng chọn nhiều lựa chọn trong biểu mẫu."
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Phát biểu nào sau đây là ĐÚNG về bộ chọn lớp trong ngôn ngữ HTML?",
+            "options": [
+                "Trong khai báo, trước Tên_bộ_chọn_lớp là dấu chấm (#).",
+                "Bộ chọn lớp thường được dùng để khai báo các quy tắc định dạng được áp dụng cho một phần tử trong văn bản HTML.",
+                "Trong khai báo, trước Tên_bộ_chọn_lớp là dấu chấm (;).",
+                "Bộ chọn lớp thường được dùng để khai báo các quy tắc định dạng được áp dụng chung cho nhiều phần tử trong văn bản HTML."
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong ngôn ngữ HTML, cú pháp nào sau đây là ĐÚNG để khai báo việc chèn tệp ảnh có tên là hoaphuong.jpg vào một trang web?",
+            "options": [
+                "$<$ img  alt=\"ảnh hoa phượng\" \"hoaphuong.jpg\"width=\"150\" height=\"200\" $>$",
+                "$<$img href=\"hoaphuong.jpg\" alt=\"ảnh hoa phượng\" width=\"150\" height=\"200\"$>$",
+                "$<$img link=\"hoaphuong.jpg\" alt=\"ảnh hoa phượng\" width=\"150\" height=\"200\"$>$",
+                "$<$img src=\"hoaphuong.jpg\" alt=\"ảnh hoa phượng\" width=\"150\" height=\"200\"$>$"
+            ],
+            "ans": 3,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong ngôn ngữ HTML, cú pháp nào sau đây là ĐÚNG để khai báo việc tạo liên kết đến địa chỉ của trang web https://www.hoc10.vn?",
+            "options": [
+                "$<$a href=\"https://www.hoc10.vn\"$>$ Trang web học tập $<$/a$>$",
+                "$<$a src=\"https://www.hoc10.vn\"$>$ Trang web học tập $<$/a$>$",
+                "$<$a href=https://www.hoc10.vn$>$ “Trang web học tập” $<$/a$>$",
+                "$<$a src=https://www.hoc10.vn$>$ “Trang web học tập” $<$/a$>$"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "An thực hiện chèn tệp video meyeucon.mp4 vào trang web bằng ngôn ngữ HTML. Thao tác khai báo nào sau đây của An là đúng?",
+            "options": [
+                "$<$audio href=\"meyeucon.mp4\" controls$>$ $<$/audio$>$",
+                "$<$audio src=\"meyeucon.mp4\" controls$>$ $<$/audio$>$",
+                "$<$video src=\"meyeucon.mp4\" controls$>$ $<$/video$>$",
+                "$<$video href=\"meyeucon.mp4\" controls$>$ $<$/video$>$"
+            ],
+            "ans": 2,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Bình thực hiện tạo biểu mẫu dạng lựa chọn cho người dùng chọn lựa một mục trong danh sách gợi ý như hình dưới vào trang web bằng ngôn ngữ HTML. Thao tác khai báo nào sau đây của Bình để tạo nút chọn Lớp 10 là đúng?",
+            "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAAArCAIAAADdflvhAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAOwwAADsMBx2+oZAAABpRJREFUeF7tWk1II0kU7uxV8JyAA7YIevEiHkzAizDXhenggO1hWfY4p1kGYTEGjC17Gb15XOYgHWGle+Y+bC5CIiJePKgwGEEhuSp4zr6q7k66k051V3e64va+Ogxj6lW9+r5XX/29znQ6HQkLMoAMxGDgpxhtsSkygAwQBlBFOA+QgbgMoIriMojtkQFUEc4BZCAuA6iiuAxie2QAVYRzABmIywCqKC6D2B4ZQBXhHEAG4jKAKorLILZHBlBFOAeQgbgMoIriMojtkYFM+O/obm5uLi4u7u7uXl5eJiYmZmZmlpaW5ufnU0MiAkxNKAUDCasi0zTv7+9XVlbm5uYmJyefn59vb29PT0+np6cVRRE86CTcIcAkWP2/9Al7UWAxDEPXdV8z+B1qh/TQ0tdcNK7pLYanhgamWiNwLP0GrSpoWNEfvL8/6LayK/UwPUYF2KHeu2VgGG7fdEhKlcWB/1D9maHcsil1dRcVoIAI+gKpk9lAS4QpESbio7WRAru7vr7e399nmEEt2Aw1IJOAOb1oy3olCl/Qipa+/kkMLPaJQZCQ4gLsEHeB8gC9BdoMcthVqXcyOZMsnIriAkwwgr5AQFeatfhZ8F+/kIJfF+AuBAc5xtYMtWDD3LsX5Sn23t5ozra2lrn3//x2p9PddpzW7ePPpUrd6i2/XdfKn6uPrJ5HAVBalLPM0bdr0idjnW3j00F2Hfb53sLsWOS3nBkWhrJRAEwogn5AzmrSwVaeAsuuH8KWW/reCANzjDbBKoLnBLgLMYYItWATD0Ne5Z9hQzy2a19NZVZ2amV5zTRO24zhCQGYVdetiTGGIgTg6CK4rKq9NTcrL4yBMV6XwSqCFzl4TmD0C7Vgw+vYsW/sZexSPIa5Dn8WydZxBj/vNR6rRatyN/xq1GyeuHcGEgbzR5MxvIQBtqvvHYQEBflz70ySCDRA6sB/X2UJPSq5VruEAfpHsLFLotY+tgNIIEcp7eaVpL0d2wIUcsjBKoJHbXiRY3QHtWAT0p/XDAJQkOwXhfqimisey6sV8+pLMZMvSVKp8Lt0CKdjOJeXC1RjiZQkAYJmcsY760WhpV8VMrvN1XfK5fc/Mm82TMnceFNbhRo4lJ5s5DhWCj4ekgToH8Fvv2QKZQmi9oEGEG6npTxdHHnLY82Q9N/4j/q8fmLaB6sI8kLwqM1wA7VgE2Ec5AKz1uUov9XQTDVXKGs/bxv0WqnV/1bJTWJ5C8Jgfq1FkhFZzNglOYDS2V8bJ9on+7CaVQ90pVzIqVLx1z/J0kAeRegFYEo9BLzlWvgNl4vt5AAOi+DHf+jLW6VuXQXJ7VQKOFf7Imp8MYoHdA687hKsIkitQl6IgQJqwSYCzOYP09NqSla6E8vbnTwbPiUFFyHpsulRnOua5DPM5AC2m5d9ABfJi5PhOvfb9VkZapIqyQEMHUESFN4Cp8HaWx+uePsRYB+sIvg6AVKr1WrVdzTwO9TyfsHQ2N2DdZdo48SoeTZ6s+m375NoLQS8gjnDy8KRqXcRgiPBiVJcYS1nSQCEex3cBKg2SjXvlaBP4dawid7W5O6TyGgDnwRAzgj2XVZD4Dvbg9NghGfbEF0nYBKYL7IMIG0HeaHz8/Onpyf4E/6F/8Mvw1OuTscD2QZyWrNzOPQN10l62Ke4wUQBecsennHyyWZAt7Z9mHxRXICD+SIyYCvjYWUt7eyHc4qjDmku1ckg9RJcPuGgT/mDORMCLVy+KC7AKBH0ACeRHT5UHyDg0ZXla1W1/qx6yFkryiw469odCSTvjo6OdnZ2Njc34V/4PyvZ2ptDPtJ3zQlXMsRFtKUozU6qDs27OVlX4sKT0+T8dsHCyA+w79sFF9LeJHCn/x052SpStIp9Uh2WkPV8G9Hr051BCs5ojyOC1r1Icz5BcAH3zGwfIN7PQSilPIuFKOF4/IT9ji6BXZDVJZyJc+pivWNn3wR7F+EOnvLzl/rDf+Pcz08IeZzcWKh3tl/7IzU/NJ8WwfeikbjBTpCBNDMwlh2Q7dS1pw87CbzCUfMMiV6KaOE4j/E4GK+t6xAb9BHjeAc6Ku+v9ESX5nULsaWOATzRpS6kCEg4A6gi4ZSjw9QxgCpKXUgRkHAGUEXCKUeHqWMAVZS6kCIg4QygioRTjg5TxwCqKHUhRUDCGUAVCaccHaaOAVRR6kKKgIQzgCoSTjk6TB0DqKLUhRQBCWcAVSSccnSYOgZQRakLKQISzgCqSDjl6DB1DPwLlixEBonAAw4AAAAASUVORK5CYII=",
+            "options": [
+                "$<$input type= \"radio\" name=\"Khoi\" value=\"Lớp 10\"$>$ 10",
+                "$<$input type= \"radio\" name=\"Khoi\" value=\"10\"$>$Lớp 10",
+                "$<$input type= \"checkbox\" name=\"Khoi\" value=\"Lớp 10\"$>$ 10",
+                "$<$input type= \"checkbox\" name=\"Khoi\" value=\"10\"$>$ Lớp 10"
+            ],
+            "ans": 1,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trong bảng định dạng CSS, khai báo nào dưới đây là ĐÚNG cho bộ chọn của các phần tử p, h2 có định dạng chữ màu đỏ, in đậm, cỡ chữ 20px.",
+            "options": [
+                "$<$style$>$ p, h2 {font-weight: bold; color: red; font-size: 20px;} $<$/style$>$",
+                "$<$style$>$ p; h2 {font-weight: bold; color: red; font-size: 20px;} $<$/style$>$",
+                "$<$style$>$ p, h2 {font-style; bold: color; red: font-size; 20px:} $<$/style$>$",
+                "$<$style$>$ p; h2 {font-style: bold; color: red; font-size: 20px} $<$/style$>$"
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Để quản lý việc mượn và trả sách của học sinh, thư viện của nhà trường xây dựng một phần mềm quản lí thư viện trong đó có cơ sở dữ liệu quan hệ gồm ba bảng có cấu trúc như sau:<br>- Bảng SACH (MaSach, TenSach, TenTacGia, SoTrang) gồm các thông tin: mã sách, tên sách, tên tác giả, số trang.<br>- Bảng HOCSINH (MaHS, TenHS, Lop) gồm các thông tin: mã học sinh, tên học sinh, lớp.<br>- Bảng QLMUON (MaHS, MaSach, NgayMuon, NgayTra) gồm các thông tin quản lý mượn trả như: mã học sinh, mã sách, ngày mượn, ngày trả.<br>Sau khi tìm hiểu dữ liệu của phần mềm, một số bạn học sinh có các ý kiến như sau:",
+            "items": [
+                "Trong hệ CSDL quan hệ, các đối tượng như MaSach, TenSach, Lop… được gọi là “thuộc tính”.",
+                "Để thực hiện việc cập nhật dữ liệu, người ta thực hiện các thao tác thêm, xoá, sửa, sắp xếp, tìm kiếm trên dữ liệu trong các bảng.",
+                "Trong từng cuốn sách, để mô tả chi tiết thông tin của tác giả như: Họ và tên, tiểu sử, trình độ chuyên môn, …, ta cần tạo thêm bảng Tác giả để hạn chế việc dư thừa dữ liệu.",
+                "Để thực hiện truy vấn thông tin về sách của tác giả Nguyễn Nhật Ánh, người ta sử dụng câu lệnh sau trong SQL:<br>SELECT [MaSach], [TenSach], [SoTrang]<br>FROM SACH<br>WHERE [TenTacGia]=”Nguyễn Nhật Ánh”"
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Trong tiết thực hành tạo trang web đơn giản, nhóm bạn lớp 12/1 quyết định tạo trang web cho lớp với mục đích lan tỏa những câu chuyện về người tốt, việc tốt, những hành ảnh đẹp và các bạn học tốt trong lớp của mình. Trong khi thảo luận các em đã thống nhất trong trang web phải gồm các thành phần như: tiêu đề, hình ảnh, thông tin cá nhân (gồm họ tên, ngày sinh, địa chỉ, sđt, …) của người thật việc thật nhằm giúp trang web được sinh động hơn.  Để tạo trang web này các bạn sử dụng ngôn ngữ HTML để xây dựng. Tuy nhiên, trong khi thực hiện một số bạn đang phân vân nên đặt tiêu đề, phần nội dung được trình bày thế nào cho phù hợp.<br>Sau khi thảo luận, xem xét nội dung trên, một số bạn học sinh đưa ra các ý kiến sau:",
+            "items": [
+                "Nhờ có không gian mạng mà mọi người có thể biết được những người tốt quanh ta, giúp lan tỏa được những việc tốt trong cuộc sống.",
+                "Các máy tính trong phòng thực hành chỉ cần kết nối mạng LAN là có thể truy cập đến trang web vừa tạo.",
+                "Không nên đưa đầy đủ thông tin cá nhân của các bạn lên trang web.",
+                "Để xây dựng trang web ta cần dựa vào cấu trúc văn bản HTML sau:<br> $<$html$>$$<$head$>$$<$title$>$$<$/title$>$$<$/head$>$$<$body$>$$<$/body$>$$<$/html$>$<br>Trong phần tử title ta sẽ khai báo tiêu đề (ví dụ: Những tấm gương sáng của lớp 12/1) và phần tử body khai báo phần nội dung trên."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Để quản lí việc bán hàng cho một cửa hàng tạp hoá Sơn Trường ở thị trấn Sịa, người ta xây dựng một phần mềm với cơ sở dữ liệu gồm nhiều bảng, trong đó có 3 bảng có cấu trúc như sau:<br>- Bảng KHACHHANG gồm MAKH, TEN, DIACHI, SDTHOAI<br>- Bảng MATHANG gồm MAMH, TENMH, DVTINH, DONGIA<br>- Bảng HOADON gồm MAHD, MAKH, MAMH, SOLUONG, NGAYMUA<br>Sau khi tìm hiểu dữ liệu của phần mềm, các bạn học sinh đã đưa ra các nhận xét sau đây:",
+            "items": [
+                "Trường DONGIA thường có kiểu dữ liệu là Short Text.",
+                "Trường MAKH là khoá chính của bảng KHACHHANG.",
+                "Nên sử dụng hệ cơ sở dữ liệu phân tán để xây dựng cơ sở dữ liệu trên.",
+                "Để thực hiện truy vấn thông tin những khách mua hàng vào ngày 01/01/2024, người ta sử dụng câu lệnh sau trong SQL.<br>SELECT [KHACH HANG].MaKH, [KHACH HANG].Hoten, [KHACH HANG].Diachi, [KHACH HANG].SDT, [HOA DON].NgayGH<br>FROM [KHACH HANG] ON [HOA DON] INNER JOIN [KHACH HANG].MaKH = [HOA DON].MaKH<br>WHERE ((([HOA DON].NgayGH)=#01/01/2024#));"
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Ba mẹ của học sinh Dung sở hữu một cơ sở sản xuất thủ công mỹ nghệ mây tre đan. Để tìm kiếm và mở rộng thị trường tiêu thụ, ba mẹ nhờ Dung và một số bạn cùng lớp sử dụng phần mềm tạo trang web để tạo một website giới thiệu quảng bá về sản phẩm gồm 3 trang: Trang chủ, giới thiêu, liên hệ. Dung và các bạn muốn tạo phần đầu trang có biểu ngữ, logo và thanh điều hướng để liên kết 3 trang web trong website lại với nhau. Các bạn học sinh đưa ra các nhận định như sau:",
+            "items": [
+                "Thanh điều hướng chỉ chứa trong trang chủ.",
+                "Chỉ có thể sử dụng các hình ảnh được lưu sẵn trong máy tính để đưa vào trang web.",
+                "Nội dung trang web thường giới thiệu về sản phẩm, dịch vụ, hay tin tức, ….",
+                "Để trình bày thông tin mục liên hệ, chọn khối mẫu Contact."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}

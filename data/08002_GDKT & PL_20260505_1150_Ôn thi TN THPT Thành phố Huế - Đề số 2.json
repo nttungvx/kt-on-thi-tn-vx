@@ -1,0 +1,351 @@
+{
+    "timeLimit": 3000,
+    "subject": "08",
+    "title": "Ôn thi TN THPT Thành phố Huế - Đề số 2",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.25,
+    "examId": "08002",
+    "part1": [
+        {
+            "q": "Nội dung nào dưới đây là khoản chi tiêu không thiết yếu trong gia đình?",
+            "options": [
+                "Chi phí xem phim.",
+                "Chi phí ăn, mặc.",
+                "Chi phí điện nước.",
+                "Chi phí học tập."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Theo quy định của Hiến pháp năm 2013 quyền lập hiến, quyền lập pháp và giám sát tối cao đối với hoạt động của Nhà nước là nhiệm vụ của",
+            "options": [
+                "Quốc hội.",
+                "Chủ tịch nước.",
+                "Bộ trưởng.",
+                "Chính phủ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Tổ chức kinh tế tập thể, đồng sở hữu, được thành lập trên tinh thần tự nguyện vì lợi ích chung của các thành viên là mô hình kinh tế",
+            "options": [
+                "hợp tác xã.",
+                "doanh nghiệp.",
+                "tư nhân.",
+                "hộ gia đình."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Quá trình hoạt động có mục đích, làm cho những quy định của pháp luật đi vào cuộc sống và trở thành hành vi hợp pháp của cá nhân, tổ chức là nội dung của khái niệm nào sau đây?",
+            "options": [
+                "Thực hiện pháp luật.",
+                "Thi hành pháp luật.",
+                "Sử dụng pháp luật.",
+                "Tuân thủ pháp luật."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Lạm phát là sự gia tăng mức giá chung các hàng hóa, dịch vụ của nền kinh tế một cách liên tục trong một khoảng",
+            "options": [
+                "khoảng thời gian nhất định.",
+                "vòng lặp liên tục qua các năm.",
+                "chu kỳ được dự đoán từ trước.",
+                "môi trường tuần hoàn liên tục."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Những hoạt động trao đổi hàng hoá, dịch vụ giữa các quốc gia thông qua xuất, nhập khẩu để mở rộng sản xuất, chuyển giao công nghệ, tạo tiền đề cho tăng trưởng và phát triển kinh tế được gọi là",
+            "options": [
+                "thương mại quốc tế.",
+                "cứu trợ quốc tế.",
+                "gỡ bỏ cấm vận.",
+                "áp thuế ưu đãi."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Theo quy định của Hiến pháp năm 2013, quyền bình đẳng giữa các dân tộc trên lĩnh vực chính trị không bao gồm nội dung nào sau đây?",
+            "options": [
+                "Sử dụng tiếng nói, chữ viết riêng.",
+                "Tham gia quản lí nhà nước và xã hội.",
+                "Thực hiện quyền bầu cử, ứng cử.",
+                "Tham gia vào bộ máy nhà nước."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cho các nhận định về ý tưởng và cơ hội kinh doanh:<br>1. Cơ hội kinh doanh dựa trên một yếu tố duy nhất là nguồn lực tài chính.<br>2. Nhu cầu thị trường là nguồn tạo ra cơ hội kinh doanh quan trọng.<br>3. Cơ hội kinh doanh chỉ phụ thuộc vào lợi thế nội tại của chủ thể kinh doanh.<br>4. Chính sách vĩ mô của Nhà nước không ảnh hưởng đến việc xác định cơ hội kinh doanh.<br>5. Ý tưởng kinh doanh cần được xây dựng trên cơ sở kết hợp lợi thế nội tại và cơ hội bên ngoài.<br>Những nhận định nào sai?",
+            "options": [
+                "Nhận định 1, 3, 4.",
+                "Nhận định 2, 4, 5.",
+                "Nhận định 1, 4, 5.",
+                "Nhận định 2, 3, 4."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Theo quy định của pháp luật, đối tượng nào dưới đây không được thực hiện quyền bầu cử, ứng cử?",
+            "options": [
+                "Người mất năng lực hành vi dân sự.",
+                "Người đang điều trị bệnh viêm phổi.",
+                "Người đang đảm nhiệm chức vụ.",
+                "Người đang đi công tác xa."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Người nộp thuế không có trách nhiệm nào sau đây?",
+            "options": [
+                "Kê khai đầy đủ thu nhập các thành viên trong gia đình.",
+                "Khai thuế chính xác, trung thực, đầy đủ và nộp hồ sơ thuế đúng thời hạn.",
+                "Thực hiện đăng kí thuế, sử dụng mã số thuế theo quy định của pháp luật.",
+                "Chịu trách nhiệm trước pháp luật về tính chính xác, trung thực, đầy đủ của hồ sơ thuế."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Anh A làm việc theo hợp đồng tại một doanh nghiệp. Ngoài tiền lương hàng tháng, cuối năm anh được nhận một khoản tiền thưởng do hoàn thành vượt mức kế hoạch được giao. Khoản tiền thưởng anh A được nhận thêm trong tình huống trên thuộc loại thu nhập nào sau đây?",
+            "options": [
+                "Thu nhập thụ động.",
+                "Thu nhập từ đầu tư tài chính.",
+                "Thu nhập chủ động.",
+                "Thu nhập ngẫu nhiên."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Trước khi công bố phương án thi, Bộ Giáo dục và đào tạo đã lấy ý kiến của nhân dân trong cả nước. Điều đó nhằm phát huy quyền dân chủ cơ bản nào dưới đây của công dân?",
+            "options": [
+                "Tham gia quản lý Nhà nước, xã hội.",
+                "Xây dựng xã hội học tập.",
+                "Quyết định của mọi người.",
+                "Triển khai mô hình thí điểm thi cử."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Hình thức thực hiện pháp luật nào dưới đây thể hiện rõ nhất đặc điểm tính quyền lực bắt buộc chung của pháp luật?",
+            "options": [
+                "Áp dụng pháp luật.",
+                "Triển khai pháp luật.",
+                "Phổ biến pháp luật.",
+                "Sử dụng pháp luật."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Loại hình thất nghiệp gắn liền với sự biến động cơ cấu kinh tế và sự thay đổi của công nghệ dẫn đến yêu cầu lao động có trình độ cao hơn, lao động không đáp ứng yêu cầu sẽ bị đào thải là hình thức",
+            "options": [
+                "thất nghiệp cơ cấu.",
+                "thất nghiệp tạm thời.",
+                "thất nghiệp tự nguyện.",
+                "thất nghiệp chu kỳ."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Bạn H là sinh viên mới ra trường đang thử việc tại công ty X. Nhận thấy năng lực ngoại ngữ còn hạn chế, bạn H quyết định đăng ký một khóa học Tiếng Trung buổi tối. Theo em, khoản chi phí cho khóa học này của bạn H thuộc nhóm các khoản chi nào?",
+            "options": [
+                "Thiết yếu.",
+                "Không thiết yếu.",
+                "Dự phòng.",
+                "Tiết kiệm."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Được thành lập bởi các quốc gia trong cùng khu vực địa lí để thúc đẩy tự do thương mại, tự do di chuyển lao động và vốn giữa các thành viên là thể hiện mức độ hội nhập kinh tế quốc tế ở mức độ",
+            "options": [
+                "hiệp định thương mại tự do.",
+                "liên minh kinh tế.",
+                "thoả thuận thương mại ưu đãi.",
+                "thị trường chung."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thực tế hiện nay, hội nhập kinh tế quốc tế đã tạo ra cơ hội lớn nhất cho các doanh nghiệp trong nước là:",
+            "options": [
+                "tiếp cận thị trường tiêu thụ rộng lớn hơn và nguồn vốn đầu tư nước ngoài.",
+                "tăng cường vai trò quản lý vĩ mô của Chính phủ.",
+                "giảm thiểu sự cạnh tranh về mọi mặt hàng hóa từ hàng hóa nước ngoài.",
+                "đảm bảo ổn định chính trị và pháp luật trong nước."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Thứ tự đúng của các bước lập kế hoạch kinh doanh là:",
+            "options": [
+                "Xác định ý tưởng  Xác định mục tiêu  Phân tích điều kiện  Xác định chiến lược  Đánh giá cơ hội, rủi ro.",
+                "Xác định mục tiêu  Xác định ý tưởng  Phân tích điều kiện  Xác định chiến lược  Đánh giá cơ hội, rủi ro.",
+                "Xác định ý tưởng  Phân tích điều kiện  Xác định mục tiêu  Xác định chiến lược  Đánh giá cơ hội, rủi ro.",
+                "Phân tích điều kiện  Xác định ý tưởng  Xác định mục tiêu  Xác định chiến lược  Đánh giá cơ hội, rủi ro."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Nội dung nào dưới đây không thể hiện ý nghĩa của việc thực hiện trách nhiệm xã hội của doanh nghiệp đối với xã hội?",
+            "options": [
+                "Tăng lợi thế cạnh tranh cho doanh nghiệp.",
+                "Góp phần phát triển bền vững của đất nước.",
+                "Góp phần bảo vệ môi trường sống.",
+                "Hỗ trợ giải quyết những khó khăn của cộng đồng."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cho các nhận định sau đây về mối quan hệ giữa tăng trưởng kinh tế và phát triển bền vững:",
+            "options": [
+                "a) Tăng trưởng kinh tế là một nội dung cơ bản của phát triển bền vững.",
+                "b) Tăng trưởng kinh tế tạo tiền đề vật chất để nâng cao chất lượng cuộc sống.",
+                "c) Tăng trưởng và phát triển kinh tế là điều kiện đủ để phát triển bền vững.",
+                "d) Phát triển bền vững là sự bảo đảm để thúc đẩy tăng trưởng kinh tế.<br>Trong các nhận định trên, có bao nhiêu nhận định đúng?",
+                "3.",
+                "1.",
+                "2.",
+                "4."
+            ],
+            "ans": 4,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Cho các nhận định sau về bảo hiểm y tế:<br>1. Bảo hiểm y tế chỉ dành cho những người làm việc trong khu vực nhà nước.<br>2. Bảo hiểm y tế chỉ có tác dụng trong việc thanh toán viện phí khi điều trị bệnh.<br>3. Bảo hiểm y tế không chi trả chi phí cho các dịch vụ y tế ngoài việc điều trị bệnh.<br>4. Bảo hiểm y tế khuyến khích người dân tham gia theo hộ gia đình để được hưởng mức giảm trừ khi đóng phí.<br>5. Bảo hiểm y tế giúp chia sẻ rủi ro về tài chính khi người tham gia gặp vấn đề về sức khỏe.<br>6. Người tham gia BHYT được quỹ bảo hiểm hỗ trợ một phần hoặc toàn bộ chi phí khám chữa bệnh tùy theo mức hưởng.<br>Những nhận định nào đúng?",
+            "options": [
+                "Nhận định 4, 5, 6.",
+                "Nhận định 1, 3, 5.",
+                "Nhận định 1, 2, 3.",
+                "Nhận định 2, 4, 6."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ra đời từ năm 2006, Quỹ Thiện tâm do Tập đoàn Vingroup cùng Chủ tịch Phạm Nhật Vượng sáng lập. Quỹ hoạt động với toàn bộ chi phí được tài trợ bởi Tập đoàn Vingroup và các nhà hảo tâm là lãnh đạo của Tập đoàn. Ngoài chương trình học bổng, Quỹ còn triển khai nhiều hoạt động ý nghĩa vì cộng đồng như phụng dưỡng Mẹ Việt Nam anh hùng, hỗ trợ các gia đình chính sách và gia đình khó khăn, phát triển kinh tế tại các địa phương nghèo, và chăm lo cho học sinh nghèo hiếu học,...Quỹ Thiện tâm không chỉ mang lại cơ hội học tập mà còn là nơi những giá trị tốt đẹp được lan tỏa rộng rãi.<br>(Theo Người quan sát – Huy Hoàng, ngày 9/12/2024)<br>Nhận định nào dưới đây là sai về các hoạt động của Quỹ Thiện tâm do Tập đoàn Vingroup sáng lập?",
+            "options": [
+                "Quỹ chỉ cung cấp học bổng cho học sinh nghèo.",
+                "Quỹ hoạt động được tài trợ từ Tập đoàn Vingroup và các nhà hảo tâm.",
+                "Quỹ góp phần lan tỏa giá trị tốt đẹp trong cộng đồng.",
+                "Quỹ tham gia phát triển kinh tế và hỗ trợ gia đình chính sách."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ra đời từ năm 2006, Quỹ Thiện tâm do Tập đoàn Vingroup cùng Chủ tịch Phạm Nhật Vượng sáng lập. Quỹ hoạt động với toàn bộ chi phí được tài trợ bởi Tập đoàn Vingroup và các nhà hảo tâm là lãnh đạo của Tập đoàn. Ngoài chương trình học bổng, Quỹ còn triển khai nhiều hoạt động ý nghĩa vì cộng đồng như phụng dưỡng Mẹ Việt Nam anh hùng, hỗ trợ các gia đình chính sách và gia đình khó khăn, phát triển kinh tế tại các địa phương nghèo, và chăm lo cho học sinh nghèo hiếu học,...Quỹ Thiện tâm không chỉ mang lại cơ hội học tập mà còn là nơi những giá trị tốt đẹp được lan tỏa rộng rãi.<br>(Theo Người quan sát – Huy Hoàng, ngày 9/12/2024)<br>Nội dung nào sau đây phản ánh không đúng ý nghĩa của việc thực hiện trách nhiệm xã hội đối với Tập đoàn Vingroup?",
+            "options": [
+                "Thu hút được người lao động.",
+                "Tạo dựng niềm tin với công chúng.",
+                "Góp phần thực hiện an sinh xã hội.",
+                "Tăng uy tín, thương hiệu cho tập đoàn."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        },
+        {
+            "q": "Ra đời từ năm 2006, Quỹ Thiện tâm do Tập đoàn Vingroup cùng Chủ tịch Phạm Nhật Vượng sáng lập. Quỹ hoạt động với toàn bộ chi phí được tài trợ bởi Tập đoàn Vingroup và các nhà hảo tâm là lãnh đạo của Tập đoàn. Ngoài chương trình học bổng, Quỹ còn triển khai nhiều hoạt động ý nghĩa vì cộng đồng như phụng dưỡng Mẹ Việt Nam anh hùng, hỗ trợ các gia đình chính sách và gia đình khó khăn, phát triển kinh tế tại các địa phương nghèo, và chăm lo cho học sinh nghèo hiếu học,...Quỹ Thiện tâm không chỉ mang lại cơ hội học tập mà còn là nơi những giá trị tốt đẹp được lan tỏa rộng rãi.<br>(Theo Người quan sát – Huy Hoàng, ngày 9/12/2024)<br>Hình thức thực hiện trách nhiệm xã hội nào của Tập đoàn Vingroup được đề cập đến trong thông tin trên?",
+            "options": [
+                "Trách nhiệm nhân văn.",
+                "Trách nhiệm pháp lí.",
+                "Trách nhiệm kinh tế.",
+                "Trách nhiệm bắt buộc."
+            ],
+            "ans": 0,
+            "explanation": "Chưa có lời giải."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Công ty X hoạt động trong lĩnh vực sản xuất đồ gỗ với diện tích nhà xưởng hơn 1.200m². Công ty đã tham gia đầy đủ bảo hiểm xã hội, bảo hiểm y tế và bảo hiểm thất nghiệp cho người lao động theo quy định. Công ty X ký hợp đồng cung cấp lô hàng trị giá 3 tỉ đồng cho công ty Y, trong đó có điều khoản giao hàng đúng tiến độ. Trong quá trình sản xuất, do chập điện, xưởng bị hỏa<br>hoạn làm thiệt hại phần lớn hàng hóa và khiến một số công nhân bị thương phải điều trị tại bệnh viện. Do không thực hiện đúng thời hạn giao hàng, công ty X phải bồi thường vi phạm hợp đồng cho công ty Y. Ngoài ra, công ty X còn chưa tham gia mua bảo hiểm cháy, nổ bắt buộc theo quy định nên không được tổ chức bảo hiểm chi trả phần thiệt hại do hỏa hoạn gây ra.",
+            "items": [
+                "Trong trường hợp này, việc chưa tham gia bảo hiểm cháy, nổ bắt buộc chỉ ảnh hưởng đến quyền lợi của công ty X mà không liên quan đến nghĩa vụ pháp lý của doanh nghiệp.",
+                "Người lao động bị thương trong vụ hỏa hoạn được quỹ bảo hiểm chi trả chi phí điều trị theo quy định.",
+                "Việc công ty X tham gia bảo hiểm xã hội, bảo hiểm y tế và bảo hiểm thất nghiệp cho người lao động thể hiện trách nhiệm kinh tế của doanh nghiệp trong hoạt động sản xuất, kinh doanh.",
+                "Việc công ty X phải bồi thường vi phạm hợp đồng cho công ty Y thể hiện nguyên tắc bên vi phạm nghĩa vụ phải chịu trách nhiệm dân sự theo quy định của pháp luật."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Gần đây, Trường Đại học C tổ chức kì thi kết thúc học phần nhưng do không nắm vững kiến thức các môn học nên M (sinh viên Trường Đại học C) quyết định tìm người thi hộ. Thông qua mạng xã hội, M thuê B (sinh viên một trường đại học khác trên địa bàn) thi hộ hai môn chuyên ngành với giá 600.000 đồng/môn. Tuy nhiên, khi B đang sử dụng giấy tờ giả để tham dự kì thi hộ M thì đã bị giám thị phát hiện. Sau đó các cơ quan chức năng đã tiến hành xử lý hành vi vi phạm của cả M và B bằng hình thức đuổi học.",
+            "items": [
+                "Sinh viên M đã vi phạm quyền học tập của sinh viên B.",
+                "Bạn M và B đều được học tập tại các trường đại học là thực hiện quyền học tập của công dân.",
+                "Việc cơ quan chức năng tiến hành đuổi học bạn M và bạn B là vi phạm quyền học tập của công dân.",
+                "Việc bạn M và bạn B khiếu nại quyết định kỷ luật đối với mình là không phù hợp vì hành vi của hai bạn."
+            ],
+            "ans": [
+                false,
+                true,
+                false,
+                false
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Năm 2025, kinh tế Việt Nam bứt phá mạnh mẽ với tốc độ tăng trưởng GDP ước đạt trên 8%. Quy mô nền kinh tế tăng từ 346 tỷ USD năm 2020 lên 510 tỷ USD năm 2025, vươn lên vị trí thứ 32 thế giới. Đặc biệt, GDP bình quân đầu người năm 2025 ước đạt khoảng 5.000 USD, gấp 1,4 lần năm 2020, chính thức đưa Việt Nam vào nhóm quốc gia có thu nhập trung bình cao. Cơ cấu kinh tế và chất lượng tăng trưởng chuyển biến tích cực, trong đó kinh tế số và kinh tế xanh là những động lực then chốt. Công tác an sinh xã hội được bảo đảm, tỷ lệ hộ nghèo theo chuẩn đa chiều giảm từ 4,4% năm 2021 xuống còn 1,3% năm 2025. Những thành tựu này khẳng định sự kết hợp hài hòa giữa tăng trưởng kinh tế với tiến bộ và công bằng xã hội.<br>(Nguồn: https://dangcongsan.vn/tieu-diem/vi-the-viet-nam-681951.html)",
+            "items": [
+                "Tốc độ tăng trưởng GDP trên 8% và quy mô kinh tế 510 tỷ USD là các số liệu phản ánh sự gia tăng về mặt lượng của nền kinh tế Việt Nam năm 2025.",
+                "Việc GDP bình quân đầu người tăng gấp 1,4 lần sau 5 năm là minh chứng duy nhất cho thấy Việt Nam đã hoàn thành mục tiêu phát triển bền vững.",
+                "Kinh tế số và kinh tế xanh đóng vai trò động lực then chốt để Việt Nam hiện đại hóa cơ cấu kinh tế và đảm bảo sự phát triển bền vững.",
+                "Chỉ số giảm tỷ lệ hộ nghèo đa chiều từ 4,4% xuống 1,3% là tiêu chí phản ánh sự phát triển kinh tế gắn liền với việc thực hiện tốt tiến bộ và công bằng xã hội."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        },
+        {
+            "q": "Vợ chồng anh B, chị A cùng 2 con gái chung sống với mẹ đẻ của anh B là bà C làm giám đốc một công ty tư nhân. Do không ép được chị A sinh thêm con thứ 3 với hi vọng có được cháu trai, bà C đã bịa đặt chị A ngoại tình rồi gửi đơn ra tòa án đề nghị xem xét cho anh B li hôn vợ. Bức xúc với mẹ chồng, chị A đã bí mật rút tiền tiết kiệm của 2 vợ chồng rồi bỏ việc công ty của<br>bà C về kinh doanh cùng mẹ đẻ của chị là bà H. Trong thời gian chị A đi vắng, được bà C hứa sẽ hỗ trợ một khoản tiền lớn, chị M nhân viên của bà C cũng vừa ly hôn, đồng ý mang thai hộ cho anh B.<br>Khi phát hiện mình đã có thai với anh B, chị M đã thông tin tới chị A và yêu cầu chị ly hôn để anh B kết hôn<br>với chị và được chị A đồng ý. Sau khi biết chị gái mình ly hôn, anh Q là em trai chị A đã dùng hung khí uy hiếp và đánh anh B bị thương.",
+            "items": [
+                "Bà C có quyền đề nghị tòa án xem xét ly hôn cho anh B và chị A vì chị A đã vi phạm nghiêm trọng đời sống hôn nhân.",
+                "Chị M mang thai hộ cho anh B nên không vi phạm quyền và nghĩa vụ của công dân trong hôn nhân và gia đình.",
+                "Anh Q uy hiếp và đánh anh B bị thương là vi phạm quyền và nghĩa vụ giữa các thành viên trong gia đình.",
+                "Chị A rút tiền tiết kiệm của hai vợ chồng để kinh doanh là không phù hợp."
+            ],
+            "ans": [
+                false,
+                false,
+                false,
+                true
+            ],
+            "explanation": "Chi tiết lời giải"
+        }
+    ],
+    "part3": []
+}
