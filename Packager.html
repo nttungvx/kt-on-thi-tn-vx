@@ -105,7 +105,6 @@
         function processPastedJson() {
             const text = document.getElementById('json-paste').value;
             try {
-                // Tách đoạn JSON nếu AI có lỡ bọc Text bên ngoài
                 let cleanText = text;
                 const jsonStart = text.indexOf('{'), jsonEnd = text.lastIndexOf('}');
                 if(jsonStart !== -1 && jsonEnd !== -1) cleanText = text.substring(jsonStart, jsonEnd + 1);
@@ -121,10 +120,9 @@
         async function executeExport(mode) {
             if (!examData) return;
 
-            // Xử lý tạo ID tự động theo mã môn nếu cần
             if (!examData.examId) {
                 let subjCode = examData.subject || "99";
-                examData.examId = subjCode + Math.floor(Math.random()*1000).toString().padStart(3, '0'); // ID ngẫu nhiên nháp
+                examData.examId = subjCode + Math.floor(Math.random()*1000).toString().padStart(3, '0');
             }
 
             const now = new Date();
