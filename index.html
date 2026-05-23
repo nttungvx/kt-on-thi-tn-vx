@@ -80,7 +80,7 @@
         <div id="start-screen" class="w-full h-full flex flex-col items-center justify-center p-4">
             <div class="bg-white/90 dark:bg-black/90 p-10 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 text-center w-full max-w-lg">
                 <i class="fa-solid fa-graduation-cap text-6xl text-blue-600 mb-6 block"></i>
-                <h1 id="loading-txt" class="text-2xl font-bold text-slate-800 dark:text-white mb-4"><svg class="animate-spin h-6 w-6 inline-block mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>ĐANG TẢI DỮ LIỆU ĐỀ THI...</h1>
+                <h1 id="loading-txt" class="text-2xl font-bold text-slate-800 dark:text-white mb-4"><i class="fa-solid fa-spinner fa-spin text-blue-500 mr-2"></i>ĐANG TẢI DỮ LIỆU ĐỀ THI...</h1>
                 <p class="text-slate-500 mb-8" id="exam-id-display">Đang kết nối kho dữ liệu Cloud GitHub...</p>
                 <button id="btn-start" onclick="beginExam()" class="hidden w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl rounded-xl shadow-lg transition transform hover:-translate-y-1 outline-none">BẮT ĐẦU LÀM BÀI</button>
             </div>
@@ -182,29 +182,47 @@
             }
         }
 
+        // THUẬT TOÁN QUÉT VÀ TRUY XUẤT ĐỀ TỪ THƯ MỤC DATA TRÊN GITHUB CLOUD
         document.addEventListener("DOMContentLoaded", async function() {
             if(!made) {
-                document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không tìm thấy mã đề thi trên URL!</span>";
+                document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không tìm thấy mã đề thi trên đường dẫn URL!</span>";
                 return;
             }
-            document.getElementById('exam-id-display').innerText = "Đang tải cấu trúc dữ liệu mã đề: " + made;
+            document.getElementById('exam-id-display').innerText = "Đang kết nối thư mục data mã đề: " + made;
             
-            // CẤU HÌNH GITHUB CỦA THẦY
-           const owner = "nttungvx"; 
-           const repo = "kt-on-thi-tn-vx";
+            // ĐỒNG BỘ CHÍNH XÁC TÊN KHO REPOSITORY THỰC TẾ
+            const owner = "nttungvx"; 
+            const repo = "kt-on-thi-tn-vx"; 
             
             try {
+                // Bước 1: Gọi GitHub API quét danh sách tệp có trong thư mục data
                 const resList = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
-                const files = await resList.json();
-                const fileTarget = files.find(f => f.name.startsWith(made + "_") || f.name === made + ".json");
                 
-                if (!fileTarget) throw new Error("Mã đề " + made + " chưa được đóng gói hoặc chưa tải lên GitHub!");
+                if (!resList.ok) {
+                    throw new Error(`Kho lưu trữ hoặc thư mục 'data' không tồn tại (Mã lỗi: ${resList.status})`);
+                }
+                
+                const files = await resList.json();
+                
+                if (!Array.isArray(files)) {
+                    throw new Error("Cấu trúc phản hồi từ GitHub API không đúng định dạng mảng.");
+                }
 
+                // Bước 2: Tìm tệp tin .json khớp với mã đề thi cần lấy (không phân biệt hoa thường)
+                const fileTarget = files.find(f => f.name.toLowerCase().startsWith(made.toLowerCase() + "_") || f.name.toLowerCase() === made.toLowerCase() + ".json");
+                
+                if (!fileTarget) {
+                    throw new Error(`Mã đề [${made}] chưa được đóng gói hoặc chưa tải lên thư mục data trên GitHub!`);
+                }
+
+                // Bước 3: Tải nội dung chi tiết dạng JSON của đề thi qua link download_url an toàn
                 const resData = await fetch(fileTarget.download_url);
+                if (!resData.ok) throw new Error("Không thể tải nội dung chi tiết của file đề.");
+                
                 examConfig = await resData.json();
                 processExamDataJSON();
             } catch(e) {
-                document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500">❌ Lỗi kết nối Cloud: ${e.message}</span>`;
+                document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500" style="font-size: 16px;"><i class="fa-solid fa-triangle-exclamation"></i> LỖI KẾT NỐI CLOUD:<br><span style="color:#aaa; font-size:14px;">${e.message}</span></span>`;
             }
         });
 
@@ -263,10 +281,10 @@
 
             if (q.type === 1) {
                 let saved = userAnswers[currentIndex];
-                html += `<div class="options-grid">`;
+                html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">`;
                 q.options.forEach((opt, i) => {
                     let checked = saved === i ? 'checked' : '';
-                    let cBox = "opt-card flex items-start padding py-4 px-5 border border-slate-200 dark:border-zinc-800 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-900 transition";
+                    let cBox = "opt-card flex items-start padding py-4 px-5 border border-slate-200 dark:border-zinc-800 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-900 transition cursor-pointer";
                     if (isLocked) {
                         if (q.ans === i) cBox += " border-emerald-500 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold";
                         else if (saved === i) cBox += " border-rose-500 bg-rose-500/10 text-rose-600";
@@ -292,7 +310,7 @@
             }
             else if (q.type === 3) {
                 let saved = (userAnswers[currentIndex] || []).join('');
-                html += `<div class="p3-answer-area"><b>ĐÁP ÁN CỦA BẠN:</b> <input type="text" value="${saved}" oninput="saveAnswerP3(this.value)" class="bg-white dark:bg-black border-2 border-slate-300 dark:border-zinc-700 rounded-lg p-3 text-2xl font-bold text-center w-40 text-blue-600 focus:outline-none focus:border-blue-500" ${isLocked ? 'disabled' : ''}></div>`;
+                html += `<div class="p-6 bg-slate-100 dark:bg-zinc-900 rounded-xl flex items-center justify-center gap-4"><b>ĐÁP ÁN CỦA BẠN:</b> <input type="text" value="${saved}" oninput="saveAnswerP3(this.value)" class="bg-white dark:bg-black border-2 border-slate-300 dark:border-zinc-700 rounded-lg p-3 text-2xl font-bold text-center w-40 text-blue-600 focus:outline-none focus:border-blue-500" ${isLocked ? 'disabled' : ''}></div>`;
             }
 
             if (isLocked) {
@@ -313,10 +331,10 @@
                 if (q.p !== p) {
                     if (p !== 0) html += `</div></div>`;
                     let labels = q.p === 1 ? "Trắc nghiệm" : q.p === 2 ? "Đúng/Sai" : "Trả lời ngắn";
-                    html += `<div class="mb-6"><div class="text-xs font-bold text-slate-500 uppercase mb-3">Phần ${q.p}: ${labels}</div><div class="nav-grid">`;
+                    html += `<div class="mb-6"><div class="text-xs font-bold text-slate-500 uppercase mb-3">Phần ${q.p}: ${labels}</div><div class="nav-grid flex flex-wrap gap-2">`;
                     p = q.p;
                 }
-                html += `<button id="nav-${idx}" onclick="goToQuestion(${idx})" class="nav-btn text-xs font-bold rounded">${q.idx+1}</button>`;
+                html += `<button id="nav-${idx}" onclick="goToQuestion(${idx})" class="w-10 h-10 text-xs font-bold rounded border">${q.idx+1}</button>`;
             });
             html += `</div></div>`;
             document.getElementById('minimap-container').innerHTML = html;
@@ -348,7 +366,7 @@
                 if(q.type === 2 && Object.keys(userAnswers[idx]||{}).length === 4) isDone = true;
                 if(q.type === 3 && (userAnswers[idx]||[]).join('').trim() !== "") isDone = true;
 
-                btn.className = `nav-btn text-xs font-bold rounded relative transition-all ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
+                btn.className = `w-10 h-10 text-xs font-bold rounded relative transition-all ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
                 
                 if(idx === currentIndex) { btn.classList.add('ring-2', 'ring-offset-2', 'ring-blue-500', 'border-blue-500'); }
                 if(flaggedQuestions[idx]) { btn.innerHTML = `${q.idx+1}<span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-500 rounded-full border border-white dark:border-black"></span>`; }
@@ -357,10 +375,10 @@
                 if(isExamFinished) {
                     let s = calculateScore(q, idx);
                     let maxS = q.type === 1 ? examConfig.p1_points : (q.type === 2 ? 1.0 : examConfig.p3_points);
-                    if(s === maxS) btn.classList.replace('bg-blue-500', 'bg-emerald-500'), btn.classList.add('text-white');
-                    else if (s > 0) btn.classList.replace('bg-blue-500', 'bg-amber-500'), btn.classList.add('text-white');
+                    if(s === maxS) btn.className = "w-10 h-10 text-xs font-bold rounded relative transition-all bg-emerald-500 text-white border-emerald-600";
+                    else if (s > 0) btn.className = "w-10 h-10 text-xs font-bold rounded relative transition-all bg-amber-500 text-white border-amber-600";
                     else {
-                        btn.className = "nav-btn text-xs font-bold rounded relative transition-all bg-rose-500 text-white border-rose-600";
+                        btn.className = "w-10 h-10 text-xs font-bold rounded relative transition-all bg-rose-500 text-white border-rose-600";
                     }
                 }
             });
@@ -421,7 +439,7 @@
                mon: examConfig.subject || "TOAN" 
             };
 
-            // ĐỒNG BỘ URL ĐẨY ĐIỂM SỐ VỀ GOOGLE SCRIPT
+            // ĐƯỜNG DẪN BẮN ĐIỂM SỐ VỀ GOOGLE APP SCRIPT THỜI GIAN THỰC
             const API_URL = "https://script.google.com/macros/s/AKfycbw4iQ_YUM6JBkeHOxlxVaNF9qr58bjLkUhvxBmrlED-OxXYE9GomBPEWx6WwKDc6fK8iw/exec";
             
             fetch(API_URL, {
@@ -431,10 +449,10 @@
             })
             .then(res => res.json())
             .then(data => {
-                if(data.success) alert("🎉 Bài thi của bạn đã được ghi nhận thành công trên hệ thống máy chủ!");
+                if(data.success) alert("🎉 Bài thi của bạn đã được ghi nhận thành công trên hệ thống máy chủ Google Drive!");
                 else console.error("Lỗi ghi dữ liệu backend:", data.msg);
             })
-            .catch(err => alert("⚠️ Cảnh báo mạng: Điểm chưa được lưu tự động, hãy giữ nguyên màn hình và báo giáo viên!"));
+            .catch(err => alert("⚠️ Cảnh báo mạng: Điểm số chưa được lưu tự động, hãy giữ nguyên màn hình và báo ngay cho giáo viên!"));
         }
     </script>
 </body>
