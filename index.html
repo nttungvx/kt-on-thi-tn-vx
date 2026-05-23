@@ -130,7 +130,7 @@
                     </div>
                     <div class="flex-1 overflow-y-auto p-5 custom-scrollbar" id="minimap-container"></div>
                     <div class="p-5 border-t border-slate-200 dark:border-zinc-800 bg-slate-50/50 dark:bg-zinc-950/50">
-                        <button onclick="finishExam()" id="btn-submit-exam" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl shadow-lg transition text-lg tracking-wide outline-none">NỘP BÀI THI</button>
+                        <button onclick="finishExam()" id="btn-submit-exam" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl shadow-lg text-lg tracking-wide outline-none">NỘP BÀI THI</button>
                     </div>
                 </div>
             </div>
@@ -182,47 +182,53 @@
             }
         }
 
-        // THUẬT TOÁN QUÉT VÀ TRUY XUẤT ĐỀ TỪ THƯ MỤC DATA TRÊN GITHUB CLOUD
+        // THUẬT TOÁN TẢI KÉP: BỎ QUA GIỚI HẠN API CỦA GITHUB
         document.addEventListener("DOMContentLoaded", async function() {
             if(!made) {
                 document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không tìm thấy mã đề thi trên đường dẫn URL!</span>";
                 return;
             }
-            document.getElementById('exam-id-display').innerText = "Đang kết nối thư mục data mã đề: " + made;
+            document.getElementById('exam-id-display').innerText = "Đang tải cấu trúc dữ liệu mã đề: " + made;
             
-            // ĐỒNG BỘ CHÍNH XÁC TÊN KHO REPOSITORY THỰC TẾ
             const owner = "nttungvx"; 
             const repo = "kt-on-thi-tn-vx"; 
             
             try {
-                // Bước 1: Gọi GitHub API quét danh sách tệp có trong thư mục data
+                // HƯỚNG ƯU TIÊN 1: Tải trực tiếp qua GitHub Pages (Không lo bị nghẽn hay giới hạn Rate Limit)
+                // Phù hợp khi thầy đặt tên file đúng bằng 5 ký tự quy ước (Ví dụ: 00101.json)
+                const directUrl = `https://${owner}.github.io/${repo}/data/${made}.json`;
+                const resDirect = await fetch(directUrl);
+                
+                if (resDirect.ok) {
+                    examConfig = await resDirect.json();
+                    processExamDataJSON();
+                    return; // Thoát luôn nếu tải thành công
+                }
+                
+                // PHƯƠNG ÁN DỰ PHÒNG 2: Sử dụng GitHub API quét tìm file đuôi dài (như tên sinh từ Packager có ngày tháng)
                 const resList = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
                 
                 if (!resList.ok) {
-                    throw new Error(`Kho lưu trữ hoặc thư mục 'data' không tồn tại (Mã lỗi: ${resList.status})`);
+                    throw new Error(`Không thể kết nối thư mục data (Mã lỗi: ${resList.status}). Vui lòng kiểm tra lại cấu hình kho đề.`);
                 }
                 
                 const files = await resList.json();
-                
-                if (!Array.isArray(files)) {
-                    throw new Error("Cấu trúc phản hồi từ GitHub API không đúng định dạng mảng.");
-                }
+                if (!Array.isArray(files)) throw new Error("Dữ liệu phản hồi sai định dạng.");
 
-                // Bước 2: Tìm tệp tin .json khớp với mã đề thi cần lấy (không phân biệt hoa thường)
+                // Dò tìm file bắt đầu bằng 5 ký tự mã đề
                 const fileTarget = files.find(f => f.name.toLowerCase().startsWith(made.toLowerCase() + "_") || f.name.toLowerCase() === made.toLowerCase() + ".json");
                 
                 if (!fileTarget) {
-                    throw new Error(`Mã đề [${made}] chưa được đóng gói hoặc chưa tải lên thư mục data trên GitHub!`);
+                    throw new Error(`Mã đề [${made}] chưa được tải lên thư mục data hoặc tên file không bắt đầu bằng [${made}].`);
                 }
 
-                // Bước 3: Tải nội dung chi tiết dạng JSON của đề thi qua link download_url an toàn
                 const resData = await fetch(fileTarget.download_url);
-                if (!resData.ok) throw new Error("Không thể tải nội dung chi tiết của file đề.");
+                if (!resData.ok) throw new Error("Không thể đọc nội dung file đề.");
                 
                 examConfig = await resData.json();
                 processExamDataJSON();
             } catch(e) {
-                document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500" style="font-size: 16px;"><i class="fa-solid fa-triangle-exclamation"></i> LỖI KẾT NỐI CLOUD:<br><span style="color:#aaa; font-size:14px;">${e.message}</span></span>`;
+                document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500" style="font-size: 16px;"><i class="fa-solid fa-triangle-exclamation"></i> LỖI KẾT NỐI PHÒNG THI:<br><span style="color:#aaa; font-size:14px;">${e.message}</span></span>`;
             }
         });
 
@@ -439,7 +445,6 @@
                mon: examConfig.subject || "TOAN" 
             };
 
-            // ĐƯỜNG DẪN BẮN ĐIỂM SỐ VỀ GOOGLE APP SCRIPT THỜI GIAN THỰC
             const API_URL = "https://script.google.com/macros/s/AKfycbw4iQ_YUM6JBkeHOxlxVaNF9qr58bjLkUhvxBmrlED-OxXYE9GomBPEWx6WwKDc6fK8iw/exec";
             
             fetch(API_URL, {
