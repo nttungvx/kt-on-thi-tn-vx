@@ -139,9 +139,11 @@
         let p_maHS = urlParams.get('maHS');
         let p_tenHS = urlParams.get('tenHS');
         let p_lop = urlParams.get('lop');
+        let p_mon = urlParams.get('mon'); // LẤY MÃ MÔN TỪ URL
 
         if (p_maHS && p_tenHS && p_lop) {
-            sessionStorage.setItem('DATA_HS', JSON.stringify({ maHS: p_maHS, tenHS: p_tenHS, lop: p_lop }));
+            // LƯU CẢ MÃ MÔN VÀO BỘ NHỚ
+            sessionStorage.setItem('DATA_HS', JSON.stringify({ maHS: p_maHS, tenHS: p_tenHS, lop: p_lop, mon: p_mon }));
         }
 
         let examConfig = null;     
@@ -154,7 +156,6 @@
         let timerInterval;
         let isExamFinished = false;
         
-        // BIẾN ĐẾM GIAN LẬN
         let cheatWarnings = 0; 
         const alphabet = ['A','B','C','D','E','F'];
 
@@ -230,58 +231,44 @@
             document.getElementById('btn-start').classList.remove('hidden');
         }
 
-        // HÀM ÉP TRÀN MÀN HÌNH NÂNG CẤP
         function requestFullScreenSafely() {
             let elem = document.documentElement;
             try {
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen().catch(err => console.log("Lỗi full screen:", err));
-                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                } else if (elem.webkitRequestFullscreen) {
                     elem.webkitRequestFullscreen();
-                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                } else if (elem.mozRequestFullScreen) {
                     elem.mozRequestFullScreen();
-                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                } else if (elem.msRequestFullscreen) {
                     elem.msRequestFullscreen();
                 }
-            } catch(e) {
-                console.log("Trình duyệt không hỗ trợ FullScreen");
-            }
+            } catch(e) { console.log("Trình duyệt không hỗ trợ FullScreen"); }
         }
 
-        // KÍCH HOẠT LÀM BÀI
         function beginExam() {
-            // Gọi hàm Tràn màn hình mạnh
             requestFullScreenSafely();
-
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('exam-screen').classList.remove('hidden');
             
             buildMinimap();
             startTimer();
             goToQuestion(0);
-            
-            // Kích hoạt bẫy gian lận
             setupAntiCheat();
         }
 
-        // CẢM BIẾN CHỐNG GIAN LẬN TOÀN DIỆN
         function setupAntiCheat() {
-            // 1. Khóa chuột phải
             document.addEventListener('contextmenu', event => event.preventDefault());
-            
-            // 2. Khóa phím tắt copy (Ctrl+C)
             document.addEventListener('copy', event => {
                 event.preventDefault();
                 alert("Cảnh báo: Hành vi sao chép nội dung bài thi bị nghiêm cấm!");
             });
-            
-            // 3. Cảm biến chuyển Tab/Thu nhỏ cửa sổ (Rời khỏi màn hình)
             document.addEventListener('visibilitychange', () => {
                 if (document.hidden && !isExamFinished) {
                     cheatWarnings++;
                     if (cheatWarnings >= 3) {
                         alert(`❌ BẠN ĐÃ VI PHẠM QUY CHẾ THI 3 LẦN! (Thoát màn hình/Chuyển Tab).\nHệ thống tự động đình chỉ và nộp bài thi của bạn ngay lập tức.`);
-                        finishExam(true); // Ép nộp bài
+                        finishExam(true);
                     } else {
                         alert(`⚠️ CẢNH BÁO GIAN LẬN LẦN ${cheatWarnings}/3!\nBạn vừa rời khỏi màn hình làm bài. Nếu vi phạm đủ 3 lần, bài thi sẽ bị tự động nộp!`);
                     }
@@ -366,7 +353,6 @@
             const container = document.getElementById('question-container');
             container.innerHTML = html;
             
-            // THUẬT TOÁN ĐỢI MATHJAX (FIX LỖI CÔNG THỨC TOÁN BỊ LỘ MÃ)
             const renderMath = () => {
                 if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
                     MathJax.typesetClear([container]);
@@ -485,11 +471,8 @@
             document.getElementById('btn-submit-exam').disabled = true;
             document.getElementById('btn-submit-exam').className = "w-full py-4 bg-emerald-600 text-white font-bold rounded-xl shadow-lg text-lg tracking-wide outline-none";
             
-            // Xóa rào chắn khi thi xong để học sinh có thể copy đáp án về tham khảo
             document.body.style.userSelect = "auto";
             document.removeEventListener('contextmenu', event => event.preventDefault());
-            
-            // Thoát chế độ Fullscreen để xem đáp án thoải mái hơn
             if (document.exitFullscreen) { document.exitFullscreen().catch(e=>{}); }
             
             updateMinimapHighlight();
@@ -503,7 +486,8 @@
                maDe: made, 
                diemTN: total.toFixed(2), 
                chiTiet: `Đã nộp. Cảnh cáo gian lận: ${cheatWarnings} lần.`, 
-               mon: examConfig.subject || "TOAN" 
+               // ƯU TIÊN MÃ MÔN LẤY TỪ LINK ĐĂNG NHẬP
+               mon: dataHS.mon || examConfig.subject || "TOAN" 
             };
 
             const API_URL = "https://script.google.com/macros/s/AKfycbwsV6E8jUuYpc4Qw1hWs0ODE4jqHVwmMlvJ5TfsE4lg_c3rC9v7jy8Ph1DD58gStB0JPA/exec";
