@@ -20,10 +20,14 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /* CSS Giao diện giữ nguyên bản đẹp như cũ */
+        /* GIỮ NGUYÊN GIAO DIỆN CŨ - BỔ SUNG KHÓA BÔI ĐEN VĂN BẢN */
         html { background-color: #f8fafc; font-family: 'Inter', sans-serif; touch-action: pan-y; }
         html.dark { background-color: #000000; }
-        body { transition: background-color 0.3s; /* KHÓA CHỌN VĂN BẢN (CHỐNG COPY) */ -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+        body { 
+            transition: background-color 0.3s; 
+            /* KHÓA CHỌN VĂN BẢN (CHỐNG COPY) */ 
+            -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; 
+        }
         .dark body { background-color: #000000; color: #e2e8f0; }
         
         .part3-input { width: 45px; height: 45px; text-align: center; font-size: 1.5rem; border: 2px solid #cbd5e1; border-radius: 0.375rem; font-weight: bold;}
@@ -45,7 +49,7 @@
         .question-img { max-height: 40vh; object-fit: contain; margin: 1rem auto; border-radius: 0.5rem; display: block; border: 1px solid #e2e8f0; }
         .dark .question-img { border-color: #27272a; background-color: #e2e8f0; }
 
-        /* Vẫn cho phép gõ đáp án vào ô input */
+        /* Vẫn cho phép học sinh gõ chữ vào ô input Phần 3 */
         input[type="text"] { -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto; }
     </style>
 </head>
@@ -67,11 +71,11 @@
                     <i class="fa-solid fa-spinner fa-spin text-blue-500 mr-2"></i>ĐANG TẢI DỮ LIỆU ĐỀ THI...
                 </h1>
                 <p class="text-slate-500 mb-8 font-medium text-sm" id="exam-id-display">Đang kết nối kho dữ liệu Cloud GitHub...</p>
-                <div id="cheat-warning-box" class="hidden mb-6 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg p-4 text-sm text-left">
+                <div id="cheat-warning-box" class="hidden mb-6 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg p-4 text-sm text-left shadow-inner">
                     <b><i class="fa-solid fa-triangle-exclamation"></i> LƯU Ý QUY CHẾ THI:</b><br>
-                    1. Bài thi được kích hoạt <b>Tràn màn hình</b>.<br>
+                    1. Bài thi được kích hoạt chế độ <b>Tràn màn hình</b>.<br>
                     2. <b>Cấm chuyển Tab, thoát ứng dụng</b> để tra cứu.<br>
-                    3. Vi phạm quá <b>3 lần</b> hệ thống tự thu bài.
+                    3. Vi phạm quá <b>3 lần</b> hệ thống tự đình chỉ thi.
                 </div>
                 <button id="btn-start" onclick="beginExam()" class="hidden w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl rounded-xl shadow-lg transition transform hover:-translate-y-1 outline-none">BẮT ĐẦU LÀM BÀI</button>
             </div>
@@ -150,7 +154,7 @@
         let timerInterval;
         let isExamFinished = false;
         
-        // Biến đếm số lần gian lận
+        // BIẾN ĐẾM GIAN LẬN
         let cheatWarnings = 0; 
         const alphabet = ['A','B','C','D','E','F'];
 
@@ -220,22 +224,35 @@
 
             document.getElementById('header-title').innerText = examConfig.title;
             
-            // THAY ĐỔI: Chờ học sinh bấm nút thay vì tự động vào thi
             document.getElementById('loading-txt').innerHTML = "ĐÃ TẢI XONG DỮ LIỆU ĐỀ THI";
             document.getElementById('exam-id-display').innerHTML = `Mã đề: <b>${made}</b> - Thời gian: <b>${timeLimitSeconds/60} phút</b>`;
             document.getElementById('cheat-warning-box').classList.remove('hidden');
             document.getElementById('btn-start').classList.remove('hidden');
         }
 
-        // HÀM KÍCH HOẠT LÀM BÀI KÈM CHỐNG GIAN LẬN
-        function beginExam() {
-            // 1. Ép Tràn màn hình
+        // HÀM ÉP TRÀN MÀN HÌNH NÂNG CẤP
+        function requestFullScreenSafely() {
             let elem = document.documentElement;
-            if (elem.requestFullscreen) { elem.requestFullscreen().catch(e=>{}); } 
-            else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen().catch(e=>{}); } 
-            else if (elem.msRequestFullscreen) { elem.msRequestFullscreen().catch(e=>{}); }
+            try {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen().catch(err => console.log("Lỗi full screen:", err));
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            } catch(e) {
+                console.log("Trình duyệt không hỗ trợ FullScreen");
+            }
+        }
 
-            // 2. Chuyển giao diện
+        // KÍCH HOẠT LÀM BÀI
+        function beginExam() {
+            // Gọi hàm Tràn màn hình mạnh
+            requestFullScreenSafely();
+
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('exam-screen').classList.remove('hidden');
             
@@ -243,25 +260,27 @@
             startTimer();
             goToQuestion(0);
             
-            // 3. Kích hoạt bẫy gian lận
+            // Kích hoạt bẫy gian lận
             setupAntiCheat();
         }
 
-        // CẢM BIẾN CHỐNG GIAN LẬN
+        // CẢM BIẾN CHỐNG GIAN LẬN TOÀN DIỆN
         function setupAntiCheat() {
-            // Khóa chuột phải
+            // 1. Khóa chuột phải
             document.addEventListener('contextmenu', event => event.preventDefault());
-            // Khóa phím tắt copy (Ctrl+C)
+            
+            // 2. Khóa phím tắt copy (Ctrl+C)
             document.addEventListener('copy', event => {
                 event.preventDefault();
                 alert("Cảnh báo: Hành vi sao chép nội dung bài thi bị nghiêm cấm!");
             });
-            // Cảm biến chuyển Tab/Thu nhỏ cửa sổ
+            
+            // 3. Cảm biến chuyển Tab/Thu nhỏ cửa sổ (Rời khỏi màn hình)
             document.addEventListener('visibilitychange', () => {
                 if (document.hidden && !isExamFinished) {
                     cheatWarnings++;
                     if (cheatWarnings >= 3) {
-                        alert(`❌ BẠN ĐÃ VI PHẠM QUY CHẾ THI 3 LẦN! (Thoát/Chuyển Tab).\nHệ thống tự động đình chỉ và nộp bài thi của bạn ngay lập tức.`);
+                        alert(`❌ BẠN ĐÃ VI PHẠM QUY CHẾ THI 3 LẦN! (Thoát màn hình/Chuyển Tab).\nHệ thống tự động đình chỉ và nộp bài thi của bạn ngay lập tức.`);
                         finishExam(true); // Ép nộp bài
                     } else {
                         alert(`⚠️ CẢNH BÁO GIAN LẬN LẦN ${cheatWarnings}/3!\nBạn vừa rời khỏi màn hình làm bài. Nếu vi phạm đủ 3 lần, bài thi sẽ bị tự động nộp!`);
@@ -344,8 +363,22 @@
                 html += `<div class="mt-8 p-6 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-xl"><b class="text-indigo-700 dark:text-indigo-400 mb-2 block uppercase">Giải thích chi tiết:</b><div class="whitespace-pre-line leading-relaxed text-sm sm:text-base">${q.explanation || 'Chưa cập nhật nội dung giải thích chi tiết cho câu hỏi này.'}</div></div>`;
             }
 
-            document.getElementById('question-container').innerHTML = html;
-            if(window.MathJax) { MathJax.typesetPromise(); }
+            const container = document.getElementById('question-container');
+            container.innerHTML = html;
+            
+            // THUẬT TOÁN ĐỢI MATHJAX (FIX LỖI CÔNG THỨC TOÁN BỊ LỘ MÃ)
+            const renderMath = () => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetClear([container]);
+                    MathJax.typesetPromise([container]).catch(err => console.error("Lỗi vẽ Toán:", err));
+                }
+            };
+            
+            if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                renderMath();
+            } else {
+                setTimeout(renderMath, 800);
+            }
         }
 
         function saveAnswer(val) { userAnswers[currentIndex] = val; updateProgress(); }
@@ -456,6 +489,9 @@
             document.body.style.userSelect = "auto";
             document.removeEventListener('contextmenu', event => event.preventDefault());
             
+            // Thoát chế độ Fullscreen để xem đáp án thoải mái hơn
+            if (document.exitFullscreen) { document.exitFullscreen().catch(e=>{}); }
+            
             updateMinimapHighlight();
             goToQuestion(currentIndex); 
             
@@ -466,7 +502,7 @@
                lop: dataHS.lop || "Chưa phân lớp", 
                maDe: made, 
                diemTN: total.toFixed(2), 
-               chiTiet: `Đã hoàn thành. Vi phạm: ${cheatWarnings} lần.`, 
+               chiTiet: `Đã nộp. Cảnh cáo gian lận: ${cheatWarnings} lần.`, 
                mon: examConfig.subject || "TOAN" 
             };
 
