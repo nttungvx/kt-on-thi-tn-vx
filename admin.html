@@ -1,62 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
   <base target="_top">
+  <meta charset="UTF-8">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script>MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { background-color: #0f0f0f; color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; }
-    .admin-header { background: #90caf9; color: #000; display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; font-weight: bold; }
-    .horizontal-tabs { display: flex; background: #1a1a1a; padding: 10px 25px 0; border-bottom: 1px solid #333; gap: 5px; }
-    .tab-btn { background: #2a2a2a; border: none; padding: 10px 20px; color: #ccc; cursor: pointer; border-radius: 8px 8px 0 0; transition: 0.3s; }
-    .tab-btn.active { background: #333; color: #90caf9; font-weight: bold; }
+    :root { --primary: #2563eb; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --border: #e2e8f0; --success: #10b981; --warning: #f59e0b; --danger: #ef4444; }
+    body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+    #admin-login-overlay { position: fixed; inset: 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); z-index: 9999; display: flex; align-items: center; justify-content: center; }
+    .login-box { background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+    .login-icon { background: #eff6ff; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; color: var(--primary); font-size: 32px; }
+    .login-input { width: 100%; padding: 14px 16px; margin-bottom: 16px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 15px; outline: none; box-sizing: border-box; }
+    .login-btn { width: 100%; padding: 14px; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; }
     
-    /* Giao diện Đăng nhập Admin */
-    .login-box { max-width: 400px; margin: 100px auto; background: #1a1a1a; padding: 30px; border-radius: 12px; border: 1px solid #333; text-align: center; }
-    .input-field { width: 100%; padding: 12px; margin: 10px 0; border-radius: 6px; border: 1px solid #444; background: #000; color: #fff; box-sizing: border-box; }
-    .btn-login { width: 100%; padding: 12px; background: #90caf9; color: #000; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .admin-header { background: #1e293b; color: #fff; display: flex; justify-content: space-between; padding: 16px 32px; align-items: center;}
+    .horizontal-tabs { display: flex; background: #fff; padding: 0 32px; border-bottom: 1px solid var(--border); gap: 24px; }
+    .tab-btn { background: transparent; color: #64748b; border: none; border-bottom: 3px solid transparent; padding: 16px 4px; cursor: pointer; font-weight: 600; font-size: 15px; }
+    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
     
-    /* NÚT MỚI: MỞ CÔNG CỤ TẠO ĐỀ */
-    .btn-tool { width: 100%; padding: 12px; background: #10b981; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 15px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: 0.3s; }
-    .btn-tool:hover { background: #059669; }
+    .admin-content { padding: 40px 32px; max-width: 1200px; margin: 0 auto; }
+    .tab-pane { display: none; } .tab-pane.active { display: block; }
+    .card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 24px; }
+    .form-control { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 16px; }
+    .btn { padding: 14px 24px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; color: #fff; display: inline-block; text-decoration: none; text-align: center; }
+    .btn-primary { background: var(--primary); } .btn-warning { background: var(--warning); }
+    table { width: 100%; border-collapse: collapse; } th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
   </style>
 </head>
 <body>
 
-  <div id="login-section" class="login-box">
-    <h2 style="margin-top: 0;"><i class="fa-solid fa-lock"></i> ĐĂNG NHẬP QUẢN TRỊ</h2>
-    <input type="text" id="admin-user" class="input-field" placeholder="Tên đăng nhập">
-    <input type="password" id="admin-pass" class="input-field" placeholder="Mật khẩu">
-    <button class="btn-login" onclick="login()">ĐĂNG NHẬP</button>
-    
-    <button class="btn-tool" onclick="window.open('https://nttungvx.github.io/thi-tot-nghiep-vinh-xuan/packager.html', '_blank')">
-        <i class="fa-solid fa-laptop-code"></i> MỞ CÔNG CỤ TẠO ĐỀ
-    </button>
+  <div id="admin-login-overlay">
+    <div class="login-box">
+      <div class="login-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h2 style="color: #0f172a; margin-top: 0; margin-bottom: 24px; font-weight: 800;">QUẢN TRỊ VIÊN</h2>
+      <input type="text" id="admin-user" class="login-input" placeholder="Tên đăng nhập...">
+      <input type="password" id="admin-pass" class="login-input" placeholder="Mật khẩu...">
+      <button onclick="xacThucAdmin()" id="btn-login-admin" class="login-btn">ĐĂNG NHẬP</button>
+      <div id="admin-login-msg" style="color: #ef4444; margin-top: 16px; font-size: 14px; font-weight: 600;"></div>
+    </div>
   </div>
 
-  <div id="admin-content" style="display:none;">
-    <div class="admin-header">
-      <div>QUẢN TRỊ HỆ THỐNG NTTPRO 2026</div>
-      <button onclick="location.reload()" style="background:transparent; border:none; cursor:pointer;"><i class="fa-solid fa-right-from-bracket"></i> Thoát</button>
+  <div id="admin-screen" style="display:none">
+    <header class="admin-header">
+      <div style="cursor: pointer; color: #f87171; font-weight: 600;" onclick="window.location.reload();"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</div>
+      <div style="font-size: 18px; font-weight: 700;">BẢNG ĐIỀU KHIỂN GIÁO VIÊN</div>
+      <div style="font-weight: 600; color: #94a3b8;">THPT Vinh Xuân</div>
+    </header>
+
+    <nav class="horizontal-tabs">
+      <button type="button" class="tab-btn active" onclick="switchTab(event, 'tab-congcu')"><i class="fa-solid fa-laptop-code"></i> Tạo Đề</button>
+      <button type="button" class="tab-btn" onclick="switchTab(event, 'tab-hs')"><i class="fa-solid fa-share-from-square"></i> Phát Đề</button>
+      <button type="button" class="tab-btn" onclick="switchTab(event, 'tab-qlhs')"><i class="fa-solid fa-chart-pie"></i> Thống Kê</button>
+    </nav>
+
+    <div class="admin-content">
+      <div id="tab-congcu" class="tab-pane active">
+        <div class="card" style="text-align: center; border-color: #93c5fd; background: #f0f9ff;">
+             <i class="fa-solid fa-file-code" style="font-size: 60px; color: var(--primary); margin-bottom: 24px;"></i>
+             <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 16px;">CÔNG CỤ TẠO ĐỀ CHUYÊN NGHIỆP</h2>
+             <a href="https://nttungvx.github.io/kt-on-thi-tn-vx/packager.html" target="_blank" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> MỞ CÔNG CỤ TẠO ĐỀ</a>
+        </div>
+      </div>
+
+      <div id="tab-hs" class="tab-pane">
+         <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 20px; text-align: center;">PHÁT ĐỀ THI CHO LỚP</h3>
+            <select id="mdl-mon" class="form-control"><option value="TOAN">Toán học</option><option value="LY">Vật lí</option><option value="HOA">Hóa học</option><option value="SINH">Sinh học</option><option value="NN">Ngoại ngữ</option></select>
+            <select id="mdl-khoi" class="form-control"><option value="KHOI_12">Khối 12</option><option value="KHOI_11">Khối 11</option><option value="KHOI_10">Khối 10</option></select>
+            <input type="text" id="mdl-lop" class="form-control" placeholder="Lớp nhận đề (VD: 12A1, 12A2)...">
+            <input type="text" id="mdl-made" class="form-control" placeholder="Nhập mã đề...">
+            <button id="mdl-btn-luu" class="btn btn-warning" style="width: 100%;" onclick="luuCaiDatGiaoDe()">PHÁT ĐỀ NGAY</button>
+            <div id="mdl-msg" style="text-align: center; margin-top: 10px; font-weight: bold;"></div>
+         </div>
+      </div>
+
+      <div id="tab-qlhs" class="tab-pane">
+         <div class="card">
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+               <select id="ql-khoi" class="form-control"><option value="KHOI_12">Khối 12</option><option value="KHOI_11">Khối 11</option><option value="KHOI_10">Khối 10</option></select>
+               <select id="ql-mon" class="form-control"><option value="TOAN">Toán học</option><option value="LY">Vật lí</option><option value="HOA">Hóa học</option><option value="SINH">Sinh học</option></select>
+               <input type="text" id="ql-lop" class="form-control" placeholder="Lớp (VD: 12A1)">
+               <input type="text" id="ql-made" class="form-control" placeholder="Mã Đề">
+               <button onclick="taiDanhSachHS()" id="btn-tai-ql" class="btn btn-primary">Tra Cứu</button>
+            </div>
+            <table>
+                <thead><tr><th>STT</th><th>Họ và Tên</th><th>Lớp</th><th>Trạng Thái</th><th>Điểm</th></tr></thead>
+                <tbody id="tbody-qlhs"><tr><td colspan="5" style="text-align: center;">Bấm Tra Cứu để tải dữ liệu.</td></tr></tbody>
+            </table>
+         </div>
+      </div>
     </div>
-    </div>
+  </div>
 
   <script>
-    function login() {
-      var u = document.getElementById('admin-user').value;
-      var p = document.getElementById('admin-pass').value;
-      google.script.run.withSuccessHandler(function(isLogin) {
-        if(isLogin) {
-          document.getElementById('login-section').style.display = 'none';
-          document.getElementById('admin-content').style.display = 'block';
-        } else {
-          alert('Sai thông tin đăng nhập!');
-        }
-      }).checkAdminLogin(u, p);
+    function xacThucAdmin() {
+      var u = document.getElementById('admin-user').value.trim(), p = document.getElementById('admin-pass').value.trim(), btn = document.getElementById('btn-login-admin'), msg = document.getElementById('admin-login-msg');
+      if(!u || !p) { msg.innerText = 'Vui lòng nhập đủ thông tin!'; return; }
+      btn.innerText = 'ĐANG KIỂM TRA...'; btn.disabled = true; msg.innerText = "";
+      google.script.run.withSuccessHandler(function(res) {
+        btn.innerText = 'ĐĂNG NHẬP'; btn.disabled = false; 
+        if(res === true) { document.getElementById('admin-screen').style.display = 'block'; document.getElementById('admin-login-overlay').style.display = 'none'; } 
+        else if(res === false) { msg.innerText = 'Sai tài khoản hoặc mật khẩu!'; } else { msg.innerText = res; }
+      }).withFailureHandler(function(err) { btn.innerText = 'ĐĂNG NHẬP'; btn.disabled = false; msg.innerText = 'Lỗi kết nối!'; }).checkAdminLogin(u, p);
+    }
+
+    function switchTab(e, id) {
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).classList.add('active'); e.currentTarget.classList.add('active');
+    }
+
+    function luuCaiDatGiaoDe() {
+       let m = document.getElementById("mdl-mon").value, k = document.getElementById("mdl-khoi").value, l = document.getElementById("mdl-lop").value.trim().toUpperCase(), md = document.getElementById("mdl-made").value.trim().toUpperCase(), btn = document.getElementById("mdl-btn-luu"), msg = document.getElementById("mdl-msg");
+       if(!l || !md) { msg.style.color = "red"; msg.innerText = "Vui lòng nhập đủ tên Lớp và Mã đề!"; return; }
+       btn.innerText = "ĐANG ĐỒNG BỘ..."; btn.disabled = true;
+       google.script.run.withSuccessHandler(res => { btn.innerText = "PHÁT ĐỀ NGAY"; btn.disabled = false; msg.style.color = res.includes("Thành công") ? "green" : "red"; msg.innerText = res; }).thucHienGiaoDe(k, l, md, m);
+    }
+
+    function taiDanhSachHS() {
+        let m = document.getElementById('ql-mon').value, k = document.getElementById('ql-khoi').value, l = document.getElementById('ql-lop').value.trim(), md = document.getElementById('ql-made').value.trim().toUpperCase(), btn = document.getElementById('btn-tai-ql');
+        if(!l) return alert("Vui lòng nhập Lớp!");
+        btn.innerText = 'Đang Tra...'; btn.disabled = true;
+        google.script.run.withSuccessHandler(function(res) {
+            btn.innerText = 'Tra Cứu'; btn.disabled = false;
+            let tbody = document.getElementById('tbody-qlhs');
+            if(!res.success) { tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: red;">${res.message}</td></tr>`; return; }
+            tbody.innerHTML = res.data.map(hs => `<tr><td>${hs.stt}</td><td>${hs.ten}</td><td>${hs.lop}</td><td>${hs.trangThai}</td><td>${hs.diem}</td></tr>`).join('');
+        }).layDanhSachHocSinhThi(k, l, m, md);
     }
   </script>
 </body>
