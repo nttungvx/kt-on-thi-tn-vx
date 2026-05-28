@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Trung Tâm Xử Lý Đề Thi</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%234f46e5%22><path stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22 d=%22M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4%22/></svg>">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class' }</script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script>
         window.MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
@@ -18,50 +23,71 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .dark body { background-color: #000000; color: #e2e8f0; }
+        body { font-family: 'Inter', sans-serif; }
+        .paste-area:focus { outline: none; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3); border-color: #6366f1 !important; }
+        .paste-area:focus .focus-overlay { opacity: 1 !important; background-color: rgba(79, 70, 229, 0.85); }
         ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
         .dark ::-webkit-scrollbar-thumb { background: #27272a; }
-        .paste-area:focus { outline: none; border-color: #6366f1 !important; }
+        .dark ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+        .dark body { background-color: #000000; color: #e2e8f0; }
         #print-area { display: none; }
     </style>
 </head>
-<body class="text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col transition-colors duration-300">
 
-    <div class="absolute top-4 right-4 z-50">
-        <button onclick="document.documentElement.classList.toggle('dark')" class="p-2.5 rounded-full bg-white dark:bg-black border border-slate-200 dark:border-zinc-800 shadow-sm outline-none">
-            🌓 Giao diện Tối/Sáng
+    <div class="absolute top-4 right-4 z-50" id="floating-theme-toggle">
+        <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-white dark:bg-black border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-zinc-900 shadow-sm transition outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon-sun hidden text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
         </button>
     </div>
 
-    <main class="flex-1 overflow-y-auto p-4 sm:p-10 pt-6">
-        <div class="max-w-6xl mx-auto space-y-6">
+    <div id="main-layout" class="flex-1 overflow-hidden flex flex-col w-full">
+        <main class="flex-1 overflow-y-auto p-4 sm:p-6 md:p-10 pt-6">
+            <div class="max-w-6xl mx-auto space-y-6 md:space-y-8">
 
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-transparent pb-3 border-b border-slate-200 dark:border-zinc-800">
-                <div class="flex items-center gap-3">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 shadow-sm text-indigo-600 flex-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-transparent pb-3 border-b border-slate-200 dark:border-zinc-800">
+                    <div class="flex items-center gap-3">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-sm text-indigo-600 dark:text-indigo-400 flex-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                        </div>
+                        <div>
+                            <h1 class="text-xl md:text-2xl font-bold text-indigo-700 dark:text-indigo-400 flex items-center gap-2 flex-wrap">
+                                Hệ Quản Trị Đề Thi
+                                <span class="px-2 py-0.5 bg-slate-200 dark:bg-zinc-800 text-slate-600 dark:text-slate-300 rounded text-[0.65rem] font-bold tracking-wider border border-slate-300 dark:border-zinc-700">VERSION 6.8</span>
+                            </h1>
+                            <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mt-0.5">Xử lý ảnh, Cấp ID Tự động, Sửa đề từ Cloud</p>
+                        </div>
                     </div>
-                    <div>
-                        <h1 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400">Trình đóng gói đề thi JSON</h1>
-                        <p class="text-sm text-slate-500">Mô phỏng kỳ thi 2026 - Không lỗi giao diện</p>
+                    
+                    <div class="flex items-center gap-3 w-full sm:w-auto">
+                        <button onclick="openGitHubSettings()" class="flex items-center justify-center p-2.5 sm:py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 text-slate-600 dark:text-slate-300 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-800 transition shadow-sm outline-none" title="Cài đặt GitHub API">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" /></svg>
+                        </button>
+                        <a href="index.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-700 text-slate-600 dark:text-slate-300 font-semibold rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-800 transition shadow-sm text-sm outline-none group flex-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                            Về trang Web Thi
+                        </a>
                     </div>
                 </div>
-                <div class="flex gap-2">
-                    <button onclick="openGitHubSettings()" class="px-4 py-2 bg-slate-800 text-white rounded-lg shadow-sm font-bold text-sm">Cấu hình GitHub</button>
-                </div>
-            </div>
 
-            <div class="bg-white dark:bg-black p-6 rounded-xl shadow-sm border border-slate-200 dark:border-zinc-800">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-lg font-bold">0. Lấy lệnh (Prompt) cho AI</h2>
-                    <button onclick="copyPrompt()" class="px-4 py-2 bg-indigo-100 hover:bg-indigo-200 dark:bg-indigo-900/50 dark:hover:bg-indigo-800 text-indigo-700 dark:text-indigo-300 font-bold rounded-lg shadow-sm transition text-sm flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-                        COPY LỆNH
-                    </button>
-                </div>
-                <textarea id="ai-prompt" class="w-full h-48 p-4 border border-slate-300 dark:border-zinc-700 rounded-lg font-mono text-sm bg-slate-50 dark:bg-zinc-900 focus:outline-none focus:border-indigo-500 resize-none" readonly>Đóng vai trò là một chuyên gia số hóa dữ liệu giáo dục và giáo viên luyện thi THPT Quốc gia. Tôi sẽ cung cấp một tài liệu chứa đề thi. Nhiệm vụ của bạn là trích xuất dữ liệu từ tài liệu đó và chuyển đổi chính xác thành một tệp định dạng JSON.
+                <div class="bg-indigo-50 dark:bg-zinc-900 p-5 md:p-8 rounded-xl shadow-sm border border-indigo-200 dark:border-zinc-800 transition-colors">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+                        <div>
+                            <h2 class="text-lg md:text-xl font-bold flex items-center text-indigo-800 dark:text-indigo-300"><span class="bg-indigo-600 dark:bg-indigo-500 text-white w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center text-xs md:text-sm mr-3 shadow-sm flex-none">0</span> Lấy lệnh (Prompt) cho AI</h2>
+                            <p class="text-xs md:text-sm text-indigo-600 dark:text-slate-400 mt-1 ml-9 md:ml-10">Copy đoạn lệnh này, gửi cho AI kèm file đề gốc để lấy JSON.</p>
+                        </div>
+                        <button onclick="copyPrompt()" id="btn-copy-prompt" class="w-full md:w-auto flex-none flex justify-center items-center gap-2 px-5 py-2.5 bg-indigo-600 dark:bg-indigo-500 hover:bg-indigo-700 dark:hover:bg-indigo-600 text-white font-bold rounded-lg shadow-md transition transform hover:-translate-y-0.5 outline-none text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                            <span>COPY PROMPT</span>
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-black p-4 md:p-5 rounded-lg border border-indigo-200 dark:border-zinc-700 text-xs md:text-sm text-slate-600 dark:text-slate-300 font-mono h-32 md:h-40 overflow-y-auto whitespace-pre-wrap leading-relaxed shadow-inner select-all" id="prompt-content">Đóng vai trò là một chuyên gia số hóa dữ liệu giáo dục và giáo viên luyện thi THPT Quốc gia. Tôi sẽ cung cấp một tài liệu chứa đề thi. 
+Nhiệm vụ của bạn là trích xuất dữ liệu từ tài liệu đó và chuyển đổi chính xác thành một tệp định dạng JSON.
 
 Dưới đây là các quy tắc bắt buộc:
 
@@ -88,7 +114,8 @@ Dưới đây là các quy tắc bắt buộc:
 4. QUY TẮC BẢO MẬT JSON VÀ TOÁN HỌC (LUẬT THÉP):
 - Cấm lỗi Escape LaTeX: Mọi ký tự gạch chéo ngược (\) trong LaTeX BẮT BUỘC phải nhân đôi (\\). VD ĐÚNG: \\frac{1}{2}, \\sqrt{x}. VD SAI: \frac{1}{2}.
 - Định dạng Toán: Toàn bộ công thức toán học phải được bọc trong cặp dấu $.
-- Cấm lỗi thẻ HTML: BẮT BUỘC phải có khoảng trắng ở hai bên dấu bé hơn (<) và lớn hơn (>). VD ĐÚNG: $x < y + 1$. VD SAI: $x<y+1$. KHÔNG tự ý nhấn phím Enter xuống dòng bên trong giá trị chuỗi (sẽ gây lỗi parse JSON). Để bẻ dòng, BẮT BUỘC gõ 2 ký tự \ và n liền nhau. (Ví dụ ĐÚNG: "Đoạn 1\nĐoạn 2").
+- Cấm lỗi thẻ HTML: BẮT BUỘC phải có khoảng trắng ở hai bên dấu bé hơn (<) và lớn hơn (>). VD ĐÚNG: $x < y + 1$. VD SAI: $x<y+1$. 
+- Cấm dùng thẻ `<br>`. KHÔNG tự ý nhấn phím Enter xuống dòng bên trong giá trị chuỗi (sẽ gây lỗi parse JSON). Để bẻ dòng, BẮT BUỘC gõ 2 ký tự \ và n liền nhau. (Ví dụ ĐÚNG: "Đoạn 1\nĐoạn 2").
 
 5. CẤU TRÚC JSON MẪU BẮT BUỘC:
 {
@@ -107,76 +134,935 @@ Dưới đây là các quy tắc bắt buộc:
     "part3": [ 
         { "q": "Nội dung câu hỏi?", "ans": "-1,5", "explanation": "Chi tiết lời giải" } 
     ]
-}</textarea>
-            </div>
+}</div>
+                </div>
+                
+                <div class="bg-white dark:bg-black p-5 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-zinc-800 transition-colors relative">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 md:mb-6 gap-4">
+                        <h2 class="text-lg md:text-xl font-bold flex items-center text-slate-800 dark:text-slate-200"><span class="bg-indigo-600 dark:bg-indigo-500 text-white w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center text-xs md:text-sm mr-3 shadow-sm flex-none">1</span> Nạp Đề Thi Mới / Sửa Đề Cũ</h2>
+                        
+                        <button onclick="openLibraryScreen()" class="w-full md:w-auto flex-none flex justify-center items-center gap-2 px-4 py-2 bg-slate-800 dark:bg-zinc-800 hover:bg-slate-900 dark:hover:bg-zinc-700 text-white font-bold rounded-lg shadow-sm transition outline-none text-sm border border-slate-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                            <span>TẢI ĐỀ TỪ GITHUB</span>
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8">
+                        <div id="drop-zone" class="border-2 border-dashed border-indigo-300 dark:border-zinc-700 bg-indigo-50/50 dark:bg-zinc-900/50 p-6 rounded-xl flex flex-col items-center justify-center text-center transition hover:bg-indigo-50 dark:hover:bg-zinc-900 relative group cursor-pointer min-h-[140px]">
+                            <input type="file" id="json-upload" accept=".json" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+                            <div id="drop-zone-content" class="flex flex-col items-center pointer-events-none">
+                                <svg id="drop-zone-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10 text-indigo-500 dark:text-slate-400 mb-2 md:mb-3 group-hover:scale-110 transition transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
+                                <p id="drop-zone-title" class="font-bold text-sm md:text-base text-indigo-800 dark:text-slate-300 mb-1">Kéo thả file .json vào đây</p>
+                                <p id="drop-zone-desc" class="text-xs md:text-sm text-indigo-600/80 dark:text-slate-500">Hoặc chạm để chọn từ thiết bị</p>
+                            </div>
+                        </div>
 
-            <div class="bg-white dark:bg-black p-6 rounded-xl shadow-sm border border-slate-200 dark:border-zinc-800">
-                <h2 class="text-lg font-bold mb-4">1. Nạp mã JSON từ AI trả về</h2>
-                <textarea id="json-paste" class="w-full h-40 p-4 border border-slate-300 dark:border-zinc-700 rounded-lg font-mono text-sm bg-slate-50 dark:bg-zinc-900 focus:outline-none focus:border-indigo-500" placeholder="Dán toàn bộ mã JSON mà AI vừa tạo vào đây..."></textarea>
-                <div class="flex justify-end mt-4">
-                    <button onclick="processPastedJson()" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg shadow-md transition">XỬ LÝ DỮ LIỆU</button>
+                        <div id="paste-container" class="border-2 border-dashed border-slate-200 dark:border-zinc-700 p-5 md:p-6 rounded-xl bg-slate-50 dark:bg-zinc-900/50 flex flex-col transition hover:border-indigo-300 dark:hover:border-zinc-600 relative">
+                            <div class="flex justify-between items-center mb-2">
+                                <p class="font-bold text-sm md:text-base text-slate-700 dark:text-slate-300 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 mr-2 text-indigo-500 dark:text-indigo-400 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                                    Dán trực tiếp Code JSON
+                                </p>
+                                <button onclick="clearPasteArea()" class="text-xs md:text-sm text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300 font-bold flex items-center gap-1 transition-colors outline-none bg-rose-50 dark:bg-rose-900/20 px-2.5 py-1 rounded-md border border-rose-200 dark:border-rose-800/50">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                                    XÓA TRẮNG
+                                </button>
+                            </div>
+                            <textarea id="json-paste" class="w-full flex-1 p-3 border border-slate-200 dark:border-zinc-800 rounded-lg text-xs md:text-sm font-mono text-slate-600 dark:text-slate-300 focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-500 bg-white dark:bg-black shadow-inner resize-none min-h-[100px]" placeholder='{&#10;    "timeLimit": 3000,&#10;    ...&#10;}'></textarea>
+                            <button id="btn-paste-submit" onclick="processPastedJson()" class="w-full mt-3 py-2.5 bg-indigo-600 dark:bg-indigo-500 hover:bg-indigo-700 dark:hover:bg-indigo-600 text-white font-bold rounded-lg transition shadow-md flex justify-center items-center outline-none text-sm">
+                                XỬ LÝ CODE JSON
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="exam-info-bar" class="hidden mt-5 flex flex-col md:flex-row items-start md:items-center justify-between p-4 bg-slate-100 dark:bg-zinc-800/80 border border-slate-200 dark:border-zinc-700 rounded-xl gap-4 shadow-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-bold text-slate-600 dark:text-slate-400 flex-none">Trạng thái:</span>
+                            <div id="exam-status-top"></div>
+                        </div>
+                        <div class="flex items-center gap-2 w-full md:w-auto">
+                            <span class="text-sm font-bold text-slate-600 dark:text-slate-400 flex-none">Mã ID:</span>
+                            <input type="text" id="exam-id-input" placeholder="VD: 01005" onchange="updateExamIdManual()" class="w-24 px-2 py-1.5 text-sm font-mono font-bold text-indigo-700 dark:text-indigo-400 border border-slate-300 dark:border-zinc-600 rounded-md bg-white dark:bg-black focus:ring-2 focus:ring-indigo-500 outline-none text-center uppercase shadow-sm">
+                            <button onclick="generateNewId()" id="btn-generate-id" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-md shadow-sm transition outline-none whitespace-nowrap">
+                                TẠO MÃ MỚI
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="edit-container" class="hidden bg-white dark:bg-black p-5 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-zinc-800 transition-colors">
+                    <div class="flex justify-between items-center cursor-pointer group" onclick="toggleEditSection()">
+                        <div>
+                            <h2 class="text-lg md:text-xl font-bold flex items-center text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 transition-colors">
+                                <span class="bg-indigo-600 dark:bg-indigo-500 text-white w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center text-xs md:text-sm mr-3 shadow-sm flex-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 md:h-4 md:w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" /></svg>
+                                </span> 
+                                Quản lý & Sửa nội dung
+                            </h2>
+                            <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mt-1 ml-9 md:ml-10">Mở rộng khu vực này nếu bạn muốn can thiệp sửa code JSON thủ công.</p>
+                        </div>
+                        <div class="p-2 bg-slate-100 dark:bg-zinc-800 rounded-full text-slate-500 group-hover:bg-indigo-100 group-hover:text-indigo-600 transition-all duration-300" id="edit-chevron">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </div>
+                    </div>
+                    
+                    <div id="edit-content" class="hidden flex-col gap-6 mt-6 border-t border-slate-100 dark:border-zinc-800 pt-6 w-full">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-slate-50 dark:bg-zinc-900/50 p-4 rounded-xl border border-slate-200 dark:border-zinc-800 w-full">
+                            <label class="font-bold text-sm text-slate-700 dark:text-slate-300 whitespace-nowrap flex-none">Chọn phần cần xem/sửa:</label>
+                            <select id="question-selector" onchange="handleQuestionSelection(event)" class="flex-1 w-full p-2.5 border border-slate-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-black focus:ring-2 focus:ring-indigo-500 outline-none font-medium text-sm text-slate-700 dark:text-slate-300 cursor-pointer shadow-sm"></select>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+                            <div class="flex flex-col gap-3 w-full min-w-0">
+                                <label class="text-sm font-bold text-slate-500 dark:text-slate-400">TRÌNH SOẠN THẢO JSON:</label>
+                                <textarea id="live-editor" oninput="markEditorUnsaved()" onkeydown="handleEditorTab(event)" onkeyup="delayPreviewUpdate()" class="w-full h-64 md:h-[400px] p-4 font-mono text-xs md:text-sm border-2 border-slate-300 dark:border-zinc-700 rounded-xl focus:outline-none focus:border-indigo-500 bg-slate-900 dark:bg-zinc-950 text-green-400 dark:text-emerald-400 shadow-inner resize-y leading-relaxed" spellcheck="false"></textarea>
+                                <button onclick="saveQuestionCode()" class="py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition shadow-md text-sm md:text-base flex justify-center items-center gap-2 outline-none w-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg>
+                                    LƯU CHỈNH SỬA VÀO ĐỀ
+                                </button>
+                            </div>
+                            <div class="flex flex-col gap-3 w-full min-w-0">
+                                <label class="text-sm font-bold text-slate-500 dark:text-slate-400">XEM TRƯỚC GIAO DIỆN (PREVIEW):</label>
+                                <div id="preview-pane" class="w-full h-64 md:h-[400px] p-5 border-2 border-dashed border-slate-300 dark:border-zinc-700 rounded-xl bg-slate-50/50 dark:bg-black overflow-y-auto text-slate-800 dark:text-slate-200 whitespace-pre-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="image-tasks-container" class="hidden space-y-4">
+                    <h2 class="text-lg md:text-xl font-bold flex items-center mb-4 text-slate-800 dark:text-slate-200"><span class="bg-indigo-600 dark:bg-indigo-500 text-white w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center text-xs md:text-sm mr-3 shadow-sm flex-none">2</span> Quản lý Hình Ảnh (Chèn mới / Thay thế)</h2>
+                    <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-300 p-4 md:p-5 rounded-xl text-xs md:text-sm mb-6 shadow-sm flex items-start transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 mr-2 md:mr-3 flex-none mt-0.5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        <div>
+                            <strong class="text-sm md:text-base block mb-1 text-blue-900 dark:text-blue-200">Thao tác dán ảnh:</strong> 
+                            Sử dụng công cụ chụp màn hình. Sau đó <b>CLICK CHUỘT</b> vào ô tương ứng bên dưới (viền sáng lên) và ấn <b>Ctrl + V</b>. Chú ý nhãn màu tím/xanh để biết dán cho Câu Hỏi hay Lời Giải.
+                        </div>
+                    </div>
+                    <div id="tasks-list" class="space-y-4 md:space-y-6"></div>
+                </div>
+
+                <div id="download-container" class="hidden bg-emerald-50 dark:bg-emerald-900/20 p-6 md:p-8 rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-800 text-center mt-6 md:mt-10 transition-colors">
+                    <div id="download-icon-container" class="w-14 h-14 md:w-16 md:h-16 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                    <h2 id="download-title" class="text-xl md:text-2xl font-bold mb-2 text-emerald-800 dark:text-emerald-300">Tuyệt vời! Đề thi đã hoàn thiện</h2>
+                    <p id="download-desc" class="text-sm md:text-base text-emerald-600/80 dark:text-emerald-400/80 mb-6 md:mb-8 font-medium">Toàn bộ dữ liệu và hình ảnh đã được mã hóa sẵn sàng.</p>
+                    <div class="mb-6 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 bg-white dark:bg-black p-3 rounded-lg border border-slate-200 dark:border-zinc-800 w-max mx-auto shadow-sm">
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="font-bold text-slate-600 dark:text-slate-400">Hành động:</span>
+                            <div id="exam-status-bottom"></div>
+                        </div>
+                        <div class="hidden sm:block w-px h-5 bg-slate-300 dark:bg-zinc-700"></div>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span class="font-bold text-slate-600 dark:text-slate-400">Sử dụng Mã:</span>
+                            <span id="exam-id-bottom" class="font-mono font-bold text-indigo-600 dark:text-indigo-400 text-base">CHƯA CÓ</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row justify-center gap-3">
+                        <button onclick="executeExport('download')" class="w-full md:w-auto px-6 py-3.5 md:py-4 bg-emerald-50 hover:bg-emerald-600 text-white font-bold text-sm md:text-base rounded-xl shadow-lg transition transform hover:-translate-y-1 outline-none flex justify-center items-center gap-2">
+                            TẢI LƯU FILE .JSON 
+                        </button>
+                        <button onclick="exportToWord()" class="w-full md:w-auto px-6 py-3.5 md:py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm md:text-base rounded-xl shadow-lg transition transform hover:-translate-y-1 outline-none flex justify-center items-center gap-2">
+                            XUẤT BẢN IN WORD
+                        </button>
+                        <button id="btn-github" onclick="executeExport('github')" class="w-full md:w-auto px-6 py-3.5 md:py-4 bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-bold text-sm md:text-base rounded-xl shadow-lg transition transform hover:-translate-y-1 outline-none flex justify-center items-center gap-2">
+                            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            ĐẨY LÊN GITHUB
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="print-area"></div>
+    
+    <div id="custom-confirm-modal" class="hidden fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-[200] flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl w-full max-w-md border border-amber-200 dark:border-amber-900/50 overflow-hidden transform scale-95 transition-transform duration-300" id="confirm-modal-box">
+            <div class="p-5 border-b border-slate-100 dark:border-zinc-800 bg-amber-50 dark:bg-amber-900/20 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 flex items-center justify-center flex-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                </div>
+                <h3 class="font-bold text-lg text-amber-800 dark:text-amber-400" id="confirm-title">Cảnh báo</h3>
+            </div>
+            <div class="p-6 text-slate-600 dark:text-slate-300 text-sm leading-relaxed whitespace-pre-line" id="confirm-message"></div>
+            <div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex justify-end gap-3 bg-slate-50 dark:bg-black">
+                <button onclick="closeCustomConfirm()" class="px-5 py-2.5 rounded-xl font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-zinc-800 transition outline-none">Hủy bỏ</button>
+                <button id="btn-confirm-action" class="px-5 py-2.5 rounded-xl font-bold text-white bg-amber-500 hover:bg-amber-600 shadow-md transition outline-none">Đồng ý</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom-error-modal" class="hidden fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-[200] flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl w-full max-w-2xl border border-rose-200 dark:border-rose-900/50 overflow-hidden flex flex-col max-h-[90vh] transform scale-95 transition-transform duration-300" id="error-modal-box">
+            <div class="p-5 border-b border-slate-100 dark:border-zinc-800 bg-rose-50 dark:bg-rose-900/20 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-900/50 text-rose-600 dark:text-rose-400 flex items-center justify-center flex-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-rose-800 dark:text-rose-400">Phát hiện lỗi JSON từ AI</h3>
+                </div>
+                <button onclick="closeCustomError()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-2xl leading-none outline-none">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto custom-scrollbar flex-1 bg-slate-50 dark:bg-black/50">
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 font-medium">Hệ thống phát hiện các lỗi logic/cú pháp sau. Bạn có thể bôi đen copy đoạn dưới đây để gửi lại cho AI sửa:</p>
+                <pre id="error-message-content" class="text-xs md:text-sm text-rose-600 dark:text-rose-400 font-mono whitespace-pre-wrap leading-relaxed select-text bg-rose-50/50 dark:bg-rose-950/30 p-4 rounded-lg border border-rose-100 dark:border-rose-900/30"></pre>
+            </div>
+            <div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex justify-between items-center bg-white dark:bg-zinc-900">
+                <button onclick="copyErrorToClipboard()" id="btn-copy-error" class="px-4 py-2 rounded-xl font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-400 dark:hover:bg-indigo-900/50 transition outline-none flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                    <span>Copy báo lỗi</span>
+                </button>
+                <button onclick="closeCustomError()" class="px-6 py-2.5 rounded-xl font-bold text-white bg-slate-800 hover:bg-slate-900 dark:bg-zinc-700 dark:hover:bg-zinc-600 shadow-md transition outline-none">Đã hiểu & Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="github-modal" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-black rounded-2xl shadow-2xl w-full max-w-md border border-slate-200 dark:border-zinc-800 overflow-hidden transform scale-100 transition-transform">
+            <div class="p-5 md:p-6 border-b border-slate-100 dark:border-zinc-800 flex justify-between items-center bg-slate-50 dark:bg-zinc-900/50">
+                <h3 class="font-bold text-lg text-slate-800 dark:text-white flex items-center gap-2">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    Cấu hình GitHub API
+                </h3>
+                <button onclick="closeGitHubSettings()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-2xl leading-none outline-none">&times;</button>
+            </div>
+            <div class="p-5 md:p-6 space-y-4 text-sm">
+                <div>
+                    <label class="block font-bold mb-1 text-slate-700 dark:text-slate-300">GitHub Token (PAT):</label>
+                    <input type="password" id="gh-token" class="w-full p-2.5 border rounded-lg bg-white dark:bg-zinc-950 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm">
+                    <p class="text-[0.7rem] text-slate-500 mt-1.5 leading-relaxed">Vào GitHub > Settings > Developer settings > PAT > Tạo token tick vào <b>repo</b>.</p>
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 text-slate-700 dark:text-slate-300">Tên tài khoản (Owner):</label>
+                    <input type="text" id="gh-owner" placeholder="vd: vuvandat0210" class="w-full p-2.5 border rounded-lg bg-white dark:bg-zinc-950 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm font-mono text-indigo-600 dark:text-indigo-400">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 text-slate-700 dark:text-slate-300">Tên kho chứa (Repository):</label>
+                    <input type="text" id="gh-repo" placeholder="vd: thi-tot-nghiep-2026" class="w-full p-2.5 border rounded-lg bg-white dark:bg-zinc-950 dark:border-zinc-700 focus:ring-2 focus:ring-indigo-500 outline-none shadow-sm font-mono text-indigo-600 dark:text-indigo-400">
                 </div>
             </div>
-
-            <div id="download-container" class="hidden bg-emerald-50 dark:bg-emerald-900/20 p-8 rounded-xl shadow-sm border border-emerald-200 text-center">
-                <h2 class="text-2xl font-bold mb-2 text-emerald-800 dark:text-emerald-400">Tuyệt vời! File đã được mã hóa sẵn sàng</h2>
-                <div class="flex justify-center gap-4 mt-6">
-                    <button onclick="executeExport('download')" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl shadow-md">TẢI FILE .JSON XUỐNG MÁY</button>
-                    <button onclick="executeExport('github')" class="px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl shadow-md">ĐẨY TRỰC TIẾP LÊN GITHUB</button>
-                </div>
+            <div class="p-4 border-t border-slate-100 dark:border-zinc-800 flex justify-end gap-3 bg-slate-50 dark:bg-zinc-900/50">
+                <button onclick="closeGitHubSettings()" class="px-5 py-2.5 rounded-xl font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-zinc-800 transition outline-none">Hủy bỏ</button>
+                <button onclick="saveGitHubSettings()" class="px-5 py-2.5 rounded-xl font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-md transition outline-none">Lưu thiết lập</button>
             </div>
+        </div>
+    </div>
 
-            <div id="github-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex justify-center items-center">
-                <div class="bg-white dark:bg-zinc-900 p-6 rounded-xl w-[400px]">
-                    <h3 class="font-bold text-lg mb-4 border-b pb-2">Cấu hình GitHub API</h3>
-                    <input type="password" id="gh-token" placeholder="GitHub PAT Token" class="w-full mb-3 p-2 border rounded text-slate-800">
-                    <input type="text" id="gh-owner" placeholder="Tên tài khoản (Owner)" class="w-full mb-3 p-2 border rounded text-slate-800">
-                    <input type="text" id="gh-repo" placeholder="Tên Kho (Repo)" class="w-full mb-4 p-2 border rounded text-slate-800">
-                    <div class="flex justify-end gap-2">
-                        <button onclick="document.getElementById('github-modal').classList.add('hidden')" class="px-4 py-2 bg-slate-200 rounded text-slate-800 font-bold">Hủy</button>
-                        <button onclick="saveGitHubSettings()" class="px-4 py-2 bg-indigo-600 text-white rounded font-bold">Lưu lại</button>
+    <div id="library-screen" class="hidden w-full h-full bg-white/95 dark:bg-black/95 backdrop-blur-md flex flex-col absolute inset-0 z-[100] transition-opacity">
+        <div class="flex items-center justify-between p-4 md:p-6 border-b border-slate-200 dark:border-zinc-800 bg-white/80 dark:bg-black/80 flex-none shadow-sm">
+            <div>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                    Kho Đề Thi Hệ Thống
+                </h2>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mt-1" id="github-status">Đang kết nối thư viện đám mây...</p>
+            </div>
+            <button onclick="closeLibraryScreen()" class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-zinc-900 text-slate-600 dark:text-slate-300 font-bold text-sm hover:bg-slate-200 dark:hover:bg-zinc-800 transition outline-none flex items-center gap-2 border border-slate-200 dark:border-zinc-700 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                QUAY LẠI
+            </button>
+        </div>
+
+        <div class="flex-1 flex flex-col md:flex-row overflow-hidden bg-transparent">
+            <div class="w-full md:w-64 lg:w-72 flex-none border-b md:border-b-0 md:border-r border-slate-200 dark:border-zinc-800 bg-slate-50/50 dark:bg-zinc-950/50 flex flex-col">
+                <button onclick="toggleMobileFilter()" class="md:hidden w-full flex items-center justify-between p-3.5 bg-white/80 dark:bg-black/80 border-b border-slate-200 dark:border-zinc-800 text-sm font-bold text-slate-700 dark:text-slate-200 outline-none">
+                    <span class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
+                        LỌC THEO MÔN HỌC
+                    </span>
+                    <svg id="filter-chevron" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+
+                <div id="mobile-filter-content" class="hidden md:flex flex-col p-4 gap-6 overflow-y-auto custom-scrollbar max-h-[40vh] md:max-h-none">
+                    <div class="flex-none">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 md:mb-3 flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                            MÔN HỌC (CHỌN NHIỀU)
+                        </h3>
+                        <div class="space-y-1" id="filter-subjects-list">
+                            <div class="text-sm text-slate-500 italic py-1">Đang tải dữ liệu...</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div class="flex-1 flex flex-col overflow-hidden bg-white/50 dark:bg-black/50 relative">
+                <div class="p-4 flex justify-between items-center border-b border-slate-100 dark:border-zinc-800 flex-none bg-slate-50/50 dark:bg-zinc-950/50">
+                    <div class="text-sm font-bold text-slate-700 dark:text-slate-300">Tìm thấy <span id="library-count-badge" class="text-indigo-600 dark:text-indigo-400 mx-1">0</span> đề thi</div>
+                    <div class="text-xs text-slate-500 hidden sm:block">Bấm vào tiêu đề cột để sắp xếp ↕️</div>
+                </div>
+                <div class="flex-1 overflow-y-auto p-4 md:p-6 custom-scrollbar">
+                    <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-zinc-800 shadow-sm bg-white dark:bg-black">
+                        <table class="w-full text-left min-w-[700px]">
+                            <thead class="bg-slate-100 dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-slate-400 text-sm">
+                                <tr>
+                                    <th class="p-3 w-20 text-center font-bold cursor-pointer hover:text-indigo-600" onclick="handleSort('id')">ID <span id="sort-icon-id" class="text-[0.6rem] ml-1"></span></th>
+                                    <th class="p-3 w-28 text-center font-bold cursor-pointer hover:text-indigo-600" onclick="handleSort('subject')">Môn <span id="sort-icon-subject" class="text-[0.6rem] ml-1"></span></th>
+                                    <th class="p-3 font-bold cursor-pointer hover:text-indigo-600" onclick="handleSort('title')">Tên Đề Thi <span id="sort-icon-title" class="text-[0.6rem] ml-1"></span></th>
+                                    <th class="p-3 w-40 text-center font-bold cursor-pointer hover:text-indigo-600" onclick="handleSort('time')">Ngày Tạo <span id="sort-icon-time" class="text-[0.6rem] ml-1">▼</span></th>
+                                    <th class="p-3 w-28 text-center font-bold text-slate-400">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody id="library-table-body" class="divide-y divide-slate-100 dark:divide-zinc-800">
+                                <tr><td colspan="5" class="py-16 text-center"><svg class="animate-spin h-8 w-8 text-indigo-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 
     <script>
         let examData = null;
+        let originalExamId = null; // Dùng để soi xem người dùng đang sửa đề cũ hay tạo mới
+        let imagePointers = [];
+        let currentEditTarget = { part: null, index: null };
+        let previewTimeout = null;
+        let cloudFilesCache = []; // Bộ nhớ đệm danh sách file cloud
 
-        // Bổ sung hàm copy prompt
-        function copyPrompt() {
-            navigator.clipboard.writeText(document.getElementById('ai-prompt').value);
-            alert("Đã copy lệnh AI! Thầy dán vào khung chat của Gemini/Claude nhé.");
+        // ==========================================
+        // BẢO VỆ DỮ LIỆU CHƯA LƯU (UNSAVED CHANGES)
+        // ==========================================
+        let isExamModified = false;  // Cờ 1: Toàn bộ đề thi đã bị thay đổi (Cần xuất file)
+        let isEditorUnsaved = false; // Cờ 2: Đang gõ dở trong ô Code mà chưa bấm Lưu
+
+        function markExamModified() { isExamModified = true; }
+        function markEditorUnsaved() { isEditorUnsaved = true; }
+        function clearAllModifications() { isExamModified = false; isEditorUnsaved = false; }
+
+        window.addEventListener('beforeunload', function (e) {
+            if (isExamModified || isEditorUnsaved) {
+                e.preventDefault();
+                e.returnValue = 'Bạn có dữ liệu chưa lưu! Chắc chắn muốn thoát?';
+                return e.returnValue; // BẮT BUỘC có dòng này để Chrome hiện Popup
+            }
+        });
+
+        // ==========================================
+        // ĐIỀU KHIỂN HỘP THOẠI (MODALS)
+        // ==========================================
+        function showCustomConfirm(title, message, onConfirmCallback) {
+            document.getElementById('confirm-title').innerText = title; document.getElementById('confirm-message').innerText = message;
+            const modal = document.getElementById('custom-confirm-modal'); const box = document.getElementById('confirm-modal-box');
+            modal.classList.remove('hidden'); setTimeout(() => { modal.classList.remove('opacity-0'); box.classList.remove('scale-95'); }, 10);
+            const btnConfirm = document.getElementById('btn-confirm-action');
+            btnConfirm.onclick = () => { closeCustomConfirm(); if(onConfirmCallback) onConfirmCallback(); };
+        }
+        function closeCustomConfirm() {
+            const modal = document.getElementById('custom-confirm-modal'); const box = document.getElementById('confirm-modal-box');
+            modal.classList.add('opacity-0'); box.classList.add('scale-95'); setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+        function showCustomError(errorText) {
+            document.getElementById('error-message-content').innerText = errorText;
+            const modal = document.getElementById('custom-error-modal'); const box = document.getElementById('error-modal-box');
+            modal.classList.remove('hidden'); setTimeout(() => { modal.classList.remove('opacity-0'); box.classList.remove('scale-95'); }, 10);
+            document.getElementById('btn-copy-error').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg><span>Copy báo lỗi</span>`;
+        }
+        function closeCustomError() {
+            const modal = document.getElementById('custom-error-modal'); const box = document.getElementById('error-modal-box');
+            modal.classList.add('opacity-0'); box.classList.add('scale-95'); setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+        function copyErrorToClipboard() {
+            const errText = document.getElementById('error-message-content').innerText;
+            navigator.clipboard.writeText("Sửa lại file JSON theo các lỗi sau:\n\n" + errText).then(() => {
+                document.getElementById('btn-copy-error').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>Đã Copy!</span>`;
+            });
         }
 
-        function openGitHubSettings() {
-            document.getElementById('gh-token').value = localStorage.getItem('gh_token') || '';
-            document.getElementById('gh-owner').value = localStorage.getItem('gh_owner') || 'nttungvx'; // Cấu hình sẵn tên thầy
-            document.getElementById('gh-repo').value = localStorage.getItem('gh_repo') || 'kt-on-thi-tn-vx'; // Cấu hình sẵn tên kho
-            document.getElementById('github-modal').classList.remove('hidden');
+        // BẢNG MÃ MÔN HỌC ĐÃ ĐƯỢC BỔ SUNG ĐẦY ĐỦ 11 MÔN THEO PROMPT MỚI NHẤT
+        const SUBJECT_CODES = {
+            "Toán": "00", "Vật lí": "01", "Vật lý": "01", "Hóa học": "02", "Hoá học": "02",
+            "Sinh học": "03", "Ngữ văn": "04", "Lịch sử": "05", "Địa lí": "06", "Địa lý": "06",
+            "Tiếng Anh": "07", "GDKT & PL": "08", "Tin học": "09", "Công nghệ CN": "10", "Công nghệ NN": "11"
+        };
+
+        function getSubjectCode(input) {
+            if (!input) return "99";
+            let s = input.toString().trim();
+            if (Object.values(SUBJECT_CODES).includes(s)) return s;
+            for (let [name, code] of Object.entries(SUBJECT_CODES)) {
+                if (name.toLowerCase() === s.toLowerCase()) return code;
+            }
+            return "99"; 
         }
-        function saveGitHubSettings() {
-            localStorage.setItem('gh_token', document.getElementById('gh-token').value.trim());
-            localStorage.setItem('gh_owner', document.getElementById('gh-owner').value.trim());
-            localStorage.setItem('gh_repo', document.getElementById('gh-repo').value.trim());
-            document.getElementById('github-modal').classList.add('hidden');
-            alert("Lưu cấu hình GitHub thành công!");
+
+        function getSubjectName(input) {
+            if (!input) return "Khác";
+            let s = input.toString().trim();
+            for (let [name, code] of Object.entries(SUBJECT_CODES)) {
+                if (code === s) return name;
+            }
+            return s;
+        }
+
+        function updateThemeIcons() {
+            const isDark = document.documentElement.classList.contains('dark');
+            document.querySelectorAll('.theme-icon-moon').forEach(el => el.classList.toggle('hidden', isDark));
+            document.querySelectorAll('.theme-icon-sun').forEach(el => el.classList.toggle('hidden', !isDark));
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            updateThemeIcons();
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        updateThemeIcons();
+
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('json-upload');
+        fileInput.addEventListener('change', handleFileLoad);
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => { dropZone.addEventListener(eventName, e => { e.preventDefault(); e.stopPropagation(); }, false); });
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => {
+                dropZone.classList.replace('border-indigo-300', 'border-indigo-600'); dropZone.classList.replace('dark:border-zinc-700', 'dark:border-indigo-500');
+                dropZone.classList.replace('bg-indigo-50/50', 'bg-indigo-100'); dropZone.classList.replace('dark:bg-zinc-900/50', 'dark:bg-indigo-900/40');
+            }, false);
+        });
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, () => {
+                dropZone.classList.replace('border-indigo-600', 'border-indigo-300'); dropZone.classList.replace('dark:border-indigo-500', 'dark:border-zinc-700');
+                dropZone.classList.replace('bg-indigo-100', 'bg-indigo-50/50'); dropZone.classList.replace('dark:bg-indigo-900/40', 'dark:bg-zinc-900/50');
+            }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            if(e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileLoad({ target: { files: e.dataTransfer.files } });
+            }
+        });
+
+        function handleFileLoad(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            if (!file.name.toLowerCase().endsWith('.json')) return alert("Vui lòng tải lên file định dạng .json");
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    examData = JSON.parse(e.target.result);
+                    finishLoadingJSON(file.name, 'upload');
+                } catch (err) { alert("Lỗi đọc file JSON. Hãy kiểm tra lại cấu trúc."); }
+            };
+            reader.readAsText(file);
         }
 
         function processPastedJson() {
-            const text = document.getElementById('json-paste').value;
+            const text = document.getElementById('json-paste').value.trim();
+            if (!text) { showCustomError("Vui lòng dán mã JSON vào ô!"); return; }
+
+            if (examData && (examData.part1 || examData.part2 || examData.part3)) {
+                showCustomConfirm("CẢNH BÁO GHI ĐÈ ⚠️", "Việc nạp Code mới sẽ XÓA SẠCH toàn bộ dữ liệu đề thi đang hiển thị.\n\nBạn có chắc chắn muốn tiếp tục?", () => executeParse(text));
+            } else { executeParse(text); }
+        }
+
+        function executeParse(text) {
             try {
-                let cleanText = text;
+                let cleanText = text; 
                 const jsonStart = text.indexOf('{'), jsonEnd = text.lastIndexOf('}');
                 if(jsonStart !== -1 && jsonEnd !== -1) cleanText = text.substring(jsonStart, jsonEnd + 1);
 
-                examData = JSON.parse(cleanText);
+                let syntaxErrors = [];
+                if (/<[a-zA-Z]/.test(cleanText)) syntaxErrors.push("- LỖI THẺ HTML: Có dấu '<' đứng liền sát chữ cái. Vui lòng thêm khoảng trắng (VD: x < y).");
+                
+                const doubleSlashOutsideMath = /\\\\n(?=(?:[^$]*\$[^$]*\$)*[^$]*$)/g;
+                if (doubleSlashOutsideMath.test(cleanText)) {
+                    syntaxErrors.push("- LỖI NGẮT DÒNG: AI gõ thừa dấu gạch chéo thành '\\\\n' ở ngoài công thức. Vui lòng sửa lại thành '\\n'.");
+                }
+
+                if (syntaxErrors.length > 0) { showCustomError("LỖI CÚ PHÁP TRƯỚC KHI ĐỌC:\n\n" + syntaxErrors.join("\n")); return; }
+                
+                let parsedData = JSON.parse(cleanText);
+                validateExamData(parsedData);
+
+                examData = parsedData; markExamModified();
+                finishLoadingJSON("Dữ liệu Paste Trực tiếp", 'paste');
+            } catch (err) { showCustomError(err.message.includes("JSON") ? "LỖI CẤU TRÚC JSON (Gãy ngoặc, thiếu phẩy...)\n\n" + err.message : err.message); }
+        }
+
+        function validateExamData(data) {
+            let errors = [];
+            if (!data.subject) errors.push("- Thiếu mã Môn Học (subject).");
+            if (!data.timeLimit) errors.push("- Thiếu Thời gian làm bài (timeLimit).");
+
+            if (data.part1) {
+                data.part1.forEach((q, i) => {
+                    if (!q.q) errors.push(`[Phần 1 - Câu ${i+1}]: Thiếu nội dung câu hỏi (trường "q").`);
+                    if (!q.options || q.options.length !== 4) errors.push(`[Phần 1 - Câu ${i+1}]: Mảng đáp án (options) phải có đúng 4 phần tử.`);
+                    if (q.ans === undefined || typeof q.ans !== 'number' || q.ans < 0 || q.ans > 3) errors.push(`[Phần 1 - Câu ${i+1}]: Đáp án (ans) sai kiểu dữ liệu. Phải là số (0,1,2,3).`);
+                });
+            }
+            if (data.part2) {
+                data.part2.forEach((q, i) => {
+                    if (!q.items || q.items.length !== 4) errors.push(`[Phần 2 - Câu ${i+1}]: Mảng phát biểu (items) phải có đúng 4 ý.`);
+                    if (!q.ans || !Array.isArray(q.ans) || q.ans.length !== 4) errors.push(`[Phần 2 - Câu ${i+1}]: Mảng đáp án (ans) bị thiếu hoặc không đủ 4 ý.`);
+                    else q.ans.forEach((val, j) => { if (typeof val !== 'boolean') errors.push(`[Phần 2 - Câu ${i+1} - Ý ${String.fromCharCode(97+j)}]: Đáp án phải là chữ true/false, không có nháy kép.`); });
+                });
+            }
+            if (data.part3) {
+                data.part3.forEach((q, i) => { if (q.ans === undefined || q.ans === null || q.ans === "") errors.push(`[Phần 3 - Câu ${i+1}]: Bị trống đáp án (ans).`); });
+            }
+            if (errors.length > 0) throw new Error("LỖI LOGIC DỮ LIỆU TỪ AI:\n\n" + errors.join("\n"));
+        }
+
+        function resetPasteUI() {
+            const pasteContainer = document.getElementById('paste-container');
+            pasteContainer.className = "border-2 border-dashed border-slate-200 dark:border-zinc-700 p-5 md:p-6 rounded-xl bg-slate-50 dark:bg-zinc-900/50 flex flex-col transition hover:border-indigo-300 dark:hover:border-zinc-600 relative";
+            const btnSubmit = document.getElementById('btn-paste-submit');
+            btnSubmit.className = "w-full mt-3 py-2.5 bg-indigo-600 dark:bg-indigo-500 hover:bg-indigo-700 dark:hover:bg-indigo-600 text-white font-bold rounded-lg transition shadow-md flex justify-center items-center outline-none text-sm";
+            btnSubmit.innerHTML = "XỬ LÝ CODE JSON";
+        }
+
+        function clearPasteArea() {
+            document.getElementById('json-paste').value = '';
+            resetPasteUI();
+        }
+
+        function finishLoadingJSON(filename, type = 'upload') {
+            scanForImages();
+            
+            const dropZone = document.getElementById('drop-zone');
+            const pasteContainer = document.getElementById('paste-container');
+            const btnPasteSubmit = document.getElementById('btn-paste-submit');
+
+            if (type === 'upload' || type === 'cloud') {
+                dropZone.className = "border-2 border-emerald-500 dark:border-emerald-600 bg-emerald-50 dark:bg-emerald-900/10 p-6 rounded-xl flex flex-col items-center justify-center text-center relative group cursor-pointer min-h-[140px] border-solid";
+                document.getElementById('drop-zone-icon').className = "h-8 w-8 md:h-10 md:w-10 text-emerald-500 dark:text-emerald-500 mb-2 md:mb-3";
+                document.getElementById('drop-zone-title').className = "font-bold text-sm md:text-base text-emerald-800 dark:text-emerald-400 mb-1";
+                document.getElementById('drop-zone-title').innerText = "Nạp dữ liệu thành công!";
+                document.getElementById('drop-zone-desc').className = "text-xs md:text-sm text-emerald-600 dark:text-emerald-500 font-semibold mt-1";
+                document.getElementById('drop-zone-desc').innerText = filename;
+                resetPasteUI();
+            } else if (type === 'paste') {
+                pasteContainer.className = "border-2 border-solid border-emerald-500 dark:border-emerald-600 p-5 md:p-6 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 flex flex-col transition relative";
+                btnPasteSubmit.className = "w-full mt-3 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-lg transition shadow-md flex justify-center items-center outline-none text-sm";
+                btnPasteSubmit.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg> ĐÃ NẠP THÀNH CÔNG`;
+
+                dropZone.className = "border-2 border-dashed border-indigo-300 dark:border-zinc-700 bg-indigo-50/50 dark:bg-zinc-900/50 p-6 rounded-xl flex flex-col items-center justify-center text-center transition hover:bg-indigo-50 dark:hover:bg-zinc-900 relative group cursor-pointer min-h-[140px]";
+                document.getElementById('drop-zone-icon').className = "h-8 w-8 md:h-10 md:w-10 text-indigo-500 dark:text-slate-400 mb-2 md:mb-3 group-hover:scale-110 transition transform";
+                document.getElementById('drop-zone-title').className = "font-bold text-sm md:text-base text-indigo-800 dark:text-slate-300 mb-1";
+                document.getElementById('drop-zone-title').innerText = "Kéo thả file .json vào đây";
+                document.getElementById('drop-zone-desc').className = "text-xs md:text-sm text-indigo-600/80 dark:text-slate-500";
+                document.getElementById('drop-zone-desc').innerText = "Hoặc chạm để chọn từ thiết bị";
+            }
+
+            originalExamId = examData.examId || null;
+            updateExamInfoUI();
+
+            document.getElementById('edit-container').classList.remove('hidden'); 
+            populateQuestionSelector(); 
+        }
+
+        function updateExamInfoUI() {
+            document.getElementById('exam-info-bar').classList.remove('hidden');
+            let currentId = examData.examId || "";
+            
+            document.getElementById('exam-id-input').value = currentId;
+            document.getElementById('exam-id-bottom').innerText = currentId || "CHỜ TỰ ĐỘNG TẠO";
+            
+            let isNew = !currentId || currentId !== originalExamId;
+            
+            let statusHtml = isNew 
+                ? `<span class="px-2 py-1 text-[0.7rem] font-bold rounded-md bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 shadow-sm">TẠO ĐỀ MỚI</span>` 
+                : `<span class="px-2 py-1 text-[0.7rem] font-bold rounded-md bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400 border border-amber-200 dark:border-amber-800 shadow-sm">GHI ĐÈ ĐỀ CŨ</span>`;
+
+            document.getElementById('exam-status-top').innerHTML = statusHtml;
+            document.getElementById('exam-status-bottom').innerHTML = statusHtml;
+        }
+
+        function updateExamIdManual() {
+            const val = document.getElementById('exam-id-input').value.trim();
+            if (val) examData.examId = val;
+            else delete examData.examId;
+            updateExamInfoUI();
+        }
+
+        async function generateNewId() {
+            const btn = document.getElementById('btn-generate-id');
+            const ogText = btn.innerText;
+            btn.innerText = "ĐANG TẠO..."; btn.disabled = true;
+            try {
+                const subjCode = getSubjectCode(examData.subject);
+                examData.examId = await getNextIdFromGitHub(subjCode);
+                updateExamInfoUI();
+            } catch (e) { alert("Lỗi tạo mã: " + e.message); } 
+            finally { btn.innerText = ogText; btn.disabled = false; }
+        }
+
+        function toggleEditSection() {
+            const content = document.getElementById('edit-content');
+            const chevron = document.getElementById('edit-chevron');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden'); content.classList.add('flex'); chevron.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden'); content.classList.remove('flex'); chevron.classList.remove('rotate-180');
+            }
+        }
+
+        let previousSelectValue = 'root'; 
+
+        function populateQuestionSelector() {
+            const sel = document.getElementById('question-selector');
+            sel.innerHTML = '<option value="root">Cấu hình chung (Tiêu đề, Thời gian...)</option>';
+            ['part1', 'part2', 'part3'].forEach(part => {
+                if(examData[part]) {
+                    examData[part].forEach((q, i) => {
+                        let preview = q.q.replace(/<[^>]*>?/gm, ''); 
+                        if (preview.length > 40) preview = preview.substring(0, 40) + "...";
+                        sel.innerHTML += `<option value="${part}-${i}">Phần ${part.replace('part','')} - Câu ${i+1}: ${preview}</option>`;
+                    });
+                }
+            });
+            previousSelectValue = 'root'; 
+            isEditorUnsaved = false;      
+            loadQuestionCode(); 
+        }
+
+        function handleQuestionSelection(e) {
+            const selectEl = e.target;
+            const targetValue = selectEl.value;
+
+            if (isEditorUnsaved) {
+                selectEl.value = previousSelectValue;
+                showCustomConfirm(
+                    "CHƯA LƯU CODE ⚠️", 
+                    "Bạn đang gõ dở code mà chưa bấm LƯU.\nChuyển sang phần khác sẽ làm MẤT SẠCH nội dung vừa gõ.\n\nBạn có chắc chắn muốn vứt bỏ thay đổi và chuyển đi?", 
+                    () => {
+                        isEditorUnsaved = false;
+                        selectEl.value = targetValue;
+                        previousSelectValue = targetValue;
+                        loadQuestionCode();
+                    }
+                );
+            } else {
+                previousSelectValue = targetValue;
+                loadQuestionCode();
+            }
+        }
+
+        function loadQuestionCode() {
+            const val = document.getElementById('question-selector').value;
+            const editor = document.getElementById('live-editor');
+            
+            if (val === 'root') {
+                let rootData = { ...examData };
+                delete rootData.part1; delete rootData.part2; delete rootData.part3;
+                editor.value = JSON.stringify(rootData, null, 4);
+                currentEditTarget = { part: 'root', index: null };
+            } else {
+                let [part, idx] = val.split('-');
+                editor.value = JSON.stringify(examData[part][parseInt(idx)], null, 4);
+                currentEditTarget = { part: part, index: parseInt(idx) };
+            }
+            updatePreviewDirect(); 
+        }
+
+        function handleEditorTab(e) {
+            if (e.key === 'Tab') {
+                e.preventDefault(); const editor = e.target;
+                const start = editor.selectionStart; const end = editor.selectionEnd;
+                editor.value = editor.value.substring(0, start) + "    " + editor.value.substring(end);
+                editor.selectionStart = editor.selectionEnd = start + 4;
+                delayPreviewUpdate();
+            }
+        }
+
+        function saveQuestionCode() {
+            try {
+                const parsed = JSON.parse(document.getElementById('live-editor').value);
+                if (currentEditTarget.part === 'root') {
+                    Object.keys(parsed).forEach(k => examData[k] = parsed[k]);
+                } else {
+                    examData[currentEditTarget.part][currentEditTarget.index] = parsed;
+                }
+                alert("Đã lưu nội dung thành công!");
+                
+                markExamModified();       
+                isEditorUnsaved = false;  
+                
+                scanForImages(); populateQuestionSelector(); 
+                
+                const currentVal = currentEditTarget.part === 'root' ? 'root' : `${currentEditTarget.part}-${currentEditTarget.index}`;
+                document.getElementById('question-selector').value = currentVal;
+                previousSelectValue = currentVal; 
+                
+            } catch (e) { showCustomError("LỖI JSON KHI SỬA THỦ CÔNG:\n\n" + e.message); }
+        }
+
+        function delayPreviewUpdate() { clearTimeout(previewTimeout); previewTimeout = setTimeout(updatePreviewDirect, 500); }
+
+        function updatePreviewDirect() {
+            const text = document.getElementById('live-editor').value;
+            const pane = document.getElementById('preview-pane');
+            
+            if(currentEditTarget.part === 'root') {
+                try {
+                    const q = JSON.parse(text);
+                    const p1 = examData.part1 ? examData.part1.length : 0;
+                    const p2 = examData.part2 ? examData.part2.length : 0;
+                    const p3 = examData.part3 ? examData.part3.length : 0;
+                    pane.innerHTML = `
+                        <div class="flex flex-col items-center justify-center text-center h-full">
+                            <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center mb-4 shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-2">${q.title || "Chưa có tên đề"}</h3>
+                            <p class="text-sm font-bold text-indigo-600 dark:text-indigo-400 mb-6 uppercase tracking-wider">${getSubjectName(q.subject)}</p>
+                            <div class="grid grid-cols-2 gap-4 text-sm w-full max-w-sm text-left bg-white dark:bg-zinc-900 p-5 rounded-xl border border-slate-200 dark:border-zinc-700 shadow-sm">
+                                <div><span class="text-slate-500 block mb-1">Thời gian:</span><b class="text-lg text-slate-800 dark:text-slate-200">${q.timeLimit ? q.timeLimit/60 + ' Phút' : '--'}</b></div>
+                                <div><span class="text-slate-500 block mb-1">Tổng câu hỏi:</span><b class="text-lg text-slate-800 dark:text-slate-200">${p1 + p2 + p3} Câu</b></div>
+                            </div>
+                        </div>`;
+                } catch(e) {}
+                return;
+            }
+
+            try {
+                const q = JSON.parse(text);
+                let html = `<div class="font-medium mb-5 leading-relaxed whitespace-pre-line">${q.q || ''}</div>`;
+                
+                let img = q.imageUrl || q.image;
+                if (img) {
+                    if(img !== "[CẦN_CHÈN_ẢNH]") html += `<img src="${img}" class="max-h-40 object-contain mx-auto mb-5 rounded border border-slate-200 dark:border-zinc-700 shadow-sm">`;
+                    else html += `<div class="w-full h-32 bg-slate-100 dark:bg-zinc-800 border-2 border-dashed border-slate-300 dark:border-zinc-700 flex items-center justify-center text-slate-400 mb-5 font-semibold text-xs">[CHỖ TRỐNG HIỂN THỊ ẢNH CÂU HỎI]</div>`;
+                }
+
+                if(currentEditTarget.part === 'part1' && q.options) {
+                    html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">`;
+                    q.options.forEach((opt, i) => { html += `<div class="flex items-start p-3 border border-slate-200 dark:border-zinc-700 rounded-xl bg-white dark:bg-black"><span class="font-bold mr-2">${String.fromCharCode(65+i)}.</span> <span>${opt}</span></div>`; });
+                    html += `</div>`;
+                } 
+                else if (currentEditTarget.part === 'part2' && q.items) {
+                    html += `<div class="border border-slate-200 dark:border-zinc-700 rounded-xl overflow-hidden"><table class="w-full text-left text-sm"><thead class="bg-slate-100 dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-700"><tr><th class="p-3">Phát biểu</th><th class="p-3 w-12 text-center text-emerald-600">Đ</th><th class="p-3 w-12 text-center text-red-500">S</th></tr></thead><tbody class="divide-y divide-slate-200 dark:divide-zinc-700">`;
+                    q.items.forEach((item, i) => { html += `<tr><td class="p-3 whitespace-pre-line"><span class="font-semibold mr-1">${String.fromCharCode(97+i)})</span> ${item}</td><td class="border-l border-slate-200 dark:border-zinc-700"></td><td class="border-l border-slate-200 dark:border-zinc-700"></td></tr>`; });
+                    html += `</tbody></table></div>`;
+                } 
+                else if (currentEditTarget.part === 'part3') {
+                    html += `<div class="flex items-center gap-3 mt-4"><span class="font-bold text-sm">ĐÁP ÁN:</span><div class="flex gap-2">`;
+                    for(let i=0; i<4; i++) html += `<div class="w-10 h-10 border-2 border-slate-300 dark:border-zinc-700 rounded bg-white dark:bg-black"></div>`;
+                    html += `</div></div>`;
+                }
+
+                if(q.explanation) { html += `<div class="mt-6 p-4 bg-indigo-50/50 dark:bg-indigo-900/10 border border-indigo-100 dark:border-indigo-900/50 rounded-xl text-sm"><strong class="text-indigo-700 dark:text-indigo-400 block mb-2">HƯỚNG DẪN GIẢI:</strong>${q.explanation}</div>`; }
+                pane.innerHTML = html;
+                if(window.MathJax) { MathJax.typesetClear([pane]); MathJax.typesetPromise([pane]); }
+            } catch (e) {
+                pane.innerHTML = `<div class="h-full flex flex-col items-center justify-center text-rose-500"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span>Mã JSON đang lỗi cú pháp...</span></div>`;
+            }
+        }
+
+        function checkAllImagesDone() {
+            const container = document.getElementById('download-container');
+            const iconContainer = document.getElementById('download-icon-container');
+            const title = document.getElementById('download-title');
+            const desc = document.getElementById('download-desc');
+            container.classList.remove('hidden');
+
+            const allDone = imagePointers.every(task => task.existingBase64);
+            if (imagePointers.length > 0 && !allDone) {
+                container.className = "bg-amber-50 dark:bg-amber-900/20 p-6 md:p-8 rounded-xl shadow-sm border border-amber-200 dark:border-amber-800 text-center mt-6 md:mt-10 transition-colors";
+                iconContainer.className = "w-14 h-14 md:w-16 md:h-16 bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm";
+                iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`;
+                title.innerText = "Đề thi chưa hoàn thiện!";
+                title.className = "text-xl md:text-2xl font-bold mb-2 text-amber-800 dark:text-amber-400";
+                desc.innerText = "Bạn vẫn có thể Tải xuống để lưu nháp, nhưng Đề thi đang bị thiếu hình ảnh.";
+                desc.className = "text-sm md:text-base text-amber-700/80 dark:text-amber-500/80 mb-6 md:mb-8 font-medium";
+            } else {
+                container.className = "bg-emerald-50 dark:bg-emerald-900/20 p-6 md:p-8 rounded-xl shadow-sm border border-emerald-200 dark:border-emerald-800 text-center mt-6 md:mt-10 transition-colors";
+                iconContainer.className = "w-14 h-14 md:w-16 md:h-16 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm";
+                iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>`;
+                title.innerText = "Tuyệt vời! Đề thi đã hoàn thiện";
+                title.className = "text-xl md:text-2xl font-bold mb-2 text-emerald-800 dark:text-emerald-300";
+                desc.innerText = "Toàn bộ dữ liệu và hình ảnh đã được mã hóa sẵn sàng.";
+                desc.className = "text-sm md:text-base text-emerald-600/80 dark:text-emerald-400/80 mb-6 md:mb-8 font-medium";
+            }
+        }
+
+        function scanForImages() {
+            imagePointers = []; let hasAnyImages = false;
+            const scanPart = (partArray, partName) => {
+                if (!partArray) return;
+                partArray.forEach((q, index) => {
+                    let needsQImage = q.image && q.image.toString().trim() !== "" && !q.image.toString().startsWith("data:image");
+                    let hasExistingQImage = q.imageUrl && q.imageUrl.toString().trim() !== "";
+                    if (needsQImage || hasExistingQImage) {
+                        hasAnyImages = true; imagePointers.push({ ref: q, propKey: 'image', label: `${partName} - Câu ${index + 1} (Ảnh Câu Hỏi)`, text: q.q, existingBase64: hasExistingQImage ? q.imageUrl : null });
+                    }
+                    let needsEImage = q.explanationImage && q.explanationImage.toString().includes("[CẦN_CHÈN");
+                    let hasExistingEImage = q.explanationImage && q.explanationImage.toString().startsWith("data:image");
+                    if (needsEImage || hasExistingEImage) {
+                        hasAnyImages = true; imagePointers.push({ ref: q, propKey: 'explanationImage', label: `${partName} - Câu ${index + 1} (Ảnh Lời Giải)`, text: q.explanation ? "Chi tiết: " + q.explanation : "Cần chèn một ảnh cho lời giải.", existingBase64: hasExistingEImage ? q.explanationImage : null });
+                    }
+                });
+            };
+            scanPart(examData.part1, "Phần 1"); scanPart(examData.part2, "Phần 2"); scanPart(examData.part3, "Phần 3");
+
+            if (!hasAnyImages) {
+                document.getElementById('image-tasks-container').classList.add('hidden');
                 document.getElementById('download-container').classList.remove('hidden');
-                alert("Nạp đề thi JSON thành công! Đề đã sẵn sàng để xuất bản.");
-            } catch (err) {
-                alert("Lỗi cấu trúc JSON từ AI: " + err.message + "\n\nHãy yêu cầu AI kiểm tra lại dấu ngoặc và dấu phẩy.");
+            } else { 
+                renderImageTasks(); checkAllImagesDone();
+            }
+        }
+
+        function renderImageTasks() {
+            const container = document.getElementById('image-tasks-container');
+            const list = document.getElementById('tasks-list');
+            list.innerHTML = "";
+
+            imagePointers.forEach((task, index) => {
+                let shortText = task.text.replace(/<[^>]*>?/gm, '');
+                if(shortText.length > 150) shortText = shortText.substring(0, 150) + "...";
+                let boxClasses = "border-dashed border-slate-300 dark:border-zinc-700 hover:border-indigo-400 bg-slate-50 dark:bg-zinc-900/50";
+                let imageContent = ``;
+                
+                if (!task.existingBase64) {
+                    imageContent = `<div class="text-center px-4 z-10"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto text-slate-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg><span class="text-[0.75rem] md:text-[0.8rem] text-slate-600 dark:text-slate-400 font-bold block leading-relaxed">CLICK VÀO ĐÂY & ẤN CTRL + V<br>ĐỂ DÁN ẢNH VÀO</span></div><img id="preview-${index}" class="absolute inset-0 w-full h-full object-contain hidden p-2 z-0" src=""><div class="focus-overlay hidden absolute inset-0 bg-indigo-600 flex-col items-center justify-center text-white z-20 transition-opacity"><span class="font-bold text-sm block">SẴN SÀNG DÁN!</span></div>`;
+                } else {
+                    boxClasses = "border-solid border-emerald-400 dark:border-emerald-600 shadow-sm bg-white dark:bg-zinc-900";
+                    imageContent = `<img id="preview-${index}" class="absolute inset-0 w-full h-full object-contain p-2 z-0" src="${task.existingBase64}"><div class="absolute inset-0 bg-slate-900/80 opacity-0 group-hover:opacity-100 focus-overlay flex flex-col items-center justify-center text-white z-10 transition-opacity duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8 mb-2 drop-shadow-md" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="font-bold text-xs md:text-sm drop-shadow-md tracking-wide">ẢNH ĐÃ CÓ SẴN</span></div>`;
+                }
+
+                let labelBg = task.propKey === 'image' ? 'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-800 dark:text-indigo-300' : 'bg-fuchsia-100 dark:bg-fuchsia-900/40 text-fuchsia-800 dark:text-fuchsia-300';
+
+                let isInvert = false;
+                if (task.propKey === 'image' && task.ref.imageInvert === true) isInvert = true;
+                if (task.propKey === 'explanationImage' && task.ref.explanationImageInvert === true) isInvert = true;
+                let toggleChecked = isInvert ? 'checked' : '';
+
+                const itemHtml = `
+                <div class="bg-white dark:bg-black p-4 md:p-6 rounded-xl border border-slate-200 dark:border-zinc-800 shadow-sm flex flex-col md:flex-row gap-4 md:gap-6 items-start">
+                    <div class="flex-1 w-full">
+                        <span class="inline-block ${labelBg} text-[0.65rem] md:text-xs font-bold px-2.5 py-1 md:py-1.5 rounded-md mb-2 md:mb-3 tracking-wide uppercase border border-current opacity-80">${task.label}</span>
+                        <p class="text-[0.85rem] md:text-[0.95rem] font-medium text-slate-700 dark:text-slate-300 italic border-l-4 border-indigo-300 dark:border-indigo-600 pl-3 md:pl-4 leading-relaxed">"${shortText}"</p>
+                        
+                        <div class="mt-4 inline-flex items-center gap-3 p-3 bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-lg">
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="toggle-invert-${index}" class="sr-only peer" onchange="toggleImageInvert(${index})" ${toggleChecked}>
+                                <div class="w-9 h-5 bg-slate-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-indigo-300 dark:peer-focus:ring-indigo-800 rounded-full peer dark:bg-zinc-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-slate-600 peer-checked:bg-indigo-600"></div>
+                                <span class="ml-3 text-xs md:text-sm font-semibold text-slate-700 dark:text-slate-300">Bật Chế độ tối (Đảo màu)</span>
+                            </label>
+                            <div class="group relative flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400 cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <div class="hidden group-hover:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-slate-800 text-white text-[0.65rem] rounded shadow-lg z-50 text-center">Nên bật nếu ảnh gốc có viền/nền màu trắng, để web tự động biến nền trắng thành nền đen khi học sinh bật Chế Độ Tối.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="w-full md:w-[320px] flex-none">
+                        <div tabindex="0" id="paste-area-${index}" class="paste-area w-full h-32 md:h-40 border-2 rounded-xl flex flex-col items-center justify-center cursor-pointer relative overflow-hidden group transition ${boxClasses}">${imageContent}</div>
+                        <div class="text-center mt-2 md:mt-3">
+                            <label class="text-[0.75rem] md:text-[0.8rem] text-slate-500 hover:text-indigo-600 font-bold cursor-pointer flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
+                                Hoặc tải ảnh lên
+                                <input type="file" accept="image/*" class="hidden" onchange="handleFileUpload(event, ${index})">
+                            </label>
+                        </div>
+                    </div>
+                </div>`;
+                list.insertAdjacentHTML('beforeend', itemHtml);
+                
+                setTimeout(() => {
+                    const pasteArea = document.getElementById(`paste-area-${index}`);
+                    pasteArea.addEventListener('paste', (e) => handlePaste(e, index));
+                    pasteArea.addEventListener('click', () => { pasteArea.focus(); });
+                }, 0);
+            });
+            container.classList.remove('hidden'); 
+            if(window.MathJax) { MathJax.typesetClear([list]); MathJax.typesetPromise([list]); }
+        }
+
+        function toggleImageInvert(index) {
+            const task = imagePointers[index];
+            const isChecked = document.getElementById(`toggle-invert-${index}`).checked;
+            
+            if (task.propKey === 'image') {
+                task.ref.imageInvert = isChecked;
+            } else {
+                task.ref.explanationImageInvert = isChecked;
+            }
+            
+            const imgPreview = document.getElementById(`preview-${index}`);
+            if (imgPreview) {
+                if (isChecked) {
+                    imgPreview.style.filter = 'invert(1) hue-rotate(180deg)';
+                } else {
+                    imgPreview.style.filter = 'none';
+                }
+            }
+            
+            if (!document.getElementById('edit-content').classList.contains('hidden')) {
+                loadQuestionCode(); 
+            }
+        }
+
+        function handlePaste(e, index) {
+            e.preventDefault(); let blob = null;
+            for (let item of (e.clipboardData || e.originalEvent.clipboardData).items) { if (item.type.indexOf("image") === 0) { blob = item.getAsFile(); break; } }
+            if (blob) processImageToJSON(blob, index); else alert("Không tìm thấy hình ảnh. Hãy chụp lại rồi dán nhé!");
+        }
+        function handleFileUpload(event, index) { if (event.target.files[0]) processImageToJSON(event.target.files[0], index); }
+
+        function processImageToJSON(blob, index) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const base64String = event.target.result; const task = imagePointers[index];
+                if (task.propKey === 'image') { task.ref.imageUrl = base64String; delete task.ref.image; } else { task.ref.explanationImage = base64String; }
+                task.existingBase64 = base64String;
+                markExamModified();
+                
+                const isChecked = document.getElementById(`toggle-invert-${index}`).checked;
+                let filterStyle = isChecked ? 'filter: invert(1) hue-rotate(180deg);' : '';
+
+                const pasteArea = document.getElementById(`paste-area-${index}`);
+                
+                pasteArea.innerHTML = `<img id="preview-${index}" class="absolute inset-0 w-full h-full object-contain p-2 z-0" style="${filterStyle}" src="${base64String}"><div class="absolute inset-0 bg-slate-900/80 opacity-0 group-hover:opacity-100 focus-overlay flex flex-col items-center justify-center text-white z-10 transition-opacity duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8 mb-2 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span class="font-bold text-xs md:text-sm text-emerald-300">ĐÃ CẬP NHẬT ẢNH MỚI</span></div>`;
+                
+                pasteArea.className = "paste-area w-full h-32 md:h-40 border-2 rounded-xl flex flex-col items-center justify-center cursor-pointer relative overflow-hidden group transition border-solid border-emerald-500 dark:border-emerald-600 shadow-md focus:ring-4 focus:ring-emerald-300 bg-white dark:bg-zinc-900";
+                document.activeElement.blur(); checkAllImagesDone();
+            };
+            reader.readAsDataURL(blob);
+        }
+
+        async function fetchGitHubDir(owner, repo, token) {
+            const url = `https://api.github.com/repos/${owner}/${repo}/contents/data`;
+            const res = await fetch(url, { headers: { "Authorization": `token ${token}` } });
+            if (!res.ok) throw new Error("Dir fetch failed");
+            return await res.json();
+        }
+
+        async function getNextIdFromGitHub(subjectCode) {
+            const token = localStorage.getItem('gh_token');
+            const owner = localStorage.getItem('gh_owner');
+            const repo = localStorage.getItem('gh_repo');
+            if (!token || !owner || !repo) throw new Error("Chưa cấu hình GitHub");
+
+            try {
+                const files = await fetchGitHubDir(owner, repo, token);
+                let maxNum = 0;
+                files.forEach(f => {
+                    const match = f.name.match(/^(\d{2})(\d{3})_/);
+                    if (match && match[1] === subjectCode) {
+                        const num = parseInt(match[2], 10);
+                        if (num > maxNum) maxNum = num;
+                    }
+                });
+                const nextNum = (maxNum + 1).toString().padStart(3, '0');
+                return subjectCode + nextNum; 
+            } catch (e) {
+                console.error(e);
+                return subjectCode + "001"; 
             }
         }
 
@@ -184,40 +1070,314 @@ Dưới đây là các quy tắc bắt buộc:
             if (!examData) return;
 
             if (!examData.examId) {
-                let subjCode = examData.subject || "99";
-                examData.examId = subjCode + Math.floor(Math.random()*1000).toString().padStart(3, '0');
+                try {
+                    const subjCode = getSubjectCode(examData.subject);
+                    examData.examId = await getNextIdFromGitHub(subjCode);
+                    updateExamInfoUI();
+                } catch (e) {
+                    examData.examId = "99999";
+                }
             }
 
-            const now = new Date();
-            const timestamp = now.getFullYear() + String(now.getMonth() + 1).padStart(2, '0') + String(now.getDate()).padStart(2, '0') + "_" + String(now.getHours()).padStart(2, '0') + String(now.getMinutes()).padStart(2, '0');
-            const targetFileName = `${examData.examId}_${examData.subject}_${timestamp}.json`;
+            const token = localStorage.getItem('gh_token');
+            const owner = localStorage.getItem('gh_owner');
+            const repo = localStorage.getItem('gh_repo');
+
+            let targetFileName = "";
+            let existingSha = null;
+
+            if (mode === 'github' && token) {
+                 try {
+                     const files = await fetchGitHubDir(owner, repo, token);
+                     const existingFile = files.find(f => f.name.startsWith(`${examData.examId}_`));
+                     if (existingFile) {
+                         targetFileName = existingFile.name; 
+                         existingSha = existingFile.sha;     
+                     }
+                 } catch(e) { console.error("Lỗi tìm file cũ:", e); }
+            }
+
+            if (!targetFileName) {
+                const now = new Date();
+                const timestamp = now.getFullYear() + String(now.getMonth() + 1).padStart(2, '0') + String(now.getDate()).padStart(2, '0') + "_" + String(now.getHours()).padStart(2, '0') + String(now.getMinutes()).padStart(2, '0');
+                
+                let subjName = getSubjectName(examData.subject);
+                let safeSub = subjName.replace(/[\\/:*?"<>|]/g, "").trim();
+                let safeTitle = examData.title ? examData.title.replace(/[\\/:*?"<>|]/g, "").trim() : "De_Thi";
+                
+                targetFileName = `${examData.examId}_${safeSub}_${timestamp}_${safeTitle}.json`;
+            }
 
             if (mode === 'download') {
                 const a = document.createElement("a");
                 a.href = URL.createObjectURL(new Blob([JSON.stringify(examData, null, 4)], { type: "application/json" }));
                 a.download = targetFileName;
                 document.body.appendChild(a); a.click(); document.body.removeChild(a);
+                
+                clearAllModifications(); 
             } 
             else if (mode === 'github') {
-                const token = localStorage.getItem('gh_token');
-                const owner = localStorage.getItem('gh_owner');
-                const repo = localStorage.getItem('gh_repo');
-                
-                if (!token) return alert("Chưa cấu hình API Github!");
+                if (!token || !owner || !repo) { alert("Chưa cài đặt GitHub!"); openGitHubSettings(); return; }
 
                 const path = `data/${encodeURIComponent(targetFileName)}`;
-                const contentBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(examData, null, 4))));
+                const contentJson = JSON.stringify(examData, null, 4);
+                const contentBase64 = btoa(unescape(encodeURIComponent(contentJson)));
+
+                const btn = document.getElementById('btn-github');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = `ĐANG ĐẨY LÊN...`; btn.disabled = true;
 
                 try {
+                    const body = { message: `CMS: ${existingSha ? 'Update' : 'Upload'} ${targetFileName}`, content: contentBase64 };
+                    if (existingSha) body.sha = existingSha;
+
                     const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
                         method: 'PUT',
                         headers: { "Authorization": `token ${token}`, "Content-Type": "application/json" },
-                        body: JSON.stringify({ message: "Upload Đề Thi", content: contentBase64 })
+                        body: JSON.stringify(body)
                     });
-                    if (putRes.ok) alert("Đã đẩy thành công lên Cloud GitHub!");
-                    else alert("Lỗi khi đẩy lên GitHub: " + (await putRes.json()).message);
-                } catch (e) { alert("Lỗi kết nối GitHub API"); }
+
+                    if (putRes.ok) {
+                        btn.innerHTML = `ĐÃ UPLOAD!`;
+                        
+                        clearAllModifications(); 
+                        
+                        setTimeout(() => { btn.innerHTML = originalHTML; btn.disabled = false; }, 3000);
+                    } else {
+                        const errData = await putRes.json(); throw new Error(errData.message);
+                    }
+                } catch (error) {
+                    alert(`Lỗi: ${error.message}`); btn.innerHTML = originalHTML; btn.disabled = false;
+                }
             }
+        }
+
+        let hasFetchedLibrary = false;
+        let cachedLibraryFiles = [];
+        let currentSortCol = 'time';
+        let currentSortAsc = false;
+        let checkedSubjects = [];
+
+        function openLibraryScreen() {
+            document.getElementById('library-screen').classList.remove('hidden');
+            if (!hasFetchedLibrary) fetchLibraryFiles();
+        }
+        function closeLibraryScreen() { document.getElementById('library-screen').classList.add('hidden'); }
+
+        function toggleMobileFilter() {
+            const content = document.getElementById('mobile-filter-content');
+            const chevron = document.getElementById('filter-chevron');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden'); content.classList.add('flex'); chevron.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden'); content.classList.remove('flex'); chevron.classList.remove('rotate-180');
+            }
+        }
+
+        async function fetchLibraryFiles() {
+            const token = localStorage.getItem('gh_token');
+            const owner = localStorage.getItem('gh_owner');
+            const repo = localStorage.getItem('gh_repo');
+            const statusEl = document.getElementById('github-status');
+
+            if (!owner || !repo || !token) {
+                statusEl.innerHTML = `<span class="text-rose-500 font-bold">Chưa cấu hình API GitHub! Thoát ra bấm Icon Bánh Răng cài đặt nhé.</span>`;
+                return;
+            }
+
+            try {
+                const files = await fetchGitHubDir(owner, repo, token); 
+                
+                cachedLibraryFiles = files.filter(f => f.name.endsWith('.json')).map(f => {
+                    let id = "N/A", subject = "Khác", timeText = "---", timeRaw = 0, title = f.name;
+                    
+                    const matchV6 = f.name.match(/^(\d{5})_([^_]+)_(\d{8}_\d{4})_(.*)\.json$/);
+                    if (matchV6) {
+                        id = matchV6[1];
+                        subject = getSubjectName(matchV6[2]);
+                        let ts = matchV6[3];
+                        timeRaw = parseInt(ts.replace('_', ''));
+                        timeText = `${ts.substring(9,11)}:${ts.substring(11,13)} - ${ts.substring(6,8)}/${ts.substring(4,6)}/${ts.substring(0,4)}`;
+                        title = matchV6[4].replace(/_/g, ' ');
+                    }
+                    return { url: f.download_url, name: f.name, id: id, subject: subject, title: title, timeText: timeText, timeRaw: timeRaw };
+                });
+
+                if (cachedLibraryFiles.length > 0) {
+                    let subjects = [...new Set(cachedLibraryFiles.map(f => f.subject))].sort();
+                    checkedSubjects = [...subjects];
+                    let filterHtml = "";
+                    subjects.forEach(sub => {
+                        let count = cachedLibraryFiles.filter(f => f.subject === sub).length;
+                        filterHtml += `<label class="flex items-start md:items-center gap-2 p-1.5 md:p-2 rounded hover:bg-slate-200 dark:hover:bg-zinc-800 cursor-pointer transition"><input type="checkbox" class="w-4 h-4 mt-0.5 md:mt-0 accent-indigo-600 filter-subject flex-none" value="${sub}" checked onchange="applyFilters()"><span class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex-1 leading-tight line-clamp-1">${sub}</span><span class="text-xs bg-slate-200 dark:bg-zinc-700 text-slate-500 dark:text-slate-400 px-1.5 rounded">${count}</span></label>`;
+                    });
+                    document.getElementById('filter-subjects-list').innerHTML = filterHtml;
+                }
+                
+                hasFetchedLibrary = true;
+                statusEl.innerText = "Đã kết nối và lấy danh sách thành công!";
+                statusEl.classList.replace('text-slate-500', 'text-emerald-500');
+                applyFilters();
+                
+            } catch (e) { 
+                statusEl.innerHTML = `<span class="text-rose-500 font-bold">Lỗi truy cập dữ liệu. Hãy kiểm tra lại Mã Token PAT.</span>`; 
+            }
+        }
+
+        function handleSort(col) {
+            if (currentSortCol === col) currentSortAsc = !currentSortAsc; 
+            else { currentSortCol = col; currentSortAsc = (col === 'title' || col === 'subject'); } 
+            applyFilters();
+        }
+
+        function applyFilters() {
+            if(!hasFetchedLibrary) return;
+            const subBoxes = document.querySelectorAll('.filter-subject:checked');
+            checkedSubjects = Array.from(subBoxes).map(cb => cb.value);
+
+            let filteredFiles = cachedLibraryFiles.filter(f => checkedSubjects.includes(f.subject));
+
+            filteredFiles.sort((a, b) => {
+                let valA, valB;
+                if (currentSortCol === 'time') { valA = a.timeRaw; valB = b.timeRaw; }
+                else if (currentSortCol === 'id') { valA = a.id; valB = b.id; }
+                else if (currentSortCol === 'subject') { valA = a.subject; valB = b.subject; }
+                else if (currentSortCol === 'title') { valA = a.title; valB = b.title; }
+                
+                if (valA < valB) return currentSortAsc ? -1 : 1;
+                if (valA > valB) return currentSortAsc ? 1 : -1;
+                return 0;
+            });
+
+            ['id', 'subject', 'title', 'time'].forEach(c => document.getElementById(`sort-icon-${c}`).innerText = (c === currentSortCol) ? (currentSortAsc ? '▲' : '▼') : '');
+            document.getElementById('library-count-badge').innerText = filteredFiles.length;
+
+            const tbody = document.getElementById('library-table-body');
+            if (filteredFiles.length === 0) { tbody.innerHTML = `<tr><td colspan="5" class="py-16 text-center text-slate-500 font-bold"><div class="text-3xl mb-2">📭</div>Không có đề thi nào khớp bộ lọc.</td></tr>`; return; }
+
+            let html = "";
+            filteredFiles.forEach(file => {
+                html += `<tr class="hover:bg-indigo-50/50 dark:hover:bg-zinc-900/50 transition-colors group"><td class="p-3 text-center font-mono font-bold text-slate-500 text-xs whitespace-nowrap">${file.id}</td><td class="p-3 text-center"><span class="inline-block px-2.5 py-1 bg-slate-200 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 text-xs font-bold rounded shadow-sm border border-slate-300 dark:border-zinc-700 whitespace-nowrap">${file.subject}</span></td><td class="p-3 font-semibold text-slate-800 dark:text-slate-200 pr-4 text-sm break-words whitespace-normal w-full min-w-[200px]">${file.title}</td><td class="p-3 text-center text-slate-500 text-xs font-mono font-medium whitespace-nowrap">${file.timeText}</td><td class="p-3 text-center whitespace-nowrap"><button onclick="loadFromLibrary('${file.url}', this)" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-lg transition shadow-sm w-full outline-none">MỞ ĐỀ NÀY</button></td></tr>`;
+            });
+            tbody.innerHTML = html;
+        }
+
+        async function loadFromLibrary(url, btn) {
+            const originalText = btn.innerText;
+            btn.innerHTML = "ĐANG TẢI..."; btn.disabled = true;
+            try {
+                const res = await fetch(url);
+                examData = await res.json();
+                closeLibraryScreen();
+                finishLoadingJSON("Đề tải từ Đám mây (Cloud)", 'cloud');
+            } catch (e) {
+                alert("Lỗi tải file JSON: " + e.message);
+            } finally {
+                btn.innerHTML = originalText; btn.disabled = false;
+            }
+        }
+
+        function openGitHubSettings() {
+            document.getElementById('gh-token').value = localStorage.getItem('gh_token') || '';
+            document.getElementById('gh-owner').value = localStorage.getItem('gh_owner') || 'nttungvx'; 
+            document.getElementById('gh-repo').value = localStorage.getItem('gh_repo') || 'kt-on-thi-tn-vx'; 
+            document.getElementById('github-modal').classList.remove('hidden');
+        }
+        function closeGitHubSettings() { document.getElementById('github-modal').classList.add('hidden'); }
+        function saveGitHubSettings() {
+            localStorage.setItem('gh_token', document.getElementById('gh-token').value.trim());
+            localStorage.setItem('gh_owner', document.getElementById('gh-owner').value.trim());
+            localStorage.setItem('gh_repo', document.getElementById('gh-repo').value.trim());
+            closeGitHubSettings();
+        }
+
+        function exportToWord() {
+            if (!examData) return;
+            const printArea = document.getElementById('print-area');
+            let html = `<div style="text-align: center; margin-bottom: 30px; font-family: 'Times New Roman', serif;"><h2 style="font-size: 18pt; text-transform: uppercase; margin-bottom: 5px;">${examData.title || "ĐỀ THI MÔ PHỎNG ĐỊNH DẠNG 2026"}</h2><div style="font-weight: bold; margin-bottom: 20px; font-size: 13pt;">Môn thi: ${examData.subject || "..."} <br><em>(Thời gian làm bài: ${examData.timeLimit ? examData.timeLimit/60 : "..."} phút)</em></div><div style="text-align: center; margin-bottom: 20px;">Họ và tên thí sinh: .......................................................................... Số báo danh: ........................</div></div>`;
+
+            if (examData.part1 && examData.part1.length > 0) {
+                html += `<div style="font-weight: bold; font-size: 14pt; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase;">PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn.</div><div>Thí sinh trả lời từ câu 1 đến câu ${examData.part1.length}. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</div>`;
+                examData.part1.forEach((q, i) => {
+                    html += `<div style="margin-top: 15px;"><strong>Câu ${i+1}: </strong> ${q.q}`;
+                    let img = q.imageUrl || q.image;
+                    if(img && img !== "[CẦN_CHÈN_ẢNH]") html += `<br><img src="${img}" width="400" style="margin: 10px 0;">`;
+                    html += `<table style="width: 100%; margin-top: 8px;"><tr>`;
+                    q.options.forEach((opt, j) => {
+                        html += `<td style="width: 50%; vertical-align: top; padding-bottom: 5px;"><strong>${String.fromCharCode(65+j)}.</strong> ${opt}</td>`;
+                        if(j === 1) html += `</tr><tr>`; 
+                    });
+                    html += `</tr></table></div>`;
+                });
+            }
+
+            if (examData.part2 && examData.part2.length > 0) {
+                html += `<div style="font-weight: bold; font-size: 14pt; margin-top: 30px; margin-bottom: 10px; text-transform: uppercase;">PHẦN II. Câu trắc nghiệm đúng sai.</div><div>Thí sinh trả lời từ câu 1 đến câu ${examData.part2.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</div>`;
+                examData.part2.forEach((q, i) => {
+                    html += `<div style="margin-top: 15px;"><strong>Câu ${i+1}: </strong> ${q.q}`;
+                    let img = q.imageUrl || q.image;
+                    if(img && img !== "[CẦN_CHÈN_ẢNH]") html += `<br><img src="${img}" width="400" style="margin: 10px 0;">`;
+                    html += `<ul style="list-style-type: none; padding-left: 15px; margin-top: 8px;">`;
+                    q.items.forEach((item, j) => { html += `<li style="margin-bottom: 5px;"><strong>${String.fromCharCode(97+j)})</strong> ${item}</li>`; });
+                    html += `</ul></div>`;
+                });
+            }
+
+            if (examData.part3 && examData.part3.length > 0) {
+                html += `<div style="font-weight: bold; font-size: 14pt; margin-top: 30px; margin-bottom: 10px; text-transform: uppercase;">PHẦN III. Câu trắc nghiệm trả lời ngắn.</div><div>Thí sinh trả lời từ câu 1 đến câu ${examData.part3.length}.</div>`;
+                examData.part3.forEach((q, i) => {
+                    html += `<div style="margin-top: 15px;"><strong>Câu ${i+1}: </strong> ${q.q}`;
+                    let img = q.imageUrl || q.image;
+                    if(img && img !== "[CẦN_CHÈN_ẢNH]") html += `<br><img src="${img}" width="400" style="margin: 10px 0;">`;
+                    html += `</div>`;
+                });
+            }
+
+            html += `<div style="text-align: center; margin-top: 50px; font-weight: bold;">------------- HẾT -------------</div>`;
+            html += `<br style="page-break-before: always; clear: both;" /><h2 style="text-align: center; font-size: 16pt; margin-bottom: 5px;">ĐÁP ÁN ĐỀ THI: ${examData.title || ""}</h2><div style="text-align: center; font-weight: bold; margin-bottom: 30px; font-size: 14pt;">MÔN: ${examData.subject || "..."}</div>`;
+            
+            if (examData.part1 && examData.part1.length > 0) {
+                html += `<h3 style="font-size: 13pt;">PHẦN I. TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN</h3><table style="width: 100%; border-collapse: collapse; text-align: center; margin-bottom: 25px;" border="1"><tr>`;
+                for(let i=0; i<examData.part1.length; i++) {
+                    let ans = examData.part1[i].ans;
+                    let letter = Array.isArray(ans) ? ans.map(a => String.fromCharCode(65+a)).join(' / ') : String.fromCharCode(65+ans);
+                    html += `<td style="padding: 8px;"><strong>${i+1}</strong><br>${letter}</td>`;
+                    if ((i+1) % 10 === 0 && i !== examData.part1.length -1) html += `</tr><tr>`;
+                }
+                html += `</tr></table>`;
+            }
+
+            if (examData.part2 && examData.part2.length > 0) {
+                html += `<h3 style="font-size: 13pt;">PHẦN II. TRẮC NGHIỆM ĐÚNG/SAI</h3><table style="width: 100%; border-collapse: collapse; text-align: center; margin-bottom: 25px;" border="1"><tr><th style="padding: 8px;">Câu</th><th style="padding: 8px;">Ý a</th><th style="padding: 8px;">Ý b</th><th style="padding: 8px;">Ý c</th><th style="padding: 8px;">Ý d</th></tr>`;
+                examData.part2.forEach((q, i) => {
+                    html += `<tr><td style="padding: 8px;"><strong>${i+1}</strong></td>`;
+                    for(let j=0; j<4; j++) { let text = q.ans[j] === true ? "Đ" : (q.ans[j] === false ? "S" : ""); html += `<td style="padding: 8px;">${text}</td>`; }
+                    html += `</tr>`;
+                });
+                html += `</table>`;
+            }
+
+            if (examData.part3 && examData.part3.length > 0) {
+                html += `<h3 style="font-size: 13pt;">PHẦN III. TRẮC NGHIỆM TRẢ LỜI NGẮN</h3><table style="width: 100%; border-collapse: collapse; text-align: center;" border="1"><tr>`;
+                for(let i=0; i<examData.part3.length; i++) {
+                    let ans = Array.isArray(examData.part3[i].ans) ? examData.part3[i].ans.join(' / ') : examData.part3[i].ans;
+                    html += `<td style="padding: 8px;"><strong>Câu ${i+1}</strong><br>${ans}</td>`;
+                    if ((i+1) % 5 === 0 && i !== examData.part3.length -1) html += `</tr><tr>`;
+                }
+                html += `</tr></table>`;
+            }
+
+            printArea.innerHTML = html;
+            if(window.MathJax) { MathJax.typesetClear([printArea]); MathJax.typesetPromise([printArea]).then(() => { executeWordDownload(printArea.innerHTML); });
+            } else { executeWordDownload(printArea.innerHTML); }
+        }
+
+        function executeWordDownload(content) {
+            let sourceHTML = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export Word</title></head><body style='font-family: Times New Roman, serif; font-size: 13pt;'>" + content + "</body></html>";
+            let blob = new Blob(['\ufeff', sourceHTML], { type: 'application/msword' });
+            let url = URL.createObjectURL(blob); let a = document.createElement("a"); a.href = url;
+            a.download = (examData.title ? examData.title.replace(/[\\/:*?"<>|]/g, "").trim() : "De_Thi") + '.doc';
+            document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
         }
     </script>
 </body>
