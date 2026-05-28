@@ -82,4 +82,219 @@ Dưới đây là các quy tắc bắt buộc:
                         <span class="font-bold text-slate-700 text-sm">Dán trực tiếp Code JSON</span>
                         <button onclick="document.getElementById('json-paste').value=''" class="text-rose-500 hover:bg-rose-100 px-3 py-1 rounded-md transition text-xs font-bold flex items-center gap-1"><i class="fa-regular fa-trash-can"></i> XÓA TRẮNG</button>
                     </div>
-                    <textarea id="json-paste" class="flex-1 w-full bg-
+                    <textarea id="json-paste" class="flex-1 w-full bg-white border border-slate-200 rounded-xl p-4 text-sm font-mono outline-none focus:border-indigo-400 transition" placeholder="{\n   &#34;timeLimit&#34;: 3000,\n   ...\n}"></textarea>
+                    <button onclick="processJSON()" class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 rounded-xl transition shadow-md">XỬ LÝ CODE JSON</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="step2-area" class="hidden bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                <span class="bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">2</span>
+                <h2 class="text-lg font-bold text-slate-800">Thông Tin Đề Thi & Lưu Trữ</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Mã Đề Thi</label>
+                    <input type="text" id="edit-made" class="w-full border border-slate-300 rounded-lg p-3 font-bold text-indigo-700 uppercase outline-none focus:border-indigo-500" placeholder="VD: 12TOAN01">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Môn Thi</label>
+                    <select id="edit-mon" class="w-full border border-slate-300 rounded-lg p-3 font-medium outline-none focus:border-indigo-500 bg-white">
+                        <option value="TOAN">Toán học</option><option value="LY">Vật lí</option><option value="HOA">Hóa học</option><option value="SINH">Sinh học</option><option value="DIA">Địa lí</option><option value="SU">Lịch sử</option><option value="GDKT-PL">GD KT-PL</option><option value="TIN">Tin học</option><option value="CNCN">CN Công nghiệp</option><option value="CNNN">CN Nông nghiệp</option><option value="NN">Ngoại ngữ</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Thời gian (Giây)</label>
+                    <input type="number" id="edit-time" class="w-full border border-slate-300 rounded-lg p-3 font-medium outline-none focus:border-indigo-500">
+                </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-6 h-48 overflow-y-auto" id="preview-box">
+                <div class="text-center text-slate-400 mt-16"><i class="fa-solid fa-eye text-4xl mb-2"></i><p>Nội dung xem trước sẽ hiển thị tại đây</p></div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button onclick="downloadFile()" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 rounded-xl shadow-md transition flex items-center justify-center gap-2"><i class="fa-solid fa-download"></i> TẢI FILE .JSON MỚI</button>
+                <button onclick="pushToGitHub()" id="btn-push" class="flex-1 bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 rounded-xl shadow-md transition flex items-center justify-center gap-2"><i class="fa-brands fa-github"></i> LƯU THẲNG LÊN GITHUB</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="config-modal" class="fixed inset-0 bg-slate-900/60 hidden items-center justify-center z-50 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-2xl">
+            <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-3"><i class="fa-brands fa-github mr-2"></i>Cấu Hình GitHub</h3>
+            <div class="space-y-4">
+                <div><label class="block text-sm font-bold text-slate-600 mb-1">Tài khoản (Owner)</label><input type="text" id="gh-owner" class="w-full border border-slate-300 rounded-lg p-2.5 font-medium" value="nttungvx"></div>
+                <div><label class="block text-sm font-bold text-slate-600 mb-1">Tên kho (Repository)</label><input type="text" id="gh-repo" class="w-full border border-slate-300 rounded-lg p-2.5 font-medium" value="kt-on-thi-tn-vx"></div>
+                <div><label class="block text-sm font-bold text-slate-600 mb-1">Mã Token (PAT)</label><input type="password" id="gh-token" class="w-full border border-slate-300 rounded-lg p-2.5" placeholder="ghp_..."></div>
+            </div>
+            <div class="flex justify-end gap-3 mt-6">
+                <button onclick="document.getElementById('config-modal').classList.add('hidden')" class="px-5 py-2.5 bg-slate-100 rounded-lg font-bold text-slate-600 hover:bg-slate-200">Hủy</button>
+                <button onclick="saveConfig()" class="px-5 py-2.5 bg-indigo-600 rounded-lg font-bold text-white hover:bg-indigo-700">Lưu cấu hình</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gh-load-modal" class="fixed inset-0 bg-slate-900/60 hidden items-center justify-center z-50 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-2xl">
+            <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-3"><i class="fa-solid fa-cloud-arrow-down mr-2"></i>Tải Đề Từ GitHub</h3>
+            <p class="text-sm text-slate-500 mb-4">Nhập mã đề đã có trên kho để kéo dữ liệu về chỉnh sửa.</p>
+            <input type="text" id="pull-made" class="w-full border border-slate-300 rounded-lg p-3 font-bold text-center uppercase text-lg mb-6 outline-none focus:border-indigo-500" placeholder="VD: 12TOAN01">
+            <div class="flex justify-end gap-3">
+                <button onclick="document.getElementById('gh-load-modal').classList.add('hidden')" class="px-5 py-2.5 bg-slate-100 rounded-lg font-bold text-slate-600 hover:bg-slate-200">Hủy</button>
+                <button onclick="pullFromGitHub()" id="btn-pull" class="px-5 py-2.5 bg-indigo-600 rounded-lg font-bold text-white hover:bg-indigo-700 flex items-center gap-2"><i class="fa-solid fa-download"></i> Kéo Dữ Liệu</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let examDataObj = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('gh-owner').value = localStorage.getItem('gh_owner') || 'nttungvx';
+            document.getElementById('gh-repo').value = localStorage.getItem('gh_repo') || 'kt-on-thi-tn-vx';
+            document.getElementById('gh-token').value = localStorage.getItem('gh_token') || '';
+        });
+
+        function copyPrompt() {
+            navigator.clipboard.writeText(document.getElementById('ai-prompt').value);
+            alert("Đã copy lệnh! Hãy dán vào khung chat của AI.");
+        }
+
+        function openConfig() { document.getElementById('config-modal').classList.remove('hidden'); document.getElementById('config-modal').classList.add('flex'); }
+        function saveConfig() {
+            localStorage.setItem('gh_owner', document.getElementById('gh-owner').value.trim());
+            localStorage.setItem('gh_repo', document.getElementById('gh-repo').value.trim());
+            localStorage.setItem('gh_token', document.getElementById('gh-token').value.trim());
+            document.getElementById('config-modal').classList.add('hidden');
+            alert("Đã lưu cấu hình GitHub!");
+        }
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('json-paste').value = e.target.result;
+                processJSON();
+            };
+            reader.readAsText(file);
+        }
+
+        function processJSON() {
+            const text = document.getElementById('json-paste').value.trim();
+            if(!text) return alert("Vui lòng dán code JSON!");
+            try {
+                let cleanText = text;
+                const start = text.indexOf('{'), end = text.lastIndexOf('}');
+                if(start !== -1 && end !== -1) cleanText = text.substring(start, end + 1);
+                
+                examDataObj = JSON.parse(cleanText);
+                loadToEditor();
+                alert("Nạp JSON thành công!");
+            } catch(e) {
+                alert("Lỗi cú pháp JSON: " + e.message);
+            }
+        }
+
+        function loadToEditor() {
+            document.getElementById('step2-area').classList.remove('hidden');
+            document.getElementById('edit-made').value = examDataObj.examId || examDataObj.maDe || '';
+            document.getElementById('edit-mon').value = examDataObj.subject || 'TOAN';
+            document.getElementById('edit-time').value = examDataObj.timeLimit || 3000;
+            
+            let previewHTML = `<h3 class="font-bold text-lg mb-3">${examDataObj.title || 'Đề thi'}</h3>`;
+            if(examDataObj.part1 && examDataObj.part1.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-500 mb-2 mt-4">PHẦN 1: TRẮC NGHIỆM (${examDataObj.part1.length} câu)</p>`;
+            if(examDataObj.part2 && examDataObj.part2.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-500 mb-2 mt-4">PHẦN 2: ĐÚNG/SAI (${examDataObj.part2.length} câu)</p>`;
+            if(examDataObj.part3 && examDataObj.part3.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-500 mb-2 mt-4">PHẦN 3: TRẢ LỜI NGẮN (${examDataObj.part3.length} câu)</p>`;
+            
+            document.getElementById('preview-box').innerHTML = previewHTML;
+        }
+
+        function syncData() {
+            if(!examDataObj) return false;
+            let made = document.getElementById('edit-made').value.trim().toUpperCase();
+            if(!made) { alert("Vui lòng điền Mã Đề Thi!"); return false; }
+            examDataObj.examId = made;
+            examDataObj.maDe = made;
+            examDataObj.subject = document.getElementById('edit-mon').value;
+            examDataObj.timeLimit = parseInt(document.getElementById('edit-time').value) || 3000;
+            return true;
+        }
+
+        function downloadFile() {
+            if(!syncData()) return;
+            const blob = new Blob([JSON.stringify(examDataObj, null, 4)], { type: "application/json" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = examDataObj.maDe + ".json";
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        }
+
+        async function pushToGitHub() {
+            if(!syncData()) return;
+            const token = localStorage.getItem('gh_token');
+            const owner = localStorage.getItem('gh_owner') || 'nttungvx';
+            const repo = localStorage.getItem('gh_repo') || 'kt-on-thi-tn-vx';
+
+            if (!token) return alert("Chưa có mã Token! Vui lòng vào Cấu Hình GitHub để nhập.");
+
+            const fileName = `${examDataObj.maDe}.json`;
+            const path = `data/${fileName}`;
+            const contentBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(examDataObj, null, 4))));
+
+            const btn = document.getElementById('btn-push');
+            const oldHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ĐANG ĐẨY LÊN...'; btn.disabled = true;
+
+            try {
+                let sha = null;
+                const checkRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, { headers: { "Authorization": `token ${token}` } });
+                if (checkRes.ok) sha = (await checkRes.json()).sha;
+
+                const bodyData = { message: `Upload đề ${fileName}`, content: contentBase64 };
+                if (sha) bodyData.sha = sha;
+
+                const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+                    method: 'PUT', headers: { "Authorization": `token ${token}`, "Content-Type": "application/json" }, body: JSON.stringify(bodyData)
+                });
+
+                if (putRes.ok) alert(`✅ THÀNH CÔNG! Đề thi ${fileName} đã được đồng bộ lên kho dữ liệu của học sinh.`);
+                else alert("❌ Lỗi GitHub: " + (await putRes.json()).message);
+            } catch(e) { alert("❌ Lỗi mạng hoặc Token không đúng."); }
+            btn.innerHTML = oldHtml; btn.disabled = false;
+        }
+
+        async function pullFromGitHub() {
+            const made = document.getElementById('pull-made').value.trim().toUpperCase();
+            if(!made) return alert("Nhập mã đề!");
+            const owner = localStorage.getItem('gh_owner') || 'nttungvx';
+            const repo = localStorage.getItem('gh_repo') || 'kt-on-thi-tn-vx';
+            
+            const btn = document.getElementById('btn-pull');
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang kéo...'; btn.disabled = true;
+
+            try {
+                const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
+                if(!res.ok) throw new Error("Không tìm thấy thư mục data");
+                const files = await res.json();
+                const target = files.find(f => f.name.toUpperCase() === `${made}.JSON` || f.name.toUpperCase().startsWith(`${made}_`));
+                if(!target) throw new Error("Không tìm thấy mã đề này trên GitHub!");
+                
+                const dataRes = await fetch(target.download_url);
+                examDataObj = await dataRes.json();
+                
+                document.getElementById('json-paste').value = JSON.stringify(examDataObj, null, 4);
+                loadToEditor();
+                document.getElementById('gh-load-modal').classList.add('hidden');
+                alert("Kéo dữ liệu thành công!");
+            } catch(e) { alert("❌ Lỗi: " + e.message); }
+            
+            btn.innerHTML = '<i class="fa-solid fa-download"></i> Kéo Dữ Liệu'; btn.disabled = false;
+        }
+    </script>
+</body>
+</html>
