@@ -2,19 +2,27 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Trung Tâm Xử Lý Đề Thi - NTTPRO</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         window.MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
             startup: { typeset: false }
         };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .dark body { background-color: #000000; color: #e2e8f0; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .prompt-box { background-color: #f8fafc; border: 1px solid #e2e8f0; }
         .custom-file-upload:hover { border-color: #6366f1; background-color: #e0e7ff; }
     </style>
@@ -43,19 +51,60 @@
                 <div class="flex items-center gap-3">
                     <span class="bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">0</span>
                     <h2 class="text-lg font-bold text-slate-800">Lấy lệnh (Prompt) cho AI</h2>
-                    <span class="text-xs text-slate-500 font-medium hidden sm:inline-block">Copy đoạn lệnh này, gửi cho AI kèm file đề gốc để lấy JSON.</span>
+                    <span class="text-xs text-slate-500 font-medium hidden sm:inline-block">Copy đoạn lệnh này, gửi cho AI kèm file đề gốc để lấy JSON cấu trúc mới.</span>
                 </div>
                 <button onclick="copyPrompt()" class="bg-indigo-100 hover:bg-indigo-200 text-indigo-700 font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition text-sm">
                     <i class="fa-solid fa-copy"></i> COPY PROMPT
                 </button>
             </div>
-            <textarea id="ai-prompt" class="w-full h-32 p-4 prompt-box rounded-xl text-sm text-slate-700 outline-none resize-none font-medium leading-relaxed" readonly>Đóng vai trò là một chuyên gia số hóa dữ liệu giáo dục và giáo viên luyện thi THPT Quốc gia. Tôi sẽ cung cấp một tài liệu chứa đề thi. Nhiệm vụ của bạn là trích xuất dữ liệu từ tài liệu đó và chuyển đổi chính xác thành một tệp định dạng JSON.
+            <textarea id="ai-prompt" class="w-full h-48 p-4 prompt-box rounded-xl text-sm text-slate-700 outline-none resize-none font-medium leading-relaxed" readonly>Đóng vai trò là một chuyên gia số hóa dữ liệu giáo dục và giáo viên luyện thi THPT Quốc gia. Tôi sẽ cung cấp một tài liệu chứa đề thi. Nhiệm vụ của bạn là trích xuất dữ liệu từ tài liệu đó và chuyển đổi chính xác thành một tệp định dạng JSON.
 
 Dưới đây là các quy tắc bắt buộc:
+
 1. TRÍCH XUẤT THÔNG TIN CHUNG (METADATA):
-- "subject": Tự động nhận diện môn học và ghi Mã (TOAN, LY, HOA, SINH, DIA, SU, GDKT-PL, TIN, CNCN, CNNN, NN).
-- "timeLimit": Thời gian làm bài (tính bằng giây).
-2. CẤU TRÚC JSON: Phân loại đúng vào "part1", "part2", "part3". Các công thức Toán học phải bọc trong dấu $...$ (inline) hoặc $$...$$ (block) theo chuẩn LaTeX.</textarea>
+- "subject": Tự động nhận diện môn học và ghi Mã số. (00: Toán, 01: Vật lí, 02: Hóa học, 03: Sinh học, 04: Ngữ văn, 05: Lịch sử, 06: Địa lí, 07: Tiếng Anh, 08: GDKT & PL, 09: Tin học, 10: Công nghệ CN, 11: Công nghệ NN).
+- "title": Tên đề thi (VD: "Đề thi thử Sở Hà Nội Lần 1").
+- "timeLimit": Thời gian làm bài tính bằng GIÂY (VD: 90 phút -> 5400). Nếu trong đề không ghi, mặc định là 3000.
+- Điểm số: 
+  + "p1_points": 0.25 (Mặc định mọi môn).
+  + "p2_points": [0.1, 0.25, 0.5, 1.0] (Mặc định mọi môn).
+  + "p3_points": 0.5 đối với Toán; 0.25 đối với các môn khác.
+
+2. CẤU TRÚC 3 PHẦN CỦA ĐỀ THI:
+- part1 (Trắc nghiệm 4 lựa chọn): "ans" là số nguyên (0 tương ứng A, 1=B, 2=C, 3=D). 
+- part2 (Trắc nghiệm Đúng/Sai): Mảng "items" KHÔNG kèm theo các chữ cái "a), b), c), d)" ở đầu câu. "ans" là mảng boolean [true, false, true, false].
+- part3 (Trả lời ngắn): "ans" BẮT BUỘC TỐI ĐA 4 KÝ TỰ (đã tính dấu "-" và ","). Nếu là số thập phân, bắt buộc dùng dấu phẩy (,) không dùng dấu chấm (.). Ví dụ hợp lệ: "-1,5", "1693", "3,5".
+
+3. XỬ LÝ HÌNH ẢNH & LỜI GIẢI (QUAN TRỌNG):
+- Hình ảnh/Bảng biểu: Mọi bảng biểu đều phải coi là hình ảnh. TUYỆT ĐỐI KHÔNG chèn chữ "[CẦN_CHÈN_ẢNH]" vào nội dung text của câu hỏi ("q"). Phải tạo một trường mới ngang hàng với "q", đặt tên là "image": "[CẦN_CHÈN_ẢNH]".
+- Lời giải: Trích xuất vào "explanation". Nếu không có sẵn lời giải, bạn hãy tự giải chính xác và viết chi tiết vào đây.
+- Ảnh trong lời giải: Nếu lời giải có đồ thị/ảnh, tạo trường ngang hàng là "explanationImage": "[CẦN_CHÈN_ẢNH_GIẢI_THÍCH]".
+- Câu hỏi chùm: SAO CHÉP toàn bộ đoạn văn bản ngữ cảnh dùng chung và gắn trực tiếp vào đầu trường "q" của TỪNG câu hỏi liên quan.
+
+4. QUY TẮC BẢO MẬT JSON VÀ TOÁN HỌC (LUẬT THÉP):
+- Cấm lỗi Escape LaTeX: Mọi ký tự gạch chéo ngược (\) trong LaTeX BẮT BUỘC phải nhân đôi (\\). VD ĐÚNG: \\frac{1}{2}, \\sqrt{x}. VD SAI: \frac{1}{2}.
+- Định dạng Toán: Toàn bộ công thức toán học phải được bọc trong cặp dấu $.
+- Cấm lỗi thẻ HTML: BẮT BUỘC phải có khoảng trắng ở hai bên dấu bé hơn (<) và lớn hơn (>). VD ĐÚNG: $x < y + 1$. VD SAI: $x<y+1$. Tránh viết liền ký tự làm trình duyệt hiểu nhầm là thẻ HTML.
+- Xuống dòng trong chuỗi: KHÔNG tự ý nhấn phím Enter xuống dòng bên trong giá trị chuỗi (sẽ gây lỗi parse JSON). Để bẻ dòng, BẮT BUỘC gõ 2 ký tự \ và n liền nhau. (Ví dụ ĐÚNG: "Đoạn 1\nĐoạn 2").
+
+5. CẤU TRÚC JSON MẪU BẮT BUỘC:
+{
+    "timeLimit": 5400,
+    "subject": "00",
+    "title": "Đề Khảo Sát",
+    "p1_points": 0.25,
+    "p2_points": [0.1, 0.25, 0.5, 1.0],
+    "p3_points": 0.5,
+    "part1": [ 
+        { "q": "Nội dung câu hỏi?", "image": "[CẦN_CHÈN_ẢNH]", "options": ["Đáp án A", "Đáp án B", "Đáp án C", "Đáp án D"], "ans": 0, "explanation": "Chi tiết lời giải", "explanationImage": "[CẦN_CHÈN_ẢNH_GIẢI_THÍCH]" } 
+    ],
+    "part2": [ 
+        { "q": "Nội dung câu hỏi lớn?", "items": ["Ý 1", "Ý 2", "Ý 3", "Ý 4"], "ans": [true, false, true, false], "explanation": "Chi tiết lời giải" } 
+    ],
+    "part3": [ 
+        { "q": "Nội dung câu hỏi?", "ans": "-1,5", "explanation": "Chi tiết lời giải" } 
+    ]
+}</textarea>
         </div>
 
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
@@ -82,7 +131,7 @@ Dưới đây là các quy tắc bắt buộc:
                         <span class="font-bold text-slate-700 text-sm">Dán trực tiếp Code JSON</span>
                         <button onclick="document.getElementById('json-paste').value=''" class="text-rose-500 hover:bg-rose-100 px-3 py-1 rounded-md transition text-xs font-bold flex items-center gap-1"><i class="fa-regular fa-trash-can"></i> XÓA TRẮNG</button>
                     </div>
-                    <textarea id="json-paste" class="flex-1 w-full bg-white border border-slate-200 rounded-xl p-4 text-sm font-mono outline-none focus:border-indigo-400 transition" placeholder="{\n   &#34;timeLimit&#34;: 3000,\n   ...\n}"></textarea>
+                    <textarea id="json-paste" class="flex-1 w-full bg-white border border-slate-200 rounded-xl p-4 text-sm font-mono outline-none focus:border-indigo-400 transition" placeholder="{\n   &#34;timeLimit&#34;: 5400,\n   ...\n}"></textarea>
                     <button onclick="processJSON()" class="mt-4 w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 rounded-xl transition shadow-md">XỬ LÝ CODE JSON</button>
                 </div>
             </div>
@@ -100,9 +149,20 @@ Dưới đây là các quy tắc bắt buộc:
                     <input type="text" id="edit-made" class="w-full border border-slate-300 rounded-lg p-3 font-bold text-indigo-700 uppercase outline-none focus:border-indigo-500" placeholder="VD: 12TOAN01">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Môn Thi</label>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Môn Thi (Mã hóa mới)</label>
                     <select id="edit-mon" class="w-full border border-slate-300 rounded-lg p-3 font-medium outline-none focus:border-indigo-500 bg-white">
-                        <option value="TOAN">Toán học</option><option value="LY">Vật lí</option><option value="HOA">Hóa học</option><option value="SINH">Sinh học</option><option value="DIA">Địa lí</option><option value="SU">Lịch sử</option><option value="GDKT-PL">GD KT-PL</option><option value="TIN">Tin học</option><option value="CNCN">CN Công nghiệp</option><option value="CNNN">CN Nông nghiệp</option><option value="NN">Ngoại ngữ</option>
+                        <option value="00">Toán học (00)</option>
+                        <option value="01">Vật lí (01)</option>
+                        <option value="02">Hóa học (02)</option>
+                        <option value="03">Sinh học (03)</option>
+                        <option value="04">Ngữ văn (04)</option>
+                        <option value="05">Lịch sử (05)</option>
+                        <option value="06">Địa lí (06)</option>
+                        <option value="07">Tiếng Anh (07)</option>
+                        <option value="08">GD Kinh tế & Pháp luật (08)</option>
+                        <option value="09">Tin học (09)</option>
+                        <option value="10">Công nghệ Công nghiệp (10)</option>
+                        <option value="11">Công nghệ Nông nghiệp (11)</option>
                     </select>
                 </div>
                 <div>
@@ -161,7 +221,7 @@ Dưới đây là các quy tắc bắt buộc:
 
         function copyPrompt() {
             navigator.clipboard.writeText(document.getElementById('ai-prompt').value);
-            alert("Đã copy lệnh! Hãy dán vào khung chat của AI.");
+            alert("Đã copy bộ lệnh trích xuất dữ liệu mới! Hãy dán vào khung chat của AI.");
         }
 
         function openConfig() { document.getElementById('config-modal').classList.remove('hidden'); document.getElementById('config-modal').classList.add('flex'); }
@@ -203,13 +263,13 @@ Dưới đây là các quy tắc bắt buộc:
         function loadToEditor() {
             document.getElementById('step2-area').classList.remove('hidden');
             document.getElementById('edit-made').value = examDataObj.examId || examDataObj.maDe || '';
-            document.getElementById('edit-mon').value = examDataObj.subject || 'TOAN';
+            document.getElementById('edit-mon').value = examDataObj.subject || '00';
             document.getElementById('edit-time').value = examDataObj.timeLimit || 3000;
             
-            let previewHTML = `<h3 class="font-bold text-lg mb-3">${examDataObj.title || 'Đề thi'}</h3>`;
-            if(examDataObj.part1 && examDataObj.part1.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-500 mb-2 mt-4">PHẦN 1: TRẮC NGHIỆM (${examDataObj.part1.length} câu)</p>`;
-            if(examDataObj.part2 && examDataObj.part2.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-500 mb-2 mt-4">PHẦN 2: ĐÚNG/SAI (${examDataObj.part2.length} câu)</p>`;
-            if(examDataObj.part3 && examDataObj.part3.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-500 mb-2 mt-4">PHẦN 3: TRẢ LỜI NGẮN (${examDataObj.part3.length} câu)</p>`;
+            let previewHTML = `<h3 class="font-bold text-lg mb-3 text-indigo-600">${examDataObj.title || 'Đề thi trích xuất'}</h3>`;
+            if(examDataObj.part1 && examDataObj.part1.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-600 mb-1 mt-2">🔹 Phần 1: Trắc nghiệm 4 lựa chọn (${examDataObj.part1.length} câu)</p>`;
+            if(examDataObj.part2 && examDataObj.part2.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-600 mb-1 mt-2">🔹 Phần 2: Trắc nghiệm Đúng/Sai (${examDataObj.part2.length} câu)</p>`;
+            if(examDataObj.part3 && examDataObj.part3.length > 0) previewHTML += `<p class="text-sm font-bold text-slate-600 mb-1 mt-2">🔹 Phần 3: Trả lời ngắn (${examDataObj.part3.length} câu)</p>`;
             
             document.getElementById('preview-box').innerHTML = previewHTML;
         }
@@ -248,23 +308,23 @@ Dưới đây là các quy tắc bắt buộc:
 
             const btn = document.getElementById('btn-push');
             const oldHtml = btn.innerHTML;
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ĐANG ĐẨY LÊN...'; btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>ĐANG ĐẨY LÊN...'; btn.disabled = true;
 
             try {
                 let sha = null;
                 const checkRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, { headers: { "Authorization": `token ${token}` } });
                 if (checkRes.ok) sha = (await checkRes.json()).sha;
 
-                const bodyData = { message: `Upload đề ${fileName}`, content: contentBase64 };
+                const bodyData = { message: `Upload đề ${fileName} cấu trúc mới`, content: contentBase64 };
                 if (sha) bodyData.sha = sha;
 
                 const putRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
                     method: 'PUT', headers: { "Authorization": `token ${token}`, "Content-Type": "application/json" }, body: JSON.stringify(bodyData)
                 });
 
-                if (putRes.ok) alert(`✅ THÀNH CÔNG! Đề thi ${fileName} đã được đồng bộ lên kho dữ liệu của học sinh.`);
+                if (putRes.ok) alert(`✅ THÀNH CÔNG THẦY TÙNG ơi! Đề thi cấu trúc mới ${fileName} đã được lưu thẳng lên hệ thống học sinh.`);
                 else alert("❌ Lỗi GitHub: " + (await putRes.json()).message);
-            } catch(e) { alert("❌ Lỗi mạng hoặc Token không đúng."); }
+            } catch(e) { alert("❌ Lỗi mạng hoặc Token không chính xác."); }
             btn.innerHTML = oldHtml; btn.disabled = false;
         }
 
@@ -275,7 +335,7 @@ Dưới đây là các quy tắc bắt buộc:
             const repo = localStorage.getItem('gh_repo') || 'kt-on-thi-tn-vx';
             
             const btn = document.getElementById('btn-pull');
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang kéo...'; btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Đang kéo...'; btn.disabled = true;
 
             try {
                 const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
@@ -290,10 +350,10 @@ Dưới đây là các quy tắc bắt buộc:
                 document.getElementById('json-paste').value = JSON.stringify(examDataObj, null, 4);
                 loadToEditor();
                 document.getElementById('gh-load-modal').classList.add('hidden');
-                alert("Kéo dữ liệu thành công!");
+                alert("Kéo dữ liệu từ GitHub thành công!");
             } catch(e) { alert("❌ Lỗi: " + e.message); }
             
-            btn.innerHTML = '<i class="fa-solid fa-download"></i> Kéo Dữ Liệu'; btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-download mr-2"></i>Kéo Dữ Liệu'; btn.disabled = false;
         }
     </script>
 </body>
