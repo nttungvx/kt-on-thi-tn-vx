@@ -488,24 +488,19 @@
                lop: dataHS.lop || "Chưa phân lớp", 
                maDe: made, 
                diemTN: total.toFixed(2), 
-               chiTiet: `Đã nộp. Cảnh cáo gian lận: ${cheatWarnings} lần.`, 
-               // ƯU TIÊN MÃ MÔN LẤY TỪ LINK ĐĂNG NHẬP
+               chiTiet: `Đã nộp. Cảnh cáo: ${cheatWarnings} lần.`, 
                mon: dataHS.mon || examConfig.subject || "TOAN" 
             };
 
-            const API_URL = "https://script.google.com/macros/s/AKfycbwsV6E8jUuYpc4Qw1hWs0ODE4jqHVwmMlvJ5TfsE4lg_c3rC9v7jy8Ph1DD58gStB0JPA/exec";
-            
-            fetch(API_URL, {
-                method: "POST",
-                headers: { "Content-Type": "text/plain;charset=utf-8" },
-                body: JSON.stringify(dbData)
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data.success) alert("🎉 Bài thi của bạn đã được ghi nhận thành công trên hệ thống máy chủ Google Drive!");
-                else console.error("Lỗi ghi dữ liệu backend:", data.msg);
-            })
-            .catch(err => alert("⚠️ Cảnh báo mạng: Điểm số chưa được lưu tự động, hãy báo ngay cho giáo viên!"));
+            // DÙNG GOOGLE SCRIPT RUN TRỰC TIẾP, KHÔNG BAO GIỜ SỢ ĐỔI LINK WEB APP NỮA
+            if (typeof google !== 'undefined' && google.script) {
+                google.script.run.withSuccessHandler(res => {
+                    if(res.success) alert("🎉 Bài thi của bạn đã được ghi nhận thành công trên Google Drive!");
+                    else alert("Lỗi ghi dữ liệu: " + res.msg);
+                }).withFailureHandler(err => {
+                    alert("⚠️ Lỗi kết nối. Bài làm chưa được lưu!");
+                }).luuDiemTuDong(dbData);
+            }
         }
     </script>
 </body>
