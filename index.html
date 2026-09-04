@@ -20,25 +20,13 @@
         html.dark { background-color: #000000; }
         body { transition: background-color 0.3s; }
         .dark body { background-color: #000000; color: #e2e8f0; }
-        
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .dark ::-webkit-scrollbar-thumb { background: #27272a; }
-
-        input[type="radio"] {
-            -webkit-appearance: none; appearance: none;
-            width: 1.25rem; height: 1.25rem;
-            border: 2px solid #94a3b8; border-radius: 50%;
-            background-color: #ffffff; cursor: pointer;
-            position: relative; display: inline-block; vertical-align: middle; margin-top: 0 !important;
-        }
+        input[type="radio"] { -webkit-appearance: none; appearance: none; width: 1.25rem; height: 1.25rem; border: 2px solid #94a3b8; border-radius: 50%; background-color: #ffffff; cursor: pointer; position: relative; display: inline-block; vertical-align: middle; margin-top: 0 !important; }
         input[type="radio"]:checked { border-color: #2563eb; background-color: #2563eb; }
-        input[type="radio"]:checked::after {
-            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #ffffff;
-        }
+        input[type="radio"]:checked::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #ffffff; }
         .dark input[type="radio"] { background-color: #18181b; border-color: #52525b; }
-        
         .locked { pointer-events: none; opacity: 0.95; }
         .question-img { max-height: 40vh; object-fit: contain; margin: 1rem auto; border-radius: 0.5rem; display: block; border: 1px solid #e2e8f0; }
         .dark .question-img { border-color: #27272a; background-color: #e2e8f0; }
@@ -46,9 +34,15 @@
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
 
+    <!-- LỚP PHỦ CHỐNG GIAN LẬN TOÀN MÀN HÌNH -->
+    <div id="fullscreen-overlay" class="fixed inset-0 bg-slate-900/95 backdrop-blur-md z-[9999] flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
+        <i id="fs-icon" class="fa-solid fa-expand text-6xl text-blue-500 mb-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"></i>
+        <h2 id="fs-title" class="text-3xl font-black text-white mb-4 tracking-wide uppercase">CHẾ ĐỘ THI NGHIÊM TÚC</h2>
+        <p id="fs-desc" class="text-slate-300 mb-8 max-w-md text-lg">Bài thi yêu cầu làm trong chế độ Toàn màn hình để đảm bảo công bằng. Mọi hành vi thoát màn hình hoặc chuyển tab sẽ bị cảnh báo.</p>
+        <button id="fs-btn" onclick="enterFullscreen()" class="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all text-xl outline-none">VÀO PHÒNG THI</button>
+    </div>
+
     <div id="main-layout" class="w-full h-full relative flex flex-col overflow-hidden z-10 max-w-[1600px] mx-auto">
-        
-        <!-- NÚT CHUYỂN ĐỔI SÁNG TỐI -->
         <div class="absolute top-4 right-4 z-50 flex items-center gap-2">
             <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-white dark:bg-black border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-zinc-800 shadow-sm outline-none transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
@@ -60,7 +54,7 @@
             <div class="bg-white/90 dark:bg-black/90 p-10 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 text-center w-full max-w-lg">
                 <i class="fa-solid fa-graduation-cap text-6xl text-blue-600 mb-6 block"></i>
                 <h1 id="loading-txt" class="text-2xl font-bold text-slate-800 dark:text-white mb-4"><svg class="animate-spin h-6 w-6 inline-block mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>ĐANG TẢI DỮ LIỆU ĐỀ THI...</h1>
-                <p class="text-slate-500" id="exam-id-display">Đang kết nối hệ thống Cloud GitHub...</p>
+                <p class="text-slate-500" id="exam-id-display">Đang đồng bộ máy chủ...</p>
             </div>
         </div>
 
@@ -105,10 +99,48 @@
     </div> 
 
     <script>
-        // --- XỬ LÝ GIAO DIỆN SÁNG TỐI ---
+        // --- THUẬT TOÁN BẮT BUỘC FULLSCREEN ---
+        function enterFullscreen() {
+            let elem = document.documentElement;
+            if (elem.requestFullscreen) { elem.requestFullscreen().catch(err => console.log(err)); } 
+            else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } 
+            else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); }
+            
+            document.getElementById('fullscreen-overlay').classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => document.getElementById('fullscreen-overlay').classList.add('hidden'), 300);
+            
+            if (examConfig === null) initApp(); // Tải đề nếu chưa tải
+        }
+
+        document.addEventListener('fullscreenchange', checkFullscreen);
+        document.addEventListener('webkitfullscreenchange', checkFullscreen);
+        document.addEventListener('msfullscreenchange', checkFullscreen);
+
+        function checkFullscreen() {
+            if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+                if (!isExamFinished) {
+                    let overlay = document.getElementById('fullscreen-overlay');
+                    overlay.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+                    document.getElementById('fs-icon').className = "fa-solid fa-triangle-exclamation text-6xl text-rose-500 mb-6 drop-shadow-[0_0_15px_rgba(225,29,72,0.5)]";
+                    document.getElementById('fs-title').innerText = "CẢNH BÁO VI PHẠM";
+                    document.getElementById('fs-title').className = "text-3xl font-black text-rose-500 mb-4 tracking-wide uppercase";
+                    document.getElementById('fs-desc').innerText = "Bạn đã thoát chế độ toàn màn hình. Yêu cầu quay lại ngay để tiếp tục bài thi!";
+                    document.getElementById('fs-btn').innerText = "QUAY LẠI BÀI THI";
+                    document.getElementById('fs-btn').className = "px-10 py-5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-2xl shadow-[0_0_20px_rgba(225,29,72,0.4)] transition-all text-xl outline-none";
+                }
+            }
+        }
+        // ----------------------------------------
+
+        try {
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        } catch(e) {}
+
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            try { localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); } catch(e) {}
             updateThemeIcons();
         }
         function updateThemeIcons() {
@@ -116,30 +148,32 @@
             document.querySelectorAll('.theme-icon-moon').forEach(el => el.classList.toggle('hidden', isDark));
             document.querySelectorAll('.theme-icon-sun').forEach(el => el.classList.toggle('hidden', !isDark));
         }
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
         updateThemeIcons();
-        // --------------------------------
 
-        const urlParams = new URLSearchParams(window.location.search);
-        let made = urlParams.get('made');
         let examConfig = null; let allQuestions = []; let currentIndex = 0; let userAnswers = {}; 
         let timeLimitSeconds = 0; let totalSecondsSpent = 0; let timerInterval; let isExamFinished = false;
         const alphabet = ['A','B','C','D','E','F'];
 
-        document.addEventListener("DOMContentLoaded", async function() {
-            if(!made) { document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không có mã đề!</span>"; return; }
-            fetchFromGitHub(made);
-        });
+        function initApp() {
+            let madeCode = new URLSearchParams(window.location.search).get('made');
+            if(!madeCode) { 
+                document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không nhận được mã đề!</span>"; 
+                document.getElementById('exam-id-display').innerText = "Vui lòng thoát ra và đăng nhập lại.";
+                return; 
+            }
+            fetchFromGitHub(madeCode);
+        }
 
         async function fetchFromGitHub(madeId) {
             const owner = "nttungvx"; const repo = "kt-on-thi-tn-vx"; 
+            document.getElementById('exam-id-display').innerHTML = "Đang tải dữ liệu từ GitHub...";
             try {
                 const directUrl = `https://${owner}.github.io/${repo}/data/${encodeURIComponent(madeId)}.json`;
                 const resDirect = await fetch(directUrl);
                 if (resDirect.ok) { examConfig = await resDirect.json(); processExamDataJSON(); return; }
                 
                 const resList = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
-                if (!resList.ok) throw new Error(`Không kết nối được GitHub.`);
+                if (!resList.ok) throw new Error(`Mã lỗi: ${resList.status}`);
                 const files = await resList.json();
                 
                 function khongDau(s) {
@@ -148,12 +182,15 @@
                 
                 let target = khongDau(madeId);
                 const fileTarget = files.find(f => khongDau(f.name) === target || khongDau(f.name).startsWith(target + "_"));
-                if (!fileTarget) throw new Error(`Không tìm thấy mã đề [${madeId}]`);
+                if (!fileTarget) throw new Error(`Không tìm thấy đề [${madeId}]`);
 
                 const resData = await fetch(fileTarget.download_url);
                 examConfig = await resData.json();
                 processExamDataJSON();
-            } catch(e) { document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500">LỖI: ${e.message}</span>`; }
+            } catch(e) { 
+                document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500">❌ LỖI TẢI ĐỀ</span>`;
+                document.getElementById('exam-id-display').innerHTML = e.message;
+            }
         }
 
         function processExamDataJSON() {
@@ -162,7 +199,7 @@
             if (examConfig.part2) examConfig.part2.forEach((q, i) => allQuestions.push({...q, type: 2, p: 2, idx: i}));
             if (examConfig.part3) examConfig.part3.forEach((q, i) => allQuestions.push({...q, type: 3, p: 3, idx: i}));
 
-            document.getElementById('header-title').innerText = examConfig.title;
+            document.getElementById('header-title').innerText = examConfig.title || "Bài thi";
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('exam-screen').classList.remove('hidden');
             buildMinimap(); startTimer(); goToQuestion(0);
@@ -305,6 +342,9 @@
             if(!force && !confirm("Nộp bài thi ngay?")) return;
             isExamFinished = true; clearInterval(timerInterval);
             
+            // Xóa khóa toàn màn hình khi nộp bài xong
+            if (document.exitFullscreen) { document.exitFullscreen().catch(err => {}); }
+            
             let totalScore = 0;
             allQuestions.forEach((q, idx) => { totalScore += calculateScore(q, idx); });
             
@@ -322,6 +362,30 @@
             
             updateMinimapHighlight();
             goToQuestion(currentIndex); 
+            
+            let dataHS = {};
+            try { dataHS = JSON.parse(sessionStorage.getItem('DATA_HS') || '{}'); } catch(e) {}
+            
+            let urlParams = new URLSearchParams(window.location.search);
+            let mon = urlParams.get('mon') || (examConfig ? examConfig.subject : "TOAN");
+            
+            let dbData = { 
+               maHS: urlParams.get('maHS') || "GUEST", 
+               tenHS: urlParams.get('tenHS') || "Khách", 
+               lop: urlParams.get('lop') || "Chưa rõ", 
+               maDe: urlParams.get('made') || "00000", 
+               diemTN: totalScore.toFixed(2), 
+               chiTiet: `Đã nộp bài. Thời gian: ${m}:${s}`, 
+               mon: mon 
+            };
+
+            if (typeof google !== 'undefined' && google.script) {
+                google.script.run.withSuccessHandler(res => {
+                    if(!res.success) alert("Lỗi ghi dữ liệu: " + res.msg);
+                }).withFailureHandler(err => {
+                    console.log("Lỗi kết nối ghi điểm:", err);
+                }).luuDiemTuDong(dbData);
+            }
         }
     </script>
 </body>
