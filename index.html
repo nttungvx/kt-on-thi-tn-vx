@@ -34,7 +34,6 @@
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
 
-    <!-- LỚP PHỦ CHỐNG GIAN LẬN TOÀN MÀN HÌNH -->
     <div id="fullscreen-overlay" class="fixed inset-0 bg-slate-900/95 backdrop-blur-md z-[9999] flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
         <i id="fs-icon" class="fa-solid fa-expand text-6xl text-blue-500 mb-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"></i>
         <h2 id="fs-title" class="text-3xl font-black text-white mb-4 tracking-wide uppercase">CHẾ ĐỘ THI NGHIÊM TÚC</h2>
@@ -57,7 +56,6 @@
                     <i class="fa-solid fa-file-invoice"></i> <span id="header-title">Đề Thi</span>
                 </h2>
                 
-                <!-- CỤM ĐỒNG HỒ VÀ NÚT SÁNG TỐI NẰM CÙNG NHAU -->
                 <div class="flex items-center gap-3">
                     <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-4 py-2 rounded-lg font-bold text-blue-700 dark:text-blue-400 text-lg md:text-xl tracking-wider" id="timer">00:00:00</div>
                     <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-slate-100 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-zinc-700 shadow-sm outline-none transition">
@@ -65,7 +63,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon-sun hidden text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                     </button>
                 </div>
-                
             </header>
 
             <div class="flex-1 flex overflow-hidden w-full relative">
@@ -232,13 +229,30 @@
         function prevQuestion() { goToQuestion(currentIndex - 1); }
         function nextQuestion() { goToQuestion(currentIndex + 1); }
 
+        // CÁC HÀM LƯU ĐÁP ÁN CHO TỪNG PHẦN
+        function saveAnswer(val) { userAnswers[currentIndex] = val; updateProgress(); }
+        
+        function saveAnswer2(subIndex, val) {
+            if (!userAnswers[currentIndex]) userAnswers[currentIndex] = [];
+            userAnswers[currentIndex][subIndex] = val;
+            updateProgress();
+        }
+        
+        function saveAnswer3(val) {
+            userAnswers[currentIndex] = [val]; 
+            updateProgress();
+        }
+
         function renderQuestion() {
             const q = allQuestions[currentIndex]; const isLocked = isExamFinished;
             let html = `<div class="${isLocked ? 'locked' : ''} mb-6 leading-relaxed text-lg font-medium">${q.q}</div>`;
             if (q.image && q.image !== "[CẦN_CHÈN_ẢNH]") html += `<img src="${q.image}" class="question-img">`;
 
+            let saved = userAnswers[currentIndex] || (q.type === 2 ? [] : (q.type === 3 ? [] : null));
+
+            // PHẦN 1: TRẮC NGHIỆM
             if (q.type === 1) {
-                let saved = userAnswers[currentIndex]; html += `<div class="grid gap-3">`;
+                html += `<div class="grid gap-3">`;
                 q.options.forEach((opt, i) => {
                     let checked = saved === i ? 'checked' : '';
                     let extraClass = "border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-900";
@@ -257,25 +271,81 @@
                     }
 
                     html += `<label class="flex items-center p-4 border rounded-lg cursor-pointer transition ${extraClass}">
-                                <input type="radio" name="p1" value="${i}" ${checked} class="mr-3" onchange="saveAnswer(${i})">
+                                <input type="radio" name="p1" value="${i}" ${checked} class="mr-3" onchange="saveAnswer(${i})" ${isLocked?'disabled':''}>
                                 <span class="flex-1 font-medium ${textClass}"><b>${alphabet[i]}.</b> ${opt}</span>
                              </label>`;
                 });
                 html += `</div>`;
             } 
-            
+            // PHẦN 2: BẢNG CHỌN ĐÚNG / SAI
+            else if (q.type === 2) {
+                let rowLabels = ['a', 'b', 'c', 'd'];
+                html += `<div class="overflow-x-auto border border-slate-200 dark:border-zinc-800 rounded-xl shadow-sm mt-4">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-100 dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800">
+                                        <th class="p-4 font-bold text-slate-700 dark:text-slate-300">Phát biểu</th>
+                                        <th class="p-4 font-bold text-emerald-600 text-center w-24">Đúng</th>
+                                        <th class="p-4 font-bold text-rose-500 text-center w-24">Sai</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+                q.options.forEach((opt, i) => {
+                    let sT = saved[i] === 'T' ? 'checked' : '';
+                    let sF = saved[i] === 'F' ? 'checked' : '';
+                    
+                    let iconStatus = "";
+                    if (isLocked) {
+                        let isCorrect = saved[i] === q.ans[i];
+                        iconStatus = isCorrect ? `<i class="fa-solid fa-check text-emerald-500 ml-2"></i>` : `<i class="fa-solid fa-xmark text-rose-500 ml-2"></i>`;
+                    }
+
+                    html += `<tr class="border-b last:border-0 border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-900/50 transition">
+                                <td class="p-4 text-slate-800 dark:text-slate-200 font-medium leading-relaxed"><b>${rowLabels[i]})</b> ${opt} ${iconStatus}</td>
+                                <td class="p-4 text-center bg-emerald-50/30 dark:bg-emerald-900/10 border-l border-slate-200 dark:border-zinc-800">
+                                    <input type="radio" name="p2_${i}" value="T" onchange="saveAnswer2(${i}, 'T')" ${sT} ${isLocked?'disabled':''}>
+                                </td>
+                                <td class="p-4 text-center bg-rose-50/30 dark:bg-rose-900/10 border-l border-slate-200 dark:border-zinc-800">
+                                    <input type="radio" name="p2_${i}" value="F" onchange="saveAnswer2(${i}, 'F')" ${sF} ${isLocked?'disabled':''}>
+                                </td>
+                             </tr>`;
+                });
+                html += `       </tbody>
+                            </table>
+                         </div>`;
+            }
+            // PHẦN 3: Ô ĐIỀN ĐÁP ÁN TRẢ LỜI NGẮN
+            else if (q.type === 3) {
+                let displayVal = saved.join('');
+                html += `<div class="bg-slate-100 dark:bg-zinc-900 p-8 rounded-xl border border-slate-200 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-center gap-6 mt-6">
+                            <span class="font-bold text-slate-700 dark:text-slate-300 text-xl tracking-wider">ĐÁP ÁN:</span>
+                            <input type="text" id="p3-input" value="${displayVal}" oninput="saveAnswer3(this.value)" ${isLocked?'disabled':''}
+                                class="w-full sm:w-64 px-4 py-3 text-center text-3xl font-black text-blue-600 dark:text-blue-400 bg-white dark:bg-black border-2 border-blue-400 dark:border-blue-600 rounded-lg shadow-inner outline-none focus:ring-4 focus:ring-blue-500/20 transition-all placeholder:text-slate-300" placeholder="---">
+                         </div>`;
+            }
+
             if (isLocked) {
+                let correctAnsText = "";
+                if (q.type === 2) {
+                    let rowLabels = ['a', 'b', 'c', 'd'];
+                    let corrects = q.ans.map((a, i) => `${rowLabels[i]}: ${a === 'T' ? 'Đúng' : 'Sai'}`).join(' | ');
+                    correctAnsText = `<div class="mb-3 p-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg border border-blue-200 dark:border-blue-800"><b>Đáp án chuẩn:</b> ${corrects}</div>`;
+                } else if (q.type === 3) {
+                    correctAnsText = `<div class="mb-3 p-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg border border-blue-200 dark:border-blue-800"><b>Đáp án chuẩn:</b> ${q.ans}</div>`;
+                }
+
                 let s = calculateScore(q, currentIndex);
                 let maxS = q.type === 1 ? (examConfig.p1_points || 0.25) : (q.type === 2 ? 1.0 : (examConfig.p3_points || 0.5));
                 let scoreColor = s > 0 ? "text-emerald-600" : "text-rose-500";
 
                 html += `
                 <div class="mt-8 p-6 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl">
-                    <div class="mb-4">
-                        <b class="text-slate-700 dark:text-slate-300">Điểm: </b>
-                        <span class="font-bold ${scoreColor}">${s.toString().replace('.', ',')} / ${maxS.toString().replace('.', ',')}</span>
+                    <div class="flex justify-between items-center mb-4 pb-4 border-b border-slate-200 dark:border-zinc-800">
+                        <b class="text-slate-700 dark:text-slate-300">Điểm đạt được:</b>
+                        <span class="text-xl font-black ${scoreColor}">${s.toString().replace('.', ',')} / ${maxS.toString().replace('.', ',')}</span>
                     </div>
-                    <b class="text-indigo-600 dark:text-indigo-400 mb-2 block uppercase text-sm">Giải thích chi tiết:</b>
+                    ${correctAnsText}
+                    <b class="text-indigo-600 dark:text-indigo-400 mb-2 block uppercase text-sm font-bold mt-4">Giải thích chi tiết:</b>
                     <div class="whitespace-pre-line leading-relaxed text-sm sm:text-base text-slate-700 dark:text-slate-300">
                         ${q.explanation || 'Chưa có lời giải cho câu hỏi này.'}
                     </div>
@@ -285,8 +355,6 @@
             document.getElementById('question-container').innerHTML = html;
             if(window.MathJax) MathJax.typesetPromise();
         }
-
-        function saveAnswer(val) { userAnswers[currentIndex] = val; updateProgress(); }
 
         function buildMinimap() {
             let html = ""; let p = 0;
