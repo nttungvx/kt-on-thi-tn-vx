@@ -16,7 +16,7 @@ function doGet(e) {
     tmp.appUrl = ScriptApp.getService().getUrl();
     return tmp.evaluate().setTitle('Đăng nhập - Hệ thống DTC').setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL).addMetaTag('viewport', 'width=device-width, initial-scale=1');
   } else if (mode === 'exam') {
-    var tmp = HtmlService.createTemplateFromFile('Index');
+    var tmp = HtmlService.createTemplateFromFile('index');
     tmp.made = made; 
     tmp.appUrl = ScriptApp.getService().getUrl();
     tmp.hinhNen = PropertiesService.getScriptProperties().getProperty('HINH_NEN_URL') || ''; 
