@@ -4,50 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Phòng Thi Tốt Nghiệp THPT</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
         window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }, chtml: { scale: 1.1, minScale: 0.5 }, startup: { typeset: false } };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         html { background-color: #f8fafc; font-family: 'Inter', sans-serif; touch-action: pan-y; }
         html.dark { background-color: #000000; }
         body { transition: background-color 0.3s; }
         .dark body { background-color: #000000; color: #e2e8f0; }
-        .locked { pointer-events: none; opacity: 0.95; }
+        
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .dark ::-webkit-scrollbar-thumb { background: #27272a; }
+
+        /* Sửa lỗi hiển thị chấm đen nút radio của Tailwind */
+        input[type="radio"] {
+            -webkit-appearance: none; appearance: none;
+            width: 1.25rem; height: 1.25rem;
+            border: 2px solid #94a3b8; border-radius: 50%;
+            background-color: #ffffff; cursor: pointer;
+            position: relative; display: inline-block; vertical-align: middle; margin-top: 0 !important;
+        }
+        input[type="radio"]:checked { border-color: #2563eb; background-color: #2563eb; }
+        input[type="radio"]:checked::after {
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #ffffff;
+        }
+        .dark input[type="radio"] { background-color: #18181b; border-color: #52525b; }
+        
+        .locked { pointer-events: none; opacity: 0.95; }
         .question-img { max-height: 40vh; object-fit: contain; margin: 1rem auto; border-radius: 0.5rem; display: block; border: 1px solid #e2e8f0; }
         .dark .question-img { border-color: #27272a; background-color: #e2e8f0; }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
+
     <div id="main-layout" class="w-full h-full relative flex flex-col overflow-hidden z-10 max-w-[1600px] mx-auto">
         <div id="start-screen" class="w-full h-full flex flex-col items-center justify-center p-4">
             <div class="bg-white/90 dark:bg-black/90 p-10 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 text-center w-full max-w-lg">
                 <i class="fa-solid fa-graduation-cap text-6xl text-blue-600 mb-6 block"></i>
                 <h1 id="loading-txt" class="text-2xl font-bold text-slate-800 dark:text-white mb-4"><svg class="animate-spin h-6 w-6 inline-block mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>ĐANG TẢI DỮ LIỆU ĐỀ THI...</h1>
-                <p class="text-slate-500 mb-8" id="exam-id-display">Đang kết nối hệ thống dữ liệu...</p>
+                <p class="text-slate-500" id="exam-id-display">Đang kết nối hệ thống Cloud GitHub...</p>
             </div>
         </div>
+
         <div id="exam-screen" class="hidden h-full flex flex-col w-full relative">
             <header class="flex-none bg-white dark:bg-black border-b border-slate-200 dark:border-zinc-800 flex items-center justify-between px-4 py-3 z-30">
-                <h2 class="text-lg font-bold text-blue-700 dark:text-blue-400" id="header-title">Đề Thi</h2>
-                <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-4 py-2 rounded-lg font-bold text-blue-700 dark:text-blue-400 text-lg" id="timer">00:00:00</div>
+                <h2 class="text-lg md:text-xl font-bold text-blue-700 dark:text-blue-400 flex items-center gap-2">
+                    <i class="fa-solid fa-file-invoice"></i> <span id="header-title">Đề Thi</span>
+                </h2>
+                <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-4 py-2 rounded-lg font-bold text-blue-700 dark:text-blue-400 text-lg md:text-xl tracking-wider" id="timer">00:00:00</div>
             </header>
-            <div class="flex-1 overflow-y-auto p-4 md:p-8" id="scroll-container">
-                <div class="w-full max-w-4xl mx-auto">
-                    <div class="mb-6 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-4 py-1.5 rounded-lg font-bold text-sm inline-block" id="current-question-label">PHẦN 1 - CÂU 1</div>
-                    <div id="question-container" class="text-slate-800 dark:text-slate-100 text-base md:text-lg"></div>
+
+            <div class="flex-1 flex overflow-hidden w-full relative">
+                <!-- VÙNG CÂU HỎI BÊN TRÁI -->
+                <div class="flex-1 flex flex-col relative overflow-hidden">
+                   <div class="flex-1 overflow-y-auto p-4 md:p-8" id="scroll-container">
+                        <div class="w-full max-w-4xl mx-auto">
+                            <div class="mb-6 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-4 py-1.5 rounded-lg font-bold text-sm inline-block" id="current-question-label">PHẦN 1 - CÂU 1</div>
+                            <div id="question-container" class="text-slate-800 dark:text-slate-100 text-base md:text-lg"></div>
+                        </div>
+                    </div>
+                    <div class="flex-none bg-white dark:bg-black border-t border-slate-200 dark:border-zinc-800 flex justify-between p-3 gap-2 z-10">
+                        <button onclick="prevQuestion()" class="flex-1 max-w-[150px] py-3 bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 rounded-lg font-bold transition outline-none">Trở lại</button>
+                        <button onclick="nextQuestion()" class="flex-1 max-w-[150px] py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold shadow-md transition outline-none">Câu sau</button>
+                    </div>
                 </div>
-            </div>
-            <div class="flex-none bg-white dark:bg-black border-t border-slate-200 dark:border-zinc-800 flex justify-between p-3 gap-2">
-                <button onclick="prevQuestion()" class="flex-1 py-3 bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 rounded-lg font-bold">Trở lại</button>
-                <button onclick="nextQuestion()" class="flex-1 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold">Câu sau</button>
+                
+                <!-- BẢNG ĐIỀU KHIỂN BÊN PHẢI (MINIMAP) -->
+                <div id="sidebar-menu" class="hidden md:flex flex-col w-[320px] bg-white dark:bg-black border-l border-slate-200 dark:border-zinc-800 shadow-2xl md:shadow-none z-20">
+                    <div class="p-5 border-b border-slate-200 dark:border-zinc-800">
+                        <div class="flex justify-between text-sm text-slate-600 dark:text-slate-400 font-bold uppercase mb-2">
+                            <span>Tiến độ</span><span id="progress-text">0%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 dark:bg-zinc-800 rounded-full h-2.5 overflow-hidden flex">
+                            <div id="pb-completed" class="bg-emerald-500 h-full transition-all" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="flex-1 overflow-y-auto p-5" id="minimap-container"></div>
+                    <div class="p-5 border-t border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950">
+                        <button onclick="finishExam()" id="btn-submit-exam" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl shadow-lg transition text-lg tracking-wide outline-none">NỘP BÀI THI</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div> 
@@ -55,64 +101,38 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         let made = urlParams.get('made');
-        let examConfig = null; let allQuestions = []; let currentIndex = 0; let userAnswers = {}; let timeLimitSeconds = 0; let totalSecondsSpent = 0; let timerInterval; let isExamFinished = false;
+        let examConfig = null; let allQuestions = []; let currentIndex = 0; let userAnswers = {}; 
+        let timeLimitSeconds = 0; let totalSecondsSpent = 0; let timerInterval; let isExamFinished = false;
         const alphabet = ['A','B','C','D','E','F'];
 
         document.addEventListener("DOMContentLoaded", async function() {
             if(!made) { document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không có mã đề!</span>"; return; }
-            
-            if (typeof google !== 'undefined' && google.script) {
-                document.getElementById('exam-id-display').innerHTML = `Đang quét hệ thống dữ liệu Google Drive...`;
-                google.script.run.withSuccessHandler(function(res) {
-                    if (res.success) {
-                        try {
-                            examConfig = JSON.parse(res.data);
-                            processExamDataJSON();
-                        } catch(e) {
-                            document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500">❌ LỖI ĐỌC DỮ LIỆU JSON TỪ DRIVE</span>`;
-                        }
-                    } else {
-                        fetchFromGitHub(made);
-                    }
-                }).withFailureHandler(function() {
-                    fetchFromGitHub(made);
-                }).layNoiDungDeTuDrive(made);
-            } else {
-                fetchFromGitHub(made);
-            }
+            fetchFromGitHub(made);
         });
 
         async function fetchFromGitHub(madeId) {
             const owner = "nttungvx"; const repo = "kt-on-thi-tn-vx"; 
-            document.getElementById('exam-id-display').innerHTML = `Đang tìm trên Cloud GitHub...`;
             try {
                 const directUrl = `https://${owner}.github.io/${repo}/data/${encodeURIComponent(madeId)}.json`;
                 const resDirect = await fetch(directUrl);
                 if (resDirect.ok) { examConfig = await resDirect.json(); processExamDataJSON(); return; }
                 
                 const resList = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
-                if (!resList.ok) throw new Error(`Không kết nối được kho dữ liệu.`);
+                if (!resList.ok) throw new Error(`Không kết nối được GitHub.`);
                 const files = await resList.json();
                 
                 function khongDau(s) {
-                    if (!s) return ""; let str = s.toString().toLowerCase();
-                    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a"); str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
-                    str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i"); str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
-                    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u"); str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y"); str = str.replace(/đ/g, "d");
-                    str = str.replace(/[\u0300-\u036f]/g, ""); return str.replace(/\.json$/i, '').trim();
+                    if (!s) return ""; let str = s.toString().toLowerCase().replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a").replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e").replace(/ì|í|ị|ỉ|ĩ/g, "i").replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o").replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u").replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y").replace(/đ/g, "d").replace(/[\u0300-\u036f]/g, ""); return str.replace(/\.json$/i, '').trim();
                 }
                 
                 let target = khongDau(madeId);
                 const fileTarget = files.find(f => khongDau(f.name) === target || khongDau(f.name).startsWith(target + "_"));
-                
-                if (!fileTarget) throw new Error(`Chưa tìm thấy đề mã [${madeId}] trên hệ thống mới. Thầy vui lòng kiểm tra lại Drive/GitHub!`);
+                if (!fileTarget) throw new Error(`Không tìm thấy mã đề [${madeId}]`);
 
                 const resData = await fetch(fileTarget.download_url);
                 examConfig = await resData.json();
                 processExamDataJSON();
-            } catch(e) {
-                document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500 text-lg font-bold">❌ LỖI TẢI ĐỀ:<br><span class="text-sm font-normal text-slate-500">${e.message}</span></span>`;
-            }
+            } catch(e) { document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500">LỖI: ${e.message}</span>`; }
         }
 
         function processExamDataJSON() {
@@ -124,14 +144,14 @@
             document.getElementById('header-title').innerText = examConfig.title;
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('exam-screen').classList.remove('hidden');
-            startTimer(); goToQuestion(0);
+            buildMinimap(); startTimer(); goToQuestion(0);
         }
 
         function goToQuestion(idx) {
             if(idx < 0 || idx >= allQuestions.length) return;
             currentIndex = idx;
             document.getElementById('current-question-label').innerText = `PHẦN ${allQuestions[idx].p} - CÂU ${allQuestions[idx].idx + 1}`;
-            renderQuestion(); document.getElementById('scroll-container').scrollTop = 0;
+            renderQuestion(); updateMinimapHighlight(); document.getElementById('scroll-container').scrollTop = 0;
         }
 
         function prevQuestion() { goToQuestion(currentIndex - 1); }
@@ -146,7 +166,10 @@
                 let saved = userAnswers[currentIndex]; html += `<div class="grid gap-3">`;
                 q.options.forEach((opt, i) => {
                     let checked = saved === i ? 'checked' : '';
-                    html += `<label class="flex items-start p-4 border border-slate-200 rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="p1" value="${i}" ${checked} class="w-5 h-5 mr-3 mt-0.5" onchange="userAnswers[currentIndex]=${i}"><b>${alphabet[i]}.</b> <div class="ml-2">${opt}</div></label>`;
+                    html += `<label class="flex items-center p-4 border border-slate-200 dark:border-zinc-800 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-900 cursor-pointer transition">
+                                <input type="radio" name="p1" value="${i}" ${checked} class="mr-3" onchange="saveAnswer(${i})">
+                                <span class="flex-1 font-medium"><b>${alphabet[i]}.</b> ${opt}</span>
+                             </label>`;
                 });
                 html += `</div>`;
             } 
@@ -154,13 +177,57 @@
             if(window.MathJax) MathJax.typesetPromise();
         }
 
+        function saveAnswer(val) { userAnswers[currentIndex] = val; updateProgress(); }
+
+        function buildMinimap() {
+            let html = ""; let p = 0;
+            allQuestions.forEach((q, idx) => {
+                if (q.p !== p) {
+                    if (p !== 0) html += `</div></div>`;
+                    let labels = q.p === 1 ? "Trắc nghiệm" : q.p === 2 ? "Đúng/Sai" : "Trả lời ngắn";
+                    html += `<div class="mb-6"><div class="text-xs font-bold text-slate-500 uppercase mb-3">Phần ${q.p}: ${labels}</div><div class="flex flex-wrap gap-2">`;
+                    p = q.p;
+                }
+                html += `<button id="nav-${idx}" onclick="goToQuestion(${idx})" class="w-10 h-10 text-xs font-bold rounded border bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700">${q.idx+1}</button>`;
+            });
+            html += `</div></div>`;
+            document.getElementById('minimap-container').innerHTML = html;
+        }
+
+        function updateProgress() {
+            let done = Object.keys(userAnswers).length;
+            let pct = Math.round((done / allQuestions.length) * 100) || 0;
+            document.getElementById('progress-text').innerText = `${pct}% (${done}/${allQuestions.length})`;
+            document.getElementById('pb-completed').style.width = `${pct}%`;
+            updateMinimapHighlight();
+        }
+
+        function updateMinimapHighlight() {
+            allQuestions.forEach((q, idx) => {
+                let btn = document.getElementById(`nav-${idx}`);
+                if(!btn) return;
+                let isDone = userAnswers[idx] !== undefined;
+                btn.className = `w-10 h-10 text-xs font-bold rounded transition-all flex items-center justify-center ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
+                if(idx === currentIndex) btn.classList.add('ring-2', 'ring-offset-2', 'ring-blue-500', 'border-blue-500');
+            });
+        }
+
         function startTimer() {
             timerInterval = setInterval(() => {
                 if(isExamFinished) return; totalSecondsSpent++;
                 let rem = timeLimitSeconds - totalSecondsSpent;
-                if(rem <= 0) { clearInterval(timerInterval); alert("Hết giờ!"); isExamFinished = true; return; }
+                if(rem <= 0) { clearInterval(timerInterval); finishExam(true); return; }
                 document.getElementById('timer').innerText = `${Math.floor(rem/60).toString().padStart(2,'0')}:${(rem%60).toString().padStart(2,'0')}`;
             }, 1000);
+        }
+
+        function finishExam(force = false) {
+            if(!force && !confirm("Nộp bài thi ngay?")) return;
+            isExamFinished = true; clearInterval(timerInterval);
+            document.getElementById('btn-submit-exam').innerText = `ĐÃ NỘP BÀI`;
+            document.getElementById('btn-submit-exam').disabled = true;
+            document.getElementById('btn-submit-exam').className = "w-full py-4 bg-emerald-600 text-white font-bold rounded-xl shadow-lg text-lg tracking-wide outline-none";
+            goToQuestion(currentIndex); 
         }
     </script>
 </body>
