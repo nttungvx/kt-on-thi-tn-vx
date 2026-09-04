@@ -55,7 +55,6 @@
                 <h2 class="text-lg md:text-xl font-bold text-blue-700 dark:text-blue-400 flex items-center gap-2">
                     <i class="fa-solid fa-file-invoice"></i> <span id="header-title">Đề Thi</span>
                 </h2>
-                
                 <div class="flex items-center gap-3">
                     <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-4 py-2 rounded-lg font-bold text-blue-700 dark:text-blue-400 text-lg md:text-xl tracking-wider" id="timer">00:00:00</div>
                     <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-slate-100 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-zinc-700 shadow-sm outline-none transition">
@@ -229,7 +228,7 @@
         function prevQuestion() { goToQuestion(currentIndex - 1); }
         function nextQuestion() { goToQuestion(currentIndex + 1); }
 
-        // CÁC HÀM LƯU ĐÁP ÁN CHO TỪNG PHẦN
+        // --- CÁC HÀM XỬ LÝ LƯU ĐÁP ÁN CHO 3 PHẦN ---
         function saveAnswer(val) { userAnswers[currentIndex] = val; updateProgress(); }
         
         function saveAnswer2(subIndex, val) {
@@ -238,19 +237,47 @@
             updateProgress();
         }
         
-        function saveAnswer3(val) {
-            userAnswers[currentIndex] = [val]; 
-            updateProgress();
-        }
+        window.moveToNext = function(el, index) {
+            let val = el.value.replace(/[^0-9\-\,\.]/g, ''); 
+            if(val.length > 1) val = val.slice(-1); 
+            el.value = val;
+            if(val !== '' && index < 3) {
+                let next = el.nextElementSibling;
+                if(next) { next.focus(); next.select(); }
+            }
+            saveAnswer3Box();
+        };
 
+        window.handleKey = function(e, el, index) {
+            if(e.key === 'Backspace' && !el.value && index > 0) {
+                let prev = el.previousElementSibling;
+                if(prev) prev.focus();
+            } else if (e.key === 'ArrowRight' && index < 3) {
+                let next = el.nextElementSibling;
+                if(next) next.focus();
+            } else if (e.key === 'ArrowLeft' && index > 0) {
+                let prev = el.previousElementSibling;
+                if(prev) prev.focus();
+            }
+        };
+
+        window.saveAnswer3Box = function() {
+            let boxes = document.getElementById('p3-boxes').querySelectorAll('input');
+            let arr = [];
+            boxes.forEach(b => arr.push(b.value));
+            userAnswers[currentIndex] = arr;
+            updateProgress();
+        };
+
+        // --- GIAO DIỆN HIỂN THỊ TỪNG PHẦN ---
         function renderQuestion() {
             const q = allQuestions[currentIndex]; const isLocked = isExamFinished;
             let html = `<div class="${isLocked ? 'locked' : ''} mb-6 leading-relaxed text-lg font-medium">${q.q}</div>`;
             if (q.image && q.image !== "[CẦN_CHÈN_ẢNH]") html += `<img src="${q.image}" class="question-img">`;
 
-            let saved = userAnswers[currentIndex] || (q.type === 2 ? [] : (q.type === 3 ? [] : null));
+            let saved = userAnswers[currentIndex];
 
-            // PHẦN 1: TRẮC NGHIỆM
+            // GIAO DIỆN PHẦN 1
             if (q.type === 1) {
                 html += `<div class="grid gap-3">`;
                 q.options.forEach((opt, i) => {
@@ -259,15 +286,9 @@
                     let textClass = "";
 
                     if (isLocked) {
-                        if (q.ans === i) {
-                            extraClass = "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20";
-                            textClass = "text-emerald-700 dark:text-emerald-400 font-bold";
-                        } else if (saved === i) {
-                            extraClass = "border-rose-500 bg-rose-50 dark:bg-rose-900/20";
-                            textClass = "text-rose-700 dark:text-rose-400 font-bold";
-                        } else {
-                            extraClass = "border-slate-200 dark:border-zinc-800 opacity-50";
-                        }
+                        if (q.ans === i) { extraClass = "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20"; textClass = "text-emerald-700 dark:text-emerald-400 font-bold"; } 
+                        else if (saved === i) { extraClass = "border-rose-500 bg-rose-50 dark:bg-rose-900/20"; textClass = "text-rose-700 dark:text-rose-400 font-bold"; } 
+                        else { extraClass = "border-slate-200 dark:border-zinc-800 opacity-50"; }
                     }
 
                     html += `<label class="flex items-center p-4 border rounded-lg cursor-pointer transition ${extraClass}">
@@ -277,15 +298,16 @@
                 });
                 html += `</div>`;
             } 
-            // PHẦN 2: BẢNG CHỌN ĐÚNG / SAI
+            // GIAO DIỆN PHẦN 2: BẢNG ĐÚNG/SAI
             else if (q.type === 2) {
+                saved = saved || [];
                 let rowLabels = ['a', 'b', 'c', 'd'];
                 html += `<div class="overflow-x-auto border border-slate-200 dark:border-zinc-800 rounded-xl shadow-sm mt-4">
-                            <table class="w-full text-left border-collapse">
+                            <table class="w-full text-left border-collapse bg-white dark:bg-black">
                                 <thead>
                                     <tr class="bg-slate-100 dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800">
-                                        <th class="p-4 font-bold text-slate-700 dark:text-slate-300">Phát biểu</th>
-                                        <th class="p-4 font-bold text-emerald-600 text-center w-24">Đúng</th>
+                                        <th class="p-4 font-bold text-slate-700 dark:text-slate-300 border-r border-slate-200 dark:border-zinc-800">Phát biểu</th>
+                                        <th class="p-4 font-bold text-emerald-600 text-center w-24 border-r border-slate-200 dark:border-zinc-800">Đúng</th>
                                         <th class="p-4 font-bold text-rose-500 text-center w-24">Sai</th>
                                     </tr>
                                 </thead>
@@ -301,12 +323,12 @@
                     }
 
                     html += `<tr class="border-b last:border-0 border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-900/50 transition">
-                                <td class="p-4 text-slate-800 dark:text-slate-200 font-medium leading-relaxed"><b>${rowLabels[i]})</b> ${opt} ${iconStatus}</td>
-                                <td class="p-4 text-center bg-emerald-50/30 dark:bg-emerald-900/10 border-l border-slate-200 dark:border-zinc-800">
-                                    <input type="radio" name="p2_${i}" value="T" onchange="saveAnswer2(${i}, 'T')" ${sT} ${isLocked?'disabled':''}>
+                                <td class="p-4 text-slate-800 dark:text-slate-200 font-medium leading-relaxed border-r border-slate-200 dark:border-zinc-800"><b>${rowLabels[i]})</b> ${opt} ${iconStatus}</td>
+                                <td class="p-4 text-center border-r border-slate-200 dark:border-zinc-800 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 cursor-pointer" onclick="if(!${isLocked}) { document.getElementById('p2_${i}_T').checked = true; saveAnswer2(${i}, 'T'); }">
+                                    <input type="radio" id="p2_${i}_T" name="p2_${i}" value="T" onchange="saveAnswer2(${i}, 'T')" ${sT} ${isLocked?'disabled':''} class="cursor-pointer">
                                 </td>
-                                <td class="p-4 text-center bg-rose-50/30 dark:bg-rose-900/10 border-l border-slate-200 dark:border-zinc-800">
-                                    <input type="radio" name="p2_${i}" value="F" onchange="saveAnswer2(${i}, 'F')" ${sF} ${isLocked?'disabled':''}>
+                                <td class="p-4 text-center hover:bg-rose-50/50 dark:hover:bg-rose-900/20 cursor-pointer" onclick="if(!${isLocked}) { document.getElementById('p2_${i}_F').checked = true; saveAnswer2(${i}, 'F'); }">
+                                    <input type="radio" id="p2_${i}_F" name="p2_${i}" value="F" onchange="saveAnswer2(${i}, 'F')" ${sF} ${isLocked?'disabled':''} class="cursor-pointer">
                                 </td>
                              </tr>`;
                 });
@@ -314,13 +336,22 @@
                             </table>
                          </div>`;
             }
-            // PHẦN 3: Ô ĐIỀN ĐÁP ÁN TRẢ LỜI NGẮN
+            // GIAO DIỆN PHẦN 3: 4 Ô ĐIỀN KÝ TỰ
             else if (q.type === 3) {
-                let displayVal = saved.join('');
+                let savedArr = saved || ['', '', '', ''];
+                while(savedArr.length < 4) savedArr.push('');
+
+                let inputsHtml = '';
+                for(let i=0; i<4; i++) {
+                    let v = savedArr[i] || '';
+                    inputsHtml += `<input type="text" maxlength="1" class="w-12 h-14 sm:w-16 sm:h-20 text-center text-2xl sm:text-4xl font-black text-blue-600 dark:text-blue-400 bg-white dark:bg-black border-2 border-slate-300 dark:border-zinc-700 rounded-lg outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 transition-all uppercase" value="${v}" oninput="moveToNext(this, ${i})" onkeydown="handleKey(event, this, ${i})" ${isLocked?'disabled':''}>`;
+                }
+
                 html += `<div class="bg-slate-100 dark:bg-zinc-900 p-8 rounded-xl border border-slate-200 dark:border-zinc-800 flex flex-col sm:flex-row items-center justify-center gap-6 mt-6">
                             <span class="font-bold text-slate-700 dark:text-slate-300 text-xl tracking-wider">ĐÁP ÁN:</span>
-                            <input type="text" id="p3-input" value="${displayVal}" oninput="saveAnswer3(this.value)" ${isLocked?'disabled':''}
-                                class="w-full sm:w-64 px-4 py-3 text-center text-3xl font-black text-blue-600 dark:text-blue-400 bg-white dark:bg-black border-2 border-blue-400 dark:border-blue-600 rounded-lg shadow-inner outline-none focus:ring-4 focus:ring-blue-500/20 transition-all placeholder:text-slate-300" placeholder="---">
+                            <div class="flex gap-3" id="p3-boxes">
+                                ${inputsHtml}
+                            </div>
                          </div>`;
             }
 
@@ -430,12 +461,7 @@
             updateMinimapHighlight();
             goToQuestion(currentIndex); 
             
-            let dataHS = {};
-            try { dataHS = JSON.parse(sessionStorage.getItem('DATA_HS') || '{}'); } catch(e) {}
-            
             let urlParams = new URLSearchParams(window.location.search);
-            let mon = urlParams.get('mon') || (examConfig ? examConfig.subject : "TOAN");
-            
             let dbData = { 
                maHS: urlParams.get('maHS') || "GUEST", 
                tenHS: urlParams.get('tenHS') || "Khách", 
@@ -443,7 +469,7 @@
                maDe: urlParams.get('made') || "00000", 
                diemTN: totalScore.toFixed(2), 
                chiTiet: `Đã nộp bài. Thời gian: ${m}:${s}`, 
-               mon: mon 
+               mon: urlParams.get('mon') || (examConfig ? examConfig.subject : "TOAN") 
             };
 
             if (typeof google !== 'undefined' && google.script) {
