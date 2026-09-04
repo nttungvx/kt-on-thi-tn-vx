@@ -25,7 +25,6 @@
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .dark ::-webkit-scrollbar-thumb { background: #27272a; }
 
-        /* Sửa lỗi hiển thị chấm đen nút radio của Tailwind */
         input[type="radio"] {
             -webkit-appearance: none; appearance: none;
             width: 1.25rem; height: 1.25rem;
@@ -65,7 +64,6 @@
             </header>
 
             <div class="flex-1 flex overflow-hidden w-full relative">
-                <!-- VÙNG CÂU HỎI BÊN TRÁI -->
                 <div class="flex-1 flex flex-col relative overflow-hidden">
                    <div class="flex-1 overflow-y-auto p-4 md:p-8" id="scroll-container">
                         <div class="w-full max-w-4xl mx-auto">
@@ -79,7 +77,6 @@
                     </div>
                 </div>
                 
-                <!-- BẢNG ĐIỀU KHIỂN BÊN PHẢI (MINIMAP) -->
                 <div id="sidebar-menu" class="hidden md:flex flex-col w-[320px] bg-white dark:bg-black border-l border-slate-200 dark:border-zinc-800 shadow-2xl md:shadow-none z-20">
                     <div class="p-5 border-b border-slate-200 dark:border-zinc-800">
                         <div class="flex justify-between text-sm text-slate-600 dark:text-slate-400 font-bold uppercase mb-2">
@@ -90,7 +87,7 @@
                         </div>
                     </div>
                     <div class="flex-1 overflow-y-auto p-5" id="minimap-container"></div>
-                    <div class="p-5 border-t border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950">
+                    <div class="p-5 border-t border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950" id="sidebar-footer">
                         <button onclick="finishExam()" id="btn-submit-exam" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl shadow-lg transition text-lg tracking-wide outline-none">NỘP BÀI THI</button>
                     </div>
                 </div>
@@ -147,6 +144,23 @@
             buildMinimap(); startTimer(); goToQuestion(0);
         }
 
+        function calculateScore(q, idx) {
+            let ans = userAnswers[idx];
+            if(q.type === 1) return (ans === q.ans) ? (examConfig.p1_points || 0.25) : 0;
+            if(q.type === 2) { 
+                let count = 0; 
+                for(let i=0; i<4; i++) { if(ans && ans[i] === q.ans[i]) count++; } 
+                let p2_arr = examConfig.p2_points || [0.1, 0.25, 0.5, 1.0];
+                return (count > 0) ? p2_arr[count - 1] : 0; 
+            }
+            if(q.type === 3) { 
+                let u = (ans || []).join('').trim().replace(',', '.');
+                let g = q.ans.toString().trim().replace(',', '.');
+                return (u === g) ? (examConfig.p3_points || 0.5) : 0; 
+            }
+            return 0;
+        }
+
         function goToQuestion(idx) {
             if(idx < 0 || idx >= allQuestions.length) return;
             currentIndex = idx;
@@ -166,13 +180,47 @@
                 let saved = userAnswers[currentIndex]; html += `<div class="grid gap-3">`;
                 q.options.forEach((opt, i) => {
                     let checked = saved === i ? 'checked' : '';
-                    html += `<label class="flex items-center p-4 border border-slate-200 dark:border-zinc-800 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-900 cursor-pointer transition">
+                    let extraClass = "border-slate-200 dark:border-zinc-800 hover:bg-slate-50 dark:hover:bg-zinc-900";
+                    let textClass = "";
+
+                    if (isLocked) {
+                        if (q.ans === i) {
+                            extraClass = "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20";
+                            textClass = "text-emerald-700 dark:text-emerald-400 font-bold";
+                        } else if (saved === i) {
+                            extraClass = "border-rose-500 bg-rose-50 dark:bg-rose-900/20";
+                            textClass = "text-rose-700 dark:text-rose-400 font-bold";
+                        } else {
+                            extraClass = "border-slate-200 dark:border-zinc-800 opacity-50";
+                        }
+                    }
+
+                    html += `<label class="flex items-center p-4 border rounded-lg cursor-pointer transition ${extraClass}">
                                 <input type="radio" name="p1" value="${i}" ${checked} class="mr-3" onchange="saveAnswer(${i})">
-                                <span class="flex-1 font-medium"><b>${alphabet[i]}.</b> ${opt}</span>
+                                <span class="flex-1 font-medium ${textClass}"><b>${alphabet[i]}.</b> ${opt}</span>
                              </label>`;
                 });
                 html += `</div>`;
             } 
+            
+            if (isLocked) {
+                let s = calculateScore(q, currentIndex);
+                let maxS = q.type === 1 ? (examConfig.p1_points || 0.25) : (q.type === 2 ? 1.0 : (examConfig.p3_points || 0.5));
+                let scoreColor = s > 0 ? "text-emerald-600" : "text-rose-500";
+
+                html += `
+                <div class="mt-8 p-6 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl">
+                    <div class="mb-4">
+                        <b class="text-slate-700 dark:text-slate-300">Điểm: </b>
+                        <span class="font-bold ${scoreColor}">${s.toString().replace('.', ',')} / ${maxS.toString().replace('.', ',')}</span>
+                    </div>
+                    <b class="text-indigo-600 dark:text-indigo-400 mb-2 block uppercase text-sm">Giải thích chi tiết:</b>
+                    <div class="whitespace-pre-line leading-relaxed text-sm sm:text-base text-slate-700 dark:text-slate-300">
+                        ${q.explanation || 'Chưa có lời giải cho câu hỏi này.'}
+                    </div>
+                </div>`;
+            }
+
             document.getElementById('question-container').innerHTML = html;
             if(window.MathJax) MathJax.typesetPromise();
         }
@@ -206,8 +254,16 @@
             allQuestions.forEach((q, idx) => {
                 let btn = document.getElementById(`nav-${idx}`);
                 if(!btn) return;
-                let isDone = userAnswers[idx] !== undefined;
-                btn.className = `w-10 h-10 text-xs font-bold rounded transition-all flex items-center justify-center ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
+                
+                if (!isExamFinished) {
+                    let isDone = userAnswers[idx] !== undefined;
+                    btn.className = `w-10 h-10 text-xs font-bold rounded transition-all flex items-center justify-center ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
+                } else {
+                    let s = calculateScore(q, idx);
+                    let maxS = q.type === 1 ? (examConfig.p1_points || 0.25) : (q.type === 2 ? 1.0 : (examConfig.p3_points || 0.5));
+                    let colorClass = s === maxS ? "bg-emerald-500 text-white border-emerald-600" : (s > 0 ? "bg-amber-500 text-white border-amber-600" : "bg-rose-500 text-white border-rose-600");
+                    btn.className = `w-10 h-10 text-xs font-bold rounded transition-all flex items-center justify-center ${colorClass}`;
+                }
                 if(idx === currentIndex) btn.classList.add('ring-2', 'ring-offset-2', 'ring-blue-500', 'border-blue-500');
             });
         }
@@ -224,9 +280,23 @@
         function finishExam(force = false) {
             if(!force && !confirm("Nộp bài thi ngay?")) return;
             isExamFinished = true; clearInterval(timerInterval);
-            document.getElementById('btn-submit-exam').innerText = `ĐÃ NỘP BÀI`;
-            document.getElementById('btn-submit-exam').disabled = true;
-            document.getElementById('btn-submit-exam').className = "w-full py-4 bg-emerald-600 text-white font-bold rounded-xl shadow-lg text-lg tracking-wide outline-none";
+            
+            let totalScore = 0;
+            allQuestions.forEach((q, idx) => { totalScore += calculateScore(q, idx); });
+            
+            let m = Math.floor(totalSecondsSpent / 60).toString().padStart(2, '0');
+            let s = (totalSecondsSpent % 60).toString().padStart(2, '0');
+            
+            let sidebarFooter = document.getElementById('sidebar-footer');
+            sidebarFooter.innerHTML = `
+                <div class="text-center p-2">
+                    <div class="text-sm font-bold text-slate-500 dark:text-slate-400 mb-2">ĐIỂM SỐ CUỐI CÙNG</div>
+                    <div class="text-5xl font-black text-emerald-600 mb-4">${totalScore.toFixed(2).replace('.', ',')}</div>
+                    <div class="text-sm font-medium text-slate-600 dark:text-slate-400">Thời gian làm bài: <span class="font-bold text-slate-800 dark:text-white">${m}:${s}</span></div>
+                </div>
+            `;
+            
+            updateMinimapHighlight();
             goToQuestion(currentIndex); 
         }
     </script>
