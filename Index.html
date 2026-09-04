@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Phòng Thi Tốt Nghiệp THPT - Có Giám Sát</title>
+    <title>Phòng Thi Tốt Nghiệp THPT</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
@@ -20,14 +20,9 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /* GIỮ NGUYÊN GIAO DIỆN CŨ - BỔ SUNG KHÓA BÔI ĐEN VĂN BẢN */
         html { background-color: #f8fafc; font-family: 'Inter', sans-serif; touch-action: pan-y; }
         html.dark { background-color: #000000; }
-        body { 
-            transition: background-color 0.3s; 
-            /* KHÓA CHỌN VĂN BẢN (CHỐNG COPY) */ 
-            -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; 
-        }
+        body { transition: background-color 0.3s; }
         .dark body { background-color: #000000; color: #e2e8f0; }
         
         .part3-input { width: 45px; height: 45px; text-align: center; font-size: 1.5rem; border: 2px solid #cbd5e1; border-radius: 0.375rem; font-weight: bold;}
@@ -48,35 +43,45 @@
 
         .question-img { max-height: 40vh; object-fit: contain; margin: 1rem auto; border-radius: 0.5rem; display: block; border: 1px solid #e2e8f0; }
         .dark .question-img { border-color: #27272a; background-color: #e2e8f0; }
+        .dark .smart-invert { filter: invert(1) hue-rotate(180deg); }
 
-        /* Vẫn cho phép học sinh gõ chữ vào ô input Phần 3 */
-        input[type="text"] { -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto; }
+        #custom-bg-layer { position: fixed; inset: 0; z-index: -2; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.5s ease; }
+        #custom-bg-overlay { position: fixed; inset: 0; z-index: -1; background-color: rgba(255,255,255,0.7); opacity: 0; transition: 0.5s; }
+        .dark #custom-bg-overlay { background-color: rgba(0,0,0,0.7); }
+        
+        body.has-custom-bg { background-color: transparent !important; }
+        body.has-custom-bg .bg-question-area { background-color: transparent !important; }
+        body.has-custom-bg #custom-bg-layer, body.has-custom-bg #custom-bg-overlay { opacity: 1; }
+
+        .custom-safe-area { width: 100%; height: 100%; transition: all 0.3s ease; }
+        @media (max-width: 1000px) and (orientation: landscape) {
+            html { font-size: 13.5px; }
+            .custom-safe-area { width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right)); margin: 0 auto; }
+            #sidebar-menu { width: 280px !important; min-width: 280px !important; }
+            .question-img { max-height: 55vh; }
+        }
+        @media (hover: hover) and (pointer: fine) { .virtual-keyboard { display: none !important; } }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
+
+    <div id="custom-bg-layer"></div>
+    <div id="custom-bg-overlay"></div>
 
     <div id="main-layout" class="custom-safe-area relative flex flex-col overflow-hidden z-10 w-full max-w-[1600px] mx-auto">
         
         <div class="absolute top-4 right-4 z-50 flex items-center gap-2">
             <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-white dark:bg-black border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 shadow-sm outline-none">
-                <i class="fa-solid fa-moon theme-icon-moon"></i>
-                <i class="fa-solid fa-sun theme-icon-sun hidden text-slate-300"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon-sun hidden text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
             </button>
         </div>
 
         <div id="start-screen" class="w-full h-full flex flex-col items-center justify-center p-4">
             <div class="bg-white/90 dark:bg-black/90 p-10 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 text-center w-full max-w-lg">
-                <i class="fa-solid fa-shield-halved text-6xl text-rose-500 mb-6 block"></i>
-                <h1 id="loading-txt" class="text-2xl font-bold text-slate-800 dark:text-white mb-4">
-                    <i class="fa-solid fa-spinner fa-spin text-blue-500 mr-2"></i>ĐANG TẢI DỮ LIỆU ĐỀ THI...
-                </h1>
-                <p class="text-slate-500 mb-8 font-medium text-sm" id="exam-id-display">Đang kết nối kho dữ liệu Cloud GitHub...</p>
-                <div id="cheat-warning-box" class="hidden mb-6 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg p-4 text-sm text-left shadow-inner">
-                    <b><i class="fa-solid fa-triangle-exclamation"></i> LƯU Ý QUY CHẾ THI:</b><br>
-                    1. Bài thi được kích hoạt chế độ <b>Tràn màn hình</b>.<br>
-                    2. <b>Cấm chuyển Tab, thoát ứng dụng</b> để tra cứu.<br>
-                    3. Vi phạm quá <b>3 lần</b> hệ thống tự đình chỉ thi.
-                </div>
+                <i class="fa-solid fa-graduation-cap text-6xl text-blue-600 mb-6 block"></i>
+                <h1 id="loading-txt" class="text-2xl font-bold text-slate-800 dark:text-white mb-4"><svg class="animate-spin h-6 w-6 inline-block mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>ĐANG TẢI DỮ LIỆU ĐỀ THI...</h1>
+                <p class="text-slate-500 mb-8" id="exam-id-display">Đang quét hệ thống dữ liệu...</p>
                 <button id="btn-start" onclick="beginExam()" class="hidden w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xl rounded-xl shadow-lg transition transform hover:-translate-y-1 outline-none">BẮT ĐẦU LÀM BÀI</button>
             </div>
         </div>
@@ -90,7 +95,7 @@
                 <div class="flex items-center gap-3">
                     <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-4 py-2 rounded-lg font-bold text-blue-700 dark:text-blue-400 text-lg md:text-xl tracking-wider" id="timer">00:00:00</div>
                     <button onclick="toggleMobileMenu()" class="md:hidden p-2 bg-slate-100 dark:bg-zinc-800 rounded-lg text-slate-700 dark:text-slate-300">
-                        <i class="fa-solid fa-bars text-xl"></i>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
             </header>
@@ -113,7 +118,6 @@
                         <button onclick="nextQuestion()" class="flex-1 max-w-[150px] py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold shadow-md transition outline-none">Câu sau</button>
                     </div>
                 </div>
-                
                 <div id="mobile-menu-overlay" onclick="toggleMobileMenu()" class="absolute inset-0 bg-black/60 backdrop-blur-sm z-40 hidden md:hidden"></div>
                 <div id="sidebar-menu" class="absolute inset-y-0 right-0 w-[85%] max-w-[320px] md:w-[320px] bg-white/95 dark:bg-black/95 backdrop-blur-xl flex flex-col z-50 md:relative md:z-20 transition-transform duration-300 transform translate-x-full md:translate-x-0 border-l border-slate-200 dark:border-zinc-800 shadow-2xl md:shadow-none pb-safe">
                     <div class="p-5 border-b border-slate-200 dark:border-zinc-800">
@@ -126,7 +130,7 @@
                     </div>
                     <div class="flex-1 overflow-y-auto p-5 custom-scrollbar" id="minimap-container"></div>
                     <div class="p-5 border-t border-slate-200 dark:border-zinc-800 bg-slate-50/50 dark:bg-zinc-950/50">
-                        <button onclick="finishExam()" id="btn-submit-exam" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl shadow-lg text-lg tracking-wide outline-none">NỘP BÀI THI</button>
+                        <button onclick="finishExam()" id="btn-submit-exam" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-xl shadow-lg transition text-lg tracking-wide outline-none">NỘP BÀI THI</button>
                     </div>
                 </div>
             </div>
@@ -153,9 +157,7 @@
         let totalSecondsSpent = 0; 
         let timerInterval;
         let isExamFinished = false;
-        
-        // BIẾN ĐẾM GIAN LẬN
-        let cheatWarnings = 0; 
+        let cheatWarnings = 0; // Thêm cờ cảnh báo gian lận
         const alphabet = ['A','B','C','D','E','F'];
 
         function toggleDarkMode() {
@@ -183,15 +185,40 @@
 
         document.addEventListener("DOMContentLoaded", async function() {
             if(!made) {
-                document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không tìm thấy mã đề thi!</span>";
+                document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không tìm thấy mã đề thi trên URL!</span>";
                 return;
             }
             
+            // 1. THỬ TÌM ĐỀ THI TRÊN GOOGLE DRIVE TRƯỚC
+            if (typeof google !== 'undefined' && google.script) {
+                document.getElementById('exam-id-display').innerHTML = `Đang quét hệ thống dữ liệu Google Drive...`;
+                google.script.run.withSuccessHandler(function(res) {
+                    if (res.success) {
+                        try {
+                            examConfig = JSON.parse(res.data);
+                            processExamDataJSON();
+                        } catch(e) {
+                            document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500">❌ LỖI ĐỌC DỮ LIỆU JSON TỪ DRIVE</span>`;
+                        }
+                    } else {
+                        // 2. NẾU DRIVE KHÔNG CÓ, TỰ ĐỘNG CHUYỂN SANG TÌM TRÊN GITHUB
+                        fetchFromGitHub(made);
+                    }
+                }).withFailureHandler(function() {
+                    fetchFromGitHub(made);
+                }).layNoiDungDeTuDrive(made);
+            } else {
+                fetchFromGitHub(made);
+            }
+        });
+
+        // HÀM TÌM KIẾM DỰ PHÒNG TRÊN GITHUB
+        async function fetchFromGitHub(madeId) {
             const owner = "nttungvx"; 
             const repo = "kt-on-thi-tn-vx"; 
-            
+            document.getElementById('exam-id-display').innerHTML = `Đang kết nối kho dữ liệu Cloud GitHub...`;
             try {
-                const directUrl = `https://${owner}.github.io/${repo}/data/${made}.json`;
+                const directUrl = `https://${owner}.github.io/${repo}/data/${encodeURIComponent(madeId)}.json`;
                 const resDirect = await fetch(directUrl);
                 
                 if (resDirect.ok) {
@@ -203,8 +230,8 @@
                 const resList = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
                 if (!resList.ok) throw new Error(`Không thể kết nối thư mục data.`);
                 const files = await resList.json();
-                const fileTarget = files.find(f => f.name.toLowerCase().startsWith(made.toLowerCase() + "_") || f.name.toLowerCase() === made.toLowerCase() + ".json");
-                if (!fileTarget) throw new Error(`Mã đề [${made}] không tồn tại.`);
+                const fileTarget = files.find(f => f.name.toLowerCase().startsWith(madeId.toLowerCase() + "_") || f.name.toLowerCase() === madeId.toLowerCase() + ".json");
+                if (!fileTarget) throw new Error(`Lỗi tải đề: Chưa tìm thấy đề thi mã [${madeId}]. Vui lòng kiểm tra lại hệ thống lưu trữ!`);
 
                 const resData = await fetch(fileTarget.download_url);
                 examConfig = await resData.json();
@@ -212,7 +239,7 @@
             } catch(e) {
                 document.getElementById("loading-txt").innerHTML = `<span class="text-rose-500" style="font-size: 16px;"><i class="fa-solid fa-triangle-exclamation"></i> LỖI:<br>${e.message}</span>`;
             }
-        });
+        }
 
         function processExamDataJSON() {
             allQuestions = [];
@@ -223,70 +250,12 @@
             if (examConfig.part3) examConfig.part3.forEach((q, i) => allQuestions.push({...q, type: 3, p: 3, idx: i}));
 
             document.getElementById('header-title').innerText = examConfig.title;
-            
-            document.getElementById('loading-txt').innerHTML = "ĐÃ TẢI XONG DỮ LIỆU ĐỀ THI";
-            document.getElementById('exam-id-display').innerHTML = `Mã đề: <b>${made}</b> - Thời gian: <b>${timeLimitSeconds/60} phút</b>`;
-            document.getElementById('cheat-warning-box').classList.remove('hidden');
-            document.getElementById('btn-start').classList.remove('hidden');
-        }
-
-        // HÀM ÉP TRÀN MÀN HÌNH NÂNG CẤP
-        function requestFullScreenSafely() {
-            let elem = document.documentElement;
-            try {
-                if (elem.requestFullscreen) {
-                    elem.requestFullscreen().catch(err => console.log("Lỗi full screen:", err));
-                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                    elem.webkitRequestFullscreen();
-                } else if (elem.mozRequestFullScreen) { /* Firefox */
-                    elem.mozRequestFullScreen();
-                } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                    elem.msRequestFullscreen();
-                }
-            } catch(e) {
-                console.log("Trình duyệt không hỗ trợ FullScreen");
-            }
-        }
-
-        // KÍCH HOẠT LÀM BÀI
-        function beginExam() {
-            // Gọi hàm Tràn màn hình mạnh
-            requestFullScreenSafely();
-
             document.getElementById('start-screen').classList.add('hidden');
             document.getElementById('exam-screen').classList.remove('hidden');
             
             buildMinimap();
             startTimer();
             goToQuestion(0);
-            
-            // Kích hoạt bẫy gian lận
-            setupAntiCheat();
-        }
-
-        // CẢM BIẾN CHỐNG GIAN LẬN TOÀN DIỆN
-        function setupAntiCheat() {
-            // 1. Khóa chuột phải
-            document.addEventListener('contextmenu', event => event.preventDefault());
-            
-            // 2. Khóa phím tắt copy (Ctrl+C)
-            document.addEventListener('copy', event => {
-                event.preventDefault();
-                alert("Cảnh báo: Hành vi sao chép nội dung bài thi bị nghiêm cấm!");
-            });
-            
-            // 3. Cảm biến chuyển Tab/Thu nhỏ cửa sổ (Rời khỏi màn hình)
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden && !isExamFinished) {
-                    cheatWarnings++;
-                    if (cheatWarnings >= 3) {
-                        alert(`❌ BẠN ĐÃ VI PHẠM QUY CHẾ THI 3 LẦN! (Thoát màn hình/Chuyển Tab).\nHệ thống tự động đình chỉ và nộp bài thi của bạn ngay lập tức.`);
-                        finishExam(true); // Ép nộp bài
-                    } else {
-                        alert(`⚠️ CẢNH BÁO GIAN LẬN LẦN ${cheatWarnings}/3!\nBạn vừa rời khỏi màn hình làm bài. Nếu vi phạm đủ 3 lần, bài thi sẽ bị tự động nộp!`);
-                    }
-                }
-            });
         }
 
         function goToQuestion(idx) {
@@ -327,10 +296,10 @@
 
             if (q.type === 1) {
                 let saved = userAnswers[currentIndex];
-                html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">`;
+                html += `<div class="options-grid">`;
                 q.options.forEach((opt, i) => {
                     let checked = saved === i ? 'checked' : '';
-                    let cBox = "opt-card flex items-start padding py-4 px-5 border border-slate-200 dark:border-zinc-800 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-900 transition cursor-pointer";
+                    let cBox = "opt-card flex items-start padding py-4 px-5 border border-slate-200 dark:border-zinc-800 rounded-lg hover:bg-slate-50 dark:hover:bg-zinc-900 transition";
                     if (isLocked) {
                         if (q.ans === i) cBox += " border-emerald-500 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold";
                         else if (saved === i) cBox += " border-rose-500 bg-rose-500/10 text-rose-600";
@@ -356,29 +325,15 @@
             }
             else if (q.type === 3) {
                 let saved = (userAnswers[currentIndex] || []).join('');
-                html += `<div class="p-6 bg-slate-100 dark:bg-zinc-900 rounded-xl flex items-center justify-center gap-4"><b>ĐÁP ÁN CỦA BẠN:</b> <input type="text" value="${saved}" oninput="saveAnswerP3(this.value)" class="bg-white dark:bg-black border-2 border-slate-300 dark:border-zinc-700 rounded-lg p-3 text-2xl font-bold text-center w-40 text-blue-600 focus:outline-none focus:border-blue-500" ${isLocked ? 'disabled' : ''}></div>`;
+                html += `<div class="p3-answer-area"><b>ĐÁP ÁN CỦA BẠN:</b> <input type="text" value="${saved}" oninput="saveAnswerP3(this.value)" class="bg-white dark:bg-black border-2 border-slate-300 dark:border-zinc-700 rounded-lg p-3 text-2xl font-bold text-center w-40 text-blue-600 focus:outline-none focus:border-blue-500" ${isLocked ? 'disabled' : ''}></div>`;
             }
 
             if (isLocked) {
                 html += `<div class="mt-8 p-6 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-xl"><b class="text-indigo-700 dark:text-indigo-400 mb-2 block uppercase">Giải thích chi tiết:</b><div class="whitespace-pre-line leading-relaxed text-sm sm:text-base">${q.explanation || 'Chưa cập nhật nội dung giải thích chi tiết cho câu hỏi này.'}</div></div>`;
             }
 
-            const container = document.getElementById('question-container');
-            container.innerHTML = html;
-            
-            // THUẬT TOÁN ĐỢI MATHJAX (FIX LỖI CÔNG THỨC TOÁN BỊ LỘ MÃ)
-            const renderMath = () => {
-                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
-                    MathJax.typesetClear([container]);
-                    MathJax.typesetPromise([container]).catch(err => console.error("Lỗi vẽ Toán:", err));
-                }
-            };
-            
-            if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
-                renderMath();
-            } else {
-                setTimeout(renderMath, 800);
-            }
+            document.getElementById('question-container').innerHTML = html;
+            if(window.MathJax) { MathJax.typesetPromise(); }
         }
 
         function saveAnswer(val) { userAnswers[currentIndex] = val; updateProgress(); }
@@ -426,7 +381,7 @@
                 if(q.type === 2 && Object.keys(userAnswers[idx]||{}).length === 4) isDone = true;
                 if(q.type === 3 && (userAnswers[idx]||[]).join('').trim() !== "") isDone = true;
 
-                btn.className = `w-10 h-10 text-xs font-bold rounded relative transition-all ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
+                btn.className = `w-10 h-10 text-xs font-bold rounded relative transition-all flex items-center justify-center ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
                 
                 if(idx === currentIndex) { btn.classList.add('ring-2', 'ring-offset-2', 'ring-blue-500', 'border-blue-500'); }
                 if(flaggedQuestions[idx]) { btn.innerHTML = `${q.idx+1}<span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-500 rounded-full border border-white dark:border-black"></span>`; }
@@ -435,10 +390,10 @@
                 if(isExamFinished) {
                     let s = calculateScore(q, idx);
                     let maxS = q.type === 1 ? examConfig.p1_points : (q.type === 2 ? 1.0 : examConfig.p3_points);
-                    if(s === maxS) btn.className = "w-10 h-10 text-xs font-bold rounded relative transition-all bg-emerald-500 text-white border-emerald-600";
-                    else if (s > 0) btn.className = "w-10 h-10 text-xs font-bold rounded relative transition-all bg-amber-500 text-white border-amber-600";
+                    if(s === maxS) btn.className = "w-10 h-10 flex items-center justify-center text-xs font-bold rounded relative transition-all bg-emerald-500 text-white border-emerald-600";
+                    else if (s > 0) btn.className = "w-10 h-10 flex items-center justify-center text-xs font-bold rounded relative transition-all bg-amber-500 text-white border-amber-600";
                     else {
-                        btn.className = "w-10 h-10 text-xs font-bold rounded relative transition-all bg-rose-500 text-white border-rose-600";
+                        btn.className = "w-10 h-10 flex items-center justify-center text-xs font-bold rounded relative transition-all bg-rose-500 text-white border-rose-600";
                     }
                 }
             });
@@ -485,11 +440,8 @@
             document.getElementById('btn-submit-exam').disabled = true;
             document.getElementById('btn-submit-exam').className = "w-full py-4 bg-emerald-600 text-white font-bold rounded-xl shadow-lg text-lg tracking-wide outline-none";
             
-            // Xóa rào chắn khi thi xong để học sinh có thể copy đáp án về tham khảo
             document.body.style.userSelect = "auto";
             document.removeEventListener('contextmenu', event => event.preventDefault());
-            
-            // Thoát chế độ Fullscreen để xem đáp án thoải mái hơn
             if (document.exitFullscreen) { document.exitFullscreen().catch(e=>{}); }
             
             updateMinimapHighlight();
@@ -502,23 +454,19 @@
                lop: dataHS.lop || "Chưa phân lớp", 
                maDe: made, 
                diemTN: total.toFixed(2), 
-               chiTiet: `Đã nộp. Cảnh cáo gian lận: ${cheatWarnings} lần.`, 
-               mon: examConfig.subject || "TOAN" 
+               chiTiet: `Đã nộp. Cảnh cáo: ${cheatWarnings} lần.`, 
+               mon: dataHS.mon || examConfig.subject || "TOAN" 
             };
 
-            const API_URL = "https://script.google.com/macros/s/AKfycbwsV6E8jUuYpc4Qw1hWs0ODE4jqHVwmMlvJ5TfsE4lg_c3rC9v7jy8Ph1DD58gStB0JPA/exec";
-            
-            fetch(API_URL, {
-                method: "POST",
-                headers: { "Content-Type": "text/plain;charset=utf-8" },
-                body: JSON.stringify(dbData)
-            })
-            .then(res => res.json())
-            .then(data => {
-                if(data.success) alert("🎉 Bài thi của bạn đã được ghi nhận thành công trên hệ thống máy chủ Google Drive!");
-                else console.error("Lỗi ghi dữ liệu backend:", data.msg);
-            })
-            .catch(err => alert("⚠️ Cảnh báo mạng: Điểm số chưa được lưu tự động, hãy báo ngay cho giáo viên!"));
+            // DÙNG GOOGLE SCRIPT RUN TRỰC TIẾP ĐỂ NỘP BÀI AN TOÀN
+            if (typeof google !== 'undefined' && google.script) {
+                google.script.run.withSuccessHandler(res => {
+                    if(res.success) alert("🎉 Bài thi của bạn đã được ghi nhận thành công trên Google Drive!");
+                    else alert("Lỗi ghi dữ liệu: " + res.msg);
+                }).withFailureHandler(err => {
+                    alert("⚠️ Lỗi kết nối. Bài làm chưa được lưu!");
+                }).luuDiemTuDong(dbData);
+            }
         }
     </script>
 </body>
