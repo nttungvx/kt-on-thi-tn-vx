@@ -49,17 +49,25 @@
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
 
-    <div id="fullscreen-overlay" class="fixed inset-0 bg-slate-900/95 backdrop-blur-md z-[9999] flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
-        <i id="fs-icon" class="fa-solid fa-expand text-6xl text-blue-500 mb-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"></i>
-        <h2 id="fs-title" class="text-3xl font-black text-white mb-4 tracking-wide uppercase">CHẾ ĐỘ THI NGHIÊM TÚC</h2>
-        <p id="fs-desc" class="text-slate-300 mb-8 max-w-md text-lg">Bài thi yêu cầu làm trong chế độ Toàn màn hình để đảm bảo công bằng. Mọi hành vi thoát màn hình hoặc chuyển tab sẽ bị cảnh báo.</p>
-        <button id="fs-btn" onclick="enterFullscreen()" class="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all text-xl outline-none">VÀO PHÒNG THI</button>
+    <!-- LỚP PHỦ BÁO ĐỘNG GIAN LẬN (ẨN MẶC ĐỊNH) -->
+    <div id="cheat-overlay" class="fixed inset-0 bg-slate-900/95 backdrop-blur-md z-[9999] hidden flex-col items-center justify-center p-6 text-center transition-all duration-300">
+        <i class="fa-solid fa-triangle-exclamation text-6xl text-rose-500 mb-6 drop-shadow-[0_0_15px_rgba(225,29,72,0.5)]"></i>
+        <h2 class="text-3xl font-black text-rose-500 mb-4 tracking-wide uppercase">CẢNH BÁO VI PHẠM</h2>
+        <p class="text-slate-300 mb-8 max-w-md text-lg">Bạn đã thoát chế độ Toàn màn hình. Yêu cầu quay lại ngay để tiếp tục bài thi!</p>
+        <button onclick="resumeFullscreen()" class="px-10 py-5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-2xl shadow-[0_0_20px_rgba(225,29,72,0.4)] transition-all text-xl outline-none">QUAY LẠI BÀI THI</button>
     </div>
 
     <div id="main-layout" class="custom-safe-area relative flex flex-col overflow-hidden z-10 w-full max-w-[1600px] mx-auto">
+        <div class="absolute top-4 right-4 z-50 flex items-center gap-2">
+            <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-white dark:bg-black border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 shadow-sm outline-none">
+                <i class="fa-solid fa-moon theme-icon-moon"></i>
+                <i class="fa-solid fa-sun theme-icon-sun hidden text-slate-300"></i>
+            </button>
+        </div>
+
         <div id="start-screen" class="w-full h-full flex flex-col items-center justify-center p-4">
             <div class="bg-white/90 dark:bg-black/90 p-10 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 text-center w-full max-w-lg">
-                <i class="fa-solid fa-shield-halved text-6xl text-rose-500 mb-6 block"></i>
+                <i class="fa-solid fa-shield-halved text-6xl text-blue-500 mb-6 block"></i>
                 <h1 id="loading-txt" class="text-2xl font-bold text-slate-800 dark:text-white mb-4">
                     <i class="fa-solid fa-spinner fa-spin text-blue-500 mr-2"></i>ĐANG TẢI DỮ LIỆU ĐỀ THI...
                 </h1>
@@ -220,10 +228,12 @@
             document.getElementById('header-title').innerText = examConfig.title;
             document.getElementById('loading-txt').innerHTML = "ĐÃ TẢI XONG DỮ LIỆU ĐỀ THI";
             document.getElementById('exam-id-display').innerHTML = `Mã đề: <b>${made}</b> - Thời gian: <b>${timeLimitSeconds/60} phút</b>`;
+            
             document.getElementById('cheat-warning-box').classList.remove('hidden');
             document.getElementById('btn-start').classList.remove('hidden');
         }
 
+        // HÀM BẮT ĐẦU THI & GỌI TOÀN MÀN HÌNH
         function beginExam() {
             let elem = document.documentElement;
             if (elem.requestFullscreen) { elem.requestFullscreen().catch(e=>{}); } 
@@ -237,6 +247,32 @@
             startTimer();
             goToQuestion(0);
             setupAntiCheat();
+        }
+
+        // CẢM BIẾN TOÀN MÀN HÌNH
+        document.addEventListener('fullscreenchange', checkFullscreen);
+        document.addEventListener('webkitfullscreenchange', checkFullscreen);
+        document.addEventListener('msfullscreenchange', checkFullscreen);
+
+        function checkFullscreen() {
+            if (!document.getElementById('exam-screen').classList.contains('hidden') && !isExamFinished) {
+                let isFull = document.fullscreenElement || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement;
+                let overlay = document.getElementById('cheat-overlay');
+                if (!isFull) {
+                    overlay.classList.remove('hidden');
+                    overlay.classList.add('flex');
+                } else {
+                    overlay.classList.add('hidden');
+                    overlay.classList.remove('flex');
+                }
+            }
+        }
+
+        function resumeFullscreen() {
+            let elem = document.documentElement;
+            if (elem.requestFullscreen) { elem.requestFullscreen().catch(err => console.log(err)); } 
+            else if (elem.webkitRequestFullscreen) { elem.webkitRequestFullscreen(); } 
+            else if (elem.msRequestFullscreen) { elem.msRequestFullscreen(); }
         }
 
         function setupAntiCheat() {
