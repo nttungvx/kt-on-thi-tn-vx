@@ -33,10 +33,11 @@
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         .dark ::-webkit-scrollbar-thumb { background: #27272a; }
 
-        .radio-custom { appearance: none; width: 1.5rem; height: 1.5rem; border: 2px solid #94a3b8; border-radius: 50%; display: inline-block; position: relative; cursor: pointer; transition: 0.2s; margin: 0; background: #fff;}
+        .radio-custom { -webkit-appearance: none; appearance: none; width: 1.25rem; height: 1.25rem; border: 2px solid #94a3b8; border-radius: 50%; display: inline-block; position: relative; cursor: pointer; transition: 0.2s; margin: 0; background: #fff; flex-shrink: 0;}
+        .radio-blue:checked { background-color: #2563eb; border-color: #2563eb; }
         .radio-true:checked { background-color: #10b981; border-color: #10b981; }
         .radio-false:checked { background-color: #ef4444; border-color: #ef4444; }
-        .radio-custom:checked::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5rem; height: 0.5rem; background-color: #fff; border-radius: 50%; }
+        .radio-custom:checked::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.4rem; height: 0.4rem; background-color: #fff; border-radius: 50%; }
 
         .dark .part3-input { background-color: #09090b; border-color: #52525b; color: #fff;}
         .dark .radio-custom { background-color: #09090b; border-color: #52525b; }
@@ -48,14 +49,14 @@
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
 
-    <div id="main-layout" class="custom-safe-area relative flex flex-col overflow-hidden z-10 w-full max-w-[1600px] mx-auto">
-        <div class="absolute top-4 right-4 z-50 flex items-center gap-2">
-            <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-white dark:bg-black border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 shadow-sm outline-none">
-                <i class="fa-solid fa-moon theme-icon-moon"></i>
-                <i class="fa-solid fa-sun theme-icon-sun hidden text-slate-300"></i>
-            </button>
-        </div>
+    <div id="fullscreen-overlay" class="fixed inset-0 bg-slate-900/95 backdrop-blur-md z-[9999] flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
+        <i id="fs-icon" class="fa-solid fa-expand text-6xl text-blue-500 mb-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"></i>
+        <h2 id="fs-title" class="text-3xl font-black text-white mb-4 tracking-wide uppercase">CHẾ ĐỘ THI NGHIÊM TÚC</h2>
+        <p id="fs-desc" class="text-slate-300 mb-8 max-w-md text-lg">Bài thi yêu cầu làm trong chế độ Toàn màn hình để đảm bảo công bằng. Mọi hành vi thoát màn hình hoặc chuyển tab sẽ bị cảnh báo.</p>
+        <button id="fs-btn" onclick="enterFullscreen()" class="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all text-xl outline-none">VÀO PHÒNG THI</button>
+    </div>
 
+    <div id="main-layout" class="custom-safe-area relative flex flex-col overflow-hidden z-10 w-full max-w-[1600px] mx-auto">
         <div id="start-screen" class="w-full h-full flex flex-col items-center justify-center p-4">
             <div class="bg-white/90 dark:bg-black/90 p-10 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 text-center w-full max-w-lg">
                 <i class="fa-solid fa-shield-halved text-6xl text-rose-500 mb-6 block"></i>
@@ -80,8 +81,12 @@
                     <span id="header-title">Đề Thi</span>
                 </h2>
                 <div class="flex items-center gap-3">
+                    <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-slate-100 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-zinc-700 shadow-sm outline-none transition w-10 h-10 flex items-center justify-center">
+                        <i class="fa-solid fa-moon theme-icon-moon"></i>
+                        <i class="fa-solid fa-sun theme-icon-sun hidden text-slate-300"></i>
+                    </button>
                     <div class="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-4 py-2 rounded-lg font-bold text-blue-700 dark:text-blue-400 text-lg md:text-xl tracking-wider" id="timer">00:00:00</div>
-                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 bg-slate-100 dark:bg-zinc-800 rounded-lg text-slate-700 dark:text-slate-300">
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 bg-slate-100 dark:bg-zinc-800 rounded-lg text-slate-700 dark:text-slate-300 w-10 h-10 flex items-center justify-center">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -321,7 +326,6 @@
                 html += `<img src="${q.image}" class="question-img">`;
             }
 
-            // GIAO DIỆN PHẦN I
             if (q.type === 1) {
                 let saved = userAnswers[currentIndex];
                 html += `<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">`;
@@ -332,19 +336,21 @@
                         if (q.ans === i) cBox += " border-emerald-500 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold";
                         else if (saved === i) cBox += " border-rose-500 bg-rose-500/10 text-rose-600";
                     }
-                    html += `<label class="${cBox}"><input type="radio" name="p1" value="${i}" ${checked} class="w-5 h-5 mr-3 mt-0.5 accent-blue-600" onchange="saveAnswer(${i})" ${isLocked?'disabled':''}><div class="opt-content"><b>${alphabet[i]}.</b> <div class="opt-text">${opt}</div></div></label>`;
+                    html += `<label class="${cBox}">
+                                <input type="radio" name="p1" value="${i}" ${checked} class="radio-custom radio-blue mr-3 mt-1" onchange="saveAnswer(${i})" ${isLocked?'disabled':''}>
+                                <div class="opt-content flex-1 text-slate-800 dark:text-slate-200"><b>${alphabet[i]}.</b> <span class="opt-text ml-1">${opt}</span></div>
+                             </label>`;
                 });
                 html += `</div>`;
             } 
-            // GIAO DIỆN PHẦN II (Đúng/Sai)
             else if (q.type === 2) {
                 let saved = userAnswers[currentIndex] || {};
-                let itemsList = q.items || q.options; // Hỗ trợ tương thích ngược
+                let itemsList = q.items || q.options; 
                 html += `<div class="rounded-xl border border-slate-200 dark:border-zinc-800 overflow-hidden mt-4">
                             <table class="w-full text-left text-sm sm:text-base">
                                 <thead class="bg-slate-100 dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800">
                                     <tr>
-                                        <th class="p-4 border-r border-slate-200 dark:border-zinc-800">Phát biểu</th>
+                                        <th class="p-4 border-r border-slate-200 dark:border-zinc-800 text-slate-700 dark:text-slate-300">Phát biểu</th>
                                         <th class="p-4 text-center text-emerald-600 w-24 border-r border-slate-200 dark:border-zinc-800">Đúng</th>
                                         <th class="p-4 text-center text-rose-500 w-24">Sai</th>
                                     </tr>
@@ -364,7 +370,7 @@
                     }
                     
                     html += `<tr class="${trClass} hover:bg-slate-50 dark:hover:bg-zinc-900/50 transition">
-                                <td class="p-4 border-r border-slate-200 dark:border-zinc-800"><b>${String.fromCharCode(97+i)})</b> ${item} ${isLocked ? iconStatus : ''}</td>
+                                <td class="p-4 border-r border-slate-200 dark:border-zinc-800 text-slate-800 dark:text-slate-200"><b>${String.fromCharCode(97+i)})</b> ${item} ${isLocked ? iconStatus : ''}</td>
                                 <td class="p-4 text-center border-r border-slate-200 dark:border-zinc-800 cursor-pointer" onclick="if(!${isLocked}) { document.getElementById('p2_${i}_T').checked = true; saveAnswerP2(${i}, 'T'); }">
                                     <input type="radio" id="p2_${i}_T" name="p2_${i}" class="radio-custom radio-true" onchange="saveAnswerP2(${i}, 'T')" ${cT} ${isLocked?'disabled':''}>
                                 </td>
@@ -377,7 +383,6 @@
                             </table>
                          </div>`;
             }
-            // GIAO DIỆN PHẦN III (4 ô ký tự)
             else if (q.type === 3) {
                 let savedArr = userAnswers[currentIndex] || ['', '', '', ''];
                 while(savedArr.length < 4) savedArr.push('');
