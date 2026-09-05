@@ -49,7 +49,6 @@
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
 
-    <!-- LỚP PHỦ BÁO ĐỘNG GIAN LẬN -->
     <div id="cheat-overlay" class="fixed inset-0 bg-slate-900/95 backdrop-blur-md z-[9999] hidden flex-col items-center justify-center p-6 text-center transition-all duration-300">
         <i class="fa-solid fa-triangle-exclamation text-6xl text-rose-500 mb-6 drop-shadow-[0_0_15px_rgba(225,29,72,0.5)]"></i>
         <h2 class="text-3xl font-black text-rose-500 mb-4 tracking-wide uppercase">CẢNH BÁO VI PHẠM</h2>
@@ -182,20 +181,16 @@
                 document.getElementById('loading-txt').innerHTML = "<span class='text-rose-500'>❌ Lỗi: Không tìm thấy mã đề thi!</span>";
                 return;
             }
-            
             const owner = "nttungvx"; 
             const repo = "kt-on-thi-tn-vx"; 
-            
             try {
                 const directUrl = `https://${owner}.github.io/${repo}/data/${made}.json`;
                 const resDirect = await fetch(directUrl);
-                
                 if (resDirect.ok) {
                     examConfig = await resDirect.json();
                     processExamDataJSON();
                     return;
                 }
-                
                 const resList = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data`);
                 if (!resList.ok) throw new Error(`Không thể kết nối thư mục data.`);
                 const files = await resList.json();
@@ -343,6 +338,15 @@
             updateProgress();
         };
 
+        // BỘ PHIÊN DỊCH ÉP KIỂU SIÊU CHUẨN XÁC CHO PHẦN ĐÚNG/SAI
+        function normalizeP2Ans(a) {
+            if (a === null || a === undefined) return null;
+            let s = String(a).trim().toUpperCase();
+            if (s === 'TRUE' || s === 'T' || s === 'Đ' || s === '1' || s === 'ĐÚNG') return 'T';
+            if (s === 'FALSE' || s === 'F' || s === 'S' || s === '0' || s === 'SAI') return 'F';
+            return s;
+        }
+
         function renderQuestion() {
             const q = allQuestions[currentIndex];
             const isLocked = isExamFinished;
@@ -371,7 +375,7 @@
             } 
             else if (q.type === 2) {
                 let saved = userAnswers[currentIndex] || {};
-                let itemsList = q.items || q.options; 
+                let itemsList = q.items || q.options || []; 
                 html += `<div class="rounded-xl border border-slate-200 dark:border-zinc-800 overflow-hidden mt-4">
                             <table class="w-full text-left text-sm sm:text-base">
                                 <thead class="bg-slate-100 dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800">
@@ -382,17 +386,24 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-200 dark:divide-zinc-800 bg-white/50 dark:bg-black/50">`;
+                
                 itemsList.forEach((item, i) => {
-                    let cT = saved[i] === 'T' ? 'checked' : '';
-                    let cF = saved[i] === 'F' ? 'checked' : '';
+                    let uVal = normalizeP2Ans(saved[i]);
+                    let cT = uVal === 'T' ? 'checked' : '';
+                    let cF = uVal === 'F' ? 'checked' : '';
                     let trClass = "";
                     let iconStatus = "";
                     
                     if (isLocked) {
-                        let isCorrect = saved[i] === q.ans[i];
-                        if (isCorrect && saved[i] !== undefined) trClass = "bg-emerald-500/10 text-emerald-600";
-                        else if (!isCorrect && saved[i] !== undefined) trClass = "bg-rose-500/10 text-rose-600";
-                        iconStatus = isCorrect ? `<i class="fa-solid fa-check text-emerald-500 ml-2"></i>` : `<i class="fa-solid fa-xmark text-rose-500 ml-2"></i>`;
+                        let gVal = normalizeP2Ans(q.ans[i]);
+                        let isCorrect = (uVal === gVal);
+                        
+                        if (uVal !== null) {
+                            trClass = isCorrect ? "bg-emerald-500/10 text-emerald-600" : "bg-rose-500/10 text-rose-600";
+                        }
+                        if (uVal !== null || gVal !== null) {
+                             iconStatus = isCorrect ? `<i class="fa-solid fa-check text-emerald-500 ml-2"></i>` : `<i class="fa-solid fa-xmark text-rose-500 ml-2"></i>`;
+                        }
                     }
                     
                     html += `<tr class="${trClass} hover:bg-slate-50 dark:hover:bg-zinc-900/50 transition">
@@ -428,7 +439,31 @@
             }
 
             if (isLocked) {
-                html += `<div class="mt-8 p-6 bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-xl"><b class="text-indigo-700 dark:text-indigo-400 mb-2 block uppercase">Giải thích chi tiết:</b><div class="whitespace-pre-line leading-relaxed text-sm sm:text-base">${q.explanation || 'Chưa cập nhật nội dung giải thích chi tiết cho câu hỏi này.'}</div></div>`;
+                let correctAnsText = "";
+                if (q.type === 2) {
+                    let rowLabels = ['a', 'b', 'c', 'd'];
+                    let corrects = (q.ans||[]).map((a, i) => `${rowLabels[i]}: ${normalizeP2Ans(a) === 'T' ? 'Đúng' : 'Sai'}`).join(' | ');
+                    correctAnsText = `<div class="mb-3 p-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg border border-blue-200 dark:border-blue-800"><b>Đáp án chuẩn:</b> ${corrects}</div>`;
+                } else if (q.type === 3) {
+                    correctAnsText = `<div class="mb-3 p-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-lg border border-blue-200 dark:border-blue-800"><b>Đáp án chuẩn:</b> ${q.ans}</div>`;
+                }
+
+                let s = calculateScore(q, currentIndex);
+                let maxS = q.type === 1 ? (examConfig.p1_points || 0.25) : (q.type === 2 ? 1.0 : (examConfig.p3_points || 0.5));
+                let scoreColor = s > 0 ? "text-emerald-600" : "text-rose-500";
+
+                html += `
+                <div class="mt-8 p-6 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl">
+                    <div class="flex justify-between items-center mb-4 pb-4 border-b border-slate-200 dark:border-zinc-800">
+                        <b class="text-slate-700 dark:text-slate-300">Điểm đạt được:</b>
+                        <span class="text-xl font-black ${scoreColor}">${s.toString().replace('.', ',')} / ${maxS.toString().replace('.', ',')}</span>
+                    </div>
+                    ${correctAnsText}
+                    <b class="text-indigo-600 dark:text-indigo-400 mb-2 block uppercase text-sm font-bold mt-4">Giải thích chi tiết:</b>
+                    <div class="whitespace-pre-line leading-relaxed text-sm sm:text-base text-slate-700 dark:text-slate-300">
+                        ${q.explanation || 'Chưa cập nhật nội dung giải thích chi tiết cho câu hỏi này.'}
+                    </div>
+                </div>`;
             }
 
             document.getElementById('question-container').innerHTML = html;
@@ -459,7 +494,10 @@
             allQuestions.forEach((q, idx) => {
                 let isDone = false;
                 if(q.type === 1 && userAnswers[idx] !== undefined) isDone = true;
-                if(q.type === 2 && Object.keys(userAnswers[idx]||{}).length === 4) isDone = true;
+                if(q.type === 2) {
+                    let len = (q.items || q.options || []).length;
+                    if(Object.keys(userAnswers[idx]||{}).length === len && len > 0) isDone = true;
+                }
                 if(q.type === 3 && (userAnswers[idx]||[]).join('').trim() !== "") isDone = true;
                 if(isDone) done++;
             });
@@ -476,7 +514,10 @@
                 
                 let isDone = false;
                 if(q.type === 1 && userAnswers[idx] !== undefined) isDone = true;
-                if(q.type === 2 && Object.keys(userAnswers[idx]||{}).length === 4) isDone = true;
+                if(q.type === 2) {
+                    let len = (q.items || q.options || []).length;
+                    if(Object.keys(userAnswers[idx]||{}).length === len && len > 0) isDone = true;
+                }
                 if(q.type === 3 && (userAnswers[idx]||[]).join('').trim() !== "") isDone = true;
 
                 btn.className = `w-10 h-10 text-xs font-bold rounded relative transition-all ${isDone ? 'bg-blue-500 text-white border-blue-600' : 'bg-white dark:bg-zinc-900 border-slate-300 dark:border-zinc-700 text-slate-500'}`;
@@ -517,7 +558,12 @@
             if(q.type === 1) return (ans === q.ans) ? (examConfig.p1_points || 0.25) : 0;
             if(q.type === 2) { 
                 let count = 0; 
-                for(let i=0; i<4; i++) { if(ans && ans[i] === q.ans[i]) count++; } 
+                let itemsLen = (q.items || q.options || []).length;
+                for(let i=0; i<itemsLen; i++) { 
+                    let uVal = normalizeP2Ans(ans ? ans[i] : null);
+                    let gVal = normalizeP2Ans(q.ans[i]);
+                    if(uVal !== null && uVal === gVal) count++; 
+                } 
                 let p2_arr = examConfig.p2_points || [0.1, 0.25, 0.5, 1.0];
                 return (count > 0) ? p2_arr[count - 1] : 0; 
             }
