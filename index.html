@@ -49,7 +49,7 @@
 </head>
 <body class="bg-slate-50 dark:bg-black text-slate-800 dark:text-slate-200 h-[100dvh] w-screen overflow-hidden flex flex-col justify-center items-center">
 
-    <!-- LỚP PHỦ BÁO ĐỘNG GIAN LẬN (ẨN MẶC ĐỊNH) -->
+    <!-- LỚP PHỦ BÁO ĐỘNG GIAN LẬN -->
     <div id="cheat-overlay" class="fixed inset-0 bg-slate-900/95 backdrop-blur-md z-[9999] hidden flex-col items-center justify-center p-6 text-center transition-all duration-300">
         <i class="fa-solid fa-triangle-exclamation text-6xl text-rose-500 mb-6 drop-shadow-[0_0_15px_rgba(225,29,72,0.5)]"></i>
         <h2 class="text-3xl font-black text-rose-500 mb-4 tracking-wide uppercase">CẢNH BÁO VI PHẠM</h2>
@@ -58,13 +58,6 @@
     </div>
 
     <div id="main-layout" class="custom-safe-area relative flex flex-col overflow-hidden z-10 w-full max-w-[1600px] mx-auto">
-        <div class="absolute top-4 right-4 z-50 flex items-center gap-2">
-            <button onclick="toggleDarkMode()" class="p-2.5 rounded-full bg-white dark:bg-black border border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 shadow-sm outline-none">
-                <i class="fa-solid fa-moon theme-icon-moon"></i>
-                <i class="fa-solid fa-sun theme-icon-sun hidden text-slate-300"></i>
-            </button>
-        </div>
-
         <div id="start-screen" class="w-full h-full flex flex-col items-center justify-center p-4">
             <div class="bg-white/90 dark:bg-black/90 p-10 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 text-center w-full max-w-lg">
                 <i class="fa-solid fa-shield-halved text-6xl text-blue-500 mb-6 block"></i>
@@ -228,12 +221,10 @@
             document.getElementById('header-title').innerText = examConfig.title;
             document.getElementById('loading-txt').innerHTML = "ĐÃ TẢI XONG DỮ LIỆU ĐỀ THI";
             document.getElementById('exam-id-display').innerHTML = `Mã đề: <b>${made}</b> - Thời gian: <b>${timeLimitSeconds/60} phút</b>`;
-            
             document.getElementById('cheat-warning-box').classList.remove('hidden');
             document.getElementById('btn-start').classList.remove('hidden');
         }
 
-        // HÀM BẮT ĐẦU THI & GỌI TOÀN MÀN HÌNH
         function beginExam() {
             let elem = document.documentElement;
             if (elem.requestFullscreen) { elem.requestFullscreen().catch(e=>{}); } 
@@ -249,7 +240,6 @@
             setupAntiCheat();
         }
 
-        // CẢM BIẾN TOÀN MÀN HÌNH
         document.addEventListener('fullscreenchange', checkFullscreen);
         document.addEventListener('webkitfullscreenchange', checkFullscreen);
         document.addEventListener('msfullscreenchange', checkFullscreen);
