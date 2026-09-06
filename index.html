@@ -43,7 +43,7 @@
         .dark .radio-custom { background-color: #09090b; border-color: #52525b; }
 
         .question-img { max-height: 40vh; object-fit: contain; margin: 1rem auto; border-radius: 0.5rem; display: block; border: 1px solid #e2e8f0; }
-        .dark .question-img { border-color: #27272a; background-color: #e2e8f0; }
+        .dark .question-img { border-color: #27272a; background-color: #ffffff; }
         input[type="text"] { -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto; }
     </style>
 </head>
@@ -338,7 +338,6 @@
             updateProgress();
         };
 
-        // BỘ PHIÊN DỊCH ÉP KIỂU SIÊU CHUẨN XÁC CHO PHẦN ĐÚNG/SAI
         function normalizeP2Ans(a) {
             if (a === null || a === undefined) return null;
             let s = String(a).trim().toUpperCase();
@@ -352,8 +351,11 @@
             const isLocked = isExamFinished;
             let html = `<div class="${isLocked ? 'locked' : ''} mb-6 leading-relaxed text-lg font-medium">${q.q}</div>`;
 
-            if (q.image && q.image !== "[CẦN_CHÈN_ẢNH]") {
-                html += `<img src="${q.image}" class="question-img">`;
+            // NÂNG CẤP: HIỂN THỊ HÌNH ẢNH DỰA TRÊN TỪ KHÓA ĐÚNG (imageUrl)
+            let qImg = q.imageUrl || q.image;
+            if (qImg && qImg !== "[CẦN_CHÈN_ẢNH]") {
+                let invertClass = q.imageInvert ? "dark:invert" : "";
+                html += `<img src="${qImg}" class="question-img ${invertClass}">`;
             }
 
             if (q.type === 1) {
@@ -451,6 +453,13 @@
                 let s = calculateScore(q, currentIndex);
                 let maxS = q.type === 1 ? (examConfig.p1_points || 0.25) : (q.type === 2 ? 1.0 : (examConfig.p3_points || 0.5));
                 let scoreColor = s > 0 ? "text-emerald-600" : "text-rose-500";
+                
+                // NÂNG CẤP: HIỂN THỊ HÌNH ẢNH TRONG PHẦN GIẢI THÍCH CHI TIẾT
+                let expText = q.explanation || 'Chưa cập nhật nội dung giải thích chi tiết cho câu hỏi này.';
+                if (q.explanationImage) {
+                    let expInvert = q.explanationImageInvert ? "dark:invert" : "";
+                    expText += `<div class="mt-4"><img src="${q.explanationImage}" class="question-img ${expInvert}"></div>`;
+                }
 
                 html += `
                 <div class="mt-8 p-6 bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl">
@@ -461,7 +470,7 @@
                     ${correctAnsText}
                     <b class="text-indigo-600 dark:text-indigo-400 mb-2 block uppercase text-sm font-bold mt-4">Giải thích chi tiết:</b>
                     <div class="whitespace-pre-line leading-relaxed text-sm sm:text-base text-slate-700 dark:text-slate-300">
-                        ${q.explanation || 'Chưa cập nhật nội dung giải thích chi tiết cho câu hỏi này.'}
+                        ${expText}
                     </div>
                 </div>`;
             }
