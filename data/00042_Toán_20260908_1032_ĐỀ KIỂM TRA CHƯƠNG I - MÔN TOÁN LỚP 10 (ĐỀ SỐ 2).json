@@ -1,0 +1,246 @@
+{
+    "timeLimit": 5400,
+    "subject": "00",
+    "title": "ĐỀ KIỂM TRA CHƯƠNG I - MÔN TOÁN LỚP 10 (ĐỀ SỐ 2)",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Cho mệnh đề A: “Số 17 là số chính phương”. Mệnh đề phủ định của mệnh đề trên là:",
+            "options": [
+                "“Số 17 không là số chính phương”.",
+                "“Số 17 là số hữu tỉ”.",
+                "“Số 17 không là số nguyên tố”.",
+                "“Số 17 là số lẻ”."
+            ],
+            "ans": 0,
+            "explanation": "Mệnh đề phủ định của mệnh đề $P$ là “Không phải $P$”, ký hiệu là $\\overline{P}$. Phủ định của “Số 17 là số chính phương” là “Số 17 không là số chính phương”."
+        },
+        {
+            "q": "Cho số tự nhiên $n$. Xét mệnh đề: “Nếu số tự nhiên $n$ chia hết cho 16 thì $n$ chia hết cho 8”. Mệnh đề đảo của mệnh đề đó là:",
+            "options": [
+                "“Nếu số tự nhiên $n$ chia hết cho 8 thì $n$ chia hết cho 16”.",
+                "“Nếu số tự nhiên $n$ chia hết cho 16 thì $n$ không chia hết cho 8”.",
+                "“Nếu số tự nhiên $n$ không chia hết cho 8 thì $n$ không chia hết cho 16”.",
+                "“Nếu số tự nhiên $n$ chia hết cho 8 thì $n$ không chia hết cho 16”."
+            ],
+            "ans": 0,
+            "explanation": "Mệnh đề đảo của mệnh đề kéo theo $P\\Rightarrow Q$ là mệnh đề $Q\\Rightarrow P$. Ở đây $P$: “số tự nhiên $n$ chia hết cho 16”; $Q$: “$n$ chia hết cho 8”. Mệnh đề đảo là: “Nếu số tự nhiên $n$ chia hết cho 8 thì $n$ chia hết cho 16”."
+        },
+        {
+            "q": "Phủ định của mệnh đề “$\\forall x\\in\\mathbb{R}, x^{2}-x+7>0$” là mệnh đề:",
+            "options": [
+                "“$\\exists x\\in\\mathbb{R}, x^{2}-x+7\\le 0$”.",
+                "“$\\exists x\\in\\mathbb{R}, x^{2}-x+7<0$”.",
+                "“$\\forall x\\in\\mathbb{R}, x^{2}-x+7\\le 0$”.",
+                "“$\\exists x\\in\\mathbb{R}, x^{2}-x+7>0$”."
+            ],
+            "ans": 0,
+            "explanation": "Phủ định của mệnh đề có chứa ký hiệu $\\forall x\\in X, P(x)$ là mệnh đề $\\exists x\\in X, \\overline{P(x)}$. Phủ định của $\\forall$ là $\\exists$. Phủ định của $>$ là $\\le$. Vậy mệnh đề phủ định là “$\\exists x\\in\\mathbb{R}, x^{2}-x+7\\le 0$”."
+        },
+        {
+            "q": "Phát biểu nào sau đây là một mệnh đề?",
+            "options": [
+                "Trung Quốc là nước đông dân nhất thế giới.",
+                "Bạn học trường nào?",
+                "Không được làm việc riêng trong giờ học.",
+                "Ôi, thời tiết hôm nay đẹp quá!"
+            ],
+            "ans": 0,
+            "explanation": "Mệnh đề là một câu khẳng định có tính đúng hoặc sai rõ ràng. Câu B là câu hỏi, câu C là câu mệnh lệnh, câu D là câu cảm thán nên không phải là mệnh đề. Câu A là câu khẳng định (và mang tính đúng sai) nên là mệnh đề."
+        },
+        {
+            "q": "Câu nào sau đây không phải là mệnh đề?",
+            "options": [
+                "Bạn ơi, mấy giờ rồi?",
+                "$\\pi^{2}<9,86$",
+                "3 là một số nguyên tố.",
+                "Mặt trời mọc ở hướng đông."
+            ],
+            "ans": 0,
+            "explanation": "Câu A: “Bạn ơi, mấy giờ rồi?” là câu hỏi nên không phải là mệnh đề. Các câu B, C, D đều là mệnh đề có tính đúng sai rõ ràng."
+        },
+        {
+            "q": "Khẳng định nào sau đây là đúng về mối quan hệ giữa các tập hợp số?",
+            "options": [
+                "$\\mathbb{Z}\\subset\\mathbb{Q}$",
+                "$\\mathbb{R}\\subset\\mathbb{Q}$",
+                "$\\mathbb{Q}\\subset\\mathbb{Z}$",
+                "$\\mathbb{Z}\\subset\\mathbb{N}$"
+            ],
+            "ans": 0,
+            "explanation": "Mối quan hệ bao hàm tập số: $\\mathbb{N}\\subset\\mathbb{Z}\\subset\\mathbb{Q}\\subset\\mathbb{R}$. Do đó, tập hợp số nguyên $\\mathbb{Z}$ là tập con của tập hợp số hữu tỉ $\\mathbb{Q}$ ($\\mathbb{Z}\\subset\\mathbb{Q}$) là khẳng định đúng."
+        },
+        {
+            "q": "Cho tập hợp $A=\\{x\\in\\mathbb{Z} \\mid (2x^{2}-3x+1)(x+5)=0\\}$. Tập hợp A bằng:",
+            "options": [
+                "$\\{1; -5\\}$.",
+                "$\\{1; 1/2; -5\\}$.",
+                "$\\{1/2; -5\\}$.",
+                "$\\{1\\}$."
+            ],
+            "ans": 0,
+            "explanation": "Giải phương trình: $(2x^{2}-3x+1)(x+5)=0 \\Leftrightarrow x=1, x=1/2, x=-5$. Do điều kiện $x\\in\\mathbb{Z}$ nên loại $x=1/2$. Tập hợp $A=\\{1; -5\\}$."
+        },
+        {
+            "q": "Số tập con của tập hợp $X = \\{a; b; c; d\\}$ là:",
+            "options": [
+                "16.",
+                "8.",
+                "32.",
+                "15."
+            ],
+            "ans": 0,
+            "explanation": "Tập hợp $X$ có 4 phần tử. Số tập con của tập hợp có $n$ phần tử là $2^{n}$. Số tập con của $X$ là $2^{4}=16$."
+        },
+        {
+            "q": "Cho tập hợp $X=\\{a; b; c\\}$. Có bao nhiêu tập con của tập hợp X có đúng hai phần tử?",
+            "options": [
+                "3.",
+                "4.",
+                "6.",
+                "8."
+            ],
+            "ans": 0,
+            "explanation": "Tập hợp $X=\\{a; b; c\\}$ có 3 phần tử. Các tập con có đúng 2 phần tử của $X$ bao gồm: $\\{a; b\\}, \\{a; c\\}, \\{b; c\\}$ (3 tập)."
+        },
+        {
+            "q": "Cho hai tập hợp $A=\\{a; b; c; 1; 2\\}$ và $B = \\{a; c; d; 1; 3; 5\\}$. Khi đó tập hợp $A \\cup B$ và $A \\cap B$ lần lượt là:",
+            "options": [
+                "$\\{a; b; c; d; 1; 2; 3; 5\\}$ và $\\{a; c; 1\\}$.",
+                "$\\{a; c; 1\\}$ và $\\{a; b; c; d; 1; 2; 3; 5\\}$.",
+                "$\\{a; b; c; d; 1; 2; 3; 5\\}$ và $\\{b; d; 2; 3; 5\\}$.",
+                "$\\{b; d; 2; 3; 5\\}$ và $\\{a; c; 1\\}$."
+            ],
+            "ans": 0,
+            "explanation": "Hợp của hai tập hợp $A \\cup B$ gồm các phần tử thuộc $A$ hoặc thuộc $B$: $A \\cup B = \\{a; b; c; d; 1; 2; 3; 5\\}$. Giao của hai tập hợp $A \\cap B$ gồm các phần tử vừa thuộc $A$ vừa thuộc $B$: $A \\cap B = \\{a; c; 1\\}$."
+        },
+        {
+            "q": "Cho hai tập hợp $X=\\{0; 1; 2; 3\\}$ và $Y=\\{-1; 0; 1; 2; 3; 5\\}$. Phần bù của X trong Y là:",
+            "options": [
+                "$\\{-1; 5\\}$.",
+                "$\\{0; 1; 2; 3\\}$.",
+                "$\\emptyset$.",
+                "$\\{-1; 0; 1; 2; 3; 5\\}$."
+            ],
+            "ans": 0,
+            "explanation": "Phần bù của $X$ trong $Y$ là $Y \\setminus X$ gồm các phần tử thuộc $Y$ nhưng không thuộc $X$: $Y \\setminus X = \\{-1; 5\\}$."
+        },
+        {
+            "q": "Dùng ký hiệu khoảng, đoạn để viết lại tập hợp $B=\\{x\\in\\mathbb{R} \\mid -1/2<x\\le 3\\}$:",
+            "options": [
+                "$(-1/2; 3]$.",
+                "$[-1/2; 3)$.",
+                "$[-1/2; 3]$.",
+                "$(-1/2; 3)$."
+            ],
+            "ans": 0,
+            "explanation": "Tập hợp $B=\\{x\\in\\mathbb{R} \\mid -1/2<x\\le 3\\}$ gồm các số thực lớn hơn $-1/2$ (ngoặc tròn) và nhỏ hơn hoặc bằng $3$ (ngoặc vuông). Dạng nửa khoảng là $B=(-1/2; 3]$."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Xét các câu sau đây:\n(1) 5 là số lẻ.\n(2) $2+7<\\pi$.\n(3) $\\sqrt{3}/2$ có phải là số hữu tỉ không?\n(4) Vịnh Hạ Long là di sản thiên nhiên thế giới.\n(5) Trời hôm nay đẹp quá!\nXét tính đúng sai của các khẳng định sau:",
+            "items": [
+                "“5 là số lẻ” là một mệnh đề đúng.",
+                "Trong các câu trên có nhiều hơn 2 câu là mệnh đề đúng.",
+                "“$2+7<\\pi$” không phải là một mệnh đề toán học.",
+                "“$\\sqrt{3}/2$ có phải là số hữu tỉ không?” không phải là một mệnh đề."
+            ],
+            "ans": [
+                true,
+                false,
+                false,
+                true
+            ],
+            "explanation": "(1) đúng; (2) sai (vì $9>3,14$); (3) là câu hỏi; (4) đúng; (5) là câu cảm thán.\na) Đúng.\nb) Sai (chỉ có 2 câu là mệnh đề đúng là (1) và (4)).\nc) Sai (vì đây là câu khẳng định toán học có tính đúng sai rõ ràng nên vẫn là mệnh đề).\nd) Đúng (vì là câu hỏi)."
+        },
+        {
+            "q": "Xét tính đúng sai của các mệnh đề toán học sau:",
+            "items": [
+                "“Nếu $a^{2}<b^{2}$ thì $0<a<b$” với $a, b$ là hai số thực là mệnh đề đúng.",
+                "“Nếu số tự nhiên $n$ chia hết cho 5 thì $n$ có chữ số tận cùng là 5” là một mệnh đề đúng.",
+                "“$\\exists n\\in\\mathbb{N}, n$ chia hết cho $n+1$” là mệnh đề đúng.",
+                "“Một hình bình hành có một góc vuông là hình chữ nhật” là mệnh đề đúng."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "explanation": "a) Sai. Ví dụ $a=-3, b=4$ thì $a^{2}=9 < b^{2}=16$ nhưng $a<0$ nên không có $0<a<b$.\nb) Sai. Mệnh đề đảo là “Nếu $n$ chia hết cho 5 thì tận cùng là 5” là sai, ví dụ $n=10$ chia hết cho 5 nhưng tận cùng là 0.\nc) Đúng. Chọn $n=0 \\in \\mathbb{N}$ ta có 0 chia hết cho 1 là mệnh đề đúng.\nd) Đúng. Theo định lý nhận biết hình bình hành có một góc vuông là hình chữ nhật."
+        },
+        {
+            "q": "Cho tập hợp $A=\\{x\\in\\mathbb{R} \\mid (x^{2}-6x+5)(x-m)=0\\}$ với $m$ là tham số. Xét tính đúng sai của các phát biểu sau:",
+            "items": [
+                "Phần tử 1 luôn thuộc tập hợp A với mọi $m$.",
+                "Tập hợp A có ba phần tử với mọi giá trị của tham số $m$.",
+                "Có đúng hai giá trị của tham số $m$ để tập hợp A có đúng hai phần tử.",
+                "Có đúng hai giá trị của tham số $m$ để tổng tất cả các phần tử của tập A bằng 6."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "a) Đúng. $x=1$ luôn là nghiệm của $x^{2}-6x+5=0$ nên $1 \\in A$ với mọi $m$.\nb) Sai. Khi $m=1$ hoặc $m=5$, tập A chỉ có 2 phần tử là $\\{1; 5\\}$.\nc) Đúng. Khi $m=1$ hoặc $m=5$ tập A có đúng 2 phần tử.\nd) Sai. Các giá trị $m$ thỏa mãn tổng các phần tử bằng 6 bao gồm $m=1, m=5, m=0$ (tổng cộng 3 giá trị)."
+        },
+        {
+            "q": "Cho các tập hợp khác rỗng $A=[m; 10-m)$ và $B=(2m; 2m+1]$ với $m$ là tham số thực. Xét tính đúng sai của các khẳng định sau:",
+            "items": [
+                "Có đúng 4 giá trị nguyên dương của $m$ để hai tập hợp trên đều khác rỗng.",
+                "Có vô số giá trị nguyên của $m$ để tập hợp B là tập con của tập hợp A ($B\\subset A$).",
+                "Với tập hợp $A_{0}=(-10; 1)$ và $B_{0}=(m; m+7)$, điều kiện để $A_{0} \\setminus B_{0}$ khác rỗng ($A_{0} \\setminus B_{0} \\ne \\emptyset$) là $-17<m<1$.",
+                "Với tập hợp $A_{0}=(-10; 1)$ và $B_{0}=(m; m+7)$, điều kiện để $A_{0} \\cap B_{0} = \\emptyset$ là $m\\ge 1$ hoặc $m\\le -17$."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "a) Đúng. Để A, B khác rỗng thì $m < 10-m \\Leftrightarrow m < 5$. Vì $m$ nguyên dương nên $m \\in \\{1; 2; 3; 4\\}$ (4 giá trị).\nb) Sai. $B\\subset A \\Leftrightarrow m\\le 2m$ và $2m+1 < 10-m \\Leftrightarrow 0\\le m < 3$. Vì $m$ nguyên và cả hai tập khác rỗng nên $m \\in \\{1; 2\\}$ (chỉ có 2 giá trị, không phải vô số).\nc) Đúng. Điều kiện để $A_{0} \\setminus B_{0}$ khác rỗng là phủ định của $A_{0} \\subset B_{0}$, suy ra $-17<m<1$.\nd) Đúng. Để $A_{0} \\cap B_{0} = \\emptyset$ thì $m \\ge 1$ hoặc $m+7 \\le -10 \\Leftrightarrow m \\le -17$."
+        }
+    ],
+    "part3": [
+        {
+            "q": "Với giá trị nguyên dương $n$ nào thì mệnh đề chứa biến “$n \\in \\mathbb{Z}, n^{2}-n=0$” trở thành một mệnh đề đúng?",
+            "ans": "1",
+            "explanation": "Phương trình $n^{2}-n=0 \\Leftrightarrow n(n-1)=0 \\Leftrightarrow n=0$ hoặc $n=1$. Vì $n$ là số nguyên dương nên ta loại $n=0$. Vậy giá trị nguyên dương duy nhất thỏa mãn là $n=1$."
+        },
+        {
+            "q": "Để phục vụ cho một hội nghị quốc tế, ban tổ chức huy động 35 người phiên dịch tiếng Anh và 30 người phiên dịch tiếng Pháp, trong đó có 16 người phiên dịch được cả hai thứ tiếng. Hỏi có bao nhiêu người trong ban tổ chức chỉ phiên dịch được tiếng Anh?",
+            "ans": "19",
+            "explanation": "Gọi $A$ là tập hợp người phiên dịch tiếng Anh, $P$ là tập hợp người phiên dịch tiếng Pháp. Số người chỉ phiên dịch được tiếng Anh là: $n(A \\setminus P) = n(A) - n(A \\cap P) = 35 - 16 = 19$ người."
+        },
+        {
+            "q": "Sử dụng dữ kiện của Câu 2, hỏi ban tổ chức đã huy động tổng cộng bao nhiêu người phiên dịch cho hội nghị quốc tế đó?",
+            "ans": "49",
+            "explanation": "Tổng số người phiên dịch là số phần tử của tập hợp hợp $A \\cup P$: $n(A \\cup P) = n(A) + n(P) - n(A \\cap P) = 35 + 30 - 16 = 49$ người."
+        },
+        {
+            "q": "Trong đợt thi chạy ngắn cấp trường, lớp 10B có 15 học sinh đăng ký thi chạy 100m, 10 học sinh đăng ký thi chạy 200m. Biết lớp 10B có tổng cộng 40 học sinh và có 19 học sinh không đăng ký tham gia nội dung nào. Hỏi lớp 10B có bao nhiêu học sinh đăng ký thi cả hai nội dung?",
+            "ans": "4",
+            "explanation": "Gọi $A$ và $B$ lần lượt là tập hợp học sinh đăng ký chạy 100m và 200m. Số học sinh đăng ký ít nhất một nội dung chạy là $n(A \\cup B) = 40 - 19 = 21$ học sinh. Theo công thức số phần tử: $n(A \\cup B) = n(A) + n(B) - n(A \\cap B) \\Leftrightarrow 21 = 15 + 10 - n(A \\cap B) \\Leftrightarrow n(A \\cap B) = 4$ học sinh."
+        },
+        {
+            "q": "Cho tập hợp $A=\\{x\\in\\mathbb{Z} \\mid -4<x\\le 4\\}$ và $C=\\{x\\in\\mathbb{Z} \\mid x\\le a\\}$ với $a$ là tham số nguyên. Tìm giá trị nguyên lớn nhất của tham số $a$ để tập hợp $A\\cap C=\\emptyset$.",
+            "ans": "-4",
+            "explanation": "Tập $A=\\{-3; -2; -1; 0; 1; 2; 3; 4\\}$. Tập $C$ gồm các số nguyên $x\\le a$. Để $A \\cap C = \\emptyset$ thì phần tử lớn nhất của $C$ phải nhỏ hơn phần tử nhỏ nhất của $A$, tức là $a < -3$. Vì $a$ nguyên nên $a \\le -4$. Vậy giá trị nguyên lớn nhất của $a$ là -4."
+        },
+        {
+            "q": "Cho hai tập hợp $A=[m; m+2]$ và $B=[-1; 2]$. Có tất cả bao nhiêu giá trị nguyên của tham số $m$ để $A\\subset B$?",
+            "ans": "2",
+            "explanation": "Để $A \\subset B \\Leftrightarrow -1 \\le m$ và $m+2 \\le 2 \\Leftrightarrow -1 \\le m \\le 0$. Vì $m$ nguyên nên $m \\in \\{-1; 0\\}$. Vậy có 2 giá trị nguyên thỏa mãn."
+        }
+    ],
+    "examId": "00041"
+}
