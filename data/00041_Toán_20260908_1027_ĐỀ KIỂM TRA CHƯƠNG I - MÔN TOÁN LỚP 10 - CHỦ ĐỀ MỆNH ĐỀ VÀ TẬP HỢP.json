@@ -1,0 +1,246 @@
+{
+    "timeLimit": 5400,
+    "subject": "00",
+    "title": "ĐỀ KIỂM TRA CHƯƠNG I - MÔN TOÁN LỚP 10 - CHỦ ĐỀ: MỆNH ĐỀ VÀ TẬP HỢP",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Cho mệnh đề $A$: “Nghiệm của phương trình $x^{2}-5=0$ là số hữu tỉ”. Mệnh đề phủ định của mệnh đề trên là:",
+            "options": [
+                "“Nghiệm của phương trình $x^{2}-5=0$ không là số hữu tỉ”.",
+                "“Nghiệm của phương trình $x^{2}-5=0$ không là số vô tỉ”.",
+                "“Phương trình $x^{2}-5=0$ vô nghiệm”.",
+                "“Nghiệm của phương trình $x^{2}-5=0$ không là số nguyên”."
+            ],
+            "ans": 0,
+            "explanation": "Mệnh đề phủ định của mệnh đề $P$ là mệnh đề \"Không phải $P$\", ký hiệu là $\\overline{P}$.\nPhủ định của cụm từ \"là số hữu tỉ\" trong mệnh đề $A$ là \"không là số hữu tỉ\".\nDo đó, mệnh đề phủ định là $\\overline{A}$: \"Nghiệm của phương trình $x^{2}-5=0$ không là số hữu tỉ\"."
+        },
+        {
+            "q": "Cho số tự nhiên $n$. Xét mệnh đề “Nếu số tự nhiên $n$ chia hết cho $4$ thì $n$ chia hết cho $2$”. Mệnh đề đảo của mệnh đề đó là:",
+            "options": [
+                "“Nếu số tự nhiên $n$ chia hết cho $2$ thì $n$ không chia hết cho $4$”.",
+                "“Nếu số tự nhiên $n$ chia hết cho $4$ thì $n$ không chia hết cho $2$”.",
+                "“Nếu số tự nhiên $n$ chia hết cho $2$ thì $n$ chia hết cho $4$”.",
+                "“Nếu số tự nhiên $n$ không chia hết cho $2$ thì $n$ không chia hết cho $4$”."
+            ],
+            "ans": 2,
+            "explanation": "Mệnh đề đảo của mệnh đề kéo theo $P \\Rightarrow Q$ là mệnh đề $Q \\Rightarrow P$.\nTrong bài toán: $P$: \"số tự nhiên $n$ chia hết cho $4$\"; $Q$: \"$n$ chia hết cho $2$\".\nMệnh đề đảo là: \"Nếu số tự nhiên $n$ chia hết cho $2$ thì $n$ chia hết cho $4$”."
+        },
+        {
+            "q": "Phủ định của mệnh đề “$\\exists x\\in\\mathbb{R}, x^{2}-x+1<0$” là mệnh đề:",
+            "options": [
+                "“$\\forall x\\in\\mathbb{R}, x^{2}-x+1\\ge 0$”.",
+                "“$\\forall x\\in\\mathbb{R}, x^{2}-x+1<0$”.",
+                "“$\\forall x\\in\\mathbb{R}, x^{2}-x+1>0$”.",
+                "“$\\exists x\\in\\mathbb{R}, x^{2}-x+1\\ge 0$”."
+            ],
+            "ans": 0,
+            "explanation": "Phủ định của mệnh đề có chứa ký hiệu tồn tại $\\exists x \\in X, P(x)$ là mệnh đề với mọi $\\forall x \\in X, \\overline{P(x)}$.\nPhủ định của dấu bé hơn $<$ là dấu lớn hơn hoặc bằng $\\ge$.\nVậy mệnh đề phủ định là “$\\forall x\\in\\mathbb{R}, x^{2}-x+1\\ge 0$”."
+        },
+        {
+            "q": "Phát biểu nào sau đây là một mệnh đề?",
+            "options": [
+                "Đề thi môn Toán khó quá!",
+                "Hà Nội là thủ đô của Việt Nam.",
+                "Bạn có đi học không?",
+                "Mùa thu Hà Nội đẹp quá!"
+            ],
+            "ans": 1,
+            "explanation": "Mệnh đề là một câu khẳng định có tính đúng hoặc sai rõ ràng.\nCâu A và D là những câu cảm thán biểu lộ cảm xúc, không xác định tính đúng sai $\\Rightarrow$ không phải là mệnh đề.\nCâu C là câu hỏi $\\Rightarrow$ không phải là mệnh đề.\nCâu B là một câu khẳng định (và là một khẳng định đúng) $\\Rightarrow$ là mệnh đề."
+        },
+        {
+            "q": "Câu nào sau đây không phải là mệnh đề?",
+            "options": [
+                "$x+5<1$",
+                "Tam giác đều là tam giác có ba cạnh bằng nhau.",
+                "$5<1$",
+                "$4-7=1$"
+            ],
+            "ans": 0,
+            "explanation": "Câu A: \"$x+5<1$\" là câu khẳng định có chứa biến $x$, tính đúng sai chưa xác định và phụ thuộc vào giá trị của biến $\\Rightarrow$ đây là mệnh đề chứa biến, chưa phải là mệnh đề.\nCâu B, C, D đều là các mệnh đề khẳng định có tính đúng sai rõ ràng (B đúng, C sai, D sai)."
+        },
+        {
+            "q": "Khẳng định nào sau đây là đúng về mối quan hệ giữa các tập hợp số?",
+            "options": [
+                "$\\mathbb{R}\\subset\\mathbb{Q}$",
+                "$\\mathbb{Z}\\subset\\mathbb{N}$",
+                "$\\mathbb{Q}\\subset\\mathbb{Z}$",
+                "$\\mathbb{N}\\subset\\mathbb{R}$"
+            ],
+            "ans": 3,
+            "explanation": "Mối quan hệ bao hàm giữa các tập số cơ bản là: $\\mathbb{N}\\subset\\mathbb{Z}\\subset\\mathbb{Q}\\subset\\mathbb{R}$.\nDo đó, tập hợp các số tự nhiên $\\mathbb{N}$ là tập con của tập hợp số thực $\\mathbb{R}$ ($\\mathbb{N}\\subset\\mathbb{R}$).\nCác đáp án còn lại đều sai vì: $\\mathbb{R}\\supset\\mathbb{Q}$, $\\mathbb{Z}\\supset\\mathbb{N}$, $\\mathbb{Q}\\supset\\mathbb{Z}$."
+        },
+        {
+            "q": "Cho tập hợp $B=\\{x\\in\\mathbb{N} \\mid x^{2}+4x+3=0\\}$. Tập hợp $B$ bằng:",
+            "options": [
+                "$\\{-3\\}$.",
+                "$\\emptyset$.",
+                "$\\{-3; -1\\}$.",
+                "$\\{-1\\}$."
+            ],
+            "ans": 1,
+            "explanation": "Giải phương trình đặc trưng: $x^{2}+4x+3=0 \\Leftrightarrow (x+1)(x+3)=0 \\Leftrightarrow x=-1$ hoặc $x=-3$.\nDo điều kiện phần tử thuộc tập số tự nhiên $x\\in\\mathbb{N}$, mà cả $-1$ và $-3$ đều không thuộc $\\mathbb{N}$.\nVậy tập hợp $B$ không chứa phần tử nào, tức $B=\\emptyset$."
+        },
+        {
+            "q": "Số tập con của tập hợp $X=\\{10; 11; 12; A; B; C\\}$ là:",
+            "options": [
+                "63.",
+                "32.",
+                "31.",
+                "64."
+            ],
+            "ans": 3,
+            "explanation": "Tập hợp $X$ có $6$ phần tử riêng biệt là: $10; 11; 12; A; B; C$.\nSố tập hợp con của một tập hợp có $n$ phần tử là $2^{n}$.\nVậy số tập con của tập hợp $X$ là $2^{6}=64$."
+        },
+        {
+            "q": "Cho tập hợp $A=\\{0; 2; 4; 6\\}$. Có bao nhiêu tập con của tập hợp $A$ có đúng hai phần tử?",
+            "options": [
+                "4.",
+                "6.",
+                "7.",
+                "8."
+            ],
+            "ans": 1,
+            "explanation": "Các tập hợp con của tập $A=\\{0; 2; 4; 6\\}$ có đúng $2$ phần tử bao gồm: $\\{0; 2\\}$, $\\{0; 4\\}$, $\\{0; 6\\}$, $\\{2; 4\\}$, $\\{2; 6\\}$, $\\{4; 6\\}$.\nTổng cộng có đúng $6$ tập hợp con thỏa mãn."
+        },
+        {
+            "q": "Cho hai tập hợp $A=\\{1; 2; 3; 4; 5\\}$ và $B=\\{1; 3; 5; 7\\}$. Khi đó tập hợp $A \\cup B$ và $A \\cap B$ lần lượt là:",
+            "options": [
+                "$\\{1; 3; 5\\}$, $\\{2; 4\\}$.",
+                "$\\{1; 2; 3; 4; 5; 7\\}$, $\\{1; 3; 5\\}$.",
+                "$\\{1; 3; 5\\}$, $\\{1; 2; 3; 4; 5; 7\\}$.",
+                "$\\{2; 4\\}$, $\\{1; 3; 5\\}$."
+            ],
+            "ans": 1,
+            "explanation": "Hợp của hai tập hợp $A \\cup B$ gồm các phần tử thuộc $A$ hoặc thuộc $B$: $A \\cup B=\\{1; 2; 3; 4; 5; 7\\}$.\nGiao của hai tập hợp $A \\cap B$ gồm các phần tử vừa thuộc $A$ vừa thuộc $B$: $A \\cap B=\\{1; 3; 5\\}$."
+        },
+        {
+            "q": "Cho hai tập hợp $A=\\{2; 4; 6; 8\\}$ và $B$ là tập hợp các số tự nhiên nhỏ hơn $10$. Phần bù của $A$ trong $B$ là:",
+            "options": [
+                "$\\{0; 1; 3; 5; 7; 9\\}$.",
+                "$[0; 10) \\setminus \\{2; 4; 6; 8\\}$.",
+                "$\\emptyset$.",
+                "$\\{1; 3; 5; 7; 9\\}$."
+            ],
+            "ans": 0,
+            "explanation": "Tập hợp các số tự nhiên nhỏ hơn $10$ là: $B=\\{0; 1; 2; 3; 4; 5; 6; 7; 8; 9\\}$.\nPhần bù của $A=\\{2; 4; 6; 8\\}$ trong $B$ ký hiệu là $C_{B}A = B \\setminus A$.\nLoại bỏ các phần tử của $A$ ra khỏi $B$, ta thu được $C_{B}A=\\{0; 1; 3; 5; 7; 9\\}$."
+        },
+        {
+            "q": "Dùng ký hiệu khoảng, nửa khoảng để viết lại tập hợp $A=\\{x\\in\\mathbb{R} \\mid -3\\le x<2\\}$:",
+            "options": [
+                "$[-3; 2]$.",
+                "$(-3; 2)$.",
+                "$[-3; 2)$.",
+                "$(-3; 2]$."
+            ],
+            "ans": 2,
+            "explanation": "Tập hợp $A=\\{x\\in\\mathbb{R} \\mid -3\\le x<2\\}$ gồm các số thực lớn hơn hoặc bằng $-3$ (sử dụng dấu ngoặc vuông $[$ tại mút $-3$) và nhỏ hơn $2$ (sử dụng dấu ngoặc tròn $)$ tại mút $2$).\nDo đó, viết dưới dạng nửa khoảng là $A=[-3; 2)$."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Xét các câu sau đây:\n(1) Ở đây đẹp quá!\n(2) Phương trình $x^{2}-3x+1=0$ vô nghiệm.\n(3) 16 không là số nguyên tố.\n(4) Số $\\pi$ có lớn hơn 3 hay không?\nXét tính đúng sai của các khẳng định sau:",
+            "items": [
+                "Trong bốn câu trên có 3 câu là mệnh đề.",
+                "Trong bốn câu trên có 2 câu không phải là mệnh đề.",
+                "Câu (3) \"16 không là số nguyên tố\" là một mệnh đề.",
+                "Câu (4) \"Số $\\pi$ có lớn hơn 3 hay không?\" không phải là một mệnh đề."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                true
+            ],
+            "explanation": "(1) \"Ở đây đẹp quá!\" là câu cảm thán $\\Rightarrow$ Không là mệnh đề.\n(2) \"Phương trình $x^{2}-3x+1=0$ vô nghiệm\" là mệnh đề sai (vì $\\Delta=5>0$ nên phương trình có hai nghiệm thực phân biệt) $\\Rightarrow$ Là mệnh đề.\n(3) \"16 không là số nguyên tố\" là mệnh đề đúng (vì 16 chia hết cho 1, 2, 4, 8, 16) $\\Rightarrow$ Là mệnh đề.\n(4) \"Số $\\pi$ có lớn hơn 3 hay không?\" là câu hỏi $\\Rightarrow$ Không là mệnh đề.\n\na) Sai. Chỉ có 2 câu là mệnh đề ((2) và (3)), không phải 3.\nb) Đúng. Có 2 câu không phải là mệnh đề ((1) và (4)).\nc) Đúng. Câu (3) là mệnh đề.\nd) Đúng. Câu (4) là câu hỏi nên không phải là mệnh đề."
+        },
+        {
+            "q": "Xét tính đúng sai của các mệnh đề toán học sau:",
+            "items": [
+                "\"Một tam giác cân thì có hai góc đều bằng $60^{\\circ}$\" là mệnh đề sai.",
+                "\"Tích của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ\" là một mệnh đề tương đương đúng.",
+                "\"1 là số nguyên tố lẻ nhỏ nhất\" là mệnh đề đúng.",
+                "\"Hình bình hành có hai đường chéo vuông góc với nhau là hình thoi\" là mệnh đề đúng."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "a) Đúng. Một tam giác cân chỉ trở thành tam giác có hai góc (và cả ba góc) bằng $60^{\\circ}$ khi nó là tam giác đều. Do đó phát biểu là mệnh đề sai.\nb) Đúng. Tích hai số tự nhiên là số lẻ khi và chỉ khi cả hai số đó cùng là số lẻ. Đây là mệnh đề tương đương đúng.\nc) Sai. Số 1 không phải là số nguyên tố (theo định nghĩa số nguyên tố là số tự nhiên lớn hơn 1). Số nguyên tố lẻ nhỏ nhất là 3. Do đó phát biểu là mệnh đề sai.\nd) Đúng. Định lý nhận biết hình thoi: \"Hình bình hành có hai đường chéo vuông góc với nhau là hình thoi\" là một mệnh đề đúng."
+        },
+        {
+            "q": "Cho tập hợp $A$ gồm các số nguyên tố có một chữ số và tập hợp $B=\\{x\\in\\mathbb{N} \\mid x^{2}-2x-3=0\\}$. Xét tính đúng sai của các phát biểu sau:",
+            "items": [
+                "Các số tự nhiên lẻ có một chữ số đều thuộc tập hợp A.",
+                "Tập hợp B viết dưới dạng liệt kê các phần tử là $B=\\{-1; 3\\}$.",
+                "Tập hợp A có 4 phần tử.",
+                "Số phần tử của tập hợp A gấp 4 lần số phần tử của tập hợp B."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                true
+            ],
+            "explanation": "Tập hợp A gồm các số nguyên tố có một chữ số: $A=\\{2; 3; 5; 7\\}$.\nTập hợp B: Giải phương trình $x^{2}-2x-3=0 \\Leftrightarrow x=3$ hoặc $x=-1$. Do $x\\in\\mathbb{N}$ nên loại $x=-1$. Vậy $B=\\{3\\}$.\n\na) Sai. Các số tự nhiên lẻ có một chữ số là $\\{1; 3; 5; 7; 9\\}$. Các số 1, 9 không thuộc tập hợp A.\nb) Sai. Tập B chỉ có một phần tử duy nhất là 3. Do $-1 \\notin \\mathbb{N}$ nên không thể viết $B=\\{-1; 3\\}$.\nc) Đúng. Tập $A=\\{2; 3; 5; 7\\}$ có chính xác 4 phần tử.\nd) Đúng. Số phần tử của A là $n(A)=4$, số phần tử của B là $n(B)=1$. Ta có $4=4 \\times 1$, tức là số phần tử tập A gấp 4 lần tập B."
+        },
+        {
+            "q": "Cho hai tập hợp $A=\\{n\\in\\mathbb{N} \\mid (n^{2}-2n-3)(n^{2}-1)=0\\}$ và $B=\\{x\\in\\mathbb{R} \\mid 2x^{2}-x+3=0\\}$. Xét tính đúng sai của các phát biểu sau:",
+            "items": [
+                "Tập hợp A có 3 phần tử.",
+                "Số tập hợp con của tập hợp A là 4 tập hợp.",
+                "Tập hợp B là tập hợp rỗng.",
+                "Tổng tất cả các phần tử của tập hợp A và tập hợp B bằng 3."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                false
+            ],
+            "explanation": "Tập A: Phương trình $(n^{2}-2n-3)(n^{2}-1)=0$ có các nghiệm:\n$n^{2}-2n-3=0 \\Leftrightarrow n=3$ (thỏa mãn) hoặc $n=-1$ (loại vì $n\\in\\mathbb{N}$).\n$n^{2}-1=0 \\Leftrightarrow n=1$ (thỏa mãn) hoặc $n=-1$ (loại vì $n\\in\\mathbb{N}$).\nVậy $A=\\{1; 3\\}$.\nTập B: Xét phương trình $2x^{2}-x+3=0$ có $\\Delta=1-24=-23<0 \\Rightarrow$ phương trình vô nghiệm trên $\\mathbb{R}$. Vậy $B=\\emptyset$.\n\na) Sai. Tập hợp A chỉ có 2 phần tử là $\\{1; 3\\}$.\nb) Đúng. Tập A có 2 phần tử nên số tập con của nó là $2^{2}=4$.\nc) Đúng. Phương trình vô nghiệm nên $B=\\emptyset$ (tập rỗng).\nd) Sai. Tổng các phần tử của tập hợp A và B là $1+3=4$ (tập B rỗng nên không đóng góp phần tử nào)."
+        }
+    ],
+    "part3": [
+        {
+            "q": "Với giá trị nào của $x$ thì mệnh đề chứa biến “$x\\in\\mathbb{N}, x^{2}-1=0$” trở thành một mệnh đề đúng?",
+            "ans": "1",
+            "explanation": "Phương trình $x^{2}-1=0 \\Leftrightarrow x=1$ hoặc $x=-1$. Vì điều kiện $x\\in\\mathbb{N}$ nên ta loại $x=-1$. Vậy chỉ có giá trị $x=1$ làm cho mệnh đề đúng."
+        },
+        {
+            "q": "Lớp 10B có 28 học sinh tham gia câu lạc bộ thể thao và 19 học sinh tham gia câu lạc bộ âm nhạc. Biết rằng có 10 học sinh tham gia cả hai câu lạc bộ trên. Có bao nhiêu học sinh lớp 10B chỉ tham gia câu lạc bộ thể thao và không tham gia câu lạc bộ âm nhạc?",
+            "ans": "18",
+            "explanation": "Gọi T là tập hợp học sinh tham gia câu lạc bộ thể thao, M là tập hợp học sinh tham gia câu lạc bộ âm nhạc. Ta có $n(T)=28$, $n(M)=19$ và số học sinh tham gia cả hai là $n(T\\cap M)=10$.\nSố học sinh chỉ tham gia thể thao mà không tham gia âm nhạc là số phần tử của tập hiệu $T\\setminus M$.\nCông thức: $n(T\\setminus M)=n(T)-n(T\\cap M)=28-10=18$ học sinh."
+        },
+        {
+            "q": "Sử dụng dữ kiện của Câu 2, hỏi lớp 10B có bao nhiêu học sinh tham gia ít nhất một trong hai câu lạc bộ trên?",
+            "ans": "37",
+            "explanation": "Số học sinh tham gia ít nhất một trong hai câu lạc bộ là số phần tử của tập hợp hợp $T \\cup M$.\nÁp dụng công thức tính số phần tử: $n(T \\cup M)=n(T)+n(M)-n(T \\cap M)=28+19-10=37$ học sinh."
+        },
+        {
+            "q": "Một nhóm có 10 học sinh chuẩn bị cho hội diễn văn nghệ. Trong danh sách đăng ký tham gia tiết mục múa và tiết mục hát của nhóm, có 5 học sinh tham gia tiết mục múa, 3 học sinh tham gia cả hai tiết mục. Hỏi có bao nhiêu học sinh trong nhóm tham gia tiết mục hát? Biết rằng có 4 học sinh của nhóm không tham gia tiết mục nào.",
+            "ans": "4",
+            "explanation": "Gọi M và H lần lượt là tập hợp học sinh tham gia tiết mục múa và hát.\nSố học sinh tham gia ít nhất một trong hai tiết mục múa hoặc hát là: $n(M \\cup H)=10-4=6$ học sinh.\nTa có số học sinh múa $n(M)=5$, và số học sinh tham gia cả hai tiết mục $n(M \\cap H)=3$.\nÁp dụng công thức số phần tử của tập hợp:\n$n(M \\cup H) = n(M) + n(H) - n(M \\cap H) \\Rightarrow 6 = 5 + n(H) - 3 \\Leftrightarrow n(H)=4$ học sinh.\nVậy có 4 học sinh tham gia tiết mục hát."
+        },
+        {
+            "q": "Cho các tập hợp $A=\\{4; 5\\}$ và $B=\\{n\\in\\mathbb{N} \\mid n\\le a\\}$ với $a$ là số tự nhiên. Có bao nhiêu giá trị tự nhiên của $a$ sao cho $A \\setminus B=A$?",
+            "ans": "4",
+            "explanation": "Để hiệu của hai tập hợp $A \\setminus B=A$ thì hai tập hợp này phải rời nhau, tức là không có phần tử chung ($A \\cap B=\\emptyset$).\nTập $A=\\{4; 5\\}$. Tập $B=\\{0; 1; 2; \\dots; a\\}$ với $a \\in \\mathbb{N}$.\nĐể $A \\cap B=\\emptyset$ thì các phần tử 4 và 5 của A không được thuộc B. Vì B chứa tất cả các số tự nhiên từ 0 đến $a$, nên điều này xảy ra khi và chỉ khi giá trị lớn nhất của B nhỏ hơn phần tử nhỏ nhất của A $\\Rightarrow a < 4 \\Rightarrow a \\le 3$.\nVì $a \\in \\mathbb{N}$ nên $a$ có thể nhận các giá trị $\\{0; 1; 2; 3\\}$. Có tổng cộng 4 giá trị thỏa mãn."
+        },
+        {
+            "q": "Cho hai tập hợp $A=(m-7; m)$ và $B=(-4; 3)$. Có tất cả bao nhiêu giá trị nguyên của tham số $m$ để $A\\subset B$?",
+            "ans": "1",
+            "explanation": "Để khoảng $A=(m-7; m)$ là tập con của khoảng $B=(-4; 3)$ thì các đầu mút của chúng phải thỏa mãn hệ: \n$\\begin{cases} m-7 \\ge -4 \\\\ m \\le 3 \\end{cases} \\Leftrightarrow \\begin{cases} m \\ge 3 \\\\ m \\le 3 \\end{cases} \\Leftrightarrow m=3$.\nVậy có duy nhất 1 giá trị nguyên của tham số $m$ thỏa mãn yêu cầu bài toán (là $m=3$)."
+        }
+    ],
+    "examId": "00041"
+}
