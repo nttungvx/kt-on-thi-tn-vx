@@ -1,0 +1,246 @@
+{
+    "timeLimit": 5400,
+    "subject": "00",
+    "title": "ĐỀ KIỂM TRA CHƯƠNG I - MÔN TOÁN LỚP 11 (ĐỀ SỐ 1)",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Đổi số đo của góc $\\alpha=135^{\\circ}$ sang radian:",
+            "options": [
+                "$\\alpha=\\frac{3\\pi}{4}$.",
+                "$\\alpha=\\frac{\\pi}{4}$.",
+                "$\\alpha=-\\frac{3\\pi}{4}$.",
+                "$\\alpha=\\frac{5\\pi}{4}$."
+            ],
+            "ans": 0,
+            "explanation": "Đổi sang radian: $\\alpha=135^{\\circ}=135\\cdot\\frac{\\pi}{180}=\\frac{3\\pi}{4}$ rad."
+        },
+        {
+            "q": "Đổi số đo của góc $\\alpha=\\frac{2\\pi}{3}$ rad sang độ:",
+            "options": [
+                "$\\alpha=120^{\\circ}$.",
+                "$\\alpha=60^{\\circ}$.",
+                "$\\alpha=135^{\\circ}$.",
+                "$\\alpha=240^{\\circ}$."
+            ],
+            "ans": 0,
+            "explanation": "Đổi sang độ: $\\alpha=\\frac{2\\pi}{3}=\\frac{2\\pi}{3}\\cdot\\frac{180}{\\pi}=120^{\\circ}$."
+        },
+        {
+            "q": "Cho một đường tròn có bán kính $R=20$ cm. Độ dài của cung tròn có số đo $\\alpha=\\frac{\\pi}{12}$ rad là:",
+            "options": [
+                "$\\frac{5\\pi}{3}$ cm.",
+                "$\\frac{3\\pi}{5}$ cm.",
+                "$\\frac{5\\pi}{4}$ cm.",
+                "$20\\pi$ cm."
+            ],
+            "ans": 0,
+            "explanation": "Áp dụng công thức độ dài cung tròn $l=R\\alpha=20\\cdot\\frac{\\pi}{12}=\\frac{5\\pi}{3}$ cm."
+        },
+        {
+            "q": "Trong mặt phẳng tọa độ Oxy, đường tròn lượng giác là đường tròn:",
+            "options": [
+                "Có tâm trùng với gốc tọa độ và bán kính bằng 1.",
+                "Có tâm trùng với gốc tọa độ và bán kính bằng 2.",
+                "Có bán kính bằng 1 và tâm nằm trên trục hoành.",
+                "Đi qua bốn điểm cực của hệ tọa độ."
+            ],
+            "ans": 0,
+            "explanation": "Theo định nghĩa, đường tròn lượng giác là đường tròn có tâm trùng với gốc tọa độ và bán kính bằng 1, có hướng và chọn điểm gốc $A(1;0)$."
+        },
+        {
+            "q": "Cho góc lượng giác $\\alpha$ thỏa mãn $\\frac{\\pi}{2}<\\alpha<\\pi$. Khẳng định nào sau đây đúng?",
+            "options": [
+                "$\\sin \\alpha>0$ và $\\cos \\alpha<0$.",
+                "$\\sin \\alpha<0$ và $\\cos \\alpha>0$.",
+                "$\\sin \\alpha>0$ và $\\cos \\alpha>0$.",
+                "$\\sin \\alpha<0$ và $\\cos \\alpha<0$."
+            ],
+            "ans": 0,
+            "explanation": "Với góc phần tư thứ II ($\\frac{\\pi}{2}<\\alpha<\\pi$) ta luôn có $\\sin \\alpha>0$ và $\\cos \\alpha<0$."
+        },
+        {
+            "q": "Giá trị lượng giác của $\\cos(-\\frac{\\pi}{3})$ bằng:",
+            "options": [
+                "$\\frac{1}{2}$.",
+                "$-\\frac{1}{2}$.",
+                "$\\frac{\\sqrt{3}}{2}$.",
+                "$-\\frac{\\sqrt{3}}{2}$."
+            ],
+            "ans": 0,
+            "explanation": "Ta có $\\cos(-\\frac{\\pi}{3})=\\cos(\\frac{\\pi}{3})=\\frac{1}{2}$."
+        },
+        {
+            "q": "Xác định dấu của biểu thức $A=\\sin 50^{\\circ}\\cdot \\cos(-100^{\\circ})$:",
+            "options": [
+                "$A<0$.",
+                "$A>0$.",
+                "$A=0$.",
+                "Không xác định được."
+            ],
+            "ans": 0,
+            "explanation": "Ta có $\\sin 50^{\\circ}>0$ (góc phần tư I). $\\cos(-100^{\\circ})<0$ (góc phần tư III). Do đó $A<0$."
+        },
+        {
+            "q": "Với mọi góc lượng giác $\\alpha$ và số nguyên $k$, khẳng định nào sau đây là SAI?",
+            "options": [
+                "$\\cos(\\alpha+k\\pi)=\\cos \\alpha$.",
+                "$\\sin(\\alpha+k2\\pi)=\\sin \\alpha$.",
+                "$\\tan(\\alpha+k\\pi)=\\tan \\alpha$.",
+                "$\\cot(\\alpha+k\\pi)=\\cot \\alpha$."
+            ],
+            "ans": 0,
+            "explanation": "Định kỳ của $\\cos x$ là $2\\pi$, nên $\\cos(\\alpha+k2\\pi)=\\cos \\alpha$, còn $\\cos(\\alpha+k\\pi)=(-1)^{k}\\cdot \\cos \\alpha$ nên câu A là sai."
+        },
+        {
+            "q": "Công thức cộng nào sau đây đúng?",
+            "options": [
+                "$\\sin(a+b)=\\sin a\\cdot \\cos b+\\cos a\\cdot \\sin b$.",
+                "$\\sin(a+b)=\\sin a\\cdot \\cos b-\\cos a\\cdot \\sin b$.",
+                "$\\cos(a+b)=\\cos a\\cdot \\cos b+\\sin a\\cdot \\sin b$.",
+                "$\\cos(a+b)=\\cos a\\cdot \\sin b-\\sin a\\cdot \\cos b$."
+            ],
+            "ans": 0,
+            "explanation": "Công thức đúng là $\\sin(a+b)=\\sin a\\cdot \\cos b+\\cos a\\cdot \\sin b$."
+        },
+        {
+            "q": "Tập xác định của hàm số $y=\\tan x$ là:",
+            "options": [
+                "$D=\\mathbb{R}\\setminus\\{\\frac{\\pi}{2}+k\\pi,k\\in\\mathbb{Z}\\}$.",
+                "$D=\\mathbb{R}\\setminus\\{k\\pi,k\\in\\mathbb{Z}\\}$.",
+                "$D=\\mathbb{R}\\setminus\\{\\frac{\\pi}{4}+\\frac{k\\pi}{2},k\\in\\mathbb{Z}\\}$.",
+                "$D=\\mathbb{R}$."
+            ],
+            "ans": 0,
+            "explanation": "Hàm số $y=\\tan x$ xác định khi $\\cos x\\ne 0 \\Leftrightarrow x\\ne\\frac{\\pi}{2}+k\\pi (k\\in\\mathbb{Z})$."
+        },
+        {
+            "q": "Hàm số nào sau đây là hàm số chẵn trên tập xác định của nó?",
+            "options": [
+                "$y=\\cos x$.",
+                "$y=\\sin x$.",
+                "$y=\\tan x$.",
+                "$y=\\cot x$."
+            ],
+            "ans": 0,
+            "explanation": "$y=\\cos x$ là hàm số chẵn trên $\\mathbb{R}$ vì $\\cos(-x)=\\cos x$. Các hàm còn lại là hàm số lẻ."
+        },
+        {
+            "q": "Giải phương trình lượng giác cơ bản: $\\sin x=1$.",
+            "options": [
+                "$x=\\frac{\\pi}{2}+k2\\pi, k\\in\\mathbb{Z}$.",
+                "$x=\\frac{\\pi}{2}+k\\pi, k\\in\\mathbb{Z}$.",
+                "$x=k2\\pi, k\\in\\mathbb{Z}$.",
+                "$x=\\pi+k2\\pi, k\\in\\mathbb{Z}$."
+            ],
+            "ans": 0,
+            "explanation": "Ta có $\\sin x=1 \\Leftrightarrow x=\\frac{\\pi}{2}+k2\\pi (k\\in\\mathbb{Z})$."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Trên đường tròn lượng giác gốc A, biểu diễn cung lượng giác $\\alpha=\\frac{\\pi}{3}+k\\pi (k\\in\\mathbb{Z})$. Xét tính đúng - sai của các phát biểu sau:",
+            "items": [
+                "Có đúng 2 điểm biểu diễn cung lượng giác $\\alpha$ trên đường tròn lượng giác.",
+                "Với $k=0$, điểm biểu diễn nằm ở góc phần tư thứ I.",
+                "Với $k=1$, điểm biểu diễn nằm ở góc phần tư thứ III.",
+                "Khoảng cách giữa hai điểm biểu diễn này trên đường tròn lượng giác là bằng đường kính của đường tròn."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                true
+            ],
+            "explanation": "a) $\\alpha=\\frac{\\pi}{3}+k\\pi=\\frac{\\pi}{3}+\\frac{k2\\pi}{2}$ có dạng $\\alpha_{0}+\\frac{k2\\pi}{m}$ với $m=2$ nên có đúng 2 điểm biểu diễn. (Đúng)\nb) Với $k=0 \\Rightarrow \\alpha=\\frac{\\pi}{3} (60^{\\circ})$, điểm biểu diễn thuộc góc phần tư thứ I. (Đúng)\nc) Với $k=1 \\Rightarrow \\alpha=\\frac{4\\pi}{3} (240^{\\circ})$, điểm biểu diễn thuộc góc phần tư thứ III. (Đúng)\nd) Hai điểm biểu diễn cách nhau một góc $\\pi$ nên đối xứng nhau qua gốc tọa độ O. Do đó, khoảng cách giữa chúng là đường kính của đường tròn. (Đúng)"
+        },
+        {
+            "q": "Cho $\\sin \\alpha=\\frac{2}{3}$ với $\\frac{\\pi}{2}<\\alpha<\\pi$. Xét tính đúng - sai của các khẳng định sau:",
+            "items": [
+                "$\\cos \\alpha$ mang dấu âm.",
+                "$\\cos \\alpha=-\\frac{\\sqrt{5}}{3}$.",
+                "$\\sin(\\frac{5\\pi}{2}-\\alpha)=\\frac{\\sqrt{5}}{3}$.",
+                "Giá trị của biểu thức $P=\\frac{\\sqrt{5}\\cdot \\tan \\alpha}{1+\\tan^{2}\\alpha}$ bằng $\\frac{10}{9}$."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                false
+            ],
+            "explanation": "a) $\\frac{\\pi}{2}<\\alpha<\\pi$ (góc phần tư II) thì $\\cos \\alpha<0$. (Đúng)\nb) $\\cos^{2}\\alpha=1-\\sin^{2}\\alpha=1-\\frac{4}{9}=\\frac{5}{9}$. Vì $\\cos \\alpha<0 \\Rightarrow \\cos \\alpha=-\\frac{\\sqrt{5}}{3}$. (Đúng)\nc) $\\sin(\\frac{5\\pi}{2}-\\alpha)=\\sin(\\frac{\\pi}{2}-\\alpha+2\\pi)=\\sin(\\frac{\\pi}{2}-\\alpha)=\\cos \\alpha$. Mà $\\cos \\alpha=-\\frac{\\sqrt{5}}{3}$ nên $\\sin(\\frac{5\\pi}{2}-\\alpha)=-\\frac{\\sqrt{5}}{3}$. Ý c là Sai.\nd) Ta có $\\tan \\alpha = \\frac{\\sin \\alpha}{\\cos \\alpha} = \\frac{2/3}{-\\sqrt{5}/3} = -\\frac{2}{\\sqrt{5}}$.\n$P=\\frac{\\sqrt{5}\\cdot \\tan \\alpha}{1+\\tan^{2}\\alpha} = \\frac{\\sqrt{5}\\cdot(-\\frac{2}{\\sqrt{5}})}{1+\\frac{4}{5}} = \\frac{-2}{\\frac{9}{5}} = -\\frac{10}{9}$. Ý d nói $P=\\frac{10}{9}$ là Sai."
+        },
+        {
+            "q": "Cho hàm số $y=f(x)=2\\cos x + 3$. Xét tính đúng - sai của các phát biểu sau:",
+            "items": [
+                "Tập xác định của hàm số trên là $\\mathbb{R}$.",
+                "Hàm số đã cho là hàm số lẻ.",
+                "Tập giá trị của hàm số là đoạn $[1; 5]$.",
+                "Đồ thị hàm số cắt trục tung tại điểm có tung độ bằng 3."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "a) TXĐ của $\\cos x$ là $\\mathbb{R}$ nên hàm số có TXĐ là $\\mathbb{R}$. (Đúng)\nb) $f(-x) = 2\\cos(-x) + 3 = 2\\cos x + 3 = f(x) \\Rightarrow$ đây là hàm số chẵn. (Sai)\nc) Ta có $-1 \\le \\cos x \\le 1 \\Leftrightarrow -2 \\le 2\\cos x \\le 2 \\Leftrightarrow 1 \\le 2\\cos x + 3 \\le 5$. Vậy tập giá trị là $[1; 5]$. (Đúng)\nd) Đồ thị cắt Oy khi $x=0 \\Rightarrow y=2\\cos 0 + 3 = 5$. Tung độ giao điểm là 5. (Sai)"
+        },
+        {
+            "q": "Xét phương trình lượng giác $\\sin 2x=\\frac{\\sqrt{3}}{2}$ trên khoảng $(0;3\\pi)$. Xét tính đúng - sai của các khẳng định sau:",
+            "items": [
+                "Phương trình có nghiệm tổng quát là $x=\\frac{\\pi}{6}+k\\pi$ và $x=\\frac{\\pi}{3}+k\\pi (k\\in\\mathbb{Z})$.",
+                "Trên khoảng $(0;3\\pi)$ phương trình có đúng 4 nghiệm phân biệt.",
+                "Nghiệm dương nhỏ nhất của phương trình là $x=\\frac{\\pi}{6}$.",
+                "Tổng tất cả các nghiệm của phương trình trên khoảng $(0;3\\pi)$ bằng $\\frac{9\\pi}{2}$."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "a) $\\sin 2x=\\sin(\\frac{\\pi}{3}) \\Leftrightarrow 2x=\\frac{\\pi}{3}+k2\\pi$ hoặc $2x=\\frac{2\\pi}{3}+k2\\pi \\Leftrightarrow x=\\frac{\\pi}{6}+k\\pi$ hoặc $x=\\frac{\\pi}{3}+k\\pi (k\\in\\mathbb{Z})$. (Đúng)\nb) Nghiệm trên $(0; 3\\pi)$:\nHọ 1: $x=\\frac{\\pi}{6}, \\frac{7\\pi}{6}, \\frac{13\\pi}{6}$ (3 nghiệm).\nHọ 2: $x=\\frac{\\pi}{3}, \\frac{4\\pi}{3}, \\frac{7\\pi}{3}$ (3 nghiệm).\nTổng cộng có 6 nghiệm. Vậy ý b là Sai.\nc) Trong các nghiệm trên, $\\frac{\\pi}{6}$ là nghiệm dương nhỏ nhất. (Đúng)\nd) Tổng các nghiệm là: $\\frac{\\pi}{6}+\\frac{7\\pi}{6}+\\frac{13\\pi}{6}+\\frac{\\pi}{3}+\\frac{4\\pi}{3}+\\frac{7\\pi}{3}=\\frac{21\\pi}{6}+\\frac{12\\pi}{3}=\\frac{7\\pi}{2}+4\\pi=\\frac{15\\pi}{2}$. (Sai)"
+        }
+    ],
+    "part3": [
+        {
+            "q": "Cho $\\tan x=\\frac{1}{2}$. Tính giá trị của biểu thức $\\tan(x+\\frac{\\pi}{4})$.",
+            "ans": "3",
+            "explanation": "Áp dụng công thức cộng: $\\tan(x+\\frac{\\pi}{4})=\\frac{\\tan x+\\tan \\frac{\\pi}{4}}{1-\\tan x\\cdot \\tan \\frac{\\pi}{4}}=\\frac{1/2+1}{1-1/2\\cdot 1}=\\frac{3/2}{1/2}=3$."
+        },
+        {
+            "q": "Cho góc lượng giác $\\alpha=\\frac{\\pi}{2}+k2\\pi (k\\in\\mathbb{Z})$. Tìm giá trị của $k$ để góc $\\alpha$ thỏa mãn điều kiện $10\\pi < \\alpha < 11\\pi$.",
+            "ans": "5",
+            "explanation": "Ta có $10\\pi < \\frac{\\pi}{2}+k2\\pi < 11\\pi \\Leftrightarrow 10 < \\frac{1}{2}+2k < 11 \\Leftrightarrow 9,5 < 2k < 10,5 \\Leftrightarrow 4,75 < k < 5,25$. Vì $k \\in \\mathbb{Z}$ nên $k=5$."
+        },
+        {
+            "q": "Bánh xe của một người đi xe đạp quay được 11 vòng trong thời gian 5 giây. Hỏi trong 1 giây, bánh xe quay được một góc có số đo bằng bao nhiêu độ?",
+            "ans": "792",
+            "explanation": "Trong 1 giây bánh xe quay được $\\frac{11}{5}$ vòng. Vì 1 vòng = $360^{\\circ}$ nên góc quay trong 1 giây là $\\frac{11}{5}\\cdot 360^{\\circ}=792^{\\circ}$."
+        },
+        {
+            "q": "Giả sử chiều cao của một cơn sóng biển đi qua một cái cọc ngoài khơi được mô hình hóa bởi hàm số $h(t)=90\\cos(\\frac{\\pi t}{10})$ (cm). Tìm chiều cao của sóng, tức là khoảng cách theo phương thẳng đứng giữa đỉnh và đáy của sóng (tính bằng centimét).",
+            "ans": "180",
+            "explanation": "Ta có $h(t)=90\\cos(\\frac{\\pi t}{10})$. Giá trị lớn nhất của $h(t)$ là 90, giá trị nhỏ nhất là -90. Khoảng cách theo phương thẳng đứng giữa đỉnh và đáy sóng là $90-(-90)=180$ cm."
+        },
+        {
+            "q": "Tính giá trị của biểu thức: $A = \\sin^{2} 5^{\\circ} + \\sin^{2} 10^{\\circ} + \\sin^{2} 15^{\\circ} + ... + \\sin^{2} 85^{\\circ}$ (gồm 17 số hạng).",
+            "ans": "8,5",
+            "explanation": "Nhận xét $\\sin^{2}85^{\\circ}=\\cos^{2}5^{\\circ}$. Ghép cặp: $A=(\\sin^{2}5^{\\circ}+\\cos^{2}5^{\\circ})+(\\sin^{2}10^{\\circ}+\\cos^{2}10^{\\circ})+...+(\\sin^{2}40^{\\circ}+\\cos^{2}40^{\\circ})+\\sin^{2}45^{\\circ}=1+1+1+1+1+1+1+1+(\\frac{\\sqrt{2}}{2})^{2}=8+\\frac{1}{2}=8,5$."
+        },
+        {
+            "q": "Cho phương trình lượng giác: $\\cos 2x=\\frac{a^{2}}{2}-1$. Có tất cả bao nhiêu giá trị nguyên của tham số $a$ để phương trình trên có nghiệm?",
+            "ans": "5",
+            "explanation": "Phương trình $\\cos 2x=\\frac{a^{2}}{2}-1$ có nghiệm $\\Leftrightarrow -1\\le \\frac{a^{2}}{2}-1\\le 1 \\Leftrightarrow 0\\le \\frac{a^{2}}{2}\\le 2 \\Leftrightarrow 0\\le a^{2}\\le 4 \\Leftrightarrow -2\\le a\\le 2$. Vì $a \\in \\mathbb{Z}$ nên $a\\in\\{-2;-1;0;1;2\\}$. Có 5 giá trị nguyên thỏa mãn."
+        }
+    ],
+    "examId": "00043"
+}
