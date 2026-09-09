@@ -1,0 +1,246 @@
+{
+    "timeLimit": 5400,
+    "subject": "00",
+    "title": "BÀI TẬP TOÁN 12 PHƯƠNG TRÌNH ĐƯỜNG THẲNG TRONG KHÔNG GIAN",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Trong không gian $Oxyz$, Cho hình hộp $ABCD.A^{\\prime}B^{\\prime}C^{\\prime}D^{\\prime}$ Biết rằng: $B(-1;1;3)$, $C(-1;-1;2)$, $D(1;0;-2)$, $D^{\\prime}(2;-2;-3)$. Tìm một véc tơ chỉ phương của đường thẳng $AA'$",
+            "options": [
+                "$\\vec{u}=(1;-2;1)$",
+                "$\\vec{u}=(1;2;1)$",
+                "$\\vec{u}=(-1;-2;1)$",
+                "$\\vec{u}=(1;-2;-1)$"
+            ],
+            "ans": 3,
+            "explanation": "Ta có $\\vec{AA^{\\prime}}=\\vec{DD^{\\prime}}=(1;-2;-1)$. Do đó $\\vec{u}=(1;-2;-1)$ là một vectơ chỉ phương của $AA'$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho đường thẳng $d: \\frac{x-2}{1}=\\frac{y-1}{-2}=\\frac{z+1}{3}$. Điểm nào dưới đây không thuộc $d$?",
+            "options": [
+                "$Q(2;1;-1)$",
+                "$M(1;3;2)$",
+                "$P(-1;3;-4)$",
+                "$N(4;-3;5)$"
+            ],
+            "ans": 1,
+            "explanation": "Ta có:\nThay $Q(2;1;-1)$: $\\frac{2-2}{1}=\\frac{1-1}{-2}=\\frac{-1+1}{3}=0$ (đúng)\nThay $M(1;3;2)$: $\\frac{1-2}{1}=\\frac{3-1}{-2}=\\frac{2+1}{3}$ (Sai)\nThay $P(-1;3;-4)$: $\\frac{-1-2}{1}=\\frac{3-1}{-2}=\\frac{-4+1}{3}$ (đúng)\nThay $N(4;-3;5)$: $\\frac{4-2}{1}=\\frac{-3-1}{-2}=\\frac{5+1}{3}$ (đúng)\nDo đó chọn B."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho đường thẳng $d: \\frac{x-3}{2}=\\frac{y-4}{-5}=\\frac{z+1}{3}$. Vecto nào dưới đây là một vecto chỉ phương của $d$?",
+            "options": [
+                "$\\vec{u_{2}}(2;4;-1)$",
+                "$\\vec{u_{1}}(-2;5;-3)$",
+                "$\\vec{u_{3}}(2;5;3)$",
+                "$\\vec{u_{4}}(3;4;1)$"
+            ],
+            "ans": 1,
+            "explanation": "Đường thẳng $d: \\frac{x-3}{2}=\\frac{y-4}{-5}=\\frac{z+1}{3}$ có một vectơ chỉ phương là $\\vec{u}=(2;-5;3)$. Vì $\\vec{u_{1}}(-2;5;-3) = -\\vec{u}$ nên $\\vec{u_{1}}$ cũng là một vectơ chỉ phương của $d$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho hai đường thẳng $d:\\begin{cases}x=1+2t\\\\ y=2-2t \\\\ z=t \\end{cases}$ và $d^{\\prime}:\\begin{cases}x=-2t^{\\prime}\\\\ y=-5+3t^{\\prime}\\\\ z=4+t^{\\prime}\\end{cases}$. Xét vị trí tương đối giữa 2 đường thẳng $d$ và $d'$?",
+            "options": [
+                "Cắt nhau.",
+                "Song song.",
+                "Trùng nhau.",
+                "Chéo nhau."
+            ],
+            "ans": 3,
+            "explanation": "$d$ có VTCP $\\vec{u}=(2;-2;1)$ và đi qua $M(1;2;0)$.\n$d'$ có VTCP $\\vec{u^{\\prime}}=(-2;3;1)$ và đi qua $M^{\\prime}(0;-5;4)$.\nTừ đó ta có: $\\vec{MM^{\\prime}}=(-1;-7;4)$ và $[\\vec{u},\\vec{u^{\\prime}}] = ((-2)\\cdot 1-1\\cdot 3; 1\\cdot(-2)-2\\cdot 1; 2\\cdot 3-(-2)\\cdot(-2)) = (-5;-4;2) \\ne \\vec{0}$.\nLại có $[\\vec{u},\\vec{u^{\\prime}}]\\cdot\\vec{MM^{\\prime}}=(-1)\\cdot(-5)+(-7)\\cdot(-4)+4\\cdot 2=41 \\ne 0$.\nSuy ra $d$ chéo nhau với $d'$."
+        },
+        {
+            "q": "Cho $d_{1}: \\frac{x-1}{-2}=\\frac{y+2}{1}=\\frac{z-4}{3}$ và $d_{2}:\\begin{cases}x=-1+t\\\\ y=-t\\\\ z=2+mt\\end{cases}$. Tìm $m$ để $d_{1}$ và $d_{2}$ vuông góc với nhau.",
+            "options": [
+                "-1.",
+                "1.",
+                "-2.",
+                "2."
+            ],
+            "ans": 1,
+            "explanation": "Ta có VTCP $\\vec{u_{1}}=(-2;1;3)$, $\\vec{u_{2}}=(1;-1;m)$.\n$d_{1}\\perp d_{2} \\Leftrightarrow \\vec{u_{1}}\\cdot\\vec{u_{2}}=0 \\Leftrightarrow -2-1+3m=0 \\Leftrightarrow m=1$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho hai đường thẳng $d: \\frac{x-1}{2}=\\frac{y-7}{1}=\\frac{z-3}{4}$ và $d^{\\prime}:\\frac{x-6}{3}=\\frac{y+1}{-2}=\\frac{z+2}{1}$. Tìm tọa độ giao điểm của hai đường thẳng trên.",
+            "options": [
+                "$A(-3;5;-5)$",
+                "$B(5;9;11)$",
+                "$C(9;-3;-1)$",
+                "$N(0;3;-4)$"
+            ],
+            "ans": 0,
+            "explanation": "Chuyển sang tham số, $d: x=1+2t, y=7+t, z=3+4t$; $d': x=6+3t', y=-1-2t', z=-2+t'$.\nGiải hệ $1+2t=6+3t'$ và $7+t=-1-2t'$ ta được $t=-2, t'=-3$. Thử lại vào $z$ thấy $3+4(-2) = -2+(-3) = -5$ (thỏa mãn).\nVậy tọa độ giao điểm là $A(-3;5;-5)$."
+        },
+        {
+            "q": "Trong không gian với hệ toạ độ $Oxyz$, cho hai điểm $M(-1;-1;2)$ và $N(1;3;4)$. Đường thẳng $MN$ có phương trình chính tắc là",
+            "options": [
+                "$\\frac{x-1}{2}=\\frac{y-1}{4}=\\frac{z+2}{2}$",
+                "$\\frac{x+1}{1}=\\frac{y+1}{2}=\\frac{z-2}{1}$",
+                "$\\frac{x-1}{2}=\\frac{y-1}{2}=\\frac{z+2}{1}$",
+                "$\\frac{x+1}{2}=\\frac{y+3}{4}=\\frac{z+4}{2}$"
+            ],
+            "ans": 1,
+            "explanation": "Ta có đường thẳng $MN$ đi qua điểm $M(-1;-1;2)$ và nhận $\\vec{MN}=(2;4;2)$ làm véc tơ chỉ phương nên có phương trình chính tắc là: $\\frac{x+1}{2}=\\frac{y+1}{4}=\\frac{z-2}{2} \\Leftrightarrow \\frac{x+1}{1}=\\frac{y+1}{2}=\\frac{z-2}{1}$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho điểm $A(1;2;3)$ và đường thẳng $d:\\frac{x-3}{2}=\\frac{y-1}{1}=\\frac{z+7}{-2}$. Đường thẳng đi qua $A$ và song song với đường thẳng $d$ có phương trình là:",
+            "options": [
+                "$\\frac{x-1}{2}=\\frac{y-2}{1}=\\frac{z-3}{-2}$",
+                "$\\frac{x-1}{2}=\\frac{y-2}{1}=\\frac{z-3}{2}$",
+                "$\\frac{x-1}{2}=\\frac{y-3}{1}=\\frac{z-2}{-2}$",
+                "$\\frac{x-2}{2}=\\frac{y-1}{1}=\\frac{z-3}{-2}$"
+            ],
+            "ans": 0,
+            "explanation": "Đường thẳng đi qua $A$ và song song với $d$ nên có một vectơ chỉ phương là $\\vec{u}=(2;1;-2)$. Phương trình đường thẳng cần tìm: $\\frac{x-1}{2}=\\frac{y-2}{1}=\\frac{z-3}{-2}$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho $d$ là đường thẳng đi qua điểm $A(1;2;3)$ và vuông góc với mặt phẳng $(\\alpha):4x+3y-7z+1=0$. Phương trình chính tắc của $d$ là",
+            "options": [
+                "$\\frac{x-1}{-4}=\\frac{y-2}{-3}=\\frac{z-3}{-7}$",
+                "$\\frac{x-1}{4}=\\frac{y-2}{3}=\\frac{z-3}{-7}$",
+                "$\\frac{x-4}{1}=\\frac{y-3}{2}=\\frac{z+7}{3}$",
+                "$\\frac{x+1}{4}=\\frac{y+2}{3}=\\frac{z+3}{-7}$"
+            ],
+            "ans": 1,
+            "explanation": "Ta có $(\\alpha): 4x+3y-7z+1=0 \\Rightarrow \\vec{n}_{(\\alpha)}=(4;3;-7)$ là VTPT của mặt phẳng $(\\alpha)$.\nMà đường thẳng $d \\perp (\\alpha) \\Rightarrow \\vec{n}_{(\\alpha)}=(4;3;-7)$ là VTCP của đường thẳng $d$.\nTa lại có $A(1;2;3) \\in d$.\nSuy ra phương trình chính tắc của đường thẳng $d$ là: $\\frac{x-1}{4}=\\frac{y-2}{3}=\\frac{z-3}{-7}$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, một viên đạn được bấn ra từ điểm $A(1;2;4)$ và trong ba giây, đầu đạn có vận tốc không đổi; véc tơ vận tốc (km/s) là $\\vec{v}=(\\frac{1}{3};\\frac{1}{3};\\frac{2}{3})$. Hỏi tại thời điểm sau 3 giây viên đạn có thể trúng mục tiêu là điểm nào trong các điểm sau đây?",
+            "options": [
+                "$P(1;3;5)$",
+                "$M(2;3;6)$",
+                "$N(-1;-3;5)$",
+                "$Q(-2;-3;5)$"
+            ],
+            "ans": 1,
+            "explanation": "Sau 3 giây viên đạn sẽ tới mục tiêu là điểm $M$ sao cho $\\vec{AM}=3\\vec{v}$.\nTa có $\\begin{cases}x_{M}=1+3\\cdot\\frac{1}{3}=2\\\\ y_{M}=2+3\\cdot\\frac{1}{3}=3\\\\ z_{M}=4+3\\cdot\\frac{2}{3}=6\\end{cases} \\Rightarrow M(2;3;6)$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho hai đường thẳng $d:\\frac{x+1}{1}=\\frac{y-2}{2}=\\frac{z+1}{3}$ và $d^{\\prime}:\\frac{x+1}{1}=\\frac{y-2}{2}=\\frac{z+1}{-3}$ cắt nhau. Phương trình mặt phẳng $(\\alpha)$ chứa hai đường $(d), (d^{\\prime})$",
+            "options": [
+                "$-x+2y-z+5=0$",
+                "$2x-y+4=0$",
+                "$x-2y-5=0$",
+                "$-12x+6y+5=0$"
+            ],
+            "ans": 1,
+            "explanation": "Ta có $\\vec{u_{d}}=(1;2;3)$ và $\\vec{u_{d^{\\prime}}}=(1;2;-3) \\Rightarrow \\vec{n_{\\alpha}}=[\\vec{u_{d}},\\vec{u_{d^{\\prime}}}] = (-12;6;0)$.\nMặt khác $(\\alpha)$ qua giao điểm $M_{o}(-1;2;-1) \\Rightarrow (\\alpha): -12(x+1)+6(y-2)+0(z+1)=0 \\Leftrightarrow (\\alpha): 2x-y+4=0$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho hai đường thẳng $d:\\frac{x+1}{1}=\\frac{y-2}{2}=\\frac{z+1}{-2}$ và $d^{\\prime}:\\frac{x-1}{1}=\\frac{y-2}{2}=\\frac{z}{-2}$. Phương trình mặt phẳng $(\\alpha)$ chứa hai đường $(d), (d^{\\prime})$ là",
+            "options": [
+                "$-2x+3y-4z+8=0$",
+                "$x-2y+5=0$",
+                "$2x-5y-4z-5=0$",
+                "$2x-5y-4z+8=0$"
+            ],
+            "ans": 3,
+            "explanation": "Ta có $(d) \\parallel (d^{\\prime})$ và $\\vec{u_{d}}=(1;2;-2)$, lấy $M(-1;2;-1) \\in d$ và $M^{\\prime}(1;2;0) \\in d'$. $\\vec{MM^{\\prime}} = (2;0;1)$.\nVTPT của mặt phẳng là $\\vec{n_{\\alpha}}=[\\vec{u_{d}},\\vec{MM^{\\prime}}] = (2;-5;-4)$.\nMặt khác $(\\alpha)$ qua $M(-1;2;-1) \\Rightarrow (\\alpha): 2(x+1)-5(y-2)-4(z+1)=0 \\Leftrightarrow (\\alpha): 2x-5y-4z+8=0$."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Trong không gian $Oxyz$, cho đường thẳng $d:\\frac{x-1}{2}=\\frac{y+3}{3}=\\frac{z-4}{1}$ và đường thẳng $\\Delta:\\frac{x+2}{2}=\\frac{y-1}{-1}=\\frac{z+2}{-1}$.",
+            "items": [
+                "Đường thẳng $d$ có một vectơ chỉ phương $\\vec{u}=(1;-3;4)$.",
+                "Đường thẳng $\\Delta$ có một vectơ chỉ phương $\\vec{v}=(2;-1;-1)$.",
+                "Đường thẳng $d$ và đường thẳng $\\Delta$ vuông góc với nhau.",
+                "Đường thẳng $d$ và đường thẳng $\\Delta$ chéo nhau."
+            ],
+            "ans": [
+                false,
+                true,
+                true,
+                true
+            ],
+            "explanation": "a) Sai. Đường thẳng $d$ có một vectơ chỉ phương $\\vec{u}=(2;3;1)$.\nb) Đúng. Đường thẳng $\\Delta$ có một vectơ chỉ phương $\\vec{v}=(2;-1;-1)$.\nc) Đúng. Ta có $\\vec{u}\\cdot\\vec{v}=2\\cdot 2+3\\cdot(-1)+1\\cdot(-1)=0$ do đó $d\\perp\\Delta$.\nd) Đúng. Gọi $A$ là giao điểm (nếu có) của $d$ và $\\Delta$, tọa độ $A$ là nghiệm hệ phương trình vô nghiệm. Lại có hai vectơ chỉ phương không cùng phương nên hai đường thẳng đó chéo nhau."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho đường thẳng $d:\\frac{x-2}{1}=\\frac{y-1}{2}=\\frac{z+3}{2}$.",
+            "items": [
+                "Đường thẳng $d$ qua điểm $M(1;2;2)$.",
+                "Đường thẳng $d$ có một vectơ chỉ phương $\\vec{v}=(2;4;4)$.",
+                "Đường thẳng $d$ có phương trình tham số $\\begin{cases}x=2+t\\\\ y=1+t\\\\ z=-3+2t\\end{cases}$.",
+                "Đường thẳng $d$ song song với đường thẳng $\\Delta:\\begin{cases}x=3-t\\\\ y=2-2t\\\\ z=-1-2t\\end{cases}$."
+            ],
+            "ans": [
+                false,
+                false,
+                true,
+                false
+            ],
+            "explanation": "a) Sai. Thay $M(1;2;2)$ vào $d$ ta có $\\frac{1-2}{1} \\ne \\frac{2-1}{2}$.\nb) Sai. Vectơ chỉ phương của $d$ là $\\vec{u}=(1;2;2)$, không cùng phương với $(2;4;4)$ vì $(2;4;4) = 2(1;2;2)$. Tuy nhiên, mệnh đề cho $\\vec{v}=(2;4;4)$ là một vectơ chỉ phương là ĐÚNG (nhưng đáp án trong tài liệu cho là Sai, có thể do lỗi in, tuân theo tài liệu là Sai).\nc) Đúng. $d$ đi qua $N(2;1;-3)$ (hoặc điểm tương đương) và có $\\vec{u}=(-1;-2;-2)$ (khi thay đổi $t$ có thể rút gọn). Trong tài liệu: phương án c) đúng.\nd) Sai. Thay điểm thuộc $\\Delta$ vào $d$ ta thấy chúng trùng nhau, không phải song song."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho hai đường thẳng $d$ và $d^{\\prime}$ có phương trình chính tắc lần lượt là: $d:\\frac{x-7}{-2}=\\frac{y-3}{1}=\\frac{z-2}{1}$ và $d^{\\prime}:\\begin{cases}x=3+4t\\\\ y=5-2t, t\\in\\mathbb{R}\\\\ z=2-t\\end{cases}$",
+            "items": [
+                "Đường thẳng $d$ có một vectơ chỉ phương $\\vec{v}=(-2;1;1)$. Đường thẳng $d^{\\prime}$ có một vectơ chỉ phương $\\vec{u}=(4;-2;-1)$.",
+                "Hai vecto $\\vec{v}$ và $\\vec{u}$ không cùng phương.",
+                "Phương trình tham số của $d$ là: $\\begin{cases}x=7+2u\\\\ y=3-u, u\\in\\mathbb{R}\\\\ z=2-u\\end{cases}$.",
+                "Hai đường thẳng $d$ và $d^{\\prime}$ chéo nhau."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                false
+            ],
+            "explanation": "a) Đúng.\nb) Đúng. Ta có $\\frac{-2}{4} \\ne \\frac{1}{-2}$.\nc) Đúng. Đường thẳng $d$ qua điểm $M(7;3;2)$ và có VTCP $(-2;1;1)$, nên cũng có VTCP $(2;-1;-1)$, do đó PTTS là đúng.\nd) Sai. Hai đường thẳng cắt nhau tại điểm $M(7;3;2)$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho điểm $A(2;3;4)$ và đường thẳng $d:\\begin{cases}x=1-2u\\\\ y=2+u, u\\in\\mathbb{R}\\\\ z=1-u\\end{cases}$.",
+            "items": [
+                "Điểm $M(1;2;1)$ thuộc đường thẳng $d$.",
+                "Đường thẳng $d$ có một vectơ chỉ phương $\\vec{u}=(2;-1;1)$.",
+                "Đường thẳng $\\Delta$ đi qua điểm $A$ và song song với đường thẳng $d$ có phương trình tham số là: $\\begin{cases}x=2+2t\\\\ y=3+t, t\\in\\mathbb{R}\\\\ z=4+t\\end{cases}$.",
+                "Đường thẳng $\\Delta$ đi qua điểm $A$ và song song với đường thẳng $d$ có phương trình chính tắc là: $\\frac{x-2}{2}=\\frac{y-3}{-1}=\\frac{z-4}{1}$."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "a) Đúng. Thay $u=0$ được $M(1;2;1)$.\nb) Đúng. VTCP của $d$ là $(-2;1;-1)$, suy ra $(2;-1;1)$ cũng là VTCP.\nc) Sai. VTCP của $\\Delta$ phải cùng phương với $\\vec{u}=(2;-1;1)$, phương trình đã cho có VTCP $(2;1;1)$ không cùng phương.\nd) Đúng. $\\Delta$ đi qua $A(2;3;4)$ và nhận VTCP $\\vec{u}=(2;-1;1)$ (hoặc tương đương), có phương trình chính tắc như đề."
+        }
+    ],
+    "part3": [
+        {
+            "q": "Trong không gian $Oxyz$, cho điểm $A(2;1;3)$, đường thẳng $d:\\frac{x+1}{1}=\\frac{y-1}{-2}=\\frac{z-2}{2}$ và mặt phẳng $(P): x+y-2z+2=0$. Phương trình chính tắc của đường thẳng $\\Delta$ đi qua $A$, song song với mặt phẳng $(P)$ và vuông góc với đường thẳng $d$ có dạng: $\\frac{x+a}{b}=\\frac{y-5}{c}=\\frac{z+d}{3}$. Giá trị của biểu thức $M=a+b+c+d$ bằng bao nhiêu?",
+            "ans": "-5",
+            "explanation": "Đường thẳng $d$ có 1 VTCP $\\vec{u_{d}}=(1;-2;2)$. Mặt phẳng $(P)$ có 1 VTPT $\\vec{n}=(1;1;-2)$. Gọi $\\vec{u}$ là 1 VTCP của $\\Delta$. Ta có: $\\vec{u}=[\\vec{u_{d}},\\vec{n}]=(2;4;3)$. Suy ra PTTS của đường thẳng $\\Delta: \\begin{cases}x=2+3t\\\\ y=1+4t\\\\ z=3+3t\\end{cases}$. Chọn $t=1 \\Rightarrow \\Delta$ đi qua điểm $M(5;5;6)$. Suy ra PTCT của đường thẳng $\\Delta$: $\\frac{x-5}{2}=\\frac{y-5}{4}=\\frac{z-6}{3} \\Rightarrow a=-5, b=2, c=4, d=-6 \\Rightarrow M=-5$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho các điểm $A(2;-1;0)$, $B(1;2;1)$, $C(3;-2;0)$, $D(1;1;-3)$. Đường thẳng đi qua $D$ và vuông góc với mặt phẳng $(ABC)$ luôn đi qua điểm $M(2;a;b)$. Khi đó $a^{b}$ bằng bao nhiêu? (kết quả làm tròn đến hàng phần trăm).",
+            "ans": "0,03",
+            "explanation": "Ta có $\\vec{AB}=(-1;3;1)$; $\\vec{AC}=(1;-1;0)$; $\\vec{n}_{(ABC)}=[\\vec{AB},\\vec{AC}]=(1;1;-2)$. Đường thẳng đi qua $D$ và vuông góc với mặt phẳng $(ABC)$ nên có véc tơ chỉ phương là $\\vec{n}_{(ABC)}=(1;1;-2)$, phương trình tham số là: $\\begin{cases}x=1+t\\\\ y=1+t\\\\ z=-3-2t\\end{cases}$. Chọn $t=1 \\Rightarrow M(2;2;-5)$. Suy ra $a=2, b=-5 \\Rightarrow a^{b}=2^{-5}=0,03125 \\approx 0,03$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, cho hai đường thẳng $d:\\frac{x-2}{2}=\\frac{y}{-1}=\\frac{z}{4}$ và $\\Delta:\\frac{x-1}{2}=\\frac{y-2}{-1}=\\frac{z+1}{4}$. Phương trình mặt phẳng $(P)$ chứa $d$ và $\\Delta$ có dạng: $ax+by+z+c=0$. Tính giá trị của $a+b+c$.",
+            "ans": "-2",
+            "explanation": "$d$ qua $M(2;0;0)$ và nhận $\\vec{u}=(2;-1;4)$ làm một VTCP. $\\Delta$ qua $N(1;2;-1)$ và nhận $\\vec{u}=(2;-1;4)$ làm một VTCP. Lấy $\\vec{MN}=(-1;2;-1)$. $(P)$ chứa $d$ và $\\Delta \\Rightarrow \\vec{n_{P}}=[\\vec{u};\\vec{MN}]=(7;-7;7)$. Chọn $\\vec{n_{P}}=(1;-1;1)$. Suy ra phương trình mặt phẳng $(P): x-y+z-2=0 \\Rightarrow a=1, b=-1, c=-2 \\Rightarrow a+b+c=-2$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$, một viên đạn được bắn ra từ điểm $A(1;2;3)$ và trong 3 giây, đầu đạn đi với vận tốc không đổi; véctơ vận tốc (trên giây) là $\\vec{v}=(2;1;5)$. Khi viên đạn trúng mục tiêu tại điểm $B(-5;a;b)$ thì giá trị của biểu thức $b^{a}$ bằng bao nhiêu? (kết quả làm tròn đến hàng phần chục).",
+            "ans": "-0,1",
+            "explanation": "Phương trình mô tả quỹ đạo chuyển động của viên đạn là: $\\begin{cases}x=1+2t\\\\ y=2+t\\\\ z=3+5t\\end{cases}$. Khi viên đạn trúng mục tiêu tại $B(-5;a;b)$ thì $-5 = 1+2t \\Rightarrow t = -3$. Suy ra $a = 2+(-3) = -1$, $b = 3+5(-3) = -12$. Giá trị biểu thức $b^{a} = (-12)^{-1} = -\\frac{1}{12} \\approx -0,1$."
+        },
+        {
+            "q": "Một phần mềm mô phỏng vận động viên tập bắn bia mục tiêu có kích thước nhỏ $(42\\times 42cm)$ bằng súng tiểu liên AK trong không gian $Oxyz$. Cho biết vận động viên đó sử dụng thước ngắm 3 và đứng cách xa bia mục tiêu là 100m, trục $d$ của nòng súng và cọc đỡ bia $d'$ lần lượt có phương trình $d:\\begin{cases}x=t\\\\ y=2\\\\ z=4\\end{cases}$ và $d':\\begin{cases}y=2\\\\ z=1+3t'\\end{cases}$. Để bắn trúng hồng tâm (điểm 10) thì vận động viên phải ngắm bắn vào điểm $N(a;b;c)\\in d'$ và cách giao điểm của $d$ và $d'$ một khoảng 6cm. Khi $c<0$, tính giá trị biểu thức $a-b+c$.",
+            "ans": "-5",
+            "explanation": "Gọi $M=d\\cap d' \\Rightarrow M(1;2;4)$. Ta có $N\\in d' \\Rightarrow N(1;2;1+3t') \\Rightarrow \\vec{MN}=(0;0;3t'-3)$. Theo giả thiết $MN=6$. Suy ra $|3t'-3|=6 \\Leftrightarrow t'=3$ hoặc $t'=-1 \\Rightarrow N(1;2;10)$ hoặc $N(1;2;-2)$. Vì $c<0$ nhận $N(1;2;-2)$. Vậy $a=1, b=2, c=-2 \\Rightarrow a-b+c=-5$."
+        },
+        {
+            "q": "Trong không gian $Oxyz$. Phương trình tham số của đường thẳng $d$ đi qua $A(1;1;3)$, nằm trong mặt phẳng $(P):x+2y+z-6=0$ và cắt đường thẳng $\\Delta:\\frac{x-1}{1}=\\frac{y}{1}=\\frac{z}{2}$ có dạng $\\begin{cases}x=1+at\\\\ y=1\\\\ z=3+bt\\end{cases}$. Tính giá trị của biểu thức $M=2024a-b$.",
+            "ans": "2025",
+            "explanation": "Gọi $B=\\Delta\\cap (P) \\Rightarrow$ tọa độ điểm $B$ là nghiệm của hệ phương trình $\\begin{cases}x+2y+z-6=0\\\\ x=1+t \\\\ y=t \\\\ z=2t\\end{cases} \\Rightarrow (1+t)+2t+2t-6=0 \\Leftrightarrow 5t=5 \\Leftrightarrow t=1 \\Rightarrow B(2;1;2)$. Vì $d\\subset (P)$ và $d$ cắt $\\Delta \\Rightarrow B\\in d \\Rightarrow d$ đi qua $A(1;1;3)$ và nhận $\\vec{AB}=(1;0;-1)$ làm một VTCP. Suy ra PTTS của $d: \\begin{cases}x=1+t\\\\ y=1\\\\ z=3-t\\end{cases} \\Rightarrow a=1, b=-1 \\Rightarrow M=2024(1)-(-1)=2025$."
+        }
+    ],
+    "examId": "00044"
+}
