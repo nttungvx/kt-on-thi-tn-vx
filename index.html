@@ -43,7 +43,7 @@
         .dark .radio-custom { background-color: #09090b; border-color: #52525b; }
 
         .question-img { max-height: 40vh; object-fit: contain; margin: 1rem auto; border-radius: 0.5rem; display: block; border: 1px solid #e2e8f0; }
-        .dark .question-img { border-color: #27272a; background-color: #ffffff; }
+        .dark .question-img { border-color: #27272a; background-color: #e2e8f0; }
         input[type="text"] { -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto; }
     </style>
 </head>
@@ -351,7 +351,6 @@
             const isLocked = isExamFinished;
             let html = `<div class="${isLocked ? 'locked' : ''} mb-6 leading-relaxed text-lg font-medium">${q.q}</div>`;
 
-            // NÂNG CẤP: HIỂN THỊ HÌNH ẢNH DỰA TRÊN TỪ KHÓA ĐÚNG (imageUrl)
             let qImg = q.imageUrl || q.image;
             if (qImg && qImg !== "[CẦN_CHÈN_ẢNH]") {
                 let invertClass = q.imageInvert ? "dark:invert" : "";
@@ -454,7 +453,6 @@
                 let maxS = q.type === 1 ? (examConfig.p1_points || 0.25) : (q.type === 2 ? 1.0 : (examConfig.p3_points || 0.5));
                 let scoreColor = s > 0 ? "text-emerald-600" : "text-rose-500";
                 
-                // NÂNG CẤP: HIỂN THỊ HÌNH ẢNH TRONG PHẦN GIẢI THÍCH CHI TIẾT
                 let expText = q.explanation || 'Chưa cập nhật nội dung giải thích chi tiết cho câu hỏi này.';
                 if (q.explanationImage) {
                     let expInvert = q.explanationImageInvert ? "dark:invert" : "";
@@ -600,15 +598,28 @@
             updateMinimapHighlight();
             goToQuestion(currentIndex); 
             
-            let dataHS = JSON.parse(sessionStorage.getItem('DATA_HS') || '{}');
+            let urlMon = urlParams.get('mon');
+            if(!urlMon || urlMon === "00") {
+                let mStr = (made || "").toUpperCase();
+                if(mStr.includes("TOÁN") || mStr.includes("TOAN")) urlMon = "TOAN";
+                else if(mStr.includes("LÝ") || mStr.includes("LÍ") || mStr.includes("LY")) urlMon = "LY";
+                else if(mStr.includes("HÓA") || mStr.includes("HOA")) urlMon = "HOA";
+                else if(mStr.includes("SINH")) urlMon = "SINH";
+                else if(mStr.includes("SỬ") || mStr.includes("SU")) urlMon = "SU";
+                else if(mStr.includes("ĐỊA") || mStr.includes("DIA")) urlMon = "DIA";
+                else if(mStr.includes("TIN")) urlMon = "TIN";
+                else if(mStr.includes("NGOẠI NGỮ") || mStr.includes("NN") || mStr.includes("ANH")) urlMon = "NN";
+                else urlMon = "TOAN";
+            }
+
             let dbData = { 
-               maHS: dataHS.maHS || "GUEST", 
-               tenHS: dataHS.tenHS || "Khách", 
-               lop: dataHS.lop || "Chưa phân lớp", 
+               maHS: urlParams.get('maHS') || "GUEST", 
+               tenHS: urlParams.get('tenHS') || "Khách", 
+               lop: urlParams.get('lop') || "Chưa phân lớp", 
                maDe: made, 
                diemTN: total.toFixed(2), 
                chiTiet: `Đã hoàn thành. Vi phạm: ${cheatWarnings} lần.`, 
-               mon: examConfig.subject || "TOAN" 
+               mon: urlMon 
             };
 
             const API_URL = "https://script.google.com/macros/s/AKfycbwsV6E8jUuYpc4Qw1hWs0ODE4jqHVwmMlvJ5TfsE4lg_c3rC9v7jy8Ph1DD58gStB0JPA/exec";
