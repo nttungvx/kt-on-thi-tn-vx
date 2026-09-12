@@ -1,0 +1,246 @@
+{
+    "timeLimit": 5400,
+    "subject": "00",
+    "title": "ĐỀ KIỂM TRA CHƯƠNG 1 - TOÁN 11 - BÀI 1: GÓC LƯỢNG GIÁC",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Đổi số đo của góc $\\alpha=\\pi/24$ sang độ và phút:",
+            "options": [
+                "$7^{\\circ}$.",
+                "$7^{\\circ}30^{\\prime}$.",
+                "$8^{\\circ}$.",
+                "$8^{\\circ}30^{\\prime}$."
+            ],
+            "ans": 1,
+            "explanation": "Ta có $\\alpha=\\frac{\\pi}{24} \\cdot \\frac{180^{\\circ}}{\\pi} = \\frac{180^{\\circ}}{24} = 7,5^{\\circ} = 7^{\\circ}30^{\\prime}$."
+        },
+        {
+            "q": "Một đường tròn có đường kính 50 cm. Độ dài của cung tròn trên đường tròn đó có số đo $\\alpha=\\pi/4$ bằng (làm tròn đến hàng đơn vị):",
+            "options": [
+                "40 cm.",
+                "39 cm.",
+                "19 cm.",
+                "20 cm."
+            ],
+            "ans": 3,
+            "explanation": "Bán kính $r=50/2=25$ cm. Độ dài cung tròn $l = r\\alpha = 25\\cdot \\frac{\\pi}{4} = \\frac{25\\pi}{4} \\approx 19,63$ cm $\\approx 20$ cm."
+        },
+        {
+            "q": "Một bánh xe có 72 răng. Số đo góc mà bánh xe đã quay được khi di chuyển 10 răng là:",
+            "options": [
+                "$60^{\\circ}$.",
+                "$30^{\\circ}$.",
+                "$40^{\\circ}$.",
+                "$50^{\\circ}$."
+            ],
+            "ans": 3,
+            "explanation": "Mỗi răng tương ứng với số đo góc $360^{\\circ} / 72 = 5^{\\circ}$. Vậy 10 răng tương ứng với $10\\cdot 5^{\\circ} = 50^{\\circ}$."
+        },
+        {
+            "q": "Trên đường tròn bán kính $r=15$ cm, độ dài của cung có số đo $50^{\\circ}$ được tính theo công thức:",
+            "options": [
+                "$l=15\\cdot(180/\\pi)$.",
+                "$l=15\\cdot(\\pi/180)$.",
+                "$l=15\\cdot(\\pi/180)\\cdot 50$.",
+                "$l=750$ cm."
+            ],
+            "ans": 2,
+            "explanation": "Đổi $50^{\\circ}$ sang radian: $\\alpha=50\\cdot(\\frac{\\pi}{180})$ rad. Độ dài cung $l = r \\alpha = 15 \\cdot \\left(\\frac{\\pi}{180}\\right) \\cdot 50$ cm."
+        },
+        {
+            "q": "Một đồng hồ treo tường có kim giờ dài 10,57 cm. Trong 30 phút, mũi kim giờ vạch nên một cung tròn có độ dài gần bằng:",
+            "options": [
+                "2,78 cm.",
+                "2,77 cm.",
+                "2,76 cm.",
+                "2,80 cm."
+            ],
+            "ans": 1,
+            "explanation": "Kim giờ quay 1 vòng ($360^{\\circ}$) mất 12 giờ = 720 phút. Trong 30 phút, kim giờ quay được góc $\\alpha = \\frac{30}{720} \\cdot 2\\pi = \\frac{\\pi}{12}$ rad. Độ dài cung $l = r \\cdot \\alpha = 10,57 \\cdot \\frac{\\pi}{12} \\approx 2,77$ cm."
+        },
+        {
+            "q": "Trong 20 giây, bánh xe của xe gắn máy quay được 60 vòng. Tính độ dài quãng đường xe gắn máy đã đi được trong vòng 3 phút, biết bán kính bánh xe bằng 6,5 cm (lấy $\\pi \\approx 3,1416$):",
+            "options": [
+                "22043 cm.",
+                "22055 cm.",
+                "22042 cm.",
+                "22054 cm."
+            ],
+            "ans": 3,
+            "explanation": "Trong 3 phút = 180 giây, số vòng bánh xe quay được là $N = \\frac{180}{20} \\cdot 60 = 540$ vòng. Chu vi 1 vòng $C = 2\\pi r = 2 \\cdot 3,1416 \\cdot 6,5 = 40,8408$ cm. Quãng đường đi được $S = 540 \\cdot 40,8408 = 22054,032$ cm $\\approx 22054$ cm."
+        },
+        {
+            "q": "Một bánh xe đạp quay được 25 vòng trong 10 giây. Tính độ dài quãng đường mà người đi xe đạp thực hiện được trong 2,35 phút, biết bán kính bánh xe bằng 340 mm (kết quả làm tròn đến hàng phần trăm):",
+            "options": [
+                "314,5 m.",
+                "753,04 m.",
+                "514,8 m.",
+                "437,8 m."
+            ],
+            "ans": 1,
+            "explanation": "2,35 phút = 141 giây. Số vòng bánh xe quay được $N = \\frac{141}{10} \\cdot 25 = 352,5$ vòng. Bán kính $r = 340$ mm = $0,34$ m. Quãng đường $S = N \\cdot 2\\pi r = 352,5 \\cdot 2 \\cdot 3,1416 \\cdot 0,34 \\approx 753,04$ m."
+        },
+        {
+            "q": "Từ một vị trí ban đầu trong không gian, vệ tinh X chuyển động theo quỹ đạo đường tròn quanh Trái Đất và luôn cách tâm Trái Đất một khoảng bằng 9200 km. Sau 2 giờ thì vệ tinh X hoàn thành 1 vòng di chuyển. Quãng đường vệ tinh X chuyển động được sau 1 giờ là:",
+            "options": [
+                "28902,65 km.",
+                "29802,65 km.",
+                "32102,65 km.",
+                "28905 km."
+            ],
+            "ans": 0,
+            "explanation": "Chu vi quỹ đạo $C = 2\\pi R = 2 \\cdot \\pi \\cdot 9200 = 18400\\pi$ km. Trong 1 giờ (nửa chu kỳ), quãng đường $S = C/2 = 9200\\pi \\approx 28902,65$ km."
+        },
+        {
+            "q": "Một chiếc đu quay có bán kính 75 m, tâm của vòng quay ở độ cao 90 m, thời gian thực hiện mỗi vòng quay là 30 phút. Nếu một người vào cabin tại vị trí thấp nhất của vòng quay, thì sau 20 phút quay, người đó ở độ cao bao nhiêu mét?",
+            "options": [
+                "127,5 m.",
+                "154,3 m.",
+                "87,7 m.",
+                "157,5 m."
+            ],
+            "ans": 0,
+            "explanation": "Đu quay có $R=75$ m, tâm O ở độ cao 90 m. Vị trí thấp nhất ở độ cao $90 - 75 = 15$ m. Sau 20 phút quay (bằng $2/3$ chu kỳ), góc quay là $\\frac{2}{3} \\cdot 360^{\\circ} = 240^{\\circ}$. Góc giữa tia tới cabin và tia thẳng đứng xuống dưới là $240^{\\circ} - 180^{\\circ} = 60^{\\circ}$ (hoặc góc với phương ngang là $30^{\\circ}$). Độ cao $h = 90 + 75 \\cdot \\sin(-30^{\\circ}) = 90 + 37,5 = 127,5$ m."
+        },
+        {
+            "q": "Trên đường tròn lượng giác gốc A, cho điểm M xác định bởi số đo góc $(OA, OM) = \\pi/3$. Gọi $M_{1}$ là điểm đối xứng của M qua trục Ox. Số đo của góc lượng giác $(OA, OM_{1})$ là:",
+            "options": [
+                "$-5\\pi/3+k2\\pi (k\\in\\mathbb{Z})$.",
+                "$2\\pi/3+k2\\pi (k\\in\\mathbb{Z})$.",
+                "$-\\pi/3+k2\\pi (k\\in\\mathbb{Z})$.",
+                "$-\\pi/3+k\\pi (k\\in\\mathbb{Z})$."
+            ],
+            "ans": 2,
+            "explanation": "Điểm $M_{1}$ đối xứng $M$ qua Ox nên góc $(OA, OM_{1}) = -(OA, OM) + k2\\pi = -\\pi/3 + k2\\pi$ ($k \\in \\mathbb{Z}$)."
+        },
+        {
+            "q": "Khẳng định nào sau đây là sai khi nói về điểm biểu diễn cung lượng giác trên đường tròn lượng giác?",
+            "options": [
+                "Điểm biểu diễn cung $\\alpha$ và cung $\\pi - \\alpha$ đối xứng nhau qua trục tung.",
+                "Điểm biểu diễn cung $\\alpha$ và cung $-\\alpha$ đối xứng nhau qua gốc tọa độ.",
+                "Mỗi góc lượng giác được biểu diễn bởi một điểm duy nhất trên đường tròn lượng giác.",
+                "Cung $\\alpha$ và cung $\\alpha + k2\\pi$ ($k \\in \\mathbb{Z}$) có cùng điểm biểu diễn."
+            ],
+            "ans": 1,
+            "explanation": "Khẳng định B sai vì điểm biểu diễn cung $\\alpha$ và cung $-\\alpha$ đối xứng nhau qua trục hoành Ox (không phải gốc tọa độ O)."
+        },
+        {
+            "q": "Một cái đồng hồ treo tường có đường kính 60 cm. Ta xem vành ngoài chiếc đồng hồ là một đường tròn với các điểm A, B, C tương ứng với vị trí các số 2, 9, 4. Tổng độ dài hai cung nhỏ AB và AC bằng (lấy $\\pi \\approx 3,1416$):",
+            "options": [
+                "109,96 cm.",
+                "85,50 cm.",
+                "120,45 cm.",
+                "95,20 cm."
+            ],
+            "ans": 0,
+            "explanation": "Bán kính $R = 30$ cm. Vành đồng hồ chia 12 phần, mỗi phần $30^{\\circ}$. Cung nhỏ AB (từ số 2 đến số 9) gồm 5 khoảng ($12, 1, 2$ là cung nhỏ từ 9 đến 2) = $150^{\\circ} = \\frac{5\\pi}{6}$ rad $\\Rightarrow l_{AB} = 30 \\cdot \\frac{5\\pi}{6} = 25\\pi$ cm. Cung nhỏ AC (từ số 2 đến số 4) gồm 2 khoảng = $60^{\\circ} = \\frac{\\pi}{3}$ rad $\\Rightarrow l_{AC} = 30 \\cdot \\frac{\\pi}{3} = 10\\pi$ cm. Tổng độ dài = $25\\pi + 10\\pi = 35\\pi \\approx 109,96$ cm."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Đổi số đo các góc từ độ sang radian và ngược lại. Xét tính đúng/sai của các khẳng định sau:",
+            "items": [
+                "$30^{\\circ}=\\pi/6$ rad.",
+                "$132^{\\circ} = 11\\pi/15$ rad.",
+                "$3\\pi/4$ rad $= 135^{\\circ}$.",
+                "$-495^{\\circ}=-13\\pi/4$ rad."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                false
+            ],
+            "explanation": "a) Đúng. $30^{\\circ} = 30 \\cdot \\frac{\\pi}{180} = \\frac{\\pi}{6}$ rad.\nb) Đúng. $132^{\\circ} = 132 \\cdot \\frac{\\pi}{180} = \\frac{11\\pi}{15}$ rad.\nc) Đúng. $\\frac{3\\pi}{4}$ rad $= \\frac{3\\pi}{4} \\cdot \\frac{180^{\\circ}}{\\pi} = 135^{\\circ}$.\nd) Sai. $-495^{\\circ} = -495 \\cdot \\frac{\\pi}{180} = -\\frac{11\\pi}{4}$ rad (khác $-13\\pi/4$ rad)."
+        },
+        {
+            "q": "Cho một bánh xe máy có đường kính 60 cm. Xe chuyển động tròn đều trên đường phẳng. Xét tính đúng/sai của các phát biểu sau:",
+            "items": [
+                "Bán kính của bánh xe máy là $R=30$ cm.",
+                "Độ dài cung tròn $40^{\\circ}$ trên vành bánh xe gần bằng 20,94 cm.",
+                "Khi bánh xe lăn được đúng 1 vòng thì xe di chuyển được quãng đường 94,2 cm.",
+                "Nếu xe chạy với vận tốc $50 km/h$ thì trong 5 giây bánh xe quay được gần 36,9 vòng."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "a) Đúng. Bán kính $R = 60/2 = 30$ cm.\nb) Đúng. $l = R\\alpha = 30 \\cdot \\left(\\frac{40\\pi}{180}\\right) = \\frac{20\\pi}{3} \\approx 20,94$ cm.\nc) Sai. Chu vi 1 vòng $C = 2\\pi R = 60\\pi \\approx 188,5$ cm (khác 94,2 cm).\nd) Đúng. $50$ km/h $= 50000$ m / $3600$ s $= \\frac{125}{9}$ m/s. Trong 5 giây đi được $S = 5 \\cdot \\frac{125}{9} = \\frac{625}{9}$ m $\\approx 69,44$ m $= 6944$ cm. Số vòng = $6944 / 188,5 \\approx 36,84 \\approx 36,9$ vòng."
+        },
+        {
+            "q": "Cho một chiếc đu quay có bán kính 75 m, tâm vòng quay ở độ cao 90 m so với mặt đất, thời gian quay 1 vòng là 30 phút. Người chơi bước vào cabin ở vị trí thấp nhất. Xét tính đúng/sai của các phát biểu sau:",
+            "items": [
+                "Vị trí thấp nhất của cabin cách mặt đất 15 m.",
+                "Sau 15 phút quay, cabin ở độ cao 90 m so với mặt đất.",
+                "Sau 20 phút quay, cabin ở độ cao 127,5 m so với mặt đất.",
+                "Sau 30 phút quay, cabin quay trở lại vị trí cao nhất có độ cao 165 m."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "a) Đúng. Độ cao thấp nhất $h_{min} = 90 - 75 = 15$ m.\nb) Sai. Sau 15 phút (nửa vòng quay = $180^{\\circ}$), cabin ở vị trí cao nhất có độ cao $90 + 75 = 165$ m.\nc) Đúng. Sau 20 phút, độ cao $h = 127,5$ m.\nd) Sai. Sau 30 phút (1 vòng quay đầy đủ = $360^{\\circ}$), cabin quay trở về vị trí xuất phát ban đầu là vị trí thấp nhất (15 m), không phải vị trí cao nhất."
+        },
+        {
+            "q": "Vệ tinh X chuyển động tròn đều quanh Trái Đất trên quỹ đạo bán kính $R=9200$ km (tính từ tâm Trái Đất). Thời gian để vệ tinh quay hết 1 vòng là 2 giờ. Xét tính đúng/sai của các phát biểu sau:",
+            "items": [
+                "Chu vi quỹ đạo của vệ tinh X là $C=18400\\pi$ km.",
+                "Sau 1 giờ di chuyển, quãng đường vệ tinh đi được là khoảng 28902,65 km.",
+                "Sau 1,5 giờ di chuyển, quãng đường vệ tinh đi được là khoảng 43353,98 km.",
+                "Sau 4,5 giờ di chuyển, vệ tinh quét nên một góc lượng giác có số đo bằng $9\\pi/2$ rad."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                true
+            ],
+            "explanation": "a) Đúng. $C = 2\\pi R = 18400\\pi$ km.\nb) Đúng. $S_{1} = C/2 = 9200\\pi \\approx 28902,65$ km.\nc) Đúng. 1,5 giờ = $\\frac{3}{4}$ chu kỳ. Quãng đường $S = \\frac{3}{4}C = 13800\\pi \\approx 43353,98$ km.\nd) Đúng. Sau 4,5 giờ = 2,25 vòng, góc quay $\\alpha = 2,25 \\cdot 2\\pi = 4,5\\pi = \\frac{9\\pi}{2}$ rad."
+        }
+    ],
+    "part3": [
+        {
+            "q": "Một bánh xe có đường kính kể cả lốp xe là 55 cm. Nếu xe chạy với tốc độ $50 km/h$ thì trong 1 giây bánh xe quay được bao nhiêu vòng? (Làm tròn kết quả đến hàng phần trăm).",
+            "ans": "8,04",
+            "explanation": "Vận tốc $v = 50$ km/h $= 500000$ cm / $3600$ s $= \\frac{12500}{9}$ cm/s. Bán kính $r = 55/2 = 27,5$ cm. Chu vi 1 vòng $C = 2\\pi r = 55\\pi$ cm. Số vòng trong 1 giây $N = \\frac{12500/9}{55\\pi} = \\frac{2500}{99\\pi} \\approx 8,04$ vòng."
+        },
+        {
+            "q": "Một bánh xe đạp quay được 25 vòng trong 10 giây. Tính độ dài quãng đường (theo đơn vị mét) mà người đi xe đạp thực hiện được trong 2,35 phút, biết bán kính bánh xe là 340 mm (lấy $\\pi \\approx 3,1416$ và làm tròn đến hàng đơn vị).",
+            "ans": "753",
+            "explanation": "$t = 2,35$ phút $= 141$ s. Tốc độ quay $= 25/10 = 2,5$ vòng/s. Số vòng $N = 141 \\cdot 2,5 = 352,5$ vòng. $R = 0,34$ m. Quãng đường $S = 352,5 \\cdot 2 \\cdot 3,1416 \\cdot 0,34 \\approx 753,04$ m $\\approx 753$ m."
+        },
+        {
+            "q": "Một cái đồng hồ treo tường có đường kính 60 cm. Vành ngoài đồng hồ có các điểm A, B, C tương ứng với các số 2, 9, 4. Tính tổng độ dài (cm) của hai cung nhỏ AB và AC (lấy $\\pi \\approx 3,1416$ và làm tròn đến hàng phần trăm).",
+            "ans": "109,96",
+            "explanation": "$R = 30$ cm. Cung $AB = 150^{\\circ} = \\frac{5\\pi}{6}$ rad $\\Rightarrow l_{AB} = 25\\pi$. Cung $AC = 60^{\\circ} = \\frac{\\pi}{3}$ rad $\\Rightarrow l_{AC} = 10\\pi$. Tổng độ dài $= 35\\pi \\approx 109,96$ cm."
+        },
+        {
+            "q": "Gọi M, N, P là các điểm trên đường tròn lượng giác sao cho các góc lượng giác $(OA, OM) = \\pi/2$, $(OA, ON) = 7\\pi/6$, $(OA, OP) = -\\pi/6$. Biết $MN=NP=2$, tính diện tích tam giác MNP (làm tròn đến hàng phần trăm).",
+            "ans": "3,46",
+            "explanation": "Ba điểm M, N, P tạo thành tam giác đều nội tiếp đường tròn. Góc $(OM, ON) = 7\\pi/6 - \\pi/2 = 2\\pi/3$. Tam giác đều cạnh $a=2$, diện tích $S = a^{2}\\frac{\\sqrt{3}}{4} = 4 \\cdot \\frac{\\sqrt{3}}{4} = \\sqrt{3} \\approx 3,46$."
+        },
+        {
+            "q": "Trên mặt bánh lái của một tàu thủy hình tròn, có 8 tay cầm A, B, C, D, E, F, G, H chia đều đường tròn. Biết công thức tổng quát biểu diễn góc lượng giác $(OA, OE)$ theo đơn vị độ có dạng $k a^{\\circ} (k \\in \\mathbb{Z})$. Tìm giá trị nguyên của a.",
+            "ans": "180",
+            "explanation": "Đường tròn chia làm 8 phần đều nhau, mỗi phần có góc ở tâm là $360^{\\circ}/8 = 45^{\\circ}$. Vị trí A, B, C, D, E tương ứng với các điểm, do đó E đối xứng với A qua tâm O. Góc $(OA, OE) = 180^{\\circ} + k\\cdot 360^{\\circ} = 180^{\\circ}(2k+1)$, nên biểu diễn dạng $m \\cdot 180^{\\circ}$. Vậy $a = 180$."
+        },
+        {
+            "q": "Một vệ tinh chuyển động tròn đều quanh Trái Đất cách tâm Trái Đất 9200 km, mất 2 giờ để đi hết 1 vòng. Hỏi sau bao nhiêu giờ (làm tròn đến hàng phần mười) thì vệ tinh đi được quãng đường dài 240000 km?",
+            "ans": "8,3",
+            "explanation": "Chu vi quỹ đạo $C = 18400\\pi$ km $\\approx 57805,3$ km. Tốc độ $v = C/2 = 9200\\pi$ km/h. Thời gian $t = S/v = 240000 / (9200\\pi) = 600 / (23\\pi) \\approx 8,295$ giờ $\\approx 8,3$ giờ."
+        }
+    ],
+    "examId": "00046"
+}
