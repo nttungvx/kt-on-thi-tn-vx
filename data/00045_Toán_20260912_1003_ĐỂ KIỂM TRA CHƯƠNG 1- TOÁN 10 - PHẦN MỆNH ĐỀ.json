@@ -1,0 +1,246 @@
+{
+    "timeLimit": 5400,
+    "subject": "00",
+    "title": "ĐỂ KIỂM TRA CHƯƠNG 1- TOÁN 10 - PHẦN MỆNH ĐỀ",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Trong các câu sau, câu nào là một mệnh đề toán học?",
+            "options": [
+                "Huế là một thành phố đẹp của Việt Nam.",
+                "Phương trình $x^{2}+1=0$ vô nghiệm trên tập số thực $\\mathbb{R}$.",
+                "Bạn có thích học môn Toán không?",
+                "Hãy giữ trật tự trong giờ học!"
+            ],
+            "ans": 1,
+            "explanation": "Mệnh đề toán học là một câu khẳng định có tính đúng hoặc sai rõ ràng về một đối tượng/sự kiện toán học.\nCâu B: “Phương trình $x^{2}+1=0$ vô nghiệm trên tập số thực $\\mathbb{R}$” là một khẳng định toán học hoàn toàn đúng $\\Rightarrow$ là mệnh đề toán học.\nCác câu A (câu cảm thán/đánh giá chung), C (câu hỏi), D (câu mệnh lệnh) không phải là mệnh đề toán học."
+        },
+        {
+            "q": "Câu nào sau đây không phải là một mệnh đề toán học?",
+            "options": [
+                "Số 13 là số nguyên tố.",
+                "Tổng hai góc đối của một tứ giác nội tiếp bằng $180^{\\circ}$.",
+                "Số $x$ lớn hơn 5.",
+                "Tam giác đều có ba góc bằng $60^{\\circ}$."
+            ],
+            "ans": 2,
+            "explanation": "Câu C: “Số $x$ lớn hơn 5” chứa biến $x$ chưa xác định, do đó chưa có tính đúng sai rõ ràng $\\Rightarrow$ đây là mệnh đề chứa biến, chưa phải là một mệnh đề toán học hoàn chỉnh.\nCác câu A, B, D đều là các mệnh đề toán học có tính đúng/sai xác định rõ ràng."
+        },
+        {
+            "q": "Cho mệnh đề $P$: “Số 2026 chia hết cho 2”. Mệnh đề phủ định $\\overline{P}$ của mệnh đề $P$ là:",
+            "options": [
+                "“Số 2026 chia hết cho 3”.",
+                "“Số 2026 không chia hết cho 2”.",
+                "“Số 2026 là số lẻ”.",
+                "“Số 2026 chia hết cho 5”."
+            ],
+            "ans": 1,
+            "explanation": "Phủ định của mệnh đề $P$: “Số 2026 chia hết cho 2” là mệnh đề $\\overline{P}$: “Số 2026 không chia hết cho 2”."
+        },
+        {
+            "q": "Cho hai mệnh đề $P$ và $Q$. Mệnh đề kéo theo “Nếu $P$ thì $Q$” được ký hiệu là:",
+            "options": [
+                "$P\\Leftrightarrow Q$",
+                "$P\\wedge Q$",
+                "$P\\Rightarrow Q$",
+                "$P\\vee Q$"
+            ],
+            "ans": 2,
+            "explanation": "Theo quy ước ký hiệu mệnh đề kéo theo: “Nếu $P$ thì $Q$” được viết là $P\\Rightarrow Q$."
+        },
+        {
+            "q": "Cho hai mệnh đề $P$: “Tam giác $ABC$ là tam giác đều” và $Q$: “Tam giác $ABC$ là tam giác cân”. Mệnh đề đảo của mệnh đề kéo theo $P\\Rightarrow Q$ là:",
+            "options": [
+                "“Nếu tam giác $ABC$ là tam giác cân thì tam giác $ABC$ là tam giác đều”.",
+                "“Nếu tam giác $ABC$ không là tam giác cân thì tam giác $ABC$ không là tam giác đều”.",
+                "“Tam giác $ABC$ là tam giác đều khi và chỉ khi tam giác $ABC$ là tam giác cân”.",
+                "“Nếu tam giác $ABC$ không là tam giác đều thì tam giác $ABC$ không là tam giác cân”."
+            ],
+            "ans": 0,
+            "explanation": "Mệnh đề đảo của mệnh đề kéo theo $P\\Rightarrow Q$ là mệnh đề $Q\\Rightarrow P$.\nVới $P$: “Tam giác $ABC$ là tam giác đều”, $Q$: “Tam giác $ABC$ là tam giác cân”.\nMệnh đề $Q\\Rightarrow P$ phát biểu là: “Nếu tam giác $ABC$ là tam giác cân thì tam giác $ABC$ là tam giác đều”."
+        },
+        {
+            "q": "Trong các phát biểu sau, phát biểu nào là một mệnh đề đúng?",
+            "options": [
+                "“Nếu một số tự nhiên chia hết cho 3 thì số đó chia hết cho 9”.",
+                "“Nếu tứ giác có hai đường chéo bằng nhau thì tứ giác đó là hình chữ nhật”.",
+                "“Nếu hai tam giác bằng nhau thì diện tích của chúng bằng nhau”.",
+                "“Nếu một tam giác có một góc bằng $60^{\\circ}$ thì tam giác đó là tam giác đều”."
+            ],
+            "ans": 2,
+            "explanation": "Xét từng phát biểu:\nA sai (ví dụ 6 chia hết cho 3 nhưng không chia hết cho 9).\nB sai (ví dụ hình thang cân có 2 đường chéo bằng nhau nhưng không phải hình chữ nhật).\nC đúng (định lý toán học cơ bản: hai tam giác bằng nhau thì có diện tích bằng nhau).\nD sai (ví dụ tam giác cân có 1 góc $60^{\\circ}$ mới là tam giác đều, tam giác thường có 1 góc $60^{\\circ}$ chưa chắc đều)."
+        },
+        {
+            "q": "Cho mệnh đề $P\\Rightarrow Q$. Khẳng định nào sau đây là đúng về thuật ngữ “điều kiện cần” và “điều kiện đủ”?",
+            "options": [
+                "$P$ là điều kiện cần để có $Q$.",
+                "$Q$ là điều kiện đủ để có $P$.",
+                "$P$ là điều kiện đủ để có $Q$.",
+                "$Q$ là điều kiện cần và đủ để có $P$."
+            ],
+            "ans": 2,
+            "explanation": "Trong mệnh đề kéo theo $P\\Rightarrow Q$ đúng, ta phát biểu: $P$ là điều kiện đủ để có $Q$, và $Q$ là điều kiện cần để có $P$.\nDo đó, khẳng định “$P$ là điều kiện đủ để có $Q$” là phát biểu đúng."
+        },
+        {
+            "q": "Mệnh đề phủ định của mệnh đề “$\\forall x\\in\\mathbb{R}, x^{2}-x+1>0$” là mệnh đề:",
+            "options": [
+                "“$\\exists x\\in\\mathbb{R}, x^{2}-x+1\\le 0$”",
+                "“$\\exists x\\in\\mathbb{R}, x^{2}-x+1<0$”",
+                "“$\\forall x\\in\\mathbb{R}, x^{2}-x+1\\le 0$”",
+                "“$\\exists x\\in\\mathbb{R}, x^{2}-x+1=0$”"
+            ],
+            "ans": 0,
+            "explanation": "Phủ định của ký hiệu “với mọi” ($\\forall$) là ký hiệu “tồn tại” ($\\exists$).\nPhủ định của bất đẳng thức $>$ là $\\le$.\nDo đó, mệnh đề phủ định của “$\\forall x\\in\\mathbb{R}, x^{2}-x+1>0$” là “$\\exists x\\in\\mathbb{R}, x^{2}-x+1\\le 0$”."
+        },
+        {
+            "q": "Phủ định của mệnh đề “$\\exists x\\in\\mathbb{Q}, 4x^{2}-1=0$” là mệnh đề:",
+            "options": [
+                "“$\\forall x\\in\\mathbb{Q}, 4x^{2}-1\\ne 0$”",
+                "“$\\forall x\\in\\mathbb{Q}, 4x^{2}-1=0$”",
+                "“$\\exists x\\in\\mathbb{Q}, 4x^{2}-1\\ne 0$”",
+                "“$\\forall x\\notin\\mathbb{Q}, 4x^{2}-1\\ne 0$”"
+            ],
+            "ans": 0,
+            "explanation": "Phủ định của ký hiệu “tồn tại” ($\\exists$) là “với mọi” ($\\forall$).\nPhủ định của dấu đẳng thức $=$ là dấu khác $\\ne$.\nDo đó, mệnh đề phủ định của “$\\exists x\\in\\mathbb{Q}, 4x^{2}-1=0$” là “$\\forall x\\in\\mathbb{Q}, 4x^{2}-1\\ne 0$”."
+        },
+        {
+            "q": "Mệnh đề nào sau đây là mệnh đề sai?",
+            "options": [
+                "$\\forall x\\in\\mathbb{R}, x^{2}+1>0$",
+                "$\\exists n\\in\\mathbb{N}, n^{2}=n$",
+                "$\\forall n\\in\\mathbb{N}, n+1>n$",
+                "$\\exists x\\in\\mathbb{R}, x^{2}<0$"
+            ],
+            "ans": 3,
+            "explanation": "Xét câu D: “$\\exists x\\in\\mathbb{R}, x^{2}<0$”. Vì bình phương của mọi số thực luôn không âm ($x^{2}\\ge 0$ với mọi $x\\in\\mathbb{R}$), nên không tồn tại số thực nào có $x^{2}<0$. Do đó câu D là mệnh đề sai.\nCác câu A ($x^{2}+1\\ge 1>0$), B (chọn $n=0$ hoặc $n=1$), C ($n+1>n$ đúng $\\forall n$) đều là các mệnh đề đúng."
+        },
+        {
+            "q": "Hai mệnh đề $P$ và $Q$ được gọi là tương đương với nhau (ký hiệu $P\\Leftrightarrow Q$) khi:",
+            "options": [
+                "$P\\Rightarrow Q$ đúng.",
+                "$Q\\Rightarrow P$ đúng.",
+                "Cả hai mệnh đề $P\\Rightarrow Q$ và $Q\\Rightarrow P$ đều đúng.",
+                "Mệnh đề $P\\Rightarrow Q$ đúng và $Q\\Rightarrow P$ sai."
+            ],
+            "ans": 2,
+            "explanation": "Theo định nghĩa: Hai mệnh đề $P$ và $Q$ tương đương nhau (ký hiệu $P\\Leftrightarrow Q$) khi cả hai mệnh đề kéo theo $P\\Rightarrow Q$ và $Q\\Rightarrow P$ đều đúng."
+        },
+        {
+            "q": "Mệnh đề nào sau đây là một định lý toán học đúng phát biểu dưới dạng mệnh đề tương đương?",
+            "options": [
+                "“Tam giác $ABC$ vuông tại $A$ khi và chỉ khi $AB^{2}+AC^{2}=BC^{2}$”",
+                "“Tứ giác $ABCD$ là hình bình hành khi và chỉ khi có hai cạnh đối bằng nhau”",
+                "“Số tự nhiên $n$ chia hết cho 5 khi và chỉ khi $n$ có chữ số tận cùng là 0”",
+                "“Hai tam giác có diện tích bằng nhau khi và chỉ khi hai tam giác đó bằng nhau”"
+            ],
+            "ans": 0,
+            "explanation": "Xét câu A: Định lý Pitago và định lý Pitago đảo khẳng định tam giác $ABC$ vuông tại $A$ khi và chỉ khi $AB^{2}+AC^{2}=BC^{2}$. Đây là định lý tương đương đúng.\nCâu B sai (phải là hai cạnh đối song song và bằng nhau, hoặc hai cặp cạnh đối bằng nhau).\nCâu C sai (chữ số tận cùng là 0 hoặc 5).\nCâu D sai (hai tam giác có diện tích bằng nhau chưa chắc bằng nhau)."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Xét các câu phát biểu sau đây:\n(1) 17 là một số nguyên tố.\n(2) Tích của hai số lẻ là một số chẵn đúng không?\n(3) Phương trình $x^{2}-4x+4=0$ có nghiệm duy nhất $x=2$.\n(4) $x+3>7$\n(5) Bức tranh này vẽ đẹp quá!\nXét tính đúng sai của các khẳng định sau:",
+            "items": [
+                "Có đúng 2 câu trong 5 câu trên là mệnh đề toán học.",
+                "Câu (4) “$x+3>7$” là một mệnh đề chứa biến.",
+                "Câu (2) là một mệnh đề toán học sai.",
+                "Câu (1) và câu (3) đều là các mệnh đề toán học đúng."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "(1) “17 là số nguyên tố” là mệnh đề toán học đúng.\n(2) “Tích hai số lẻ là số chẵn đúng không?” là câu hỏi $\\Rightarrow$ không là mệnh đề.\n(3) “$x^{2}-4x+4=0$ có nghiệm duy nhất $x=2$” là mệnh đề toán học đúng.\n(4) “$x+3>7$” là mệnh đề chứa biến.\n(5) “Bức tranh này đẹp quá!” là câu cảm thán $\\Rightarrow$ không là mệnh đề.\na) Đúng. Có đúng 2 câu là mệnh đề toán học hoàn chỉnh (câu 1 và câu 3).\nb) Đúng. Câu (4) chứa biến $x$ chưa xác định nên là mệnh đề chứa biến.\nc) Sai. Câu (2) là câu hỏi nên không phải là mệnh đề toán học.\nd) Đúng. Cả câu (1) và câu (3) đều là các khẳng định toán học đúng."
+        },
+        {
+            "q": "Cho hai mệnh đề $P$: “Số tự nhiên $n$ có chữ số tận cùng là 0” và $Q$: “Số tự nhiên $n$ chia hết cho 5”. Xét tính đúng sai của các phát biểu sau:",
+            "items": [
+                "Mệnh đề kéo theo $P\\Rightarrow Q$: “Nếu số tự nhiên $n$ có chữ số tận cùng là 0 thì $n$ chia hết cho 5” là mệnh đề đúng.",
+                "Mệnh đề đảo $Q\\Rightarrow P$: “Nếu số tự nhiên $n$ chia hết cho 5 thì $n$ có chữ số tận cùng là 0” là mệnh đề đúng.",
+                "Mệnh đề $P$ là điều kiện đủ để có mệnh đề $Q$.",
+                "Mệnh đề tương đương $P\\Leftrightarrow Q$: “Số tự nhiên $n$ có chữ số tận cùng là 0 khi và chỉ khi $n$ chia hết cho 5” là mệnh đề đúng."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                false
+            ],
+            "explanation": "a) Đúng. Số có tận cùng bằng 0 thì luôn chia hết cho 5 $\\Rightarrow P\\Rightarrow Q$ đúng.\nb) Sai. Mệnh đề $Q\\Rightarrow P$: “Số chia hết cho 5 thì tận cùng bằng 0” là sai (ví dụ $n=15$ chia hết cho 5 nhưng tận cùng là 5).\nc) Đúng. Vì $P\\Rightarrow Q$ đúng nên $P$ là điều kiện đủ để có $Q$.\nd) Sai. Vì $Q\\Rightarrow P$ sai nên mệnh đề tương đương $P\\Leftrightarrow Q$ sai."
+        },
+        {
+            "q": "Xét tính đúng sai của các mệnh đề chứa ký hiệu với mọi ($\\forall$) và tồn tại ($\\exists$) sau đây:",
+            "items": [
+                "Mệnh đề “$\\forall x\\in\\mathbb{R}, x^{2}\\ge 0$” là một mệnh đề đúng.",
+                "Mệnh đề “$\\exists n\\in\\mathbb{N}, n^{2}+1$ chia hết cho 3” là một mệnh đề đúng.",
+                "Mệnh đề phủ định của “$\\forall x\\in\\mathbb{R}, x^{2}+x+1>0$” là “$\\exists x\\in\\mathbb{R}, x^{2}+x+1\\le 0$”.",
+                "Mệnh đề “$\\exists x\\in\\mathbb{R}, x+1/x=2$” có mệnh đề phủ định là “$\\forall x\\in\\mathbb{R}, x+1/x\\ne 2$”."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "a) Đúng. Bình phương của một số thực $x^{2}$ luôn $\\ge 0$ với mọi $x\\in\\mathbb{R}$.\nb) Sai. Với mọi $n\\in\\mathbb{N}$, $n^{2}$ chia 3 chỉ có số dư là 0 hoặc 1 $\\Rightarrow n^{2}+1$ chia 3 chỉ có số dư là 1 hoặc 2 (không bao giờ chia hết cho 3).\nc) Đúng. Phủ định của $\\forall$ là $\\exists$, phủ định của $>$ là $\\le$.\nd) Đúng. Phủ định của $\\exists$ là $\\forall$, phủ định của $=$ là $\\ne$."
+        },
+        {
+            "q": "Cho mệnh đề chứa biến $P(x)$: “$x^{2}-5x+6=0$” và $Q(x)$: “$x$ là số nguyên” với $x \\in \\mathbb{R}$. Xét tính đúng sai của các khẳng định sau:",
+            "items": [
+                "$P(2)$ là một mệnh đề đúng.",
+                "$P(1)$ là một mệnh đề đúng.",
+                "Có đúng hai giá trị thực của $x$ làm cho mệnh đề $P(x)$ trở thành mệnh đề đúng.",
+                "Mệnh đề “$\\exists x\\in\\mathbb{R}, P(x)\\wedge Q(x)$” là mệnh đề đúng."
+            ],
+            "ans": [
+                true,
+                false,
+                true,
+                true
+            ],
+            "explanation": "$P(x)$: “$x^{2}-5x+6=0$” $\\Leftrightarrow (x-2)(x-3)=0 \\Leftrightarrow x=2$ hoặc $x=3$.\na) Đúng. Thay $x=2$: $2^{2}-5(2)+6=0$ (đúng) $\\Rightarrow P(2)$ đúng.\nb) Sai. Thay $x=1$: $1^{2}-5(1)+6=2 \\ne 0 \\Rightarrow P(1)$ sai.\nc) Đúng. Phương trình $x^{2}-5x+6=0$ có đúng 2 nghiệm thực phân biệt là $x=2$ và $x=3$.\nd) Đúng. Tồn tại $x=2 \\in \\mathbb{R}$ vừa thỏa mãn $P(2)$ đúng vừa là số nguyên $Q(2)$ đúng."
+        }
+    ],
+    "part3": [
+        {
+            "q": "Có bao nhiêu giá trị nguyên của biến $x$ thuộc đoạn $[-3; 3]$ làm cho mệnh đề chứa biến $P(x)$: “$4x^{2}-4=0$” trở thành một mệnh đề đúng?",
+            "ans": "2",
+            "explanation": "Mệnh đề chứa biến $P(x)$: “$4x^{2}-4=0$” trở thành mệnh đề đúng khi $4x^{2}-4=0 \\Leftrightarrow x=1$ hoặc $x=-1$.\nCả hai giá trị $x=1$ và $x=-1$ đều thuộc tập số nguyên và nằm trong đoạn $[-3; 3]$.\nVậy có đúng 2 giá trị nguyên của $x$ thỏa mãn."
+        },
+        {
+            "q": "Trong các phát biểu toán học sau đây, có tất cả bao nhiêu phát biểu là mệnh đề ĐÚNG?\n(1) Tổng hai số vô tỉ luôn là một số vô tỉ.\n(2) Số $\\pi$ là một số vô tỉ.\n(3) Phương trình $x^{2}+2x+3=0$ vô nghiệm trên $\\mathbb{R}$.\n(4) Mọi tam giác đều đều có ba góc bằng nhau và bằng $60^{\\circ}$.\n(5) Nếu một số chia hết cho 6 thì nó chia hết cho cả 2 và 3.",
+            "ans": "4",
+            "explanation": "Xét 5 phát biểu:\n(1) Sai (ví dụ: $\\sqrt{2}+(-\\sqrt{2})=0$ là số hữu tỉ).\n(2) Đúng ($\\pi$ là số thập phân vô hạn không tuần hoàn $\\Rightarrow$ số vô tỉ).\n(3) Đúng (phương trình có $\\Delta^{\\prime}=1-3=-2<0 \\Rightarrow$ vô nghiệm trên $\\mathbb{R}$).\n(4) Đúng (tính chất cơ bản của tam giác đều).\n(5) Đúng (vì 6 chia hết cho 2 và 3, nên $n$ chia hết cho $6 \\Rightarrow n$ chia hết cho 2 và 3).\nVậy có tất cả 4 phát biểu là mệnh đề đúng ((2), (3), (4), (5))."
+        },
+        {
+            "q": "Tìm giá trị thực $x$ duy nhất thuộc tập số tự nhiên khác 0 ($x\\in\\mathbb{N}^{*}$) sao cho mệnh đề chứa biến: “$x \\in \\mathbb{N}^{*}, x^{2}-3x+2=0$ và $x>1$” trở thành một mệnh đề đúng.",
+            "ans": "2",
+            "explanation": "Phương trình $x^{2}-3x+2=0 \\Leftrightarrow x=1$ hoặc $x=2$.\nKết hợp điều kiện $x\\in\\mathbb{N}^{*}$ và $x>1$, ta suy ra giá trị duy nhất thỏa mãn là $x=2$."
+        },
+        {
+            "q": "Cho mệnh đề chứa biến $P(n)$: “$n^{2}+1$ chia hết cho 5” với $n$ là số tự nhiên. Có bao nhiêu giá trị của $n$ thuộc tập hợp $S=\\{1; 2; 3; 4; 5; 6; 7; 8; 9; 10\\}$ làm cho $P(n)$ trở thành một mệnh đề đúng?",
+            "ans": "4",
+            "explanation": "Kiểm tra các giá trị $n$ từ 1 đến 10 vào biểu thức $A=n^{2}+1$:\n$n=1$: $1^{2}+1=2$ (không chia hết cho 5)\n$n=2$: $2^{2}+1=5$ (chia hết cho 5) $\\Rightarrow$ Nhận\n$n=3$: $3^{2}+1=10$ (chia hết cho 5) $\\Rightarrow$ Nhận\n$n=4$: $4^{2}+1=17$ (không chia hết cho 5)\n$n=5$: $5^{2}+1=26$ (không chia hết cho 5)\n$n=6$: $6^{2}+1=37$ (không chia hết cho 5)\n$n=7$: $7^{2}+1=50$ (chia hết cho 5) $\\Rightarrow$ Nhận\n$n=8$: $8^{2}+1=65$ (chia hết cho 5) $\\Rightarrow$ Nhận\n$n=9$: $9^{2}+1=82$ (không chia hết cho 5)\n$n=10$: $10^{2}+1=101$ (không chia hết cho 5)\nVậy có 4 giá trị của $n$ là $\\{2; 3; 7; 8\\}$ làm cho $P(n)$ đúng."
+        },
+        {
+            "q": "Cho mệnh đề chứa biến $P(x)$: “$\\exists x\\in\\mathbb{R}, x^{2}-2mx+4=0$” (với $m$ là tham số thực). Tìm giá trị nguyên dương nhỏ nhất của tham số $m$ để mệnh đề $P(x)$ trở thành một mệnh đề đúng.",
+            "ans": "2",
+            "explanation": "Mệnh đề $P(x)$: “$\\exists x\\in\\mathbb{R}, x^{2}-2mx+4=0$” là mệnh đề đúng khi và chỉ khi phương trình $x^{2}-2mx+4=0$ có nghiệm thực $x$.\nĐiều kiện có nghiệm: $\\Delta^{\\prime}=m^{2}-4\\ge 0 \\Leftrightarrow m^{2}\\ge 4 \\Leftrightarrow m\\ge 2$ hoặc $m\\le -2$.\nYêu cầu tìm giá trị nguyên dương nhỏ nhất của tham số $m \\Rightarrow$ chọn $m=2$."
+        },
+        {
+            "q": "Cho mệnh đề toán học $Q(m)$: “$\\forall x\\in\\mathbb{R}, x^{2}-2(m-1)x+m^{2}-2m+5>0$”. Có bao nhiêu giá trị nguyên của tham số $m$ thuộc đoạn $[-5; 5]$ để mệnh đề $Q(m)$ là một mệnh đề đúng?",
+            "ans": "11",
+            "explanation": "Tam thức bậc hai $f(x)=x^{2}-2(m-1)x+m^{2}-2m+5>0$ với mọi $x \\in \\mathbb{R}$ khi và chỉ khi:\nHệ số $a=1>0$ (luôn đúng)\n$\\Delta^{\\prime}=(m-1)^{2}-(m^{2}-2m+5)<0 \\Leftrightarrow m^{2}-2m+1-m^{2}+2m-5<0 \\Leftrightarrow -4<0$ (luôn đúng với mọi $m\\in\\mathbb{R}$)\nDo đó, mệnh đề $Q(m)$ đúng với mọi giá trị thực của $m$.\nXét $m$ thuộc đoạn $[-5; 5]$ và $m\\in\\mathbb{Z} \\Rightarrow m\\in\\{-5; -4; -3; -2; -1; 0; 1; 2; 3; 4; 5\\}$.\nVậy có tất cả 11 giá trị nguyên của $m$ thỏa mãn."
+        }
+    ],
+    "examId": "00045"
+}
