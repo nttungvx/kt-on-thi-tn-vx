@@ -1,0 +1,246 @@
+{
+    "timeLimit": 7200,
+    "subject": "00",
+    "title": "Đề Ôn Thi HSG Môn Toán Lớp 12",
+    "p1_points": 0.25,
+    "p2_points": [
+        0.1,
+        0.25,
+        0.5,
+        1
+    ],
+    "p3_points": 0.5,
+    "part1": [
+        {
+            "q": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$ tâm $O$, $SA \\perp (ABCD)$ và $SA=a$. Khoảng cách từ điểm $A$ đến mặt phẳng $(SBD)$ bằng:",
+            "options": [
+                "$\\frac{a\\sqrt{3}}{2}$",
+                "$\\frac{a\\sqrt{2}}{2}$",
+                "$\\frac{a\\sqrt{3}}{3}$",
+                "$\\frac{a\\sqrt{2}}{3}$"
+            ],
+            "ans": 2,
+            "explanation": "Kẻ $AO \\perp BD$ (do đáy là hình vuông). Mặt phẳng $(SAO) \\perp (SBD)$. Kẻ $AH \\perp SO \\Rightarrow AH \\perp (SBD)$. $\\frac{1}{AH^2}=\\frac{1}{SA^2}+\\frac{1}{AO^2}=\\frac{1}{a^2}+\\frac{1}{(a\\sqrt{2}/2)^2}=\\frac{3}{a^2} \\Rightarrow AH=\\frac{a\\sqrt{3}}{3}$."
+        },
+        {
+            "q": "Có bao nhiêu tiếp tuyến của đồ thị hàm số $y=x^3-3x+2$ vuông góc với đường thẳng $d: x+9y-1=0$?",
+            "options": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "ans": 2,
+            "explanation": "Hệ số góc của $d$ là $-\\frac{1}{9} \\Rightarrow k_{tt}=9$. Giải $y' = 3x^2-3=9 \\Leftrightarrow 3x^2=12 \\Leftrightarrow x=\\pm 2$. Có 2 tiếp tuyến."
+        },
+        {
+            "q": "Từ các chữ số $1, 2, 3, 4, 5, 6, 7$ có thể lập được bao nhiêu số tự nhiên chẵn gồm 4 chữ số đôi một khác nhau?",
+            "options": [
+                "360",
+                "420",
+                "840",
+                "120"
+            ],
+            "ans": 0,
+            "explanation": "Số có dạng $\\overline{a_1a_2a_3a_4}$. Chọn $a_4 \\in \\{2,4,6\\}$ có $3$ cách. Chọn 3 chữ số còn lại từ 6 chữ số: $A_6^3=120$ cách. Tổng cộng: $3 \\times 120=360$ số."
+        },
+        {
+            "q": "Phương trình $\\sin^2 x - \\sin x = 0$ có bao nhiêu nghiệm thuộc đoạn $[0; 2\\pi]$?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "ans": 2,
+            "explanation": "$\\sin x(\\sin x - 1) = 0 \\Leftrightarrow \\sin x = 0$ hoặc $\\sin x = 1$. $\\sin x = 0 \\Rightarrow x \\in \\{0, \\pi, 2\\pi\\}$. $\\sin x = 1 \\Rightarrow x = \\pi/2$. Có tất cả $4$ nghiệm."
+        },
+        {
+            "q": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1=3$ và công bội $q=-2$. Tổng 6 số hạng đầu tiên của cấp số nhân là:",
+            "options": [
+                "-63",
+                "189",
+                "-189",
+                "63"
+            ],
+            "ans": 0,
+            "explanation": "$S_6 = \\frac{u_1(1-q^6)}{1-q} = \\frac{3(1-(-2)^6)}{1-(-2)} = \\frac{3(1-64)}{3} = -63$."
+        },
+        {
+            "q": "Cho hàm số $y=f(x)$ có đạo hàm $f'(x)=x(x-2)^2(x+1)$. Hàm số đã cho nghịch biến trên khoảng nào dưới đây?",
+            "options": [
+                "$(-1; 0)$",
+                "$(-\\infty; -1)$",
+                "$(0; 2)$",
+                "$(2; +\\infty)$"
+            ],
+            "ans": 0,
+            "explanation": "Bảng xét dấu $f'(x)$: $f'(x)=0$ tại $x=-1, 0, 2$ ($2$ là nghiệm kép không đổi dấu). Dấu $f'(x)$: $(-\\infty; -1)$ mang dấu dương; $(-1; 0)$ mang dấu âm; $(0; 2)$ mang dấu dương; $(2; +\\infty)$ mang dấu dương. Hàm số nghịch biến trên $(-1; 0)$."
+        },
+        {
+            "q": "Tập nghiệm $S$ của bất phương trình $\\log_{0.5}(2x-1) > -1$ là:",
+            "options": [
+                "$S=(\\frac{1}{2}; \\frac{3}{2})$",
+                "$S=(-\\infty; \\frac{3}{2})$",
+                "$S=(\\frac{3}{2}; +\\infty)$",
+                "$S=(1; \\frac{3}{2})$"
+            ],
+            "ans": 0,
+            "explanation": "$\\log_{0.5}(2x-1) > \\log_{0.5}(0.5^{-1}) = \\log_{0.5}2 \\Leftrightarrow 0 < 2x-1 < 2 \\Leftrightarrow 1 < 2x < 3 \\Leftrightarrow \\frac{1}{2} < x < \\frac{3}{2}$."
+        },
+        {
+            "q": "Gọi $M$ là giá trị lớn nhất của hàm số $y=\\frac{2x+m}{x-1}$ trên đoạn $[2; 4]$. Tìm tất cả các giá trị của tham số $m$ để $M=3$.",
+            "options": [
+                "$m=-1$",
+                "$m=1$",
+                "$m=5$",
+                "Cả A và B đều đúng"
+            ],
+            "ans": 0,
+            "explanation": "$y'=\\frac{-2-m}{(x-1)^2}$. TH1: $m > -2 \\Rightarrow y' < 0 \\Rightarrow$ hàm số nghịch biến, $M=y(2)=4+m=3 \\Rightarrow m=-1$ (thỏa mãn $m > -2$). TH2: $m < -2 \\Rightarrow y' > 0 \\Rightarrow$ hàm số đồng biến, $M=y(4)=\\frac{8+m}{3}=3 \\Rightarrow m=1$ (Loại vì không thỏa mãn $m < -2$). Vậy $m=-1$."
+        },
+        {
+            "q": "Đạo hàm của hàm số $y=\\ln(x+\\sqrt{x^2+1})$ là:",
+            "options": [
+                "$y'=\\frac{1}{\\sqrt{x^2+1}}$",
+                "$y'=\\frac{1}{x+\\sqrt{x^2+1}}$",
+                "$y'=\\frac{x}{\\sqrt{x^2+1}}$",
+                "$y'=\\frac{-1}{\\sqrt{x^2+1}}$"
+            ],
+            "ans": 0,
+            "explanation": "$y'=\\frac{(x+\\sqrt{x^2+1})'}{x+\\sqrt{x^2+1}} = \\frac{1+\\frac{x}{\\sqrt{x^2+1}}}{x+\\sqrt{x^2+1}} = \\frac{1}{\\sqrt{x^2+1}}$."
+        },
+        {
+            "q": "Số điểm cực trị của hàm số $y=f(x)$ có đạo hàm $f'(x)=x^2(x^2-4)(x-1)$ là:",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "ans": 2,
+            "explanation": "$f'(x)=0 \\Leftrightarrow x=0$ (nghiệm kép), $x=2$ (đơn), $x=-2$ (đơn), $x=1$ (đơn). Có 3 nghiệm bội lẻ $\\Rightarrow$ hàm số có 3 điểm cực trị."
+        },
+        {
+            "q": "Một hộp đựng 4 viên bi đỏ, 5 viên bi xanh và 6 viên bi vàng. Chọn ngẫu nhiên 3 viên bi, xác suất để chọn được 3 viên bi có đủ ba màu là:",
+            "options": [
+                "$\\frac{24}{91}$",
+                "$\\frac{120}{455}$",
+                "$\\frac{12}{91}$",
+                "$\\frac{24}{455}$"
+            ],
+            "ans": 0,
+            "explanation": "Số phần tử KGM $n(\\Omega)=C_{15}^3=455$. Số cách chọn đủ 3 màu: $C_4^1 \\cdot C_5^1 \\cdot C_6^1=120$. Xác suất $P=\\frac{120}{455}=\\frac{24}{91}$."
+        },
+        {
+            "q": "Giới hạn $\\lim_{x \\to 2}\\frac{x^2-4}{\\sqrt{x+2}-2}$ bằng:",
+            "options": [
+                "0",
+                "8",
+                "16",
+                "$+\\infty$"
+            ],
+            "ans": 2,
+            "explanation": "Sử dụng liên hợp: $\\lim_{x \\to 2}\\frac{(x-2)(x+2)(\\sqrt{x+2}+2)}{x+2-4}=\\lim_{x \\to 2}(x+2)(\\sqrt{x+2}+2)=4 \\times 4 = 16$."
+        }
+    ],
+    "part2": [
+        {
+            "q": "Sự suy giảm khối lượng của một chất phóng xạ theo thời gian $t$ (ngày) được cho bởi công thức $m(t)=m_0 \\cdot (0.5)^{\\frac{t}{T}}$ trong đó $m_0$ là khối lượng ban đầu và $T$ là chu kỳ bán rã. Một mẫu chất phóng xạ có chu kỳ bán rã $T=8$ ngày và khối lượng ban đầu $m_0=100$ gam.",
+            "items": [
+                "Sau 8 ngày, khối lượng chất phóng xạ còn lại là 50 gam.",
+                "Khối lượng chất phóng xạ còn lại sau 24 ngày là 12.5 gam.",
+                "Tốc độ phân rã của chất phóng xạ tại thời điểm $t$ là một hằng số.",
+                "Để khối lượng chất phóng xạ giảm xuống dưới 1 gam, cần ít nhất 54 ngày."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "a) $m(8) = 100 \\cdot 0.5^1 = 50$ (Đúng). b) $m(24) = 100 \\cdot 0.5^3 = 12.5$ (Đúng). c) Tốc độ phân rã là đạo hàm $m'(t) = m_0 \\cdot (0.5)^{\\frac{t}{T}} \\cdot \\ln(0.5) \\cdot \\frac{1}{T}$ phụ thuộc vào $t$, không phải hằng số (Sai). d) $100 \\cdot (0.5)^{\\frac{t}{8}} < 1 \\Rightarrow (0.5)^{\\frac{t}{8}} < 10^{-2} \\Rightarrow \\frac{t}{8} > \\log_{0.5}(10^{-2}) \\approx 6.64 \\Rightarrow t > 53.15$. Cần ít nhất 54 ngày (Đúng)."
+        },
+        {
+            "q": "Trong một trò chơi, người chơi di chuyển một quân cờ trên 3 ô $A$, $B$, $C$. Ban đầu quân cờ ở ô $A$. Mỗi lượt, người chơi tung một đồng xu cân đối: nếu ngửa thì tiến 1 ô ($A \\to B \\to C \\to A$), nếu sấp thì lùi 1 ô ($A \\to C \\to B \\to A$).",
+            "items": [
+                "Sau lượt 1, xác suất quân cờ ở ô $A$ là 0.",
+                "Sau lượt 2, xác suất quân cờ ở ô $A$ là 0.5.",
+                "Xác suất để quân cờ trở về ô $A$ sau đúng 3 lượt là 0.25.",
+                "Sau 4 lượt tung, xác suất để quân cờ nằm ở ô $B$ bằng với xác suất quân cờ nằm ở ô $C$."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                true
+            ],
+            "explanation": "a) Từ $A$ chỉ có thể sang $B$ hoặc $C$ nên xác suất quân cờ ở lại $A$ bằng 0 (Đúng). b) Sau lượt 2, từ $B$ có xác suất $0.5$ về $A$, từ $C$ có xác suất $0.5$ về $A$. Tổng xác suất về $A$: $0.5 \\times 0.5 + 0.5 \\times 0.5 = 0.5$ (Đúng). c) Lượt 3 để về lại $A$ có 2 đường đi là $A \\to B \\to C \\to A$ (xác suất $1/8$) và $A \\to C \\to B \\to A$ (xác suất $1/8$). Tổng = 0.25 (Đúng). d) Do tính đối xứng hoàn toàn của đồ thị đường đi giữa $A, B, C$, xác suất tại $B$ và $C$ ở mọi lượt tung là bằng nhau (Đúng)."
+        },
+        {
+            "q": "Người ta muốn thiết kế một khối trụ tròn xoay nội tiếp trong một mặt cầu bán kính $R=6$ cm. Gọi $h$ (cm) là chiều cao của khối trụ ($0 < h < 12$).",
+            "items": [
+                "Bán kính đáy của khối trụ là $r=\\sqrt{36-\\frac{h^2}{4}}$.",
+                "Thể tích khối trụ là một hàm số bậc 3 theo $h$: $V(h)=\\pi h(36-\\frac{h^2}{4})$.",
+                "Khối trụ có thể tích lớn nhất khi $h=4\\sqrt{3}$ cm.",
+                "Giá trị thể tích lớn nhất của khối trụ là $192\\pi\\sqrt{3}$ cm³."
+            ],
+            "ans": [
+                true,
+                true,
+                true,
+                false
+            ],
+            "explanation": "a) Từ bán kính cầu $R=6$ ta có $r^2 + (\\frac{h}{2})^2 = R^2 = 36 \\Rightarrow r = \\sqrt{36-\\frac{h^2}{4}}$ (Đúng). b) $V = \\pi r^2 h = \\pi(36-\\frac{h^2}{4})h$ (Đúng). c) $V'(h) = \\pi(36-\\frac{3h^2}{4}) = 0 \\Rightarrow h^2 = 48 \\Rightarrow h = 4\\sqrt{3}$ (Đúng). d) Thể tích cực đại $V(4\\sqrt{3}) = \\pi \\cdot 4\\sqrt{3}(36-12) = 96\\pi\\sqrt{3} \\ne 192\\pi\\sqrt{3}$ (Sai)."
+        },
+        {
+            "q": "Một xưởng sản xuất thiết bị điện tử có hàm chi phí sản xuất $x$ đơn vị sản phẩm mỗi tháng là $C(x)=\\frac{1}{3}x^3-2x^2+10x+100$ (triệu đồng) với $0 \\le x \\le 10$.",
+            "items": [
+                "Chi phí cố định (khi không sản xuất sản phẩm nào) là 100 triệu đồng.",
+                "Hàm chi phí cận biên là $C'(x)=x^2-4x+10$ luôn dương với mọi $x$.",
+                "Chi phí sản xuất trung bình $\\frac{C(x)}{x}$ đạt giá trị nhỏ nhất khi sản xuất 5 sản phẩm.",
+                "Tốc độ tăng chi phí (chi phí cận biên) đạt giá trị nhỏ nhất tại mức sản xuất $x=2$."
+            ],
+            "ans": [
+                true,
+                true,
+                false,
+                true
+            ],
+            "explanation": "a) $C(0) = 100$ (Đúng). b) $C'(x) = x^2-4x+10 = (x-2)^2+6 > 0, \\forall x$ (Đúng). c) Chi phí trung bình $AC(x) = \\frac{1}{3}x^2-2x+10+\\frac{100}{x}$. Đạo hàm $AC'(x) = \\frac{2}{3}x-2-\\frac{100}{x^2}$. Tại $x=5$, $AC'(5) = \\frac{10}{3}-2-4 = -\\frac{8}{3} \\ne 0$ (Sai). d) Chi phí cận biên là $C'(x) = x^2-4x+10$, đạo hàm $C''(x) = 2x-4 = 0 \\Rightarrow x=2$ (Đúng)."
+        }
+    ],
+    "part3": [
+        {
+            "q": "Vị trí của một vật chuyển động thẳng được cho bởi phương trình $s(t)=-t^3+6t^2+2t$ (trong đó $t$ tính bằng giây và $s$ tính bằng mét). Vận tốc lớn nhất mà vật đạt được trong quá trình chuyển động là bao nhiêu (m/s)?",
+            "ans": "14",
+            "explanation": "$v(t) = s'(t) = -3t^2+12t+2$. Vận tốc đạt cực đại khi $v'(t) = -6t+12=0 \\Rightarrow t=2$. Vận tốc lớn nhất $v(2) = -12+24+2 = 14$ m/s."
+        },
+        {
+            "q": "Xác suất để một cung thủ bắn trúng hồng tâm trong mỗi lần bắn là 0.8. Cung thủ đó bắn liên tiếp 5 phát. Tính xác suất để có đúng 3 phát trúng hồng tâm (làm tròn đến hai chữ số thập phân).",
+            "ans": "0,20",
+            "explanation": "Áp dụng công thức phân phối nhị thức Bernoulli: $P = C_5^3 \\cdot (0.8)^3 \\cdot (0.2)^2 = 10 \\cdot 0.512 \\cdot 0.04 = 0.2048 \\approx 0.20$."
+        },
+        {
+            "q": "Có một lưới ô vuông kích thước $5 \\times 5$ (gồm 25 ô vuông nhỏ kích thước $1 \\times 1$). Hỏi có tổng cộng bao nhiêu hình chữ nhật được tạo thành từ các đường kẻ của lưới ô vuông này?",
+            "ans": "225",
+            "explanation": "Lưới $5 \\times 5$ ô vuông có 6 đường kẻ dọc và 6 đường kẻ ngang. Số hình chữ nhật được tạo thành là $C_6^2 \\cdot C_6^2 = 15 \\times 15 = 225$."
+        },
+        {
+            "q": "Một hình chữ nhật được tạo ra từ một sợi dây thép dài 40 mét. Tính diện tích lớn nhất ($m^2$) của hình chữ nhật đó.",
+            "ans": "100",
+            "explanation": "Chu vi $2(x+y)=40 \\Rightarrow x+y=20$. Diện tích $S=xy \\le (\\frac{x+y}{2})^2 = 100$."
+        },
+        {
+            "q": "Tính giá trị của giới hạn tổng: $S=1-\\frac{1}{2}+\\frac{1}{4}-\\frac{1}{8}+\\dots+(-\\frac{1}{2})^{n-1}+\\dots$",
+            "ans": "2/3",
+            "explanation": "Đây là tổng của cấp số nhân lùi vô hạn với $u_1=1$, $q=-\\frac{1}{2}$. $S=\\frac{u_1}{1-q}=\\frac{1}{1-(-\\frac{1}{2})}=\\frac{2}{3}$."
+        },
+        {
+            "q": "Một khối hộp chữ nhật có đáy là hình vuông, không có nắp trên và có diện tích toàn phần (gồm 1 đáy và 4 mặt bên) là $300$ cm². Thể tích lớn nhất của khối hộp này bằng bao nhiêu cm³?",
+            "ans": "500",
+            "explanation": "Cạnh đáy $x$, chiều cao $h$. $S_{tp} = x^2 + 4xh = 300 \\Rightarrow h = \\frac{300-x^2}{4x}$. Thể tích $V = x^2h = \\frac{300x-x^3}{4} = 75x - \\frac{1}{4}x^3$. $V' = 75 - \\frac{3}{4}x^2 = 0 \\Rightarrow x = 10$. Thể tích lớn nhất $V_{max} = V(10) = 750 - 250 = 500$."
+        }
+    ],
+    "examId": "00049"
+}
